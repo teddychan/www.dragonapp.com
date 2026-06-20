@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipMenu 2 — Support</title>
+  <meta name="description" content="Support and help for ClipMenu 2, the fast clipboard-history menu-bar app for macOS.">
+  <link rel="icon" href="appicon.png">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #1857c8;
+      --card: #f5f8fd;
+      --border: #dde6f2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1419;
+        --fg: #f1f4f8;
+        --muted: #9aa7b5;
+        --accent: #5aa6f4;
+        --card: #161c24;
+        --border: #28323f;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 32px 24px 80px; }
+    .home { font-size: 0.95rem; }
+    header { text-align: center; margin: 24px 0 40px; }
+    h1 { font-size: 2.2rem; margin: 12px 0 4px; }
+    .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    h2 { font-size: 1.35rem; margin: 40px 0 12px; }
+    p { margin: 0 0 14px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .logo { width: 72px; height: 72px; border-radius: 16px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 11px 22px;
+      border-radius: 980px;
+      font-weight: 600;
+      margin: 6px 0;
+    }
+    .cta:hover { text-decoration: none; opacity: 0.9; }
+    .faq dt { font-weight: 600; margin-top: 16px; }
+    .faq dd { margin: 4px 0 0; color: var(--fg); }
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="home"><a href="index.html">← Back to ClipMenu 2</a></p>
+    <header>
+      <img class="logo" src="appicon.png" alt="ClipMenu 2 icon">
+      <h1>ClipMenu 2 Support</h1>
+      <p class="tagline">The fast clipboard-history menu-bar app for macOS.</p>
+    </header>
+
+    <h2>Get help</h2>
+    <div class="card">
+      <p>The quickest way to ask a question, report a bug, or request a feature is on our public issue tracker. We read every report.</p>
+      <p><a class="cta" href="https://github.com/teddychan/ClipMenu-2/issues">Open an issue on GitHub →</a></p>
+      <p style="margin-top:14px">Prefer email? Write to
+        <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
+        and we'll get back to you.</p>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+    <dl class="faq">
+      <dt>How do I open my clipboard history?</dt>
+      <dd>Press your global hotkey (set in Settings) to pop the history right at your
+        cursor, or click the ClipMenu 2 icon in the menu bar.</dd>
+
+      <dt>ClipMenu 2 can't paste into other apps.</dt>
+      <dd>macOS requires Accessibility permission to paste for you. Open
+        <strong>System Settings → Privacy &amp; Security → Accessibility</strong>
+        and enable ClipMenu 2.</dd>
+
+      <dt>What does the subscription include?</dt>
+      <dd>The Mac App Store edition is a paid app with a 30-day free trial, then an
+        auto-renewing yearly subscription. It unlocks the full app and iCloud sync of
+        your clipboard history and snippets across all your Macs.</dd>
+
+      <dt>How do I restore my subscription on a new Mac?</dt>
+      <dd>Open ClipMenu 2 and choose <strong>Restore Purchases</strong> on the welcome
+        screen, signed in with the same Apple ID.</dd>
+
+      <dt>How do I manage or cancel the subscription?</dt>
+      <dd>Open the App Store app → click your name → <strong>Subscriptions</strong>,
+        or visit <a href="https://apps.apple.com/account/subscriptions">your Apple subscriptions</a>.</dd>
+
+      <dt>Where is my data stored?</dt>
+      <dd>Your history and snippets stay on your Mac and in your own private iCloud
+        database. We never receive them. See our
+        <a href="https://github.com/teddychan/ClipMenu-2/blob/main/PRIVACY.md">Privacy Policy</a>.</dd>
+    </dl>
+
+    <h2>Links</h2>
+    <div class="card">
+      <p>
+        <a href="https://github.com/teddychan/ClipMenu-2">Project home &amp; downloads</a><br>
+        <a href="https://github.com/teddychan/ClipMenu-2/issues">Report a bug / request a feature</a><br>
+        <a href="https://github.com/teddychan/ClipMenu-2/blob/main/PRIVACY.md">Privacy Policy</a><br>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
+      </p>
+    </div>
+
+    <footer>
+      ClipMenu 2 for macOS · Support: <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
+    </footer>
+  </div>
+</body>
+</html>

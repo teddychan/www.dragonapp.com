@@ -3,133 +3,476 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ClipMenu — Support</title>
-  <meta name="description" content="Support and help for ClipMenu, the fast clipboard-history menu-bar app for macOS.">
+  <title>ClipMenu 2 — Clipboard history for macOS</title>
+  <meta name="description" content="ClipMenu 2 is a fast, native clipboard-history menu-bar app for macOS. Everything you copied, one shortcut away. Free on GitHub or on the Mac App Store.">
+  <link rel="icon" href="appicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ClipMenu 2 — Clipboard history for macOS">
+  <meta property="og:description" content="Everything you copied, one shortcut away. A fast, native clipboard-history menu-bar app for macOS.">
+  <meta property="og:image" content="appicon.png">
+
   <style>
     :root {
       --bg: #ffffff;
-      --fg: #1d1d1f;
-      --muted: #6e6e73;
-      --accent: #0071e3;
-      --card: #f5f5f7;
-      --border: #d2d2d7;
+      --surface: #f5f8fd;
+      --surface-2: #eef3fb;
+      --fg: #0f1f33;
+      --muted: #5a6b7d;
+      --border: #e4ebf4;
+      --accent: #2b7cf0;
+      --accent-deep: #1857c8;
+      --accent-tint: #e8f1fe;
+      --accent-ink: #16489e;
+      --shadow: 0 18px 40px rgba(24, 87, 200, 0.12);
+      --shadow-sm: 0 8px 22px rgba(24, 87, 200, 0.10);
+      --nav-bg: rgba(255, 255, 255, 0.78);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #1d1d1f;
-        --fg: #f5f5f7;
-        --muted: #a1a1a6;
-        --accent: #2997ff;
-        --card: #2a2a2c;
-        --border: #3a3a3c;
+        --bg: #0f1419;
+        --surface: #161c24;
+        --surface-2: #1b2330;
+        --fg: #f0f4f8;
+        --muted: #9aa7b5;
+        --border: #283341;
+        --accent: #5aa6f4;
+        --accent-deep: #8cc2f8;
+        --accent-tint: #11233f;
+        --accent-ink: #bbd9fb;
+        --shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
+        --shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.45);
+        --nav-bg: rgba(15, 20, 25, 0.72);
       }
     }
+
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--fg);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
-    header { text-align: center; margin-bottom: 40px; }
-    h1 { font-size: 2.2rem; margin: 12px 0 4px; }
-    .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
-    h2 { font-size: 1.35rem; margin: 40px 0 12px; }
-    p { margin: 0 0 14px; }
-    a { color: var(--accent); text-decoration: none; }
+    a { color: var(--accent-deep); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 24px;
-      margin: 16px 0;
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; }
+
+    /* nav */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--nav-bg);
+      backdrop-filter: saturate(180%) blur(18px);
+      -webkit-backdrop-filter: saturate(180%) blur(18px);
+      border-bottom: 1px solid var(--border);
     }
-    .cta {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 11px 22px;
-      border-radius: 980px;
-      font-weight: 600;
-      margin: 6px 0;
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.05rem; color: var(--fg); }
+    .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links a { color: var(--muted); font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--fg); text-decoration: none; }
+    .nav-cta {
+      background: var(--accent); color: #fff !important; padding: 8px 16px;
+      border-radius: 999px; font-size: 0.9rem; font-weight: 600;
     }
-    .cta:hover { text-decoration: none; opacity: 0.9; }
-    .faq dt { font-weight: 600; margin-top: 16px; }
-    .faq dd { margin: 4px 0 0; color: var(--fg); }
-    footer {
-      margin-top: 56px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    .icon { font-size: 3rem; line-height: 1; }
+    .nav-cta:hover { opacity: 0.92; text-decoration: none; }
+    @media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+    /* buttons */
+    .btn { display: inline-flex; align-items: center; gap: 9px; font-size: 1rem; font-weight: 600; padding: 13px 22px; border-radius: 12px; cursor: pointer; transition: transform .12s ease, opacity .12s ease; }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+    .btn svg { width: 20px; height: 20px; }
+    .btn-appstore { background: #111; color: #fff; }
+    .btn-github { background: var(--bg); color: var(--accent-deep); border: 1.5px solid var(--accent); }
+    .btn-github svg { fill: currentColor; }
+    @media (prefers-color-scheme: dark) { .btn-appstore { background: #f0f5f3; color: #111; } }
+
+    /* hero */
+    .hero { text-align: center; padding: 76px 0 56px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 7px; font-size: 0.85rem; font-weight: 600; color: var(--accent-ink); background: var(--accent-tint); padding: 6px 14px; border-radius: 999px; }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.7rem); line-height: 1.08; letter-spacing: -0.02em; margin: 22px auto 16px; max-width: 14ch; font-weight: 700; }
+    .hero .sub { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--muted); max-width: 36ch; margin: 0 auto 30px; }
+    .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .req { margin-top: 16px; font-size: 0.88rem; color: var(--muted); }
+
+    /* product mockup */
+    .shot-wrap { display: flex; justify-content: center; padding: 8px 0 8px; }
+    .window { width: 100%; max-width: 560px; background: var(--bg); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+    .titlebar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--surface); border-bottom: 1px solid var(--border); }
+    .dot { width: 11px; height: 11px; border-radius: 50%; }
+    .titlebar .label { margin-left: 8px; font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    .menu-head { padding: 9px 16px; font-size: 0.8rem; color: var(--muted); border-bottom: 1px solid var(--border); }
+    .clip { display: flex; align-items: center; gap: 12px; padding: 11px 16px; font-size: 0.95rem; }
+    .clip + .clip { border-top: 1px solid var(--border); }
+    .clip .n { color: var(--muted); width: 14px; text-align: right; font-variant-numeric: tabular-nums; }
+    .clip.active { background: var(--accent-tint); }
+    .clip.active .n { color: var(--accent-deep); font-weight: 700; }
+    .clip .txt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .clip .thumb { width: 26px; height: 20px; border-radius: 4px; background: linear-gradient(160deg, #5aa6f4, #1d5fe0); flex: none; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86rem; color: var(--muted); }
+
+    /* section headings */
+    .head { text-align: center; max-width: 40ch; margin: 0 auto 48px; }
+    .head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -0.02em; margin: 0 0 12px; font-weight: 700; }
+    .head p { color: var(--muted); font-size: 1.1rem; margin: 0; }
+
+    /* feature grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .feature { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 26px; box-shadow: var(--shadow-sm); }
+    .feature .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--accent-tint); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .feature .ic svg { width: 24px; height: 24px; }
+    .feature h3 { margin: 0 0 8px; font-size: 1.18rem; font-weight: 600; }
+    .feature p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+
+    /* how it works */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+    .step { text-align: center; }
+    .step .num { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.1rem; }
+    .step h3 { margin: 0 0 6px; font-size: 1.15rem; }
+    .step p { margin: 0; color: var(--muted); }
+
+    /* localization */
+    .locale { background: var(--surface); }
+    .langs { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 720px; margin: 0 auto; }
+    .lang { background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 10px 20px; font-size: 1rem; font-weight: 500; }
+
+    /* download comparison */
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; align-items: stretch; }
+    .plan { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 30px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
+    .plan.featured { border: 2px solid var(--accent); }
+    .plan .badge { align-self: flex-start; font-size: 0.78rem; font-weight: 700; color: var(--accent-ink); background: var(--accent-tint); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
+    .plan h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-size: 1.4rem; }
+    .plan h3 svg { width: 24px; height: 24px; fill: currentColor; }
+    .plan .price { font-size: 1.05rem; color: var(--muted); margin: 0 0 18px; }
+    .plan .price strong { color: var(--fg); }
+    .plan ul { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
+    .plan li { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; color: var(--fg); font-size: 0.98rem; }
+    .plan li svg { width: 18px; height: 18px; flex: none; margin-top: 4px; color: var(--accent); }
+    .plan li code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: var(--surface-2); padding: 1px 5px; border-radius: 5px; }
+    .plan .btn { justify-content: center; width: 100%; }
+
+    /* faq */
+    .faq { max-width: 760px; margin: 0 auto; }
+    details { border-bottom: 1px solid var(--border); padding: 6px 0; }
+    summary { cursor: pointer; list-style: none; padding: 16px 4px; font-size: 1.1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--accent); font-weight: 400; font-size: 1.5rem; line-height: 1; flex: none; }
+    details[open] summary::after { content: "\2013"; }
+    details p { margin: 0 4px 18px; color: var(--muted); }
+
+    /* final cta */
+    .final { background: var(--accent-deep); color: #fff; text-align: center; border-radius: 24px; padding: 64px 24px; margin: 0 24px; }
+    .final h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 12px; letter-spacing: -0.02em; }
+    .final p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin: 0 0 28px; }
+    .final .btn-github { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+    .final .btn-appstore { background: #fff; color: #111; }
+
+    /* footer */
+    footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 80px; color: var(--muted); font-size: 0.92rem; }
+    .foot-inner { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 22px; }
+    .foot-links a { color: var(--muted); }
+    .foot-links a:hover { color: var(--fg); }
+    .foot-brand { display: flex; align-items: center; gap: 10px; }
+    .foot-brand img { width: 26px; height: 26px; border-radius: 6px; }
+    /* credit / acknowledgement */
+    .credit { background: var(--surface); border-top: 1px solid var(--border); }
+    .credit .container { padding: 44px 0; text-align: center; }
+    .credit .kicker { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 10px; font-weight: 600; }
+    .credit p.body { margin: 0 auto; max-width: 660px; font-size: 1.05rem; color: var(--fg); line-height: 1.7; }
+    .credit p.body a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .credit p.body a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="icon">📋</div>
-      <h1>ClipMenu Support</h1>
-      <p class="tagline">The fast clipboard-history menu-bar app for macOS.</p>
-    </header>
 
-    <h2>Get help</h2>
-    <div class="card">
-      <p>The quickest way to ask a question, report a bug, or request a feature is on our public issue tracker. We read every report.</p>
-      <p><a class="cta" href="https://github.com/teddychan/ClipMenu-2/issues">Open an issue on GitHub →</a></p>
-      <p style="margin-top:14px">Prefer email? Write to
-        <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
-        and we'll get back to you.</p>
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><img src="appicon.png" alt="">ClipMenu 2</a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#download">Download</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#download">Download</a>
+      </div>
     </div>
+  </nav>
 
-    <h2>Frequently asked questions</h2>
-    <dl class="faq">
-      <dt>How do I open my clipboard history?</dt>
-      <dd>Press your global hotkey (set in Settings) to pop the history right at your
-        cursor, or click the ClipMenu icon in the menu bar.</dd>
+  <div id="top"></div>
 
-      <dt>ClipMenu can't paste into other apps.</dt>
-      <dd>macOS requires Accessibility permission to paste for you. Open
-        <strong>System Settings → Privacy &amp; Security → Accessibility</strong>
-        and enable ClipMenu.</dd>
-
-      <dt>What does the subscription include?</dt>
-      <dd>The Mac App Store edition is a paid app with a 30-day free trial, then an
-        auto-renewing yearly subscription. It unlocks the full app and iCloud sync of
-        your clipboard history and snippets across all your Macs.</dd>
-
-      <dt>How do I restore my subscription on a new Mac?</dt>
-      <dd>Open ClipMenu and choose <strong>Restore Purchases</strong> on the welcome
-        screen, signed in with the same Apple ID.</dd>
-
-      <dt>How do I manage or cancel the subscription?</dt>
-      <dd>Open the App Store app → click your name → <strong>Subscriptions</strong>,
-        or visit <a href="https://apps.apple.com/account/subscriptions">your Apple subscriptions</a>.</dd>
-
-      <dt>Where is my data stored?</dt>
-      <dd>Your history and snippets stay on your Mac and in your own private iCloud
-        database. We never receive them. See our
-        <a href="https://github.com/teddychan/ClipMenu-2/blob/main/PRIVACY.md">Privacy Policy</a>.</dd>
-    </dl>
-
-    <h2>Links</h2>
-    <div class="card">
-      <p>
-        <a href="https://github.com/teddychan/ClipMenu-2">Project home &amp; downloads</a><br>
-        <a href="https://github.com/teddychan/ClipMenu-2/issues">Report a bug / request a feature</a><br>
-        <a href="https://github.com/teddychan/ClipMenu-2/blob/main/PRIVACY.md">Privacy Policy</a><br>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
-      </p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Clipboard history for macOS</span>
+      <h1>Everything you copied, one shortcut away</h1>
+      <p class="sub">A fast, native menu-bar app that remembers your clipboard, organizes your snippets, and pastes anywhere — with a single hotkey.</p>
+      <div class="cta-row">
+        <a class="btn btn-appstore js-appstore" href="#download">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
+          Download on the App Store
+        </a>
+        <a class="btn btn-github" href="https://github.com/teddychan/ClipMenu-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          Get it free on GitHub
+        </a>
+      </div>
+      <p class="req">Requires macOS 26 or later · Universal · Open source</p>
     </div>
+  </header>
 
-    <footer>
-      ClipMenu for macOS · Support: <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
-    </footer>
+  <!-- PRODUCT SHOT -->
+  <div class="container shot-wrap">
+    <div class="window" role="img" aria-label="ClipMenu 2 clipboard history popup showing recent copied items with numbers and an image thumbnail.">
+      <div class="titlebar">
+        <span class="dot" style="background:#e06a60"></span>
+        <span class="dot" style="background:#e6b341"></span>
+        <span class="dot" style="background:#5fc375"></span>
+        <span class="label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/></svg>
+          Clipboard History
+        </span>
+      </div>
+      <div class="menu-head">Recent · press ⌥V to open at the cursor</div>
+      <div class="clip active"><span class="n">1</span><span class="txt">https://github.com/teddychan/ClipMenu-2</span></div>
+      <div class="clip"><span class="n">2</span><span class="txt">support@dragonapp.com</span></div>
+      <div class="clip"><span class="n">3</span><span class="txt mono">func paste() { synthesizeCommandV() }</span></div>
+      <div class="clip"><span class="n">4</span><span class="thumb"></span><span class="txt">Screenshot 2026-06-20 at 09.41.png</span></div>
+      <div class="clip"><span class="n">5</span><span class="txt">The quick brown fox jumps over the lazy dog</span></div>
+      <div class="clip"><span class="n">6</span><span class="txt">2026-06-20T09:41:00+08:00</span></div>
+    </div>
   </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="head">
+        <h2>Built for people who copy a lot</h2>
+        <p>Everything you need to move text and images around your Mac, and nothing you don't.</p>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Clipboard history</h3>
+          <p>Every copy is remembered. Pop your recent clips right at the cursor or from the menu bar and paste in a keystroke.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <h3>Snippets in folders</h3>
+          <p>Save the text you type all the time — replies, addresses, code — and organize it into folders you control.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 9-3 3 3 3"/><path d="m16 9 3 3-3 3"/><path d="m13 6-2 12"/></svg></div>
+          <h3>JavaScript Actions</h3>
+          <p>Transform clips on the fly: change case, trim, encode HTML or Base64, hash, convert Japanese, and more.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h.01M11 9h.01M15 9h.01M7 13h10"/></svg></div>
+          <h3>Global hotkeys</h3>
+          <p>Open the menu and paste straight into the frontmost app with shortcuts you assign. Your hands never leave the keyboard.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div>
+          <h3>Image thumbnails</h3>
+          <p>Copied an image? See a thumbnail inline, with numbered items and tooltips so you always grab the right one.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 0 0 .5-9 6 6 0 0 0-11.6-1.5A4 4 0 0 0 6 19z"/></svg></div>
+          <h3>iCloud sync</h3>
+          <p>On the App Store edition, your snippets and settings sync across all your Macs through your own private iCloud.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>Three steps, zero friction</h2>
+        <p>ClipMenu 2 lives quietly in your menu bar and gets out of your way.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Copy as usual</h3>
+          <p>Keep working. ClipMenu 2 quietly keeps a history of everything you copy.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Press your hotkey</h3>
+          <p>The history pops up at your cursor. Pick a clip with the arrows or its number.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Paste anywhere</h3>
+          <p>ClipMenu 2 drops it into the app you're in — text, code, or an image.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZATION -->
+  <section class="locale">
+    <div class="container">
+      <div class="head">
+        <h2>Speaks your language</h2>
+        <p>ClipMenu 2 is fully localized in seven languages, right out of the box.</p>
+      </div>
+      <div class="langs">
+        <span class="lang">English</span>
+        <span class="lang">日本語</span>
+        <span class="lang">简体中文</span>
+        <span class="lang">繁體中文</span>
+        <span class="lang">한국어</span>
+        <span class="lang">Español</span>
+        <span class="lang">Français</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>Two ways to get ClipMenu 2</h2>
+        <p>Same app, your choice. Pick the one that fits how you work.</p>
+      </div>
+      <div class="plans">
+        <div class="plan featured">
+          <span class="badge">Easiest · auto-updates</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
+            Mac App Store
+          </h3>
+          <p class="price"><strong>30-day free trial</strong>, then $9.99 / year</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Automatic updates through the App Store</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>iCloud sync of snippets &amp; settings across Macs</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Sandboxed and notarized by Apple</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>One subscription, all your devices</li>
+          </ul>
+          <a class="btn btn-appstore js-appstore" href="#download">
+            <svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
+            Download on the App Store
+          </a>
+        </div>
+
+        <div class="plan">
+          <span class="badge">Free &amp; open source</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            GitHub release
+          </h3>
+          <p class="price"><strong>Free forever</strong> · MIT licensed</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Direct <code>.app</code> download, no account needed</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Built-in auto-update (Sparkle)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Full source on GitHub — inspect and build it yourself</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>All features except iCloud sync</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/ClipMenu-2/releases/latest">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            Get the latest release
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>Questions, answered</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>What's the difference between the App Store and GitHub versions?</summary>
+          <p>They're the same app. The Mac App Store edition is a paid subscription that adds iCloud sync and updates automatically through the App Store. The GitHub edition is free and open source, with built-in auto-update, and includes every feature except iCloud sync.</p>
+        </details>
+        <details>
+          <summary>Why does ClipMenu 2 ask for Accessibility permission?</summary>
+          <p>macOS requires Accessibility permission for an app to paste into another app on your behalf. ClipMenu 2 uses it only to drop your selected clip into the frontmost app. Grant it under System Settings → Privacy &amp; Security → Accessibility. (The App Store edition is sandboxed and doesn't use this.)</p>
+        </details>
+        <details>
+          <summary>Where is my clipboard data stored?</summary>
+          <p>On your Mac. Your history and snippets never leave your devices — ClipMenu 2 has no analytics, ads, or tracking, and we never receive your clipboard contents. With iCloud sync on, snippets travel through your own private iCloud account. Read the <a href="https://github.com/teddychan/ClipMenu-2/blob/main/PRIVACY.md">Privacy Policy</a>.</p>
+        </details>
+        <details>
+          <summary>How much does it cost?</summary>
+          <p>The GitHub build is free forever. The Mac App Store edition is a 30-day free trial, then $9.99 per year, which covers iCloud sync and App Store updates. Manage or cancel anytime in your Apple Account → Subscriptions.</p>
+        </details>
+        <details>
+          <summary>What do I need to run it?</summary>
+          <p>A Mac running macOS 26 or later. ClipMenu 2 runs as a menu-bar agent with no Dock icon and stays out of your way.</p>
+        </details>
+        <details>
+          <summary>Is this the original ClipMenu?</summary>
+          <p>ClipMenu 2 is an independent, modern rewrite in Swift, built on the legacy of the original <a href="https://github.com/naotaka/ClipMenu">ClipMenu</a> by Naotaka Morimoto. We're grateful for his work, which is open source under the MIT License — ClipMenu 2 carries that spirit forward and is released under the same license.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="final">
+      <h2>Stop losing what you copied</h2>
+      <p>Give your clipboard a memory. It takes one minute to set up.</p>
+      <div class="cta-row">
+        <a class="btn btn-appstore js-appstore" href="#download">
+          <svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
+          Download on the App Store
+        </a>
+        <a class="btn btn-github" href="https://github.com/teddychan/ClipMenu-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          Get it free on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit">
+    <div class="container">
+      <p class="kicker">Credits &amp; acknowledgement</p>
+      <p class="body">ClipMenu 2 is built on the legacy of the original <a href="https://github.com/naotaka/ClipMenu">ClipMenu</a> by <strong>Naotaka Morimoto</strong>. It is an independent, open-source rebuild in Swift — created with gratitude for his work and released under the same MIT License.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand">
+        <img src="appicon.png" alt="">
+        <span>ClipMenu 2 for macOS</span>
+      </div>
+      <div class="foot-links">
+        <a href="https://github.com/teddychan/ClipMenu-2">GitHub</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/teddychan/ClipMenu-2/blob/main/PRIVACY.md">Privacy</a>
+        <a href="https://github.com/teddychan/ClipMenu-2/blob/main/LICENSE">License (MIT)</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">
+      © 2026 ClipMenu 2 · Open source under the <a href="https://github.com/teddychan/ClipMenu-2/blob/main/LICENSE">MIT License</a>. Original <a href="https://github.com/naotaka/ClipMenu">ClipMenu</a> © Naotaka Morimoto.
+    </div>
+  </footer>
+
+  <script>
+    // One place to set the live Mac App Store URL. Replace the placeholder below
+    // with your apps.apple.com link and every "App Store" button updates.
+    var APP_STORE_URL = "APP_STORE_URL_PLACEHOLDER";
+    if (APP_STORE_URL && APP_STORE_URL !== "APP_STORE_URL_PLACEHOLDER") {
+      document.querySelectorAll(".js-appstore").forEach(function (a) {
+        a.setAttribute("href", APP_STORE_URL);
+      });
+    }
+  </script>
 </body>
 </html>
