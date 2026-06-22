@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Internal docs that ship in the same folder but aren't part of the site.
+Disallow: /archive/
+Disallow: /superpowers/
+Disallow: /APPSTORE-LISTING.md
+Disallow: /APPSTORE-SETUP.md
+Disallow: /ICLOUD-SETUP.md
+
+Sitemap: https://www.dragonapp.com/sitemap.xml
