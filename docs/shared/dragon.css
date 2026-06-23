@@ -101,10 +101,11 @@ nav {
 }
 .nav-toggle::-webkit-details-marker { display: none; }
 .nav-toggle::marker { content: ""; }
+/* the global FAQ summary "+"/"–" pseudo-marker must not leak onto the toggle */
+.nav-toggle::after { content: none; }
 .nav-toggle svg { width: 22px; height: 22px; flex: none; }
+/* keep the hamburger icon in both states; tapping a link auto-closes the menu */
 .nav-menu .icon-close { display: none; }
-.nav-menu[open] .icon-ham { display: none; }
-.nav-menu[open] .icon-close { display: block; }
 .nav-menu[open] > .nav-toggle { border-color: var(--accent); color: var(--accent-deep); }
 
 @media (min-width: 721px) {
@@ -273,6 +274,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
 .lang-switch > summary:hover { color: var(--fg); }
 .lang-switch > summary::-webkit-details-marker { display: none; }
 .lang-switch > summary::marker { content: ""; }
+.lang-switch > summary::after { content: none; }
 .lang-switch[open] > summary { color: var(--fg); border-color: var(--accent); }
 .lang-switch .globe { width: 16px; height: 16px; flex: none; }
 .lang-menu { position: absolute; right: 0; margin-top: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 6px; min-width: 168px; box-shadow: var(--shadow); z-index: 60; }
