@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
   <script>
     window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       ad_storage: 'denied',
@@ -16,17 +17,8 @@
       security_storage: 'granted',
       wait_for_update: 500
     });
-    try { if (localStorage.getItem('dragonConsent') === 'granted') {
-      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
-    } } catch (e) {}
   </script>
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-FNQ1T94ESZ');
-  </script>
-  <script src="/shared/consent.js?v=2e930c93" defer></script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
   <title>ClipMenu 2 — 适用于 Mac 的剪贴板管理与历史记录工具</title>
   <meta name="description" content="ClipMenu 2 是一款快速、原生的 Mac 剪贴板管理与历史记录应用。你复制过的一切，一个快捷键即可取用——可在 GitHub 或 Mac App Store 免费获取。">
   <link rel="canonical" href="https://www.dragonapp.com/zh-Hans/clipmenu/">
@@ -53,7 +45,9 @@
   <meta name="twitter:description" content="你复制过的一切，一个快捷键即可取用。一款快速、原生的 Mac 剪贴板管理与历史记录应用。">
   <meta name="twitter:image" content="https://www.dragonapp.com/appicon.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css?v=c39d57e2">
+  <link rel="preload" href="/shared/dragon.css?v=66b0cadb" as="style">
+  <link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb"></noscript>
   <script src="/shared/i18n.js?v=bf03b684" defer></script>
 
   <script type="application/ld+json">
@@ -428,7 +422,7 @@
       });
     }
   </script>
-  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
     <div class="consent-inner">
       <p class="consent-text" id="consent-text">我们使用 Cookie 来分析流量并改进 Dragon App。您可以接受或拒绝分析与广告类 Cookie。详见我们的<a href="/privacy.html">隐私政策</a>。</p>
       <div class="consent-actions">

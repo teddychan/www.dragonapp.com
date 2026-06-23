@@ -5,9 +5,24 @@
 (function () {
   "use strict";
   var KEY = "dragonConsent";
+  var tagLoaded = false;
 
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function loadGoogleTag() {
+    var id = window.dragonGoogleAnalyticsId;
+    if (tagLoaded || !id || typeof window.gtag !== "function") return;
+    tagLoaded = true;
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    document.head.appendChild(script);
+
+    window.gtag("js", new Date());
+    window.gtag("config", id);
+  }
 
   function update(granted) {
     if (typeof window.gtag !== "function") return;
@@ -18,13 +33,15 @@
       ad_personalization: v,
       analytics_storage: v
     });
+    if (granted) loadGoogleTag();
   }
 
   function init() {
     var banner = document.getElementById("consent-banner");
     if (!banner) return;
     var choice = get();
-    if (choice === "granted" || choice === "denied") return; // decided already
+    if (choice === "granted") { update(true); return; }
+    if (choice === "denied") return;
 
     banner.removeAttribute("hidden");
     var accept = banner.querySelector(".consent-accept");

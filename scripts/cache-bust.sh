@@ -7,7 +7,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 # URL paths to fingerprint (file lives at docs<path>).
-ASSETS="/shared/dragon.css /shared/consent.js /shared/i18n.js /appicon.png /keykey/appicon.png"
+ASSETS="/shared/dragon.css /shared/consent.js /shared/i18n.js /appicon-56.png /appicon-112.png /appicon.png /keykey/appicon-56.png /keykey/appicon-112.png /keykey/appicon.png"
 
 HTML=()
 while IFS= read -r f; do HTML+=("$f"); done < <(find docs -name '*.html')
@@ -17,7 +17,7 @@ for p in $ASSETS; do
   [ -f "$f" ] || { echo "skip (missing): $f" >&2; continue; }
   h=$(shasum -a 256 "$f" | cut -c1-8)
   P="$p" H="$h" perl -pi -e \
-    's{(href|src)="\Q$ENV{P}\E(\?v=[0-9a-f]+)?"}{$1.q{="}.$ENV{P}.q{?v=}.$ENV{H}.q{"}}ge' \
+    's{(["\047\s,])\Q$ENV{P}\E(\?v=[0-9a-f]+)?}{$1.$ENV{P}.q{?v=}.$ENV{H}}ge' \
     "${HTML[@]}"
   echo "$p -> $h"
 done

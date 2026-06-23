@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
   <script>
     window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       ad_storage: 'denied',
@@ -16,17 +17,8 @@
       security_storage: 'granted',
       wait_for_update: 500
     });
-    try { if (localStorage.getItem('dragonConsent') === 'granted') {
-      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
-    } } catch (e) {}
   </script>
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-FNQ1T94ESZ');
-  </script>
-  <script src="/shared/consent.js?v=2e930c93" defer></script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
   <title>Dragon App — 支持与帮助</title>
   <meta name="description" content="Dragon App 旗下 Mac 应用的支持与帮助——ClipMenu 2（剪贴板管理工具）与 KeyKey（倉頡 Cangjie 与速成 Simplex 输入法）。涵盖设置、权限、订阅与常见问题。">
   <link rel="canonical" href="https://www.dragonapp.com/zh-Hans/support.html">
@@ -246,7 +238,7 @@
       Dragon App for macOS · 支持：<a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
     </footer>
   </div>
-  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
     <div class="consent-inner">
       <p class="consent-text" id="consent-text">我们使用 Cookie 来分析流量并改进 Dragon App。您可以接受或拒绝分析与广告类 Cookie。详见我们的<a href="/privacy.html">隐私政策</a>。</p>
       <div class="consent-actions">
