@@ -74,9 +74,14 @@ PAGES = {
     "keykey":  ("keykey.html",  "keykey/",      os.path.join("keykey", "index.html")),
     "clipmenu":("clipmenu.html","clipmenu/",    os.path.join("clipmenu", "index.html")),
     "support": ("support.html", "support.html", "support.html"),
+    "privacy": ("privacy.html", "privacy.html", "privacy.html"),
 }
+
+# pages built in every language (with hreflang/switcher) vs English-only standalone pages
+I18N_PAGES = ["index", "keykey", "clipmenu", "support"]
+EN_ONLY_PAGES = ["privacy"]
 # sitemap priorities
-PRIORITY = {"index": "1.0", "keykey": "0.8", "clipmenu": "0.9", "support": "0.5"}
+PRIORITY = {"index": "1.0", "keykey": "0.8", "clipmenu": "0.9", "support": "0.5", "privacy": "0.3"}
 LASTMOD = "2026-06-23"
 
 GLOBE = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -197,7 +202,7 @@ def write_sitemap():
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                  'xmlns:xhtml="%s">' % XHTML)
-    for page in ["index", "clipmenu", "keykey", "support"]:
+    for page in I18N_PAGES:
         for lang in LANGS:
             lines.append("  <url>")
             lines.append("    <loc>%s</loc>" % url_for(lang, page))
@@ -210,6 +215,13 @@ def write_sitemap():
             lines.append("    <changefreq>monthly</changefreq>")
             lines.append("    <priority>%s</priority>" % PRIORITY[page])
             lines.append("  </url>")
+    for page in EN_ONLY_PAGES:
+        lines.append("  <url>")
+        lines.append("    <loc>%s</loc>" % url_for("en-US", page))
+        lines.append("    <lastmod>%s</lastmod>" % LASTMOD)
+        lines.append("    <changefreq>yearly</changefreq>")
+        lines.append("    <priority>%s</priority>" % PRIORITY[page])
+        lines.append("  </url>")
     lines.append("</urlset>")
     with open(os.path.join(DOCS, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
@@ -228,13 +240,21 @@ def main():
     count = 0
     available = [l for l in LANGS if l in strings]
     for lang in available:
-        for page in PAGES:
+        for page in I18N_PAGES:
             html = render(templates[page], lang, page, strings, missing)
             dest = out_path(lang, page)
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             with open(dest, "w", encoding="utf-8") as f:
                 f.write(html)
             count += 1
+    # English-only standalone pages (e.g. privacy)
+    for page in EN_ONLY_PAGES:
+        html = render(templates[page], "en-US", page, strings, missing)
+        dest = out_path("en-US", page)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with open(dest, "w", encoding="utf-8") as f:
+            f.write(html)
+        count += 1
     write_sitemap()
 
     print("Built %d pages for languages: %s" % (count, ", ".join(available)))
