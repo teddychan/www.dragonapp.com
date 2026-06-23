@@ -1,6 +1,5 @@
 {
-  "_lang": "en",
-
+  "_lang": "en-US",
   "common": {
     "nav_apps": "Apps",
     "nav_all_apps": "All apps",
@@ -14,7 +13,6 @@
     "footer_license": "License (MIT)",
     "switcher_label": "Language"
   },
-
   "index": {
     "title": "Dragon App — Classic Mac apps, rebuilt",
     "description": "Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — starting with ClipMenu 2 and KeyKey.",
@@ -37,7 +35,6 @@
     "placeholder": "More apps in the works",
     "footer_copyright": "© 2026 Dragon App · Native Mac apps, rebuilt and open source."
   },
-
   "keykey": {
     "title": "KeyKey — Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) for Mac",
     "description": "KeyKey is an open-source rebuild of the classic Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) and Simplex (速成) input method for Mac — native, fast, and free. Download it now.",
@@ -45,7 +42,6 @@
     "og_description": "An open-source rebuild of the classic Yahoo! KeyKey Cangjie (倉頡) &amp; Simplex (速成) input method for Mac — native, fast, and free.",
     "og_image_alt": "KeyKey app icon",
     "ld_app_description": "An open-source rebuild of the classic Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) and Simplex (速成) Traditional-Chinese input method for Mac — native, fast, and free.",
-
     "nav_cta": "Download",
     "hero_icon_alt": "KeyKey app icon",
     "hero_eyebrow": "Now available · v1.2.1",
@@ -54,10 +50,8 @@
     "hero_btn_github": "Download free on GitHub",
     "hero_btn_appstore": "App Store — coming soon",
     "hero_req": "Requires macOS 12 or later · Apple Silicon · Signed &amp; notarized · Open source",
-
     "shot_aria": "KeyKey Cangjie candidate window: typing the radicals 日 and 月 shows a numbered list of matching characters, with 明 selected first.",
     "shot_menu_head": "輸入 日 月 — pick a candidate by number",
-
     "features_h2": "The Yahoo! KeyKey typing experience, brought back",
     "features_sub": "Fast, frictionless Cangjie and Simplex input that Mac users have missed — built fresh in Swift.",
     "feat1_h3": "倉頡 + 速成 input",
@@ -72,7 +66,6 @@
     "feat5_p": "A vertical candidate list matching the original layout — it follows the text caret and flips above or clamps to the screen so it's never cut off.",
     "feat6_h3": "Lightweight &amp; open source",
     "feat6_p": "Shared resources keep memory use low across apps, and the full source is on GitHub — free, MIT licensed, and yours to inspect or build.",
-
     "install_h2": "Up and typing in four steps",
     "install_sub": "The installer is signed and notarized by Apple, so it opens cleanly — no Gatekeeper warnings.",
     "step1_h3": "Download &amp; open",
@@ -83,7 +76,6 @@
     "step3_p": "System Settings ▸ Keyboard ▸ Input Sources ▸ + ▸ Traditional Chinese → add <strong>倉頡</strong> and/or <strong>速成</strong>.",
     "step4_h3": "Switch &amp; type",
     "step4_p": "Press <strong>Ctrl-Space</strong> to switch to KeyKey and start typing. Toggle 簡體 or open 關於 from the input menu.",
-
     "download_h2": "Get KeyKey",
     "download_sub": "Free and open source today, with a Mac App Store edition on the way.",
     "plan1_badge": "Available now · free",
@@ -102,12 +94,9 @@
     "plan2_li3": "Same Cangjie &amp; Simplex engine",
     "plan2_li4": "Not available yet — grab the GitHub build today",
     "plan2_btn": "Coming soon",
-
     "credit_kicker": "In tribute",
     "credit_body": "KeyKey is an independent, open-source rebuild in Swift, created in tribute to the original <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong> — the Traditional-Chinese input method many Mac users loved. It carries that experience forward for modern macOS and is released under the <a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">MIT License</a>.",
-
     "footer_copyright": "© 2026 Dragon App · KeyKey is open source under the <a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">MIT License</a>.",
-
     "faq1_q": "Which input methods does KeyKey support?",
     "faq1_a": "KeyKey is a Traditional-Chinese input method with two modes: Cangjie (倉頡) and Simplex (速成, also called 簡易). It supports wildcard input with *, frequency-ranked candidates, associated phrases (聯想字詞), full-width punctuation, and an optional Traditional-to-Simplified output toggle.",
     "faq2_q": "How do I install KeyKey?",
@@ -117,7 +106,6 @@
     "faq4_q": "Is this the original Yahoo! KeyKey?",
     "faq4_a": "No. KeyKey is an independent, open-source rebuild in Swift, created in tribute to the original Yahoo! KeyKey (Yahoo!奇摩輸入法). It is released under the MIT License."
   },
-
   "clipmenu": {
     "title": "ClipMenu 2 — Clipboard Manager &amp; History for Mac",
     "description": "ClipMenu 2 is a fast, native clipboard manager and history app for Mac. Everything you copied, one shortcut away — free on GitHub or the Mac App Store.",
@@ -125,7 +113,6 @@
     "og_description": "Everything you copied, one shortcut away. A fast, native clipboard manager and history app for Mac.",
     "og_image_alt": "ClipMenu 2 app icon",
     "ld_app_description": "A fast, native clipboard manager and history app for Mac. Keep a history of everything you copy, save snippets in folders, and paste anywhere with a global hotkey.",
-
     "nav_cta": "Download",
     "hero_eyebrow": "The clipboard manager for macOS",
     "hero_h1": "Everything you copied, one shortcut away",
@@ -133,13 +120,11 @@
     "hero_btn_appstore": "Download on the App Store",
     "hero_btn_github": "Get it free on GitHub",
     "hero_req": "Requires macOS 26 or later · Universal · Open source",
-
     "shot_aria": "ClipMenu 2 clipboard history popup showing recent copied items with numbers and an image thumbnail.",
     "shot_label": "Clipboard History",
     "shot_menu_head": "Recent · press ⌥V to open at the cursor",
     "shot_clip4": "Screenshot 2026-06-20 at 09.41.png",
     "shot_clip5": "The quick brown fox jumps over the lazy dog",
-
     "features_h2": "Built for people who copy a lot",
     "features_sub": "Everything you need to move text and images around your Mac, and nothing you don't.",
     "feat1_h3": "Clipboard history",
@@ -154,7 +139,6 @@
     "feat5_p": "Copied an image? See a thumbnail inline, with numbered items and tooltips so you always grab the right one.",
     "feat6_h3": "iCloud sync",
     "feat6_p": "On the App Store edition, your snippets and settings sync across all your Macs through your own private iCloud.",
-
     "how_h2": "Three steps, zero friction",
     "how_sub": "ClipMenu 2 lives quietly in your menu bar and gets out of your way.",
     "how1_h3": "Copy as usual",
@@ -163,10 +147,8 @@
     "how2_p": "The history pops up at your cursor. Pick a clip with the arrows or its number.",
     "how3_h3": "Paste anywhere",
     "how3_p": "ClipMenu 2 drops it into the app you're in — text, code, or an image.",
-
     "locale_h2": "Speaks your language",
     "locale_sub": "ClipMenu 2 is fully localized in seven languages, right out of the box.",
-
     "download_h2": "Two ways to get ClipMenu 2",
     "download_sub": "Same app, your choice. Pick the one that fits how you work.",
     "plan1_badge": "Easiest · auto-updates",
@@ -185,7 +167,6 @@
     "plan2_li3": "Full source on GitHub — inspect and build it yourself",
     "plan2_li4": "All features except iCloud sync",
     "plan2_btn": "Get the latest release",
-
     "faq_h2": "Questions, answered",
     "faq1_q": "What's the difference between the App Store and GitHub versions?",
     "faq1_a": "They're the same app. The Mac App Store edition is a paid subscription that adds iCloud sync and updates automatically through the App Store. The GitHub edition is free and open source, with built-in auto-update, and includes every feature except iCloud sync.",
@@ -199,14 +180,12 @@
     "faq5_a": "A Mac running macOS 26 or later. ClipMenu 2 runs as a menu-bar agent with no Dock icon and stays out of your way.",
     "faq6_q": "Is this the original ClipMenu?",
     "faq6_a": "ClipMenu 2 is an independent, modern rewrite in Swift, built on the legacy of the original <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> by Naotaka Morimoto. We're grateful for his work, which is open source under the MIT License — ClipMenu 2 carries that spirit forward and is released under the same license.",
-
     "ld_faq1_a": "They're the same app. The Mac App Store edition is a paid subscription that adds iCloud sync and updates automatically through the App Store. The GitHub edition is free and open source, with built-in auto-update, and includes every feature except iCloud sync.",
     "ld_faq2_a": "macOS requires Accessibility permission for an app to paste into another app on your behalf. ClipMenu 2 uses it only to drop your selected clip into the frontmost app. The App Store edition is sandboxed and doesn't use this.",
     "ld_faq3_a": "On your Mac. Your history and snippets never leave your devices — ClipMenu 2 has no analytics, ads, or tracking, and we never receive your clipboard contents. With iCloud sync on, snippets travel through your own private iCloud account.",
     "ld_faq4_a": "The GitHub build is free forever. The Mac App Store edition is a 30-day free trial, then $9.99 per year, which covers iCloud sync and App Store updates. Manage or cancel anytime in your Apple Account.",
     "ld_faq5_a": "A Mac running macOS 26 or later. ClipMenu 2 runs as a menu-bar agent with no Dock icon and stays out of your way.",
     "ld_faq6_a": "ClipMenu 2 is an independent, modern rewrite in Swift, built on the legacy of the original ClipMenu by Naotaka Morimoto. It is open source under the MIT License.",
-
     "final_h2": "Stop losing what you copied",
     "final_sub": "Give your clipboard a memory. It takes one minute to set up.",
     "credit_kicker": "Credits &amp; acknowledgement",
@@ -214,23 +193,19 @@
     "footer_brand": "ClipMenu 2 for macOS",
     "footer_copyright": "© 2026 ClipMenu 2 · Open source under the <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/LICENSE\">MIT License</a>. Original <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> © Naotaka Morimoto."
   },
-
   "support": {
     "title": "ClipMenu 2 — Support &amp; Help",
     "description": "Support and help for ClipMenu 2, the fast clipboard manager and history app for Mac. Setup, Accessibility permission, subscriptions, and FAQs.",
     "og_title": "ClipMenu 2 — Support &amp; Help",
     "og_description": "Setup, Accessibility permission, subscriptions, and FAQs for ClipMenu 2, the clipboard manager for Mac.",
-
     "back": "← Back to ClipMenu 2",
     "logo_alt": "ClipMenu 2 icon",
     "h1": "ClipMenu 2 Support",
     "tagline": "The fast clipboard-history menu-bar app for macOS.",
-
     "help_h2": "Get help",
     "help_p1": "The quickest way to ask a question, report a bug, or request a feature is on our public issue tracker. We read every report.",
     "help_cta": "Open an issue on GitHub →",
     "help_p2": "Prefer email? Write to <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a> and we'll get back to you.",
-
     "faq_h2": "Frequently asked questions",
     "faq1_q": "How do I open my clipboard history?",
     "faq1_a": "Press your global hotkey (set in Settings) to pop the history right at your cursor, or click the ClipMenu 2 icon in the menu bar.",
@@ -244,13 +219,11 @@
     "faq5_a": "Open the App Store app → click your name → <strong>Subscriptions</strong>, or visit <a href=\"https://apps.apple.com/account/subscriptions\">your Apple subscriptions</a>.",
     "faq6_q": "Where is my data stored?",
     "faq6_a": "Your history and snippets stay on your Mac and in your own private iCloud database. We never receive them. See our <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">Privacy Policy</a>.",
-
     "links_h2": "Links",
     "link_home": "Project home &amp; downloads",
     "link_issues": "Report a bug / request a feature",
     "link_privacy": "Privacy Policy",
     "link_eula": "Terms of Use (EULA)",
-
     "footer": "ClipMenu 2 for macOS · Support: <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>"
   }
 }

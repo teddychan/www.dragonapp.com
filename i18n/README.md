@@ -7,7 +7,7 @@ generated HTML in `docs/`** (the generator overwrites it).
 ```
 i18n/
   templates/*.html      HTML skeletons with {{ key }} placeholders
-  strings/en.json       English — the source of truth (edit this first)
+  strings/en-US.json       English — the source of truth (edit this first)
   strings/<lang>.json   one per language: zh-Hans zh-Hant ja ko es fr
   build_i18n.py         generator: templates + strings -> docs/
 ```
@@ -24,7 +24,7 @@ alternates. Language auto-detection + the switcher live in `docs/shared/i18n.js`
 
 ## Add a string
 
-1. Add the key + English text to `strings/en.json`.
+1. Add the key + English text to `strings/en-US.json`.
 2. Reference it as `{{ key }}` in the relevant template.
 3. Add the translation to each `strings/<lang>.json` (missing keys fall back to
    English, and the build prints which keys fell back).
