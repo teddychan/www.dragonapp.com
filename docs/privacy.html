@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
   <script>
     window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       ad_storage: 'denied',
@@ -16,17 +17,8 @@
       security_storage: 'granted',
       wait_for_update: 500
     });
-    try { if (localStorage.getItem('dragonConsent') === 'granted') {
-      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
-    } } catch (e) {}
   </script>
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-FNQ1T94ESZ');
-  </script>
-  <script src="/shared/consent.js?v=2e930c93" defer></script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
   <title>Dragon App — Privacy Policy</title>
   <meta name="description" content="Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2 and KeyKey Mac apps handle your data (they keep it on your device).">
   <link rel="canonical" href="https://www.dragonapp.com/privacy.html">
@@ -41,7 +33,9 @@
   <meta property="og:description" content="Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2 and KeyKey Mac apps handle your data (they keep it on your device).">
   <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css?v=c39d57e2">
+  <link rel="preload" href="/shared/dragon.css?v=66b0cadb" as="style">
+  <link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb"></noscript>
   <style>
     .legal { max-width: 760px; margin: 0 auto; padding: 56px 24px 24px; }
     .legal .updated { color: var(--muted); font-size: 0.95rem; margin: 0 0 8px; }
@@ -122,7 +116,7 @@
     <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Native Mac apps, rebuilt and open source.</div>
   </footer>
 
-  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
     <div class="consent-inner">
       <p class="consent-text" id="consent-text">We use cookies to measure traffic and improve Dragon App. You can accept or reject analytics &amp; advertising cookies. See our <a href="/privacy.html">Privacy Policy</a>.</p>
       <div class="consent-actions">

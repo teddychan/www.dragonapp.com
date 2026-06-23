@@ -20,9 +20,10 @@ SITE = "https://www.dragonapp.com"
 GA_ID = "G-FNQ1T94ESZ"
 
 CONSENT_HEAD = (
-    "  <!-- Google Consent Mode v2 (default denied) + Google tag -->\n"
+    "  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->\n"
     "  <script>\n"
     "    window.dataLayer = window.dataLayer || [];\n"
+    "    window.dragonGoogleAnalyticsId = '" + GA_ID + "';\n"
     "    function gtag(){dataLayer.push(arguments);}\n"
     "    gtag('consent', 'default', {\n"
     "      ad_storage: 'denied',\n"
@@ -33,15 +34,6 @@ CONSENT_HEAD = (
     "      security_storage: 'granted',\n"
     "      wait_for_update: 500\n"
     "    });\n"
-    "    try { if (localStorage.getItem('dragonConsent') === 'granted') {\n"
-    "      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', "
-    "ad_personalization: 'granted', analytics_storage: 'granted' });\n"
-    "    } } catch (e) {}\n"
-    "  </script>\n"
-    "  <script async src=\"https://www.googletagmanager.com/gtag/js?id=" + GA_ID + "\"></script>\n"
-    "  <script>\n"
-    "    gtag('js', new Date());\n"
-    "    gtag('config', '" + GA_ID + "');\n"
     "  </script>\n"
     "  <script src=\"/shared/consent.js\" defer></script>"
 )
@@ -143,7 +135,7 @@ def build_consent(common, en_common):
         return common.get(k) or en_common.get(k, "")
     return (
         '  <div id="consent-banner" class="consent-banner" role="dialog" '
-        'aria-describedby="consent-text" hidden>\n'
+        'aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>\n'
         '    <div class="consent-inner">\n'
         '      <p class="consent-text" id="consent-text">%s</p>\n'
         '      <div class="consent-actions">\n'
