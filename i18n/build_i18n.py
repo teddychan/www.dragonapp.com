@@ -19,10 +19,10 @@ DOCS = os.path.join(ROOT, "docs")
 SITE = "https://www.dragonapp.com"
 
 # Order matters: this is the order shown in the switcher and sitemap.
-LANGS = ["en", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"]
+LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"]
 
 NATIVE = {
-    "en": "English",
+    "en-US": "English",
     "zh-Hans": "简体中文",
     "zh-Hant": "繁體中文",
     "ja": "日本語",
@@ -31,7 +31,7 @@ NATIVE = {
     "fr": "Français",
 }
 OG_LOCALE = {
-    "en": "en_US",
+    "en-US": "en_US",
     "zh-Hans": "zh_CN",
     "zh-Hant": "zh_HK",
     "ja": "ja_JP",
@@ -59,7 +59,7 @@ TOKEN_RE = re.compile(r"{{\s*([A-Za-z0-9_]+)\s*}}")
 
 
 def lang_prefix(lang):
-    return "" if lang == "en" else lang + "/"
+    return "" if lang == "en-US" else lang + "/"
 
 
 def url_for(lang, page):
@@ -84,7 +84,7 @@ def build_alternates(page):
     lines = []
     for l in LANGS:
         lines.append('  <link rel="alternate" hreflang="%s" href="%s">' % (l, url_for(l, page)))
-    lines.append('  <link rel="alternate" hreflang="x-default" href="%s">' % url_for("en", page))
+    lines.append('  <link rel="alternate" hreflang="x-default" href="%s">' % url_for("en-US", page))
     return "\n".join(lines)
 
 
@@ -106,7 +106,7 @@ def build_switcher(current, page, common):
 
 
 def render(template, lang, page, strings, missing):
-    en = strings["en"]
+    en = strings["en-US"]
     cur = strings.get(lang, en)
     page_str = cur.get(page, {})
     common = cur.get("common", {})
@@ -158,7 +158,7 @@ def write_sitemap():
                 lines.append('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>'
                              % (alt, url_for(alt, page)))
             lines.append('    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>'
-                         % url_for("en", page))
+                         % url_for("en-US", page))
             lines.append("    <lastmod>%s</lastmod>" % LASTMOD)
             lines.append("    <changefreq>monthly</changefreq>")
             lines.append("    <priority>%s</priority>" % PRIORITY[page])
@@ -170,8 +170,8 @@ def write_sitemap():
 
 def main():
     strings = load_strings()
-    if "en" not in strings:
-        sys.exit("Missing i18n/strings/en.json")
+    if "en-US" not in strings:
+        sys.exit("Missing i18n/strings/en-US.json")
     templates = {}
     for page, (tpl, _, _) in PAGES.items():
         with open(os.path.join(TEMPLATES_DIR, tpl), encoding="utf-8") as f:
