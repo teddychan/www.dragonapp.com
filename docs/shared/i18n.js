@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var LANGS = ["en", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"];
+  var LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"];
 
   function lsGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
@@ -22,7 +22,8 @@
         t === "zh-cn" || t === "zh-sg" || t === "zh-my" || t === "zh") return "zh-Hans";
     var base = t.split("-")[0];
     if (base === "zh") return "zh-Hans";
-    if (LANGS.indexOf(base) >= 0) return base; // en, ja, ko, es, fr
+    if (base === "en") return "en-US";
+    if (LANGS.indexOf(base) >= 0) return base; // ja, ko, es, fr
     return null;
   }
 
@@ -38,22 +39,22 @@
   }
 
   function currentLang() {
-    var l = (document.documentElement.getAttribute("lang") || "en");
-    return LANGS.indexOf(l) >= 0 ? l : "en";
+    var l = (document.documentElement.getAttribute("lang") || "en-US");
+    return LANGS.indexOf(l) >= 0 ? l : "en-US";
   }
 
   // Strip a leading "/<lang>/" segment, returning the page path within a language tree.
   function pagePath() {
     var parts = window.location.pathname.split("/"); // e.g. ["","ja","keykey",""]
     var head = parts[1];
-    if (head && LANGS.indexOf(head) >= 0 && head !== "en") {
+    if (head && LANGS.indexOf(head) >= 0 && head !== "en-US") {
       return parts.slice(2).join("/");
     }
     return parts.slice(1).join("/");
   }
 
   function urlFor(lang) {
-    var prefix = (lang === "en") ? "/" : "/" + lang + "/";
+    var prefix = (lang === "en-US") ? "/" : "/" + lang + "/";
     return prefix + pagePath();
   }
 
