@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description }}">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_desc }}">
   <link rel="canonical" href="{{ CANONICAL }}">
   <link rel="icon" href="/appicon.png">
 {{ ALTERNATES }}
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="ClipMenu 2">
+  <meta property="og:site_name" content="Dragon App">
   <meta property="og:locale" content="{{ OG_LOCALE }}">
   <meta property="og:url" content="{{ CANONICAL }}">
-  <meta property="og:title" content="{{ og_title }}">
-  <meta property="og:description" content="{{ og_description }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
   <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
   <script src="/shared/i18n.js" defer></script>
   <style>
@@ -49,10 +49,13 @@
     header { text-align: center; margin: 24px 0 40px; }
     h1 { font-size: 2.2rem; margin: 12px 0 4px; }
     .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
-    h2 { font-size: 1.35rem; margin: 40px 0 12px; }
+    h2 { font-size: 1.5rem; margin: 48px 0 6px; padding-top: 12px; border-top: 1px solid var(--border); }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    h3 { font-size: 1.05rem; margin: 24px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
     p { margin: 0 0 14px; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; }
     .logo { width: 72px; height: 72px; border-radius: 16px; }
     .card {
       background: var(--card);
@@ -96,23 +99,24 @@
 <body>
   <div class="wrap">
     <div class="topbar">
-      <p class="home"><a href="clipmenu/">{{ back }}</a></p>
+      <p class="home"><a href="./">← {{ nav_all_apps }}</a></p>
 {{ SWITCHER }}
     </div>
     <header>
-      <img class="logo" src="/appicon.png" alt="{{ logo_alt }}">
-      <h1>{{ h1 }}</h1>
-      <p class="tagline">{{ tagline }}</p>
+      <img class="logo" src="/appicon.png" alt="{{ page_logo_alt }}">
+      <h1>{{ page_h1 }}</h1>
+      <p class="tagline">{{ page_tagline }}</p>
     </header>
 
-    <h2>{{ help_h2 }}</h2>
+    <h2>{{ cm_h2 }}</h2>
+    <p>{{ cm_sub }}</p>
     <div class="card">
       <p>{{ help_p1 }}</p>
       <p><a class="cta" href="https://github.com/teddychan/clipmenu-2/issues">{{ help_cta }}</a></p>
       <p style="margin-top:14px">{{ help_p2 }}</p>
     </div>
 
-    <h2>{{ faq_h2 }}</h2>
+    <h3>{{ faq_h2 }}</h3>
     <dl class="faq">
       <dt>{{ faq1_q }}</dt>
       <dd>{{ faq1_a }}</dd>
@@ -133,18 +137,58 @@
       <dd>{{ faq6_a }}</dd>
     </dl>
 
-    <h2>{{ links_h2 }}</h2>
+    <h3>{{ links_h2 }}</h3>
     <div class="card">
       <p>
-        <a href="https://github.com/teddychan/clipmenu-2">{{ link_home }}</a><br>
+        <a href="clipmenu/">{{ link_home }}</a><br>
         <a href="https://github.com/teddychan/clipmenu-2/issues">{{ link_issues }}</a><br>
         <a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">{{ link_privacy }}</a><br>
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">{{ link_eula }}</a>
       </p>
     </div>
 
+    <h2>{{ kk_h2 }}</h2>
+    <p>{{ kk_sub }}</p>
+    <div class="card">
+      <p>{{ kk_help_p1 }}</p>
+      <p><a class="cta" href="https://github.com/teddychan/yahoo-keykey-2/issues">{{ help_cta }}</a></p>
+      <p style="margin-top:14px">{{ help_p2 }}</p>
+    </div>
+
+    <h3>{{ faq_h2 }}</h3>
+    <dl class="faq">
+      <dt>{{ kk_faq1_q }}</dt>
+      <dd>{{ kk_faq1_a }}</dd>
+
+      <dt>{{ kk_faq2_q }}</dt>
+      <dd>{{ kk_faq2_a }}</dd>
+
+      <dt>{{ kk_faq3_q }}</dt>
+      <dd>{{ kk_faq3_a }}</dd>
+
+      <dt>{{ kk_faq4_q }}</dt>
+      <dd>{{ kk_faq4_a }}</dd>
+
+      <dt>{{ kk_faq5_q }}</dt>
+      <dd>{{ kk_faq5_a }}</dd>
+
+      <dt>{{ kk_faq6_q }}</dt>
+      <dd>{{ kk_faq6_a }}</dd>
+    </dl>
+
+    <h3>{{ links_h2 }}</h3>
+    <div class="card">
+      <p>
+        <a href="keykey/">{{ kk_link_home }}</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2">{{ kk_link_project }}</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2/issues">{{ link_issues }}</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/CREDITS.md">{{ kk_link_credits }}</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">{{ footer_license }}</a>
+      </p>
+    </div>
+
     <footer>
-      {{ footer }}
+      {{ page_footer }}
     </footer>
   </div>
 </body>
