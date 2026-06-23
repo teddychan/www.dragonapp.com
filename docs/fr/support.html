@@ -3,8 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dragon App — Support &amp; Help</title>
-  <meta name="description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.">
+  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('dragonConsent') === 'granted') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+    } } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FNQ1T94ESZ');
+  </script>
+  <script src="/shared/consent.js" defer></script>
+  <title>Dragon App — Assistance &amp; aide</title>
+  <meta name="description" content="Assistance et aide pour les apps Mac de Dragon App — ClipMenu 2 (gestionnaire de presse-papiers) et KeyKey (méthode de saisie Cangjie &amp; Simplex). Installation, autorisations, abonnements et FAQ.">
   <link rel="canonical" href="https://www.dragonapp.com/fr/support.html">
   <link rel="icon" href="/appicon.png">
   <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/support.html">
@@ -19,8 +42,8 @@
   <meta property="og:site_name" content="Dragon App">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:url" content="https://www.dragonapp.com/fr/support.html">
-  <meta property="og:title" content="Dragon App — Support &amp; Help">
-  <meta property="og:description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.">
+  <meta property="og:title" content="Dragon App — Assistance &amp; aide">
+  <meta property="og:description" content="Assistance et aide pour les apps Mac de Dragon App — ClipMenu 2 (gestionnaire de presse-papiers) et KeyKey (méthode de saisie Cangjie &amp; Simplex). Installation, autorisations, abonnements et FAQ.">
   <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
   <script src="/shared/i18n.js" defer></script>
   <style>
@@ -101,6 +124,19 @@
     .lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); }
     .lang-menu a:hover { background: var(--card); text-decoration: none; }
     .lang-menu a.active { color: var(--accent); font-weight: 600; }
+    /* cookie consent banner */
+    .consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--bg); border-top: 1px solid var(--border); box-shadow: 0 -10px 30px rgba(0,0,0,0.10); }
+    .consent-banner[hidden] { display: none; }
+    .consent-inner { max-width: 720px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .consent-text { margin: 0; font-size: 0.9rem; color: var(--muted); flex: 1; min-width: 220px; line-height: 1.5; }
+    .consent-text a { color: var(--accent); }
+    .consent-actions { display: flex; gap: 10px; flex: none; }
+    .consent-btn { font-family: inherit; font-size: 0.9rem; font-weight: 600; padding: 9px 18px; border-radius: 10px; cursor: pointer; border: 1px solid var(--border); }
+    .consent-reject { background: var(--bg); color: var(--fg); }
+    .consent-reject:hover { background: var(--card); }
+    .consent-accept { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .consent-accept:hover { opacity: 0.9; }
+    @media (max-width: 560px) { .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
   </style>
 </head>
 <body>
@@ -122,12 +158,12 @@
     </div>
     <header>
       <img class="logo" src="/appicon.png" alt="Dragon App">
-      <h1>Support</h1>
-      <p class="tagline">Help for ClipMenu 2 and KeyKey.</p>
+      <h1>Assistance</h1>
+      <p class="tagline">Aide pour ClipMenu 2 et KeyKey.</p>
     </header>
 
     <h2>ClipMenu 2</h2>
-    <p>The fast clipboard-history menu-bar app for macOS.</p>
+    <p>L'app de barre de menus qui gère rapidement l'historique du presse-papiers sur macOS.</p>
     <div class="card">
       <p>Le moyen le plus rapide de poser une question, de signaler un bug ou de demander une fonctionnalité est notre outil public de suivi des problèmes. Nous lisons chaque rapport.</p>
       <p><a class="cta" href="https://github.com/teddychan/clipmenu-2/issues">Ouvrir un ticket sur GitHub →</a></p>
@@ -166,48 +202,57 @@
     </div>
 
     <h2>KeyKey</h2>
-    <p>The Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) input method, rebuilt for macOS.</p>
+    <p>La méthode de saisie Cangjie (倉頡) &amp; Simplex (速成) de Yahoo!奇摩輸入法, reconstruite pour macOS.</p>
     <div class="card">
-      <p>Questions, bug reports, and feature requests go to the KeyKey issue tracker. We read every one.</p>
+      <p>Questions, rapports de bugs et demandes de fonctionnalités sont à adresser au suivi des problèmes de KeyKey. Nous les lisons tous.</p>
       <p><a class="cta" href="https://github.com/teddychan/yahoo-keykey-2/issues">Ouvrir un ticket sur GitHub →</a></p>
       <p style="margin-top:14px">Vous préférez l'e-mail ? Écrivez à <a href="mailto:support@dragonapp.com">support@dragonapp.com</a> et nous vous répondrons.</p>
     </div>
 
     <h3>Questions fréquentes</h3>
     <dl class="faq">
-      <dt>How do I install KeyKey?</dt>
-      <dd>Download <code>YahooKeyKey2.pkg</code> from the <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">latest release</a> and double-click it, or run <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>. Then log out and back in.</dd>
+      <dt>Comment installer KeyKey ?</dt>
+      <dd>Téléchargez <code>YahooKeyKey2.pkg</code> depuis la <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">dernière version</a> et double-cliquez dessus, ou exécutez <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>. Déconnectez-vous ensuite, puis reconnectez-vous.</dd>
 
-      <dt>It doesn't show up in Input Sources.</dt>
-      <dd>macOS only registers an input method at login. Log out and back in, then add it under <strong>System Settings → Keyboard → Input Sources → + → Traditional Chinese</strong> and choose 倉頡 (Cangjie) and/or 速成 (Simplex).</dd>
+      <dt>KeyKey n'apparaît pas dans les sources de saisie.</dt>
+      <dd>macOS n'enregistre une méthode de saisie qu'à l'ouverture de session. Déconnectez-vous puis reconnectez-vous, ensuite ajoutez-la dans <strong>Réglages Système → Clavier → Sources de saisie → + → Chinois traditionnel</strong> et choisissez 倉頡 (Cangjie) et/ou 速成 (Simplex).</dd>
 
-      <dt>How do I switch to KeyKey and change settings?</dt>
-      <dd>Press <strong>Ctrl-Space</strong> to cycle input sources. From the input menu in the menu bar you can toggle 聯想字詞 (associated phrases), 全形標點 (full-width punctuation), and 輸出簡體字 (Simplified output), or open 關於 (About).</dd>
+      <dt>Comment passer à KeyKey et modifier les réglages ?</dt>
+      <dd>Appuyez sur <strong>Ctrl-Space</strong> pour faire défiler les sources de saisie. Depuis le menu de saisie de la barre de menus, vous pouvez activer ou désactiver 聯想字詞 (phrases associées), 全形標點 (ponctuation pleine chasse) et 輸出簡體字 (sortie en caractères simplifiés), ou ouvrir 關於 (À propos).</dd>
 
-      <dt>How do I type Simplified Chinese?</dt>
-      <dd>Turn on <strong>輸出簡體字</strong> in the input menu. You keep typing Cangjie/Simplex and KeyKey outputs Simplified characters.</dd>
+      <dt>Comment taper en chinois simplifié ?</dt>
+      <dd>Activez <strong>輸出簡體字</strong> dans le menu de saisie. Vous continuez à taper en Cangjie/Simplex et KeyKey produit des caractères simplifiés.</dd>
 
-      <dt>What do I need to run it?</dt>
-      <dd>A Mac with Apple Silicon running macOS 12 or later. KeyKey is signed with a Developer ID and notarized by Apple, so it opens cleanly.</dd>
+      <dt>De quoi ai-je besoin pour l'utiliser ?</dt>
+      <dd>Un Mac doté d'une puce Apple Silicon sous macOS 12 ou version ultérieure. KeyKey est signée avec un Developer ID et notarisée par Apple, elle s'ouvre donc sans encombre.</dd>
 
-      <dt>How do I uninstall KeyKey?</dt>
-      <dd>Run <code>brew uninstall --cask yahoo-keykey-2</code>, or delete <code>~/Library/Input Methods/YahooKeyKey2.app</code>. Then remove it from Input Sources and log out and back in.</dd>
+      <dt>Comment désinstaller KeyKey ?</dt>
+      <dd>Exécutez <code>brew uninstall --cask yahoo-keykey-2</code>, ou supprimez <code>~/Library/Input Methods/YahooKeyKey2.app</code>. Retirez-la ensuite des sources de saisie, puis déconnectez-vous et reconnectez-vous.</dd>
     </dl>
 
     <h3>Liens</h3>
     <div class="card">
       <p>
-        <a href="keykey/">KeyKey home</a><br>
-        <a href="https://github.com/teddychan/yahoo-keykey-2">Project &amp; downloads on GitHub</a><br>
+        <a href="keykey/">Accueil KeyKey</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2">Projet &amp; téléchargements sur GitHub</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2/issues">Signaler un bug / demander une fonctionnalité</a><br>
-        <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/CREDITS.md">Credits</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/CREDITS.md">Crédits</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">Licence (MIT)</a>
       </p>
     </div>
 
     <footer>
-      Dragon App for macOS · Support: <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
+      Dragon App pour macOS · Assistance : <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
     </footer>
+  </div>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">Nous utilisons des cookies pour mesurer l'audience et améliorer Dragon App. Vous pouvez accepter ou refuser les cookies de mesure et de publicité. Consultez notre <a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">politique de confidentialité</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">Tout refuser</button>
+        <button type="button" class="consent-btn consent-accept">Tout accepter</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
