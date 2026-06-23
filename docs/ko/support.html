@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
   <script>
     window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       ad_storage: 'denied',
@@ -16,17 +17,8 @@
       security_storage: 'granted',
       wait_for_update: 500
     });
-    try { if (localStorage.getItem('dragonConsent') === 'granted') {
-      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
-    } } catch (e) {}
   </script>
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-FNQ1T94ESZ');
-  </script>
-  <script src="/shared/consent.js?v=2e930c93" defer></script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
   <title>Dragon App — 지원 &amp; 도움말</title>
   <meta name="description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자)와 KeyKey(Cangjie(倉頡) &amp; Simplex(速成) 입력기)에 대한 지원 및 도움말. 설정, 권한, 구독, 자주 묻는 질문을 안내합니다.">
   <link rel="canonical" href="https://www.dragonapp.com/ko/support.html">
@@ -246,7 +238,7 @@
       macOS용 Dragon App · 지원: <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
     </footer>
   </div>
-  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
     <div class="consent-inner">
       <p class="consent-text" id="consent-text">쿠키를 사용하여 트래픽을 분석하고 Dragon App을 개선합니다. 분석 및 광고 쿠키를 수락하거나 거부할 수 있습니다. 자세한 내용은 <a href="/privacy.html">개인정보 처리방침</a>을 참조하세요.</p>
       <div class="consent-actions">

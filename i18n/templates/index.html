@@ -22,7 +22,9 @@
   <meta name="twitter:description" content="{{ og_description }}">
   <meta name="twitter:image" content="https://www.dragonapp.com/appicon.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css">
+  <link rel="preload" href="/shared/dragon.css" as="style">
+  <link rel="stylesheet" href="/shared/dragon.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/shared/dragon.css"></noscript>
   <script src="/shared/i18n.js" defer></script>
 
   <script type="application/ld+json">
@@ -115,7 +117,7 @@
 
         <a class="app-card" href="clipmenu/">
           <div class="app-head">
-            <span class="app-icon"><img src="/appicon.png" alt="{{ clipmenu_icon_alt }}"></span>
+            <span class="app-icon"><img src="/appicon-56.png" srcset="/appicon-56.png 56w, /appicon-112.png 112w" sizes="56px" alt="{{ clipmenu_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>ClipMenu 2</h3>
               <span class="status status-available">{{ status_available }}</span>
@@ -130,7 +132,7 @@
 
         <a class="app-card" href="keykey/">
           <div class="app-head">
-            <span class="app-icon"><img src="/keykey/appicon.png" alt="{{ keykey_icon_alt }}"></span>
+            <span class="app-icon"><img src="/keykey/appicon-56.png" srcset="/keykey/appicon-56.png 56w, /keykey/appicon-112.png 112w" sizes="56px" alt="{{ keykey_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>KeyKey</h3>
               <span class="status status-available">{{ status_available }}</span>

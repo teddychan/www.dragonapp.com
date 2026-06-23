@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
   <script>
     window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
       ad_storage: 'denied',
@@ -16,17 +17,8 @@
       security_storage: 'granted',
       wait_for_update: 500
     });
-    try { if (localStorage.getItem('dragonConsent') === 'granted') {
-      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
-    } } catch (e) {}
   </script>
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-FNQ1T94ESZ');
-  </script>
-  <script src="/shared/consent.js?v=2e930c93" defer></script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
   <title>Dragon App — 名作Macアプリを、現代に再構築</title>
   <meta name="description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです。ClipMenu 2とKeyKeyから始まります。">
   <link rel="canonical" href="https://www.dragonapp.com/ja/">
@@ -56,7 +48,9 @@
   <meta name="twitter:description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです。ClipMenu 2とKeyKeyから始まります。">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css?v=c39d57e2">
+  <link rel="preload" href="/shared/dragon.css?v=66b0cadb" as="style">
+  <link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb"></noscript>
   <script src="/shared/i18n.js?v=bf03b684" defer></script>
 
   <script type="application/ld+json">
@@ -166,7 +160,7 @@
 
         <a class="app-card" href="clipmenu/">
           <div class="app-head">
-            <span class="app-icon"><img src="/appicon.png?v=7d88545a" alt="ClipMenu 2のアイコン" width="56" height="56" loading="lazy" decoding="async"></span>
+            <span class="app-icon"><img src="/appicon-56.png?v=c033d8fc" srcset="/appicon-56.png?v=c033d8fc 56w, /appicon-112.png?v=8418e7ee 112w" sizes="56px" alt="ClipMenu 2のアイコン" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>ClipMenu 2</h3>
               <span class="status status-available">提供中</span>
@@ -181,7 +175,7 @@
 
         <a class="app-card" href="keykey/">
           <div class="app-head">
-            <span class="app-icon"><img src="/keykey/appicon.png?v=afa819d7" alt="KeyKeyのアイコン" width="56" height="56" loading="lazy" decoding="async"></span>
+            <span class="app-icon"><img src="/keykey/appicon-56.png?v=5132ebc4" srcset="/keykey/appicon-56.png?v=5132ebc4 56w, /keykey/appicon-112.png?v=2eb76c35 112w" sizes="56px" alt="KeyKeyのアイコン" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>KeyKey</h3>
               <span class="status status-available">提供中</span>
@@ -215,7 +209,7 @@
     <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · 再構築されたオープンソースのネイティブMacアプリ。</div>
   </footer>
 
-  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
     <div class="consent-inner">
       <p class="consent-text" id="consent-text">Cookie を使用してトラフィックを分析し、Dragon App を改善します。分析および広告用 Cookie の使用を許可または拒否できます。詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
       <div class="consent-actions">
