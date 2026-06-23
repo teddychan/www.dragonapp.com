@@ -12,7 +12,7 @@
     "footer_privacy": "Privacy",
     "footer_license": "License (MIT)",
     "switcher_label": "Language",
-    "consent_message": "We use cookies to measure traffic and improve Dragon App. You can accept or reject analytics &amp; advertising cookies. See our <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">Privacy Policy</a>.",
+    "consent_message": "We use cookies to measure traffic and improve Dragon App. You can accept or reject analytics &amp; advertising cookies. See our <a href=\"/privacy.html\">Privacy Policy</a>.",
     "consent_accept": "Accept all",
     "consent_reject": "Reject all"
   },
@@ -176,7 +176,7 @@
     "faq2_q": "Why does ClipMenu 2 ask for Accessibility permission?",
     "faq2_a": "macOS requires Accessibility permission for an app to paste into another app on your behalf. ClipMenu 2 uses it only to drop your selected clip into the frontmost app. Grant it under System Settings → Privacy &amp; Security → Accessibility. (The App Store edition is sandboxed and doesn't use this.)",
     "faq3_q": "Where is my clipboard data stored?",
-    "faq3_a": "On your Mac. Your history and snippets never leave your devices — ClipMenu 2 has no analytics, ads, or tracking, and we never receive your clipboard contents. With iCloud sync on, snippets travel through your own private iCloud account. Read the <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">Privacy Policy</a>.",
+    "faq3_a": "On your Mac. Your history and snippets never leave your devices — ClipMenu 2 has no analytics, ads, or tracking, and we never receive your clipboard contents. With iCloud sync on, snippets travel through your own private iCloud account. Read the <a href=\"/privacy.html\">Privacy Policy</a>.",
     "faq4_q": "How much does it cost?",
     "faq4_a": "The GitHub build is free forever. The Mac App Store edition is a 30-day free trial, then $9.99 per year, which covers iCloud sync and App Store updates. Manage or cancel anytime in your Apple Account → Subscriptions.",
     "faq5_q": "What do I need to run it?",
@@ -221,24 +221,21 @@
     "faq5_q": "How do I manage or cancel the subscription?",
     "faq5_a": "Open the App Store app → click your name → <strong>Subscriptions</strong>, or visit <a href=\"https://apps.apple.com/account/subscriptions\">your Apple subscriptions</a>.",
     "faq6_q": "Where is my data stored?",
-    "faq6_a": "Your history and snippets stay on your Mac and in your own private iCloud database. We never receive them. See our <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">Privacy Policy</a>.",
+    "faq6_a": "Your history and snippets stay on your Mac and in your own private iCloud database. We never receive them. See our <a href=\"/privacy.html\">Privacy Policy</a>.",
     "links_h2": "Links",
     "link_home": "Project home &amp; downloads",
     "link_issues": "Report a bug / request a feature",
     "link_privacy": "Privacy Policy",
     "link_eula": "Terms of Use (EULA)",
     "footer": "ClipMenu 2 for macOS · Support: <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
-
     "page_title": "Dragon App — Support &amp; Help",
     "page_desc": "Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.",
     "page_logo_alt": "Dragon App",
     "page_h1": "Support",
     "page_tagline": "Help for ClipMenu 2 and KeyKey.",
     "page_footer": "Dragon App for macOS · Support: <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
-
     "cm_h2": "ClipMenu 2",
     "cm_sub": "The fast clipboard-history menu-bar app for macOS.",
-
     "kk_h2": "KeyKey",
     "kk_sub": "The Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) input method, rebuilt for macOS.",
     "kk_help_p1": "Questions, bug reports, and feature requests go to the KeyKey issue tracker. We read every one.",
@@ -257,5 +254,9 @@
     "kk_link_home": "KeyKey home",
     "kk_link_project": "Project &amp; downloads on GitHub",
     "kk_link_credits": "Credits"
+  },
+  "privacy": {
+    "title": "Dragon App — Privacy Policy",
+    "description": "Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2 and KeyKey Mac apps handle your data (they keep it on your device)."
   }
 }
