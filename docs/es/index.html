@@ -18,7 +18,72 @@
       wait_for_update: 500
     });
   </script>
-  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+
+  <script>
+/* Dragon App — custom consent banner for Google Consent Mode v2.
+   The default (denied) state and the Google tag are set in <head> before this
+   runs. This file shows the banner when no choice is stored yet and calls
+   gtag('consent','update', ...) when the visitor accepts or rejects. */
+(function () {
+  "use strict";
+  var KEY = "dragonConsent";
+  var tagLoaded = false;
+
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function loadGoogleTag() {
+    var id = window.dragonGoogleAnalyticsId;
+    if (tagLoaded || !id || typeof window.gtag !== "function") return;
+    tagLoaded = true;
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    document.head.appendChild(script);
+
+    window.gtag("js", new Date());
+    window.gtag("config", id);
+  }
+
+  function update(granted) {
+    if (typeof window.gtag !== "function") return;
+    var v = granted ? "granted" : "denied";
+    window.gtag("consent", "update", {
+      ad_storage: v,
+      ad_user_data: v,
+      ad_personalization: v,
+      analytics_storage: v
+    });
+    if (granted) loadGoogleTag();
+  }
+
+  function init() {
+    var banner = document.getElementById("consent-banner");
+    if (!banner) return;
+    var choice = get();
+    if (choice === "granted") { update(true); return; }
+    if (choice === "denied") return;
+
+    banner.removeAttribute("hidden");
+    var accept = banner.querySelector(".consent-accept");
+    var reject = banner.querySelector(".consent-reject");
+    if (accept) accept.addEventListener("click", function () {
+      set("granted"); update(true); banner.setAttribute("hidden", "");
+    });
+    if (reject) reject.addEventListener("click", function () {
+      set("denied"); update(false); banner.setAttribute("hidden", "");
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+
+  </script>
   <title>Dragon App — Aplicaciones clásicas de Mac, reconstruidas</title>
   <meta name="description" content="Dragon App es un pequeño estudio que revive apreciadas aplicaciones de macOS ya descontinuadas, reconstruyéndolas como versiones rápidas, nativas y de código abierto, empezando por ClipMenu 2 y KeyKey.">
   <link rel="canonical" href="https://www.dragonapp.com/es/">
@@ -48,8 +113,419 @@
   <meta name="twitter:description" content="Dragon App es un pequeño estudio que revive apreciadas aplicaciones de macOS ya descontinuadas, reconstruyéndolas como versiones rápidas, nativas y de código abierto, empezando por ClipMenu 2 y KeyKey.">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb">
-  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+  <style>
+/* Dragon App — shared design system
+   One stylesheet for the studio hub and every app page.
+   Per-app accent: add a theme class to <body> (e.g. class="theme-keykey").
+   Default theme (no class) is the ClipMenu / studio blue. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f8fd;
+  --surface-2: #eef3fb;
+  --fg: #0f1f33;
+  --muted: #5a6b7d;
+  --border: #e4ebf4;
+  --accent: #1f6fd6;
+  --accent-action: #1f6fd6;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #1857c8;
+  --accent-tint: #e8f1fe;
+  --accent-ink: #16489e;
+  --shadow: 0 18px 40px rgba(24, 87, 200, 0.12);
+  --shadow-sm: 0 8px 22px rgba(24, 87, 200, 0.10);
+  --nav-bg: rgba(255, 255, 255, 0.78);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1419;
+    --surface: #161c24;
+    --surface-2: #1b2330;
+    --fg: #f0f4f8;
+    --muted: #9aa7b5;
+    --border: #283341;
+    --accent: #5aa6f4;
+    --accent-action: #8cc2f8;
+    --accent-action-ink: #07121f;
+    --accent-deep: #8cc2f8;
+    --accent-tint: #11233f;
+    --accent-ink: #bbd9fb;
+    --shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.45);
+    --nav-bg: rgba(15, 20, 25, 0.72);
+  }
+}
+
+/* KeyKey — royal-blue accent, matching the 倉 app icon */
+body.theme-keykey {
+  --accent: #3a5fe0;
+  --accent-action: #2440ad;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #2440ad;
+  --accent-tint: #e9edfc;
+  --accent-ink: #1f3a9e;
+  --shadow: 0 18px 40px rgba(36, 64, 173, 0.14);
+  --shadow-sm: 0 8px 22px rgba(36, 64, 173, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-keykey {
+    --accent: #7e9bf3;
+    --accent-action: #aec3f9;
+    --accent-action-ink: #07121f;
+    --accent-deep: #aec3f9;
+    --accent-tint: #131d3f;
+    --accent-ink: #c4d2fb;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+section { padding: 80px 0; }
+
+/* nav */
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--nav-bg);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner { position: relative; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.05rem; color: var(--fg); white-space: nowrap; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.brand .glyph { width: 28px; height: 28px; border-radius: 7px; display: flex; align-items: center; justify-content: center; background: var(--accent-tint); color: var(--accent-deep); font-size: 1rem; font-weight: 700; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: var(--muted); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--fg); text-decoration: none; }
+.nav-cta {
+  background: var(--accent-action); color: var(--accent-action-ink) !important; padding: 8px 16px;
+  border-radius: 999px; font-size: 0.9rem; font-weight: 600;
+}
+.nav-cta:hover { opacity: 0.92; text-decoration: none; }
+
+/* hamburger menu — the <details class="nav-menu"> is a plain inline flex wrapper
+   on desktop (links sit inline as before) and becomes a toggle panel on mobile */
+.nav-menu { display: flex; align-items: center; }
+.nav-toggle {
+  display: none; list-style: none; cursor: pointer;
+  width: 40px; height: 40px; align-items: center; justify-content: center;
+  border: 1px solid var(--border); border-radius: 10px;
+  color: var(--fg); background: var(--bg);
+}
+.nav-toggle::-webkit-details-marker { display: none; }
+.nav-toggle::marker { content: ""; }
+/* the global FAQ summary "+"/"–" pseudo-marker must not leak onto the toggle;
+   the [open] selector needs enough specificity to beat details[open] summary::after */
+.nav-toggle::after,
+.nav-menu[open] > .nav-toggle::after { content: none; }
+.nav-toggle svg { width: 22px; height: 22px; flex: none; }
+/* keep the hamburger icon in both states; tapping a link auto-closes the menu */
+.nav-menu .icon-close { display: none; }
+.nav-menu[open] > .nav-toggle { border-color: var(--accent); color: var(--accent-deep); }
+
+@media (min-width: 721px) {
+  /* keep links inline regardless of the <details> open/closed state — a closed
+     <details> otherwise collapses its content box (content-visibility: hidden) */
+  .nav-menu .nav-links { display: flex !important; }
+  .nav-menu::details-content { content-visibility: visible; }
+}
+
+@media (max-width: 720px) {
+  .nav-menu { display: block; }
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 4px;
+    padding: 8px; margin: 0;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 14px; box-shadow: var(--shadow); z-index: 60;
+  }
+  .nav-links a { padding: 11px 12px; border-radius: 9px; font-size: 1rem; }
+  .nav-links a:hover { background: var(--surface); }
+  .nav-cta { text-align: center; margin-top: 4px; }
+  .lang-switch { margin-top: 4px; }
+  .lang-switch > summary { width: 100%; justify-content: center; }
+  .lang-menu { left: 0; right: 0; min-width: 0; }
+}
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; gap: 9px; font-size: 1rem; font-weight: 600; padding: 13px 22px; border-radius: 12px; cursor: pointer; transition: transform .12s ease, opacity .12s ease; }
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn svg { width: 20px; height: 20px; }
+.btn-appstore { background: #111; color: #fff; }
+.btn-github { background: var(--bg); color: var(--accent-deep); border: 1.5px solid var(--accent); }
+.btn-github svg { fill: currentColor; }
+.btn-primary { background: var(--accent-action); color: var(--accent-action-ink); }
+.btn-disabled { background: var(--surface-2); color: var(--muted); cursor: default; pointer-events: none; }
+.btn-disabled svg { fill: currentColor; opacity: 0.7; }
+@media (prefers-color-scheme: dark) { .btn-appstore { background: #f0f5f3; color: #111; } }
+
+/* hero */
+.hero { text-align: center; padding: 76px 0 56px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 7px; font-size: 0.85rem; font-weight: 600; color: var(--accent-ink); background: var(--accent-tint); padding: 6px 14px; border-radius: 999px; }
+.hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.7rem); line-height: 1.08; letter-spacing: -0.02em; margin: 22px auto 16px; max-width: 16ch; font-weight: 700; }
+.hero .sub { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--muted); max-width: 40ch; margin: 0 auto 30px; }
+.cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.req { margin-top: 16px; font-size: 0.88rem; color: var(--muted); }
+
+/* app identity glyph (used in heroes / cards without a real icon yet) */
+.appicon { display: inline-flex; align-items: center; justify-content: center; border-radius: 18px; background: var(--accent-tint); color: var(--accent-deep); font-weight: 700; }
+.appicon-lg { width: 84px; height: 84px; font-size: 2.6rem; }
+
+/* product mockup window */
+.shot-wrap { display: flex; justify-content: center; padding: 8px 0 8px; }
+.window { width: 100%; max-width: 560px; background: var(--bg); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+.titlebar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.dot { width: 11px; height: 11px; border-radius: 50%; }
+.titlebar .label { margin-left: 8px; font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.menu-head { padding: 9px 16px; font-size: 0.8rem; color: var(--muted); border-bottom: 1px solid var(--border); }
+.clip { display: flex; align-items: center; gap: 12px; padding: 11px 16px; font-size: 0.95rem; }
+.clip + .clip { border-top: 1px solid var(--border); }
+.clip .n { color: var(--muted); width: 14px; text-align: right; font-variant-numeric: tabular-nums; }
+.clip.active { background: var(--accent-tint); }
+.clip.active .n { color: var(--accent-deep); font-weight: 700; }
+.clip .txt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clip .thumb { width: 26px; height: 20px; border-radius: 4px; background: linear-gradient(160deg, #5aa6f4, #1d5fe0); flex: none; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86rem; color: var(--muted); }
+
+/* section headings */
+.head { text-align: center; max-width: 40ch; margin: 0 auto 48px; }
+.head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -0.02em; margin: 0 0 12px; font-weight: 700; }
+.head p { color: var(--muted); font-size: 1.1rem; margin: 0; }
+
+/* feature grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.feature { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 26px; box-shadow: var(--shadow-sm); }
+.feature .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--accent-tint); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.feature .ic svg { width: 24px; height: 24px; }
+.feature h3 { margin: 0 0 8px; font-size: 1.18rem; font-weight: 600; }
+.feature p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+
+/* how it works */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+.step { text-align: center; }
+.step .num { width: 44px; height: 44px; border-radius: 50%; background: var(--accent-action); color: var(--accent-action-ink); font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.1rem; }
+.step h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.step p { margin: 0; color: var(--muted); }
+
+/* localization */
+.locale { background: var(--surface); }
+.langs { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 720px; margin: 0 auto; }
+.lang { background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 10px 20px; font-size: 1rem; font-weight: 500; }
+
+/* download comparison plans */
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; align-items: stretch; }
+.plan { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 30px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
+.plan.featured { border: 2px solid var(--accent); }
+.plan .badge { align-self: flex-start; font-size: 0.78rem; font-weight: 700; color: var(--accent-ink); background: var(--accent-tint); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
+.plan h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-size: 1.4rem; }
+.plan h3 svg { width: 24px; height: 24px; fill: currentColor; }
+.plan .price { font-size: 1.05rem; color: var(--muted); margin: 0 0 18px; }
+.plan .price strong { color: var(--fg); }
+.plan ul { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
+.plan li { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; color: var(--fg); font-size: 0.98rem; }
+.plan li svg { width: 18px; height: 18px; flex: none; margin-top: 4px; color: var(--accent); }
+.plan li code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: var(--surface-2); padding: 1px 5px; border-radius: 5px; }
+.plan .btn { justify-content: center; width: 100%; }
+
+/* app cards (studio hub) */
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.app-card { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 28px; box-shadow: var(--shadow-sm); color: var(--fg); transition: transform .14s ease, box-shadow .14s ease; }
+a.app-card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: var(--shadow); }
+.app-card .app-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.app-card .app-icon { width: 56px; height: 56px; border-radius: 14px; flex: none; display: flex; align-items: center; justify-content: center; background: var(--accent-tint); color: var(--accent-deep); }
+.app-card .app-icon svg { width: 30px; height: 30px; }
+.app-card .app-icon img { width: 56px; height: 56px; border-radius: 14px; }
+.app-card .app-icon .glyph { font-size: 1.9rem; font-weight: 700; }
+.app-card h3 { margin: 0 0 6px; font-size: 1.3rem; font-weight: 600; }
+.app-card .desc { margin: 0 0 18px; color: var(--muted); font-size: 1rem; flex: 1; }
+.app-card .app-foot { display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; color: var(--muted); }
+.app-card .app-foot .arrow { color: var(--accent-deep); display: inline-flex; }
+.app-card .app-foot .arrow svg { width: 20px; height: 20px; }
+.status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.02em; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; }
+.status-available { color: #1a7a45; background: #e3f6ea; }
+.status-soon { color: var(--muted); background: var(--surface-2); }
+@media (prefers-color-scheme: dark) { .status-available { color: #8fe0ac; background: #123322; } }
+.app-card.placeholder { border-style: dashed; align-items: center; justify-content: center; text-align: center; color: var(--muted); min-height: 180px; box-shadow: none; }
+
+/* faq */
+.faq { max-width: 760px; margin: 0 auto; }
+details { border-bottom: 1px solid var(--border); padding: 6px 0; }
+summary { cursor: pointer; list-style: none; padding: 16px 4px; font-size: 1.1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--accent); font-weight: 400; font-size: 1.5rem; line-height: 1; flex: none; }
+details[open] summary::after { content: "\2013"; }
+details p { margin: 0 4px 18px; color: var(--muted); }
+
+/* final cta */
+.final { background: var(--accent-deep); color: #fff; text-align: center; border-radius: 24px; padding: 64px 24px; margin: 0 24px; }
+.final h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 12px; letter-spacing: -0.02em; }
+.final p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin: 0 0 28px; }
+.final .btn-github { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+.final .btn-appstore { background: #fff; color: #111; }
+
+/* footer */
+footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 80px; color: var(--muted); font-size: 0.92rem; }
+.foot-inner { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 22px; }
+.foot-links a { color: var(--muted); }
+.foot-links a:hover { color: var(--fg); }
+.foot-brand { display: flex; align-items: center; gap: 10px; }
+.foot-brand img { width: 26px; height: 26px; border-radius: 6px; }
+.foot-brand .glyph { width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; background: var(--accent-tint); color: var(--accent-deep); font-size: 0.9rem; font-weight: 700; }
+
+/* credit / acknowledgement */
+.credit { background: var(--surface); border-top: 1px solid var(--border); }
+.credit .container { padding: 44px 0; text-align: center; }
+.credit .kicker { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 10px; font-weight: 600; }
+.credit p.body { margin: 0 auto; max-width: 660px; font-size: 1.05rem; color: var(--fg); line-height: 1.7; }
+.credit p.body a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.credit p.body a:hover { text-decoration: underline; }
+
+
+/* language switcher */
+.lang-switch { position: relative; font-size: 0.9rem; }
+.lang-switch > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); background: var(--bg); }
+.lang-switch > summary:hover { color: var(--fg); }
+.lang-switch > summary::-webkit-details-marker { display: none; }
+.lang-switch > summary::marker { content: ""; }
+.lang-switch > summary::after,
+.lang-switch[open] > summary::after { content: none; }
+.lang-switch[open] > summary { color: var(--fg); border-color: var(--accent); }
+.lang-switch .globe { width: 16px; height: 16px; flex: none; }
+.lang-menu { position: absolute; right: 0; margin-top: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 6px; min-width: 168px; box-shadow: var(--shadow); z-index: 60; }
+.lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); font-size: 0.95rem; }
+.lang-menu a:hover { background: var(--surface); text-decoration: none; }
+.lang-menu a.active { color: var(--accent-deep); font-weight: 600; }
+
+/* cookie consent banner */
+.consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--nav-bg); backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); border-top: 1px solid var(--border); box-shadow: 0 -10px 30px rgba(0,0,0,0.10); }
+.consent-banner[hidden] { display: none; }
+.consent-inner { max-width: 1080px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.consent-text { margin: 0; font-size: 0.92rem; color: var(--muted); flex: 1; min-width: 240px; line-height: 1.5; }
+.consent-text a { color: var(--accent-deep); }
+.consent-actions { display: flex; gap: 10px; flex: none; }
+.consent-btn { font-family: inherit; font-size: 0.92rem; font-weight: 600; padding: 9px 18px; border-radius: 10px; cursor: pointer; border: 1px solid var(--border); transition: opacity .12s ease, background .12s ease; }
+.consent-reject { background: var(--bg); color: var(--fg); }
+.consent-reject:hover { background: var(--surface); }
+.consent-accept { background: var(--accent-action); color: var(--accent-action-ink); border-color: var(--accent-action); }
+.consent-accept:hover { opacity: 0.92; }
+@media (max-width: 560px) { .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
+
+  </style>
+  <script type="module">
+/* Dragon App — client-side language auto-detection + preference memory.
+   Static GitHub Pages can't read the visitor IP server-side, so we use the
+   browser's own language list (navigator.languages), which reflects the OS /
+   browser locale the visitor configured. One automatic redirect per session,
+   and an explicit switcher choice is remembered across visits. */
+(function () {
+  "use strict";
+
+  var LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"];
+
+  function lsGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
+  function ssGet(k) { try { return window.sessionStorage.getItem(k); } catch (e) { return null; } }
+  function ssSet(k, v) { try { window.sessionStorage.setItem(k, v); } catch (e) {} }
+
+  // Map any BCP-47 browser tag to one of our seven supported codes, or null.
+  function matchLang(tag) {
+    var t = String(tag).toLowerCase();
+    if (t === "zh-hant" || t.indexOf("zh-hant") === 0 ||
+        t === "zh-tw" || t === "zh-hk" || t === "zh-mo") return "zh-Hant";
+    if (t === "zh-hans" || t.indexOf("zh-hans") === 0 ||
+        t === "zh-cn" || t === "zh-sg" || t === "zh-my" || t === "zh") return "zh-Hans";
+    var base = t.split("-")[0];
+    if (base === "zh") return "zh-Hans";
+    if (base === "en") return "en-US";
+    if (LANGS.indexOf(base) >= 0) return base; // ja, ko, es, fr
+    return null;
+  }
+
+  function bestFromBrowser() {
+    var tags = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || navigator.userLanguage || "en"];
+    for (var i = 0; i < tags.length; i++) {
+      var m = matchLang(tags[i]);
+      if (m) return m;
+    }
+    return null;
+  }
+
+  function currentLang() {
+    var l = (document.documentElement.getAttribute("lang") || "en-US");
+    return LANGS.indexOf(l) >= 0 ? l : "en-US";
+  }
+
+  // Strip a leading "/<lang>/" segment, returning the page path within a language tree.
+  function pagePath() {
+    var parts = window.location.pathname.split("/"); // e.g. ["","ja","keykey",""]
+    var head = parts[1];
+    if (head && LANGS.indexOf(head) >= 0 && head !== "en-US") {
+      return parts.slice(2).join("/");
+    }
+    return parts.slice(1).join("/");
+  }
+
+  function urlFor(lang) {
+    var prefix = (lang === "en-US") ? "/" : "/" + lang + "/";
+    return prefix + pagePath();
+  }
+
+  // Remember the visitor's explicit choice when they use the switcher.
+  function wireSwitcher() {
+    var links = document.querySelectorAll("[data-setlang]");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        lsSet("dragonLang", this.getAttribute("data-setlang"));
+      });
+    }
+  }
+
+  function maybeRedirect() {
+    var cur = currentLang();
+    var stored = lsGet("dragonLang");
+    var target = (stored && LANGS.indexOf(stored) >= 0) ? stored : bestFromBrowser();
+    if (!target || target === cur) return;
+    if (ssGet("dragonRedirected")) return; // at most one auto-redirect per session
+    var dest = urlFor(target);
+    if (dest === window.location.pathname) return;
+    ssSet("dragonRedirected", "1");
+    window.location.replace(dest);
+  }
+
+  // Mobile hamburger: tapping any link inside the panel collapses the menu,
+  // so there's no separate close button to reach for.
+  function wireNavMenu() {
+    var menu = document.querySelector(".nav-menu");
+    if (!menu) return;
+    var links = menu.querySelectorAll(".nav-links a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        menu.removeAttribute("open");
+      });
+    }
+  }
+
+  wireSwitcher();
+  wireNavMenu();
+  maybeRedirect();
+})();
+
+  </script>
 
   <script type="application/ld+json">
   {
@@ -158,7 +634,7 @@
 
         <a class="app-card" href="clipmenu/">
           <div class="app-head">
-            <span class="app-icon"><img src="/appicon-56.png?v=c033d8fc" srcset="/appicon-56.png?v=c033d8fc 56w, /appicon-112.png?v=8418e7ee 112w" sizes="56px" alt="Icono de ClipMenu 2" width="56" height="56" loading="lazy" decoding="async"></span>
+            <span class="app-icon"><img src="data:image/png;base64,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" alt="Icono de ClipMenu 2" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>ClipMenu 2</h3>
               <span class="status status-available">Disponible</span>
@@ -173,7 +649,7 @@
 
         <a class="app-card" href="keykey/">
           <div class="app-head">
-            <span class="app-icon"><img src="/keykey/appicon-56.png?v=5132ebc4" srcset="/keykey/appicon-56.png?v=5132ebc4 56w, /keykey/appicon-112.png?v=2eb76c35 112w" sizes="56px" alt="Icono de KeyKey" width="56" height="56" loading="lazy" decoding="async"></span>
+            <span class="app-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURUdwTAEBA3mDjnaCk3qElXyGlXN+kDpCUgAAAAAAAH6HkQ0PGYqUoAAAAIOLlJihrhkZIKWttwcMFXV+il1ldaq1v8XN1XB9jomQmm97jbvBybS9x7O4wMfN1GZtfBsjM36GkpKYo6WstWt0gFZfbsTL04KKls3T26Spsl5neoGIk8DGzZefqtHZ3625xKWxvI+cqklNXnV7hmJqc9re405WZtHW2ysyRl9qfLfBylZfbxojNbO6xK20vWlvfJuiq8jN1pajsJqntlZhb87Q1vz8/f////v7/NHb4+vw8u3w8/39/nggk/f4+vP2+HQXkO/y9u7w9fn6/PH19/Dz9/7+/+br8NTb6M/a4ufs8NLc5Pj5++Pq79vj6uDn7ujt8MXR2+Lo7snU3eXs8NXe5dTf5t/n7HYakc7Z4fb3+dff5+/x9erv8fT3+cPQ2dri6cHO19nh6HcekvX2+cvW39jg597l67rJ08bT3L3K1dzk6sen08zX4P3+/t/l7srV37HBzb/M1q2+ysrR36R0uMTN28bP3cHL2snT3fL2+bbE0IM2nLKHwotGo9O63IlDotzo6srU37nH0s/W46a4xtrh7IU5naCxwc7U4sus1n0rl4Eym45Mpap8vNW+3rzG1tjf6t7k7Yc+oPn3+5ikw4iesNbc6JVZrKFqtM2v166Bv8DK2e3y9LXDz6m6x6S2xI+ktaKuyZquvX8vmebd7bqTyZNTqdPY5NC22rCFwMOh0Ku7yb7I2OHn7qK1woyZvJZerah4ur2azLeOxpFPqNTi5c7c4fDr9Ovj8Hwnlpdjr7qrzaFvtrvE1/n9/vb6/Li+04lAoam1zZCcvrG6z8+y2ePX6sKgz8rY3nokld/N5oxTptrE4srJ273H2JerupSouLK/z7yWyuXq7+3t8sza4Jypxp5mstPN4a+LwqaFvMCczebY6/Tv9tfl5555t9vR5auZw4uXu5Ofv9nC4cS11XAPjbuwz+Ph7LKhyJaKtY9srJeXt9zf5/fz+fbx+I/hqBQAAAD+dFJOUwASUsbGxsYxBQlSFp0CUr4OxBlxUeP1xkXGy+G11Ekjd4mzWUTqfOublWvcn/7z1NAgPC30ZPJSpPN+QNfCVZPe3fR+wf/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+1t2EmwAABtdJREFUSMft1nlcE2caB3C72y661tWqrdpqt9vd7X137/uamWyGnDMJJJlJCAxJIBNCUjKEJIDKYbgjgtxHXMohCiLIpRFQK3JbpXhVW6X1atUetnt2d9/JJBLYdj/9cz+f7vP/N8/z/p6ZN7No0VeuVqz9Fqhv+utr82vtiv/i1m5wRdsTEhITN6UkFxfn5u7euHnz/v1tJSXt7e1tz7/0he6lx2MDZPdGlrSVtJeV7X3r7T17XgVV8tDLX+Be/o3a5UqPtkcl3OEXN7eVHAza4g0vfq57cQNuoyhlpMGVxOnEFMDBtPtZ+/aeV8um/nDX57ilD07KGdJsi6eUvFDst23tZW/t2SuH1y/5zzzX5whpIWakFYTO47n52muxR0FQ9iiW5k6DE5fs3cvA0BPLFsKn1GKTEZKackxYV+GhvprrH/456+i73IGPFxSdG/z7P8ooGJ59eIFbfJ9ELMBRBBHMNI/oRWyF542OnT7NyrrtIr1e9LeDSTAE/3oBXPkQLTQJUWj4bG1/c5XeGg7KKrI2HX+XlQX6cGtn2UG7DIHXL4BhD8QIhAL02O3awt7e/uZOjoaLKv/Kymp9uP7cxvZEBIEfXBDPr56Vq4SI37VUOJ37ms7o/VJ/Zuyo3X5OHy66VdyWLEBkj6+cDx9hCMQ0fLu29tjwv24Mv3/7cGYee05ruD4vO/J0Exj1w+TNuRgE/SBsPnxGGwNhZwsL32hp6YL/1J+/03m2paLFCQ4nun4zdlRkrZxO3pgrgVTMwwtCJWh0uLbwjQrnqfeOwV19NTv3/VN6qGkEtCzi3WwW6YvAOnfLURP+1IJQ1fzUrl7g+t/bd+gGXDs+/ub7mdWVICJr5XnPuEg0ak8pztXJcqa+syBURpw608K6S4f7Tkmh/pmzo93d1Z3WcOvIeU+mSHT99KaUYnMqNvnoPLjaTWKTXU7nqUP7DufvHOqF4Tebuo9UFxR1Wq1V5Z5bIuvY0YRNyUoUm5y/j8co0jR5I+BqMvtQeOeRI9VFr+/YPiIadHhufVp5npeUkOKCsKmnl4bCe0mHSooWXuLclRoIziwoYF1elXXM47nWeY7HM6QnpiOY8Edh80IldYgUHr50jXVDfU4Ydg4N7mDdSCZjsdh6yqlYpSHaLRCKP/te6Lt4v0ULSVF4Jr+mJrM5n11nRcVQHnBnRj/TkfERZjP1yXmly42ZJLOrQkP9KaVAERRKnclvbr4y2F1d8Pr2vLztVZWVQ6WETne1qGB827WxWF60UUDjoftYncijWSidfMc57o8THK+qsrPpEw2h9Wmvnvm0mizvoagkWkXnPBECVyXxxCgEoEA1day378qRoh07CgbzaxV/lBOEVtvTXZXpIS3xlIGQ0jm/XBwSqpKHoSgKIVKByTRleqfrg6sf/IXGdmkUMbNA+pjGRtJssdl4DELjT8/dWIuXKykBKgMQUcUJhRhbuJFP07RGo5DLQU8d43AASpkRetf3vx0SaqQNkck4KTABieNio4QfpATh8+kYxkHa4qV8+tm5fYQ95zJDMljmH1Yl8NOADVKt1qcGVKniaxzfnQu1ONoCICcBVQniTOzEuFhsZNtqNBp/SGodJeDL5Y/NhRqVYFDBsF+iEOjKWhBTYGbOshMzNpVGK3lmLtT0lIuzsIwb1g/BwHGv+AcOOIV8ltCS8RjmVUseDV7Ky5an7284LmE7ylK5aTkYkP58WasRxHkbSfoXwX0sfT7l8smGCa8EzCWRSIxiHAdCCMpkihOAUkmlCMI+H2JvREQ9cWcfYc+dOHmy4cSFjPLyjKzW1qzsDHe6wcBTUvE2i5l0MDofIdfQfLGY1tZHREQwDwRfrNUlDQMfd0wfyM7IyG6dmJgANsruTnIZeCyOt5gdjBZIo5g/SzaClrzgPlZNDww0nKgDDnS8MFHXuiUr2+5O5yBoayYD0KhRsy3NjwRDPfHRycvHs7eBKs9onag70LolIcq9FchIbl6S8REA4jifKAUtvfdybskLHR993NEaUQ9+rac86wIL2VkBBAdlpRlABYCYWOMFMG05936s/G3DQMP0tjSft7S+sSdjy4ED4JAJdvfWJK4lZTM71ABKcAz3x5N2H/flsvSFjoHLdaUKDZFG1jcatmZngWJnTXIF8rGQOg5iRgVombacuyGX/b7sckeGXGyk5T5vPMUzgL9/d3R0tB/6t2JxsNCICV/BaF+pt+6Hwb//J393cZsaPMQMaYmllODbITKSFwl6gaJiY9l1qIkYsMldOC6J4d3/sztX8pIf/2TNunXr1qz5RqC+fqfuDtQ9d98TqCd/Hvr9sPiuL1srFv2//gfr33Bsd2i2L+tiAAAAAElFTkSuQmCC" alt="Icono de KeyKey" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>KeyKey</h3>
               <span class="status status-available">Disponible</span>

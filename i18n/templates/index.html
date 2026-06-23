@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-{{ CONSENT_HEAD }}
+{{ INDEX_CONSENT_HEAD }}
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ CANONICAL }}">
-  <link rel="icon" href="/appicon.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#2b7cf0">
 {{ ALTERNATES }}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Dragon App">
@@ -15,15 +19,15 @@
   <meta property="og:url" content="{{ CANONICAL }}">
   <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ og_description }}">
-  <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ og_title }}">
   <meta name="twitter:description" content="{{ og_description }}">
-  <meta name="twitter:image" content="https://www.dragonapp.com/appicon.png">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css">
-  <script src="/shared/i18n.js" defer></script>
+{{ INLINE_DRAGON_CSS }}
+{{ INLINE_I18N_JS }}
 
   <script type="application/ld+json">
   {
@@ -34,7 +38,7 @@
         "@id": "https://www.dragonapp.com/#org",
         "name": "Dragon App",
         "url": "https://www.dragonapp.com/",
-        "logo": "https://www.dragonapp.com/appicon.png",
+        "logo": "https://www.dragonapp.com/icon-512.png",
         "sameAs": [ "https://github.com/teddychan" ]
       },
       {
@@ -80,13 +84,19 @@
   <nav>
     <div class="container nav-inner">
       <a class="brand" href="#top"><span class="glyph">D</span>Dragon App</a>
-      <div class="nav-links">
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
         <a href="#apps">{{ nav_apps }}</a>
         <a href="https://github.com/teddychan">GitHub</a>
         <a href="support.html">{{ nav_support }}</a>
         <a class="nav-cta" href="#apps">{{ nav_cta }}</a>
 {{ SWITCHER }}
       </div>
+      </details>
     </div>
   </nav>
 
@@ -115,7 +125,7 @@
 
         <a class="app-card" href="clipmenu/">
           <div class="app-head">
-            <span class="app-icon"><img src="/appicon-56.png" srcset="/appicon-56.png 56w, /appicon-112.png 112w" sizes="56px" alt="{{ clipmenu_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
+            <span class="app-icon"><img src="{{ CLIPMENU_CARD_ICON_SRC }}" alt="{{ clipmenu_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>ClipMenu 2</h3>
               <span class="status status-available">{{ status_available }}</span>
@@ -130,7 +140,7 @@
 
         <a class="app-card" href="keykey/">
           <div class="app-head">
-            <span class="app-icon"><img src="/keykey/appicon-56.png" srcset="/keykey/appicon-56.png 56w, /keykey/appicon-112.png 112w" sizes="56px" alt="{{ keykey_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
+            <span class="app-icon"><img src="{{ KEYKEY_CARD_ICON_SRC }}" alt="{{ keykey_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
             <div>
               <h3>KeyKey</h3>
               <span class="status status-available">{{ status_available }}</span>

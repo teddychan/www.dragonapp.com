@@ -8,6 +8,8 @@ under /<lang>/. Also (re)writes docs/sitemap.xml with hreflang alternates.
 Run from the repo root:  python3 i18n/build_i18n.py
 """
 import json
+import base64
+import mimetypes
 import os
 import re
 import sys
@@ -20,6 +22,24 @@ SITE = "https://www.dragonapp.com"
 GA_ID = "G-FNQ1T94ESZ"
 
 CONSENT_HEAD = (
+    "  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->\n"
+    "  <script>\n"
+    "    window.dataLayer = window.dataLayer || [];\n"
+    "    window.dragonGoogleAnalyticsId = '" + GA_ID + "';\n"
+    "    function gtag(){dataLayer.push(arguments);}\n"
+    "    gtag('consent', 'default', {\n"
+    "      ad_storage: 'denied',\n"
+    "      ad_user_data: 'denied',\n"
+    "      ad_personalization: 'denied',\n"
+    "      analytics_storage: 'denied',\n"
+    "      functionality_storage: 'granted',\n"
+    "      security_storage: 'granted',\n"
+    "      wait_for_update: 500\n"
+    "    });\n"
+    "  </script>\n"
+)
+
+CONSENT_HEAD_EXTERNAL = (
     "  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->\n"
     "  <script>\n"
     "    window.dataLayer = window.dataLayer || [];\n"
@@ -81,6 +101,7 @@ GLOBE = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColo
          '<path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>')
 
 TOKEN_RE = re.compile(r"{{\s*([A-Za-z0-9_]+)\s*}}")
+ASSET_CACHE = {}
 
 
 def lang_prefix(lang):
@@ -103,6 +124,33 @@ def load_strings():
             with open(p, encoding="utf-8") as f:
                 data[lang] = json.load(f)
     return data
+
+
+def read_asset(relpath):
+    if relpath not in ASSET_CACHE:
+        with open(os.path.join(DOCS, relpath), "r", encoding="utf-8") as f:
+            ASSET_CACHE[relpath] = f.read()
+    return ASSET_CACHE[relpath]
+
+
+def data_uri(relpath):
+    key = "data:" + relpath
+    if key not in ASSET_CACHE:
+        path = os.path.join(DOCS, relpath)
+        mime = mimetypes.guess_type(path)[0] or "application/octet-stream"
+        with open(path, "rb") as f:
+            encoded = base64.b64encode(f.read()).decode("ascii")
+        ASSET_CACHE[key] = "data:%s;base64,%s" % (mime, encoded)
+    return ASSET_CACHE[key]
+
+
+def inline_style(relpath):
+    return "  <style>\n%s\n  </style>" % read_asset(relpath)
+
+
+def inline_script(relpath, module=False):
+    tag = 'script type="module"' if module else "script"
+    return "  <%s>\n%s\n  </script>" % (tag, read_asset(relpath))
 
 
 def build_alternates(page):
@@ -165,7 +213,12 @@ def render(template, lang, page, strings, missing):
         "URL_KEYKEY": url_for(lang, "keykey"),
         "URL_CLIPMENU": url_for(lang, "clipmenu"),
         "URL_SUPPORT": url_for(lang, "support"),
-        "CONSENT_HEAD": CONSENT_HEAD,
+        "CONSENT_HEAD": CONSENT_HEAD_EXTERNAL,
+        "INDEX_CONSENT_HEAD": CONSENT_HEAD + "\n" + inline_script(os.path.join("shared", "consent.js")),
+        "INLINE_DRAGON_CSS": inline_style(os.path.join("shared", "dragon.css")),
+        "INLINE_I18N_JS": inline_script(os.path.join("shared", "i18n.js"), module=True),
+        "CLIPMENU_CARD_ICON_SRC": data_uri("appicon-56.png"),
+        "KEYKEY_CARD_ICON_SRC": data_uri(os.path.join("keykey", "appicon-56.png")),
         "CONSENT_BANNER": build_consent(common if common else en_common, en_common),
     }
 
