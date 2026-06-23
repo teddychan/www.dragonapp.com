@@ -80,6 +80,20 @@
     window.location.replace(dest);
   }
 
+  // Mobile hamburger: tapping any link inside the panel collapses the menu,
+  // so there's no separate close button to reach for.
+  function wireNavMenu() {
+    var menu = document.querySelector(".nav-menu");
+    if (!menu) return;
+    var links = menu.querySelectorAll(".nav-links a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        menu.removeAttribute("open");
+      });
+    }
+  }
+
   wireSwitcher();
+  wireNavMenu();
   maybeRedirect();
 })();
