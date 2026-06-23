@@ -3,8 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dragon App — Support &amp; Help</title>
-  <meta name="description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.">
+  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('dragonConsent') === 'granted') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+    } } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FNQ1T94ESZ');
+  </script>
+  <script src="/shared/consent.js" defer></script>
+  <title>Dragon App — 지원 &amp; 도움말</title>
+  <meta name="description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자)와 KeyKey(Cangjie(倉頡) &amp; Simplex(速成) 입력기)에 대한 지원 및 도움말. 설정, 권한, 구독, 자주 묻는 질문을 안내합니다.">
   <link rel="canonical" href="https://www.dragonapp.com/ko/support.html">
   <link rel="icon" href="/appicon.png">
   <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/support.html">
@@ -19,8 +42,8 @@
   <meta property="og:site_name" content="Dragon App">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:url" content="https://www.dragonapp.com/ko/support.html">
-  <meta property="og:title" content="Dragon App — Support &amp; Help">
-  <meta property="og:description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.">
+  <meta property="og:title" content="Dragon App — 지원 &amp; 도움말">
+  <meta property="og:description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자)와 KeyKey(Cangjie(倉頡) &amp; Simplex(速成) 입력기)에 대한 지원 및 도움말. 설정, 권한, 구독, 자주 묻는 질문을 안내합니다.">
   <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
   <script src="/shared/i18n.js" defer></script>
   <style>
@@ -101,6 +124,19 @@
     .lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); }
     .lang-menu a:hover { background: var(--card); text-decoration: none; }
     .lang-menu a.active { color: var(--accent); font-weight: 600; }
+    /* cookie consent banner */
+    .consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--bg); border-top: 1px solid var(--border); box-shadow: 0 -10px 30px rgba(0,0,0,0.10); }
+    .consent-banner[hidden] { display: none; }
+    .consent-inner { max-width: 720px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .consent-text { margin: 0; font-size: 0.9rem; color: var(--muted); flex: 1; min-width: 220px; line-height: 1.5; }
+    .consent-text a { color: var(--accent); }
+    .consent-actions { display: flex; gap: 10px; flex: none; }
+    .consent-btn { font-family: inherit; font-size: 0.9rem; font-weight: 600; padding: 9px 18px; border-radius: 10px; cursor: pointer; border: 1px solid var(--border); }
+    .consent-reject { background: var(--bg); color: var(--fg); }
+    .consent-reject:hover { background: var(--card); }
+    .consent-accept { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .consent-accept:hover { opacity: 0.9; }
+    @media (max-width: 560px) { .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
   </style>
 </head>
 <body>
@@ -122,12 +158,12 @@
     </div>
     <header>
       <img class="logo" src="/appicon.png" alt="Dragon App">
-      <h1>Support</h1>
-      <p class="tagline">Help for ClipMenu 2 and KeyKey.</p>
+      <h1>지원</h1>
+      <p class="tagline">ClipMenu 2와 KeyKey 도움말.</p>
     </header>
 
     <h2>ClipMenu 2</h2>
-    <p>The fast clipboard-history menu-bar app for macOS.</p>
+    <p>macOS를 위한 빠른 클립보드 기록 메뉴 막대 앱.</p>
     <div class="card">
       <p>질문하거나, 버그를 신고하거나, 기능을 요청하는 가장 빠른 방법은 공개 이슈 트래커입니다. 우리는 모든 신고를 읽습니다.</p>
       <p><a class="cta" href="https://github.com/teddychan/clipmenu-2/issues">GitHub에서 이슈 열기 →</a></p>
@@ -166,48 +202,57 @@
     </div>
 
     <h2>KeyKey</h2>
-    <p>The Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) input method, rebuilt for macOS.</p>
+    <p>Yahoo!奇摩輸入法의 Cangjie(倉頡) &amp; Simplex(速成) 입력기를 macOS에 맞게 새롭게 구축했습니다.</p>
     <div class="card">
-      <p>Questions, bug reports, and feature requests go to the KeyKey issue tracker. We read every one.</p>
+      <p>질문, 버그 신고, 기능 요청은 KeyKey 이슈 트래커로 보내 주세요. 하나하나 모두 읽고 있습니다.</p>
       <p><a class="cta" href="https://github.com/teddychan/yahoo-keykey-2/issues">GitHub에서 이슈 열기 →</a></p>
       <p style="margin-top:14px">이메일이 더 편하신가요? <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>으로 연락 주시면 답변드리겠습니다.</p>
     </div>
 
     <h3>자주 묻는 질문</h3>
     <dl class="faq">
-      <dt>How do I install KeyKey?</dt>
-      <dd>Download <code>YahooKeyKey2.pkg</code> from the <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">latest release</a> and double-click it, or run <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>. Then log out and back in.</dd>
+      <dt>KeyKey는 어떻게 설치하나요?</dt>
+      <dd><a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">최신 릴리스</a>에서 <code>YahooKeyKey2.pkg</code>를 다운로드해 더블클릭하거나, <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>를 실행하세요. 그런 다음 로그아웃했다가 다시 로그인하세요.</dd>
 
-      <dt>It doesn't show up in Input Sources.</dt>
-      <dd>macOS only registers an input method at login. Log out and back in, then add it under <strong>System Settings → Keyboard → Input Sources → + → Traditional Chinese</strong> and choose 倉頡 (Cangjie) and/or 速成 (Simplex).</dd>
+      <dt>입력 소스에 나타나지 않습니다.</dt>
+      <dd>macOS는 로그인할 때만 입력기를 등록합니다. 로그아웃했다가 다시 로그인한 뒤 <strong>시스템 설정 → 키보드 → 입력 소스 → + → 번체 중국어</strong>에서 추가하고 倉頡(Cangjie) 및/또는 速成(Simplex)을 선택하세요.</dd>
 
-      <dt>How do I switch to KeyKey and change settings?</dt>
-      <dd>Press <strong>Ctrl-Space</strong> to cycle input sources. From the input menu in the menu bar you can toggle 聯想字詞 (associated phrases), 全形標點 (full-width punctuation), and 輸出簡體字 (Simplified output), or open 關於 (About).</dd>
+      <dt>KeyKey로 전환하고 설정을 변경하려면 어떻게 하나요?</dt>
+      <dd><strong>Ctrl-Space</strong>를 눌러 입력 소스를 순환하세요. 메뉴 막대의 입력 메뉴에서 聯想字詞(연상 어구), 全形標點(전각 문장 부호), 輸出簡體字(간체자 출력)를 켜고 끄거나 關於(정보)를 열 수 있습니다.</dd>
 
-      <dt>How do I type Simplified Chinese?</dt>
-      <dd>Turn on <strong>輸出簡體字</strong> in the input menu. You keep typing Cangjie/Simplex and KeyKey outputs Simplified characters.</dd>
+      <dt>간체 중국어는 어떻게 입력하나요?</dt>
+      <dd>입력 메뉴에서 <strong>輸出簡體字</strong>를 켜세요. 계속 Cangjie/Simplex로 입력하면 KeyKey가 간체자를 출력합니다.</dd>
 
-      <dt>What do I need to run it?</dt>
-      <dd>A Mac with Apple Silicon running macOS 12 or later. KeyKey is signed with a Developer ID and notarized by Apple, so it opens cleanly.</dd>
+      <dt>실행하려면 무엇이 필요한가요?</dt>
+      <dd>macOS 12 이상을 실행하는 Apple Silicon 탑재 Mac이 필요합니다. KeyKey는 Developer ID로 서명되고 Apple의 공증을 받았으므로 문제없이 열립니다.</dd>
 
-      <dt>How do I uninstall KeyKey?</dt>
-      <dd>Run <code>brew uninstall --cask yahoo-keykey-2</code>, or delete <code>~/Library/Input Methods/YahooKeyKey2.app</code>. Then remove it from Input Sources and log out and back in.</dd>
+      <dt>KeyKey는 어떻게 제거하나요?</dt>
+      <dd><code>brew uninstall --cask yahoo-keykey-2</code>를 실행하거나 <code>~/Library/Input Methods/YahooKeyKey2.app</code>를 삭제하세요. 그런 다음 입력 소스에서 제거하고 로그아웃했다가 다시 로그인하세요.</dd>
     </dl>
 
     <h3>링크</h3>
     <div class="card">
       <p>
-        <a href="keykey/">KeyKey home</a><br>
-        <a href="https://github.com/teddychan/yahoo-keykey-2">Project &amp; downloads on GitHub</a><br>
+        <a href="keykey/">KeyKey 홈</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2">GitHub의 프로젝트 &amp; 다운로드</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2/issues">버그 신고 / 기능 요청</a><br>
-        <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/CREDITS.md">Credits</a><br>
+        <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/CREDITS.md">크레딧</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">라이선스 (MIT)</a>
       </p>
     </div>
 
     <footer>
-      Dragon App for macOS · Support: <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
+      macOS용 Dragon App · 지원: <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
     </footer>
+  </div>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">쿠키를 사용하여 트래픽을 분석하고 Dragon App을 개선합니다. 분석 및 광고 쿠키를 수락하거나 거부할 수 있습니다. 자세한 내용은 <a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">개인정보 처리방침</a>을 참조하세요.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">모두 거부</button>
+        <button type="button" class="consent-btn consent-accept">모두 수락</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>

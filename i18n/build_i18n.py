@@ -17,6 +17,34 @@ STRINGS_DIR = os.path.join(ROOT, "i18n", "strings")
 TEMPLATES_DIR = os.path.join(ROOT, "i18n", "templates")
 DOCS = os.path.join(ROOT, "docs")
 SITE = "https://www.dragonapp.com"
+GA_ID = "G-FNQ1T94ESZ"
+
+CONSENT_HEAD = (
+    "  <!-- Google Consent Mode v2 (default denied) + Google tag -->\n"
+    "  <script>\n"
+    "    window.dataLayer = window.dataLayer || [];\n"
+    "    function gtag(){dataLayer.push(arguments);}\n"
+    "    gtag('consent', 'default', {\n"
+    "      ad_storage: 'denied',\n"
+    "      ad_user_data: 'denied',\n"
+    "      ad_personalization: 'denied',\n"
+    "      analytics_storage: 'denied',\n"
+    "      functionality_storage: 'granted',\n"
+    "      security_storage: 'granted',\n"
+    "      wait_for_update: 500\n"
+    "    });\n"
+    "    try { if (localStorage.getItem('dragonConsent') === 'granted') {\n"
+    "      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', "
+    "ad_personalization: 'granted', analytics_storage: 'granted' });\n"
+    "    } } catch (e) {}\n"
+    "  </script>\n"
+    "  <script async src=\"https://www.googletagmanager.com/gtag/js?id=" + GA_ID + "\"></script>\n"
+    "  <script>\n"
+    "    gtag('js', new Date());\n"
+    "    gtag('config', '" + GA_ID + "');\n"
+    "  </script>\n"
+    "  <script src=\"/shared/consent.js\" defer></script>"
+)
 
 # Order matters: this is the order shown in the switcher and sitemap.
 LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"]
@@ -105,6 +133,23 @@ def build_switcher(current, page, common):
     return "\n".join(out)
 
 
+def build_consent(common, en_common):
+    def g(k):
+        return common.get(k) or en_common.get(k, "")
+    return (
+        '  <div id="consent-banner" class="consent-banner" role="dialog" '
+        'aria-describedby="consent-text" hidden>\n'
+        '    <div class="consent-inner">\n'
+        '      <p class="consent-text" id="consent-text">%s</p>\n'
+        '      <div class="consent-actions">\n'
+        '        <button type="button" class="consent-btn consent-reject">%s</button>\n'
+        '        <button type="button" class="consent-btn consent-accept">%s</button>\n'
+        '      </div>\n'
+        '    </div>\n'
+        '  </div>'
+    ) % (g("consent_message"), g("consent_reject"), g("consent_accept"))
+
+
 def render(template, lang, page, strings, missing):
     en = strings["en-US"]
     cur = strings.get(lang, en)
@@ -123,6 +168,8 @@ def render(template, lang, page, strings, missing):
         "URL_KEYKEY": url_for(lang, "keykey"),
         "URL_CLIPMENU": url_for(lang, "clipmenu"),
         "URL_SUPPORT": url_for(lang, "support"),
+        "CONSENT_HEAD": CONSENT_HEAD,
+        "CONSENT_BANNER": build_consent(common if common else en_common, en_common),
     }
 
     def repl(m):

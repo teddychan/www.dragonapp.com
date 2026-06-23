@@ -1,6 +1,5 @@
 {
   "_lang": "zh-Hans",
-
   "common": {
     "nav_apps": "应用",
     "nav_all_apps": "全部应用",
@@ -12,9 +11,11 @@
     "nav_support": "支持",
     "footer_privacy": "隐私",
     "footer_license": "许可协议 (MIT)",
-    "switcher_label": "语言"
+    "switcher_label": "语言",
+    "consent_message": "我们使用 Cookie 来分析流量并改进 Dragon App。您可以接受或拒绝分析与广告类 Cookie。详见我们的<a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">隐私政策</a>。",
+    "consent_accept": "全部接受",
+    "consent_reject": "全部拒绝"
   },
-
   "index": {
     "title": "Dragon App — 重塑经典 Mac 应用",
     "description": "Dragon App 是一家小型工作室，以快速、原生、开源的方式重塑那些深受喜爱却已停更的 macOS 应用——从 ClipMenu 2 与 KeyKey 起步。",
@@ -37,7 +38,6 @@
     "placeholder": "更多应用正在打造中",
     "footer_copyright": "© 2026 Dragon App · 重塑并开源的原生 Mac 应用。"
   },
-
   "keykey": {
     "title": "KeyKey — 适用于 Mac 的 Yahoo!奇摩輸入法 倉頡（Cangjie）&amp; 速成（Simplex）",
     "description": "KeyKey 是经典 Yahoo! KeyKey（Yahoo!奇摩輸入法）倉頡（Cangjie）与速成（Simplex）输入法的开源重塑，专为 Mac 打造——原生、快速、免费。立即下载。",
@@ -45,7 +45,6 @@
     "og_description": "经典 Yahoo! KeyKey 倉頡（Cangjie）&amp; 速成（Simplex）输入法的开源重塑，专为 Mac 打造——原生、快速、免费。",
     "og_image_alt": "KeyKey 应用图标",
     "ld_app_description": "经典 Yahoo! KeyKey（Yahoo!奇摩輸入法）倉頡（Cangjie）与速成（Simplex）繁体中文输入法的开源重塑，专为 Mac 打造——原生、快速、免费。",
-
     "nav_cta": "下载",
     "hero_icon_alt": "KeyKey 应用图标",
     "hero_eyebrow": "现已推出 · v1.2.1",
@@ -54,10 +53,8 @@
     "hero_btn_github": "在 GitHub 上免费下载",
     "hero_btn_appstore": "App Store — 即将推出",
     "hero_req": "需要 macOS 12 或更高版本 · Apple Silicon · 已签名 &amp; 公证 · 开源",
-
     "shot_aria": "KeyKey 倉頡候选窗口：输入部首 日 和 月 后，会显示一列带编号的匹配字符，其中 明 排在首位被选中。",
     "shot_menu_head": "輸入 日 月 — 按编号选取候选字",
-
     "features_h2": "重现 Yahoo! KeyKey 的输入体验",
     "features_sub": "Mac 用户念念不忘的快速、顺滑的倉頡与速成输入——用 Swift 全新打造。",
     "feat1_h3": "倉頡 + 速成 输入",
@@ -72,7 +69,6 @@
     "feat5_p": "贴合原版布局的纵向候选列表——它会跟随文字光标，并在屏幕边缘上翻或贴边，绝不被遮挡。",
     "feat6_h3": "轻量 &amp; 开源",
     "feat6_p": "共享资源让各应用之间的内存占用保持低位，完整源代码就在 GitHub 上——免费、采用 MIT 许可，任你查阅或自行构建。",
-
     "install_h2": "四步即可开始输入",
     "install_sub": "安装包由 Apple 签名并公证，可干净打开——没有 Gatekeeper 警告。",
     "step1_h3": "下载 &amp; 打开",
@@ -83,7 +79,6 @@
     "step3_p": "系统设置 ▸ 键盘 ▸ 输入法 ▸ + ▸ 繁体中文 → 添加 <strong>倉頡</strong> 和／或 <strong>速成</strong>。",
     "step4_h3": "切换 &amp; 输入",
     "step4_p": "按 <strong>Ctrl-Space</strong> 切换到 KeyKey 并开始输入。可从输入菜单切换 簡體 或打开 關於。",
-
     "download_h2": "获取 KeyKey",
     "download_sub": "今天即可免费开源使用，Mac App Store 版本也在路上。",
     "plan1_badge": "现已推出 · 免费",
@@ -102,12 +97,9 @@
     "plan2_li3": "相同的 Cangjie &amp; Simplex 引擎",
     "plan2_li4": "暂未推出——今天先获取 GitHub 版本",
     "plan2_btn": "即将推出",
-
     "credit_kicker": "致敬之作",
     "credit_body": "KeyKey 是一款用 Swift 打造的独立开源重塑作品，向经典的 <strong>Yahoo! KeyKey（Yahoo!奇摩輸入法）</strong> 致敬——这款繁体中文输入法曾深受众多 Mac 用户喜爱。它将那份体验延续到现代 macOS，并依据 <a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">MIT 许可协议</a> 发布。",
-
     "footer_copyright": "© 2026 Dragon App · KeyKey 依据 <a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">MIT 许可协议</a> 开源。",
-
     "faq1_q": "KeyKey 支持哪些输入法？",
     "faq1_a": "KeyKey 是一款繁体中文输入法，提供两种模式：倉頡（Cangjie）与速成（Simplex，又称 簡易）。它支持以 * 进行通配符输入、按词频排序的候选字、联想字词（聯想字詞）、全角标点，以及可选的繁转简输出切换。",
     "faq2_q": "我该如何安装 KeyKey？",
@@ -117,7 +109,6 @@
     "faq4_q": "这是原版的 Yahoo! KeyKey 吗？",
     "faq4_a": "不是。KeyKey 是一款用 Swift 打造的独立开源重塑作品，向经典的 Yahoo! KeyKey（Yahoo!奇摩輸入法）致敬。它依据 MIT 许可协议发布。"
   },
-
   "clipmenu": {
     "title": "ClipMenu 2 — 适用于 Mac 的剪贴板管理与历史记录工具",
     "description": "ClipMenu 2 是一款快速、原生的 Mac 剪贴板管理与历史记录应用。你复制过的一切，一个快捷键即可取用——可在 GitHub 或 Mac App Store 免费获取。",
@@ -125,7 +116,6 @@
     "og_description": "你复制过的一切，一个快捷键即可取用。一款快速、原生的 Mac 剪贴板管理与历史记录应用。",
     "og_image_alt": "ClipMenu 2 应用图标",
     "ld_app_description": "一款快速、原生的 Mac 剪贴板管理与历史记录应用。记录你复制的一切、把代码片段存入文件夹，并用全局热键随处粘贴。",
-
     "nav_cta": "下载",
     "hero_eyebrow": "macOS 上的剪贴板管理工具",
     "hero_h1": "你复制过的一切，一个快捷键即可取用",
@@ -133,13 +123,11 @@
     "hero_btn_appstore": "在 App Store 下载",
     "hero_btn_github": "在 GitHub 免费获取",
     "hero_req": "需要 macOS 26 或更高版本 · 通用版 · 开源",
-
     "shot_aria": "ClipMenu 2 剪贴板历史弹窗，显示带编号的近期复制项以及一张图片缩略图。",
     "shot_label": "剪贴板历史",
     "shot_menu_head": "近期 · 按 ⌥V 在光标处打开",
     "shot_clip4": "Screenshot 2026-06-20 at 09.41.png",
     "shot_clip5": "The quick brown fox jumps over the lazy dog",
-
     "features_h2": "为复制大量内容的人而生",
     "features_sub": "在 Mac 上移动文本和图片所需的一切，绝不多余。",
     "feat1_h3": "剪贴板历史",
@@ -154,7 +142,6 @@
     "feat5_p": "复制了图片？可在列表中内联查看缩略图，配有编号项和工具提示，让你总能选对那一项。",
     "feat6_h3": "iCloud 同步",
     "feat6_p": "在 App Store 版本中，你的片段和设置会通过你自己的私密 iCloud 在所有 Mac 之间同步。",
-
     "how_h2": "三步搞定，毫无阻碍",
     "how_sub": "ClipMenu 2 安静地驻留在菜单栏中，绝不碍事。",
     "how1_h3": "照常复制",
@@ -163,10 +150,8 @@
     "how2_p": "历史记录会在光标处弹出。用方向键或编号选取一条剪贴项。",
     "how3_h3": "随处粘贴",
     "how3_p": "ClipMenu 2 会把它放进你当前所在的应用——文本、代码或图片皆可。",
-
     "locale_h2": "说你的语言",
     "locale_sub": "ClipMenu 2 开箱即支持七种语言的完整本地化。",
-
     "download_h2": "两种获取 ClipMenu 2 的方式",
     "download_sub": "同一款应用，由你选择。挑一款贴合你工作方式的。",
     "plan1_badge": "最省心 · 自动更新",
@@ -185,7 +170,6 @@
     "plan2_li3": "完整源代码在 GitHub 上——可自行查阅与构建",
     "plan2_li4": "除 iCloud 同步外的全部功能",
     "plan2_btn": "获取最新版本",
-
     "faq_h2": "问题，已解答",
     "faq1_q": "App Store 版本与 GitHub 版本有什么区别？",
     "faq1_a": "它们是同一款应用。Mac App Store 版本是一份付费订阅，额外提供 iCloud 同步，并通过 App Store 自动更新。GitHub 版本免费且开源，内置自动更新，包含除 iCloud 同步以外的每一项功能。",
@@ -199,14 +183,12 @@
     "faq5_a": "一台运行 macOS 26 或更高版本的 Mac。ClipMenu 2 以菜单栏代理形式运行，没有程序坞图标，绝不碍事。",
     "faq6_q": "这是原版的 ClipMenu 吗？",
     "faq6_a": "ClipMenu 2 是一款用 Swift 编写的独立现代重写作品，承袭 Naotaka Morimoto 所作原版 <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> 的传承。我们感激他的工作，其作品依据 MIT 许可协议开源——ClipMenu 2 将这份精神延续下去，并以同样的许可协议发布。",
-
     "ld_faq1_a": "它们是同一款应用。Mac App Store 版本是一份付费订阅，额外提供 iCloud 同步，并通过 App Store 自动更新。GitHub 版本免费且开源，内置自动更新，包含除 iCloud 同步以外的每一项功能。",
     "ld_faq2_a": "macOS 要求应用获得辅助功能权限，才能代你粘贴到另一个应用中。ClipMenu 2 仅用它把你选中的剪贴项放进最前方的应用。App Store 版本已沙盒化，不使用此权限。",
     "ld_faq3_a": "存储在你的 Mac 上。你的历史和片段绝不会离开你的设备——ClipMenu 2 没有任何分析、广告或追踪，我们也绝不接收你的剪贴板内容。开启 iCloud 同步后，片段会通过你自己的私密 iCloud 账户传输。",
     "ld_faq4_a": "GitHub 版本永久免费。Mac App Store 版本为 30 天免费试用，之后每年 $9.99，费用涵盖 iCloud 同步与 App Store 更新。可随时在你的 Apple 账户中管理或取消。",
     "ld_faq5_a": "一台运行 macOS 26 或更高版本的 Mac。ClipMenu 2 以菜单栏代理形式运行，没有程序坞图标，绝不碍事。",
     "ld_faq6_a": "ClipMenu 2 是一款用 Swift 编写的独立现代重写作品，承袭 Naotaka Morimoto 所作原版 ClipMenu 的传承。它依据 MIT 许可协议开源。",
-
     "final_h2": "别再弄丢你复制的内容",
     "final_sub": "给你的剪贴板一份记忆。一分钟即可设置完成。",
     "credit_kicker": "致谢 &amp; 鸣谢",
@@ -214,23 +196,19 @@
     "footer_brand": "适用于 macOS 的 ClipMenu 2",
     "footer_copyright": "© 2026 ClipMenu 2 · 依据 <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/LICENSE\">MIT 许可协议</a> 开源。原版 <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> © Naotaka Morimoto。"
   },
-
   "support": {
     "title": "ClipMenu 2 — 支持 &amp; 帮助",
     "description": "ClipMenu 2 的支持与帮助，这是一款快速的 Mac 剪贴板管理与历史记录应用。涵盖设置、辅助功能权限、订阅与常见问题。",
     "og_title": "ClipMenu 2 — 支持 &amp; 帮助",
     "og_description": "ClipMenu 2 的设置、辅助功能权限、订阅与常见问题，这是一款适用于 Mac 的剪贴板管理工具。",
-
     "back": "← 返回 ClipMenu 2",
     "logo_alt": "ClipMenu 2 图标",
     "h1": "ClipMenu 2 支持",
     "tagline": "适用于 macOS 的快速剪贴板历史菜单栏应用。",
-
     "help_h2": "获取帮助",
     "help_p1": "提问、报告缺陷或请求功能的最快方式，是在我们的公开问题追踪器上。我们会阅读每一份反馈。",
     "help_cta": "在 GitHub 上提交问题 →",
     "help_p2": "更喜欢电子邮件？写信至 <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>，我们会尽快回复你。",
-
     "faq_h2": "常见问题",
     "faq1_q": "我该如何打开剪贴板历史？",
     "faq1_a": "按下你的全局热键（在设置中配置），即可在光标处弹出历史记录，或点击菜单栏中的 ClipMenu 2 图标。",
@@ -244,13 +222,37 @@
     "faq5_a": "打开 App Store 应用 → 点击你的名字 → <strong>订阅</strong>，或访问<a href=\"https://apps.apple.com/account/subscriptions\">你的 Apple 订阅</a>。",
     "faq6_q": "我的数据存储在哪里？",
     "faq6_a": "你的历史和片段保留在你的 Mac 上以及你自己的私密 iCloud 数据库中。我们绝不接收它们。请参阅我们的<a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">隐私政策</a>。",
-
     "links_h2": "链接",
     "link_home": "项目主页 &amp; 下载",
     "link_issues": "报告缺陷／请求功能",
     "link_privacy": "隐私政策",
     "link_eula": "使用条款 (EULA)",
-
-    "footer": "适用于 macOS 的 ClipMenu 2 · 支持：<a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>"
+    "footer": "适用于 macOS 的 ClipMenu 2 · 支持：<a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
+    "page_title": "Dragon App — 支持与帮助",
+    "page_desc": "Dragon App 旗下 Mac 应用的支持与帮助——ClipMenu 2（剪贴板管理工具）与 KeyKey（倉頡 Cangjie 与速成 Simplex 输入法）。涵盖设置、权限、订阅与常见问题。",
+    "page_logo_alt": "Dragon App",
+    "page_h1": "支持",
+    "page_tagline": "ClipMenu 2 与 KeyKey 使用帮助。",
+    "page_footer": "Dragon App for macOS · 支持：<a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
+    "cm_h2": "ClipMenu 2",
+    "cm_sub": "macOS 上快速的剪贴板历史菜单栏应用。",
+    "kk_h2": "KeyKey",
+    "kk_sub": "Yahoo!奇摩輸入法 Cangjie (倉頡) 与 Simplex (速成) 输入法，为 macOS 全新重制。",
+    "kk_help_p1": "如有疑问、缺陷报告或功能建议，欢迎前往 KeyKey 问题追踪页面提交。我们会逐一阅读。",
+    "kk_faq1_q": "如何安装 KeyKey？",
+    "kk_faq1_a": "从<a href=\"https://github.com/teddychan/yahoo-keykey-2/releases/latest\">最新版本</a>下载 <code>YahooKeyKey2.pkg</code> 并双击安装，或运行 <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>。然后注销并重新登录。",
+    "kk_faq2_q": "输入法没有出现在「输入法」列表里。",
+    "kk_faq2_a": "macOS 只会在登录时注册输入法。请先注销并重新登录，然后在 <strong>系统设置 → 键盘 → 输入法 → + → 繁体中文</strong> 下添加，并选择 倉頡 (Cangjie) 和/或 速成 (Simplex)。",
+    "kk_faq3_q": "如何切换到 KeyKey 并更改设置？",
+    "kk_faq3_a": "按 <strong>Ctrl-Space</strong> 在各输入法之间循环切换。在菜单栏的输入菜单中，你可以开关 聯想字詞（联想词组）、全形標點（全角标点）和 輸出簡體字（输出简体字），或打开 關於（关于）。",
+    "kk_faq4_q": "如何输入简体中文？",
+    "kk_faq4_a": "在输入菜单中开启 <strong>輸出簡體字</strong>。你照常用 Cangjie／Simplex 拆码输入，KeyKey 便会输出简体字。",
+    "kk_faq5_q": "运行 KeyKey 需要什么条件？",
+    "kk_faq5_a": "一台搭载 Apple Silicon 且运行 macOS 12 或更高版本的 Mac。KeyKey 已使用 Developer ID 签名并经 Apple 公证，因此能顺利打开。",
+    "kk_faq6_q": "如何卸载 KeyKey？",
+    "kk_faq6_a": "运行 <code>brew uninstall --cask yahoo-keykey-2</code>，或删除 <code>~/Library/Input Methods/YahooKeyKey2.app</code>。然后将其从输入法列表中移除，并注销后重新登录。",
+    "kk_link_home": "KeyKey 主页",
+    "kk_link_project": "GitHub 上的项目与下载",
+    "kk_link_credits": "鸣谢"
   }
 }
