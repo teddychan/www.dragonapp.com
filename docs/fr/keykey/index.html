@@ -3,6 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('dragonConsent') === 'granted') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+    } } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FNQ1T94ESZ');
+  </script>
+  <script src="/shared/consent.js" defer></script>
   <title>KeyKey — Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) pour Mac</title>
   <meta name="description" content="KeyKey est une reconstruction open source de la méthode de saisie classique Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) et Simplex (速成) pour Mac — native, rapide et gratuite. Téléchargez-la dès maintenant.">
   <link rel="canonical" href="https://www.dragonapp.com/fr/keykey/">
@@ -343,5 +366,14 @@
     <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · KeyKey est open source sous la <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">licence MIT</a>.</div>
   </footer>
 
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">Nous utilisons des cookies pour mesurer l'audience et améliorer Dragon App. Vous pouvez accepter ou refuser les cookies de mesure et de publicité. Consultez notre <a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">politique de confidentialité</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">Tout refuser</button>
+        <button type="button" class="consent-btn consent-accept">Tout accepter</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -11,7 +11,10 @@
     "nav_support": "Support",
     "footer_privacy": "Privacy",
     "footer_license": "License (MIT)",
-    "switcher_label": "Language"
+    "switcher_label": "Language",
+    "consent_message": "We use cookies to measure traffic and improve Dragon App. You can accept or reject analytics &amp; advertising cookies. See our <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">Privacy Policy</a>.",
+    "consent_accept": "Accept all",
+    "consent_reject": "Reject all"
   },
   "index": {
     "title": "Dragon App — Classic Mac apps, rebuilt",

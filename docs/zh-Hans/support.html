@@ -3,6 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('dragonConsent') === 'granted') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+    } } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FNQ1T94ESZ');
+  </script>
+  <script src="/shared/consent.js" defer></script>
   <title>ClipMenu 2 — 支持 &amp; 帮助</title>
   <meta name="description" content="ClipMenu 2 的支持与帮助，这是一款快速的 Mac 剪贴板管理与历史记录应用。涵盖设置、辅助功能权限、订阅与常见问题。">
   <link rel="canonical" href="https://www.dragonapp.com/zh-Hans/support.html">
@@ -98,6 +121,19 @@
     .lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); }
     .lang-menu a:hover { background: var(--card); text-decoration: none; }
     .lang-menu a.active { color: var(--accent); font-weight: 600; }
+    /* cookie consent banner */
+    .consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--bg); border-top: 1px solid var(--border); box-shadow: 0 -10px 30px rgba(0,0,0,0.10); }
+    .consent-banner[hidden] { display: none; }
+    .consent-inner { max-width: 720px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .consent-text { margin: 0; font-size: 0.9rem; color: var(--muted); flex: 1; min-width: 220px; line-height: 1.5; }
+    .consent-text a { color: var(--accent); }
+    .consent-actions { display: flex; gap: 10px; flex: none; }
+    .consent-btn { font-family: inherit; font-size: 0.9rem; font-weight: 600; padding: 9px 18px; border-radius: 10px; cursor: pointer; border: 1px solid var(--border); }
+    .consent-reject { background: var(--bg); color: var(--fg); }
+    .consent-reject:hover { background: var(--card); }
+    .consent-accept { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .consent-accept:hover { opacity: 0.9; }
+    @media (max-width: 560px) { .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
   </style>
 </head>
 <body>
@@ -164,6 +200,15 @@
     <footer>
       适用于 macOS 的 ClipMenu 2 · 支持：<a href="mailto:support@dragonapp.com">support@dragonapp.com</a>
     </footer>
+  </div>
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">我们使用 Cookie 来分析流量并改进 Dragon App。您可以接受或拒绝分析与广告类 Cookie。详见我们的<a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">隐私政策</a>。</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">全部拒绝</button>
+        <button type="button" class="consent-btn consent-accept">全部接受</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>

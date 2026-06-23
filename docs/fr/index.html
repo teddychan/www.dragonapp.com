@@ -3,6 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('dragonConsent') === 'granted') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+    } } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FNQ1T94ESZ');
+  </script>
+  <script src="/shared/consent.js" defer></script>
   <title>Dragon App — Les Mac classiques, reconstruits</title>
   <meta name="description" content="Dragon App est un petit studio qui ressuscite des applications macOS abandonnées et adorées sous forme de reconstructions rapides, natives et open source — à commencer par ClipMenu 2 et KeyKey.">
   <link rel="canonical" href="https://www.dragonapp.com/fr/">
@@ -181,5 +204,14 @@
     <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Des applications Mac natives, reconstruites et open source.</div>
   </footer>
 
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">Nous utilisons des cookies pour mesurer l'audience et améliorer Dragon App. Vous pouvez accepter ou refuser les cookies de mesure et de publicité. Consultez notre <a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">politique de confidentialité</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">Tout refuser</button>
+        <button type="button" class="consent-btn consent-accept">Tout accepter</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

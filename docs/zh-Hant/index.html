@@ -3,6 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('dragonConsent') === 'granted') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+    } } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FNQ1T94ESZ');
+  </script>
+  <script src="/shared/consent.js" defer></script>
   <title>Dragon App — 經典 Mac 應用程式，重新打造</title>
   <meta name="description" content="Dragon App 是一間小型工作室，把備受喜愛、已停止開發的 macOS 應用程式重新打造成快速、原生而開源的版本 — 由 ClipMenu 2 與 KeyKey 開始。">
   <link rel="canonical" href="https://www.dragonapp.com/zh-Hant/">
@@ -181,5 +204,14 @@
     <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · 原生 Mac 應用程式，重新打造，開源共享。</div>
   </footer>
 
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">我們使用 Cookie 分析流量並改善 Dragon App。您可以接受或拒絕分析與廣告 Cookie。詳見我們的<a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">私隱政策</a>。</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">全部拒絕</button>
+        <button type="button" class="consent-btn consent-accept">全部接受</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
