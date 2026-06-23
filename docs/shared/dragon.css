@@ -77,8 +77,8 @@ nav {
   -webkit-backdrop-filter: saturate(180%) blur(18px);
   border-bottom: 1px solid var(--border);
 }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.05rem; color: var(--fg); }
+.nav-inner { position: relative; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.05rem; color: var(--fg); white-space: nowrap; }
 .brand img { width: 28px; height: 28px; border-radius: 7px; }
 .brand .glyph { width: 28px; height: 28px; border-radius: 7px; display: flex; align-items: center; justify-content: center; background: var(--accent-tint); color: var(--accent-deep); font-size: 1rem; font-weight: 700; }
 .nav-links { display: flex; align-items: center; gap: 26px; }
@@ -89,7 +89,48 @@ nav {
   border-radius: 999px; font-size: 0.9rem; font-weight: 600;
 }
 .nav-cta:hover { opacity: 0.92; text-decoration: none; }
-@media (max-width: 720px) { .nav-links > a:not(.nav-cta) { display: none; } }
+
+/* hamburger menu — the <details class="nav-menu"> is a plain inline flex wrapper
+   on desktop (links sit inline as before) and becomes a toggle panel on mobile */
+.nav-menu { display: flex; align-items: center; }
+.nav-toggle {
+  display: none; list-style: none; cursor: pointer;
+  width: 40px; height: 40px; align-items: center; justify-content: center;
+  border: 1px solid var(--border); border-radius: 10px;
+  color: var(--fg); background: var(--bg);
+}
+.nav-toggle::-webkit-details-marker { display: none; }
+.nav-toggle::marker { content: ""; }
+.nav-toggle svg { width: 22px; height: 22px; flex: none; }
+.nav-menu .icon-close { display: none; }
+.nav-menu[open] .icon-ham { display: none; }
+.nav-menu[open] .icon-close { display: block; }
+.nav-menu[open] > .nav-toggle { border-color: var(--accent); color: var(--accent-deep); }
+
+@media (min-width: 721px) {
+  /* keep links inline regardless of the <details> open/closed state — a closed
+     <details> otherwise collapses its content box (content-visibility: hidden) */
+  .nav-menu .nav-links { display: flex !important; }
+  .nav-menu::details-content { content-visibility: visible; }
+}
+
+@media (max-width: 720px) {
+  .nav-menu { display: block; }
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 4px;
+    padding: 8px; margin: 0;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 14px; box-shadow: var(--shadow); z-index: 60;
+  }
+  .nav-links a { padding: 11px 12px; border-radius: 9px; font-size: 1rem; }
+  .nav-links a:hover { background: var(--surface); }
+  .nav-cta { text-align: center; margin-top: 4px; }
+  .lang-switch { margin-top: 4px; }
+  .lang-switch > summary { width: 100%; justify-content: center; }
+  .lang-menu { left: 0; right: 0; min-width: 0; }
+}
 
 /* buttons */
 .btn { display: inline-flex; align-items: center; gap: 9px; font-size: 1rem; font-weight: 600; padding: 13px 22px; border-radius: 12px; cursor: pointer; transition: transform .12s ease, opacity .12s ease; }
