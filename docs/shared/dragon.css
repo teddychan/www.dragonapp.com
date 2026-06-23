@@ -36,21 +36,21 @@
   }
 }
 
-/* KeyKey — jade accent */
+/* KeyKey — royal-blue accent, matching the 倉 app icon */
 body.theme-keykey {
-  --accent: #1d9e75;
-  --accent-deep: #0f6e56;
-  --accent-tint: #e1f5ee;
-  --accent-ink: #0f6e56;
-  --shadow: 0 18px 40px rgba(15, 110, 86, 0.12);
-  --shadow-sm: 0 8px 22px rgba(15, 110, 86, 0.10);
+  --accent: #3a5fe0;
+  --accent-deep: #2440ad;
+  --accent-tint: #e9edfc;
+  --accent-ink: #1f3a9e;
+  --shadow: 0 18px 40px rgba(36, 64, 173, 0.14);
+  --shadow-sm: 0 8px 22px rgba(36, 64, 173, 0.12);
 }
 @media (prefers-color-scheme: dark) {
   body.theme-keykey {
-    --accent: #5dcaa5;
-    --accent-deep: #9fe1cb;
-    --accent-tint: #04342c;
-    --accent-ink: #9fe1cb;
+    --accent: #7e9bf3;
+    --accent-deep: #aec3f9;
+    --accent-tint: #131d3f;
+    --accent-ink: #c4d2fb;
   }
 }
 
