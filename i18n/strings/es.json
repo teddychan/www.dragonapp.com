@@ -1,6 +1,5 @@
 {
   "_lang": "es",
-
   "common": {
     "nav_apps": "Aplicaciones",
     "nav_all_apps": "Todas las aplicaciones",
@@ -12,9 +11,11 @@
     "nav_support": "Soporte",
     "footer_privacy": "Privacidad",
     "footer_license": "Licencia (MIT)",
-    "switcher_label": "Idioma"
+    "switcher_label": "Idioma",
+    "consent_message": "Usamos cookies para medir el tráfico y mejorar Dragon App. Puedes aceptar o rechazar las cookies de análisis y publicidad. Consulta nuestra <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">Política de privacidad</a>.",
+    "consent_accept": "Aceptar todo",
+    "consent_reject": "Rechazar todo"
   },
-
   "index": {
     "title": "Dragon App — Aplicaciones clásicas de Mac, reconstruidas",
     "description": "Dragon App es un pequeño estudio que revive apreciadas aplicaciones de macOS ya descontinuadas, reconstruyéndolas como versiones rápidas, nativas y de código abierto, empezando por ClipMenu 2 y KeyKey.",
@@ -37,7 +38,6 @@
     "placeholder": "Más aplicaciones en camino",
     "footer_copyright": "© 2026 Dragon App · Aplicaciones nativas de Mac, reconstruidas y de código abierto."
   },
-
   "keykey": {
     "title": "KeyKey — Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) para Mac",
     "description": "KeyKey es una reconstrucción de código abierto del clásico método de entrada Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) y Simplex (速成) para Mac: nativo, rápido y gratuito. Descárgalo ahora.",
@@ -45,7 +45,6 @@
     "og_description": "Una reconstrucción de código abierto del clásico método de entrada Yahoo! KeyKey Cangjie (倉頡) &amp; Simplex (速成) para Mac: nativo, rápido y gratuito.",
     "og_image_alt": "Icono de la aplicación KeyKey",
     "ld_app_description": "Una reconstrucción de código abierto del clásico método de entrada de chino tradicional Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) y Simplex (速成) para Mac: nativo, rápido y gratuito.",
-
     "nav_cta": "Descargar",
     "hero_icon_alt": "Icono de la aplicación KeyKey",
     "hero_eyebrow": "Ya disponible · v1.2.1",
@@ -54,10 +53,8 @@
     "hero_btn_github": "Descargar gratis en GitHub",
     "hero_btn_appstore": "App Store — próximamente",
     "hero_req": "Requiere macOS 12 o posterior · Apple Silicon · Firmado &amp; notarizado · Código abierto",
-
     "shot_aria": "Ventana de candidatos Cangjie de KeyKey: al escribir los radicales 日 y 月 se muestra una lista numerada de caracteres coincidentes, con 明 seleccionado en primer lugar.",
     "shot_menu_head": "輸入 日 月 — elige un candidato por número",
-
     "features_h2": "La experiencia de escritura de Yahoo! KeyKey, de vuelta",
     "features_sub": "Entrada Cangjie y Simplex rápida y sin fricciones que los usuarios de Mac echaban de menos, creada desde cero en Swift.",
     "feat1_h3": "Entrada 倉頡 + 速成",
@@ -72,7 +69,6 @@
     "feat5_p": "Una lista vertical de candidatos que respeta el diseño original: sigue el cursor de texto y se voltea hacia arriba o se ajusta a la pantalla para que nunca quede cortada.",
     "feat6_h3": "Ligero &amp; de código abierto",
     "feat6_p": "Los recursos compartidos mantienen bajo el uso de memoria entre aplicaciones, y todo el código fuente está en GitHub: gratuito, con licencia MIT y tuyo para inspeccionar o compilar.",
-
     "install_h2": "Listo para escribir en cuatro pasos",
     "install_sub": "El instalador está firmado y notarizado por Apple, así que se abre sin problemas: sin advertencias de Gatekeeper.",
     "step1_h3": "Descarga &amp; abre",
@@ -83,7 +79,6 @@
     "step3_p": "Ajustes del Sistema ▸ Teclado ▸ Fuentes de entrada ▸ + ▸ Chino tradicional → añade <strong>倉頡</strong> o <strong>速成</strong>, o ambos.",
     "step4_h3": "Cambia &amp; escribe",
     "step4_p": "Pulsa <strong>Ctrl-Space</strong> para cambiar a KeyKey y empezar a escribir. Activa 簡體 o abre 關於 desde el menú de entrada.",
-
     "download_h2": "Consigue KeyKey",
     "download_sub": "Gratuito y de código abierto hoy, con una edición para Mac App Store en camino.",
     "plan1_badge": "Disponible ya · gratis",
@@ -102,12 +97,9 @@
     "plan2_li3": "El mismo motor Cangjie &amp; Simplex",
     "plan2_li4": "Aún no disponible: consigue la versión de GitHub hoy",
     "plan2_btn": "Próximamente",
-
     "credit_kicker": "En homenaje",
     "credit_body": "KeyKey es una reconstrucción independiente y de código abierto en Swift, creada en homenaje al original <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong>, el método de entrada de chino tradicional que tantos usuarios de Mac adoraron. Lleva esa experiencia al macOS moderno y se publica bajo la <a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">Licencia MIT</a>.",
-
     "footer_copyright": "© 2026 Dragon App · KeyKey es de código abierto bajo la <a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">Licencia MIT</a>.",
-
     "faq1_q": "¿Qué métodos de entrada admite KeyKey?",
     "faq1_a": "KeyKey es un método de entrada de chino tradicional con dos modos: Cangjie (倉頡) y Simplex (速成, también llamado 簡易). Admite entrada con comodín mediante *, candidatos ordenados por frecuencia, frases asociadas (聯想字詞), puntuación de ancho completo y un conmutador opcional de salida de tradicional a simplificado.",
     "faq2_q": "¿Cómo instalo KeyKey?",
@@ -117,7 +109,6 @@
     "faq4_q": "¿Es este el Yahoo! KeyKey original?",
     "faq4_a": "No. KeyKey es una reconstrucción independiente y de código abierto en Swift, creada en homenaje al original Yahoo! KeyKey (Yahoo!奇摩輸入法). Se publica bajo la Licencia MIT."
   },
-
   "clipmenu": {
     "title": "ClipMenu 2 — Gestor de portapapeles &amp; historial para Mac",
     "description": "ClipMenu 2 es un gestor de portapapeles e historial nativo y rápido para Mac. Todo lo que copiaste, a un atajo de distancia: gratis en GitHub o en la Mac App Store.",
@@ -125,7 +116,6 @@
     "og_description": "Todo lo que copiaste, a un atajo de distancia. Un gestor de portapapeles e historial nativo y rápido para Mac.",
     "og_image_alt": "Icono de la aplicación ClipMenu 2",
     "ld_app_description": "Un gestor de portapapeles e historial nativo y rápido para Mac. Guarda un historial de todo lo que copias, almacena fragmentos en carpetas y pega en cualquier sitio con un atajo global.",
-
     "nav_cta": "Descargar",
     "hero_eyebrow": "El gestor de portapapeles para macOS",
     "hero_h1": "Todo lo que copiaste, a un atajo de distancia",
@@ -133,13 +123,11 @@
     "hero_btn_appstore": "Descargar en la App Store",
     "hero_btn_github": "Consíguelo gratis en GitHub",
     "hero_req": "Requiere macOS 26 o posterior · Universal · Código abierto",
-
     "shot_aria": "Ventana emergente del historial del portapapeles de ClipMenu 2, mostrando elementos copiados recientes con números y la miniatura de una imagen.",
     "shot_label": "Historial del portapapeles",
     "shot_menu_head": "Recientes · pulsa ⌥V para abrir junto al cursor",
     "shot_clip4": "Screenshot 2026-06-20 at 09.41.png",
     "shot_clip5": "El veloz murciélago hindú comía feliz cardillo y kiwi",
-
     "features_h2": "Pensado para quienes copian mucho",
     "features_sub": "Todo lo que necesitas para mover texto e imágenes por tu Mac, y nada que no necesites.",
     "feat1_h3": "Historial del portapapeles",
@@ -154,7 +142,6 @@
     "feat5_p": "¿Copiaste una imagen? Verás una miniatura en línea, con elementos numerados e información sobre herramientas para que siempre elijas la correcta.",
     "feat6_h3": "Sincronización con iCloud",
     "feat6_p": "En la edición de la App Store, tus fragmentos y ajustes se sincronizan entre todos tus Mac a través de tu propio iCloud privado.",
-
     "how_h2": "Tres pasos, cero fricción",
     "how_sub": "ClipMenu 2 vive discretamente en tu barra de menús y no se interpone en tu camino.",
     "how1_h3": "Copia como siempre",
@@ -163,10 +150,8 @@
     "how2_p": "El historial aparece junto al cursor. Elige un clip con las flechas o con su número.",
     "how3_h3": "Pega en cualquier sitio",
     "how3_p": "ClipMenu 2 lo deposita en la aplicación en la que estés: texto, código o una imagen.",
-
     "locale_h2": "Habla tu idioma",
     "locale_sub": "ClipMenu 2 está totalmente traducido a siete idiomas, desde el primer momento.",
-
     "download_h2": "Dos formas de conseguir ClipMenu 2",
     "download_sub": "La misma aplicación, tú eliges. Escoge la que mejor se adapte a tu forma de trabajar.",
     "plan1_badge": "Lo más fácil · actualizaciones automáticas",
@@ -185,7 +170,6 @@
     "plan2_li3": "Código fuente completo en GitHub: inspecciónalo y compílalo tú mismo",
     "plan2_li4": "Todas las funciones excepto la sincronización con iCloud",
     "plan2_btn": "Consigue la última versión",
-
     "faq_h2": "Preguntas, respondidas",
     "faq1_q": "¿Cuál es la diferencia entre las versiones de la App Store y de GitHub?",
     "faq1_a": "Son la misma aplicación. La edición de la Mac App Store es una suscripción de pago que añade sincronización con iCloud y se actualiza automáticamente a través de la App Store. La edición de GitHub es gratuita y de código abierto, con actualización automática integrada, e incluye todas las funciones excepto la sincronización con iCloud.",
@@ -199,14 +183,12 @@
     "faq5_a": "Un Mac con macOS 26 o posterior. ClipMenu 2 funciona como un agente de la barra de menús, sin icono en el Dock, y no se interpone en tu camino.",
     "faq6_q": "¿Es este el ClipMenu original?",
     "faq6_a": "ClipMenu 2 es una reescritura independiente y moderna en Swift, construida sobre el legado del <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> original de Naotaka Morimoto. Le agradecemos su trabajo, que es de código abierto bajo la Licencia MIT; ClipMenu 2 lleva ese espíritu adelante y se publica bajo la misma licencia.",
-
     "ld_faq1_a": "Son la misma aplicación. La edición de la Mac App Store es una suscripción de pago que añade sincronización con iCloud y se actualiza automáticamente a través de la App Store. La edición de GitHub es gratuita y de código abierto, con actualización automática integrada, e incluye todas las funciones excepto la sincronización con iCloud.",
     "ld_faq2_a": "macOS requiere permiso de Accesibilidad para que una aplicación pegue en otra en tu nombre. ClipMenu 2 lo usa únicamente para depositar el clip seleccionado en la aplicación en primer plano. La edición de la App Store está en zona protegida y no usa esto.",
     "ld_faq3_a": "En tu Mac. Tu historial y tus fragmentos nunca salen de tus dispositivos: ClipMenu 2 no tiene analíticas, anuncios ni seguimiento, y nunca recibimos el contenido de tu portapapeles. Con la sincronización con iCloud activada, los fragmentos viajan a través de tu propia cuenta privada de iCloud.",
     "ld_faq4_a": "La versión de GitHub es gratis para siempre. La edición de la Mac App Store ofrece una prueba gratuita de 30 días y luego $9.99 al año, que cubre la sincronización con iCloud y las actualizaciones de la App Store. Gestiónala o cancélala cuando quieras en tu Cuenta de Apple.",
     "ld_faq5_a": "Un Mac con macOS 26 o posterior. ClipMenu 2 funciona como un agente de la barra de menús, sin icono en el Dock, y no se interpone en tu camino.",
     "ld_faq6_a": "ClipMenu 2 es una reescritura independiente y moderna en Swift, construida sobre el legado del ClipMenu original de Naotaka Morimoto. Es de código abierto bajo la Licencia MIT.",
-
     "final_h2": "Deja de perder lo que copias",
     "final_sub": "Dale memoria a tu portapapeles. Se configura en un minuto.",
     "credit_kicker": "Créditos &amp; agradecimiento",
@@ -214,23 +196,19 @@
     "footer_brand": "ClipMenu 2 para macOS",
     "footer_copyright": "© 2026 ClipMenu 2 · De código abierto bajo la <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/LICENSE\">Licencia MIT</a>. <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> original © Naotaka Morimoto."
   },
-
   "support": {
     "title": "ClipMenu 2 — Soporte &amp; ayuda",
     "description": "Soporte y ayuda para ClipMenu 2, el rápido gestor de portapapeles e historial para Mac. Configuración, permiso de Accesibilidad, suscripciones y preguntas frecuentes.",
     "og_title": "ClipMenu 2 — Soporte &amp; ayuda",
     "og_description": "Configuración, permiso de Accesibilidad, suscripciones y preguntas frecuentes de ClipMenu 2, el gestor de portapapeles para Mac.",
-
     "back": "← Volver a ClipMenu 2",
     "logo_alt": "Icono de ClipMenu 2",
     "h1": "Soporte de ClipMenu 2",
     "tagline": "La rápida aplicación de barra de menús con historial del portapapeles para macOS.",
-
     "help_h2": "Obtén ayuda",
     "help_p1": "La forma más rápida de hacer una pregunta, informar de un error o solicitar una función es nuestro gestor público de incidencias. Leemos todos los informes.",
     "help_cta": "Abre una incidencia en GitHub →",
     "help_p2": "¿Prefieres el correo? Escribe a <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a> y te responderemos.",
-
     "faq_h2": "Preguntas frecuentes",
     "faq1_q": "¿Cómo abro el historial de mi portapapeles?",
     "faq1_a": "Pulsa tu atajo global (configurado en los Ajustes) para que el historial aparezca junto al cursor, o haz clic en el icono de ClipMenu 2 en la barra de menús.",
@@ -244,13 +222,11 @@
     "faq5_a": "Abre la aplicación App Store → haz clic en tu nombre → <strong>Suscripciones</strong>, o visita <a href=\"https://apps.apple.com/account/subscriptions\">tus suscripciones de Apple</a>.",
     "faq6_q": "¿Dónde se almacenan mis datos?",
     "faq6_a": "Tu historial y tus fragmentos permanecen en tu Mac y en tu propia base de datos privada de iCloud. Nunca los recibimos. Consulta nuestra <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">Política de privacidad</a>.",
-
     "links_h2": "Enlaces",
     "link_home": "Página del proyecto &amp; descargas",
     "link_issues": "Informar de un error / solicitar una función",
     "link_privacy": "Política de privacidad",
     "link_eula": "Condiciones de uso (EULA)",
-
     "footer": "ClipMenu 2 para macOS · Soporte: <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>"
   }
 }

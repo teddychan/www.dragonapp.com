@@ -1,6 +1,5 @@
 {
   "_lang": "ja",
-
   "common": {
     "nav_apps": "アプリ",
     "nav_all_apps": "すべてのアプリ",
@@ -12,9 +11,11 @@
     "nav_support": "サポート",
     "footer_privacy": "プライバシー",
     "footer_license": "ライセンス (MIT)",
-    "switcher_label": "言語"
+    "switcher_label": "言語",
+    "consent_message": "Cookie を使用してトラフィックを分析し、Dragon App を改善します。分析および広告用 Cookie の使用を許可または拒否できます。詳しくは<a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">プライバシーポリシー</a>をご覧ください。",
+    "consent_accept": "すべて許可",
+    "consent_reject": "すべて拒否"
   },
-
   "index": {
     "title": "Dragon App — 名作Macアプリを、現代に再構築",
     "description": "Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです。ClipMenu 2とKeyKeyから始まります。",
@@ -37,7 +38,6 @@
     "placeholder": "さらなるアプリを開発中",
     "footer_copyright": "© 2026 Dragon App · 再構築されたオープンソースのネイティブMacアプリ。"
   },
-
   "keykey": {
     "title": "KeyKey — Mac向けYahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成)",
     "description": "KeyKeyは、名作Yahoo! KeyKey (Yahoo!奇摩輸入法) のCangjie (倉頡) およびSimplex (速成) 入力メソッドをMac向けにオープンソースで再構築したものです — ネイティブ・高速・無料。今すぐダウンロードできます。",
@@ -45,7 +45,6 @@
     "og_description": "名作Yahoo! KeyKeyのCangjie (倉頡) &amp; Simplex (速成) 入力メソッドをMac向けにオープンソースで再構築 — ネイティブ・高速・無料。",
     "og_image_alt": "KeyKeyのアプリアイコン",
     "ld_app_description": "名作Yahoo! KeyKey (Yahoo!奇摩輸入法) のCangjie (倉頡) およびSimplex (速成) 繁体字入力メソッドをMac向けにオープンソースで再構築したものです — ネイティブ・高速・無料。",
-
     "nav_cta": "ダウンロード",
     "hero_icon_alt": "KeyKeyのアプリアイコン",
     "hero_eyebrow": "提供開始 · v1.2.1",
@@ -54,10 +53,8 @@
     "hero_btn_github": "GitHubで無料ダウンロード",
     "hero_btn_appstore": "App Store — 近日公開",
     "hero_req": "macOS 12以降が必要 · Apple Silicon · 署名・公証済み &amp; オープンソース",
-
     "shot_aria": "KeyKeyのCangjie候補ウィンドウ：部首の 日 と 月 を入力すると、一致する文字が番号付きリストで表示され、最初に 明 が選択されています。",
     "shot_menu_head": "輸入 日 月 — 番号で候補を選択",
-
     "features_h2": "Yahoo! KeyKeyの入力体験が、再び",
     "features_sub": "Macユーザーが恋しがっていた、速く快適なCangjie・Simplex入力 — Swiftで新たに構築。",
     "feat1_h3": "倉頡 + 速成 入力",
@@ -72,7 +69,6 @@
     "feat5_p": "オリジナルのレイアウトに合わせた縦型の候補リスト — テキストキャレットに追従し、画面に応じて上に反転したり端で止まったりして、切れることがありません。",
     "feat6_h3": "軽量 &amp; オープンソース",
     "feat6_p": "リソースを共有することでアプリ間のメモリ使用を抑え、全ソースコードはGitHubで公開 — 無料・MITライセンスで、自由に確認・ビルドできます。",
-
     "install_h2": "4ステップで入力開始",
     "install_sub": "インストーラーはAppleによる署名・公証済みなので、Gatekeeperの警告なくスムーズに開きます。",
     "step1_h3": "ダウンロード &amp; 開く",
@@ -83,7 +79,6 @@
     "step3_p": "システム設定 ▸ キーボード ▸ 入力ソース ▸ + ▸ 繁体字中国語 → <strong>倉頡</strong>や<strong>速成</strong>を追加します。",
     "step4_h3": "切り替えて入力",
     "step4_p": "<strong>Ctrl-Space</strong>を押してKeyKeyに切り替え、入力を始めます。入力メニューから 簡體 を切り替えたり 關於 を開いたりできます。",
-
     "download_h2": "KeyKeyを入手",
     "download_sub": "今すぐ無料・オープンソースで、Mac App Store版も準備中です。",
     "plan1_badge": "提供中 · 無料",
@@ -102,12 +97,9 @@
     "plan2_li3": "同じCangjie &amp; Simplexエンジン",
     "plan2_li4": "まだ利用できません — 今すぐGitHub版を入手してください",
     "plan2_btn": "近日公開",
-
     "credit_kicker": "オマージュとして",
     "credit_body": "KeyKeyはSwiftで作られた独立したオープンソースの再構築版で、多くのMacユーザーに愛された繁体字入力メソッド、オリジナルの<strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong>へのオマージュとして制作されました。その体験をモダンなmacOSへと受け継ぎ、<a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">MITライセンス</a>のもとで公開されています。",
-
     "footer_copyright": "© 2026 Dragon App · KeyKeyは<a href=\"https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE\">MITライセンス</a>のもとでオープンソースです。",
-
     "faq1_q": "KeyKeyはどの入力メソッドに対応していますか？",
     "faq1_a": "KeyKeyは二つのモードを持つ繁体字入力メソッドです：Cangjie (倉頡) とSimplex (速成、簡易とも呼ばれます)。* によるワイルドカード入力、頻度順の候補、聯想字詞（連想語）、全角句読点、そして任意の繁体字から簡体字への出力切り替えに対応しています。",
     "faq2_q": "KeyKeyはどうやってインストールしますか？",
@@ -117,7 +109,6 @@
     "faq4_q": "これはオリジナルのYahoo! KeyKeyですか？",
     "faq4_a": "いいえ。KeyKeyはSwiftで作られた独立したオープンソースの再構築版で、オリジナルのYahoo! KeyKey (Yahoo!奇摩輸入法) へのオマージュとして制作されました。MITライセンスのもとで公開されています。"
   },
-
   "clipmenu": {
     "title": "ClipMenu 2 — Mac向けクリップボードマネージャー &amp; 履歴",
     "description": "ClipMenu 2は、Mac向けの高速でネイティブなクリップボードマネージャー兼履歴アプリです。コピーしたものすべてを、ショートカット一つで — GitHubまたはMac App Storeで無料。",
@@ -125,7 +116,6 @@
     "og_description": "コピーしたものすべてを、ショートカット一つで。Mac向けの高速でネイティブなクリップボードマネージャー兼履歴アプリです。",
     "og_image_alt": "ClipMenu 2のアプリアイコン",
     "ld_app_description": "Mac向けの高速でネイティブなクリップボードマネージャー兼履歴アプリです。コピーしたものすべての履歴を残し、スニペットをフォルダに保存し、グローバルホットキーでどこにでも貼り付けられます。",
-
     "nav_cta": "ダウンロード",
     "hero_eyebrow": "macOS向けクリップボードマネージャー",
     "hero_h1": "コピーしたものすべてを、ショートカット一つで",
@@ -133,13 +123,11 @@
     "hero_btn_appstore": "App Storeでダウンロード",
     "hero_btn_github": "GitHubで無料入手",
     "hero_req": "macOS 26以降が必要 · ユニバーサル · オープンソース",
-
     "shot_aria": "ClipMenu 2のクリップボード履歴ポップアップ。番号付きの最近コピーした項目と画像サムネイルが表示されています。",
     "shot_label": "クリップボード履歴",
     "shot_menu_head": "最近の項目 · ⌥V でカーソル位置に開く",
     "shot_clip4": "Screenshot 2026-06-20 at 09.41.png",
     "shot_clip5": "The quick brown fox jumps over the lazy dog",
-
     "features_h2": "たくさんコピーする人のために作られました",
     "features_sub": "Mac上でテキストや画像を扱うのに必要なものすべて、そして余計なものは一切なし。",
     "feat1_h3": "クリップボード履歴",
@@ -154,7 +142,6 @@
     "feat5_p": "画像をコピーしましたか？インラインでサムネイルを表示し、番号付き項目とツールチップで、いつも正しいものを選べます。",
     "feat6_h3": "iCloud同期",
     "feat6_p": "App Store版では、スニペットと設定がご自身のプライベートなiCloudを通じてすべてのMac間で同期されます。",
-
     "how_h2": "3ステップ、摩擦ゼロ",
     "how_sub": "ClipMenu 2はメニューバーで静かに動き、あなたの邪魔をしません。",
     "how1_h3": "いつも通りコピー",
@@ -163,10 +150,8 @@
     "how2_p": "履歴がカーソル位置にポップアップします。矢印キーか番号でクリップを選びます。",
     "how3_h3": "どこにでも貼り付け",
     "how3_p": "ClipMenu 2が今いるアプリに貼り付けます — テキストでも、コードでも、画像でも。",
-
     "locale_h2": "あなたの言語を話します",
     "locale_sub": "ClipMenu 2は最初から7言語に完全ローカライズされています。",
-
     "download_h2": "ClipMenu 2を入手する2つの方法",
     "download_sub": "同じアプリ、あなたの選択。働き方に合うものを選んでください。",
     "plan1_badge": "最も簡単 · 自動アップデート",
@@ -185,7 +170,6 @@
     "plan2_li3": "全ソースをGitHubで公開 — 自分で確認・ビルドできます",
     "plan2_li4": "iCloud同期を除くすべての機能",
     "plan2_btn": "最新リリースを入手",
-
     "faq_h2": "疑問にお答えします",
     "faq1_q": "App Store版とGitHub版の違いは何ですか？",
     "faq1_a": "どちらも同じアプリです。Mac App Store版は有料のサブスクリプションで、iCloud同期が追加され、App Storeを通じて自動的にアップデートされます。GitHub版は無料・オープンソースで、自動アップデートを内蔵し、iCloud同期を除くすべての機能を備えています。",
@@ -199,14 +183,12 @@
     "faq5_a": "macOS 26以降が動作するMacです。ClipMenu 2はDockアイコンを持たないメニューバーエージェントとして動作し、あなたの邪魔をしません。",
     "faq6_q": "これはオリジナルのClipMenuですか？",
     "faq6_a": "ClipMenu 2はSwiftによる独立したモダンな書き直し版で、Naotaka Morimotoによるオリジナルの<a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a>の遺産の上に作られています。彼の仕事に感謝しています。それはMITライセンスのもとオープンソースであり — ClipMenu 2はその精神を受け継ぎ、同じライセンスのもとで公開されています。",
-
     "ld_faq1_a": "どちらも同じアプリです。Mac App Store版は有料のサブスクリプションで、iCloud同期が追加され、App Storeを通じて自動的にアップデートされます。GitHub版は無料・オープンソースで、自動アップデートを内蔵し、iCloud同期を除くすべての機能を備えています。",
     "ld_faq2_a": "macOSでは、アプリがユーザーに代わって別のアプリへ貼り付けるためにアクセシビリティ権限が必要です。ClipMenu 2はこれを、選択したクリップを最前面のアプリへ貼り付けるためだけに使用します。App Store版はサンドボックス化されており、これを使用しません。",
     "ld_faq3_a": "あなたのMac上です。履歴とスニペットがデバイスの外に出ることはありません — ClipMenu 2には分析、広告、トラッキングは一切なく、私たちがクリップボードの内容を受け取ることもありません。iCloud同期をオンにすると、スニペットはご自身のプライベートなiCloudアカウントを通じて移動します。",
     "ld_faq4_a": "GitHub版はずっと無料です。Mac App Store版は30日間の無料トライアル、その後 $9.99 / 年で、iCloud同期とApp Storeアップデートが含まれます。Apple Account からいつでも管理・解約できます。",
     "ld_faq5_a": "macOS 26以降が動作するMacです。ClipMenu 2はDockアイコンを持たないメニューバーエージェントとして動作し、あなたの邪魔をしません。",
     "ld_faq6_a": "ClipMenu 2はSwiftによる独立したモダンな書き直し版で、Naotaka MorimotoによるオリジナルのClipMenuの遺産の上に作られています。MITライセンスのもとでオープンソースです。",
-
     "final_h2": "コピーしたものを、もう失わない",
     "final_sub": "クリップボードに記憶力を。セットアップは1分で完了します。",
     "credit_kicker": "クレジット &amp; 謝辞",
@@ -214,23 +196,19 @@
     "footer_brand": "macOS向けClipMenu 2",
     "footer_copyright": "© 2026 ClipMenu 2 · <a href=\"https://github.com/teddychan/clipmenu-2/blob/main/LICENSE\">MITライセンス</a>のもとでオープンソース。オリジナルの<a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> © Naotaka Morimoto。"
   },
-
   "support": {
     "title": "ClipMenu 2 — サポート &amp; ヘルプ",
     "description": "Mac向けの高速なクリップボードマネージャー兼履歴アプリ、ClipMenu 2のサポートとヘルプ。セットアップ、アクセシビリティ権限、サブスクリプション、よくある質問。",
     "og_title": "ClipMenu 2 — サポート &amp; ヘルプ",
     "og_description": "Mac向けクリップボードマネージャー、ClipMenu 2のセットアップ、アクセシビリティ権限、サブスクリプション、よくある質問。",
-
     "back": "← ClipMenu 2に戻る",
     "logo_alt": "ClipMenu 2のアイコン",
     "h1": "ClipMenu 2 サポート",
     "tagline": "macOS向けの高速なクリップボード履歴メニューバーアプリ。",
-
     "help_h2": "ヘルプを受ける",
     "help_p1": "質問する、バグを報告する、機能をリクエストする最も早い方法は、公開のイシュートラッカーです。すべての報告に目を通しています。",
     "help_cta": "GitHubでイシューを開く →",
     "help_p2": "メールがよろしいですか？<a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>までご連絡ください。折り返しご返信します。",
-
     "faq_h2": "よくある質問",
     "faq1_q": "クリップボード履歴はどうやって開きますか？",
     "faq1_a": "グローバルホットキー（設定で指定）を押すと履歴がカーソル位置にポップアップします。または、メニューバーのClipMenu 2アイコンをクリックします。",
@@ -244,13 +222,11 @@
     "faq5_a": "App Storeアプリを開き → 自分の名前をクリック → <strong>サブスクリプション</strong>、または<a href=\"https://apps.apple.com/account/subscriptions\">Appleのサブスクリプション</a>にアクセスしてください。",
     "faq6_q": "データはどこに保存されますか？",
     "faq6_a": "履歴とスニペットはあなたのMac上と、ご自身のプライベートなiCloudデータベースに留まります。私たちが受け取ることはありません。<a href=\"https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md\">プライバシーポリシー</a>をご覧ください。",
-
     "links_h2": "リンク",
     "link_home": "プロジェクトホーム &amp; ダウンロード",
     "link_issues": "バグ報告 / 機能リクエスト",
     "link_privacy": "プライバシーポリシー",
     "link_eula": "利用規約 (EULA)",
-
     "footer": "macOS向けClipMenu 2 · サポート：<a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>"
   }
 }

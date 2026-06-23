@@ -3,6 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied) + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    try { if (localStorage.getItem('dragonConsent') === 'granted') {
+      gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+    } } catch (e) {}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNQ1T94ESZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FNQ1T94ESZ');
+  </script>
+  <script src="/shared/consent.js" defer></script>
   <title>KeyKey — Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) para Mac</title>
   <meta name="description" content="KeyKey es una reconstrucción de código abierto del clásico método de entrada Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) y Simplex (速成) para Mac: nativo, rápido y gratuito. Descárgalo ahora.">
   <link rel="canonical" href="https://www.dragonapp.com/es/keykey/">
@@ -343,5 +366,14 @@
     <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · KeyKey es de código abierto bajo la <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">Licencia MIT</a>.</div>
   </footer>
 
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">Usamos cookies para medir el tráfico y mejorar Dragon App. Puedes aceptar o rechazar las cookies de análisis y publicidad. Consulta nuestra <a href="https://github.com/teddychan/clipmenu-2/blob/main/PRIVACY.md">Política de privacidad</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">Rechazar todo</button>
+        <button type="button" class="consent-btn consent-accept">Aceptar todo</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
