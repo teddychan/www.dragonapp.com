@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Dragon App">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b8bf2"/>
+      <stop offset="1" stop-color="#1654c6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="114" fill="url(#g)"/>
+  <path fill="#ffffff" fill-rule="evenodd" d="M158 146 H244 a110 110 0 0 1 0 220 H158 Z M218 196 H244 a60 60 0 0 1 0 120 H218 Z"/>
+</svg>
