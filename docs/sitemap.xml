@@ -1,25 +1,393 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.dragonapp.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hans/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hant/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/"/>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.dragonapp.com/clipmenu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/clipmenu/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hans/clipmenu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/clipmenu/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hant/clipmenu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/clipmenu/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ja/clipmenu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/clipmenu/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ko/clipmenu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/clipmenu/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/es/clipmenu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/clipmenu/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/fr/clipmenu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/clipmenu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/clipmenu/"/>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dragonapp.com/keykey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hans/keykey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hant/keykey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ja/keykey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ko/keykey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/es/keykey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/fr/keykey/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/"/>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dragonapp.com/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/support.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hans/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/support.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hant/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/support.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ja/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/support.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ko/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/support.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/es/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/support.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/fr/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dragonapp.com/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/support.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/support.html"/>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
