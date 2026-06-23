@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{ LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ CONSENT_HEAD }}
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ CANONICAL }}">
+  <link rel="icon" href="/appicon.png">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="{{ OG_LOCALE }}">
+  <meta property="og:url" content="{{ CANONICAL }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css">
+  <style>
+    .legal { max-width: 760px; margin: 0 auto; padding: 56px 24px 24px; }
+    .legal .updated { color: var(--muted); font-size: 0.95rem; margin: 0 0 8px; }
+    .legal h1 { font-size: clamp(2rem, 4vw, 2.6rem); letter-spacing: -0.02em; margin: 8px 0 18px; }
+    .legal h2 { font-size: 1.35rem; margin: 40px 0 10px; padding-top: 18px; border-top: 1px solid var(--border); }
+    .legal h2:first-of-type { border-top: none; padding-top: 0; }
+    .legal p, .legal li { color: var(--fg); font-size: 1.02rem; line-height: 1.7; }
+    .legal p { margin: 0 0 14px; }
+    .legal .lead { color: var(--muted); font-size: 1.1rem; }
+    .legal ul { margin: 0 0 14px; padding-left: 22px; }
+    .legal li { margin: 6px 0; }
+    .legal a { color: var(--accent-deep); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="/"><span class="glyph">D</span>Dragon App</a>
+      <div class="nav-links">
+        <a href="/">All apps</a>
+        <a href="/support.html">Support</a>
+        <a href="https://github.com/teddychan">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="legal">
+    <p class="updated">Last updated: 23 June 2026</p>
+    <h1>Privacy Policy</h1>
+    <p class="lead">Dragon App is a small independent studio that rebuilds classic macOS apps. This policy explains what data this website and our apps handle. In short: the apps keep your data on your own device, and this website uses privacy-first, consent-based analytics.</p>
+
+    <h2>This website (www.dragonapp.com)</h2>
+    <p>We use Google Analytics to understand how this site is used — for example, which app pages people visit. It runs with <strong>Google Consent Mode</strong>, so:</p>
+    <ul>
+      <li>No analytics or advertising cookies are stored until you choose <strong>Accept all</strong> in the cookie banner.</li>
+      <li>If you choose <strong>Reject all</strong> — or simply don't choose — Analytics runs in a cookieless mode that stores no identifiers on your device.</li>
+      <li>If you accept, Google sets cookies and processes usage data (such as pages viewed, approximate location derived from your IP address, and device or browser type) as our processor.</li>
+    </ul>
+    <p>We never receive your name or contact details through analytics, and we do not sell personal data. You can change your choice at any time by clearing this site's data in your browser (which brings the banner back) or by adjusting your browser's cookie settings. Google's handling of this data is described in <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses data from sites that use its services</a>.</p>
+
+    <h2>ClipMenu 2</h2>
+    <p>ClipMenu 2 does not collect, transmit, sell, or share any personal data.</p>
+    <ul>
+      <li><strong>What it stores.</strong> Your clipboard history and text snippets are stored locally on your Mac. ClipMenu 2 has no servers and sends no data to the developer or any third party.</li>
+      <li><strong>iCloud sync (optional).</strong> If you turn on iCloud sync, your snippets and settings are synchronized through your own private iCloud account using Apple's CloudKit. That content lives in your personal iCloud, is not accessible to the developer, and is governed by Apple's Privacy Policy.</li>
+      <li><strong>Permissions.</strong> Accessibility permission is used only to paste the item you select into the frontmost app (by simulating Command-V). It is never used to observe, log, or transmit your keystrokes or screen contents.</li>
+      <li><strong>No tracking.</strong> The app contains no analytics, advertising, or third-party tracking SDKs.</li>
+    </ul>
+
+    <h2>KeyKey</h2>
+    <p>KeyKey is an input method that runs entirely on your Mac. What you type is processed locally on your device to produce candidate characters; it is never sent to the developer or any third party. KeyKey contains no analytics, advertising, or tracking, and its full source is open on GitHub.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Email <a href="mailto:support@dragonapp.com">support@dragonapp.com</a>.</p>
+
+    <h2>Changes</h2>
+    <p>Any updates to this policy will be posted on this page with a new date above.</p>
+  </main>
+
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand">
+        <span class="glyph">D</span><span>Dragon App</span>
+      </div>
+      <div class="foot-links">
+        <a href="/">All apps</a>
+        <a href="/support.html">Support</a>
+        <a href="https://github.com/teddychan">GitHub</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Native Mac apps, rebuilt and open source.</div>
+  </footer>
+
+{{ CONSENT_BANNER }}
+</body>
+</html>
