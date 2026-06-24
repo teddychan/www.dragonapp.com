@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  </script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+  <title>Ice — Mac向けメニューバーマネージャー、macOS 26 &amp; 27向けに再構築</title>
+  <meta name="description" content="Iceは、Mac向けの無料・オープンソースのメニューバーマネージャーです — メニューバーの項目を隠して整理し、必要なときに表示できます。macOS 26および27に対応するよう再構築。GitHubまたはHomebrewで無料ダウンロード。">
+  <link rel="canonical" href="https://www.dragonapp.com/ja/ice-2/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+  <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/ice-2/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/ice-2/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/ice-2/">
+  <link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/ice-2/">
+  <link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/ice-2/">
+  <link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/ice-2/">
+  <link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/ice-2/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/ice-2/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://www.dragonapp.com/ja/ice-2/">
+  <meta property="og:title" content="Ice — Mac向けメニューバーマネージャー、macOS 26 &amp; 27向けに再構築">
+  <meta property="og:description" content="Mac向けの無料・オープンソースのメニューバーマネージャー — メニューバーの項目を隠して整理し、必要なときに表示できます。macOS 26および27向けに再構築。">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ice — Mac向けメニューバーマネージャー、macOS 26 &amp; 27向けに再構築">
+  <meta name="twitter:description" content="Mac向けの無料・オープンソースのメニューバーマネージャー — メニューバーの項目を隠して整理し、必要なときに表示できます。macOS 26および27向けに再構築。">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css?v=7c54fc78">
+  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Ice",
+        "description": "Mac向けの無料・オープンソースのメニューバーマネージャーです。メニューバーの項目を隠して整理し、クリックやホットキーで必要なときに表示できます。macOS 26および27に対応するよう再構築されました。",
+        "url": "https://www.dragonapp.com/ja/ice-2/",
+        "image": "https://www.dragonapp.com/icon-512.png",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 26",
+        "inLanguage": "ja",
+        "downloadUrl": "https://github.com/teddychan/ice-2/releases/latest",
+        "softwareLicense": "https://github.com/teddychan/ice-2/blob/main/LICENSE",
+        "offers": {
+          "@type": "Offer",
+          "name": "GitHub release — free & open source",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://github.com/teddychan/ice-2/releases/latest"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dragon App",
+          "url": "https://www.dragonapp.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Dragon App", "item": "https://www.dragonapp.com/ja/" },
+          { "@type": "ListItem", "position": 2, "name": "Ice", "item": "https://www.dragonapp.com/ja/ice-2/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Iceは何ができますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "IceはMac向けのメニューバーマネージャーです。必要のないメニューバーの項目を隠してメニューバーをすっきりと保ち、クリック・ホットキー・カーソルを重ねることで必要なときに呼び出せます。隠した項目を別の Ice Bar に移動したり、項目を並べ替えたり、間隔を調整したり、メニューバーの外観をカスタマイズしたりできます。" }
+          },
+          {
+            "@type": "Question",
+            "name": "Iceはどうやってインストールしますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "最新のGitHubリリースからアプリをダウンロードしてアプリケーションフォルダにドラッグするか、Homebrewでインストールします：brew install --cask teddychan/tap/ice-2。起動すると、Iceがメニューバーに常駐します。" }
+          },
+          {
+            "@type": "Question",
+            "name": "Iceの動作に必要なものは？",
+            "acceptedAnswer": { "@type": "Answer", "text": "macOS 26以降が動作するMacです。このIceの再構築版は、macOS 26および27で動作するよう更新されています。" }
+          },
+          {
+            "@type": "Question",
+            "name": "これはオリジナルのIceですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "これは、Jordan Bairdが当初制作したメニューバーマネージャー Ice の独立したオープンソースの再構築版で、モダンなmacOSに対応するよう受け継いだものです。GNU General Public License v3.0 のもとで公開されています。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-ice">
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <a href="../">すべてのアプリ</a>
+        <a href="#features">機能</a>
+        <a href="#how">使い方</a>
+        <a href="#download">ダウンロード</a>
+        <a class="nav-cta" href="#download">ダウンロード</a>
+        <details class="lang-switch">
+          <summary aria-label="言語"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>日本語</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/ice-2/" hreflang="en-US" data-setlang="en-US">English</a>
+            <a href="https://www.dragonapp.com/zh-Hans/ice-2/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
+            <a href="https://www.dragonapp.com/zh-Hant/ice-2/" hreflang="zh-Hant" data-setlang="zh-Hant">繁體中文</a>
+            <a href="https://www.dragonapp.com/ja/ice-2/" hreflang="ja" data-setlang="ja" class="active" aria-current="true">日本語</a>
+            <a href="https://www.dragonapp.com/ko/ice-2/" hreflang="ko" data-setlang="ko">한국어</a>
+            <a href="https://www.dragonapp.com/es/ice-2/" hreflang="es" data-setlang="es">Español</a>
+            <a href="https://www.dragonapp.com/fr/ice-2/" hreflang="fr" data-setlang="fr">Français</a>
+          </div>
+        </details>
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="appicon appicon-lg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><path d="m4.9 4.9 14.2 14.2"/><path d="m19.1 4.9-14.2 14.2"/><path d="M12 5.5 9.8 7.7M12 5.5l2.2 2.2M12 18.5l-2.2-2.2M12 18.5l2.2-2.2"/><path d="M5.5 12 7.7 9.8M5.5 12l2.2 2.2M18.5 12l-2.2-2.2M18.5 12l-2.2 2.2"/></svg>
+        </span>
+      </div>
+      <p><span class="eyebrow">macOS向けメニューバーマネージャー</span></p>
+      <h1>メニューバーを思いのままに — モダンなmacOSで復活</h1>
+      <p class="sub">Iceは必要のないメニューバーの項目を隠し、欲しいときに呼び出し、バーを自分好みにレイアウトできます。忠実なオープンソースの再構築版が、macOS 26と27で動作します。</p>
+      <div class="cta-row">
+        <a class="btn btn-github" href="https://github.com/teddychan/ice-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          GitHubで無料ダウンロード
+        </a>
+        <a class="btn btn-primary" href="#download">インストール方法を見る</a>
+      </div>
+      <p class="req">macOS 26以降が必要 · ユニバーサル · オープンソース (GPLv3)</p>
+    </div>
+  </header>
+
+  <!-- PRODUCT SHOT -->
+  <div class="container shot-wrap">
+    <div class="window" role="img" aria-label="Iceで管理されたMacのメニューバー：複数のステータスアイコンが左側の仕切りの後ろに隠されており、時計・バッテリー・Wi-Fi・コントロールセンターは右側に表示されたままです。">
+      <div class="titlebar">
+        <span class="dot" style="background:#e06a60"></span>
+        <span class="dot" style="background:#e6b341"></span>
+        <span class="dot" style="background:#5fc375"></span>
+        <span class="label">メニューバー · Ice</span>
+      </div>
+      <div class="menu-head">隠した項目は仕切りの左側にあります — シェブロンをクリックして表示</div>
+      <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; color:var(--muted); font-size:0.95rem; flex-wrap:nowrap; overflow:hidden;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:26px; height:22px; border-radius:6px; background:var(--accent-tint); color:var(--accent-deep);">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        </span>
+        <span style="opacity:0.35; letter-spacing:2px;">⌥ ⇧ ◔ ⤓</span>
+        <span style="flex:1; min-width:8px; border-left:1px dashed var(--border); height:18px;"></span>
+        <span title="Wi-Fi">📶</span>
+        <span title="Battery">🔋</span>
+        <span title="Control Center">⚙️</span>
+        <span class="mono" style="color:var(--fg);">9:41</span>
+      </div>
+      <div class="menu-head" style="border-top:1px solid var(--border);border-bottom:none;">クリックで隠した項目を表示 · ⌘ドラッグで並べ替え · ホットキーで表示・非表示を切り替え</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="head">
+        <h2>落ち着いたメニューバーを、思いのままに</h2>
+        <p>メニューバーを整理し、並べ替え、表示するのに必要なものすべて — そして余計なものは一切なし。</p>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="m4 4 16 16"/></svg></div>
+          <h3>メニューバーの項目を隠す</h3>
+          <p>めったに使わないアイコンを仕切りの後ろにしまい、メニューバーをすっきりと集中できる状態に保ちます。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="6" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/></svg></div>
+          <h3>The Ice Bar</h3>
+          <p>隠した項目を、呼び出したときだけ現れる別のバーに移動 — 散らからず、何も失われません。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>必要なときに表示</h3>
+          <p>隠した項目を、クリック・グローバルホットキー・端へのカーソル重ねで表示 — お好みの方法でどうぞ。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+          <h3>並べ替え &amp; 間隔調整</h3>
+          <p>項目を並べ替え、項目どうしの間隔を調整して、バーをまさに思い通りの見た目にできます。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h.01M11 12h4"/></svg></div>
+          <h3>カスタムホットキー &amp; 外観</h3>
+          <p>表示・非表示を切り替えるショートカットを割り当て、メニューバーの色合い・影・境界線をお好みに調整できます。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+          <h3>無料 &amp; オープンソース</h3>
+          <p>全ソースコードはGPLv3のもとGitHubで公開 — 自由に確認・ビルドでき、信頼できます。広告もトラッキングもありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>3ステップですっきり完了</h2>
+        <p>Iceはメニューバーに常駐し、あなたの邪魔をしません。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>インストール &amp; 起動</h3>
+          <p>GitHubまたはHomebrewからIceを入手して開くと、静かにメニューバーに収まります。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>隠す項目を選ぶ</h3>
+          <p>⌘ドラッグで仕切りを動かし、その左側の項目を、必要になるまで隠しておきます。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>いつでも表示</h3>
+          <p>Iceのアイコンをクリックするかホットキーを押してすべて表示し、その後はまた自動的に隠します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>Iceを入手する2つの方法</h2>
+        <p>同じ無料・オープンソースのアプリ。働き方に合うものを選んでください。</p>
+      </div>
+      <div class="plans">
+        <div class="plan featured">
+          <span class="badge">最も簡単 · 無料</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            GitHubリリース
+          </h3>
+          <p class="price"><strong>ずっと無料</strong> · GPLv3ライセンス</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg><code>.app</code>を直接ダウンロード、アカウント不要</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>内蔵の自動アップデート</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>全ソースをGitHubで公開 — 自分で確認・ビルドできます</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>macOS 26 &amp; 27で動作</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/ice-2/releases/latest">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            最新リリースを入手
+          </a>
+        </div>
+
+        <div class="plan">
+          <span class="badge">ターミナル · ワンコマンド</span>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3"/><path d="M13 15h5"/></svg>
+            Homebrew
+          </h3>
+          <p class="price">コマンドラインからインストール &amp; アップデート</p>
+          <div class="cmd">
+            <code>brew install --cask teddychan/tap/ice-2</code>
+            <button type="button" class="cmd-copy" data-copied="コピーしました">コピー</button>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>同じ無料・オープンソースのビルド</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg><code>brew upgrade --cask</code>でいつでもアップデート</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg><code>brew uninstall --cask ice-2</code>で削除</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/homebrew-tap">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            tapを見る
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit">
+    <div class="container">
+      <p class="kicker">オマージュとして</p>
+      <p class="body">Iceは、<strong>Jordan Baird</strong>が当初制作したメニューバーマネージャー<strong><a href="https://github.com/jordanbaird/Ice">Ice</a></strong>の独立したオープンソースの再構築版です。このフォークは、それをモダンなmacOSへと受け継ぎます。<a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">GNU General Public License v3.0</a>のもとで公開されています。</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">すべてのアプリ</a>
+        <a href="../clipmenu/">ClipMenu 2</a>
+        <a href="../keykey/">KeyKey</a>
+        <a href="../support.html">サポート</a>
+        <a href="https://github.com/teddychan/ice-2">GitHub</a>
+        <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">ライセンス (GPLv3)</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Iceは<a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">GPLv3ライセンス</a>のもとでオープンソースです。オリジナルの<a href="https://github.com/jordanbaird/Ice">Ice</a> © Jordan Baird。</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".cmd-copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.parentElement.querySelector("code");
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+          var label = btn.textContent;
+          btn.textContent = btn.getAttribute("data-copied") || "Copied";
+          btn.classList.add("copied");
+          setTimeout(function () { btn.textContent = label; btn.classList.remove("copied"); }, 1600);
+        });
+      });
+    });
+  </script>
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">Cookie を使用してトラフィックを分析し、Dragon App を改善します。分析および広告用 Cookie の使用を許可または拒否できます。詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">すべて拒否</button>
+        <button type="button" class="consent-btn consent-accept">すべて許可</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

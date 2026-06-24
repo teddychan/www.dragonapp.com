@@ -45,7 +45,7 @@
   <meta name="twitter:description" content="名作Yahoo! KeyKeyのCangjie (倉頡) &amp; Simplex (速成) 入力メソッドをMac向けにオープンソースで再構築 — ネイティブ・高速・無料。">
   <meta name="twitter:image" content="https://www.dragonapp.com/keykey/appicon.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css?v=66b0cadb">
+  <link rel="stylesheet" href="/shared/dragon.css?v=7c54fc78">
   <script src="/shared/i18n.js?v=bf03b684" defer></script>
 
   <script type="application/ld+json">
@@ -322,6 +322,28 @@
         </div>
 
         <div class="plan">
+          <span class="badge">ターミナル · ワンコマンド</span>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3"/><path d="M13 15h5"/></svg>
+            Homebrew
+          </h3>
+          <p class="price">コマンドラインからインストール &amp; アップデート</p>
+          <div class="cmd">
+            <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>
+            <button type="button" class="cmd-copy" data-copied="コピーしました">コピー</button>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>GitHubリリースと同じ無料・オープンソースのビルド</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg><code>brew upgrade --cask</code>でいつでもアップデート</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>その後ログアウトして再ログインすると入力メソッドが読み込まれます</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/homebrew-tap">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            tapを見る
+          </a>
+        </div>
+
+        <div class="plan">
           <span class="badge">近日公開</span>
           <h3>
             <svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
@@ -365,6 +387,21 @@
     </div>
     <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · KeyKeyは<a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">MITライセンス</a>のもとでオープンソースです。</div>
   </footer>
+
+  <script>
+    document.querySelectorAll(".cmd-copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.parentElement.querySelector("code");
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+          var label = btn.textContent;
+          btn.textContent = btn.getAttribute("data-copied") || "Copied";
+          btn.classList.add("copied");
+          setTimeout(function () { btn.textContent = label; btn.classList.remove("copied"); }, 1600);
+        });
+      });
+    });
+  </script>
 
   <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
     <div class="consent-inner">
