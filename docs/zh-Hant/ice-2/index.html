@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  </script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+  <title>Ice — Mac 選單列管理工具，為 macOS 26 及 27 重新打造</title>
+  <meta name="description" content="Ice 是一款免費、開源的 Mac 選單列管理工具 — 隱藏並整理選單列項目，再按需顯示。重新打造以支援 macOS 26 與 27。可在 GitHub 或以 Homebrew 免費下載。">
+  <link rel="canonical" href="https://www.dragonapp.com/zh-Hant/ice-2/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+  <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/ice-2/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/ice-2/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/ice-2/">
+  <link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/ice-2/">
+  <link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/ice-2/">
+  <link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/ice-2/">
+  <link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/ice-2/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/ice-2/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="zh_HK">
+  <meta property="og:url" content="https://www.dragonapp.com/zh-Hant/ice-2/">
+  <meta property="og:title" content="Ice — Mac 選單列管理工具，為 macOS 26 及 27 重新打造">
+  <meta property="og:description" content="一款免費、開源的 Mac 選單列管理工具 — 隱藏並整理選單列項目，再按需顯示。為 macOS 26 與 27 重新打造。">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ice — Mac 選單列管理工具，為 macOS 26 及 27 重新打造">
+  <meta name="twitter:description" content="一款免費、開源的 Mac 選單列管理工具 — 隱藏並整理選單列項目，再按需顯示。為 macOS 26 與 27 重新打造。">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css?v=7c54fc78">
+  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Ice",
+        "description": "一款免費、開源的 Mac 選單列管理工具。隱藏並整理選單列裡的項目，再以點按或快速鍵按需顯示。重新打造以支援 macOS 26 與 27。",
+        "url": "https://www.dragonapp.com/ice-2/",
+        "image": "https://www.dragonapp.com/icon-512.png",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 26",
+        "inLanguage": "zh-Hant",
+        "downloadUrl": "https://github.com/teddychan/ice-2/releases/latest",
+        "softwareLicense": "https://github.com/teddychan/ice-2/blob/main/LICENSE",
+        "offers": {
+          "@type": "Offer",
+          "name": "GitHub release — free & open source",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://github.com/teddychan/ice-2/releases/latest"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dragon App",
+          "url": "https://www.dragonapp.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Dragon App", "item": "https://www.dragonapp.com/zh-Hant/" },
+          { "@type": "ListItem", "position": 2, "name": "Ice", "item": "https://www.dragonapp.com/zh-Hant/ice-2/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ice 有甚麼用途？",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ice 是一款 Mac 選單列管理工具。它把你不需要的選單列項目隱藏起來，讓你的選單列保持整潔，並按需把它們帶回來 — 透過點按、快速鍵或滑鼠懸停。你可以把隱藏的項目移到獨立的 Ice Bar、重新排序項目、控制間距，並自訂選單列的外觀。" }
+          },
+          {
+            "@type": "Question",
+            "name": "如何安裝 Ice？",
+            "acceptedAnswer": { "@type": "Answer", "text": "從最新的 GitHub 發佈頁下載應用程式並拖到「應用程式」資料夾，或以 Homebrew 安裝：brew install --cask teddychan/tap/ice-2。開啟後，Ice 便會駐留在你的選單列。" }
+          },
+          {
+            "@type": "Question",
+            "name": "執行 Ice 需要甚麼？",
+            "acceptedAnswer": { "@type": "Answer", "text": "一部執行 macOS 26 或以上的 Mac。這個重新打造的 Ice 已更新，可在 macOS 26 與 27 上運行。" }
+          },
+          {
+            "@type": "Question",
+            "name": "這是原版 Ice 嗎？",
+            "acceptedAnswer": { "@type": "Answer", "text": "這是 Ice 的獨立開源重製版 — Ice 原本由 Jordan Baird 打造的選單列管理工具 — 將它延續以支援現代 macOS。它以 GNU General Public License v3.0 發佈。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-ice">
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <a href="../">所有應用程式</a>
+        <a href="#features">功能特色</a>
+        <a href="#how">運作方式</a>
+        <a href="#download">下載</a>
+        <a class="nav-cta" href="#download">下載</a>
+        <details class="lang-switch">
+          <summary aria-label="語言"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>繁體中文</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/ice-2/" hreflang="en-US" data-setlang="en-US">English</a>
+            <a href="https://www.dragonapp.com/zh-Hans/ice-2/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
+            <a href="https://www.dragonapp.com/zh-Hant/ice-2/" hreflang="zh-Hant" data-setlang="zh-Hant" class="active" aria-current="true">繁體中文</a>
+            <a href="https://www.dragonapp.com/ja/ice-2/" hreflang="ja" data-setlang="ja">日本語</a>
+            <a href="https://www.dragonapp.com/ko/ice-2/" hreflang="ko" data-setlang="ko">한국어</a>
+            <a href="https://www.dragonapp.com/es/ice-2/" hreflang="es" data-setlang="es">Español</a>
+            <a href="https://www.dragonapp.com/fr/ice-2/" hreflang="fr" data-setlang="fr">Français</a>
+          </div>
+        </details>
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="appicon appicon-lg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><path d="m4.9 4.9 14.2 14.2"/><path d="m19.1 4.9-14.2 14.2"/><path d="M12 5.5 9.8 7.7M12 5.5l2.2 2.2M12 18.5l-2.2-2.2M12 18.5l2.2-2.2"/><path d="M5.5 12 7.7 9.8M5.5 12l2.2 2.2M18.5 12l-2.2-2.2M18.5 12l-2.2 2.2"/></svg>
+        </span>
+      </div>
+      <p><span class="eyebrow">macOS 的選單列管理工具</span></p>
+      <h1>馴服你的選單列 — 重臨現代 macOS</h1>
+      <p class="sub">Ice 隱藏你不需要的選單列項目，在你想要時把它們帶回來，並讓你按自己的方式佈置選單列。一款忠於原作的開源重製版 — 現已可在 macOS 26 與 27 上運行。</p>
+      <div class="cta-row">
+        <a class="btn btn-github" href="https://github.com/teddychan/ice-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          在 GitHub 免費下載
+        </a>
+        <a class="btn btn-primary" href="#download">查看安裝選項</a>
+      </div>
+      <p class="req">需要 macOS 26 或以上 · 通用版 · 開源（GPLv3）</p>
+    </div>
+  </header>
+
+  <!-- PRODUCT SHOT -->
+  <div class="container shot-wrap">
+    <div class="window" role="img" aria-label="由 Ice 管理的 Mac 選單列：數個狀態圖示收進左邊的分隔線後並被隱藏，而時鐘、電池、Wi-Fi 及控制中心則保留在右邊可見。">
+      <div class="titlebar">
+        <span class="dot" style="background:#e06a60"></span>
+        <span class="dot" style="background:#e6b341"></span>
+        <span class="dot" style="background:#5fc375"></span>
+        <span class="label">選單列 · Ice</span>
+      </div>
+      <div class="menu-head">隱藏的項目位於分隔線左邊 — 點按箭咀即可顯示</div>
+      <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; color:var(--muted); font-size:0.95rem; flex-wrap:nowrap; overflow:hidden;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:26px; height:22px; border-radius:6px; background:var(--accent-tint); color:var(--accent-deep);">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        </span>
+        <span style="opacity:0.35; letter-spacing:2px;">⌥ ⇧ ◔ ⤓</span>
+        <span style="flex:1; min-width:8px; border-left:1px dashed var(--border); height:18px;"></span>
+        <span title="Wi-Fi">📶</span>
+        <span title="Battery">🔋</span>
+        <span title="Control Center">⚙️</span>
+        <span class="mono" style="color:var(--fg);">9:41</span>
+      </div>
+      <div class="menu-head" style="border-top:1px solid var(--border);border-bottom:none;">點按顯示隱藏項目 · ⌘ 拖曳重新排序 · 設定快速鍵切換</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="head">
+        <h2>更寧靜的選單列，按你的方式</h2>
+        <p>整理、佈置與顯示選單列所需的一切 — 多餘的一律欠奉。</p>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="m4 4 16 16"/></svg></div>
+          <h3>隱藏選單列項目</h3>
+          <p>把你少用的圖示收進分隔線後，讓你的選單列保持整潔、專注。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="6" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/></svg></div>
+          <h3>Ice Bar</h3>
+          <p>把隱藏的項目移到一條獨立的列，只在你呼叫時才出現 — 沒有雜亂，一個也不遺失。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>按需顯示</h3>
+          <p>以點按、全域快速鍵或懸停邊緣顯示隱藏的項目 — 任由你選擇。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+          <h3>排列 &amp; 間距</h3>
+          <p>重新排序項目並控制它們之間的間距，讓選單列看起來正合你意。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h.01M11 12h4"/></svg></div>
+          <h3>自訂快速鍵 &amp; 外觀</h3>
+          <p>綁定快速鍵以切換顯示，並按喜好調校選單列的色調、陰影與邊框。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+          <h3>免費 &amp; 開源</h3>
+          <p>完整原始碼以 GPLv3 在 GitHub 上公開 — 任你查閱、建置、信賴。沒有廣告，沒有追蹤。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>三步即可上手、整潔</h2>
+        <p>Ice 駐留在你的選單列，從不阻礙你。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>安裝 &amp; 開啟</h3>
+          <p>從 GitHub 或 Homebrew 取得 Ice 並開啟 — 它會靜靜駐留在你的選單列。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>選擇要隱藏的項目</h3>
+          <p>以 ⌘ 拖曳分隔線，讓左邊的項目保持隱藏，直至你需要它們。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>隨時顯示</h3>
+          <p>點按 Ice 圖示或按下你的快速鍵以顯示一切，然後讓它再次自動隱藏。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>兩種方式取得 Ice</h2>
+        <p>同一個免費、開源的應用程式。揀選最切合你工作方式的一種。</p>
+      </div>
+      <div class="plans">
+        <div class="plan featured">
+          <span class="badge">最簡單 · 免費</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            GitHub 發佈版
+          </h3>
+          <p class="price"><strong>永久免費</strong> · 採用 GPLv3 授權</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>直接下載 <code>.app</code>，毋須帳戶</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>內建自動更新</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>完整原始碼在 GitHub — 可自行查閱及建置</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>可在 macOS 26 &amp; 27 上運行</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/ice-2/releases/latest">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            取得最新發佈版
+          </a>
+        </div>
+
+        <div class="plan">
+          <span class="badge">終端機 · 一行指令</span>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3"/><path d="M13 15h5"/></svg>
+            Homebrew
+          </h3>
+          <p class="price">從命令列安裝及更新</p>
+          <div class="cmd">
+            <code>brew install --cask teddychan/tap/ice-2</code>
+            <button type="button" class="cmd-copy" data-copied="已複製">複製</button>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>同一個免費、開源的版本</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>隨時以 <code>brew upgrade --cask</code> 更新</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>以 <code>brew uninstall --cask ice-2</code> 移除</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/homebrew-tap">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            查看 tap
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit">
+    <div class="container">
+      <p class="kicker">致敬之作</p>
+      <p class="body">Ice 是 <strong><a href="https://github.com/jordanbaird/Ice">Ice</a></strong> 的獨立開源重製版 — Ice 原本由 <strong>Jordan Baird</strong> 打造的選單列管理工具。這個分支把它延續以支援現代 macOS。以 <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">GNU General Public License v3.0</a> 發佈。</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">所有應用程式</a>
+        <a href="../clipmenu/">ClipMenu 2</a>
+        <a href="../keykey/">KeyKey</a>
+        <a href="../support.html">支援</a>
+        <a href="https://github.com/teddychan/ice-2">GitHub</a>
+        <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">授權條款 (GPLv3)</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Ice 以 <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">GPLv3 授權</a> 開源。原版 <a href="https://github.com/jordanbaird/Ice">Ice</a> © Jordan Baird。</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".cmd-copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.parentElement.querySelector("code");
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+          var label = btn.textContent;
+          btn.textContent = btn.getAttribute("data-copied") || "Copied";
+          btn.classList.add("copied");
+          setTimeout(function () { btn.textContent = label; btn.classList.remove("copied"); }, 1600);
+        });
+      });
+    });
+  </script>
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">我們使用 Cookie 分析流量並改善 Dragon App。您可以接受或拒絕分析與廣告 Cookie。詳見我們的<a href="/privacy.html">私隱政策</a>。</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">全部拒絕</button>
+        <button type="button" class="consent-btn consent-accept">全部接受</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

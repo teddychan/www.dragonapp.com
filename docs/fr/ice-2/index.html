@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  </script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+  <title>Ice — Gestionnaire de barre des menus pour Mac, reconstruit pour macOS 26 &amp; 27</title>
+  <meta name="description" content="Ice est un gestionnaire de barre des menus gratuit et open source pour Mac — masquez et organisez les éléments de la barre des menus, puis affichez-les à la demande. Reconstruit pour prendre en charge macOS 26 et 27. Téléchargez-le gratuitement sur GitHub ou avec Homebrew.">
+  <link rel="canonical" href="https://www.dragonapp.com/fr/ice-2/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+  <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/ice-2/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/ice-2/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/ice-2/">
+  <link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/ice-2/">
+  <link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/ice-2/">
+  <link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/ice-2/">
+  <link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/ice-2/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/ice-2/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://www.dragonapp.com/fr/ice-2/">
+  <meta property="og:title" content="Ice — Gestionnaire de barre des menus pour Mac, reconstruit pour macOS 26 &amp; 27">
+  <meta property="og:description" content="Un gestionnaire de barre des menus gratuit et open source pour Mac — masquez et organisez les éléments de la barre des menus, puis affichez-les à la demande. Reconstruit pour macOS 26 et 27.">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ice — Gestionnaire de barre des menus pour Mac, reconstruit pour macOS 26 &amp; 27">
+  <meta name="twitter:description" content="Un gestionnaire de barre des menus gratuit et open source pour Mac — masquez et organisez les éléments de la barre des menus, puis affichez-les à la demande. Reconstruit pour macOS 26 et 27.">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css?v=7c54fc78">
+  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Ice",
+        "description": "Un gestionnaire de barre des menus gratuit et open source pour Mac. Masquez et organisez les éléments de votre barre des menus, puis révélez-les à la demande d'un clic ou d'un raccourci clavier. Reconstruit pour prendre en charge macOS 26 et 27.",
+        "url": "https://www.dragonapp.com/fr/ice-2/",
+        "image": "https://www.dragonapp.com/icon-512.png",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 26",
+        "inLanguage": "fr",
+        "downloadUrl": "https://github.com/teddychan/ice-2/releases/latest",
+        "softwareLicense": "https://github.com/teddychan/ice-2/blob/main/LICENSE",
+        "offers": {
+          "@type": "Offer",
+          "name": "GitHub release — free & open source",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://github.com/teddychan/ice-2/releases/latest"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dragon App",
+          "url": "https://www.dragonapp.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Dragon App", "item": "https://www.dragonapp.com/fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Ice", "item": "https://www.dragonapp.com/fr/ice-2/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Que fait Ice ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ice est un gestionnaire de barre des menus pour Mac. Il masque les éléments de la barre des menus dont vous n'avez pas besoin pour garder votre barre des menus propre, et les fait réapparaître à la demande — d'un clic, d'un raccourci clavier ou en survolant. Vous pouvez déplacer les éléments masqués dans une barre Ice distincte, réorganiser les éléments, contrôler l'espacement et personnaliser l'apparence de la barre des menus." }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment installer Ice ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Téléchargez l'application depuis la dernière version GitHub et glissez-la dans Applications, ou installez-la avec Homebrew : brew install --cask teddychan/tap/ice-2. Lancez-la et Ice s'installe dans votre barre des menus." }
+          },
+          {
+            "@type": "Question",
+            "name": "De quoi ai-je besoin pour utiliser Ice ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Un Mac sous macOS 26 ou une version ultérieure. Cette reconstruction d'Ice est mise à jour pour fonctionner sur macOS 26 et 27." }
+          },
+          {
+            "@type": "Question",
+            "name": "S'agit-il de l'Ice d'origine ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Il s'agit d'une reconstruction indépendante et open source d'Ice — le gestionnaire de barre des menus créé à l'origine par Jordan Baird — perpétuée pour prendre en charge macOS moderne. Elle est publiée sous la licence publique générale GNU v3.0." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-ice">
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <a href="../">Toutes les applications</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#how">Comment ça marche</a>
+        <a href="#download">Télécharger</a>
+        <a class="nav-cta" href="#download">Télécharger</a>
+        <details class="lang-switch">
+          <summary aria-label="Langue"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>Français</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/ice-2/" hreflang="en-US" data-setlang="en-US">English</a>
+            <a href="https://www.dragonapp.com/zh-Hans/ice-2/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
+            <a href="https://www.dragonapp.com/zh-Hant/ice-2/" hreflang="zh-Hant" data-setlang="zh-Hant">繁體中文</a>
+            <a href="https://www.dragonapp.com/ja/ice-2/" hreflang="ja" data-setlang="ja">日本語</a>
+            <a href="https://www.dragonapp.com/ko/ice-2/" hreflang="ko" data-setlang="ko">한국어</a>
+            <a href="https://www.dragonapp.com/es/ice-2/" hreflang="es" data-setlang="es">Español</a>
+            <a href="https://www.dragonapp.com/fr/ice-2/" hreflang="fr" data-setlang="fr" class="active" aria-current="true">Français</a>
+          </div>
+        </details>
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="appicon appicon-lg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><path d="m4.9 4.9 14.2 14.2"/><path d="m19.1 4.9-14.2 14.2"/><path d="M12 5.5 9.8 7.7M12 5.5l2.2 2.2M12 18.5l-2.2-2.2M12 18.5l2.2-2.2"/><path d="M5.5 12 7.7 9.8M5.5 12l2.2 2.2M18.5 12l-2.2-2.2M18.5 12l-2.2 2.2"/></svg>
+        </span>
+      </div>
+      <p><span class="eyebrow">Le gestionnaire de barre des menus pour macOS</span></p>
+      <h1>Domptez votre barre des menus — de retour sur macOS moderne</h1>
+      <p class="sub">Ice masque les éléments de la barre des menus dont vous n'avez pas besoin, les fait réapparaître quand vous le souhaitez et vous laisse agencer la barre à votre façon. Une reconstruction fidèle et open source — qui fonctionne désormais sur macOS 26 et 27.</p>
+      <div class="cta-row">
+        <a class="btn btn-github" href="https://github.com/teddychan/ice-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          Télécharger gratuitement sur GitHub
+        </a>
+        <a class="btn btn-primary" href="#download">Voir les options d'installation</a>
+      </div>
+      <p class="req">Nécessite macOS 26 ou une version ultérieure · Universel · Open source (GPLv3)</p>
+    </div>
+  </header>
+
+  <!-- PRODUCT SHOT -->
+  <div class="container shot-wrap">
+    <div class="window" role="img" aria-label="Une barre des menus du Mac gérée par Ice : plusieurs icônes d'état sont rangées derrière un séparateur à gauche et masquées, tandis que l'horloge, la batterie, le Wi-Fi et le Centre de contrôle restent visibles à droite.">
+      <div class="titlebar">
+        <span class="dot" style="background:#e06a60"></span>
+        <span class="dot" style="background:#e6b341"></span>
+        <span class="dot" style="background:#5fc375"></span>
+        <span class="label">Barre des menus · Ice</span>
+      </div>
+      <div class="menu-head">Les éléments masqués se trouvent à gauche du séparateur — cliquez sur le chevron pour les afficher</div>
+      <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; color:var(--muted); font-size:0.95rem; flex-wrap:nowrap; overflow:hidden;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:26px; height:22px; border-radius:6px; background:var(--accent-tint); color:var(--accent-deep);">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        </span>
+        <span style="opacity:0.35; letter-spacing:2px;">⌥ ⇧ ◔ ⤓</span>
+        <span style="flex:1; min-width:8px; border-left:1px dashed var(--border); height:18px;"></span>
+        <span title="Wi-Fi">📶</span>
+        <span title="Batterie">🔋</span>
+        <span title="Centre de contrôle">⚙️</span>
+        <span class="mono" style="color:var(--fg);">9:41</span>
+      </div>
+      <div class="menu-head" style="border-top:1px solid var(--border);border-bottom:none;">Cliquez pour afficher les éléments masqués · ⌘-glisser pour réorganiser · définissez un raccourci pour basculer</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="head">
+        <h2>Une barre des menus plus apaisée, comme vous la voulez</h2>
+        <p>Tout ce qu'il vous faut pour ranger, organiser et afficher votre barre des menus — et rien de superflu.</p>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="m4 4 16 16"/></svg></div>
+          <h3>Masquer les éléments de la barre des menus</h3>
+          <p>Rangez les icônes que vous utilisez rarement derrière un séparateur, pour que votre barre des menus reste propre et épurée.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="6" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/></svg></div>
+          <h3>La barre Ice</h3>
+          <p>Déplacez les éléments masqués dans une barre distincte qui n'apparaît que lorsque vous l'appelez — sans encombrement, rien de perdu.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Afficher à la demande</h3>
+          <p>Révélez les éléments masqués d'un clic, d'un raccourci global ou en survolant le bord — comme vous préférez.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+          <h3>Organiser &amp; espacer</h3>
+          <p>Réorganisez les éléments et contrôlez l'espacement entre eux, pour que la barre ait exactement l'aspect que vous aimez.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h.01M11 12h4"/></svg></div>
+          <h3>Raccourcis &amp; apparence personnalisés</h3>
+          <p>Associez des raccourcis pour basculer la visibilité, et ajustez la teinte, l'ombre et la bordure de la barre des menus à votre goût.</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+          <h3>Gratuit &amp; open source</h3>
+          <p>Le code source complet est sur GitHub sous la GPLv3 — libre d'être inspecté, compilé et digne de confiance. Pas de publicité, pas de suivi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>Rangé en trois étapes</h2>
+        <p>Ice réside dans votre barre des menus et ne vous gêne pas.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Installer &amp; lancer</h3>
+          <p>Récupérez Ice depuis GitHub ou Homebrew et ouvrez-le — il s'installe discrètement dans votre barre des menus.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Choisir ce qu'il faut masquer</h3>
+          <p>⌘-glissez le séparateur pour que les éléments situés à sa gauche restent masqués jusqu'à ce que vous en ayez besoin.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Afficher à tout moment</h3>
+          <p>Cliquez sur l'icône Ice ou appuyez sur votre raccourci pour tout afficher, puis laissez-le se masquer à nouveau automatiquement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>Deux façons d'obtenir Ice</h2>
+        <p>La même application gratuite et open source. Prenez celle qui correspond à votre façon de travailler.</p>
+      </div>
+      <div class="plans">
+        <div class="plan featured">
+          <span class="badge">Le plus simple · gratuit</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            Version GitHub
+          </h3>
+          <p class="price"><strong>Gratuit pour toujours</strong> · sous licence GPLv3</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Téléchargement direct du <code>.app</code>, aucun compte nécessaire</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Mise à jour automatique intégrée</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Code source complet sur GitHub — inspectez-le et compilez-le vous-même</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Fonctionne sur macOS 26 &amp; 27</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/ice-2/releases/latest">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            Obtenir la dernière version
+          </a>
+        </div>
+
+        <div class="plan">
+          <span class="badge">Terminal · une commande</span>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3"/><path d="M13 15h5"/></svg>
+            Homebrew
+          </h3>
+          <p class="price">Installez &amp; mettez à jour depuis la ligne de commande</p>
+          <div class="cmd">
+            <code>brew install --cask teddychan/tap/ice-2</code>
+            <button type="button" class="cmd-copy" data-copied="Copié">Copier</button>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Le même build gratuit et open source</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Mettez à jour à tout moment avec <code>brew upgrade --cask</code></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Désinstallez avec <code>brew uninstall --cask ice-2</code></li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/homebrew-tap">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            Voir le tap
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit">
+    <div class="container">
+      <p class="kicker">En hommage</p>
+      <p class="body">Ice est une reconstruction indépendante et open source d'<strong><a href="https://github.com/jordanbaird/Ice">Ice</a></strong>, le gestionnaire de barre des menus créé à l'origine par <strong>Jordan Baird</strong>. Ce fork la perpétue pour prendre en charge macOS moderne. Publié sous la <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">licence publique générale GNU v3.0</a>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">Toutes les applications</a>
+        <a href="../clipmenu/">ClipMenu 2</a>
+        <a href="../keykey/">KeyKey</a>
+        <a href="../support.html">Assistance</a>
+        <a href="https://github.com/teddychan/ice-2">GitHub</a>
+        <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">Licence (GPLv3)</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Ice est open source sous la <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">licence GPLv3</a>. <a href="https://github.com/jordanbaird/Ice">Ice</a> d'origine © Jordan Baird.</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".cmd-copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.parentElement.querySelector("code");
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+          var label = btn.textContent;
+          btn.textContent = btn.getAttribute("data-copied") || "Copied";
+          btn.classList.add("copied");
+          setTimeout(function () { btn.textContent = label; btn.classList.remove("copied"); }, 1600);
+        });
+      });
+    });
+  </script>
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">Nous utilisons des cookies pour mesurer l'audience et améliorer Dragon App. Vous pouvez accepter ou refuser les cookies de mesure et de publicité. Consultez notre <a href="/privacy.html">politique de confidentialité</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">Tout refuser</button>
+        <button type="button" class="consent-btn consent-accept">Tout accepter</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
