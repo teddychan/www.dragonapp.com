@@ -4,12 +4,12 @@
         <title>ClipMenu 2</title>
         <item>
             <title>2.9.1</title>
-            <pubDate>Wed, 24 Jun 2026 10:05:36 +0900</pubDate>
+            <pubDate>Wed, 24 Jun 2026 21:25:20 +0900</pubDate>
             <sparkle:version>2.9.1</sparkle:version>
             <sparkle:shortVersionString>2.9.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/teddychan/clipmenu-2/releases/download/v2.9.1/ClipMenu-2-v2.9.1.zip" length="2191166" type="application/octet-stream" sparkle:edSignature="5BvzmfFCi2qw9YnCBxjyWX63DcjMIZLPMPk/5TTYw6PptxcOhoawh16fG7Ymj5pa6chpG1E6DKImZ8lCGb4KBw=="/>
+            <enclosure url="https://github.com/teddychan/clipmenu-2/releases/download/v2.9.1/ClipMenu-2-v2.9.1.zip" length="2191182" type="application/octet-stream" sparkle:edSignature="cO2G3VKnQ9DJYn5xB5ydVROWepw2VKqZgXTrdVYHdBiGoosb1yRxeOKAzUbRdH/7JLbQQX4O3EHJzqROxQLhBw=="/>
         </item>
     </channel>
 </rss>
