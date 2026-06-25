@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Ice 2</title>
+        <item>
+            <title>2.0.2</title>
+            <pubDate>Thu, 25 Jun 2026 22:29:51 +0900</pubDate>
+            <sparkle:version>1123</sparkle:version>
+            <sparkle:shortVersionString>2.0.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/teddychan/ice-2/releases/download/v2.0.2/Ice-2-v2.0.2.zip" length="3993419" type="application/octet-stream" sparkle:edSignature="n+lsfnozwctTT+nCMesdSXi4RnHDJOMghxQmVXfNQfOMg1TLgC989ALt67R3CC4fEZShpDYxqBwpe59Oq5blCw=="/>
+        </item>
+    </channel>
+</rss>
