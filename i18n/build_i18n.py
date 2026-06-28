@@ -220,6 +220,7 @@ def render(template, lang, page, strings, missing):
         "INLINE_I18N_JS": inline_script(os.path.join("shared", "i18n.js"), module=True),
         "CLIPMENU_CARD_ICON_SRC": data_uri("appicon-56.png"),
         "KEYKEY_CARD_ICON_SRC": data_uri(os.path.join("yahoo-keykey-2", "appicon-56.png")),
+        "APP_CARDS": render_app_cards(lang, strings),
         "CONSENT_BANNER": build_consent(common if common else en_common, en_common),
     }
 
@@ -259,6 +260,22 @@ def load_changelog(slug):
 
 def app_url(lang, slug):
     return SITE + "/" + lang_prefix(lang) + slug + "/"
+
+
+def render_app_cards(lang, strings):
+    cur = strings.get(lang, strings["en-US"])
+    cards = []
+    for app in load_apps():
+        ps = cur.get(app["slug"], strings["en-US"].get(app["slug"], {}))
+        cards.append(
+            '<a class="app-card %s" href="%s"><div class="app-head">'
+            '<span class="app-icon"><span class="glyph">%s</span></span>'
+            '<h3>%s</h3></div><p class="desc">%s</p>'
+            '<div class="app-foot"><span>macOS · Free · Open source</span>'
+            '<span class="arrow">→</span></div></a>'
+            % (app.get("theme", ""), app_url(lang, app["slug"]),
+               app["name"][:1], app["name"], ps.get("sub", "")))
+    return '<div class="apps">' + "\n".join(cards) + "</div>"
 
 
 def render_changelog_rows(slug, common):

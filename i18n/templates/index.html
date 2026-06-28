@@ -121,41 +121,7 @@
         <h2>{{ apps_h2 }}</h2>
         <p>{{ apps_sub }}</p>
       </div>
-      <div class="apps">
-
-        <a class="app-card" href="clipmenu/">
-          <div class="app-head">
-            <span class="app-icon"><img src="{{ CLIPMENU_CARD_ICON_SRC }}" alt="{{ clipmenu_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
-            <div>
-              <h3>ClipMenu 2</h3>
-              <span class="status status-available">{{ status_available }}</span>
-            </div>
-          </div>
-          <p class="desc">{{ clipmenu_desc }}</p>
-          <div class="app-foot">
-            <span>{{ clipmenu_foot }}</span>
-            <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <a class="app-card" href="keykey/">
-          <div class="app-head">
-            <span class="app-icon"><img src="{{ KEYKEY_CARD_ICON_SRC }}" alt="{{ keykey_icon_alt }}" width="56" height="56" loading="lazy" decoding="async"></span>
-            <div>
-              <h3>KeyKey</h3>
-              <span class="status status-available">{{ status_available }}</span>
-            </div>
-          </div>
-          <p class="desc">{{ keykey_desc }}</p>
-          <div class="app-foot">
-            <span>{{ keykey_foot }}</span>
-            <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <div class="app-card placeholder">{{ placeholder }}</div>
-
-      </div>
+      {{ APP_CARDS }}
     </div>
   </section>
 

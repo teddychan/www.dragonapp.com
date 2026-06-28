@@ -27,3 +27,9 @@ def test_sitemap_includes_ice_2():
     build()
     sm = open(os.path.join(ROOT, "docs", "sitemap.xml")).read()
     assert "https://www.dragonapp.com/ice-2/" in sm
+
+def test_hub_lists_all_apps():
+    build()
+    html = open(os.path.join(ROOT, "docs", "index.html")).read()
+    for slug in ["ice-2", "clipmenu-2", "yahoo-keykey-2"]:
+        assert "/%s/" % slug in html
