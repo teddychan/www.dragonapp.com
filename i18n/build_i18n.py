@@ -218,7 +218,7 @@ def render(template, lang, page, strings, missing):
         "INLINE_DRAGON_CSS": inline_style(os.path.join("shared", "dragon.css")),
         "INLINE_I18N_JS": inline_script(os.path.join("shared", "i18n.js"), module=True),
         "CLIPMENU_CARD_ICON_SRC": data_uri("appicon-56.png"),
-        "KEYKEY_CARD_ICON_SRC": data_uri(os.path.join("keykey", "appicon-56.png")),
+        "KEYKEY_CARD_ICON_SRC": data_uri(os.path.join("yahoo-keykey-2", "appicon-56.png")),
         "CONSENT_BANNER": build_consent(common if common else en_common, en_common),
     }
 

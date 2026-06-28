@@ -1,12 +1,373 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-  <meta charset="utf-8">
-  <title>Moved to Yahoo KeyKey 2</title>
-  <link rel="canonical" href="https://www.dragonapp.com/zh-Hans/yahoo-keykey-2/">
-  <meta http-equiv="refresh" content="0; url=https://www.dragonapp.com/zh-Hans/yahoo-keykey-2/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  </script>
+  <script src="/shared/consent.js" defer></script>
+  <title>KeyKey — 适用于 Mac 的 Yahoo!奇摩輸入法 倉頡（Cangjie）&amp; 速成（Simplex）</title>
+  <meta name="description" content="KeyKey 是经典 Yahoo! KeyKey（Yahoo!奇摩輸入法）倉頡（Cangjie）与速成（Simplex）输入法的开源重塑，专为 Mac 打造——原生、快速、免费。立即下载。">
+  <link rel="canonical" href="https://www.dragonapp.com/zh-Hans/keykey/">
+  <link rel="icon" href="/keykey/appicon.png">
+  <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/keykey/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/keykey/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/keykey/">
+  <link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/keykey/">
+  <link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/keykey/">
+  <link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/keykey/">
+  <link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/keykey/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/keykey/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:url" content="https://www.dragonapp.com/zh-Hans/keykey/">
+  <meta property="og:title" content="KeyKey — 适用于 Mac 的 Yahoo!奇摩輸入法 倉頡（Cangjie）&amp; 速成（Simplex）">
+  <meta property="og:description" content="经典 Yahoo! KeyKey 倉頡（Cangjie）&amp; 速成（Simplex）输入法的开源重塑，专为 Mac 打造——原生、快速、免费。">
+  <meta property="og:image" content="https://www.dragonapp.com/keykey/appicon.png">
+  <meta property="og:image:alt" content="KeyKey 应用图标">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KeyKey — 适用于 Mac 的 Yahoo!奇摩輸入法 倉頡（Cangjie）&amp; 速成（Simplex）">
+  <meta name="twitter:description" content="经典 Yahoo! KeyKey 倉頡（Cangjie）&amp; 速成（Simplex）输入法的开源重塑，专为 Mac 打造——原生、快速、免费。">
+  <meta name="twitter:image" content="https://www.dragonapp.com/keykey/appicon.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css">
+  <script src="/shared/i18n.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Yahoo KeyKey 2",
+        "alternateName": "KeyKey",
+        "description": "经典 Yahoo! KeyKey（Yahoo!奇摩輸入法）倉頡（Cangjie）与速成（Simplex）繁体中文输入法的开源重塑，专为 Mac 打造——原生、快速、免费。",
+        "url": "https://www.dragonapp.com/zh-Hans/keykey/",
+        "image": "https://www.dragonapp.com/keykey/appicon.png",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Input Method",
+        "operatingSystem": "macOS 12",
+        "processorRequirements": "Apple Silicon (arm64)",
+        "softwareVersion": "1.2.1",
+        "inLanguage": "zh-Hans",
+        "downloadUrl": "https://github.com/teddychan/yahoo-keykey-2/releases/latest",
+        "softwareLicense": "https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE",
+        "offers": {
+          "@type": "Offer",
+          "name": "GitHub release — free & open source",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://github.com/teddychan/yahoo-keykey-2/releases/latest"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dragon App",
+          "url": "https://www.dragonapp.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Dragon App", "item": "https://www.dragonapp.com/zh-Hans/" },
+          { "@type": "ListItem", "position": 2, "name": "KeyKey", "item": "https://www.dragonapp.com/zh-Hans/keykey/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "KeyKey 支持哪些输入法？",
+            "acceptedAnswer": { "@type": "Answer", "text": "KeyKey 是一款繁体中文输入法，提供两种模式：倉頡（Cangjie）与速成（Simplex，又称 簡易）。它支持以 * 进行通配符输入、按词频排序的候选字、联想字词（聯想字詞）、全角标点，以及可选的繁转简输出切换。" }
+          },
+          {
+            "@type": "Question",
+            "name": "我该如何安装 KeyKey？",
+            "acceptedAnswer": { "@type": "Answer", "text": "从 GitHub 下载已签名并公证的安装包（YahooKeyKey2.pkg），双击运行。它会安装到 ~/Library/Input Methods，无需管理员权限，然后提示你注销。重新登录后，在 系统设置 ▸ 键盘 ▸ 输入法 ▸ + ▸ 繁体中文 下添加 倉頡 和／或 速成，并用 Ctrl-Space 切换。" }
+          },
+          {
+            "@type": "Question",
+            "name": "运行 KeyKey 需要什么条件？",
+            "acceptedAnswer": { "@type": "Answer", "text": "一台搭载 Apple Silicon（arm64）、运行 macOS 12 Monterey 或更高版本的 Mac。KeyKey 已使用 Developer ID 签名并由 Apple 公证，可干净打开。" }
+          },
+          {
+            "@type": "Question",
+            "name": "这是原版的 Yahoo! KeyKey 吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "不是。KeyKey 是一款用 Swift 打造的独立开源重塑作品，向经典的 Yahoo! KeyKey（Yahoo!奇摩輸入法）致敬。它依据 MIT 许可协议发布。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <p>This page has moved to <a href="https://www.dragonapp.com/zh-Hans/yahoo-keykey-2/">https://www.dragonapp.com/zh-Hans/yahoo-keykey-2/</a>.</p>
+<body class="theme-keykey">
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <div class="nav-links">
+        <a href="../">全部应用</a>
+        <a href="#features">功能特性</a>
+        <a href="#install">安装</a>
+        <a href="#download">下载</a>
+        <a class="nav-cta" href="#download">下载</a>
+        <details class="lang-switch">
+          <summary aria-label="语言"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>简体中文</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/keykey/" hreflang="en-US" data-setlang="en-US">English</a>
+            <a href="https://www.dragonapp.com/zh-Hans/keykey/" hreflang="zh-Hans" data-setlang="zh-Hans" class="active" aria-current="true">简体中文</a>
+            <a href="https://www.dragonapp.com/zh-Hant/keykey/" hreflang="zh-Hant" data-setlang="zh-Hant">繁體中文</a>
+            <a href="https://www.dragonapp.com/ja/keykey/" hreflang="ja" data-setlang="ja">日本語</a>
+            <a href="https://www.dragonapp.com/ko/keykey/" hreflang="ko" data-setlang="ko">한국어</a>
+            <a href="https://www.dragonapp.com/es/keykey/" hreflang="es" data-setlang="es">Español</a>
+            <a href="https://www.dragonapp.com/fr/keykey/" hreflang="fr" data-setlang="fr">Français</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div style="text-align:center;">
+        <img src="/keykey/appicon.png" alt="KeyKey 应用图标" width="84" height="84" style="border-radius:18px; box-shadow: var(--shadow-sm);">
+      </div>
+      <p><span class="eyebrow">现已推出 · v1.2.1</span></p>
+      <h1>Yahoo! KeyKey，为现代 macOS 重塑</h1>
+      <p class="sub">经典 Yahoo!奇摩輸入法 <strong>倉頡（Cangjie）</strong> 与 <strong>速成（Simplex）</strong> 输入法重生——原生、快速、开源。</p>
+      <div class="cta-row">
+        <a class="btn btn-github" href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          在 GitHub 上免费下载
+        </a>
+        <span class="btn btn-disabled">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
+          App Store — 即将推出
+        </span>
+      </div>
+      <p class="req">需要 macOS 12 或更高版本 · Apple Silicon · 已签名 &amp; 公证 · 开源</p>
+    </div>
+  </header>
+
+  <!-- PRODUCT SHOT -->
+  <div class="container shot-wrap">
+    <div class="window" role="img" aria-label="KeyKey 倉頡候选窗口：输入部首 日 和 月 后，会显示一列带编号的匹配字符，其中 明 排在首位被选中。">
+      <div class="titlebar">
+        <span class="dot" style="background:#e06a60"></span>
+        <span class="dot" style="background:#e6b341"></span>
+        <span class="dot" style="background:#5fc375"></span>
+        <span class="label">倉頡 Cangjie · KeyKey</span>
+      </div>
+      <div class="menu-head">輸入 日 月 — 按编号选取候选字</div>
+      <div class="clip active"><span class="n">1</span><span class="txt">明 <span style="color:var(--muted)">míng</span></span></div>
+      <div class="clip"><span class="n">2</span><span class="txt">𣈰</span></div>
+      <div class="clip"><span class="n">3</span><span class="txt">朙</span></div>
+      <div class="clip"><span class="n">4</span><span class="txt">萌 <span style="color:var(--muted)">聯想字詞</span></span></div>
+      <div class="clip"><span class="n">5</span><span class="txt">盟 <span style="color:var(--muted)">聯想字詞</span></span></div>
+      <div class="menu-head" style="border-top:1px solid var(--border);border-bottom:none;">⌃Space 切換 · 1–9 選字 · 空白鍵翻頁</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="head">
+        <h2>重现 Yahoo! KeyKey 的输入体验</h2>
+        <p>Mac 用户念念不忘的快速、顺滑的倉頡与速成输入——用 Swift 全新打造。</p>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+              <path d="M3 9h18"></path><path d="M9 4v16"></path>
+            </svg>
+          </div>
+          <h3>倉頡 + 速成 输入</h3>
+          <p>两种经典模式——完整的倉頡（Cangjie）与速成（Simplex）——并支持通配符 <code>*</code> 匹配，让你不必记清每个部首。</p>
+        </div>
+        <div class="feature">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path>
+            </svg>
+          </div>
+          <h3>按词频排序 &amp; 自适应</h3>
+          <p>候选字按常用程度排列，你选过的字会随时间排得更靠前——让最常用的字词自然浮到顶部。</p>
+        </div>
+        <div class="feature">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3>联想字词（聯想字詞）</h3>
+          <p>在你确认一个字之后，KeyKey 会推荐通常紧随其后的词——让常用短语一次按键即可成词。</p>
+        </div>
+        <div class="feature">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2"></path>
+              <path d="M9 20h6"></path><path d="M12 4v16"></path>
+            </svg>
+          </div>
+          <h3>繁 → 簡 &amp; 全角标点</h3>
+          <p>直接从输入菜单切换繁转简输出（輸出簡體字）与全角标点（全形標點）——无需另开偏好设置窗口。</p>
+        </div>
+        <div class="feature">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="6" y="3" width="12" height="18" rx="2"></rect>
+              <path d="M9 7h6"></path><path d="M9 11h6"></path><path d="M9 15h3"></path>
+            </svg>
+          </div>
+          <h3>原生候选窗口</h3>
+          <p>贴合原版布局的纵向候选列表——它会跟随文字光标，并在屏幕边缘上翻或贴边，绝不被遮挡。</p>
+        </div>
+        <div class="feature">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path>
+            </svg>
+          </div>
+          <h3>轻量 &amp; 开源</h3>
+          <p>共享资源让各应用之间的内存占用保持低位，完整源代码就在 GitHub 上——免费、采用 MIT 许可，任你查阅或自行构建。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALL / HOW IT WORKS -->
+  <section id="install" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>四步即可开始输入</h2>
+        <p>安装包由 Apple 签名并公证，可干净打开——没有 Gatekeeper 警告。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>下载 &amp; 打开</h3>
+          <p>从 GitHub 发布页获取 <code>YahooKeyKey2.pkg</code>，双击即可安装。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>注销账户</h3>
+          <p>它会安装到 <code>~/Library/Input Methods</code>（无需管理员权限），然后提示你注销并重新登录。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>添加输入源</h3>
+          <p>系统设置 ▸ 键盘 ▸ 输入法 ▸ + ▸ 繁体中文 → 添加 <strong>倉頡</strong> 和／或 <strong>速成</strong>。</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <h3>切换 &amp; 输入</h3>
+          <p>按 <strong>Ctrl-Space</strong> 切换到 KeyKey 并开始输入。可从输入菜单切换 簡體 或打开 關於。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>获取 KeyKey</h2>
+        <p>今天即可免费开源使用，Mac App Store 版本也在路上。</p>
+      </div>
+      <div class="plans">
+        <div class="plan featured">
+          <span class="badge">现已推出 · 免费</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            GitHub 发布版
+          </h3>
+          <p class="price"><strong>永久免费</strong> · 采用 MIT 许可</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>已签名 &amp; 公证的安装包——可干净打开</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>无需管理员权限即可安装</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>完整源代码在 GitHub 上——可自行查阅与构建</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>同时支持 倉頡 与 速成，并带 繁→簡 输出切换</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            获取最新版本
+          </a>
+        </div>
+
+        <div class="plan">
+          <span class="badge">即将推出</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
+            Mac App Store
+          </h3>
+          <p class="price">计划中 · 自动更新</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>一键安装，由 Apple 沙盒化</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>通过 App Store 自动更新</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>相同的 Cangjie &amp; Simplex 引擎</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>暂未推出——今天先获取 GitHub 版本</li>
+          </ul>
+          <span class="btn btn-disabled">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.3zM14.3 5.8c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.9-1.3z"/></svg>
+            即将推出
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit">
+    <div class="container">
+      <p class="kicker">致敬之作</p>
+      <p class="body">KeyKey 是一款用 Swift 打造的独立开源重塑作品，向经典的 <strong>Yahoo! KeyKey（Yahoo!奇摩輸入法）</strong> 致敬——这款繁体中文输入法曾深受众多 Mac 用户喜爱。它将那份体验延续到现代 macOS，并依据 <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">MIT 许可协议</a> 发布。</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">全部应用</a>
+        <a href="../clipmenu/">ClipMenu 2</a>
+        <a href="../support.html">支持</a>
+        <a href="https://github.com/teddychan/yahoo-keykey-2">GitHub</a>
+        <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">许可协议 (MIT)</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · KeyKey 依据 <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">MIT 许可协议</a> 开源。</div>
+  </footer>
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">我们使用 Cookie 来分析流量并改进 Dragon App。您可以接受或拒绝分析与广告类 Cookie。详见我们的<a href="/privacy.html">隐私政策</a>。</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">全部拒绝</button>
+        <button type="button" class="consent-btn consent-accept">全部接受</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
