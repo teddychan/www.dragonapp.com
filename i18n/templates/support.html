@@ -16,6 +16,10 @@
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_desc }}">
   <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
+  <meta name="twitter:image" content="https://www.dragonapp.com/appicon.png">
   <script src="/shared/i18n.js" defer></script>
   <style>
     :root {
@@ -117,7 +121,7 @@
 {{ SWITCHER }}
     </div>
     <header>
-      <img class="logo" src="/appicon.png" alt="{{ page_logo_alt }}">
+      <img class="logo" src="/appicon.png" alt="{{ page_logo_alt }}" width="72" height="72" decoding="async">
       <h1>{{ page_h1 }}</h1>
       <p class="tagline">{{ page_tagline }}</p>
     </header>
