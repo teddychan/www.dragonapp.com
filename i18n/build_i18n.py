@@ -87,13 +87,14 @@ PAGES = {
     "clipmenu":("clipmenu.html","clipmenu/",    os.path.join("clipmenu", "index.html")),
     "support": ("support.html", "support.html", "support.html"),
     "privacy": ("privacy.html", "privacy.html", "privacy.html"),
+    "about":   ("about.html",   "about/",       os.path.join("about", "index.html")),
 }
 
 # pages built in every language (with hreflang/switcher) vs English-only standalone pages
-I18N_PAGES = ["index", "keykey", "clipmenu", "support"]
+I18N_PAGES = ["index", "keykey", "clipmenu", "support", "about"]
 EN_ONLY_PAGES = ["privacy"]
 # sitemap priorities
-PRIORITY = {"index": "1.0", "keykey": "0.8", "clipmenu": "0.9", "support": "0.5", "privacy": "0.3"}
+PRIORITY = {"index": "1.0", "keykey": "0.8", "clipmenu": "0.9", "support": "0.5", "privacy": "0.3", "about": "0.6"}
 LASTMOD = "2026-06-23"
 
 GLOBE = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" '

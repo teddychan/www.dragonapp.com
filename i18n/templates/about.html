@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ CONSENT_HEAD }}
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ CANONICAL }}">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+{{ ALTERNATES }}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="{{ OG_LOCALE }}">
+  <meta property="og:url" content="{{ CANONICAL }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css">
+  <script src="/shared/i18n.js" defer></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <a href="../">All apps</a>
+{{ SWITCHER }}
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container">
+      <h1>{{ h1 }}</h1>
+      <p class="sub">{{ story }}</p>
+      <h2>{{ promise_h2 }}</h2>
+      <div class="grid">
+        <div class="feature">
+          <h3>{{ promise_macos }}</h3>
+          <p>{{ promise_macos_d }}</p>
+        </div>
+        <div class="feature">
+          <h3>{{ promise_langs }}</h3>
+          <p>{{ promise_langs_d }}</p>
+        </div>
+        <div class="feature">
+          <h3>{{ promise_channels }}</h3>
+          <p>{{ promise_channels_d }}</p>
+        </div>
+        <div class="feature">
+          <h3>{{ promise_icloud }}</h3>
+          <p>{{ promise_icloud_d }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">All apps</a>
+        <a href="../support.html">Support</a>
+        <a href="/privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App</div>
+  </footer>
+{{ CONSENT_BANNER }}
+</body>
+</html>

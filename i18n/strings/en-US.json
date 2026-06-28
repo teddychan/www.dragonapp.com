@@ -283,6 +283,17 @@
     "title": "Dragon App — Privacy Policy",
     "description": "Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2 and KeyKey Mac apps handle your data (they keep it on your device)."
   },
+  "about": {
+    "title": "Why Dragon App — apps I love, kept alive",
+    "description": "Dragon App revives macOS apps their original makers no longer maintain. The story behind the studio, and the promise behind every app.",
+    "h1": "Apps I love, kept alive",
+    "story": "Every app here is one I rely on every day — and that its original maintainer could no longer keep going. Rather than watch them break on each new macOS, I adopted them. Today they're maintained largely with the help of AI, which is also why support runs on 'Buy me Token' instead of coffee.",
+    "promise_h2": "What every Dragon App promises",
+    "promise_macos_d": "Runs on at least the latest two macOS releases.",
+    "promise_langs_d": "Available in 7 languages, like this site.",
+    "promise_channels_d": "Installable 3 ways: GitHub, Homebrew, and (where possible) the Mac App Store.",
+    "promise_icloud_d": "Settings sync across your Macs via iCloud."
+  },
   "ice-2": {
     "title": "Ice 2 — Menu Bar Manager for Mac, rebuilt for macOS 26 &amp; 27",
     "description": "Ice 2 is a free, open-source menu bar manager for Mac — hide and arrange menu bar items, then show them on demand. Rebuilt to support macOS 26 and 27.",
