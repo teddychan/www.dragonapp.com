@@ -455,6 +455,10 @@ def render_app(template, app, lang, strings, missing):
     return TOKEN_RE.sub(repl, template)
 
 
+def _plain(s):
+    return re.sub(r"<[^>]+>", "", s or "").strip()
+
+
 def write_llms_txt(strings):
     en = strings["en-US"]
     lines = ["# Dragon App", "",
@@ -464,7 +468,7 @@ def write_llms_txt(strings):
         ps = en.get(app["slug"], {})
         lines.append("- [%s](%s): %s Install: brew install --cask %s"
                      % (app["name"], app_url("en-US", app["slug"]),
-                        ps.get("sub", ""), app.get("homebrew_cask") or "n/a"))
+                        _plain(ps.get("sub", "")), app.get("homebrew_cask") or "n/a"))
     lines += ["", "## About", "%s/about/ — why these apps exist and the maintenance promise." % SITE]
     with open(os.path.join(DOCS, "llms.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
