@@ -14,7 +14,31 @@
     "switcher_label": "Language",
     "consent_message": "We use cookies to measure traffic and improve Dragon App. You can accept or reject analytics &amp; advertising cookies. See our <a href=\"/privacy.html\">Privacy Policy</a>.",
     "consent_accept": "Accept all",
-    "consent_reject": "Reject all"
+    "consent_reject": "Reject all",
+    "app_demo_h2": "See it in action",
+    "app_changelog_h2": "What's new",
+    "app_changelog_sub": "Plain-language notes, newest first.",
+    "app_changelog_auto": "Auto-generated from GitHub Releases",
+    "app_changelog_view": "View on GitHub",
+    "app_download_h2": "Ways to get it",
+    "app_channel_github": "GitHub release",
+    "app_channel_github_badge": "Easiest · free",
+    "app_channel_brew": "Homebrew",
+    "app_channel_brew_badge": "Terminal · one command",
+    "app_channel_mas": "Mac App Store",
+    "app_channel_mas_soon": "Coming soon",
+    "app_token_h2": "Buy me Token",
+    "app_token_badge": "Support development",
+    "app_token_body": "These apps are kept running mostly by AI. Instead of a coffee, you can chip in for the AI tokens that pay for ongoing maintenance.",
+    "app_token_cta": "Buy me Token",
+    "app_support_h2": "Need help?",
+    "app_support_cta": "Open an issue on GitHub",
+    "app_credit_kicker": "In tribute",
+    "promise_macos": "Latest 2 macOS",
+    "promise_langs": "7 languages",
+    "promise_channels": "3 channels",
+    "promise_icloud": "iCloud sync",
+    "promise_link": "Why I build &amp; maintain these"
   },
   "index": {
     "title": "Dragon App — Classic Mac apps, rebuilt",
@@ -258,5 +282,62 @@
   "privacy": {
     "title": "Dragon App — Privacy Policy",
     "description": "Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2 and KeyKey Mac apps handle your data (they keep it on your device)."
+  },
+  "ice-2": {
+    "title": "Ice 2 — Menu Bar Manager for Mac, rebuilt for macOS 26 & 27",
+    "description": "Ice 2 is a free, open-source menu bar manager for Mac — hide and arrange menu bar items, then show them on demand. Rebuilt to support macOS 26 and 27.",
+    "eyebrow": "The menu bar manager for macOS",
+    "h1": "Tame your menu bar — back on modern macOS",
+    "sub": "Ice 2 hides the menu bar items you don't need, brings them back when you want them, and lets you lay the bar out your way. A faithful, open-source rebuild — now running on macOS 26 and 27.",
+    "demo_caption": "A Mac menu bar managed by Ice 2: rarely-used icons are tucked behind a divider, while the clock, battery, Wi-Fi and Control Center stay visible.",
+    "feat1_h": "Hide menu bar items", "feat1_p": "Tuck rarely-used icons behind a divider so the bar stays clean.",
+    "feat2_h": "The Ice Bar", "feat2_p": "Move hidden items into a separate bar that appears on demand.",
+    "feat3_h": "Show on demand", "feat3_p": "Reveal items with a click, a hotkey, or by hovering the edge.",
+    "support_body": "I maintain Ice 2 for free in my spare time. Questions, bug reports and feature requests are genuinely welcome — open an issue on GitHub and I'll take a look.",
+    "credit_body": "Ice 2 is an independent, open-source rebuild of <strong><a href=\"https://github.com/jordanbaird/Ice\">Ice</a></strong>, the menu bar manager originally created by <strong>Jordan Baird</strong>. This fork, actively maintained by Teddy Chan, carries it forward to modern macOS.",
+    "faq": [
+      {"q": "What does Ice 2 do?", "a": "Ice 2 hides the menu bar items you don't need so your menu bar stays clean, and brings them back on demand — with a click, a hotkey, or by hovering."},
+      {"q": "How do I install Ice 2?", "a": "Download from the latest GitHub release and drag it to Applications, or install with Homebrew: brew install --cask teddychan/tap/ice-2."},
+      {"q": "What do I need to run Ice 2?", "a": "A Mac running macOS 26 or later."},
+      {"q": "Is this the original Ice?", "a": "It is an independent, open-source rebuild of Ice (originally by Jordan Baird), carried forward to modern macOS under GPLv3."}
+    ]
+  },
+  "clipmenu-2": {
+    "title": "ClipMenu 2 — Clipboard Manager & History for Mac",
+    "description": "ClipMenu 2 is a fast, native clipboard manager and history app for Mac. Everything you copied, one shortcut away — free on GitHub or the Mac App Store.",
+    "eyebrow": "The clipboard manager for macOS",
+    "h1": "Everything you copied, one shortcut away",
+    "sub": "A fast, native clipboard manager for Mac that remembers everything you copy, organizes your snippets, and pastes anywhere — with a single hotkey.",
+    "demo_caption": "ClipMenu 2 clipboard history popup showing recent copied items with numbers and an image thumbnail — press ⌥V to open it right at the cursor.",
+    "feat1_h": "Clipboard history", "feat1_p": "Every copy is remembered. Pop your recent clips right at the cursor or from the menu bar and paste in a keystroke.",
+    "feat2_h": "Snippets in folders", "feat2_p": "Save the text you type all the time — replies, addresses, code — and organize it into folders you control.",
+    "feat3_h": "JavaScript Actions", "feat3_p": "Transform clips on the fly: change case, trim, encode HTML or Base64, hash, convert Japanese, and more.",
+    "support_body": "Questions, bug reports, and feature requests are always welcome. Open an issue on GitHub and we'll get back to you — or write to support@dragonapp.com.",
+    "credit_body": "ClipMenu 2 is built on the legacy of the original <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> by <strong>Naotaka Morimoto</strong>. It is an independent, open-source rebuild in Swift — created with gratitude for his work and released under the same MIT License.",
+    "faq": [
+      {"q": "What's the difference between the App Store and GitHub versions?", "a": "They're the same app. The Mac App Store edition is a paid subscription that adds iCloud sync and updates automatically through the App Store. The GitHub edition is free and open source, with built-in auto-update, and includes every feature except iCloud sync."},
+      {"q": "Why does ClipMenu 2 ask for Accessibility permission?", "a": "macOS requires Accessibility permission for an app to paste into another app on your behalf. ClipMenu 2 uses it only to drop your selected clip into the frontmost app. Grant it under System Settings → Privacy & Security → Accessibility. (The App Store edition is sandboxed and doesn't use this.)"},
+      {"q": "Where is my clipboard data stored?", "a": "On your Mac. Your history and snippets never leave your devices — ClipMenu 2 has no analytics, ads, or tracking, and we never receive your clipboard contents. With iCloud sync on, snippets travel through your own private iCloud account."},
+      {"q": "How do I install ClipMenu 2?", "a": "Download from the latest GitHub release and drag it to Applications, or install with Homebrew: brew install --cask teddychan/tap/clipmenu-2. The Mac App Store edition is also available."}
+    ]
+  },
+  "yahoo-keykey-2": {
+    "title": "Yahoo KeyKey 2 — Yahoo!奇摩輸入法 Cangjie (倉頡) & Simplex (速成) for Mac",
+    "description": "Yahoo KeyKey 2 is an open-source rebuild of the classic Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) and Simplex (速成) input method for Mac — native, fast, and free.",
+    "eyebrow": "The Cangjie & Simplex input method for macOS",
+    "h1": "Yahoo! KeyKey, rebuilt for modern macOS",
+    "sub": "The classic Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong> and <strong>Simplex (速成)</strong> input method, reborn — native, fast, and open source.",
+    "demo_caption": "Yahoo KeyKey 2 Cangjie candidate window: typing the radicals 日 and 月 shows a numbered list of matching characters, with 明 selected first.",
+    "feat1_h": "倉頡 + 速成 input", "feat1_p": "Both classic modes — full Cangjie (倉頡) and Simplex (速成) — with wildcard * matching when you don't remember every radical.",
+    "feat2_h": "Frequency-ranked & adaptive", "feat2_p": "Candidates are ordered by how common they are, and the characters you pick rank higher over time — so your most-used words rise to the top.",
+    "feat3_h": "Associated phrases (聯想字詞)", "feat3_p": "After you commit a character, Yahoo KeyKey 2 suggests the words that usually follow — so common phrases come together in a single keystroke.",
+    "support_body": "Questions, bug reports, and feature requests are welcome — open an issue on GitHub and I'll take a look.",
+    "credit_body": "Yahoo KeyKey 2 is an independent, open-source rebuild in Swift, created in tribute to the original <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong> — the Traditional-Chinese input method many Mac users loved. It carries that experience forward for modern macOS, released under the MIT License.",
+    "faq": [
+      {"q": "Which input methods does Yahoo KeyKey 2 support?", "a": "Yahoo KeyKey 2 is a Traditional-Chinese input method with two modes: Cangjie (倉頡) and Simplex (速成, also called 簡易). It supports wildcard input with *, frequency-ranked candidates, associated phrases (聯想字詞), full-width punctuation, and an optional Traditional-to-Simplified output toggle."},
+      {"q": "How do I install Yahoo KeyKey 2?", "a": "Download the signed, notarized installer (YahooKeyKey2.pkg) from GitHub and double-click it, or install with Homebrew: brew install --cask teddychan/tap/yahoo-keykey-2. Then log out and back in, and add 倉頡 and/or 速成 under System Settings ▸ Keyboard ▸ Input Sources ▸ + ▸ Traditional Chinese."},
+      {"q": "What do I need to run Yahoo KeyKey 2?", "a": "A Mac with Apple Silicon (arm64) running macOS 12 Monterey or later. Yahoo KeyKey 2 is signed with a Developer ID and notarized by Apple, so it opens cleanly."},
+      {"q": "Is this the original Yahoo! KeyKey?", "a": "No. Yahoo KeyKey 2 is an independent, open-source rebuild in Swift, created in tribute to the original Yahoo! KeyKey (Yahoo!奇摩輸入法). It is released under the MIT License."}
+    ]
   }
 }
