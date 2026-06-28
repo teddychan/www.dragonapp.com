@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="{{ LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ CONSENT_HEAD }}
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ CANONICAL }}">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+{{ ALTERNATES }}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="{{ OG_LOCALE }}">
+  <meta property="og:url" content="{{ CANONICAL }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css">
+  <script src="/shared/i18n.js" defer></script>
+
+  <script type="application/ld+json">
+{{ JSONLD }}
+  </script>
+</head>
+<body class="{{ THEME_CLASS }}">
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <a href="../">All apps</a>
+        <a href="#demo">Features</a>
+        <a href="#changelog">What's new</a>
+        <a href="#download">Download</a>
+        <a class="nav-cta" href="#download">Download</a>
+{{ SWITCHER }}
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero" id="intro">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="appicon appicon-lg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><path d="m4.9 4.9 14.2 14.2"/><path d="m19.1 4.9-14.2 14.2"/></svg>
+        </span>
+      </div>
+      <p><span class="eyebrow">{{ eyebrow }}</span></p>
+      <h1>{{ h1 }}</h1>
+      <p class="sub">{{ sub }}</p>
+      <div class="cta-row">
+        <a class="btn btn-github" href="{{ APP_REPO }}/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          {{ app_channel_github }}
+        </a>
+        <a class="btn btn-primary" href="#download">{{ app_download_h2 }}</a>
+      </div>
+      <p class="req">{{ promise_macos }} · {{ promise_langs }} · {{ promise_channels }}</p>
+    </div>
+  </header>
+
+  <!-- DEMO -->
+  <section id="demo">
+    <div class="container">
+      <div class="head">
+        <h2>{{ app_demo_h2 }}</h2>
+      </div>
+      <div class="window" role="img" aria-label="{{ demo_caption }}">
+        <div class="titlebar">
+          <span class="dot" style="background:#e06a60"></span>
+          <span class="dot" style="background:#e6b341"></span>
+          <span class="dot" style="background:#5fc375"></span>
+          <span class="label">{{ h1 }}</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; color:var(--muted); font-size:0.95rem; flex-wrap:nowrap; overflow:hidden;">
+          <span style="display:inline-flex; align-items:center; justify-content:center; width:26px; height:22px; border-radius:6px; background:var(--accent-tint); color:var(--accent-deep);">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          </span>
+          <span style="opacity:0.35; letter-spacing:2px;">⌥ ⇧ ◔ ⤓</span>
+          <span style="flex:1; min-width:8px; border-left:1px dashed var(--border); height:18px;"></span>
+          <span class="mono" style="color:var(--fg);">9:41</span>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>{{ feat1_h }}</h3>
+          <p>{{ feat1_p }}</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="6" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/></svg></div>
+          <h3>{{ feat2_h }}</h3>
+          <p>{{ feat2_p }}</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>{{ feat3_h }}</h3>
+          <p>{{ feat3_p }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANGELOG -->
+  <section id="changelog" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>{{ app_changelog_h2 }}</h2>
+        <p>{{ app_changelog_sub }}</p>
+      </div>
+      <div class="changelog">{{ CHANGELOG_ROWS }}</div>
+      <p class="changelog-auto">{{ app_changelog_auto }}</p>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>{{ app_download_h2 }}</h2>
+      </div>
+      {{ DOWNLOAD_CHANNELS }}
+    </div>
+  </section>
+
+  <!-- TOKEN -->
+  <section id="token">
+    <div class="container">{{ TOKEN_BLOCK }}</div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support" style="background: var(--surface);">
+    <div class="container">
+      <div class="support-block">
+        <h2>{{ app_support_h2 }}</h2>
+        <p>{{ support_body }}</p>
+        <a class="btn btn-github" href="{{ APP_ISSUES }}">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          {{ app_support_cta }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit" id="credit">
+    <div class="container">
+      <p class="kicker">{{ app_credit_kicker }}</p>
+      <p class="body">{{ credit_body }}</p>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
+  <div class="container">
+    <div class="promise">
+      <span class="promise-chip">{{ promise_macos }}</span>
+      <span class="promise-chip">{{ promise_langs }}</span>
+      <span class="promise-chip">{{ promise_channels }}</span>
+      <span class="promise-chip">{{ promise_icloud }}</span>
+    </div>
+    <a class="promise-link" href="{{ URL_ABOUT }}">{{ promise_link }} →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">All apps</a>
+        <a href="../clipmenu-2/">ClipMenu 2</a>
+        <a href="../ice-2/">Ice 2</a>
+        <a href="../yahoo-keykey-2/">Yahoo KeyKey 2</a>
+        <a href="../support.html">Support</a>
+        <a href="{{ APP_REPO }}">GitHub</a>
+        <a href="{{ APP_REPO }}/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".cmd-copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.parentElement.querySelector("code");
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+          var label = btn.textContent;
+          btn.textContent = btn.getAttribute("data-copied") || "Copied";
+          btn.classList.add("copied");
+          setTimeout(function () { btn.textContent = label; btn.classList.remove("copied"); }, 1600);
+        });
+      });
+    });
+  </script>
+
+{{ CONSENT_BANNER }}
+</body>
+</html>

@@ -242,6 +242,170 @@ def render(template, lang, page, strings, missing):
     return TOKEN_RE.sub(repl, template)
 
 
+APPS_DIR = os.path.join(ROOT, "i18n", "apps")
+CHANGELOG_DIR = os.path.join(ROOT, "i18n", "changelogs")
+
+
+def load_apps():
+    idx = json.load(open(os.path.join(APPS_DIR, "_index.json")))
+    return [json.load(open(os.path.join(APPS_DIR, s + ".json"))) for s in idx]
+
+
+def load_changelog(slug):
+    p = os.path.join(CHANGELOG_DIR, slug + ".json")
+    return json.load(open(p)) if os.path.exists(p) else []
+
+
+def app_url(lang, slug):
+    return SITE + "/" + lang_prefix(lang) + slug + "/"
+
+
+def render_changelog_rows(slug, common):
+    rows = []
+    view = common.get("app_changelog_view", "View on GitHub")
+    for e in load_changelog(slug):
+        note = e.get("notes") or "&nbsp;"
+        rows.append(
+            '<div class="logrow"><span class="ver">%s</span>'
+            '<div><div class="lognote">%s</div>'
+            '<div class="logmeta">%s · <a href="%s">%s →</a></div></div></div>'
+            % (e.get("version", ""), note, e.get("date", ""), e.get("url", "#"), view)
+        )
+    return "\n".join(rows) if rows else '<p class="logmeta">Release notes coming soon.</p>'
+
+
+def render_download(app, common):
+    cards = []
+    cards.append(
+        '<div class="plan featured"><span class="badge">%s</span>'
+        '<h3>%s</h3><a class="btn btn-github" href="%s/releases/latest">Get the latest release</a></div>'
+        % (common.get("app_channel_github_badge", "Easiest · free"),
+           common.get("app_channel_github", "GitHub release"), app["repo"]))
+    if app.get("homebrew_cask"):
+        cards.append(
+            '<div class="plan"><span class="badge">%s</span><h3>%s</h3>'
+            '<div class="cmd"><code>brew install --cask %s</code>'
+            '<button type="button" class="cmd-copy" data-copied="Copied">Copy</button></div></div>'
+            % (common.get("app_channel_brew_badge", "Terminal · one command"),
+               common.get("app_channel_brew", "Homebrew"), app["homebrew_cask"]))
+    if app.get("mas_url"):
+        cards.append(
+            '<div class="plan"><span class="badge">App Store</span><h3>%s</h3>'
+            '<a class="btn btn-appstore" href="%s">Download on the Mac App Store</a></div>'
+            % (common.get("app_channel_mas", "Mac App Store"), app["mas_url"]))
+    else:
+        cards.append(
+            '<div class="plan"><span class="badge soon status-soon">%s</span><h3>%s</h3>'
+            '<a class="btn btn-disabled" aria-disabled="true">%s</a></div>'
+            % (common.get("app_channel_mas_soon", "Coming soon"),
+               common.get("app_channel_mas", "Mac App Store"),
+               common.get("app_channel_mas_soon", "Coming soon")))
+    return '<div class="plans">' + "\n".join(cards) + '</div>'
+
+
+def render_token(app, common):
+    href = app.get("sponsors_url") or "#"
+    badge = common.get("app_token_badge", "Support development")
+    if not app.get("sponsors_url"):
+        badge = "Coming soon · GitHub Sponsors"
+    return (
+        '<div class="token-block"><span class="badge soon status-soon">%s</span>'
+        '<h2>%s</h2><p>%s</p>'
+        '<a class="btn btn-primary" href="%s">%s</a></div>'
+        % (badge, common.get("app_token_h2", "Buy me Token"),
+           common.get("app_token_body", ""), href,
+           common.get("app_token_cta", "Buy me Token")))
+
+
+def render_jsonld(app, lang, page_str):
+    faq = page_str.get("faq", [])
+    graph = [
+        {"@type": "SoftwareApplication", "name": app["name"],
+         "description": page_str.get("description", ""),
+         "url": app_url(lang, app["slug"]),
+         "image": SITE + "/icon-512.png",
+         "applicationCategory": "UtilitiesApplication",
+         "operatingSystem": "macOS " + app["min_macos"],
+         "inLanguage": lang,
+         "downloadUrl": app["repo"] + "/releases/latest",
+         "softwareLicense": app["license_url"],
+         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD",
+                    "url": app["repo"] + "/releases/latest"},
+         "publisher": {"@type": "Organization", "name": "Dragon App", "url": SITE + "/"}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Dragon App", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": app["name"], "item": app_url(lang, app["slug"])}]},
+    ]
+    if faq:
+        graph.append({"@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": f["q"],
+             "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]})
+    return json.dumps({"@context": "https://schema.org", "@graph": graph},
+                      ensure_ascii=False, indent=2)
+
+
+def _faq_safe(v):
+    return v if isinstance(v, str) else ""  # faq lists feed render_jsonld, not text tokens
+
+
+def build_app_switcher(current, slug, common):
+    label = common.get("switcher_label", "Language")
+    out = ['        <details class="lang-switch">',
+           '          <summary aria-label="%s">%s<span>%s</span></summary>' % (label, GLOBE, NATIVE[current]),
+           '          <div class="lang-menu">']
+    for l in LANGS:
+        active = ' class="active"' if l == current else ""
+        aria = ' aria-current="true"' if l == current else ""
+        out.append('            <a href="%s" hreflang="%s" data-setlang="%s"%s%s>%s</a>'
+                   % (app_url(l, slug), l, l, active, aria, NATIVE[l]))
+    out += ['          </div>', '        </details>']
+    return "\n".join(out)
+
+
+def render_app(template, app, lang, strings, missing):
+    en = strings["en-US"]
+    cur = strings.get(lang, en)
+    page_str = cur.get(app["slug"], en.get(app["slug"], {}))
+    common = cur.get("common", {}) or en.get("common", {})
+    en_common = en.get("common", {})
+
+    specials = {
+        "LANG": lang, "OG_LOCALE": OG_LOCALE[lang],
+        "CANONICAL": app_url(lang, app["slug"]),
+        "ALTERNATES": "\n".join(
+            ['  <link rel="alternate" hreflang="%s" href="%s">' % (l, app_url(l, app["slug"])) for l in LANGS]
+            + ['  <link rel="alternate" hreflang="x-default" href="%s">' % app_url("en-US", app["slug"])]),
+        "SWITCHER": build_app_switcher(lang, app["slug"], common),
+        "CONSENT_HEAD": CONSENT_HEAD_EXTERNAL,
+        "CONSENT_BANNER": build_consent(common, en_common),
+        "THEME_CLASS": app.get("theme", ""),
+        "URL_ABOUT": SITE + "/" + lang_prefix(lang) + "about/",
+        "APP_REPO": app["repo"], "APP_ISSUES": app["repo"] + "/issues",
+        "CHANGELOG_ROWS": render_changelog_rows(app["slug"], common),
+        "DOWNLOAD_CHANNELS": render_download(app, common),
+        "TOKEN_BLOCK": render_token(app, common),
+        "JSONLD": render_jsonld(app, lang, page_str if page_str else en.get(app["slug"], {})),
+    }
+
+    def repl(m):
+        name = m.group(1)
+        if name in specials:
+            return specials[name]
+        if name in page_str:
+            return _faq_safe(page_str[name])
+        if name in common:
+            return common[name]
+        if name in en.get(app["slug"], {}):
+            missing.append((lang, app["slug"], name))
+            return _faq_safe(en[app["slug"]][name])
+        if name in en_common:
+            missing.append((lang, app["slug"], name))
+            return en_common[name]
+        raise KeyError("Unknown token {{ %s }} in app '%s'" % (name, app["slug"]))
+
+    return TOKEN_RE.sub(repl, template)
+
+
 def write_sitemap():
     XHTML = "http://www.w3.org/1999/xhtml"
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -267,6 +431,17 @@ def write_sitemap():
         lines.append("    <changefreq>yearly</changefreq>")
         lines.append("    <priority>%s</priority>" % PRIORITY[page])
         lines.append("  </url>")
+    for app in load_apps():
+        for lang in LANGS:
+            lines.append("  <url>")
+            lines.append("    <loc>%s</loc>" % app_url(lang, app["slug"]))
+            for alt in LANGS:
+                lines.append('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (alt, app_url(alt, app["slug"])))
+            lines.append('    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>' % app_url("en-US", app["slug"]))
+            lines.append("    <lastmod>%s</lastmod>" % LASTMOD)
+            lines.append("    <changefreq>monthly</changefreq>")
+            lines.append("    <priority>0.9</priority>")
+            lines.append("  </url>")
     lines.append("</urlset>")
     with open(os.path.join(DOCS, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
@@ -300,6 +475,17 @@ def main():
         with open(dest, "w", encoding="utf-8") as f:
             f.write(html)
         count += 1
+
+    app_tpl = open(os.path.join(TEMPLATES_DIR, "app.html"), encoding="utf-8").read()
+    for app in load_apps():
+        for lang in available:
+            html = render_app(app_tpl, app, lang, strings, missing)
+            dest = os.path.join(DOCS, lang_prefix(lang), app["slug"], "index.html")
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "w", encoding="utf-8") as f:
+                f.write(html)
+            count += 1
+
     write_sitemap()
 
     print("Built %d pages for languages: %s" % (count, ", ".join(available)))
