@@ -1,0 +1,15 @@
+{
+  "slug": "yahoo-keykey-2",
+  "name": "Yahoo KeyKey 2",
+  "theme": "theme-keykey",
+  "repo": "https://github.com/teddychan/yahoo-keykey-2",
+  "homebrew_cask": "teddychan/tap/yahoo-keykey-2",
+  "mas_url": null,
+  "license": "MIT",
+  "license_url": "https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE",
+  "min_macos": "26",
+  "appcast_path": "yahoo-keykey-2/appcast.xml",
+  "credit_name": "Yahoo! KeyKey",
+  "credit_url": "https://github.com/teddychan/yahoo-keykey-2",
+  "sponsors_url": null
+}

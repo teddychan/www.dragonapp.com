@@ -1,0 +1,15 @@
+{
+  "slug": "clipmenu-2",
+  "name": "ClipMenu 2",
+  "theme": "",
+  "repo": "https://github.com/teddychan/clipmenu-2",
+  "homebrew_cask": "teddychan/tap/clipmenu-2",
+  "mas_url": null,
+  "license": "MIT",
+  "license_url": "https://github.com/teddychan/clipmenu-2/blob/main/LICENSE",
+  "min_macos": "26",
+  "appcast_path": "clipmenu-2/appcast.xml",
+  "credit_name": "the original ClipMenu",
+  "credit_url": "https://github.com/naotaka/ClipMenu",
+  "sponsors_url": null
+}
