@@ -47,36 +47,12 @@
         "name": "Dragon App",
         "inLanguage": "{{ LANG }}",
         "publisher": { "@id": "https://www.dragonapp.com/#org" }
-      },
-      {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "SoftwareApplication",
-              "name": "ClipMenu 2",
-              "url": "{{ URL_CLIPMENU }}",
-              "operatingSystem": "macOS",
-              "applicationCategory": "UtilitiesApplication"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "SoftwareApplication",
-              "name": "KeyKey",
-              "url": "{{ URL_KEYKEY }}",
-              "operatingSystem": "macOS",
-              "applicationCategory": "UtilitiesApplication"
-            }
-          }
-        ]
       }
     ]
   }
+  </script>
+  <script type="application/ld+json">
+{{ ITEMLIST_JSONLD }}
   </script>
 </head>
 <body>

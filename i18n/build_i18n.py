@@ -83,18 +83,19 @@ OG_LOCALE = {
 # page key -> (template filename, page path within a language tree, output relpath)
 PAGES = {
     "index":   ("index.html",   "",             "index.html"),
-    "keykey":  ("keykey.html",  "keykey/",      os.path.join("keykey", "index.html")),
-    "clipmenu":("clipmenu.html","clipmenu/",    os.path.join("clipmenu", "index.html")),
     "support": ("support.html", "support.html", "support.html"),
     "privacy": ("privacy.html", "privacy.html", "privacy.html"),
     "about":   ("about.html",   "about/",       os.path.join("about", "index.html")),
 }
 
 # pages built in every language (with hreflang/switcher) vs English-only standalone pages
-I18N_PAGES = ["index", "keykey", "clipmenu", "support", "about", "privacy"]
+I18N_PAGES = ["index", "support", "about", "privacy"]
 EN_ONLY_PAGES = []
 # sitemap priorities
-PRIORITY = {"index": "1.0", "keykey": "0.8", "clipmenu": "0.9", "support": "0.5", "privacy": "0.3", "about": "0.6"}
+PRIORITY = {"index": "1.0", "support": "0.5", "privacy": "0.3", "about": "0.6"}
+
+# legacy app slugs (old URLs) -> current app slug they now redirect to
+LEGACY_REDIRECTS = {"clipmenu": "clipmenu-2", "keykey": "yahoo-keykey-2"}
 LASTMOD = "2026-06-23"
 
 GLOBE = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -211,15 +212,15 @@ def render(template, lang, page, strings, missing):
         "ALTERNATES": build_alternates(page),
         "SWITCHER": build_switcher(lang, page, common if common else en_common),
         "URL_INDEX": url_for(lang, "index"),
-        "URL_KEYKEY": url_for(lang, "keykey"),
-        "URL_CLIPMENU": url_for(lang, "clipmenu"),
         "URL_SUPPORT": url_for(lang, "support"),
+        "URL_ICE2": app_url(lang, "ice-2"),
+        "URL_CLIPMENU2": app_url(lang, "clipmenu-2"),
+        "URL_KEYKEY2": app_url(lang, "yahoo-keykey-2"),
+        "ITEMLIST_JSONLD": render_itemlist(lang, strings),
         "CONSENT_HEAD": CONSENT_HEAD_EXTERNAL,
         "INDEX_CONSENT_HEAD": CONSENT_HEAD + "\n" + inline_script(os.path.join("shared", "consent.js")),
         "INLINE_DRAGON_CSS": inline_style(os.path.join("shared", "dragon.css")),
         "INLINE_I18N_JS": inline_script(os.path.join("shared", "i18n.js"), module=True),
-        "CLIPMENU_CARD_ICON_SRC": data_uri("appicon-56.png"),
-        "KEYKEY_CARD_ICON_SRC": data_uri(os.path.join("yahoo-keykey-2", "appicon-56.png")),
         "APP_CARDS": render_app_cards(lang, strings),
         "CONSENT_BANNER": build_consent(common if common else en_common, en_common),
     }
@@ -276,6 +277,36 @@ def render_app_cards(lang, strings):
             % (app.get("theme", ""), app_url(lang, app["slug"]),
                app["name"][:1], app["name"], ps.get("sub", "")))
     return '<div class="apps">' + "\n".join(cards) + "</div>"
+
+
+def render_itemlist(lang, strings):
+    cur = strings.get(lang, strings["en-US"])
+    items = []
+    for i, app in enumerate(load_apps(), start=1):
+        ps = cur.get(app["slug"], strings["en-US"].get(app["slug"], {}))
+        items.append({"@type": "ListItem", "position": i, "name": app["name"],
+                      "url": app_url(lang, app["slug"])})
+    return json.dumps({"@context": "https://schema.org", "@type": "ItemList",
+                       "itemListElement": items}, ensure_ascii=False, indent=2)
+
+
+def write_redirects():
+    for old, new in LEGACY_REDIRECTS.items():
+        for lang in LANGS:
+            target = app_url(lang, new)
+            html = (
+                "<!DOCTYPE html><html lang=\"%s\"><head><meta charset=\"utf-8\">"
+                "<title>Moved</title>"
+                "<link rel=\"canonical\" href=\"%s\">"
+                "<meta http-equiv=\"refresh\" content=\"0; url=%s\">"
+                "<meta name=\"robots\" content=\"noindex\">"
+                "</head><body><p>This app has moved to <a href=\"%s\">%s</a>.</p>"
+                "</body></html>" % (lang, target, target, target, target)
+            )
+            dest = os.path.join(DOCS, lang_prefix(lang), old, "index.html")
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "w", encoding="utf-8") as f:
+                f.write(html)
 
 
 def render_changelog_rows(slug, common):
@@ -504,6 +535,7 @@ def main():
                 f.write(html)
             count += 1
 
+    write_redirects()
     write_sitemap()
 
     print("Built %d pages for languages: %s" % (count, ", ".join(available)))
