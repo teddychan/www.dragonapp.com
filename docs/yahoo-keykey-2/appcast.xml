@@ -3,13 +3,13 @@
     <channel>
         <title>YahooKeyKey2</title>
         <item>
-            <title>1.4.0</title>
-            <pubDate>Sat, 27 Jun 2026 00:23:21 +0900</pubDate>
-            <sparkle:version>11</sparkle:version>
-            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
+            <title>1.4.1</title>
+            <pubDate>Sun, 28 Jun 2026 09:37:49 +0900</pubDate>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/teddychan/yahoo-keykey-2/releases/download/v1.4.0/YahooKeyKey2-1.4.0.zip" length="3611742" type="application/octet-stream" sparkle:edSignature="3tCtZ5TlAXgzyqFu9XD5JAk8wVztOCqStYdBGuAfyoRo24PtS1QWjMUMzOTiN/r/chRB0RTGNIg5itGVpDZTCQ=="/>
+            <enclosure url="https://github.com/teddychan/yahoo-keykey-2/releases/download/v1.4.1/YahooKeyKey2-1.4.1.zip" length="3611232" type="application/octet-stream" sparkle:edSignature="zsVLK5///KR/0yN5KLh8ll0kcqgThcFWlRXr+NnVgiu7sfZskBHOJVJDAuxX/hnkUr1IYrg2kFfXXMm34EjlCg=="/>
         </item>
     </channel>
 </rss>
