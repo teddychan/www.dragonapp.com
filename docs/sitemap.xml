@@ -492,8 +492,100 @@
   </url>
   <url>
     <loc>https://www.dragonapp.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/privacy.html"/>
     <lastmod>2026-06-23</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hans/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/privacy.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/zh-Hant/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/privacy.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ja/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/privacy.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/ko/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/privacy.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/es/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/privacy.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.dragonapp.com/fr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/privacy.html"/>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>

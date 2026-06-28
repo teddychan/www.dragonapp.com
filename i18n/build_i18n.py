@@ -91,8 +91,8 @@ PAGES = {
 }
 
 # pages built in every language (with hreflang/switcher) vs English-only standalone pages
-I18N_PAGES = ["index", "keykey", "clipmenu", "support", "about"]
-EN_ONLY_PAGES = ["privacy"]
+I18N_PAGES = ["index", "keykey", "clipmenu", "support", "about", "privacy"]
+EN_ONLY_PAGES = []
 # sitemap priorities
 PRIORITY = {"index": "1.0", "keykey": "0.8", "clipmenu": "0.9", "support": "0.5", "privacy": "0.3", "about": "0.6"}
 LASTMOD = "2026-06-23"
