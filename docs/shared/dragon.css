@@ -336,3 +336,24 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
 .consent-accept { background: var(--accent-action); color: var(--accent-action-ink); border-color: var(--accent-action); }
 .consent-accept:hover { opacity: 0.92; }
 @media (max-width: 560px) { .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
+
+/* changelog */
+.changelog { max-width: 760px; margin: 0 auto; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.logrow { display: flex; gap: 14px; padding: 16px; border-bottom: 1px solid var(--border); }
+.logrow:last-child { border-bottom: none; }
+.logrow .ver { font-family: ui-monospace, Menlo, monospace; font-weight: 700; color: var(--accent-deep); min-width: 56px; }
+.lognote { font-weight: 600; }
+.logmeta { font-size: 0.85rem; color: var(--muted); }
+.changelog-auto { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 12px; }
+/* buy me token */
+.token-block { max-width: 640px; margin: 0 auto; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 36px 28px; }
+.token-block h2 { margin: 10px 0 8px; }
+.token-block p { color: var(--muted); max-width: 46ch; margin: 0 auto 22px; }
+.badge.soon { display: inline-block; }
+/* support block */
+.support-block { max-width: 640px; margin: 0 auto; text-align: center; background: var(--surface); border-radius: 18px; padding: 36px 28px; }
+.support-block p { color: var(--muted); max-width: 50ch; margin: 0 auto 22px; }
+/* promise strip */
+.promise { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: var(--accent-tint); border-radius: 16px; padding: 18px; margin: 12px 0; }
+.promise-chip { background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; color: var(--accent-ink); }
+.promise-link { display: block; text-align: center; font-weight: 600; margin: 4px 0 8px; }
