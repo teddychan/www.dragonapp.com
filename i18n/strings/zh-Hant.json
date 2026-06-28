@@ -14,7 +14,31 @@
     "switcher_label": "語言",
     "consent_message": "我們使用 Cookie 分析流量並改善 Dragon App。您可以接受或拒絕分析與廣告 Cookie。詳見我們的<a href=\"/privacy.html\">私隱政策</a>。",
     "consent_accept": "全部接受",
-    "consent_reject": "全部拒絕"
+    "consent_reject": "全部拒絕",
+    "app_demo_h2": "睇睇實際效果",
+    "app_changelog_h2": "最新動態",
+    "app_changelog_sub": "以淺白語言撰寫的更新記錄，最新在前。",
+    "app_changelog_auto": "由 GitHub Releases 自動生成",
+    "app_changelog_view": "在 GitHub 查看",
+    "app_download_h2": "取得方式",
+    "app_channel_github": "GitHub 發佈版",
+    "app_channel_github_badge": "最簡單 · 免費",
+    "app_channel_brew": "Homebrew",
+    "app_channel_brew_badge": "終端機 · 一個指令",
+    "app_channel_mas": "Mac App Store",
+    "app_channel_mas_soon": "即將推出",
+    "app_token_h2": "請我喝 Token",
+    "app_token_badge": "支持開發",
+    "app_token_body": "這些應用程式主要靠 AI 維持運作。與其請我喝咖啡，不如為持續維護所需的 AI token 出一分力。",
+    "app_token_cta": "請我喝 Token",
+    "app_support_h2": "需要協助？",
+    "app_support_cta": "在 GitHub 開立 issue",
+    "app_credit_kicker": "致敬之作",
+    "promise_macos": "最新兩個 macOS 版本",
+    "promise_langs": "7 種語言",
+    "promise_channels": "3 個渠道",
+    "promise_icloud": "iCloud 同步",
+    "promise_link": "我為何打造並維護這些應用程式"
   },
   "index": {
     "title": "Dragon App — 經典 Mac 應用程式，重新打造",
@@ -254,5 +278,77 @@
     "kk_link_home": "KeyKey 主頁",
     "kk_link_project": "GitHub 上嘅專案及下載",
     "kk_link_credits": "鳴謝"
+  },
+  "privacy": {
+    "title": "Dragon App — 私隱政策",
+    "description": "Dragon App 的私隱政策：本網站基於同意的流量分析如何運作，以及 ClipMenu 2 和 KeyKey Mac 應用程式如何處理你的資料（它們把資料保留在你的裝置上）。"
+  },
+  "about": {
+    "title": "為何是 Dragon App — 我喜愛的應用程式，繼續存活",
+    "description": "Dragon App 讓原本開發者無力再維護的 macOS 應用程式重獲新生。工作室的故事，以及每款應用程式背後的承諾。",
+    "h1": "我喜愛的應用程式，繼續存活",
+    "story": "這裡的每款應用程式都是我每天依賴的 — 而其原本的維護者已無力繼續。與其眼睜睜看着它們在每個新 macOS 版本上損壞，我選擇接手維護。如今它們主要在 AI 的協助下維持運作，這也是為何支持方式是「請我喝 Token」而非咖啡。",
+    "promise_h2": "每款 Dragon App 的承諾",
+    "promise_macos_d": "支援至少最新兩個 macOS 版本。",
+    "promise_langs_d": "提供 7 種語言版本，如本網站。",
+    "promise_channels_d": "3 種安裝方式：GitHub、Homebrew，以及（在可行情況下）Mac App Store。",
+    "promise_icloud_d": "設定可透過 iCloud 在你的 Mac 之間同步。"
+  },
+  "ice-2": {
+    "title": "Ice 2 — Mac 選單列管理工具，為 macOS 26 &amp; 27 重新打造",
+    "description": "Ice 2 是一款免費、開源的 Mac 選單列管理工具 — 隱藏及排列選單列項目，隨時按需顯示。重新打造以支援 macOS 26 和 27。",
+    "eyebrow": "macOS 的選單列管理工具",
+    "h1": "整理你的選單列 — 重回現代 macOS",
+    "sub": "Ice 2 隱藏你不需要的選單列項目，在你需要時帶它們回來，讓你隨心排列選單列。忠實的開源重製版 — 現已支援 macOS 26 和 27。",
+    "demo_caption": "由 Ice 2 管理的 Mac 選單列：不常用的圖示被收納在分隔線後，時鐘、電池、Wi-Fi 和控制中心則保持可見。",
+    "feat1_h": "隱藏選單列項目", "feat1_p": "把不常用的圖示收納在分隔線後，保持選單列整潔。",
+    "feat2_h": "Ice Bar", "feat2_p": "把隱藏的項目移至一條獨立的 Bar，按需顯示。",
+    "feat3_h": "按需顯示", "feat3_p": "點按、快速鍵或懸停在邊緣即可顯示項目。",
+    "support_body": "我在業餘時間免費維護 Ice 2。問題、錯誤回報和功能建議都非常歡迎 — 在 GitHub 開立 issue，我會查看。",
+    "credit_body": "Ice 2 是 <strong><a href=\"https://github.com/jordanbaird/Ice\">Ice</a></strong> 的獨立開源重製版，原版選單列管理工具由 <strong>Jordan Baird</strong> 創作。此 fork 由 Teddy Chan 積極維護，把它帶到現代 macOS。",
+    "faq": [
+      {"q": "Ice 2 有甚麼功能？", "a": "Ice 2 隱藏你不需要的選單列項目，讓選單列保持整潔，並按需帶它們回來 — 點按、快速鍵或懸停皆可。"},
+      {"q": "如何安裝 Ice 2？", "a": "從最新的 GitHub 發佈版下載並拖至「應用程式」資料夾，或以 Homebrew 安裝：brew install --cask teddychan/tap/ice-2。"},
+      {"q": "執行 Ice 2 需要甚麼？", "a": "一部執行 macOS 26 或以上的 Mac。"},
+      {"q": "這是原版 Ice 嗎？", "a": "這是 Ice（原版由 Jordan Baird 創作）的獨立開源重製版，以 GPLv3 授權延續到現代 macOS。"}
+    ]
+  },
+  "clipmenu-2": {
+    "title": "ClipMenu 2 — Mac 剪貼簿管理及記錄工具",
+    "description": "ClipMenu 2 是一款快速、原生的 Mac 剪貼簿管理及記錄應用程式。你複製過的一切，一個快速鍵即可取用 — 可在 GitHub 或 Mac App Store 免費取得。",
+    "eyebrow": "macOS 的剪貼簿管理工具",
+    "h1": "你複製過的一切，一個快速鍵即可取用",
+    "sub": "一款快速、原生的 Mac 剪貼簿管理工具，記住你複製的一切、整理你的片段，並以單一快速鍵在任何地方貼上。",
+    "demo_caption": "ClipMenu 2 剪貼簿記錄彈出視窗，顯示近期複製的項目（附編號）及一張圖片縮圖 — 按 ⌥V 即可在游標處開啟。",
+    "feat1_h": "剪貼簿記錄", "feat1_p": "每次複製都會被記住。在游標處或從選單列彈出近期片段，一按即可貼上。",
+    "feat2_h": "資料夾片段", "feat2_p": "把你經常打的文字 — 回覆、地址、程式碼 — 儲存起來，整理到你自訂的資料夾。",
+    "feat3_h": "JavaScript 動作", "feat3_p": "即時轉換片段：改變大小寫、修剪、編碼 HTML 或 Base64、雜湊、轉換日文等等。",
+    "support_body": "問題、錯誤回報和功能建議隨時歡迎。在 GitHub 開立 issue，我們會回覆你 — 或寫信至 support@dragonapp.com。",
+    "credit_body": "ClipMenu 2 建基於 <strong>Naotaka Morimoto</strong> 原版 <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> 的傳承。它是一款以 Swift 打造的獨立開源重製版 — 懷着對他成果的感激而創作，並以同樣的 MIT 授權發佈。",
+    "faq": [
+      {"q": "App Store 版與 GitHub 版有甚麼分別？", "a": "它們是同一個應用程式。Mac App Store 版本是付費訂閱，加入了 iCloud 同步，並透過 App Store 自動更新。GitHub 版本免費而開源，內建自動更新，並具備除 iCloud 同步以外的每項功能。"},
+      {"q": "為甚麼 ClipMenu 2 要求輔助使用權限？", "a": "macOS 規定應用程式須有輔助使用權限，才能代你貼入另一個應用程式。ClipMenu 2 只用它把你選定的片段放進最前的應用程式。請在 系統設定 → 私隱權與安全性 → 輔助使用 中授權。（App Store 版本已沙盒化，不會用到此項。）"},
+      {"q": "我的剪貼簿資料儲存在哪裡？", "a": "儲存在你的 Mac 上。你的記錄與片段絕不會離開你的裝置 — ClipMenu 2 沒有分析、廣告或追蹤，我們亦絕不會接收你的剪貼簿內容。開啟 iCloud 同步後，片段會透過你自己的私人 iCloud 帳戶傳輸。"},
+      {"q": "如何安裝 ClipMenu 2？", "a": "從最新的 GitHub 發佈版下載並拖至「應用程式」資料夾，或以 Homebrew 安裝：brew install --cask teddychan/tap/clipmenu-2。Mac App Store 版本亦已推出。"}
+    ]
+  },
+  "yahoo-keykey-2": {
+    "title": "Yahoo KeyKey 2 — Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) for Mac",
+    "description": "Yahoo KeyKey 2 是經典 Yahoo! KeyKey（Yahoo!奇摩輸入法）倉頡（倉頡）及速成（速成）輸入法的開源重製版，專為 Mac 而設 — 原生、快速、免費。",
+    "eyebrow": "macOS 的倉頡 &amp; 速成輸入法",
+    "h1": "Yahoo! KeyKey，為現代 macOS 重新打造",
+    "sub": "經典 Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong> 及 <strong>Simplex (速成)</strong> 輸入法，重獲新生 — 原生、快速、開源。",
+    "demo_caption": "Yahoo KeyKey 2 倉頡候選字視窗：輸入部首 日 和 月 會顯示一個有編號的相符字元清單，當中 明 排在首位。",
+    "feat1_h": "倉頡 + 速成 輸入", "feat1_p": "兩種經典模式 — 完整倉頡（倉頡）與速成（速成）— 當你記不起每個部首時，更可用萬用字元 * 配對。",
+    "feat2_h": "依字頻排序 &amp; 自動適應", "feat2_p": "候選字按常用程度排列，你揀選過的字會隨時間排得更前 — 讓你最常用的字詞自然浮上頂端。",
+    "feat3_h": "聯想字詞（聯想字詞）", "feat3_p": "當你輸出一個字後，Yahoo KeyKey 2 會建議通常跟隨的字詞 — 讓常用詞語一按即成。",
+    "support_body": "問題、錯誤回報和功能建議歡迎提出 — 在 GitHub 開立 issue，我會查看。",
+    "credit_body": "Yahoo KeyKey 2 是一款以 Swift 打造的獨立開源重製版，向原版 <strong>Yahoo! KeyKey（Yahoo!奇摩輸入法）</strong> 致敬 — 那是許多 Mac 用家鍾愛的繁體中文輸入法。它把那份體驗帶到現代 macOS，並以 MIT 授權發佈。",
+    "faq": [
+      {"q": "Yahoo KeyKey 2 支援哪些輸入法？", "a": "Yahoo KeyKey 2 是一款繁體中文輸入法，具備兩種模式：倉頡（倉頡）與速成（速成，亦稱 簡易）。它支援以 * 作萬用字元輸入、依字頻排序的候選字、聯想字詞（聯想字詞）、全形標點，以及可選的繁體轉簡體輸出切換。"},
+      {"q": "如何安裝 Yahoo KeyKey 2？", "a": "從 GitHub 下載已簽署及公證的安裝程式（YahooKeyKey2.pkg），按兩下執行，或以 Homebrew 安裝：brew install --cask teddychan/tap/yahoo-keykey-2。然後登出再重新登入，並在 系統設定 ▸ 鍵盤 ▸ 輸入來源 ▸ + ▸ 繁體中文 加入 倉頡 及／或 速成。"},
+      {"q": "執行 Yahoo KeyKey 2 需要甚麼？", "a": "一部採用 Apple Silicon（arm64）並執行 macOS 12 Monterey 或以上的 Mac。Yahoo KeyKey 2 以 Developer ID 簽署並由 Apple 公證，可乾淨開啟。"},
+      {"q": "這是原版 Yahoo! KeyKey 嗎？", "a": "不是。Yahoo KeyKey 2 是一款以 Swift 打造的獨立開源重製版，向原版 Yahoo! KeyKey（Yahoo!奇摩輸入法）致敬，並以 MIT 授權發佈。"}
+    ]
   }
 }

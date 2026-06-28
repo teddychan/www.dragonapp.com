@@ -14,7 +14,31 @@
     "switcher_label": "언어",
     "consent_message": "쿠키를 사용하여 트래픽을 분석하고 Dragon App을 개선합니다. 분석 및 광고 쿠키를 수락하거나 거부할 수 있습니다. 자세한 내용은 <a href=\"/privacy.html\">개인정보 처리방침</a>을 참조하세요.",
     "consent_accept": "모두 수락",
-    "consent_reject": "모두 거부"
+    "consent_reject": "모두 거부",
+    "app_demo_h2": "실제로 작동하는 모습",
+    "app_changelog_h2": "새로운 기능",
+    "app_changelog_sub": "이해하기 쉬운 변경 내역, 최신순.",
+    "app_changelog_auto": "GitHub Releases에서 자동 생성",
+    "app_changelog_view": "GitHub에서 보기",
+    "app_download_h2": "받는 방법",
+    "app_channel_github": "GitHub 릴리스",
+    "app_channel_github_badge": "가장 쉬움 · 무료",
+    "app_channel_brew": "Homebrew",
+    "app_channel_brew_badge": "터미널 · 명령어 하나",
+    "app_channel_mas": "Mac App Store",
+    "app_channel_mas_soon": "곧 출시",
+    "app_token_h2": "토큰 후원하기",
+    "app_token_badge": "개발 지원",
+    "app_token_body": "이 앱들은 대부분 AI의 도움으로 운영됩니다. 커피 대신 지속적인 유지보수에 쓰이는 AI 토큰을 후원해 주세요.",
+    "app_token_cta": "토큰 후원하기",
+    "app_support_h2": "도움이 필요하신가요?",
+    "app_support_cta": "GitHub에서 이슈 열기",
+    "app_credit_kicker": "헌정",
+    "promise_macos": "최신 macOS 2개 버전",
+    "promise_langs": "7개 언어",
+    "promise_channels": "3가지 설치 경로",
+    "promise_icloud": "iCloud 동기화",
+    "promise_link": "내가 이것을 만들고 유지하는 이유"
   },
   "index": {
     "title": "Dragon App — 클래식 Mac 앱을 다시 만들다",
@@ -254,5 +278,86 @@
     "kk_link_home": "KeyKey 홈",
     "kk_link_project": "GitHub의 프로젝트 &amp; 다운로드",
     "kk_link_credits": "크레딧"
+  },
+  "privacy": {
+    "title": "Dragon App — 개인정보 처리방침",
+    "description": "Dragon App 개인정보 처리방침: 이 웹사이트의 동의 기반 분석 방식과 ClipMenu 2, KeyKey Mac 앱이 데이터를 처리하는 방법(기기에 보관됨)을 안내합니다."
+  },
+  "about": {
+    "title": "Dragon App을 만드는 이유 — 내가 사랑하는 앱, 계속 살아있도록",
+    "description": "Dragon App은 원래 제작자가 더 이상 유지하지 않는 macOS 앱을 되살립니다. 스튜디오 뒤에 있는 이야기, 그리고 모든 앱이 담고 있는 약속.",
+    "h1": "내가 사랑하는 앱, 계속 살아있도록",
+    "story": "여기 있는 모든 앱은 제가 매일 쓰는 것들이자, 원작 제작자가 더 이상 유지할 수 없게 된 것들입니다. 새 macOS가 나올 때마다 망가지는 것을 지켜보는 대신, 제가 직접 맡았습니다. 지금은 AI의 도움으로 대부분 유지되고 있으며, 그래서 지원도 커피 대신 '토큰 후원하기'로 운영됩니다.",
+    "promise_h2": "Dragon App의 모든 앱이 약속하는 것",
+    "promise_macos_d": "최신 macOS 2개 버전 이상에서 실행됩니다.",
+    "promise_langs_d": "이 사이트처럼 7개 언어로 제공됩니다.",
+    "promise_channels_d": "3가지 방법으로 설치할 수 있습니다: GitHub, Homebrew, 그리고 가능한 경우 Mac App Store.",
+    "promise_icloud_d": "iCloud를 통해 내 Mac 전체에 설정이 동기화됩니다."
+  },
+  "ice-2": {
+    "title": "Ice 2 — Mac용 메뉴 막대 관리자, macOS 26 &amp; 27에 맞게 새로 구축",
+    "description": "Ice 2는 Mac용 무료 오픈소스 메뉴 막대 관리자입니다 — 메뉴 막대 항목을 숨기고 정리한 뒤 필요할 때 다시 표시합니다. macOS 26과 27을 지원하도록 새로 구축되었습니다.",
+    "eyebrow": "macOS를 위한 메뉴 막대 관리자",
+    "h1": "메뉴 막대를 정리하세요 — 현대 macOS에서 다시",
+    "sub": "Ice 2는 불필요한 메뉴 막대 항목을 숨기고, 필요할 때 다시 보여주며, 막대를 원하는 대로 배치할 수 있게 해줍니다. 충실한 오픈소스 재구현 — 이제 macOS 26과 27에서 실행됩니다.",
+    "demo_caption": "Ice 2가 관리하는 Mac 메뉴 막대: 잘 쓰지 않는 아이콘은 구분선 뒤에 숨겨지고, 시계, 배터리, Wi-Fi, 제어 센터는 그대로 표시됩니다.",
+    "feat1_h": "메뉴 막대 항목 숨기기",
+    "feat1_p": "잘 쓰지 않는 아이콘을 구분선 뒤에 숨겨 막대를 깔끔하게 유지하세요.",
+    "feat2_h": "Ice Bar",
+    "feat2_p": "숨긴 항목을 필요할 때 나타나는 별도 막대로 옮기세요.",
+    "feat3_h": "필요할 때 표시",
+    "feat3_p": "클릭, 단축키, 또는 모서리를 가리키는 것으로 항목을 나타냅니다.",
+    "support_body": "Ice 2는 여가 시간에 무료로 유지하고 있습니다. 질문, 버그 신고, 기능 요청은 언제나 환영입니다 — GitHub에서 이슈를 열면 검토하겠습니다.",
+    "credit_body": "Ice 2는 <strong>Jordan Baird</strong>가 처음 만든 메뉴 막대 관리자 <strong><a href=\"https://github.com/jordanbaird/Ice\">Ice</a></strong>의 독립적인 오픈소스 재구현입니다. Teddy Chan이 적극적으로 유지 관리하는 이 포크는 현대 macOS에서 계속 이어집니다.",
+    "faq": [
+      {"q": "Ice 2는 무엇을 하나요?", "a": "Ice 2는 불필요한 메뉴 막대 항목을 숨겨 막대를 깔끔하게 유지하고, 클릭, 단축키, 또는 모서리를 가리키는 것으로 필요할 때 다시 보여줍니다."},
+      {"q": "Ice 2는 어떻게 설치하나요?", "a": "최신 GitHub 릴리스에서 다운로드해 응용 프로그램 폴더로 드래그하거나, Homebrew로 설치하세요: brew install --cask teddychan/tap/ice-2."},
+      {"q": "Ice 2를 실행하려면 무엇이 필요한가요?", "a": "macOS 26 이상을 실행하는 Mac이 필요합니다."},
+      {"q": "이것이 원작 Ice인가요?", "a": "Ice(원작: Jordan Baird)의 독립적인 오픈소스 재구현으로, GPLv3 라이선스 하에 현대 macOS에서 이어지고 있습니다."}
+    ]
+  },
+  "clipmenu-2": {
+    "title": "ClipMenu 2 — Mac용 클립보드 관리 &amp; 기록 앱",
+    "description": "ClipMenu 2는 빠르고 네이티브한 Mac용 클립보드 관리 및 기록 앱입니다. 복사한 모든 것을 단축키 하나로 — GitHub 또는 Mac App Store에서 무료로 받으세요.",
+    "eyebrow": "macOS를 위한 클립보드 관리 앱",
+    "h1": "복사한 모든 것을 단축키 하나로",
+    "sub": "복사한 모든 것을 기억하고, 스니펫을 정리하며, 어디에나 붙여넣는 빠르고 네이티브한 Mac용 클립보드 관리 앱입니다 — 단축키 하나로.",
+    "demo_caption": "최근 복사한 항목을 번호와 이미지 썸네일과 함께 보여주는 ClipMenu 2 클립보드 기록 팝업 — ⌥V를 눌러 커서 위치에서 바로 열 수 있습니다.",
+    "feat1_h": "클립보드 기록",
+    "feat1_p": "모든 복사가 기억됩니다. 최근 클립을 커서 위치나 메뉴 막대에서 바로 띄워 단축키 하나로 붙여넣으세요.",
+    "feat2_h": "폴더 속 스니펫",
+    "feat2_p": "늘 입력하는 텍스트 — 답장, 주소, 코드 — 를 저장하고, 직접 관리하는 폴더로 정리하세요.",
+    "feat3_h": "JavaScript 액션",
+    "feat3_p": "클립을 즉석에서 변환하세요: 대소문자 변경, 공백 제거, HTML 또는 Base64 인코딩, 해시, 일본어 변환 등.",
+    "support_body": "질문, 버그 신고, 기능 요청은 언제나 환영합니다. GitHub에서 이슈를 열어 주시면 답변드리겠습니다 — 또는 support@dragonapp.com으로 연락하세요.",
+    "credit_body": "ClipMenu 2는 <strong>Naotaka Morimoto</strong>의 원작 <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a>의 유산 위에 만들어졌습니다. Swift로 만든 독립적인 오픈소스 재구현으로 — 그의 작업에 감사하며 제작되었고 동일한 MIT License로 배포됩니다.",
+    "faq": [
+      {"q": "App Store 버전과 GitHub 버전의 차이는 무엇인가요?", "a": "같은 앱입니다. Mac App Store 에디션은 iCloud 동기화를 추가하고 App Store를 통해 자동으로 업데이트되는 유료 구독입니다. GitHub 에디션은 무료 오픈소스로, 내장 자동 업데이트를 제공하며 iCloud 동기화를 제외한 모든 기능을 포함합니다."},
+      {"q": "ClipMenu 2는 왜 손쉬운 사용 권한을 요청하나요?", "a": "macOS에서는 앱이 사용자를 대신해 다른 앱에 붙여넣으려면 손쉬운 사용 권한이 필요합니다. ClipMenu 2는 선택한 클립을 맨 앞 앱에 넣을 때만 이 권한을 사용합니다. 시스템 설정 → 개인정보 보호 &amp; 보안 → 손쉬운 사용에서 권한을 부여하세요. (App Store 에디션은 샌드박싱되어 이 권한을 사용하지 않습니다.)"},
+      {"q": "내 클립보드 데이터는 어디에 저장되나요?", "a": "당신의 Mac에 저장됩니다. 기록과 스니펫은 절대 기기를 떠나지 않으며 — ClipMenu 2에는 분석, 광고, 추적이 없고, 우리는 결코 당신의 클립보드 내용을 받지 않습니다. iCloud 동기화를 켜면 스니펫이 본인의 비공개 iCloud 계정을 통해 전송됩니다."},
+      {"q": "ClipMenu 2는 어떻게 설치하나요?", "a": "최신 GitHub 릴리스에서 다운로드해 응용 프로그램 폴더로 드래그하거나, Homebrew로 설치하세요: brew install --cask teddychan/tap/clipmenu-2. Mac App Store 에디션도 제공됩니다."}
+    ]
+  },
+  "yahoo-keykey-2": {
+    "title": "Yahoo KeyKey 2 — Mac용 Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成)",
+    "description": "Yahoo KeyKey 2는 클래식 Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡)와 Simplex (速成) 입력기를 Mac용으로 다시 만든 오픈소스입니다 — 네이티브하고, 빠르며, 무료입니다.",
+    "eyebrow": "macOS를 위한 Cangjie &amp; Simplex 입력기",
+    "h1": "Yahoo! KeyKey, 현대 macOS에 맞게 다시 만들다",
+    "sub": "클래식 Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong>와 <strong>Simplex (速成)</strong> 입력기가 다시 태어났습니다 — 네이티브하고, 빠르며, 오픈소스입니다.",
+    "demo_caption": "Yahoo KeyKey 2 Cangjie 후보 창: 부수 日과 月을 입력하면 일치하는 글자의 번호 목록이 표시되며, 明이 먼저 선택됩니다.",
+    "feat1_h": "倉頡 + 速成 입력",
+    "feat1_p": "두 가지 클래식 모드 — 완전한 Cangjie (倉頡)와 Simplex (速成) — 그리고 모든 부수가 기억나지 않을 때 쓰는 와일드카드 * 매칭을 지원합니다.",
+    "feat2_h": "빈도순 정렬 &amp; 적응형",
+    "feat2_p": "후보는 사용 빈도에 따라 정렬되며, 자주 선택하는 글자일수록 시간이 지나면서 상위로 올라옵니다 — 가장 많이 쓰는 단어가 맨 위에 표시됩니다.",
+    "feat3_h": "연관 어휘 (聯想字詞)",
+    "feat3_p": "글자를 확정하면 Yahoo KeyKey 2가 보통 뒤따르는 단어를 제안합니다 — 자주 쓰는 어구를 한 번의 키 입력으로 완성할 수 있습니다.",
+    "support_body": "질문, 버그 신고, 기능 요청은 언제나 환영합니다 — GitHub에서 이슈를 열면 검토하겠습니다.",
+    "credit_body": "Yahoo KeyKey 2는 Swift로 만든 독립적인 오픈소스 재구현으로, 많은 Mac 사용자가 사랑했던 번체 중국어 입력기 원작 <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong>에 대한 헌정으로 제작되었습니다. 그 경험을 현대 macOS로 이어가며 MIT License로 배포됩니다.",
+    "faq": [
+      {"q": "Yahoo KeyKey 2는 어떤 입력기를 지원하나요?", "a": "Yahoo KeyKey 2는 두 가지 모드를 갖춘 번체 중국어 입력기입니다: Cangjie (倉頡)와 Simplex (速成, 簡易라고도 함). *를 이용한 와일드카드 입력, 빈도순 후보, 연관 어휘 (聯想字詞), 전각 문장 부호, 그리고 선택형 번체-간체 출력 전환을 지원합니다."},
+      {"q": "Yahoo KeyKey 2는 어떻게 설치하나요?", "a": "GitHub에서 서명 및 공증된 설치 프로그램(YahooKeyKey2.pkg)을 받아 더블 클릭하거나, Homebrew로 설치하세요: brew install --cask teddychan/tap/yahoo-keykey-2. 그런 다음 로그아웃 후 다시 로그인하고, 시스템 설정 ▸ 키보드 ▸ 입력 소스 ▸ + ▸ 번체 중국어에서 倉頡 및/또는 速成을 추가하세요."},
+      {"q": "Yahoo KeyKey 2를 실행하려면 무엇이 필요한가요?", "a": "macOS 12 Monterey 이상을 실행하는 Apple Silicon (arm64) Mac이 필요합니다. Yahoo KeyKey 2는 Developer ID로 서명되고 Apple이 공증했으므로 깔끔하게 열립니다."},
+      {"q": "이것이 원작 Yahoo! KeyKey인가요?", "a": "아닙니다. Yahoo KeyKey 2는 Swift로 만든 독립적인 오픈소스 재구현으로, 원작 Yahoo! KeyKey (Yahoo!奇摩輸入法)에 대한 헌정으로 제작되었습니다. MIT License로 배포됩니다."}
+    ]
   }
 }

@@ -14,7 +14,31 @@
     "switcher_label": "Idioma",
     "consent_message": "Usamos cookies para medir el tráfico y mejorar Dragon App. Puedes aceptar o rechazar las cookies de análisis y publicidad. Consulta nuestra <a href=\"/privacy.html\">Política de privacidad</a>.",
     "consent_accept": "Aceptar todo",
-    "consent_reject": "Rechazar todo"
+    "consent_reject": "Rechazar todo",
+    "app_demo_h2": "Míralo en acción",
+    "app_changelog_h2": "Novedades",
+    "app_changelog_sub": "Notas en lenguaje sencillo, las más recientes primero.",
+    "app_changelog_auto": "Generado automáticamente desde GitHub Releases",
+    "app_changelog_view": "Ver en GitHub",
+    "app_download_h2": "Cómo conseguirlo",
+    "app_channel_github": "Versión en GitHub",
+    "app_channel_github_badge": "Lo más fácil · gratis",
+    "app_channel_brew": "Homebrew",
+    "app_channel_brew_badge": "Terminal · un solo comando",
+    "app_channel_mas": "Mac App Store",
+    "app_channel_mas_soon": "Próximamente",
+    "app_token_h2": "Invítame a un Token",
+    "app_token_badge": "Apoya el desarrollo",
+    "app_token_body": "Estas apps se mantienen principalmente con IA. En lugar de un café, puedes contribuir con los tokens de IA que financian el mantenimiento continuo.",
+    "app_token_cta": "Invítame a un Token",
+    "app_support_h2": "¿Necesitas ayuda?",
+    "app_support_cta": "Abre una incidencia en GitHub",
+    "app_credit_kicker": "En homenaje",
+    "promise_macos": "Últimos 2 macOS",
+    "promise_langs": "7 idiomas",
+    "promise_channels": "3 canales",
+    "promise_icloud": "Sincronización con iCloud",
+    "promise_link": "Por qué creo y mantengo estas apps"
   },
   "index": {
     "title": "Dragon App — Aplicaciones clásicas de Mac, reconstruidas",
@@ -254,5 +278,86 @@
     "kk_link_home": "Inicio de KeyKey",
     "kk_link_project": "Proyecto y descargas en GitHub",
     "kk_link_credits": "Créditos"
+  },
+  "privacy": {
+    "title": "Dragon App — Política de privacidad",
+    "description": "Política de privacidad de Dragon App: cómo funcionan las analíticas basadas en consentimiento de este sitio web, y cómo gestionan tus datos las apps de Mac ClipMenu 2 y KeyKey (los mantienen en tu dispositivo)."
+  },
+  "about": {
+    "title": "Por qué Dragon App — apps que amo, mantenidas vivas",
+    "description": "Dragon App revive apps de macOS que sus creadores originales ya no pueden mantener. La historia del estudio y la promesa detrás de cada app.",
+    "h1": "Apps que amo, mantenidas vivas",
+    "story": "Cada app de aquí es una que uso a diario y que su mantenedor original ya no podía seguir adelante. En lugar de verlas romperse con cada nueva versión de macOS, las adopté. Hoy se mantienen en gran medida con la ayuda de la IA, por eso el soporte funciona con «Invítame a un Token» en lugar de café.",
+    "promise_h2": "Lo que promete cada app de Dragon App",
+    "promise_macos_d": "Funciona en al menos las dos últimas versiones de macOS.",
+    "promise_langs_d": "Disponible en 7 idiomas, como este sitio.",
+    "promise_channels_d": "Instalable de 3 formas: GitHub, Homebrew y (cuando es posible) la Mac App Store.",
+    "promise_icloud_d": "Los ajustes se sincronizan entre tus Mac mediante iCloud."
+  },
+  "ice-2": {
+    "title": "Ice 2 — Gestor de barra de menús para Mac, reconstruido para macOS 26 y 27",
+    "description": "Ice 2 es un gestor de barra de menús para Mac, gratuito y de código abierto: oculta y reorganiza los elementos de la barra de menús y muéstralos cuando los necesites. Reconstruido para macOS 26 y 27.",
+    "eyebrow": "El gestor de barra de menús para macOS",
+    "h1": "Domina tu barra de menús — de vuelta en el macOS moderno",
+    "sub": "Ice 2 oculta los elementos de la barra de menús que no necesitas, los recupera cuando los quieres y te deja organizarla a tu manera. Una reconstrucción fiel y de código abierto que ya funciona en macOS 26 y 27.",
+    "demo_caption": "La barra de menús de un Mac gestionada por Ice 2: los iconos de uso poco frecuente están ocultos tras un divisor, mientras que el reloj, la batería, el Wi-Fi y el Centro de control permanecen visibles.",
+    "feat1_h": "Oculta elementos de la barra de menús",
+    "feat1_p": "Guarda los iconos que usas poco tras un divisor para que la barra quede despejada.",
+    "feat2_h": "La barra de Ice",
+    "feat2_p": "Mueve los elementos ocultos a una barra separada que aparece bajo demanda.",
+    "feat3_h": "Muéstralos cuando quieras",
+    "feat3_p": "Revela los elementos con un clic, un atajo o pasando el cursor por el borde.",
+    "support_body": "Mantengo Ice 2 gratis en mi tiempo libre. Las preguntas, los informes de errores y las sugerencias de funciones son siempre bienvenidos: abre una incidencia en GitHub y le echaré un vistazo.",
+    "credit_body": "Ice 2 es una reconstrucción independiente y de código abierto de <strong><a href=\"https://github.com/jordanbaird/Ice\">Ice</a></strong>, el gestor de barra de menús creado originalmente por <strong>Jordan Baird</strong>. Esta bifurcación, mantenida activamente por Teddy Chan, lo lleva al macOS moderno.",
+    "faq": [
+      {"q": "¿Qué hace Ice 2?", "a": "Ice 2 oculta los elementos de la barra de menús que no necesitas para que quede ordenada, y los recupera bajo demanda: con un clic, un atajo o pasando el cursor por el borde."},
+      {"q": "¿Cómo instalo Ice 2?", "a": "Descárgalo desde la última versión en GitHub y arrástralo a Aplicaciones, o instálalo con Homebrew: brew install --cask teddychan/tap/ice-2."},
+      {"q": "¿Qué necesito para usar Ice 2?", "a": "Un Mac con macOS 26 o posterior."},
+      {"q": "¿Es este el Ice original?", "a": "Es una reconstrucción independiente y de código abierto de Ice (creado originalmente por Jordan Baird), llevada al macOS moderno bajo GPLv3."}
+    ]
+  },
+  "clipmenu-2": {
+    "title": "ClipMenu 2 — Gestor de portapapeles &amp; historial para Mac",
+    "description": "ClipMenu 2 es un gestor de portapapeles e historial nativo y rápido para Mac. Todo lo que copiaste, a un atajo de distancia: gratis en GitHub o en la Mac App Store.",
+    "eyebrow": "El gestor de portapapeles para macOS",
+    "h1": "Todo lo que copiaste, a un atajo de distancia",
+    "sub": "Un gestor de portapapeles nativo y rápido para Mac que recuerda todo lo que copias, organiza tus fragmentos y pega en cualquier sitio, con un solo atajo.",
+    "demo_caption": "Ventana emergente del historial del portapapeles de ClipMenu 2 con elementos copiados recientes numerados y la miniatura de una imagen: pulsa ⌥V para abrirla junto al cursor.",
+    "feat1_h": "Historial del portapapeles",
+    "feat1_p": "Cada copia se recuerda. Despliega tus clips recientes junto al cursor o desde la barra de menús y pega con una pulsación.",
+    "feat2_h": "Fragmentos en carpetas",
+    "feat2_p": "Guarda el texto que escribes a todas horas —respuestas, direcciones, código— y organízalo en carpetas que tú controlas.",
+    "feat3_h": "Acciones de JavaScript",
+    "feat3_p": "Transforma clips al vuelo: cambia mayúsculas, recorta, codifica en HTML o Base64, calcula hashes, convierte japonés y mucho más.",
+    "support_body": "Las preguntas, los informes de errores y las sugerencias de funciones son siempre bienvenidos. Abre una incidencia en GitHub y te responderemos, o escribe a support@dragonapp.com.",
+    "credit_body": "ClipMenu 2 se construye sobre el legado del <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> original de <strong>Naotaka Morimoto</strong>. Es una reconstrucción independiente y de código abierto en Swift, creada con gratitud por su trabajo y publicada bajo la misma Licencia MIT.",
+    "faq": [
+      {"q": "¿Cuál es la diferencia entre las versiones de la App Store y de GitHub?", "a": "Son la misma app. La edición de la Mac App Store es una suscripción de pago que añade sincronización con iCloud y se actualiza automáticamente a través de la App Store. La edición de GitHub es gratuita y de código abierto, con actualización automática integrada, e incluye todas las funciones excepto la sincronización con iCloud."},
+      {"q": "¿Por qué ClipMenu 2 pide permiso de Accesibilidad?", "a": "macOS requiere permiso de Accesibilidad para que una app pegue en otra en tu nombre. ClipMenu 2 lo usa únicamente para depositar el clip seleccionado en la app en primer plano. Concédelo en Ajustes del Sistema → Privacidad &amp; Seguridad → Accesibilidad. (La edición de la App Store está en zona protegida y no usa esto.)"},
+      {"q": "¿Dónde se almacenan los datos de mi portapapeles?", "a": "En tu Mac. Tu historial y tus fragmentos nunca salen de tus dispositivos: ClipMenu 2 no tiene analíticas, anuncios ni seguimiento, y nunca recibimos el contenido de tu portapapeles. Con la sincronización con iCloud activada, los fragmentos viajan a través de tu propia cuenta privada de iCloud."},
+      {"q": "¿Cómo instalo ClipMenu 2?", "a": "Descárgalo desde la última versión en GitHub y arrástralo a Aplicaciones, o instálalo con Homebrew: brew install --cask teddychan/tap/clipmenu-2. También está disponible en la Mac App Store."}
+    ]
+  },
+  "yahoo-keykey-2": {
+    "title": "Yahoo KeyKey 2 — Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) para Mac",
+    "description": "Yahoo KeyKey 2 es una reconstrucción de código abierto del clásico método de entrada Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) y Simplex (速成) para Mac: nativo, rápido y gratuito.",
+    "eyebrow": "El método de entrada Cangjie &amp; Simplex para macOS",
+    "h1": "Yahoo! KeyKey, reconstruido para el macOS moderno",
+    "sub": "El clásico método de entrada <strong>Cangjie (倉頡)</strong> y <strong>Simplex (速成)</strong> de Yahoo!奇摩輸入法, renacido: nativo, rápido y de código abierto.",
+    "demo_caption": "Ventana de candidatos Cangjie de Yahoo KeyKey 2: al escribir los radicales 日 y 月 se muestra una lista numerada de caracteres coincidentes, con 明 seleccionado en primer lugar.",
+    "feat1_h": "Entrada 倉頡 + 速成",
+    "feat1_p": "Ambos modos clásicos — Cangjie (倉頡) completo y Simplex (速成) — con coincidencia comodín * para cuando no recuerdas todos los radicales.",
+    "feat2_h": "Ordenado por frecuencia &amp; adaptativo",
+    "feat2_p": "Los candidatos se ordenan según su frecuencia de uso, y los caracteres que eliges suben de posición con el tiempo, de modo que tus palabras más usadas quedan arriba.",
+    "feat3_h": "Frases asociadas (聯想字詞)",
+    "feat3_p": "Después de confirmar un carácter, Yahoo KeyKey 2 sugiere las palabras que suelen seguirle, así las frases habituales se completan con una sola pulsación.",
+    "support_body": "Las preguntas, los informes de errores y las sugerencias de funciones son bienvenidos: abre una incidencia en GitHub y le echaré un vistazo.",
+    "credit_body": "Yahoo KeyKey 2 es una reconstrucción independiente y de código abierto en Swift, creada en homenaje al original <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong>, el método de entrada de chino tradicional que tantos usuarios de Mac adoraron. Lleva esa experiencia al macOS moderno y se publica bajo la Licencia MIT.",
+    "faq": [
+      {"q": "¿Qué métodos de entrada admite Yahoo KeyKey 2?", "a": "Yahoo KeyKey 2 es un método de entrada de chino tradicional con dos modos: Cangjie (倉頡) y Simplex (速成, también llamado 簡易). Admite entrada con comodín mediante *, candidatos ordenados por frecuencia, frases asociadas (聯想字詞), puntuación de ancho completo y un conmutador opcional de salida de tradicional a simplificado."},
+      {"q": "¿Cómo instalo Yahoo KeyKey 2?", "a": "Descarga el instalador firmado y notarizado (YahooKeyKey2.pkg) desde GitHub y haz doble clic en él, o instálalo con Homebrew: brew install --cask teddychan/tap/yahoo-keykey-2. Después, cierra la sesión y vuelve a iniciarla, y añade 倉頡 o 速成 en Ajustes del Sistema ▸ Teclado ▸ Fuentes de entrada ▸ + ▸ Chino tradicional."},
+      {"q": "¿Qué necesito para usar Yahoo KeyKey 2?", "a": "Un Mac con Apple Silicon (arm64) que ejecute macOS 12 Monterey o posterior. Yahoo KeyKey 2 está firmado con un Developer ID y notarizado por Apple, así que se abre sin problemas."},
+      {"q": "¿Es este el Yahoo! KeyKey original?", "a": "No. Yahoo KeyKey 2 es una reconstrucción independiente y de código abierto en Swift, creada en homenaje al original Yahoo! KeyKey (Yahoo!奇摩輸入法). Se publica bajo la Licencia MIT."}
+    ]
   }
 }
