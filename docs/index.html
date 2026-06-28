@@ -85,7 +85,7 @@
 
   </script>
   <title>Dragon App — Classic Mac apps, rebuilt</title>
-  <meta name="description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — starting with ClipMenu 2 and KeyKey.">
+  <meta name="description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — ClipMenu 2, Yahoo! KeyKey 2, and Ice 2.">
   <link rel="canonical" href="https://www.dragonapp.com/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/dragon.svg">
@@ -105,12 +105,12 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://www.dragonapp.com/">
   <meta property="og:title" content="Dragon App — Classic Mac apps, rebuilt">
-  <meta property="og:description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — starting with ClipMenu 2 and KeyKey.">
+  <meta property="og:description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — ClipMenu 2, Yahoo! KeyKey 2, and Ice 2.">
   <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dragon App — Classic Mac apps, rebuilt">
-  <meta name="twitter:description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — starting with ClipMenu 2 and KeyKey.">
+  <meta name="twitter:description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — ClipMenu 2, Yahoo! KeyKey 2, and Ice 2.">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
   <style>
@@ -435,6 +435,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
 .lang-switch[open] > summary { color: var(--fg); border-color: var(--accent); }
 .lang-switch .globe { width: 16px; height: 16px; flex: none; }
 .lang-menu { position: absolute; right: 0; margin-top: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 6px; min-width: 168px; box-shadow: var(--shadow); z-index: 60; }
+.apps-switch .lang-menu { left: 0; right: auto; }
 .lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); font-size: 0.95rem; }
 .lang-menu a:hover { background: var(--surface); text-decoration: none; }
 .lang-menu a.active { color: var(--accent-deep); font-weight: 600; }
@@ -620,7 +621,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Yahoo KeyKey 2",
+      "name": "Yahoo! KeyKey 2",
       "url": "https://www.dragonapp.com/yahoo-keykey-2/"
     }
   ]
@@ -638,12 +639,20 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
           <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
         </summary>
         <div class="nav-links">
-        <a href="#apps">Apps</a>
+        <details class="lang-switch apps-switch">
+          <summary aria-label="Apps" aria-haspopup="true"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span>Apps</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/">All apps</a>
+            <a href="https://www.dragonapp.com/ice-2/">Ice 2</a>
+            <a href="https://www.dragonapp.com/clipmenu-2/">ClipMenu 2</a>
+            <a href="https://www.dragonapp.com/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
+          </div>
+        </details>
         <a href="https://github.com/teddychan">GitHub</a>
         <a href="support.html">Support</a>
         <a class="nav-cta" href="#apps">Browse apps</a>
         <details class="lang-switch">
-          <summary aria-label="Language"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>English</span></summary>
+          <summary aria-label="Language: English"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>English</span></summary>
           <div class="lang-menu">
             <a href="https://www.dragonapp.com/" hreflang="en-US" data-setlang="en-US" class="active" aria-current="true">English</a>
             <a href="https://www.dragonapp.com/zh-Hans/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
@@ -682,7 +691,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       </div>
       <div class="apps"><a class="app-card theme-ice" href="https://www.dragonapp.com/ice-2/"><div class="app-head"><span class="app-icon"><span class="glyph">I</span></span><h3>Ice 2</h3></div><p class="desc">Ice 2 hides the menu bar items you don't need, brings them back when you want them, and lets you lay the bar out your way. A faithful, open-source rebuild — now running on macOS 26 and 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card " href="https://www.dragonapp.com/clipmenu-2/"><div class="app-head"><span class="app-icon"><span class="glyph">C</span></span><h3>ClipMenu 2</h3></div><p class="desc">A fast, native clipboard manager for Mac that remembers everything you copy, organizes your snippets, and pastes anywhere — with a single hotkey.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
-<a class="app-card theme-keykey" href="https://www.dragonapp.com/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo KeyKey 2</h3></div><p class="desc">The classic Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong> and <strong>Simplex (速成)</strong> input method, reborn — native, fast, and open source.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
+<a class="app-card theme-keykey" href="https://www.dragonapp.com/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo! KeyKey 2</h3></div><p class="desc">The classic Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong> and <strong>Simplex (速成)</strong> input method, reborn — native, fast, and open source.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
     </div>
   </section>
 

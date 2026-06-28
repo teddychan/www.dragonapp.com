@@ -18,11 +18,11 @@
       wait_for_update: 500
     });
   </script>
-  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+  <script src="/shared/consent.js" defer></script>
   <title>Dragon App — Support &amp; Help</title>
-  <meta name="description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.">
+  <meta name="description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager), Yahoo! KeyKey 2 (Cangjie &amp; Simplex input method), and Ice 2 (menu bar manager). Setup, permissions, subscriptions, and FAQs.">
   <link rel="canonical" href="https://www.dragonapp.com/support.html">
-  <link rel="icon" href="/appicon.png?v=7d88545a">
+  <link rel="icon" href="/appicon.png">
   <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/support.html">
   <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/support.html">
   <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/support.html">
@@ -36,19 +36,20 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://www.dragonapp.com/support.html">
   <meta property="og:title" content="Dragon App — Support &amp; Help">
-  <meta property="og:description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.">
+  <meta property="og:description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager), Yahoo! KeyKey 2 (Cangjie &amp; Simplex input method), and Ice 2 (menu bar manager). Setup, permissions, subscriptions, and FAQs.">
   <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dragon App — Support &amp; Help">
-  <meta name="twitter:description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager) and KeyKey (Cangjie &amp; Simplex input method). Setup, permissions, subscriptions, and FAQs.">
+  <meta name="twitter:description" content="Support and help for Dragon App's Mac apps — ClipMenu 2 (clipboard manager), Yahoo! KeyKey 2 (Cangjie &amp; Simplex input method), and Ice 2 (menu bar manager). Setup, permissions, subscriptions, and FAQs.">
   <meta name="twitter:image" content="https://www.dragonapp.com/appicon.png">
-  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+  <script src="/shared/i18n.js" defer></script>
   <style>
     :root {
       --bg: #ffffff;
       --fg: #1d1d1f;
       --muted: #6e6e73;
       --accent: #1857c8;
+      --accent-btn: #1857c8;
       --card: #f5f8fd;
       --border: #dde6f2;
     }
@@ -58,6 +59,7 @@
         --fg: #f1f4f8;
         --muted: #9aa7b5;
         --accent: #5aa6f4;
+        --accent-btn: #1857c8;
         --card: #161c24;
         --border: #28323f;
       }
@@ -82,6 +84,7 @@
     p { margin: 0 0 14px; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .card a:not(.cta), .faq a, footer a { text-decoration: underline; }
     code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; }
     .logo { width: 72px; height: 72px; border-radius: 16px; }
     .card {
@@ -93,7 +96,7 @@
     }
     .cta {
       display: inline-block;
-      background: var(--accent);
+      background: var(--accent-btn);
       color: #fff;
       padding: 11px 22px;
       border-radius: 980px;
@@ -118,6 +121,8 @@
     .lang-switch[open] > summary { border-color: var(--accent); }
     .lang-switch .globe { width: 16px; height: 16px; flex: none; }
     .lang-menu { position: absolute; right: 0; margin-top: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 6px; min-width: 160px; box-shadow: 0 12px 30px rgba(0,0,0,0.18); z-index: 60; }
+    .apps-switch .lang-menu { left: 0; right: auto; }
+    .topbar { gap: 12px; }
     .lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); }
     .lang-menu a:hover { background: var(--card); text-decoration: none; }
     .lang-menu a.active { color: var(--accent); font-weight: 600; }
@@ -131,7 +136,7 @@
     .consent-btn { font-family: inherit; font-size: 0.9rem; font-weight: 600; padding: 9px 18px; border-radius: 10px; cursor: pointer; border: 1px solid var(--border); }
     .consent-reject { background: var(--bg); color: var(--fg); }
     .consent-reject:hover { background: var(--card); }
-    .consent-accept { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .consent-accept { background: var(--accent-btn); color: #fff; border-color: var(--accent-btn); }
     .consent-accept:hover { opacity: 0.9; }
     @media (max-width: 560px) { .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
   </style>
@@ -139,9 +144,17 @@
 <body>
   <div class="wrap">
     <div class="topbar">
-      <p class="home"><a href="./">← All apps</a></p>
+        <details class="lang-switch apps-switch">
+          <summary aria-label="Apps" aria-haspopup="true"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span>Apps</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/">All apps</a>
+            <a href="https://www.dragonapp.com/ice-2/">Ice 2</a>
+            <a href="https://www.dragonapp.com/clipmenu-2/">ClipMenu 2</a>
+            <a href="https://www.dragonapp.com/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
+          </div>
+        </details>
         <details class="lang-switch">
-          <summary aria-label="Language"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>English</span></summary>
+          <summary aria-label="Language: English"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>English</span></summary>
           <div class="lang-menu">
             <a href="https://www.dragonapp.com/support.html" hreflang="en-US" data-setlang="en-US" class="active" aria-current="true">English</a>
             <a href="https://www.dragonapp.com/zh-Hans/support.html" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
@@ -154,9 +167,9 @@
         </details>
     </div>
     <header>
-      <img class="logo" src="/appicon.png?v=7d88545a" alt="Dragon App" width="72" height="72" decoding="async">
+      <img class="logo" src="/appicon.png" alt="Dragon App" width="72" height="72" decoding="async">
       <h1>Support</h1>
-      <p class="tagline">Help for ClipMenu 2 and KeyKey.</p>
+      <p class="tagline">Help for ClipMenu 2, Yahoo! KeyKey 2, and Ice 2.</p>
     </header>
 
     <h2>ClipMenu 2</h2>
@@ -191,14 +204,14 @@
     <h3>Links</h3>
     <div class="card">
       <p>
-        <a href="clipmenu/">Project home &amp; downloads</a><br>
+        <a href="clipmenu-2/">Project home &amp; downloads</a><br>
         <a href="https://github.com/teddychan/clipmenu-2/issues">Report a bug / request a feature</a><br>
         <a href="/privacy.html">Privacy Policy</a><br>
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
       </p>
     </div>
 
-    <h2>KeyKey</h2>
+    <h2>Yahoo! KeyKey 2</h2>
     <p>The Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) input method, rebuilt for macOS.</p>
     <div class="card">
       <p>Questions, bug reports, and feature requests go to the KeyKey issue tracker. We read every one.</p>
@@ -230,11 +243,43 @@
     <h3>Links</h3>
     <div class="card">
       <p>
-        <a href="keykey/">KeyKey home</a><br>
+        <a href="yahoo-keykey-2/">Yahoo! KeyKey 2 home</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2">Project &amp; downloads on GitHub</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2/issues">Report a bug / request a feature</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/CREDITS.md">Credits</a><br>
         <a href="https://github.com/teddychan/yahoo-keykey-2/blob/main/LICENSE">License (MIT)</a>
+      </p>
+    </div>
+
+    <h2>Ice 2</h2>
+    <p>The menu bar manager for macOS — hide, arrange, and reveal your menu bar items.</p>
+    <div class="card">
+      <p>Questions, bug reports, and feature requests go to the Ice 2 issue tracker. We read every one.</p>
+      <p><a class="cta" href="https://github.com/teddychan/ice-2/issues">Open an issue on GitHub →</a></p>
+      <p style="margin-top:14px">Prefer email? Write to <a href="mailto:support@dragonapp.com">support@dragonapp.com</a> and we'll get back to you.</p>
+    </div>
+
+    <h3>Frequently asked questions</h3>
+    <dl class="faq">
+      <dt>How do I install Ice 2?</dt>
+      <dd>Download from the <a href="https://github.com/teddychan/ice-2/releases/latest">latest release</a> and drag it to Applications, or run <code>brew install --cask teddychan/tap/ice-2</code>.</dd>
+
+      <dt>How do I hide and reveal menu bar items?</dt>
+      <dd>⌘-drag the divider so the items to its left stay hidden. Click the Ice 2 icon, press your hotkey, or hover the edge to reveal them again.</dd>
+
+      <dt>What do I need to run Ice 2?</dt>
+      <dd>A Mac running macOS 26 or later.</dd>
+
+      <dt>How do I uninstall Ice 2?</dt>
+      <dd>Run <code>brew uninstall --cask ice-2</code>, or quit Ice 2 and drag it from Applications to the Trash.</dd>
+    </dl>
+
+    <h3>Links</h3>
+    <div class="card">
+      <p>
+        <a href="ice-2/">Ice 2 home</a><br>
+        <a href="https://github.com/teddychan/ice-2/issues">Report a bug / request a feature</a><br>
+        <a href="https://github.com/teddychan/ice-2/blob/main/LICENSE">License (GPLv3)</a>
       </p>
     </div>
 

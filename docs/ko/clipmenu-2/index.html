@@ -18,7 +18,7 @@
       wait_for_update: 500
     });
   </script>
-  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+  <script src="/shared/consent.js" defer></script>
   <title>ClipMenu 2 — Mac용 클립보드 관리 &amp; 기록 앱</title>
   <meta name="description" content="ClipMenu 2는 빠르고 네이티브한 Mac용 클립보드 관리 및 기록 앱입니다. 복사한 모든 것을 단축키 하나로 — GitHub 또는 Mac App Store에서 무료로 받으세요.">
   <link rel="canonical" href="https://www.dragonapp.com/ko/clipmenu-2/">
@@ -45,8 +45,8 @@
   <meta name="twitter:description" content="ClipMenu 2는 빠르고 네이티브한 Mac용 클립보드 관리 및 기록 앱입니다. 복사한 모든 것을 단축키 하나로 — GitHub 또는 Mac App Store에서 무료로 받으세요.">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css?v=c3937f89">
-  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+  <link rel="stylesheet" href="/shared/dragon.css">
+  <script src="/shared/i18n.js" defer></script>
 
   <script type="application/ld+json">
 {
@@ -144,13 +144,21 @@
           <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
         </summary>
         <div class="nav-links">
-        <a href="../">All apps</a>
+        <details class="lang-switch apps-switch">
+          <summary aria-label="앱" aria-haspopup="true"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span>앱</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/ko/">모든 앱</a>
+            <a href="https://www.dragonapp.com/ko/ice-2/">Ice 2</a>
+            <a href="https://www.dragonapp.com/ko/clipmenu-2/">ClipMenu 2</a>
+            <a href="https://www.dragonapp.com/ko/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
+          </div>
+        </details>
         <a href="#demo">Features</a>
         <a href="#changelog">What's new</a>
         <a href="#download">Download</a>
         <a class="nav-cta" href="#download">Download</a>
         <details class="lang-switch">
-          <summary aria-label="언어"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>한국어</span></summary>
+          <summary aria-label="언어: 한국어"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>한국어</span></summary>
           <div class="lang-menu">
             <a href="https://www.dragonapp.com/clipmenu-2/" hreflang="en-US" data-setlang="en-US">English</a>
             <a href="https://www.dragonapp.com/zh-Hans/clipmenu-2/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>

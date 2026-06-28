@@ -167,14 +167,37 @@ def build_switcher(current, page, common):
     label = common.get("switcher_label", "Language")
     out = []
     out.append('        <details class="lang-switch">')
-    out.append('          <summary aria-label="%s">%s<span>%s</span></summary>'
-               % (label, GLOBE, NATIVE[current]))
+    out.append('          <summary aria-label="%s: %s">%s<span>%s</span></summary>'
+               % (label, NATIVE[current], GLOBE, NATIVE[current]))
     out.append('          <div class="lang-menu">')
     for l in LANGS:
         active = ' class="active"' if l == current else ""
         aria = ' aria-current="true"' if l == current else ""
         out.append('            <a href="%s" hreflang="%s" data-setlang="%s"%s%s>%s</a>'
                    % (url_for(l, page), l, l, active, aria, NATIVE[l]))
+    out.append('          </div>')
+    out.append('        </details>')
+    return "\n".join(out)
+
+
+def build_app_menu(lang, strings):
+    """A nav dropdown listing every app (+ the hub) so visitors can jump
+    straight to an app. Reuses the .lang-switch / .lang-menu styling that
+    already ships in dragon.css and the support page's inline CSS."""
+    en_common = strings["en-US"].get("common", {})
+    common = strings.get(lang, strings["en-US"]).get("common", {}) or en_common
+    apps_label = common.get("nav_apps") or en_common.get("nav_apps", "Apps")
+    all_label = common.get("nav_all_apps") or en_common.get("nav_all_apps", "All apps")
+    chevron = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+               'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+               '<path d="m6 9 6 6 6-6"/></svg>')
+    out = ['        <details class="lang-switch apps-switch">']
+    out.append('          <summary aria-label="%s" aria-haspopup="true">%s<span>%s</span></summary>'
+               % (apps_label, chevron, apps_label))
+    out.append('          <div class="lang-menu">')
+    out.append('            <a href="%s">%s</a>' % (SITE + "/" + lang_prefix(lang), all_label))
+    for app in load_apps():
+        out.append('            <a href="%s">%s</a>' % (app_url(lang, app["slug"]), app["name"]))
     out.append('          </div>')
     out.append('        </details>')
     return "\n".join(out)
@@ -211,6 +234,7 @@ def render(template, lang, page, strings, missing):
         "OG_LOCALE": OG_LOCALE[lang],
         "ALTERNATES": build_alternates(page),
         "SWITCHER": build_switcher(lang, page, common if common else en_common),
+        "APP_MENU": build_app_menu(lang, strings),
         "URL_INDEX": url_for(lang, "index"),
         "URL_SUPPORT": url_for(lang, "support"),
         "URL_ICE2": app_url(lang, "ice-2"),
@@ -400,7 +424,7 @@ def _faq_safe(v):
 def build_app_switcher(current, slug, common):
     label = common.get("switcher_label", "Language")
     out = ['        <details class="lang-switch">',
-           '          <summary aria-label="%s">%s<span>%s</span></summary>' % (label, GLOBE, NATIVE[current]),
+           '          <summary aria-label="%s: %s">%s<span>%s</span></summary>' % (label, NATIVE[current], GLOBE, NATIVE[current]),
            '          <div class="lang-menu">']
     for l in LANGS:
         active = ' class="active"' if l == current else ""
@@ -425,6 +449,7 @@ def render_app(template, app, lang, strings, missing):
             ['  <link rel="alternate" hreflang="%s" href="%s">' % (l, app_url(l, app["slug"])) for l in LANGS]
             + ['  <link rel="alternate" hreflang="x-default" href="%s">' % app_url("en-US", app["slug"])]),
         "SWITCHER": build_app_switcher(lang, app["slug"], common),
+        "APP_MENU": build_app_menu(lang, strings),
         "CONSENT_HEAD": CONSENT_HEAD_EXTERNAL,
         "CONSENT_BANNER": build_consent(common, en_common),
         "THEME_CLASS": app.get("theme", ""),

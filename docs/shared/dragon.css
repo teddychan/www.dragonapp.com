@@ -319,6 +319,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
 .lang-switch[open] > summary { color: var(--fg); border-color: var(--accent); }
 .lang-switch .globe { width: 16px; height: 16px; flex: none; }
 .lang-menu { position: absolute; right: 0; margin-top: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 6px; min-width: 168px; box-shadow: var(--shadow); z-index: 60; }
+.apps-switch .lang-menu { left: 0; right: auto; }
 .lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); font-size: 0.95rem; }
 .lang-menu a:hover { background: var(--surface); text-decoration: none; }
 .lang-menu a.active { color: var(--accent-deep); font-weight: 600; }

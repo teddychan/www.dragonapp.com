@@ -85,7 +85,7 @@
 
   </script>
   <title>Dragon App — 名作Macアプリを、現代に再構築</title>
-  <meta name="description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです。ClipMenu 2とKeyKeyから始まります。">
+  <meta name="description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです — ClipMenu 2、Yahoo! KeyKey 2、そして Ice 2。">
   <link rel="canonical" href="https://www.dragonapp.com/ja/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/dragon.svg">
@@ -105,12 +105,12 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:url" content="https://www.dragonapp.com/ja/">
   <meta property="og:title" content="Dragon App — 名作Macアプリを、現代に再構築">
-  <meta property="og:description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです。ClipMenu 2とKeyKeyから始まります。">
+  <meta property="og:description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです — ClipMenu 2、Yahoo! KeyKey 2、そして Ice 2。">
   <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dragon App — 名作Macアプリを、現代に再構築">
-  <meta name="twitter:description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです。ClipMenu 2とKeyKeyから始まります。">
+  <meta name="twitter:description" content="Dragon Appは、惜しまれつつ開発が終了した愛されるmacOSアプリを、高速・ネイティブ・オープンソースで蘇らせる小さなスタジオです — ClipMenu 2、Yahoo! KeyKey 2、そして Ice 2。">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
   <style>
@@ -435,6 +435,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
 .lang-switch[open] > summary { color: var(--fg); border-color: var(--accent); }
 .lang-switch .globe { width: 16px; height: 16px; flex: none; }
 .lang-menu { position: absolute; right: 0; margin-top: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 6px; min-width: 168px; box-shadow: var(--shadow); z-index: 60; }
+.apps-switch .lang-menu { left: 0; right: auto; }
 .lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); font-size: 0.95rem; }
 .lang-menu a:hover { background: var(--surface); text-decoration: none; }
 .lang-menu a.active { color: var(--accent-deep); font-weight: 600; }
@@ -620,7 +621,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Yahoo KeyKey 2",
+      "name": "Yahoo! KeyKey 2",
       "url": "https://www.dragonapp.com/ja/yahoo-keykey-2/"
     }
   ]
@@ -638,12 +639,20 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
           <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
         </summary>
         <div class="nav-links">
-        <a href="#apps">アプリ</a>
+        <details class="lang-switch apps-switch">
+          <summary aria-label="アプリ" aria-haspopup="true"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span>アプリ</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/ja/">すべてのアプリ</a>
+            <a href="https://www.dragonapp.com/ja/ice-2/">Ice 2</a>
+            <a href="https://www.dragonapp.com/ja/clipmenu-2/">ClipMenu 2</a>
+            <a href="https://www.dragonapp.com/ja/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
+          </div>
+        </details>
         <a href="https://github.com/teddychan">GitHub</a>
         <a href="support.html">サポート</a>
         <a class="nav-cta" href="#apps">アプリを見る</a>
         <details class="lang-switch">
-          <summary aria-label="言語"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>日本語</span></summary>
+          <summary aria-label="言語: 日本語"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>日本語</span></summary>
           <div class="lang-menu">
             <a href="https://www.dragonapp.com/" hreflang="en-US" data-setlang="en-US">English</a>
             <a href="https://www.dragonapp.com/zh-Hans/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
@@ -682,7 +691,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       </div>
       <div class="apps"><a class="app-card theme-ice" href="https://www.dragonapp.com/ja/ice-2/"><div class="app-head"><span class="app-icon"><span class="glyph">I</span></span><h3>Ice 2</h3></div><p class="desc">Ice 2は不要なメニューバーのアイコンを隠し、必要なときに呼び戻し、バーのレイアウトを自由にカスタマイズできます。忠実なオープンソースの再構築版 — macOS 26・27で動作します。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card " href="https://www.dragonapp.com/ja/clipmenu-2/"><div class="app-head"><span class="app-icon"><span class="glyph">C</span></span><h3>ClipMenu 2</h3></div><p class="desc">コピーしたものすべてを記憶し、スニペットを整理し、どこにでも貼り付けられる — ホットキー一つで使える、Mac向けの高速でネイティブなクリップボードマネージャー。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
-<a class="app-card theme-keykey" href="https://www.dragonapp.com/ja/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo KeyKey 2</h3></div><p class="desc">名作Yahoo!奇摩輸入法の<strong>Cangjie (倉頡)</strong>および<strong>Simplex (速成)</strong>入力メソッドが復活 — ネイティブ・高速・オープンソース。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
+<a class="app-card theme-keykey" href="https://www.dragonapp.com/ja/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo! KeyKey 2</h3></div><p class="desc">名作Yahoo!奇摩輸入法の<strong>Cangjie (倉頡)</strong>および<strong>Simplex (速成)</strong>入力メソッドが復活 — ネイティブ・高速・オープンソース。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
     </div>
   </section>
 
