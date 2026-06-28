@@ -366,7 +366,7 @@ def render_app(template, app, lang, strings, missing):
     en = strings["en-US"]
     cur = strings.get(lang, en)
     page_str = cur.get(app["slug"], en.get(app["slug"], {}))
-    common = cur.get("common", {}) or en.get("common", {})
+    common = {**en.get("common", {}), **(cur.get("common") or {})}
     en_common = en.get("common", {})
 
     specials = {

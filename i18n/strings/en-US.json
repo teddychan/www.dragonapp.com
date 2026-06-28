@@ -284,7 +284,7 @@
     "description": "Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2 and KeyKey Mac apps handle your data (they keep it on your device)."
   },
   "ice-2": {
-    "title": "Ice 2 — Menu Bar Manager for Mac, rebuilt for macOS 26 & 27",
+    "title": "Ice 2 — Menu Bar Manager for Mac, rebuilt for macOS 26 &amp; 27",
     "description": "Ice 2 is a free, open-source menu bar manager for Mac — hide and arrange menu bar items, then show them on demand. Rebuilt to support macOS 26 and 27.",
     "eyebrow": "The menu bar manager for macOS",
     "h1": "Tame your menu bar — back on modern macOS",
@@ -303,7 +303,7 @@
     ]
   },
   "clipmenu-2": {
-    "title": "ClipMenu 2 — Clipboard Manager & History for Mac",
+    "title": "ClipMenu 2 — Clipboard Manager &amp; History for Mac",
     "description": "ClipMenu 2 is a fast, native clipboard manager and history app for Mac. Everything you copied, one shortcut away — free on GitHub or the Mac App Store.",
     "eyebrow": "The clipboard manager for macOS",
     "h1": "Everything you copied, one shortcut away",
@@ -316,20 +316,20 @@
     "credit_body": "ClipMenu 2 is built on the legacy of the original <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> by <strong>Naotaka Morimoto</strong>. It is an independent, open-source rebuild in Swift — created with gratitude for his work and released under the same MIT License.",
     "faq": [
       {"q": "What's the difference between the App Store and GitHub versions?", "a": "They're the same app. The Mac App Store edition is a paid subscription that adds iCloud sync and updates automatically through the App Store. The GitHub edition is free and open source, with built-in auto-update, and includes every feature except iCloud sync."},
-      {"q": "Why does ClipMenu 2 ask for Accessibility permission?", "a": "macOS requires Accessibility permission for an app to paste into another app on your behalf. ClipMenu 2 uses it only to drop your selected clip into the frontmost app. Grant it under System Settings → Privacy & Security → Accessibility. (The App Store edition is sandboxed and doesn't use this.)"},
+      {"q": "Why does ClipMenu 2 ask for Accessibility permission?", "a": "macOS requires Accessibility permission for an app to paste into another app on your behalf. ClipMenu 2 uses it only to drop your selected clip into the frontmost app. Grant it under System Settings → Privacy &amp; Security → Accessibility. (The App Store edition is sandboxed and doesn't use this.)"},
       {"q": "Where is my clipboard data stored?", "a": "On your Mac. Your history and snippets never leave your devices — ClipMenu 2 has no analytics, ads, or tracking, and we never receive your clipboard contents. With iCloud sync on, snippets travel through your own private iCloud account."},
       {"q": "How do I install ClipMenu 2?", "a": "Download from the latest GitHub release and drag it to Applications, or install with Homebrew: brew install --cask teddychan/tap/clipmenu-2. The Mac App Store edition is also available."}
     ]
   },
   "yahoo-keykey-2": {
-    "title": "Yahoo KeyKey 2 — Yahoo!奇摩輸入法 Cangjie (倉頡) & Simplex (速成) for Mac",
+    "title": "Yahoo KeyKey 2 — Yahoo!奇摩輸入法 Cangjie (倉頡) &amp; Simplex (速成) for Mac",
     "description": "Yahoo KeyKey 2 is an open-source rebuild of the classic Yahoo! KeyKey (Yahoo!奇摩輸入法) Cangjie (倉頡) and Simplex (速成) input method for Mac — native, fast, and free.",
-    "eyebrow": "The Cangjie & Simplex input method for macOS",
+    "eyebrow": "The Cangjie &amp; Simplex input method for macOS",
     "h1": "Yahoo! KeyKey, rebuilt for modern macOS",
     "sub": "The classic Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong> and <strong>Simplex (速成)</strong> input method, reborn — native, fast, and open source.",
     "demo_caption": "Yahoo KeyKey 2 Cangjie candidate window: typing the radicals 日 and 月 shows a numbered list of matching characters, with 明 selected first.",
     "feat1_h": "倉頡 + 速成 input", "feat1_p": "Both classic modes — full Cangjie (倉頡) and Simplex (速成) — with wildcard * matching when you don't remember every radical.",
-    "feat2_h": "Frequency-ranked & adaptive", "feat2_p": "Candidates are ordered by how common they are, and the characters you pick rank higher over time — so your most-used words rise to the top.",
+    "feat2_h": "Frequency-ranked &amp; adaptive", "feat2_p": "Candidates are ordered by how common they are, and the characters you pick rank higher over time — so your most-used words rise to the top.",
     "feat3_h": "Associated phrases (聯想字詞)", "feat3_p": "After you commit a character, Yahoo KeyKey 2 suggests the words that usually follow — so common phrases come together in a single keystroke.",
     "support_body": "Questions, bug reports, and feature requests are welcome — open an issue on GitHub and I'll take a look.",
     "credit_body": "Yahoo KeyKey 2 is an independent, open-source rebuild in Swift, created in tribute to the original <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong> — the Traditional-Chinese input method many Mac users loved. It carries that experience forward for modern macOS, released under the MIT License.",
