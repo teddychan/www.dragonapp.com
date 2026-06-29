@@ -336,7 +336,7 @@ def write_redirects():
 def render_changelog_rows(slug, common):
     rows = []
     view = common.get("app_changelog_view", "View on GitHub")
-    for e in load_changelog(slug):
+    for e in load_changelog(slug)[:2]:
         note = e.get("notes") or "&nbsp;"
         rows.append(
             '<div class="logrow"><span class="ver">%s</span>'
