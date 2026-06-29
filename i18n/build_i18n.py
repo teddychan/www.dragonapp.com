@@ -377,17 +377,20 @@ def render_download(app, common):
 
 
 def render_token(app, common):
-    href = app.get("sponsors_url") or "#"
-    badge = common.get("app_token_badge", "Support development")
-    if not app.get("sponsors_url"):
-        badge = "Coming soon · GitHub Sponsors"
+    tip_url = app.get("tip_url") or app.get("sponsors_url")
+    cta = common.get("app_token_cta", "Buy me Token")
+    if tip_url:
+        badge = common.get("app_token_badge", "Support development")
+        button = ('<a class="btn btn-primary" href="%s" target="_blank" rel="noopener">%s</a>'
+                  % (tip_url, cta))
+    else:
+        badge = "Coming soon"
+        button = '<a class="btn btn-disabled" aria-disabled="true">%s</a>' % cta
     return (
         '<div class="token-block"><span class="badge soon status-soon">%s</span>'
-        '<h2>%s</h2><p>%s</p>'
-        '<a class="btn btn-primary" href="%s">%s</a></div>'
+        '<h2>%s</h2><p>%s</p>%s</div>'
         % (badge, common.get("app_token_h2", "Buy me Token"),
-           common.get("app_token_body", ""), href,
-           common.get("app_token_cta", "Buy me Token")))
+           common.get("app_token_body", ""), button))
 
 
 def render_jsonld(app, lang, page_str):
