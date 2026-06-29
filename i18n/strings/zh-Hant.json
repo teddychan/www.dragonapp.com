@@ -294,7 +294,27 @@
   },
   "privacy": {
     "title": "Dragon App — 私隱政策",
-    "description": "Dragon App 的私隱政策：本網站基於同意的流量分析如何運作，以及 ClipMenu 2、Yahoo! KeyKey 2 和 Ice 2 Mac 應用程式如何處理你的資料（它們把資料保留在你的裝置上）。"
+    "description": "Dragon App 的私隱政策：本網站基於同意的流量分析如何運作，以及 ClipMenu 2、Yahoo! KeyKey 2 和 Ice 2 Mac 應用程式如何處理你的資料（它們把資料保留在你的裝置上）。",
+    "p_updated": "最後更新：2026 年 6 月 29 日",
+    "p_h1": "私隱政策",
+    "p_lead": "Dragon App 是一家重建經典 macOS 應用程式的小型獨立工作室。本政策說明本網站與我們的應用程式會處理哪些資料。簡而言之：應用程式會把你的資料保留在你自己的裝置上，本網站則使用注重私隱、基於同意的流量分析。",
+    "p_site_h2": "本網站（www.dragonapp.com）",
+    "p_site_p1": "我們使用 Google Analytics 了解本網站的使用情況——例如人們造訪了哪些應用頁面。它在 <strong>Google Consent Mode（同意模式）</strong>下運行，因此：",
+    "p_site_li1": "在你於 Cookie 橫幅中選擇<strong>全部接受</strong>之前，不會儲存任何分析或廣告 Cookie。",
+    "p_site_li2": "如果你選擇<strong>全部拒絕</strong>——或者乾脆不選擇——Analytics 將以無 Cookie 模式運行，不會在你的裝置上儲存任何識別碼。",
+    "p_site_li3": "如果你接受，Google 會設定 Cookie 並作為我們的處理方處理使用資料（例如瀏覽的頁面、根據 IP 位址推算的大致位置，以及裝置或瀏覽器類型）。",
+    "p_site_p2": "我們絕不會透過流量分析取得你的姓名或聯絡方式，也不會出售個人資料。你可以隨時更改選擇：清除本網站在瀏覽器中的資料（會重新顯示橫幅），或調整瀏覽器的 Cookie 設定。Google 對這些資料的處理方式說明見 <a href=\"https://policies.google.com/privacy\">Google 私隱政策</a>以及 <a href=\"https://policies.google.com/technologies/partner-sites\">Google 如何使用來自使用其服務的網站的資料</a>。",
+    "p_ice": "Ice 2 是一款完全在你的 Mac 本機運行的選單列管理工具。它會隱藏並重新排列你選擇的選單列項目，並在需要時重新顯示。Ice 2 沒有伺服器，不會收集、傳輸、出售或分享任何資料；不含任何分析、廣告或第三方追蹤，其完整原始碼在 GitHub 上開源。",
+    "p_clip_intro": "ClipMenu 2 不會收集、傳輸、出售或分享任何個人資料。",
+    "p_clip_store": "<strong>儲存的內容。</strong>你的剪貼簿記錄與文字片段都儲存在你的 Mac 本機。ClipMenu 2 沒有伺服器，不會向開發者或任何第三方傳送資料。",
+    "p_clip_icloud": "<strong>iCloud 同步（選用）。</strong>如果你開啟 iCloud 同步，你的片段與設定會透過 Apple 的 CloudKit 在你自己的私人 iCloud 帳號中同步。這些內容儲存在你的個人 iCloud 中，開發者無法存取，並受 Apple 私隱政策約束。",
+    "p_clip_perm": "<strong>權限。</strong>輔助使用權限僅用於將你選擇的項目貼上到最前面的應用程式（透過模擬 ⌘V）。絕不會用於監看、記錄或傳輸你的按鍵或螢幕內容。",
+    "p_clip_track": "<strong>無追蹤。</strong>本應用程式不含任何分析、廣告或第三方追蹤 SDK。",
+    "p_keykey": "Yahoo! KeyKey 2 是一款完全在你的 Mac 本機運行的<strong>倉頡</strong>與<strong>速成</strong>輸入法。你輸入的內容會在本機裝置上轉換為候選字，絕不會傳送給開發者或任何第三方。Yahoo! KeyKey 2 不含任何分析、廣告或追蹤，其完整原始碼在 GitHub 上開源。",
+    "p_contact_h2": "聯絡方式",
+    "p_contact_body": "對本政策有疑問？請發送電郵至 <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>。",
+    "p_changes_h2": "變更",
+    "p_changes_body": "本政策的任何更新都會在本頁面上發布，並於上方標註新的日期。"
   },
   "about": {
     "title": "為何是 Dragon App — 我喜愛的應用程式，繼續存活",
@@ -323,7 +343,8 @@
       {"q": "Ice 2 有甚麼功能？", "a": "Ice 2 隱藏你不需要的選單列項目，讓選單列保持整潔，並按需帶它們回來 — 點按、快速鍵或懸停皆可。"},
       {"q": "如何安裝 Ice 2？", "a": "從最新的 GitHub 發佈版下載並拖至「應用程式」資料夾，或以 Homebrew 安裝：brew install --cask teddychan/tap/ice-2。"},
       {"q": "執行 Ice 2 需要甚麼？", "a": "一部執行 macOS 26 或以上的 Mac。"},
-      {"q": "這是原版 Ice 嗎？", "a": "這是 Ice（原版由 Jordan Baird 創作）的獨立開源重製版，以 GPLv3 授權延續到現代 macOS。"}
+      {"q": "這是原版 Ice 嗎？", "a": "這是 Ice（原版由 Jordan Baird 創作）的獨立開源重製版，以 GPLv3 授權延續到現代 macOS。"},
+      {"q": "我可以備份或同步 Ice 2 的設定嗎？", "a": "可以。在 Settings ▸ Backup & Restore 中選擇一個備份資料夾，Ice 2 便會儲存你所有設定的快照 — 包括版面配置設定檔、項目群組、間距、觸發條件、快速鍵與外觀 — 並保留最新的 10 份備份。Ice 2 也會在你結束程式時自動備份，而你只需點按一下即可還原任何備份。把備份資料夾指向 Dropbox、iCloud Drive 或 Google Drive，即可在多部 Mac 之間同步設定，或設定一部新的 Mac。"}
     ]
   },
   "clipmenu-2": {

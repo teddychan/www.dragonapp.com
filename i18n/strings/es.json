@@ -294,7 +294,27 @@
   },
   "privacy": {
     "title": "Dragon App — Política de privacidad",
-    "description": "Política de privacidad de Dragon App: cómo funcionan las analíticas basadas en consentimiento de este sitio web, y cómo gestionan tus datos las apps de Mac ClipMenu 2, Yahoo! KeyKey 2 e Ice 2 (los mantienen en tu dispositivo)."
+    "description": "Política de privacidad de Dragon App: cómo funcionan las analíticas basadas en consentimiento de este sitio web, y cómo gestionan tus datos las apps de Mac ClipMenu 2, Yahoo! KeyKey 2 e Ice 2 (los mantienen en tu dispositivo).",
+    "p_updated": "Última actualización: 29 de junio de 2026",
+    "p_h1": "Política de privacidad",
+    "p_lead": "Dragon App es un pequeño estudio independiente que reconstruye apps clásicas de macOS. Esta política explica qué datos gestionan este sitio web y nuestras apps. En resumen: las apps mantienen tus datos en tu propio dispositivo, y este sitio web utiliza analíticas basadas en consentimiento y centradas en la privacidad.",
+    "p_site_h2": "Este sitio web (www.dragonapp.com)",
+    "p_site_p1": "Usamos Google Analytics para entender cómo se usa este sitio, por ejemplo, qué páginas de apps visita la gente. Funciona con el <strong>Modo de consentimiento de Google</strong>, de modo que:",
+    "p_site_li1": "No se almacena ninguna cookie de analítica o publicidad hasta que elijas <strong>Aceptar todo</strong> en el banner de cookies.",
+    "p_site_li2": "Si eliges <strong>Rechazar todo</strong> —o simplemente no eliges nada— Analytics funciona en un modo sin cookies que no almacena identificadores en tu dispositivo.",
+    "p_site_li3": "Si aceptas, Google instala cookies y procesa datos de uso (como las páginas vistas, la ubicación aproximada derivada de tu dirección IP y el tipo de dispositivo o navegador) como nuestro encargado del tratamiento.",
+    "p_site_p2": "Nunca recibimos tu nombre ni tus datos de contacto a través de la analítica, y no vendemos datos personales. Puedes cambiar tu elección en cualquier momento borrando los datos de este sitio en tu navegador (lo que hace reaparecer el banner) o ajustando la configuración de cookies de tu navegador. El tratamiento de estos datos por parte de Google se describe en la <a href=\"https://policies.google.com/privacy\">Política de privacidad de Google</a> y en <a href=\"https://policies.google.com/technologies/partner-sites\">Cómo usa Google la información de sitios que utilizan sus servicios</a>.",
+    "p_ice": "Ice 2 es un gestor de la barra de menús que funciona por completo en tu Mac. Oculta y reorganiza los elementos de la barra de menús que elijas y los muestra de nuevo cuando los necesitas. Ice 2 no tiene servidores y no recopila, transmite, vende ni comparte ningún dato; no contiene analíticas, publicidad ni seguimiento de terceros, y todo su código es abierto en GitHub.",
+    "p_clip_intro": "ClipMenu 2 no recopila, transmite, vende ni comparte ningún dato personal.",
+    "p_clip_store": "<strong>Qué almacena.</strong> El historial del portapapeles y los fragmentos de texto se almacenan localmente en tu Mac. ClipMenu 2 no tiene servidores y no envía datos al desarrollador ni a terceros.",
+    "p_clip_icloud": "<strong>Sincronización con iCloud (opcional).</strong> Si activas la sincronización con iCloud, tus fragmentos y ajustes se sincronizan a través de tu propia cuenta privada de iCloud mediante CloudKit de Apple. Ese contenido reside en tu iCloud personal, no es accesible para el desarrollador y se rige por la política de privacidad de Apple.",
+    "p_clip_perm": "<strong>Permisos.</strong> El permiso de accesibilidad se usa únicamente para pegar el elemento que seleccionas en la app en primer plano (simulando Comando-V). Nunca se usa para observar, registrar ni transmitir tus pulsaciones o el contenido de tu pantalla.",
+    "p_clip_track": "<strong>Sin seguimiento.</strong> La app no contiene SDK de analítica, publicidad ni seguimiento de terceros.",
+    "p_keykey": "Yahoo! KeyKey 2 es un método de entrada <strong>Cangjie (倉頡)</strong> y <strong>Simplex (速成)</strong> que funciona por completo en tu Mac. Lo que escribes se convierte en caracteres candidatos localmente en tu dispositivo; nunca se envía al desarrollador ni a terceros. Yahoo! KeyKey 2 no contiene analíticas, publicidad ni seguimiento, y todo su código es abierto en GitHub.",
+    "p_contact_h2": "Contacto",
+    "p_contact_body": "¿Tienes preguntas sobre esta política? Escríbenos a <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>.",
+    "p_changes_h2": "Cambios",
+    "p_changes_body": "Cualquier actualización de esta política se publicará en esta página con una nueva fecha arriba."
   },
   "about": {
     "title": "Por qué Dragon App — apps que amo, mantenidas vivas",
@@ -326,7 +346,8 @@
       {"q": "¿Qué hace Ice 2?", "a": "Ice 2 oculta los elementos de la barra de menús que no necesitas para que quede ordenada, y los recupera bajo demanda: con un clic, un atajo o pasando el cursor por el borde."},
       {"q": "¿Cómo instalo Ice 2?", "a": "Descárgalo desde la última versión en GitHub y arrástralo a Aplicaciones, o instálalo con Homebrew: brew install --cask teddychan/tap/ice-2."},
       {"q": "¿Qué necesito para usar Ice 2?", "a": "Un Mac con macOS 26 o posterior."},
-      {"q": "¿Es este el Ice original?", "a": "Es una reconstrucción independiente y de código abierto de Ice (creado originalmente por Jordan Baird), llevada al macOS moderno bajo GPLv3."}
+      {"q": "¿Es este el Ice original?", "a": "Es una reconstrucción independiente y de código abierto de Ice (creado originalmente por Jordan Baird), llevada al macOS moderno bajo GPLv3."},
+      {"q": "¿Puedo hacer copia de seguridad o sincronizar mi configuración de Ice 2?", "a": "Sí. En Settings ▸ Backup & Restore, elige una carpeta de copias de seguridad e Ice 2 guarda una instantánea de toda tu configuración —perfiles de diseño, grupos de elementos, espaciadores, disparadores, atajos de teclado y apariencia—, conservando las 10 copias más recientes. Ice 2 también hace una copia de seguridad automáticamente al salir, y puedes restaurar cualquier copia con un solo clic. Apunta la carpeta de copias de seguridad a Dropbox, iCloud Drive o Google Drive para sincronizar tu configuración entre varios Mac o configurar un Mac nuevo."}
     ]
   },
   "clipmenu-2": {

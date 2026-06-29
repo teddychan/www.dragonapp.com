@@ -294,7 +294,27 @@
   },
   "privacy": {
     "title": "Dragon App — 개인정보 처리방침",
-    "description": "Dragon App 개인정보 처리방침: 이 웹사이트의 동의 기반 분석 방식과 ClipMenu 2, Yahoo! KeyKey 2, Ice 2 Mac 앱이 데이터를 처리하는 방법(기기에 보관됨)을 안내합니다."
+    "description": "Dragon App 개인정보 처리방침: 이 웹사이트의 동의 기반 분석 방식과 ClipMenu 2, Yahoo! KeyKey 2, Ice 2 Mac 앱이 데이터를 처리하는 방법(기기에 보관됨)을 안내합니다.",
+    "p_updated": "최종 업데이트: 2026년 6월 29일",
+    "p_h1": "개인정보 처리방침",
+    "p_lead": "Dragon App은 클래식 macOS 앱을 다시 만드는 작은 독립 스튜디오입니다. 본 방침은 이 웹사이트와 당사 앱이 어떤 데이터를 처리하는지 설명합니다. 요약하면, 앱은 데이터를 사용자 본인의 기기에 보관하며, 이 웹사이트는 개인정보를 우선하는 동의 기반 분석을 사용합니다.",
+    "p_site_h2": "이 웹사이트(www.dragonapp.com)",
+    "p_site_p1": "당사는 이 사이트가 어떻게 사용되는지(예: 어떤 앱 페이지를 방문하는지)를 파악하기 위해 Google Analytics를 사용합니다. 이는 <strong>Google 동의 모드</strong>로 실행되므로:",
+    "p_site_li1": "쿠키 배너에서 <strong>모두 허용</strong>을 선택하기 전까지는 분석 또는 광고 쿠키가 저장되지 않습니다.",
+    "p_site_li2": "<strong>모두 거부</strong>를 선택하거나 아무것도 선택하지 않으면 Analytics는 쿠키 없는 모드로 실행되어 기기에 식별자를 저장하지 않습니다.",
+    "p_site_li3": "허용하면 Google은 쿠키를 설정하고 당사의 처리자로서 사용 데이터(조회한 페이지, IP 주소에서 추정한 대략적 위치, 기기 또는 브라우저 종류 등)를 처리합니다.",
+    "p_site_p2": "당사는 분석을 통해 사용자의 이름이나 연락처를 받지 않으며 개인 데이터를 판매하지 않습니다. 브라우저에서 이 사이트의 데이터를 지우거나(배너가 다시 표시됨) 브라우저의 쿠키 설정을 조정하여 언제든지 선택을 변경할 수 있습니다. Google의 데이터 처리 방식은 <a href=\"https://policies.google.com/privacy\">Google 개인정보처리방침</a> 및 <a href=\"https://policies.google.com/technologies/partner-sites\">Google 서비스를 사용하는 사이트의 데이터를 Google이 사용하는 방식</a>에 설명되어 있습니다.",
+    "p_ice": "Ice 2는 전적으로 사용자의 Mac에서 실행되는 메뉴 막대 관리 앱입니다. 선택한 메뉴 막대 항목을 숨기거나 재배치하고 필요할 때 다시 표시합니다. Ice 2는 서버가 없으며 어떠한 데이터도 수집·전송·판매·공유하지 않습니다. 분석, 광고, 제3자 추적이 없고 전체 소스가 GitHub에 공개되어 있습니다.",
+    "p_clip_intro": "ClipMenu 2는 어떠한 개인정보도 수집·전송·판매·공유하지 않습니다.",
+    "p_clip_store": "<strong>저장하는 내용.</strong> 클립보드 기록과 텍스트 스니펫은 사용자의 Mac에 로컬로 저장됩니다. ClipMenu 2에는 서버가 없으며 개발자나 제3자에게 데이터를 전송하지 않습니다.",
+    "p_clip_icloud": "<strong>iCloud 동기화(선택 사항).</strong> iCloud 동기화를 켜면 스니펫과 설정이 Apple의 CloudKit을 통해 사용자 본인의 비공개 iCloud 계정으로 동기화됩니다. 이 콘텐츠는 사용자의 iCloud에 저장되며 개발자는 접근할 수 없고 Apple의 개인정보 처리방침을 따릅니다.",
+    "p_clip_perm": "<strong>권한.</strong> 손쉬운 사용(Accessibility) 권한은 선택한 항목을 맨 앞의 앱에 붙여넣기 위해(⌘V 시뮬레이션) 위해서만 사용됩니다. 키 입력이나 화면 내용을 관찰·기록·전송하는 데에는 절대 사용되지 않습니다.",
+    "p_clip_track": "<strong>추적 없음.</strong> 본 앱에는 분석, 광고, 제3자 추적 SDK가 없습니다.",
+    "p_keykey": "Yahoo! KeyKey 2는 전적으로 사용자의 Mac에서 실행되는 <strong>창힐(倉頡, Cangjie)</strong> 및 <strong>속성(速成, Simplex)</strong> 입력기입니다. 입력한 내용은 기기에서 로컬로 후보 글자로 변환되며 개발자나 제3자에게 전송되지 않습니다. Yahoo! KeyKey 2에는 분석, 광고, 추적이 없으며 전체 소스가 GitHub에 공개되어 있습니다.",
+    "p_contact_h2": "문의",
+    "p_contact_body": "본 방침에 대한 질문이 있으신가요? <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>으로 이메일을 보내주세요.",
+    "p_changes_h2": "변경",
+    "p_changes_body": "본 방침의 변경 사항은 상단에 새 날짜와 함께 이 페이지에 게시됩니다."
   },
   "about": {
     "title": "Dragon App을 만드는 이유 — 내가 사랑하는 앱, 계속 살아있도록",
@@ -326,7 +346,8 @@
       {"q": "Ice 2는 무엇을 하나요?", "a": "Ice 2는 불필요한 메뉴 막대 항목을 숨겨 막대를 깔끔하게 유지하고, 클릭, 단축키, 또는 모서리를 가리키는 것으로 필요할 때 다시 보여줍니다."},
       {"q": "Ice 2는 어떻게 설치하나요?", "a": "최신 GitHub 릴리스에서 다운로드해 응용 프로그램 폴더로 드래그하거나, Homebrew로 설치하세요: brew install --cask teddychan/tap/ice-2."},
       {"q": "Ice 2를 실행하려면 무엇이 필요한가요?", "a": "macOS 26 이상을 실행하는 Mac이 필요합니다."},
-      {"q": "이것이 원작 Ice인가요?", "a": "Ice(원작: Jordan Baird)의 독립적인 오픈소스 재구현으로, GPLv3 라이선스 하에 현대 macOS에서 이어지고 있습니다."}
+      {"q": "이것이 원작 Ice인가요?", "a": "Ice(원작: Jordan Baird)의 독립적인 오픈소스 재구현으로, GPLv3 라이선스 하에 현대 macOS에서 이어지고 있습니다."},
+      {"q": "Ice 2 설정을 백업하거나 동기화할 수 있나요?", "a": "네. Settings ▸ Backup & Restore에서 백업 폴더를 선택하면 Ice 2가 레이아웃 프로필, 항목 그룹, 간격, 트리거, 단축키, 모양 등 모든 설정의 스냅샷을 저장하며 최신 백업 10개를 유지합니다. Ice 2는 종료할 때 자동으로 백업하고, 어떤 백업이든 한 번의 클릭으로 복원할 수 있습니다. 백업 폴더를 Dropbox, iCloud Drive, 또는 Google Drive로 지정하면 여러 Mac 간에 설정을 동기화하거나 새 Mac을 설정할 수 있습니다."}
     ]
   },
   "clipmenu-2": {
