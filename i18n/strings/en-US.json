@@ -294,7 +294,27 @@
   },
   "privacy": {
     "title": "Dragon App — Privacy Policy",
-    "description": "Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2, Yahoo! KeyKey 2, and Ice 2 Mac apps handle your data (they keep it on your device)."
+    "description": "Privacy policy for Dragon App: how this website's consent-based analytics works, and how the ClipMenu 2, Yahoo! KeyKey 2, and Ice 2 Mac apps handle your data (they keep it on your device).",
+    "p_updated": "Last updated: 29 June 2026",
+    "p_h1": "Privacy Policy",
+    "p_lead": "Dragon App is a small independent studio that rebuilds classic macOS apps. This policy explains what data this website and our apps handle. In short: the apps keep your data on your own device, and this website uses privacy-first, consent-based analytics.",
+    "p_site_h2": "This website (www.dragonapp.com)",
+    "p_site_p1": "We use Google Analytics to understand how this site is used — for example, which app pages people visit. It runs with <strong>Google Consent Mode</strong>, so:",
+    "p_site_li1": "No analytics or advertising cookies are stored until you choose <strong>Accept all</strong> in the cookie banner.",
+    "p_site_li2": "If you choose <strong>Reject all</strong> — or simply don't choose — Analytics runs in a cookieless mode that stores no identifiers on your device.",
+    "p_site_li3": "If you accept, Google sets cookies and processes usage data (such as pages viewed, approximate location derived from your IP address, and device or browser type) as our processor.",
+    "p_site_p2": "We never receive your name or contact details through analytics, and we do not sell personal data. You can change your choice at any time by clearing this site's data in your browser (which brings the banner back) or by adjusting your browser's cookie settings. Google's handling of this data is described in <a href=\"https://policies.google.com/privacy\">Google's Privacy Policy</a> and <a href=\"https://policies.google.com/technologies/partner-sites\">How Google uses data from sites that use its services</a>.",
+    "p_ice": "Ice 2 is a menu bar manager that runs entirely on your Mac. It hides and rearranges the menu bar items you choose and brings them back on demand. Ice 2 has no servers and does not collect, transmit, sell, or share any data; it contains no analytics, advertising, or third-party tracking, and its full source is open on GitHub.",
+    "p_clip_intro": "ClipMenu 2 does not collect, transmit, sell, or share any personal data.",
+    "p_clip_store": "<strong>What it stores.</strong> Your clipboard history and text snippets are stored locally on your Mac. ClipMenu 2 has no servers and sends no data to the developer or any third party.",
+    "p_clip_icloud": "<strong>iCloud sync (optional).</strong> If you turn on iCloud sync, your snippets and settings are synchronized through your own private iCloud account using Apple's CloudKit. That content lives in your personal iCloud, is not accessible to the developer, and is governed by Apple's Privacy Policy.",
+    "p_clip_perm": "<strong>Permissions.</strong> Accessibility permission is used only to paste the item you select into the frontmost app (by simulating Command-V). It is never used to observe, log, or transmit your keystrokes or screen contents.",
+    "p_clip_track": "<strong>No tracking.</strong> The app contains no analytics, advertising, or third-party tracking SDKs.",
+    "p_keykey": "Yahoo! KeyKey 2 is a Cangjie (倉頡) and Simplex (速成) input method that runs entirely on your Mac. What you type is converted to candidate characters locally on your device; it is never sent to the developer or any third party. Yahoo! KeyKey 2 contains no analytics, advertising, or tracking, and its full source is open on GitHub.",
+    "p_contact_h2": "Contact",
+    "p_contact_body": "Questions about this policy? Email <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>.",
+    "p_changes_h2": "Changes",
+    "p_changes_body": "Any updates to this policy will be posted on this page with a new date above."
   },
   "about": {
     "title": "Why Dragon App — apps I love, kept alive",
@@ -323,7 +343,8 @@
       {"q": "What does Ice 2 do?", "a": "Ice 2 hides the menu bar items you don't need so your menu bar stays clean, and brings them back on demand — with a click, a hotkey, or by hovering."},
       {"q": "How do I install Ice 2?", "a": "Download from the latest GitHub release and drag it to Applications, or install with Homebrew: brew install --cask teddychan/tap/ice-2."},
       {"q": "What do I need to run Ice 2?", "a": "A Mac running macOS 26 or later."},
-      {"q": "Is this the original Ice?", "a": "It is an independent, open-source rebuild of Ice (originally by Jordan Baird), carried forward to modern macOS under GPLv3."}
+      {"q": "Is this the original Ice?", "a": "It is an independent, open-source rebuild of Ice (originally by Jordan Baird), carried forward to modern macOS under GPLv3."},
+      {"q": "Can I back up or sync my Ice 2 settings?", "a": "Yes. In Settings ▸ Backup & Restore, choose a backup folder and Ice 2 saves a snapshot of all your settings — layout profiles, item groups, spacers, triggers, hotkeys, and appearance — keeping the newest 10 backups. Ice 2 also backs up automatically when you quit, and you can restore any backup in one click. Point the backup folder at Dropbox, iCloud Drive, or Google Drive to sync your settings across Macs or set up a new Mac."}
     ]
   },
   "clipmenu-2": {
