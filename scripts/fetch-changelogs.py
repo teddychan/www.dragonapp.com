@@ -28,7 +28,16 @@ def clean_notes(body):
         return ""
     text = body.replace("\r\n", "\n")
     text = re.sub(r"\*\*Full Changelog\*\*.*", "", text, flags=re.S).strip()
-    lines = [l.strip("# ").strip() for l in text.split("\n") if l.strip()]
+    lines = []
+    for raw in text.split("\n"):
+        l = raw.strip().strip("# ").strip()              # drop markdown headings
+        if not l or l.lower() in ("what's changed", "whats changed", "changes"):
+            continue                                      # drop the auto-generated header
+        l = re.sub(r"\s*\bby @[\w-]+\s+in\s+https?://\S+", "", l)  # drop "by @user in <PR url>"
+        l = re.sub(r"\s*https?://\S+", "", l)             # drop any remaining bare URLs
+        l = l.lstrip("*-• ").strip()                      # drop bullet markers
+        if l:
+            lines.append(l)
     return " · ".join(lines[:4])
 
 
