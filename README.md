@@ -56,4 +56,5 @@ to `docs/sitemap.xml` and `docs/robots.txt` for the new URL.
 The site content, design, and brand assets are **© 2026 Teddy Chan, all
 rights reserved** — see [LICENSE](LICENSE). The repo is public for
 transparency, not for reuse. The apps marketed here are licensed separately in
-their own repositories. See also [PRIVACY.md](PRIVACY.md).
+their own repositories. The privacy policy for the website and all apps lives
+at <https://www.dragonapp.com/privacy.html> (generated from `i18n/`).
