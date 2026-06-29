@@ -1,5 +1,11 @@
 [
   {
+    "version": "1.5.0",
+    "date": "2026-06-28",
+    "notes": "What's Changed · * macOS 26 minimum; Cangjie wildcard fix; lower memory (v1.5.0) by @teddychan in https://github.com/teddychan/yahoo-keykey-2/pull/23",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.5.0"
+  },
+  {
     "version": "1.4.1",
     "date": "2026-06-28",
     "notes": "What's Changed · * ci: grant contents: write to the release workflow by @teddychan in https://github.com/teddychan/yahoo-keykey-2/pull/21 · * fix: candidate text-size menu now persists; v1.4.1 by @teddychan in https://github.com/teddychan/yahoo-keykey-2/pull/22",
@@ -40,11 +46,5 @@
     "date": "2026-06-23",
     "notes": "What's new · - **Auto-update (Sparkle)** — the app now checks for and installs updates itself. Use **檢查更新…** in the input menu, or it checks daily. (First Sparkle build; v1.2.2 users update to this once manually, then auto-update after.) · - **Space pages candidates** — Space now flips candidate/association pages (wrapping), matching the original Yahoo! KeyKey; numbers select, Enter commits. · Apple Silicon · macOS 12+ · signed + notarized. Download the **.pkg** (first install) or, with v1.3.0+, just use 檢查更新.",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.3.0"
-  },
-  {
-    "version": "1.2.2",
-    "date": "2026-06-23",
-    "notes": "Bug-fix release for the Cangjie (倉頡) / Simplex (速成) input method. Signed + notarized (Apple Silicon). · Changes · - **App icon** is now the traditional Yahoo! KeyKey \"Y!\" logo (also used for the 倉頡 / 速成 entries in the input menu). · Install",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.2.2"
   }
 ]

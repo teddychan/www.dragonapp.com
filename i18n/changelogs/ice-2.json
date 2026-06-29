@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.5.4",
+    "date": "2026-06-28",
+    "notes": "What's Changed · * Reflect Teddy Chan as active maintainer; keep Jordan Baird credit by @teddychan in https://github.com/teddychan/ice-2/pull/10 · * macOS 26/27 (arm64) cleanup: lock-free PID lookup, drop migrations, fix capture API by @teddychan in https://github.com/teddychan/ice-2/pull/11 · * Fix release CI: pin dragon-release-ci to @v2 for swiftpm_runner by @teddychan in https://github.com/teddychan/ice-2/pull/12",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.5.4"
+  },
+  {
     "version": "2.5.3",
     "date": "2026-06-28",
     "notes": "What's Changed · * Show hidden items on hover over the Ice 2 icon (v2.5.3) by @teddychan in https://github.com/teddychan/ice-2/pull/9",
@@ -40,11 +46,5 @@
     "date": "2026-06-24",
     "notes": "Ice 2 v2.0.1 renames the app and user-facing content from Ice to Ice 2, updates the app bundle name to Ice 2.app, and bumps the app version to 2.0.1 (build 1122).",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.0.1"
-  },
-  {
-    "version": "2.0.0",
-    "date": "2026-06-24",
-    "notes": "Ice 2.0.0 build from commit 54c83a2.\\n\\n- Includes the macOS 26 compatibility fixes and audited upstream PR ports.\\n- Developer ID signed, timestamped, notarized, and stapled.\\n- Universal binary: arm64 and x86_64.\\n\\nSHA-256: 3bbfbd3b2539d08fd5003e08583e02871ca610f3e163e3b7156850122c9340e8",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.0.0"
   }
 ]
