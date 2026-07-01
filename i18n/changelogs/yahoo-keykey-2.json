@@ -1,5 +1,47 @@
 [
   {
+    "version": "2.0.2",
+    "date": "2026-07-02",
+    "notes": "<strong>Fixed: the 設定 (Settings) window now matches the input menu.</strong> Toggling 輸出簡體字, 全形標點, 聯想字詞 or the candidate size (候選字大小) from the menu-bar input menu now shows the same state in Settings every time you open it.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.2"
+  },
+  {
+    "version": "2.0.1",
+    "date": "2026-06-30",
+    "notes": "<strong>Fixed: Yahoo! KeyKey 2 appears again under System Settings ▸ Keyboard ▸ Input Sources.</strong> The rebrand had dropped the identifier component macOS needs to register an input method; it&rsquo;s restored.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.1"
+  },
+  {
+    "version": "2.0.0",
+    "date": "2026-06-30",
+    "notes": "Renamed to <strong>Yahoo! KeyKey 2</strong>; version numbers now start at 2.x to match the product name. No functional change from 1.7.2.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.0"
+  },
+  {
+    "version": "1.7.2",
+    "date": "2026-06-30",
+    "notes": "The About window now links to the website and to GitHub Issues for support, alongside the homage to the original Yahoo! KeyKey.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.2"
+  },
+  {
+    "version": "1.7.1",
+    "date": "2026-06-30",
+    "notes": "Housekeeping: moved the app identifier under the Dragon App namespace.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.1"
+  },
+  {
+    "version": "1.7.0",
+    "date": "2026-06-29",
+    "notes": "Rounded out the input menu with <strong>Settings…</strong> and <strong>Uninstall…</strong> items.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.0"
+  },
+  {
+    "version": "1.6.0",
+    "date": "2026-06-29",
+    "notes": "Reorganised the input menu into the standard Dragon App layout (About, Check for Updates, Settings).",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.6.0"
+  },
+  {
     "version": "1.5.0",
     "date": "2026-06-28",
     "notes": "macOS 26 minimum; Cangjie wildcard fix; lower memory (v1.5.0)",
