@@ -1,92 +1,50 @@
 [
   {
+    "version": "2.1.0",
+    "date": "2026-07-01",
+    "notes": "New: choose your 倉頡版本 (Cangjie generation). In 設定… ▸ 輸入方式 you can now switch between 五代倉頡 (the standard 5th-generation table, the default) and 三代倉頡（Yahoo KeyKey 相容）. The 三代 option uses the original Yahoo! KeyKey code table and its candidate order, so characters like 面 (一田卜中), 鬼 (竹戈) and 樓 (木中田女) take the codes long-time Yahoo users remember instead of the 5th-generation forms. The choice applies to both 倉頡 and 速成 and takes effect immediately. The default stays 五代 so existing users are unaffected until they opt in.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.1.0"
+  },
+  {
     "version": "2.0.2",
-    "date": "2026-07-02",
-    "notes": "<strong>Fixed: the 設定 (Settings) window now matches the input menu.</strong> Toggling 輸出簡體字, 全形標點, 聯想字詞 or the candidate size (候選字大小) from the menu-bar input menu now shows the same state in Settings every time you open it.",
+    "date": "2026-07-01",
+    "notes": "fix: sync Settings window with quick menu (v2.0.2)",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.2"
   },
   {
     "version": "2.0.1",
     "date": "2026-06-30",
-    "notes": "<strong>Fixed: Yahoo! KeyKey 2 appears again under System Settings ▸ Keyboard ▸ Input Sources.</strong> The rebrand had dropped the identifier component macOS needs to register an input method; it&rsquo;s restored.",
+    "notes": "fix: IME bundle id must contain 'inputmethod' (v2.0.1)",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.1"
   },
   {
     "version": "2.0.0",
     "date": "2026-06-30",
-    "notes": "Renamed to <strong>Yahoo! KeyKey 2</strong>; version numbers now start at 2.x to match the product name. No functional change from 1.7.2.",
+    "notes": "release: v2.0.0 (align major with 'Yahoo! KeyKey 2')",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.0"
   },
   {
     "version": "1.7.2",
     "date": "2026-06-30",
-    "notes": "The About window now links to the website and to GitHub Issues for support, alongside the homage to the original Yahoo! KeyKey.",
+    "notes": "About: dragonapp.com website + GitHub issues links (v1.7.2)",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.2"
   },
   {
     "version": "1.7.1",
     "date": "2026-06-30",
-    "notes": "Housekeeping: moved the app identifier under the Dragon App namespace.",
+    "notes": "chore: rebrand bundle id to com.dragonapp.yahoo-keykey (v1.7.1)",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.1"
   },
   {
     "version": "1.7.0",
     "date": "2026-06-29",
-    "notes": "Rounded out the input menu with <strong>Settings…</strong> and <strong>Uninstall…</strong> items.",
+    "notes": "feat: complete §5A IME app menu (Settings… + Uninstall…); v1.7.0",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.0"
   },
   {
     "version": "1.6.0",
     "date": "2026-06-29",
-    "notes": "Reorganised the input menu into the standard Dragon App layout (About, Check for Updates, Settings).",
+    "notes": "feat: standardized App menu in the input menu (Yahoo! KeyKey 2)",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.6.0"
-  },
-  {
-    "version": "1.5.0",
-    "date": "2026-06-28",
-    "notes": "macOS 26 minimum; Cangjie wildcard fix; lower memory (v1.5.0)",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.5.0"
-  },
-  {
-    "version": "1.4.1",
-    "date": "2026-06-28",
-    "notes": "ci: grant contents: write to the release workflow · fix: candidate text-size menu now persists; v1.4.1",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.4.1"
-  },
-  {
-    "version": "1.4.0",
-    "date": "2026-06-26",
-    "notes": "fix(sparkle): point SUFeedURL at /yahoo-keykey-2/appcast.xml · Add README (\"Yahoo KeyKey 2\") · chore: remove CLAUDE.md from the public repo · ci: use shared dragon-release-ci reusable workflow",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.4.0"
-  },
-  {
-    "version": "1.3.4",
-    "date": "2026-06-23",
-    "notes": "Yahoo KeyKey 2 v1.3.4 · Cleaner candidate window: removed the static **SHIFT + NUM** header (it was decorative and conveyed no state). The popup now shows the numbered candidates and the page indicator only. · Install · First time:** download **YahooKeyKey2-1.3.4.pkg**, double-click, follow the installer (installs to `~/Library/Input Methods/`, no admin). Log out and back in to activate.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.3.4"
-  },
-  {
-    "version": "1.3.3",
-    "date": "2026-06-23",
-    "notes": "Yahoo KeyKey 2 v1.3.3 · Redesigned candidate window in the style of the classic Yahoo! KeyKey: rounded bordered box, **SHIFT + NUM** header, numbered two-column rows, and a **▼ page/total** footer. Colours follow the system appearance. · Install · First time:** download **YahooKeyKey2-1.3.3.pkg**, double-click, and follow the installer (installs to `~/Library/Input Methods/`, no admin password). Log out and back in to activate.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.3.3"
-  },
-  {
-    "version": "1.3.2",
-    "date": "2026-06-23",
-    "notes": "Fixes 檢查更新… (Check for Updates) doing nothing: the input method is a background (LSUIElement) agent, so Sparkle's update windows were opening behind the foreground app and never came forward. They now activate to the front. · Also includes the purple Yahoo! KeyKey input-source icon from 1.3.1. · Note: because the 1.3.0/1.3.1 updater couldn't show its window, this build must be installed once manually (open the DMG, copy to ~/Library/Input Methods/, log out/in). After that, 檢查更新… works. · `YahooKeyKey2-1.3.2.zip` — Sparkle update payload / drag-install.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.3.2"
-  },
-  {
-    "version": "1.3.1",
-    "date": "2026-06-23",
-    "notes": "Input-source picker now shows the purple Yahoo! KeyKey icon for 倉頡 and 速成 (previously a generic gray placeholder). · Auto-update: v1.3.0 users get this via Sparkle (檢查更新…). The input method takes effect after the IME restarts — toggle the input source or log out/in. · `YahooKeyKey2-1.3.1.zip` — Sparkle update payload / drag-install. · `YahooKeyKey2-1.3.1.dmg` — first-time download.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.3.1"
-  },
-  {
-    "version": "1.3.0",
-    "date": "2026-06-23",
-    "notes": "What's new · Auto-update (Sparkle)** — the app now checks for and installs updates itself. Use **檢查更新…** in the input menu, or it checks daily. (First Sparkle build; v1.2.2 users update to this once manually, then auto-update after.) · Space pages candidates** — Space now flips candidate/association pages (wrapping), matching the original Yahoo! KeyKey; numbers select, Enter commits. · Apple Silicon · macOS 12+ · signed + notarized. Download the **.pkg** (first install) or, with v1.3.0+, just use 檢查更新.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.3.0"
   }
 ]
