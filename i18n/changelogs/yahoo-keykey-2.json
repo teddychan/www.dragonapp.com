@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.2.0",
+    "date": "2026-07-04",
+    "notes": "Two follow-ups from issue #30, for the 三代倉頡（Yahoo KeyKey 相容）mode: · New: z-code punctuation. In 三代倉頡 mode you can type punctuation with the classic Yahoo z-codes — zxcd → 「, zxce → 」, zxab → ，, zxbe → （. These were part of the original Yahoo table and are available again. · New: 「聯想只顯示接續字」option (設定… ▸ 一般). When enabled, the 聯想 (associated-phrase) window shows only the continuation after the character you just typed — e.g. after 關 it shows 係／心／於 instead of the full words 關係／關心／關於, like the classic Yahoo! KeyKey. Off by default; what you commit is unchanged either way.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.2.0"
+  },
+  {
     "version": "2.1.0",
     "date": "2026-07-01",
     "notes": "New: choose your 倉頡版本 (Cangjie generation). In 設定… ▸ 輸入方式 you can now switch between 五代倉頡 (the standard 5th-generation table, the default) and 三代倉頡（Yahoo KeyKey 相容）. The 三代 option uses the original Yahoo! KeyKey code table and its candidate order, so characters like 面 (一田卜中), 鬼 (竹戈) and 樓 (木中田女) take the codes long-time Yahoo users remember instead of the 5th-generation forms. The choice applies to both 倉頡 and 速成 and takes effect immediately. The default stays 五代 so existing users are unaffected until they opt in.",
@@ -40,11 +46,5 @@
     "date": "2026-06-29",
     "notes": "feat: complete §5A IME app menu (Settings… + Uninstall…); v1.7.0",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.0"
-  },
-  {
-    "version": "1.6.0",
-    "date": "2026-06-29",
-    "notes": "feat: standardized App menu in the input menu (Yahoo! KeyKey 2)",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.6.0"
   }
 ]
