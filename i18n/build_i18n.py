@@ -376,6 +376,55 @@ def render_download(app, common):
     return '<div class="plans">' + "\n".join(cards) + '</div>'
 
 
+def render_perf(app, lang):
+    # Ice 2 only, English only: a measured idle-CPU comparison across the 2.8.x
+    # releases that hunted down background CPU use. Figures are from a 10-minute
+    # idle sample (Ice 2 in the menu bar, no windows open). Returns "" for every
+    # other app/locale so the {{ APP_PERF_SECTION }} token collapses to nothing.
+    if app.get("slug") != "ice-2" or lang != "en-US":
+        return ""
+    rows = [("2.8.4", "5.58%", "9.2%", False),
+            ("2.8.5", "2.47%", "3.0%", False),
+            ("2.8.6", "0.81%", "1.7%", True)]
+    trs = []
+    for ver, avg, peak, hl in rows:
+        rstyle = "border-top:1px solid var(--border);"
+        vcell = "padding:13px 18px;"
+        dcell = "padding:13px 18px;color:var(--muted);"
+        if hl:
+            rstyle += "background:var(--accent-tint);"
+            vcell = dcell = "padding:13px 18px;font-weight:700;color:var(--accent-ink);"
+        trs.append('<tr style="%s"><td style="%s">%s</td><td style="%s">%s</td><td style="%s">%s</td></tr>'
+                   % (rstyle, vcell, ver, dcell, avg, dcell, peak))
+    return (
+        '\n\n  <!-- PERFORMANCE (Ice 2, measured, en only) -->\n'
+        '  <section id="performance">\n'
+        '    <div class="container">\n'
+        '      <div class="head">\n'
+        '        <p><span class="eyebrow">Measured, not marketing</span></p>\n'
+        '        <h2>Light on your battery</h2>\n'
+        "        <p>Idle CPU with Ice&nbsp;2 sitting in the menu bar and no windows open, "
+        "averaged over a 10-minute sample. Recent 2.8.x releases cut it by about 85%.</p>\n"
+        '      </div>\n'
+        '      <div style="max-width:560px;margin:0 auto;">\n'
+        '        <table style="width:100%;border-collapse:collapse;background:var(--bg);'
+        'border:1px solid var(--border);border-radius:14px;overflow:hidden;">\n'
+        '          <caption style="position:absolute;width:1px;height:1px;overflow:hidden;'
+        'clip:rect(0 0 0 0);">Ice 2 idle CPU by version</caption>\n'
+        '          <thead><tr style="text-align:left;color:var(--muted);font-size:.82rem;">'
+        '<th style="padding:13px 18px;font-weight:600;">Version</th>'
+        '<th style="padding:13px 18px;font-weight:600;">Idle CPU (avg)</th>'
+        '<th style="padding:13px 18px;font-weight:600;">Peak</th></tr></thead>\n'
+        '          <tbody style="font-variant-numeric:tabular-nums;">' + "".join(trs) + '</tbody>\n'
+        '        </table>\n'
+        '        <p class="mono" style="text-align:center;margin:16px 0 0;">'
+        '≈85% less idle CPU than 2.8.4 — now under 1%.</p>\n'
+        '      </div>\n'
+        '    </div>\n'
+        '  </section>'
+    )
+
+
 def render_token(app, common):
     tip_url = app.get("tip_url") or app.get("sponsors_url")
     cta = common.get("app_token_cta", "Buy me Token")
@@ -459,6 +508,7 @@ def render_app(template, app, lang, strings, missing):
         "URL_ABOUT": SITE + "/" + lang_prefix(lang) + "about/",
         "APP_REPO": app["repo"], "APP_ISSUES": app["repo"] + "/issues",
         "CHANGELOG_ROWS": render_changelog_rows(app["slug"], common),
+        "APP_PERF_SECTION": render_perf(app, lang),
         "DOWNLOAD_CHANNELS": render_download(app, common),
         "TOKEN_BLOCK": render_token(app, common),
         "JSONLD": render_jsonld(app, lang, page_str if page_str else en.get(app["slug"], {})),
