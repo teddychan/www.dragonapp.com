@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.8.6",
+    "date": "2026-07-05",
+    "notes": "Even lower idle CPU — the Menu Bar Appearance editor now loads only when you open it, removing the last bit of background CPU measured after 2.8.5.",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.8.6"
+  },
+  {
+    "version": "2.8.5",
+    "date": "2026-07-05",
+    "notes": "Much lower idle CPU — Settings and Permissions windows are no longer laid out in the background while they're closed.",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.8.5"
+  },
+  {
     "version": "2.8.4",
     "date": "2026-07-04",
     "notes": "fix: reduce power/CPU use (mouse-moved tap + overlay AX poll); v2.8.4",
@@ -34,17 +46,5 @@
     "date": "2026-06-29",
     "notes": "fix(menu): flatten App menu items to the top level (v2.7.1)",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.7.1"
-  },
-  {
-    "version": "2.7.0",
-    "date": "2026-06-29",
-    "notes": "style: fix SwiftLint multiline_arguments_brackets in SettingsBackup · feat: Liquid Glass standardized App menu (Ice 2)",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.7.0"
-  },
-  {
-    "version": "2.6.0",
-    "date": "2026-06-29",
-    "notes": "Back up & restore settings to a folder (sync-ready)",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.6.0"
   }
 ]
