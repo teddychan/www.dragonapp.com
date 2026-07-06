@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.4.0",
+    "date": "2026-07-06",
+    "notes": "Two new KeyKey features plus a settings fix. · New: 反查／拆碼提示 (Cangjie code hint) — turn on 反查提示 to show each character's 倉頡 code beside the candidate (e.g. 倉 → 人口竹口); handy in 速成 and 聯想. Off by default. · New: 臨時英數 (quick English) — hold Shift and press a letter to type that English letter directly, like the original Yahoo! KeyKey; case follows Caps Lock, and everything else stays Chinese. · Fixed: the 倉頡版本 (五代／三代) choice in Settings now saves correctly instead of reverting.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.4.0"
+  },
+  {
+    "version": "2.3.0",
+    "date": "2026-07-06",
+    "notes": "ci: pin release workflow to dragon-release-ci floating major @v5 · release: Yahoo KeyKey 2 v2.3.0 — adopt DragonKit (settings/About/Updates + Sync & Backup)",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.3.0"
+  },
+  {
     "version": "2.2.0",
     "date": "2026-07-04",
     "notes": "Two follow-ups from issue #30, for the 三代倉頡（Yahoo KeyKey 相容）mode: · New: z-code punctuation. In 三代倉頡 mode you can type punctuation with the classic Yahoo z-codes — zxcd → 「, zxce → 」, zxab → ，, zxbe → （. These were part of the original Yahoo table and are available again. · New: 「聯想只顯示接續字」option (設定… ▸ 一般). When enabled, the 聯想 (associated-phrase) window shows only the continuation after the character you just typed — e.g. after 關 it shows 係／心／於 instead of the full words 關係／關心／關於, like the classic Yahoo! KeyKey. Off by default; what you commit is unchanged either way.",
@@ -34,17 +46,5 @@
     "date": "2026-06-30",
     "notes": "About: dragonapp.com website + GitHub issues links (v1.7.2)",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.2"
-  },
-  {
-    "version": "1.7.1",
-    "date": "2026-06-30",
-    "notes": "chore: rebrand bundle id to com.dragonapp.yahoo-keykey (v1.7.1)",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.1"
-  },
-  {
-    "version": "1.7.0",
-    "date": "2026-06-29",
-    "notes": "feat: complete §5A IME app menu (Settings… + Uninstall…); v1.7.0",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.0"
   }
 ]
