@@ -3,12 +3,12 @@
     <channel>
         <title>Ice 2</title>
         <item>
-            <title>2.8.8</title>
-            <pubDate>Mon, 06 Jul 2026 09:22:48 +0000</pubDate>
+            <title>2.9.0</title>
+            <pubDate>Mon, 06 Jul 2026 13:06:56 +0000</pubDate>
             <sparkle:version>1296</sparkle:version>
-            <sparkle:shortVersionString>2.8.8</sparkle:shortVersionString>
+            <sparkle:shortVersionString>2.9.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/teddychan/ice-2/releases/download/v2.8.8/Ice-2-v2.8.8.zip" length="2928712" type="application/octet-stream" sparkle:edSignature="bMnsy8wSMia1AkjNajjBx/IykarC8o9VPIOk/53LJcPZE234OQoPlwJHPyjnyf62MkJYcO359ccIQIpxypxjBA=="/>
+            <enclosure url="https://github.com/teddychan/ice-2/releases/download/v2.9.0/Ice-2-v2.9.0.zip" length="3039775" type="application/octet-stream" sparkle:edSignature="SiDuSNwdxt7rf8ZWpjqPQuWO4iV4PryItsTdHQ33aC168j1avZ5qv7Y7HSr0/imE0f9iBMgpH86e3b5xuCsFCA=="/>
         </item>
     </channel>
 </rss>
