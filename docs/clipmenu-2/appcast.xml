@@ -3,13 +3,13 @@
     <channel>
         <title>ClipMenu 2</title>
         <item>
-            <title>2.17.5</title>
-            <pubDate>Sat, 04 Jul 2026 15:43:01 +0000</pubDate>
-            <sparkle:version>41</sparkle:version>
-            <sparkle:shortVersionString>2.17.5</sparkle:shortVersionString>
+            <title>2.17.6</title>
+            <pubDate>Mon, 06 Jul 2026 13:30:38 +0000</pubDate>
+            <sparkle:version>45</sparkle:version>
+            <sparkle:shortVersionString>2.17.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/teddychan/clipmenu-2/releases/download/v2.17.5/ClipMenu-2-v2.17.5.zip" length="2465606" type="application/octet-stream" sparkle:edSignature="r+2S/KeXDduuZnFKvDgynR2thI4l/TrVL3zeMwowiqXASckuJd1NZSbc9qh40fVjcCTNeTZOylOxoZyAI3PiDg=="/>
+            <enclosure url="https://github.com/teddychan/clipmenu-2/releases/download/v2.17.6/ClipMenu-2-v2.17.6.zip" length="2475288" type="application/octet-stream" sparkle:edSignature="IbiO8xxlfYginyYZk2uNdpQXJ6VdlWjpD0k0iKxs1XPAM89YGbGJealZASkmRBWMiVhiMbarjbSs+vEqporxBA=="/>
         </item>
     </channel>
 </rss>
