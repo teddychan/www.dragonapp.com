@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  </script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+  <title>Spectacle 2 — Mac 键盘窗口管理器，为 macOS 26 与 27 重制</title>
+  <meta name="description" content="Spectacle 2 是一款面向 Mac 的免费开源键盘窗口管理器——用全局快捷键移动和调整窗口：半屏、边角、三分之一、全屏，还能跨显示器。为 macOS 26 与 27 重制。可在 GitHub 或用 Homebrew 免费下载。">
+  <link rel="canonical" href="https://www.dragonapp.com/zh-Hans/spectacle-2/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+  <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/spectacle-2/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/spectacle-2/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/spectacle-2/">
+  <link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/spectacle-2/">
+  <link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/spectacle-2/">
+  <link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/spectacle-2/">
+  <link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/spectacle-2/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/spectacle-2/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:url" content="https://www.dragonapp.com/zh-Hans/spectacle-2/">
+  <meta property="og:title" content="Spectacle 2 — Mac 键盘窗口管理器，为 macOS 26 与 27 重制">
+  <meta property="og:description" content="面向 Mac 的免费开源键盘窗口管理器——用全局快捷键移动和调整窗口。为 macOS 26 与 27 重制。">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spectacle 2 — Mac 键盘窗口管理器，为 macOS 26 与 27 重制">
+  <meta name="twitter:description" content="面向 Mac 的免费开源键盘窗口管理器——用全局快捷键移动和调整窗口。为 macOS 26 与 27 重制。">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css?v=7c54fc78">
+  <style>
+    /* Spectacle 2 — warm orange accent (echoes the app icon). Inline so the shared
+       dragon.css stays byte-identical and no site-wide cache-bust is needed. */
+    body.theme-spectacle {
+      --accent: #e8663d;
+      --accent-action: #d9532b;
+      --accent-action-ink: #ffffff;
+      --accent-deep: #c2461f;
+      --accent-tint: #fdeee7;
+      --accent-ink: #a63c1a;
+      --shadow: 0 18px 40px rgba(194, 70, 31, 0.14);
+      --shadow-sm: 0 8px 22px rgba(194, 70, 31, 0.12);
+    }
+    @media (prefers-color-scheme: dark) {
+      body.theme-spectacle {
+        --accent: #f4885f;
+        --accent-action: #f7a380;
+        --accent-action-ink: #1f0d07;
+        --accent-deep: #f7a380;
+        --accent-tint: #33170c;
+        --accent-ink: #f8c7ae;
+      }
+    }
+  </style>
+  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Spectacle 2",
+        "description": "面向 Mac 的免费开源键盘窗口管理器。用全局快捷键移动和调整最前面的窗口——左/右/上/下半屏、边角、三分之一、居中、全屏、放大/缩小，以及跨显示器——支持撤销/重做和完全可重新绑定的快捷键。支持 macOS 26 与 27。",
+        "url": "https://www.dragonapp.com/spectacle-2/",
+        "image": "https://www.dragonapp.com/icon-512.png",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 26",
+        "inLanguage": "zh-Hans",
+        "downloadUrl": "https://github.com/teddychan/spectacle-2/releases/latest",
+        "softwareLicense": "https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md",
+        "offers": {
+          "@type": "Offer",
+          "name": "GitHub 版本 — free & open source",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://github.com/teddychan/spectacle-2/releases/latest"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dragon App",
+          "url": "https://www.dragonapp.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Dragon App", "item": "https://www.dragonapp.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Spectacle 2", "item": "https://www.dragonapp.com/spectacle-2/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Spectacle 2 能做什么？",
+            "acceptedAnswer": { "@type": "Answer", "text": "Spectacle 2 用键盘快捷键移动和调整窗口大小。把最前面的窗口贴靠到左、右、上、下半屏，贴到边角或屏幕的三分之一，居中、全屏、放大或缩小，或发送到下一个显示器——全程无需鼠标。再次按下半屏或边角快捷键，窗口会在二分之一、三分之二和三分之一之间切换。" }
+          },
+          {
+            "@type": "Question",
+            "name": "如何安装 Spectacle 2？",
+            "acceptedAnswer": { "@type": "Answer", "text": "从最新的 GitHub 版本下载 App 并拖到「应用程序」，或用 Homebrew 安装：brew install --cask teddychan/tap/spectacle-2。启动后在「系统设置」中授予「辅助功能」权限，Spectacle 2 就会常驻在菜单栏。" }
+          },
+          {
+            "@type": "Question",
+            "name": "运行 Spectacle 2 需要什么？",
+            "acceptedAnswer": { "@type": "Answer", "text": "一台运行 macOS 26 或更高版本的 Apple 芯片 Mac。Spectacle 2 需要「辅助功能」权限才能移动和调整其他 App 的窗口。" }
+          },
+          {
+            "@type": "Question",
+            "name": "可以更改键盘快捷键吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "可以。每个窗口操作都绑定了一个快捷键，可在「设置 ▸ 快捷键」中重新绑定，App 内置 Spectacle 的经典默认值（例如左半屏 ⌥⌘←、居中 ⌥⌘C）。你的快捷键会被保存，并可备份和恢复。" }
+          },
+          {
+            "@type": "Question",
+            "name": "这是原版 Spectacle 吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "这是 Spectacle（最初由 Eric Czarny 打造的窗口管理器）的独立开源重制版，使用现代公开的 macOS API 以 Swift 从零重新实现，可在 macOS 26 与 27 上运行。以 MIT 许可证发布。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-spectacle">
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <a href="../">所有 App</a>
+        <a href="#features">功能</a>
+        <a href="#how">工作原理</a>
+        <a href="#download">下载</a>
+        <a class="nav-cta" href="#download">下载</a>
+        <details class="lang-switch">
+          <summary aria-label="Language"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>简体中文</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/spectacle-2/" hreflang="en-US" data-setlang="en-US">English</a>
+            <a href="https://www.dragonapp.com/zh-Hans/spectacle-2/" hreflang="zh-Hans" data-setlang="zh-Hans" class="active" aria-current="true">简体中文</a>
+            <a href="https://www.dragonapp.com/zh-Hant/spectacle-2/" hreflang="zh-Hant" data-setlang="zh-Hant">繁體中文</a>
+            <a href="https://www.dragonapp.com/ja/spectacle-2/" hreflang="ja" data-setlang="ja">日本語</a>
+            <a href="https://www.dragonapp.com/ko/spectacle-2/" hreflang="ko" data-setlang="ko">한국어</a>
+            <a href="https://www.dragonapp.com/es/spectacle-2/" hreflang="es" data-setlang="es">Español</a>
+            <a href="https://www.dragonapp.com/fr/spectacle-2/" hreflang="fr" data-setlang="fr">Français</a>
+          </div>
+        </details>
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="appicon appicon-lg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="14" r="3.6"/><circle cx="18" cy="14" r="3.6"/><path d="M9.4 13c1.1-1.6 4.1-1.6 5.2 0"/><path d="M2.4 12.2 3.9 10M21.6 12.2 20.1 10"/></svg>
+        </span>
+      </div>
+      <p><span class="eyebrow">面向 macOS 的键盘窗口管理器</span></p>
+      <h1>一个按键，移动和调整窗口</h1>
+      <p class="sub">Spectacle 2 把最前面的窗口贴靠到半屏、边角、三分之一或全屏，跨显示器移动、放大或缩小，还能撤销——全部用键盘完成。这是 Spectacle 的现代开源重制版，现已支持 macOS 26 与 27。</p>
+      <div class="cta-row">
+        <a class="btn btn-github" href="https://github.com/teddychan/spectacle-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          在 GitHub 免费下载
+        </a>
+        <a class="btn btn-primary" href="#download">查看安装方式</a>
+      </div>
+      <p class="req">需要 macOS 26 或更高版本 · Apple 芯片 · 开源（MIT）</p>
+    </div>
+  </header>
+
+  <!-- PRODUCT SHOT -->
+  <div class="container shot-wrap">
+    <div class="window" role="img" aria-label="使用 Spectacle 2 的键盘快捷键 Option-Command-左 将一个 Mac 窗口贴靠到屏幕左半边，并提示再次按下会在二分之一、三分之二和三分之一之间切换。">
+      <div class="titlebar">
+        <span class="dot" style="background:#e06a60"></span>
+        <span class="dot" style="background:#e6b341"></span>
+        <span class="dot" style="background:#5fc375"></span>
+        <span class="label">Screen · Spectacle 2</span>
+      </div>
+      <div class="menu-head">用全局快捷键贴靠最前面的窗口</div>
+      <div style="display:flex; gap:12px; padding:16px;">
+        <div style="flex:1; height:150px; border-radius:10px; background:var(--accent-tint); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--accent-deep); font-weight:600;">左半屏 · <span class="mono" style="margin-left:8px;">⌥⌘←</span></div>
+        <div style="flex:1; height:150px; border-radius:10px; border:1px dashed var(--border); display:flex; align-items:center; justify-content:center; color:var(--muted);"><span class="mono">⌥⌘→</span> &nbsp;右半屏</div>
+      </div>
+      <div class="menu-head" style="border-top:1px solid var(--border);border-bottom:none;">再次按下切换 ½ → ⅔ → ⅓ · 三分之一按 ⌃⌥→ · 撤销按 ⌥⌘Z</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="head">
+        <h2>每个窗口，都在你想要的位置</h2>
+        <p>Spectacle 的全套窗口操作——全部用键盘，全部可重新绑定。</p>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16"/></svg></div>
+          <h3>半屏与全屏</h3>
+          <p>用 ⌥⌘ 和方向键，把窗口贴靠到左、右、上、下半屏，或铺满整个屏幕。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><rect x="3" y="4" width="9" height="8" rx="1" fill="currentColor" stroke="none" opacity="0.18"/><path d="M12 4v16M3 12h9"/></svg></div>
+          <h3>边角与三分之一</h3>
+          <p>发送到任意四分之一，或用 ⌃⌥← 和 ⌃⌥→ 在屏幕的六个三分之一之间切换。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></div>
+          <h3>再次按下切换</h3>
+          <p>反复按半屏或边角快捷键，窗口会在 ½、⅔ 和 ⅓ 之间切换——Spectacle 的标志性操作。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="9" height="14" rx="2"/><rect x="13" y="5" width="9" height="14" rx="2"/><path d="m9 12 4 0"/></svg></div>
+          <h3>跨显示器</h3>
+          <p>把窗口甩到下一个或上一个显示器，它会居中落下——放不下时则铺满屏幕。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 5 5v3"/></svg></div>
+          <h3>撤销与重做</h3>
+          <p>不太对？⌥⌘Z 把窗口放回原位，⌥⌘⇧Z 再次移动。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h.01M11 12h4"/></svg></div>
+          <h3>你的快捷键，免费且开源</h3>
+          <p>在设置中重新绑定每个操作，内置经典默认值，全部源代码在 GitHub 上以 MIT 许可证公开。无广告，无追踪。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>三步贴靠窗口</h2>
+        <p>Spectacle 2 常驻菜单栏，随处可用。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>安装并授予访问权限</h3>
+          <p>从 GitHub 或 Homebrew 获取 Spectacle 2，打开它，并授予「辅助功能」权限以便移动窗口。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>按下快捷键</h3>
+          <p>在任意窗口处于前台时，按 ⌥⌘← 贴左半屏，⌥⌘C 居中，⌥⌘F 全屏，等等。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>切换与撤销</h3>
+          <p>再次按下切换 ½ → ⅔ → ⅓，在三分之一和显示器之间切换，⌥⌘Z 可撤销任意移动。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>获取 Spectacle 2 的两种方式</h2>
+        <p>同一款免费开源 App。选择最适合你的方式。</p>
+      </div>
+      <div class="plans">
+        <div class="plan featured">
+          <span class="badge">最简单 · 免费</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            GitHub 版本
+          </h3>
+          <p class="price"><strong>永久免费</strong> · MIT 许可</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>直接下载 <code>.app</code>，无需账户</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>内置自动更新</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>全部源代码在 GitHub——自行查看并构建</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>支持 macOS 26 与 27</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/spectacle-2/releases/latest">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            获取最新版本
+          </a>
+        </div>
+
+        <div class="plan">
+          <span class="badge">终端 · 一条命令</span>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3"/><path d="M13 15h5"/></svg>
+            Homebrew
+          </h3>
+          <p class="price">在命令行安装与更新</p>
+          <div class="cmd">
+            <code>brew install --cask teddychan/tap/spectacle-2</code>
+            <button type="button" class="cmd-copy" data-copied="Copied">Copy</button>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>同一个免费开源版本</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>随时用 <code>brew upgrade --cask</code> 更新</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>用 <code>brew uninstall --cask spectacle-2</code> 卸载</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/homebrew-tap">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            查看 tap
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit">
+    <div class="container">
+      <p class="kicker">致敬</p>
+      <p class="body">Spectacle 2 是 <strong><a href="https://github.com/eczarny/spectacle">Spectacle</a></strong>（最初由 Eric Czarny 打造的窗口管理器）的独立开源重制版。由 <strong>Teddy Chan</strong> 积极维护，使用现代 macOS API 以 Swift 从零重写。以 <a href="https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md">MIT 许可证</a>发布。</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">所有 App</a>
+        <a href="../clipmenu-2/">ClipMenu 2</a>
+        <a href="../ice-2/">Ice 2</a>
+        <a href="../support.html">支持</a>
+        <a href="https://github.com/teddychan/spectacle-2">GitHub</a>
+        <a href="https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md">License (MIT)</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Spectacle 2 以 <a href="https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md">MIT 许可证</a>开源发布。原版 <a href="https://github.com/eczarny/spectacle">Spectacle</a> © Eric Czarny。</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".cmd-copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.parentElement.querySelector("code");
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+          var label = btn.textContent;
+          btn.textContent = btn.getAttribute("data-copied") || "Copied";
+          btn.classList.add("copied");
+          setTimeout(function () { btn.textContent = label; btn.classList.remove("copied"); }, 1600);
+        });
+      });
+    });
+  </script>
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">我们使用 Cookie 来衡量流量并改进 Dragon App。你可以接受或拒绝分析和广告 Cookie。详见我们的 <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">全部拒绝</button>
+        <button type="button" class="consent-btn consent-accept">全部接受</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

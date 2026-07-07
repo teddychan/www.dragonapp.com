@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  </script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
+  <title>Spectacle 2 — Mac 用キーボードウインドウマネージャ、macOS 26・27 対応の再構築版</title>
+  <meta name="description" content="Spectacle 2 は Mac 用の無料・オープンソースのキーボードウインドウマネージャ。グローバルショートカットでウインドウを移動・リサイズ — 左右半分、四隅、三分割、フルスクリーン、ディスプレイ間も。macOS 26・27 向けに再構築。GitHub または Homebrew から無料でダウンロード。">
+  <link rel="canonical" href="https://www.dragonapp.com/ja/spectacle-2/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+  <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/spectacle-2/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/spectacle-2/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/spectacle-2/">
+  <link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/spectacle-2/">
+  <link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/spectacle-2/">
+  <link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/spectacle-2/">
+  <link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/spectacle-2/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/spectacle-2/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://www.dragonapp.com/ja/spectacle-2/">
+  <meta property="og:title" content="Spectacle 2 — Mac 用キーボードウインドウマネージャ、macOS 26・27 対応の再構築版">
+  <meta property="og:description" content="Mac 用の無料・オープンソースのキーボードウインドウマネージャ。グローバルショートカットでウインドウを移動・リサイズ。macOS 26・27 向けに再構築。">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spectacle 2 — Mac 用キーボードウインドウマネージャ、macOS 26・27 対応の再構築版">
+  <meta name="twitter:description" content="Mac 用の無料・オープンソースのキーボードウインドウマネージャ。グローバルショートカットでウインドウを移動・リサイズ。macOS 26・27 向けに再構築。">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <link rel="stylesheet" href="/shared/dragon.css?v=7c54fc78">
+  <style>
+    /* Spectacle 2 — warm orange accent (echoes the app icon). Inline so the shared
+       dragon.css stays byte-identical and no site-wide cache-bust is needed. */
+    body.theme-spectacle {
+      --accent: #e8663d;
+      --accent-action: #d9532b;
+      --accent-action-ink: #ffffff;
+      --accent-deep: #c2461f;
+      --accent-tint: #fdeee7;
+      --accent-ink: #a63c1a;
+      --shadow: 0 18px 40px rgba(194, 70, 31, 0.14);
+      --shadow-sm: 0 8px 22px rgba(194, 70, 31, 0.12);
+    }
+    @media (prefers-color-scheme: dark) {
+      body.theme-spectacle {
+        --accent: #f4885f;
+        --accent-action: #f7a380;
+        --accent-action-ink: #1f0d07;
+        --accent-deep: #f7a380;
+        --accent-tint: #33170c;
+        --accent-ink: #f8c7ae;
+      }
+    }
+  </style>
+  <script src="/shared/i18n.js?v=bf03b684" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Spectacle 2",
+        "description": "Mac 用の無料・オープンソースのキーボードウインドウマネージャ。最前面のウインドウをグローバルショートカットで移動・リサイズ — 左右・上下の半分、四隅、三分割、中央、フルスクリーン、拡大・縮小、ディスプレイ間 — 取り消し／やり直しと完全に再割り当て可能なショートカット付き。macOS 26・27 に対応。",
+        "url": "https://www.dragonapp.com/spectacle-2/",
+        "image": "https://www.dragonapp.com/icon-512.png",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 26",
+        "inLanguage": "ja",
+        "downloadUrl": "https://github.com/teddychan/spectacle-2/releases/latest",
+        "softwareLicense": "https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md",
+        "offers": {
+          "@type": "Offer",
+          "name": "GitHub リリース — free & open source",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://github.com/teddychan/spectacle-2/releases/latest"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dragon App",
+          "url": "https://www.dragonapp.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Dragon App", "item": "https://www.dragonapp.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Spectacle 2", "item": "https://www.dragonapp.com/spectacle-2/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Spectacle 2 は何ができますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "Spectacle 2 はキーボードショートカットでウインドウを移動・リサイズします。最前面のウインドウを左・右・上・下の半分、四隅、画面の三分の一に配置したり、中央寄せ、フルスクリーン、拡大・縮小、次のディスプレイへ移動 — すべてマウスなしで行えます。半分や四隅のショートカットをもう一度押すと、ウインドウが二分の一・三分の二・三分の一と切り替わります。" }
+          },
+          {
+            "@type": "Question",
+            "name": "Spectacle 2 はどうやってインストールしますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "最新の GitHub リリースからアプリをダウンロードして「アプリケーション」にドラッグするか、Homebrew でインストールします：brew install --cask teddychan/tap/spectacle-2。起動して「システム設定」でアクセシビリティ権限を許可すると、Spectacle 2 がメニューバーに常駐します。" }
+          },
+          {
+            "@type": "Question",
+            "name": "Spectacle 2 を使うのに何が必要ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "macOS 26 以降を搭載した Apple シリコンの Mac。Spectacle 2 は他のアプリのウインドウを移動・リサイズするためにアクセシビリティ権限が必要です。" }
+          },
+          {
+            "@type": "Question",
+            "name": "キーボードショートカットは変更できますか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "はい。すべてのウインドウ操作はショートカットに割り当てられており、「設定 ▸ ショートカット」で再割り当てできます。アプリには Spectacle の従来のデフォルト（例：左半分は ⌥⌘←、中央寄せは ⌥⌘C）が用意されています。ショートカットは保存され、バックアップと復元ができます。" }
+          },
+          {
+            "@type": "Question",
+            "name": "これはオリジナルの Spectacle ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "これは Spectacle（Eric Czarny によって作られたウインドウマネージャ）の独立したオープンソースの再構築版で、最新の公開 macOS API を使い Swift でゼロから再実装し、macOS 26・27 で動作します。MIT ライセンスで公開されています。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-spectacle">
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="../"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <a href="../">すべてのアプリ</a>
+        <a href="#features">機能</a>
+        <a href="#how">使い方</a>
+        <a href="#download">ダウンロード</a>
+        <a class="nav-cta" href="#download">ダウンロード</a>
+        <details class="lang-switch">
+          <summary aria-label="Language"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>日本語</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/spectacle-2/" hreflang="en-US" data-setlang="en-US">English</a>
+            <a href="https://www.dragonapp.com/zh-Hans/spectacle-2/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
+            <a href="https://www.dragonapp.com/zh-Hant/spectacle-2/" hreflang="zh-Hant" data-setlang="zh-Hant">繁體中文</a>
+            <a href="https://www.dragonapp.com/ja/spectacle-2/" hreflang="ja" data-setlang="ja" class="active" aria-current="true">日本語</a>
+            <a href="https://www.dragonapp.com/ko/spectacle-2/" hreflang="ko" data-setlang="ko">한국어</a>
+            <a href="https://www.dragonapp.com/es/spectacle-2/" hreflang="es" data-setlang="es">Español</a>
+            <a href="https://www.dragonapp.com/fr/spectacle-2/" hreflang="fr" data-setlang="fr">Français</a>
+          </div>
+        </details>
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="appicon appicon-lg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="14" r="3.6"/><circle cx="18" cy="14" r="3.6"/><path d="M9.4 13c1.1-1.6 4.1-1.6 5.2 0"/><path d="M2.4 12.2 3.9 10M21.6 12.2 20.1 10"/></svg>
+        </span>
+      </div>
+      <p><span class="eyebrow">macOS 用キーボードウインドウマネージャ</span></p>
+      <h1>キーストロークでウインドウを移動・リサイズ</h1>
+      <p class="sub">Spectacle 2 は最前面のウインドウを半分・四隅・三分割・フルスクリーンに配置し、ディスプレイ間の移動、拡大・縮小、取り消しまで — すべてキーボードで。Spectacle のモダンなオープンソース再構築版で、macOS 26・27 に対応。</p>
+      <div class="cta-row">
+        <a class="btn btn-github" href="https://github.com/teddychan/spectacle-2/releases/latest">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          GitHub で無料ダウンロード
+        </a>
+        <a class="btn btn-primary" href="#download">インストール方法を見る</a>
+      </div>
+      <p class="req">macOS 26 以降が必要 · Apple シリコン · オープンソース（MIT）</p>
+    </div>
+  </header>
+
+  <!-- PRODUCT SHOT -->
+  <div class="container shot-wrap">
+    <div class="window" role="img" aria-label="Spectacle 2 のキーボードショートカット Option-Command-左 で画面の左半分に配置された Mac のウインドウ。もう一度押すと二分の一・三分の二・三分の一と切り替わることを示しています。">
+      <div class="titlebar">
+        <span class="dot" style="background:#e06a60"></span>
+        <span class="dot" style="background:#e6b341"></span>
+        <span class="dot" style="background:#5fc375"></span>
+        <span class="label">Screen · Spectacle 2</span>
+      </div>
+      <div class="menu-head">グローバルショートカットで最前面のウインドウを配置</div>
+      <div style="display:flex; gap:12px; padding:16px;">
+        <div style="flex:1; height:150px; border-radius:10px; background:var(--accent-tint); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--accent-deep); font-weight:600;">左半分 · <span class="mono" style="margin-left:8px;">⌥⌘←</span></div>
+        <div style="flex:1; height:150px; border-radius:10px; border:1px dashed var(--border); display:flex; align-items:center; justify-content:center; color:var(--muted);"><span class="mono">⌥⌘→</span> &nbsp;右半分</div>
+      </div>
+      <div class="menu-head" style="border-top:1px solid var(--border);border-bottom:none;">もう一度押して ½ → ⅔ → ⅓ · 三分割は ⌃⌥→ · 取り消しは ⌥⌘Z</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="head">
+        <h2>すべてのウインドウを思いどおりの場所に</h2>
+        <p>Spectacle のウインドウ操作をすべて網羅 — すべてキーボードで、すべて再割り当て可能。</p>
+      </div>
+      <div class="grid">
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16"/></svg></div>
+          <h3>半分とフルスクリーン</h3>
+          <p>⌥⌘ と矢印キーで、ウインドウを左・右・上・下の半分に配置、または画面いっぱいに。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><rect x="3" y="4" width="9" height="8" rx="1" fill="currentColor" stroke="none" opacity="0.18"/><path d="M12 4v16M3 12h9"/></svg></div>
+          <h3>四隅と三分割</h3>
+          <p>任意の四分の一に配置、または ⌃⌥← と ⌃⌥→ で画面の 6 つの三分割を順に切り替え。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></div>
+          <h3>もう一度押して切り替え</h3>
+          <p>半分や四隅のショートカットを繰り返し押すと、ウインドウが ½・⅔・⅓ と切り替わる — Spectacle 定番の操作。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="9" height="14" rx="2"/><rect x="13" y="5" width="9" height="14" rx="2"/><path d="m9 12 4 0"/></svg></div>
+          <h3>ディスプレイ間で移動</h3>
+          <p>次または前のディスプレイへウインドウを送ると中央に配置 — 収まらない場合は画面いっぱいに。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 5 5v3"/></svg></div>
+          <h3>取り消しとやり直し</h3>
+          <p>しっくりこない？ ⌥⌘Z で元の位置に戻し、⌥⌘⇧Z でもう一度動かせます。</p>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h.01M11 12h4"/></svg></div>
+          <h3>あなたのショートカット、無料でオープン</h3>
+          <p>すべての操作を設定で再割り当て、従来のデフォルトも搭載。全ソースは GitHub に MIT ライセンスで公開。広告なし・追跡なし。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>3 ステップでウインドウを配置</h2>
+        <p>Spectacle 2 はメニューバーに常駐し、どこでも動作します。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>インストールしてアクセスを許可</h3>
+          <p>GitHub または Homebrew から Spectacle 2 を入手して起動し、ウインドウを動かせるようアクセシビリティ権限を許可します。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>ショートカットを押す</h3>
+          <p>ウインドウを選択した状態で、左半分は ⌥⌘←、中央寄せは ⌥⌘C、フルスクリーンは ⌥⌘F など。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>切り替えと取り消し</h3>
+          <p>もう一度押して ½ → ⅔ → ⅓、三分割やディスプレイを順に切り替え、⌥⌘Z でどの移動も取り消し。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="head">
+        <h2>Spectacle 2 を入手する 2 つの方法</h2>
+        <p>同じ無料・オープンソースのアプリ。使い方に合う方を選んでください。</p>
+      </div>
+      <div class="plans">
+        <div class="plan featured">
+          <span class="badge">最も簡単 · 無料</span>
+          <h3>
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            GitHub リリース
+          </h3>
+          <p class="price"><strong>ずっと無料</strong> · MIT ライセンス</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg><code>.app</code> を直接ダウンロード、アカウント不要</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>自動アップデート内蔵</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>全ソースは GitHub に — 自分で確認・ビルド可能</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>macOS 26・27 で動作</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/spectacle-2/releases/latest">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            最新リリースを入手
+          </a>
+        </div>
+
+        <div class="plan">
+          <span class="badge">ターミナル · コマンド 1 つ</span>
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3"/><path d="M13 15h5"/></svg>
+            Homebrew
+          </h3>
+          <p class="price">コマンドラインでインストール・更新</p>
+          <div class="cmd">
+            <code>brew install --cask teddychan/tap/spectacle-2</code>
+            <button type="button" class="cmd-copy" data-copied="Copied">Copy</button>
+          </div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>同じ無料・オープンソースのビルド</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg><code>brew upgrade --cask</code> でいつでも更新</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg><code>brew uninstall --cask spectacle-2</code> で削除</li>
+          </ul>
+          <a class="btn btn-github" href="https://github.com/teddychan/homebrew-tap">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+            タップを見る
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIT -->
+  <section class="credit">
+    <div class="container">
+      <p class="kicker">オマージュ</p>
+      <p class="body">Spectacle 2 は <strong><a href="https://github.com/eczarny/spectacle">Spectacle</a></strong>（Eric Czarny が作ったウインドウマネージャ）の独立したオープンソース再構築版です。<strong>Teddy Chan</strong> が積極的にメンテナンスし、最新の macOS API を用いて Swift でゼロから書き直しています。<a href="https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md">MIT ライセンス</a>で公開。</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand"><span class="glyph">D</span><span>Dragon App</span></div>
+      <div class="foot-links">
+        <a href="../">すべてのアプリ</a>
+        <a href="../clipmenu-2/">ClipMenu 2</a>
+        <a href="../ice-2/">Ice 2</a>
+        <a href="../support.html">サポート</a>
+        <a href="https://github.com/teddychan/spectacle-2">GitHub</a>
+        <a href="https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md">License (MIT)</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Spectacle 2 は <a href="https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md">MIT ライセンス</a>のもとでオープンソース。オリジナルの <a href="https://github.com/eczarny/spectacle">Spectacle</a> © Eric Czarny。</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".cmd-copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var code = btn.parentElement.querySelector("code");
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+          var label = btn.textContent;
+          btn.textContent = btn.getAttribute("data-copied") || "Copied";
+          btn.classList.add("copied");
+          setTimeout(function () { btn.textContent = label; btn.classList.remove("copied"); }, 1600);
+        });
+      });
+    });
+  </script>
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">トラフィックの測定と Dragon App の改善のために Cookie を使用します。分析および広告 Cookie は許可または拒否できます。詳しくは <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">すべて拒否</button>
+        <button type="button" class="consent-btn consent-accept">すべて許可</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
