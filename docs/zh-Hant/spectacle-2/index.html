@@ -152,9 +152,19 @@
           <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
         </summary>
         <div class="nav-links">
-        <a href="../">所有 App</a>
+        <details class="lang-switch apps-switch">
+          <summary aria-label="應用程式" aria-haspopup="true"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span>應用程式</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/zh-Hant/">所有應用程式</a>
+            <a href="https://www.dragonapp.com/zh-Hant/ice-2/">Ice 2</a>
+            <a href="https://www.dragonapp.com/zh-Hant/clipmenu-2/">ClipMenu 2</a>
+            <a href="https://www.dragonapp.com/zh-Hant/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
+            <a href="https://www.dragonapp.com/zh-Hant/spectacle-2/">Spectacle 2</a>
+          </div>
+        </details>
         <a href="#features">功能</a>
         <a href="#how">運作方式</a>
+        <a href="#changelog">更新內容</a>
         <a href="#download">下載</a>
         <a class="nav-cta" href="#download">下載</a>
         <details class="lang-switch">
@@ -282,6 +292,17 @@
           <p>再次按下切換 ½ → ⅔ → ⅓，在三分之一和顯示器之間切換，⌥⌘Z 可還原任意移動。</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="changelog" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>更新內容</h2>
+        <p>簡明更新說明，最新在前。</p>
+      </div>
+      <div class="changelog"><div class="logrow"><span class="ver">2.0.0</span><div><div class="lognote">Spectacle 2 的首個版本——用 Swift 為 macOS 26 與 27 從零重寫 Spectacle：用鍵盤快速鍵移動和調整視窗，內建經典預設值並支援完全重新綁定。</div><div class="logmeta">2026-07-07 · <a href="https://github.com/teddychan/spectacle-2/releases/tag/v2.0.0">在 GitHub 上查看 →</a></div></div></div></div>
+      <p class="changelog-auto">由 GitHub Releases 自動生成</p>
     </div>
   </section>
 

@@ -152,9 +152,19 @@
           <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
         </summary>
         <div class="nav-links">
-        <a href="../">所有 App</a>
+        <details class="lang-switch apps-switch">
+          <summary aria-label="应用" aria-haspopup="true"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span>应用</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/zh-Hans/">全部应用</a>
+            <a href="https://www.dragonapp.com/zh-Hans/ice-2/">Ice 2</a>
+            <a href="https://www.dragonapp.com/zh-Hans/clipmenu-2/">ClipMenu 2</a>
+            <a href="https://www.dragonapp.com/zh-Hans/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
+            <a href="https://www.dragonapp.com/zh-Hans/spectacle-2/">Spectacle 2</a>
+          </div>
+        </details>
         <a href="#features">功能</a>
         <a href="#how">工作原理</a>
+        <a href="#changelog">更新内容</a>
         <a href="#download">下载</a>
         <a class="nav-cta" href="#download">下载</a>
         <details class="lang-switch">
@@ -282,6 +292,17 @@
           <p>再次按下切换 ½ → ⅔ → ⅓，在三分之一和显示器之间切换，⌥⌘Z 可撤销任意移动。</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="changelog" style="background: var(--surface);">
+    <div class="container">
+      <div class="head">
+        <h2>更新内容</h2>
+        <p>简明更新说明，最新在前。</p>
+      </div>
+      <div class="changelog"><div class="logrow"><span class="ver">2.0.0</span><div><div class="lognote">Spectacle 2 的首个版本——用 Swift 为 macOS 26 与 27 从零重写 Spectacle：用键盘快捷键移动和调整窗口，内置经典默认值并支持完全重新绑定。</div><div class="logmeta">2026-07-07 · <a href="https://github.com/teddychan/spectacle-2/releases/tag/v2.0.0">在 GitHub 上查看 →</a></div></div></div></div>
+      <p class="changelog-auto">由 GitHub Releases 自动生成</p>
     </div>
   </section>
 
