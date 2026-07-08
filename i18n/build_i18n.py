@@ -96,7 +96,7 @@ PRIORITY = {"index": "1.0", "support": "0.5", "privacy": "0.3", "about": "0.6"}
 
 # legacy app slugs (old URLs) -> current app slug they now redirect to
 LEGACY_REDIRECTS = {"clipmenu": "clipmenu-2", "keykey": "yahoo-keykey-2"}
-LASTMOD = "2026-06-23"
+LASTMOD = "2026-07-08"
 
 GLOBE = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
          'stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
