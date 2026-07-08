@@ -384,5 +384,43 @@
       {"q": "De quoi ai-je besoin pour utiliser Yahoo KeyKey 2 ?", "a": "Un Mac avec Apple Silicon (arm64) sous macOS 12 Monterey ou une version ultérieure. Yahoo KeyKey 2 est signé avec un Developer ID et notarisé par Apple, il s'ouvre donc sans encombre."},
       {"q": "S'agit-il du Yahoo! KeyKey d'origine ?", "a": "Non. Yahoo KeyKey 2 est une reconstruction indépendante et open source en Swift, créée en hommage au Yahoo! KeyKey d'origine (Yahoo!奇摩輸入法). Il est publié sous la licence MIT."}
     ]
+  },
+  "spectacle-2": {
+    "title": "Spectacle 2 — Gestionnaire de fenêtres au clavier pour Mac, reconstruit pour macOS 26 &amp; 27",
+    "description": "Spectacle 2 est un gestionnaire de fenêtres au clavier pour Mac, gratuit et open source : déplacez et redimensionnez les fenêtres avec des raccourcis globaux — moitiés, coins, tiers, plein écran et d’un écran à l’autre. Reconstruit pour macOS 26 et 27. Téléchargement gratuit sur GitHub ou avec Homebrew.",
+    "eyebrow": "Le gestionnaire de fenêtres au clavier pour macOS",
+    "h1": "Déplacez et redimensionnez les fenêtres d’une touche",
+    "sub": "Spectacle 2 place la fenêtre active en moitiés, coins, tiers ou plein écran, l’envoie d’un écran à l’autre, l’agrandit ou la réduit, et annule le tout — au clavier. Une reconstruction moderne et open source de Spectacle, désormais sur macOS 26 et 27.",
+    "demo_caption": "Une fenêtre Mac placée sur la moitié gauche de l’écran avec le raccourci Spectacle 2 Option-Commande-Gauche, avec une note indiquant qu’un nouvel appui fait défiler entre un demi, deux tiers et un tiers.",
+    "feat1_h": "Moitiés et plein écran",
+    "feat1_p": "Placez la fenêtre sur la moitié gauche, droite, haute ou basse, ou remplissez l’écran — avec ⌥⌘ et les flèches.",
+    "feat2_h": "Coins et tiers",
+    "feat2_p": "Envoyez-la dans n’importe quel quart, ou parcourez les six tiers de l’écran avec ⌃⌥← et ⌃⌥→.",
+    "feat3_h": "D’un écran à l’autre",
+    "feat3_p": "Envoyez la fenêtre sur l’écran suivant ou précédent : elle arrive centrée — ou remplit l’écran si elle ne rentre pas.",
+    "support_body": "Questions, rapports de bugs et demandes de fonctionnalités sont les bienvenus — ouvrez un ticket sur GitHub et j'y jetterai un œil.",
+    "credit_body": "Spectacle 2 est une reconstruction indépendante et open source de <strong><a href=\"https://github.com/eczarny/spectacle\">Spectacle</a></strong>, le gestionnaire de fenêtres créé à l’origine par <strong>Eric Czarny</strong>. Cette réimplémentation, activement maintenue par <strong>Teddy Chan</strong>, le réécrit de zéro en Swift avec des API macOS modernes. Publié sous la <a href=\"https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md\">Licence MIT</a>.",
+    "faq": [
+      {
+        "q": "Que fait Spectacle 2 ?",
+        "a": "Spectacle 2 déplace et redimensionne vos fenêtres avec des raccourcis clavier. Placez la fenêtre active sur la moitié gauche, droite, haute ou basse, dans un coin ou un tiers de l’écran, centrez-la, mettez-la en plein écran, agrandissez-la ou réduisez-la, ou envoyez-la sur l’écran suivant — le tout sans la souris. Appuyez de nouveau sur un raccourci de moitié ou de coin pour faire défiler la fenêtre entre un demi, deux tiers et un tiers."
+      },
+      {
+        "q": "Comment installer Spectacle 2 ?",
+        "a": "Téléchargez l’app depuis la dernière version GitHub et glissez-la dans Applications, ou installez-la avec Homebrew : brew install --cask teddychan/tap/spectacle-2. Lancez-la, accordez l’accès Accessibilité dans Réglages Système, et Spectacle 2 s’installe dans votre barre des menus."
+      },
+      {
+        "q": "De quoi ai-je besoin pour utiliser Spectacle 2 ?",
+        "a": "Un Mac Apple silicon sous macOS 26 ou version ultérieure. Spectacle 2 a besoin de l’autorisation Accessibilité pour déplacer et redimensionner les fenêtres des autres apps."
+      },
+      {
+        "q": "Puis-je modifier les raccourcis clavier ?",
+        "a": "Oui. Chaque action de fenêtre est associée à un raccourci que vous pouvez réattribuer dans Réglages ▸ Raccourcis, et l’app inclut les valeurs classiques de Spectacle (par exemple ⌥⌘← pour la moitié gauche et ⌥⌘C pour centrer). Vos raccourcis sont enregistrés et peuvent être sauvegardés et restaurés."
+      },
+      {
+        "q": "Est-ce le Spectacle original ?",
+        "a": "Il s’agit d’une reconstruction indépendante et open source de Spectacle — le gestionnaire de fenêtres créé à l’origine par Eric Czarny — réimplémenté de zéro en Swift avec des API macOS modernes et publiques pour fonctionner sur macOS 26 et 27. Publié sous licence MIT."
+      }
+    ]
   }
 }

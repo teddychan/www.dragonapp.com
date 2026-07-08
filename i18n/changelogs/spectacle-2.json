@@ -1,0 +1,20 @@
+[
+  {
+    "version": "2.0.2",
+    "date": "2026-07-07",
+    "notes": "A new menu-bar dropdown with an Uninstall option, plus a version-display fix.",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.2"
+  },
+  {
+    "version": "2.0.1",
+    "date": "2026-07-07",
+    "notes": "Post-launch fixes.",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.1"
+  },
+  {
+    "version": "2.0.0",
+    "date": "2026-07-07",
+    "notes": "First release of Spectacle 2 — a from-scratch Swift rewrite of Spectacle for macOS 26 and 27: move and resize windows with keyboard shortcuts, with the classic defaults and full rebinding.",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.0"
+  }
+]

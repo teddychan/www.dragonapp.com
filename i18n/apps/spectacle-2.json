@@ -1,0 +1,16 @@
+{
+  "slug": "spectacle-2",
+  "name": "Spectacle 2",
+  "theme": "theme-spectacle",
+  "repo": "https://github.com/teddychan/spectacle-2",
+  "homebrew_cask": "teddychan/tap/spectacle-2",
+  "mas_url": null,
+  "license": "MIT",
+  "license_url": "https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md",
+  "min_macos": "26",
+  "appcast_path": "spectacle-2/appcast.xml",
+  "credit_name": "Eric Czarny",
+  "credit_url": "https://github.com/eczarny/spectacle",
+  "sponsors_url": null,
+  "tip_url": "https://buy.stripe.com/00w8wOfpFaVh42S2eO8so00"
+}

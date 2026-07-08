@@ -1,8 +1,14 @@
 [
   {
+    "version": "2.17.6",
+    "date": "2026-07-06",
+    "notes": "Under-the-hood maintenance: refreshed the shared DragonKit components and release tooling.",
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.6"
+  },
+  {
     "version": "2.17.5",
     "date": "2026-07-04",
-    "notes": "fix: align Settings sidebar with shared DragonKit pane order · release: 2.17.5 — Settings sidebar order matches the Dragon apps",
+    "notes": "The Settings sidebar now follows the same pane order shared across the Dragon apps.",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.5"
   },
   {
@@ -20,13 +26,13 @@
   {
     "version": "2.17.2",
     "date": "2026-07-04",
-    "notes": "> ⚠️ **KNOWN CRASH — do not install.** This build crashes on launch (DragonKit resource bundle not resolved in the packaged .app). Superseded by 2.17.3. Use 2.16.1 or later-than-2.17.2. · refactor: move Uninstall onto DragonKit 1.2.0 UninstallSettingsPane (2.17.1) · fix: version status-item autosaveName to escape macOS 26 off-screen pin · fix: show Setup Guide reliably when opened from Settings",
+    "notes": "> ⚠️ KNOWN CRASH — do not install. This build crashes on launch (DragonKit resource bundle not resolved in the packaged .app). Superseded by 2.17.3. Use 2.16.1 or later-than-2.17.2. · refactor: move Uninstall onto DragonKit 1.2.0 UninstallSettingsPane (2.17.1) · fix: version status-item autosaveName to escape macOS 26 off-screen pin · fix: show Setup Guide reliably when opened from Settings",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.2"
   },
   {
     "version": "2.17.0",
     "date": "2026-07-04",
-    "notes": "> ⚠️ **KNOWN CRASH — do not install.** This build crashes on launch (DragonKit resource bundle not resolved in the packaged .app). Superseded by 2.17.3. Use 2.16.1 or later-than-2.17.2. · feat: adopt shared DragonKit settings foundation (2.17.0)",
+    "notes": "> ⚠️ KNOWN CRASH — do not install. This build crashes on launch (DragonKit resource bundle not resolved in the packaged .app). Superseded by 2.17.3. Use 2.16.1 or later-than-2.17.2. · feat: adopt shared DragonKit settings foundation (2.17.0)",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.0"
   },
   {
@@ -40,11 +46,5 @@
     "date": "2026-07-03",
     "notes": "feat: adjustable menu thumbnail size, rendered crisply (2.16.0)",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.16.0"
-  },
-  {
-    "version": "2.15.3",
-    "date": "2026-07-03",
-    "notes": "chore: remove dead iCloud/CloudKit localized strings · fix: name menu-bar status item so it survives menu-bar managers (2.15.3)",
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.15.3"
   }
 ]

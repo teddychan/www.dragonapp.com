@@ -9,7 +9,7 @@ REQUIRED = {"slug", "name", "theme", "repo", "homebrew_cask", "mas_url",
 
 def test_index_lists_apps():
     idx = json.load(open(os.path.join(APPS, "_index.json")))
-    assert idx == ["ice-2", "clipmenu-2", "yahoo-keykey-2"]
+    assert idx == ["ice-2", "clipmenu-2", "yahoo-keykey-2", "spectacle-2"]
 
 def test_each_app_has_required_fields():
     idx = json.load(open(os.path.join(APPS, "_index.json")))

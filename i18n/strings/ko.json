@@ -393,5 +393,43 @@
       {"q": "Yahoo KeyKey 2를 실행하려면 무엇이 필요한가요?", "a": "macOS 12 Monterey 이상을 실행하는 Apple Silicon (arm64) Mac이 필요합니다. Yahoo KeyKey 2는 Developer ID로 서명되고 Apple이 공증했으므로 깔끔하게 열립니다."},
       {"q": "이것이 원작 Yahoo! KeyKey인가요?", "a": "아닙니다. Yahoo KeyKey 2는 Swift로 만든 독립적인 오픈소스 재구현으로, 원작 Yahoo! KeyKey (Yahoo!奇摩輸入法)에 대한 헌정으로 제작되었습니다. MIT License로 배포됩니다."}
     ]
+  },
+  "spectacle-2": {
+    "title": "Spectacle 2 — Mac용 키보드 창 관리자, macOS 26·27용으로 재구축",
+    "description": "Spectacle 2는 Mac용 무료 오픈 소스 키보드 창 관리자입니다. 전역 단축키로 창을 이동·크기 조절 — 절반, 모서리, 3분할, 전체 화면, 디스플레이 간 이동까지. macOS 26·27용으로 재구축. GitHub 또는 Homebrew에서 무료로 다운로드하세요.",
+    "eyebrow": "macOS용 키보드 창 관리자",
+    "h1": "키 입력 한 번으로 창을 이동·크기 조절",
+    "sub": "Spectacle 2는 맨 앞 창을 절반·모서리·3분할·전체 화면으로 맞추고, 디스플레이 간 이동, 확대·축소, 실행 취소까지 — 모두 키보드로. macOS 26·27에서 실행되는 Spectacle의 현대적 오픈 소스 재구축입니다.",
+    "demo_caption": "Spectacle 2 키보드 단축키 Option-Command-왼쪽으로 화면 왼쪽 절반에 맞춰진 Mac 창. 다시 누르면 2분의 1, 3분의 2, 3분의 1로 전환됨을 나타냅니다.",
+    "feat1_h": "절반과 전체 화면",
+    "feat1_p": "⌥⌘와 화살표 키로 창을 왼쪽·오른쪽·위·아래 절반에 맞추거나 화면을 가득 채우세요.",
+    "feat2_h": "모서리와 3분할",
+    "feat2_p": "어느 사분면으로도 보내거나 ⌃⌥←와 ⌃⌥→로 화면의 여섯 3분할을 차례로 이동하세요.",
+    "feat3_h": "디스플레이 간 이동",
+    "feat3_p": "다음 또는 이전 디스플레이로 창을 보내면 가운데에 놓이고, 맞지 않으면 화면을 가득 채웁니다.",
+    "support_body": "질문, 버그 신고, 기능 요청은 언제나 환영합니다 — GitHub에서 이슈를 열면 검토하겠습니다.",
+    "credit_body": "Spectacle 2는 <strong><a href=\"https://github.com/eczarny/spectacle\">Spectacle</a></strong>(원래 Eric Czarny가 만든 창 관리자)의 독립적인 오픈 소스 재구축입니다. <strong>Teddy Chan</strong>이 활발히 유지 관리하며 최신 macOS API로 Swift에서 처음부터 다시 작성했습니다. <a href=\"https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md\">MIT 라이선스</a>로 배포됩니다.",
+    "faq": [
+      {
+        "q": "Spectacle 2는 무엇을 하나요?",
+        "a": "Spectacle 2는 키보드 단축키로 창을 이동하고 크기를 조절합니다. 맨 앞 창을 왼쪽·오른쪽·위·아래 절반, 모서리 또는 화면의 3분의 1에 맞추고, 가운데 정렬, 전체 화면, 확대·축소, 다음 디스플레이로 보내기까지 — 모두 마우스 없이 가능합니다. 절반이나 모서리 단축키를 다시 누르면 창이 2분의 1, 3분의 2, 3분의 1로 전환됩니다."
+      },
+      {
+        "q": "Spectacle 2는 어떻게 설치하나요?",
+        "a": "최신 GitHub 릴리스에서 앱을 다운로드해 응용 프로그램으로 드래그하거나 Homebrew로 설치하세요: brew install --cask teddychan/tap/spectacle-2. 실행한 뒤 시스템 설정에서 손쉬운 사용 권한을 허용하면 Spectacle 2가 메뉴 막대에 자리 잡습니다."
+      },
+      {
+        "q": "Spectacle 2를 실행하려면 무엇이 필요한가요?",
+        "a": "macOS 26 이상을 실행하는 Apple 실리콘 Mac. Spectacle 2는 다른 앱의 창을 이동·크기 조절하기 위해 손쉬운 사용 권한이 필요합니다."
+      },
+      {
+        "q": "키보드 단축키를 바꿀 수 있나요?",
+        "a": "네. 모든 창 동작은 단축키에 연결되어 있으며 설정 ▸ 단축키에서 재설정할 수 있고, 앱에는 Spectacle의 클래식 기본값(예: 왼쪽 절반 ⌥⌘←, 가운데 정렬 ⌥⌘C)이 포함되어 있습니다. 단축키는 저장되며 백업하고 복원할 수 있습니다."
+      },
+      {
+        "q": "이것이 원본 Spectacle인가요?",
+        "a": "이는 Spectacle(원래 Eric Czarny가 만든 창 관리자)의 독립적인 오픈 소스 재구축으로, 최신 공개 macOS API를 사용해 Swift로 처음부터 다시 구현하여 macOS 26·27에서 실행됩니다. MIT 라이선스로 배포됩니다."
+      }
+    ]
   }
 }

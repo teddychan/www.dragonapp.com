@@ -6,6 +6,7 @@
 - [Ice 2](https://www.dragonapp.com/ice-2/): Ice 2 hides the menu bar items you don't need, brings them back when you want them, and lets you lay the bar out your way. A faithful, open-source rebuild — now running on macOS 26 and 27. Install: brew install --cask teddychan/tap/ice-2
 - [ClipMenu 2](https://www.dragonapp.com/clipmenu-2/): A fast, native clipboard manager for Mac that remembers everything you copy, organizes your snippets, and pastes anywhere — with a single hotkey. Install: brew install --cask teddychan/tap/clipmenu-2
 - [Yahoo! KeyKey 2](https://www.dragonapp.com/yahoo-keykey-2/): The classic Yahoo!奇摩輸入法 Cangjie (倉頡) and Simplex (速成) input method, reborn — native, fast, and open source. Install: brew install --cask teddychan/tap/yahoo-keykey-2
+- [Spectacle 2](https://www.dragonapp.com/spectacle-2/): Spectacle 2 snaps the frontmost window to halves, corners, thirds, or fullscreen — sends it across displays, grows or shrinks it, and undoes it all — from the keyboard. A modern, open-source rebuild of Spectacle, now running on macOS 26 and 27. Install: brew install --cask teddychan/tap/spectacle-2
 
 ## About
 https://www.dragonapp.com/about/ — why these apps exist and the maintenance promise.

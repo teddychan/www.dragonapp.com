@@ -200,6 +200,28 @@ body.theme-ice {
   }
 }
 
+/* Spectacle — warm orange accent, echoing the app icon */
+body.theme-spectacle {
+  --accent: #e8663d;
+  --accent-action: #d9532b;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #c2461f;
+  --accent-tint: #fdeee7;
+  --accent-ink: #a63c1a;
+  --shadow: 0 18px 40px rgba(194, 70, 31, 0.14);
+  --shadow-sm: 0 8px 22px rgba(194, 70, 31, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-spectacle {
+    --accent: #f4885f;
+    --accent-action: #f7a380;
+    --accent-action-ink: #1f0d07;
+    --accent-deep: #f7a380;
+    --accent-tint: #33170c;
+    --accent-ink: #f8c7ae;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -623,6 +645,12 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       "position": 3,
       "name": "Yahoo! KeyKey 2",
       "url": "https://www.dragonapp.com/zh-Hans/yahoo-keykey-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Spectacle 2",
+      "url": "https://www.dragonapp.com/zh-Hans/spectacle-2/"
     }
   ]
 }
@@ -693,7 +721,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       <div class="apps"><a class="app-card theme-ice" href="https://www.dragonapp.com/zh-Hans/ice-2/"><div class="app-head"><span class="app-icon"><span class="glyph">I</span></span><h3>Ice 2</h3></div><p class="desc">Ice 2 隐藏你不需要的菜单栏图标，在你需要时将它们召回，并让你自由编排菜单栏布局。忠于原作的开源重塑——现已运行在 macOS 26 和 27 上。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card " href="https://www.dragonapp.com/zh-Hans/clipmenu-2/"><div class="app-head"><span class="app-icon"><span class="glyph">C</span></span><h3>ClipMenu 2</h3></div><p class="desc">一款快速、原生的 Mac 剪贴板管理工具，记住你复制的一切、整理你的代码片段，并随处粘贴——只需一个热键。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card theme-keykey" href="https://www.dragonapp.com/zh-Hans/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo! KeyKey 2</h3></div><p class="desc">经典 Yahoo!奇摩輸入法 <strong>Cangjie（倉頡）</strong> 与 <strong>Simplex（速成）</strong> 输入法重生——原生、快速、开源。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
-<a class="app-card" href="https://www.dragonapp.com/zh-Hans/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">用键盘快捷键移动和调整窗口大小——半屏、边角、三分之一，还能跨显示器。Spectacle 的现代重制版。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
+<a class="app-card theme-spectacle" href="https://www.dragonapp.com/zh-Hans/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">Spectacle 2 把最前面的窗口贴靠到半屏、边角、三分之一或全屏，跨显示器移动、放大或缩小，还能撤销——全部用键盘完成。这是 Spectacle 的现代开源重制版，现已支持 macOS 26 与 27。</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
     </div>
   </section>
 
