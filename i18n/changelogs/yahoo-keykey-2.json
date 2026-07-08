@@ -1,5 +1,29 @@
 [
   {
+    "version": "2.6.1",
+    "date": "2026-07-08",
+    "notes": "A bug-fix release for the new 拼音 (Pinyin) input method. · 拼音: number keys now pick a candidate directly. Pressing 1–9 selects that candidate — a single syllable commits right away (like 倉頡／速成), and in a phrase it picks that syllable and moves to the next. Space still commits the whole phrase at once. · 拼音: the 反查／拆碼提示 hint now shows pinyin. With the code hint on, candidates in 拼音 show their pinyin reading (e.g. `wo`, `ni hao`) instead of the 倉頡 code — for both the syllables you're typing and the 聯想 suggestions that follow. · Fixed: the in-app What's New now shows the current version. The 設定… ▸ What's New pane was stuck on an older release's notes; it now reflects the version you're running.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.6.1"
+  },
+  {
+    "version": "2.6.0",
+    "date": "2026-07-07",
+    "notes": "feat: 拼音 (Pinyin) phrase input method — v2.6.0",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.6.0"
+  },
+  {
+    "version": "2.5.0",
+    "date": "2026-07-06",
+    "notes": "fix: candidate text size slider updates live while dragging (v2.5.0)",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.5.0"
+  },
+  {
+    "version": "2.4.1",
+    "date": "2026-07-06",
+    "notes": "chore: bump DragonKit to 1.3.0, adopt DragonAbout.versionString() — v2.4.1",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.4.1"
+  },
+  {
     "version": "2.4.0",
     "date": "2026-07-06",
     "notes": "Two new KeyKey features plus a settings fix. · New: 反查／拆碼提示 (Cangjie code hint) — turn on 反查提示 to show each character's 倉頡 code beside the candidate (e.g. 倉 → 人口竹口); handy in 速成 and 聯想. Off by default. · New: 臨時英數 (quick English) — hold Shift and press a letter to type that English letter directly, like the original Yahoo! KeyKey; case follows Caps Lock, and everything else stays Chinese. · Fixed: the 倉頡版本 (五代／三代) choice in Settings now saves correctly instead of reverting.",
@@ -22,29 +46,5 @@
     "date": "2026-07-01",
     "notes": "New: choose your 倉頡版本 (Cangjie generation). In 設定… ▸ 輸入方式 you can now switch between 五代倉頡 (the standard 5th-generation table, the default) and 三代倉頡（Yahoo KeyKey 相容）. The 三代 option uses the original Yahoo! KeyKey code table and its candidate order, so characters like 面 (一田卜中), 鬼 (竹戈) and 樓 (木中田女) take the codes long-time Yahoo users remember instead of the 5th-generation forms. The choice applies to both 倉頡 and 速成 and takes effect immediately. The default stays 五代 so existing users are unaffected until they opt in.",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.1.0"
-  },
-  {
-    "version": "2.0.2",
-    "date": "2026-07-01",
-    "notes": "fix: sync Settings window with quick menu (v2.0.2)",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.2"
-  },
-  {
-    "version": "2.0.1",
-    "date": "2026-06-30",
-    "notes": "fix: IME bundle id must contain 'inputmethod' (v2.0.1)",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.1"
-  },
-  {
-    "version": "2.0.0",
-    "date": "2026-06-30",
-    "notes": "release: v2.0.0 (align major with 'Yahoo! KeyKey 2')",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.0.0"
-  },
-  {
-    "version": "1.7.2",
-    "date": "2026-06-30",
-    "notes": "About: dragonapp.com website + GitHub issues links (v1.7.2)",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v1.7.2"
   }
 ]

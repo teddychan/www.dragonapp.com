@@ -36,6 +36,7 @@ def clean_notes(body):
         l = re.sub(r"\s*\bby @[\w-]+\s+in\s+https?://\S+", "", l)  # drop "by @user in <PR url>"
         l = re.sub(r"\s*https?://\S+", "", l)             # drop any remaining bare URLs
         l = l.lstrip("*-• ").strip()                      # drop bullet markers
+        l = l.replace("**", "").replace("__", "")         # drop markdown bold markers
         if l:
             lines.append(l)
     return " · ".join(lines[:4])
