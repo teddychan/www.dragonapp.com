@@ -393,5 +393,43 @@
       {"q": "运行 Yahoo KeyKey 2 需要什么条件？", "a": "一台搭载 Apple Silicon（arm64）、运行 macOS 12 Monterey 或更高版本的 Mac。Yahoo KeyKey 2 已使用 Developer ID 签名并由 Apple 公证，可干净打开。"},
       {"q": "这是原版的 Yahoo! KeyKey 吗？", "a": "不是。Yahoo KeyKey 2 是一款用 Swift 打造的独立开源重塑作品，向经典的 Yahoo! KeyKey（Yahoo!奇摩輸入法）致敬。它以 MIT 许可协议发布。"}
     ]
+  },
+  "spectacle-2": {
+    "title": "Spectacle 2 — Mac 键盘窗口管理器，为 macOS 26 与 27 重制",
+    "description": "Spectacle 2 是一款面向 Mac 的免费开源键盘窗口管理器——用全局快捷键移动和调整窗口：半屏、边角、三分之一、全屏，还能跨显示器。为 macOS 26 与 27 重制。可在 GitHub 或用 Homebrew 免费下载。",
+    "eyebrow": "面向 macOS 的键盘窗口管理器",
+    "h1": "一个按键，移动和调整窗口",
+    "sub": "Spectacle 2 把最前面的窗口贴靠到半屏、边角、三分之一或全屏，跨显示器移动、放大或缩小，还能撤销——全部用键盘完成。这是 Spectacle 的现代开源重制版，现已支持 macOS 26 与 27。",
+    "demo_caption": "使用 Spectacle 2 的键盘快捷键 Option-Command-左 将一个 Mac 窗口贴靠到屏幕左半边，并提示再次按下会在二分之一、三分之二和三分之一之间切换。",
+    "feat1_h": "半屏与全屏",
+    "feat1_p": "用 ⌥⌘ 和方向键，把窗口贴靠到左、右、上、下半屏，或铺满整个屏幕。",
+    "feat2_h": "边角与三分之一",
+    "feat2_p": "发送到任意四分之一，或用 ⌃⌥← 和 ⌃⌥→ 在屏幕的六个三分之一之间切换。",
+    "feat3_h": "跨显示器",
+    "feat3_p": "把窗口甩到下一个或上一个显示器，它会居中落下——放不下时则铺满屏幕。",
+    "support_body": "欢迎提问、报告缺陷和功能建议——在 GitHub 上提交问题，我会认真查看。",
+    "credit_body": "Spectacle 2 是 <strong><a href=\"https://github.com/eczarny/spectacle\">Spectacle</a></strong>（最初由 Eric Czarny 打造的窗口管理器）的独立开源重制版。由 <strong>Teddy Chan</strong> 积极维护，使用现代 macOS API 以 Swift 从零重写。以 <a href=\"https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md\">MIT 许可证</a>发布。",
+    "faq": [
+      {
+        "q": "Spectacle 2 能做什么？",
+        "a": "Spectacle 2 用键盘快捷键移动和调整窗口大小。把最前面的窗口贴靠到左、右、上、下半屏，贴到边角或屏幕的三分之一，居中、全屏、放大或缩小，或发送到下一个显示器——全程无需鼠标。再次按下半屏或边角快捷键，窗口会在二分之一、三分之二和三分之一之间切换。"
+      },
+      {
+        "q": "如何安装 Spectacle 2？",
+        "a": "从最新的 GitHub 版本下载 App 并拖到「应用程序」，或用 Homebrew 安装：brew install --cask teddychan/tap/spectacle-2。启动后在「系统设置」中授予「辅助功能」权限，Spectacle 2 就会常驻在菜单栏。"
+      },
+      {
+        "q": "运行 Spectacle 2 需要什么？",
+        "a": "一台运行 macOS 26 或更高版本的 Apple 芯片 Mac。Spectacle 2 需要「辅助功能」权限才能移动和调整其他 App 的窗口。"
+      },
+      {
+        "q": "可以更改键盘快捷键吗？",
+        "a": "可以。每个窗口操作都绑定了一个快捷键，可在「设置 ▸ 快捷键」中重新绑定，App 内置 Spectacle 的经典默认值（例如左半屏 ⌥⌘←、居中 ⌥⌘C）。你的快捷键会被保存，并可备份和恢复。"
+      },
+      {
+        "q": "这是原版 Spectacle 吗？",
+        "a": "这是 Spectacle（最初由 Eric Czarny 打造的窗口管理器）的独立开源重制版，使用现代公开的 macOS API 以 Swift 从零重新实现，可在 macOS 26 与 27 上运行。以 MIT 许可证发布。"
+      }
+    ]
   }
 }

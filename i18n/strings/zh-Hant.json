@@ -384,5 +384,43 @@
       {"q": "執行 Yahoo KeyKey 2 需要甚麼？", "a": "一部採用 Apple Silicon（arm64）並執行 macOS 12 Monterey 或以上的 Mac。Yahoo KeyKey 2 以 Developer ID 簽署並由 Apple 公證，可乾淨開啟。"},
       {"q": "這是原版 Yahoo! KeyKey 嗎？", "a": "不是。Yahoo KeyKey 2 是一款以 Swift 打造的獨立開源重製版，向原版 Yahoo! KeyKey（Yahoo!奇摩輸入法）致敬，並以 MIT 授權發佈。"}
     ]
+  },
+  "spectacle-2": {
+    "title": "Spectacle 2 — Mac 鍵盤視窗管理器，為 macOS 26 與 27 重製",
+    "description": "Spectacle 2 是一款適用於 Mac 的免費開源鍵盤視窗管理器——用全域快速鍵移動和調整視窗：半螢幕、邊角、三分之一、全螢幕，還能跨顯示器。為 macOS 26 與 27 重製。可在 GitHub 或用 Homebrew 免費下載。",
+    "eyebrow": "適用於 macOS 的鍵盤視窗管理器",
+    "h1": "一個按鍵，移動和調整視窗",
+    "sub": "Spectacle 2 把最前面的視窗貼齊到半螢幕、邊角、三分之一或全螢幕，跨顯示器移動、放大或縮小，還能還原——全部用鍵盤完成。這是 Spectacle 的現代開源重製版，現已支援 macOS 26 與 27。",
+    "demo_caption": "使用 Spectacle 2 的鍵盤快速鍵 Option-Command-左 將一個 Mac 視窗貼齊到螢幕左半邊，並提示再次按下會在二分之一、三分之二和三分之一之間切換。",
+    "feat1_h": "半螢幕與全螢幕",
+    "feat1_p": "用 ⌥⌘ 和方向鍵，把視窗貼齊到左、右、上、下半螢幕，或鋪滿整個螢幕。",
+    "feat2_h": "邊角與三分之一",
+    "feat2_p": "送到任意四分之一，或用 ⌃⌥← 和 ⌃⌥→ 在螢幕的六個三分之一之間切換。",
+    "feat3_h": "跨顯示器",
+    "feat3_p": "把視窗丟到下一個或上一個顯示器，它會置中落下——放不下時則鋪滿螢幕。",
+    "support_body": "問題、錯誤回報和功能建議歡迎提出 — 在 GitHub 開立 issue，我會查看。",
+    "credit_body": "Spectacle 2 是 <strong><a href=\"https://github.com/eczarny/spectacle\">Spectacle</a></strong>（最初由 Eric Czarny 打造的視窗管理器）的獨立開源重製版。由 <strong>Teddy Chan</strong> 積極維護，使用現代 macOS API 以 Swift 從零重寫。以 <a href=\"https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md\">MIT 授權</a>發布。",
+    "faq": [
+      {
+        "q": "Spectacle 2 能做什麼？",
+        "a": "Spectacle 2 用鍵盤快速鍵移動和調整視窗大小。把最前面的視窗貼齊到左、右、上、下半螢幕，貼到邊角或螢幕的三分之一，置中、全螢幕、放大或縮小，或送到下一個顯示器——全程免用滑鼠。再次按下半螢幕或邊角快速鍵，視窗會在二分之一、三分之二和三分之一之間切換。"
+      },
+      {
+        "q": "如何安裝 Spectacle 2？",
+        "a": "從最新的 GitHub 版本下載 App 並拖到「應用程式」，或用 Homebrew 安裝：brew install --cask teddychan/tap/spectacle-2。啟動後在「系統設定」中授予「輔助使用」權限，Spectacle 2 就會常駐在選單列。"
+      },
+      {
+        "q": "執行 Spectacle 2 需要什麼？",
+        "a": "一台執行 macOS 26 或更新版本的 Apple 晶片 Mac。Spectacle 2 需要「輔助使用」權限才能移動和調整其他 App 的視窗。"
+      },
+      {
+        "q": "可以更改鍵盤快速鍵嗎？",
+        "a": "可以。每個視窗動作都綁定了一個快速鍵，可在「設定 ▸ 快速鍵」中重新綁定，App 內建 Spectacle 的經典預設值（例如左半螢幕 ⌥⌘←、置中 ⌥⌘C）。你的快速鍵會被儲存，並可備份和還原。"
+      },
+      {
+        "q": "這是原版 Spectacle 嗎？",
+        "a": "這是 Spectacle（最初由 Eric Czarny 打造的視窗管理器）的獨立開源重製版，使用現代公開的 macOS API 以 Swift 從零重新實作，可在 macOS 26 與 27 上執行。以 MIT 授權發布。"
+      }
+    ]
   }
 }

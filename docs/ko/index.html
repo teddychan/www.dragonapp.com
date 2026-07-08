@@ -200,6 +200,28 @@ body.theme-ice {
   }
 }
 
+/* Spectacle — warm orange accent, echoing the app icon */
+body.theme-spectacle {
+  --accent: #e8663d;
+  --accent-action: #d9532b;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #c2461f;
+  --accent-tint: #fdeee7;
+  --accent-ink: #a63c1a;
+  --shadow: 0 18px 40px rgba(194, 70, 31, 0.14);
+  --shadow-sm: 0 8px 22px rgba(194, 70, 31, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-spectacle {
+    --accent: #f4885f;
+    --accent-action: #f7a380;
+    --accent-action-ink: #1f0d07;
+    --accent-deep: #f7a380;
+    --accent-tint: #33170c;
+    --accent-ink: #f8c7ae;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -623,6 +645,12 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       "position": 3,
       "name": "Yahoo! KeyKey 2",
       "url": "https://www.dragonapp.com/ko/yahoo-keykey-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Spectacle 2",
+      "url": "https://www.dragonapp.com/ko/spectacle-2/"
     }
   ]
 }
@@ -693,7 +721,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       <div class="apps"><a class="app-card theme-ice" href="https://www.dragonapp.com/ko/ice-2/"><div class="app-head"><span class="app-icon"><span class="glyph">I</span></span><h3>Ice 2</h3></div><p class="desc">Ice 2는 불필요한 메뉴 막대 항목을 숨기고, 필요할 때 다시 보여주며, 막대를 원하는 대로 배치할 수 있게 해줍니다. 충실한 오픈소스 재구현 — 이제 macOS 26과 27에서 실행됩니다.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card " href="https://www.dragonapp.com/ko/clipmenu-2/"><div class="app-head"><span class="app-icon"><span class="glyph">C</span></span><h3>ClipMenu 2</h3></div><p class="desc">복사한 모든 것을 기억하고, 스니펫을 정리하며, 어디에나 붙여넣는 빠르고 네이티브한 Mac용 클립보드 관리 앱입니다 — 단축키 하나로.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card theme-keykey" href="https://www.dragonapp.com/ko/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo! KeyKey 2</h3></div><p class="desc">클래식 Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong>와 <strong>Simplex (速成)</strong> 입력기가 다시 태어났습니다 — 네이티브하고, 빠르며, 오픈소스입니다.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
-<a class="app-card" href="https://www.dragonapp.com/ko/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">키보드 단축키로 창을 이동하고 크기를 조절 — 절반, 모서리, 3분할, 디스플레이 간 이동까지. Spectacle의 현대적 재구현.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
+<a class="app-card theme-spectacle" href="https://www.dragonapp.com/ko/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">Spectacle 2는 맨 앞 창을 절반·모서리·3분할·전체 화면으로 맞추고, 디스플레이 간 이동, 확대·축소, 실행 취소까지 — 모두 키보드로. macOS 26·27에서 실행되는 Spectacle의 현대적 오픈 소스 재구축입니다.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
     </div>
   </section>
 

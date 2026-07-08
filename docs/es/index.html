@@ -200,6 +200,28 @@ body.theme-ice {
   }
 }
 
+/* Spectacle — warm orange accent, echoing the app icon */
+body.theme-spectacle {
+  --accent: #e8663d;
+  --accent-action: #d9532b;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #c2461f;
+  --accent-tint: #fdeee7;
+  --accent-ink: #a63c1a;
+  --shadow: 0 18px 40px rgba(194, 70, 31, 0.14);
+  --shadow-sm: 0 8px 22px rgba(194, 70, 31, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-spectacle {
+    --accent: #f4885f;
+    --accent-action: #f7a380;
+    --accent-action-ink: #1f0d07;
+    --accent-deep: #f7a380;
+    --accent-tint: #33170c;
+    --accent-ink: #f8c7ae;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -623,6 +645,12 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       "position": 3,
       "name": "Yahoo! KeyKey 2",
       "url": "https://www.dragonapp.com/es/yahoo-keykey-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Spectacle 2",
+      "url": "https://www.dragonapp.com/es/spectacle-2/"
     }
   ]
 }
@@ -693,7 +721,7 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       <div class="apps"><a class="app-card theme-ice" href="https://www.dragonapp.com/es/ice-2/"><div class="app-head"><span class="app-icon"><span class="glyph">I</span></span><h3>Ice 2</h3></div><p class="desc">Ice 2 oculta los elementos de la barra de menús que no necesitas, los recupera cuando los quieres y te deja organizarla a tu manera. Una reconstrucción fiel y de código abierto que ya funciona en macOS 26 y 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card " href="https://www.dragonapp.com/es/clipmenu-2/"><div class="app-head"><span class="app-icon"><span class="glyph">C</span></span><h3>ClipMenu 2</h3></div><p class="desc">Un gestor de portapapeles nativo y rápido para Mac que recuerda todo lo que copias, organiza tus fragmentos y pega en cualquier sitio, con un solo atajo.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card theme-keykey" href="https://www.dragonapp.com/es/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo! KeyKey 2</h3></div><p class="desc">El clásico método de entrada <strong>Cangjie (倉頡)</strong> y <strong>Simplex (速成)</strong> de Yahoo!奇摩輸入法, renacido: nativo, rápido y de código abierto.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
-<a class="app-card" href="https://www.dragonapp.com/es/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">Mueve y redimensiona ventanas con atajos de teclado: mitades, esquinas, tercios y entre pantallas. Una reescritura moderna de Spectacle.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
+<a class="app-card theme-spectacle" href="https://www.dragonapp.com/es/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">Spectacle 2 ajusta la ventana activa a mitades, esquinas, tercios o pantalla completa, la envía entre pantallas, la agranda o reduce y lo deshace todo, desde el teclado. Una reconstrucción moderna y de código abierto de Spectacle, ahora en macOS 26 y 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
     </div>
   </section>
 

@@ -393,5 +393,43 @@
       {"q": "¿Qué necesito para usar Yahoo KeyKey 2?", "a": "Un Mac con Apple Silicon (arm64) que ejecute macOS 12 Monterey o posterior. Yahoo KeyKey 2 está firmado con un Developer ID y notarizado por Apple, así que se abre sin problemas."},
       {"q": "¿Es este el Yahoo! KeyKey original?", "a": "No. Yahoo KeyKey 2 es una reconstrucción independiente y de código abierto en Swift, creada en homenaje al original Yahoo! KeyKey (Yahoo!奇摩輸入法). Se publica bajo la Licencia MIT."}
     ]
+  },
+  "spectacle-2": {
+    "title": "Spectacle 2 — Gestor de ventanas por teclado para Mac, reconstruido para macOS 26 &amp; 27",
+    "description": "Spectacle 2 es un gestor de ventanas por teclado para Mac, gratuito y de código abierto: mueve y redimensiona ventanas con atajos globales —mitades, esquinas, tercios, pantalla completa y entre pantallas—. Reconstruido para macOS 26 y 27. Descárgalo gratis en GitHub o con Homebrew.",
+    "eyebrow": "El gestor de ventanas por teclado para macOS",
+    "h1": "Mueve y redimensiona ventanas con una tecla",
+    "sub": "Spectacle 2 ajusta la ventana activa a mitades, esquinas, tercios o pantalla completa, la envía entre pantallas, la agranda o reduce y lo deshace todo, desde el teclado. Una reconstrucción moderna y de código abierto de Spectacle, ahora en macOS 26 y 27.",
+    "demo_caption": "Una ventana de Mac ajustada a la mitad izquierda de la pantalla con el atajo de Spectacle 2 Opción-Comando-Izquierda, con una nota de que al pulsar de nuevo alterna entre un medio, dos tercios y un tercio.",
+    "feat1_h": "Mitades y pantalla completa",
+    "feat1_p": "Ajusta la ventana a la mitad izquierda, derecha, superior o inferior, o llena la pantalla, con ⌥⌘ y las flechas.",
+    "feat2_h": "Esquinas y tercios",
+    "feat2_p": "Envíala a cualquier cuarto, o recorre los seis tercios de la pantalla con ⌃⌥← y ⌃⌥→.",
+    "feat3_h": "Entre pantallas",
+    "feat3_p": "Lanza la ventana a la pantalla siguiente o anterior y aterriza centrada, o llena la pantalla si no cabe.",
+    "support_body": "Las preguntas, los informes de errores y las sugerencias de funciones son bienvenidos: abre una incidencia en GitHub y le echaré un vistazo.",
+    "credit_body": "Spectacle 2 es una reconstrucción independiente y de código abierto de <strong><a href=\"https://github.com/eczarny/spectacle\">Spectacle</a></strong>, el gestor de ventanas creado originalmente por <strong>Eric Czarny</strong>. Esta reimplementación, mantenida activamente por <strong>Teddy Chan</strong>, lo reescribe desde cero en Swift con APIs modernas de macOS. Publicado bajo la <a href=\"https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md\">Licencia MIT</a>.",
+    "faq": [
+      {
+        "q": "¿Qué hace Spectacle 2?",
+        "a": "Spectacle 2 mueve y redimensiona tus ventanas con atajos de teclado. Ajusta la ventana activa a la mitad izquierda, derecha, superior o inferior, a una esquina o a un tercio de la pantalla, céntrala, ponla a pantalla completa, agrándala o redúcela, o envíala a la siguiente pantalla, todo sin tocar el ratón. Pulsa de nuevo un atajo de mitad o esquina para alternar la ventana entre un medio, dos tercios y un tercio."
+      },
+      {
+        "q": "¿Cómo instalo Spectacle 2?",
+        "a": "Descarga la app desde la última versión de GitHub y arrástrala a Aplicaciones, o instálala con Homebrew: brew install --cask teddychan/tap/spectacle-2. Ábrela, concede acceso de Accesibilidad en Ajustes del Sistema y Spectacle 2 vivirá en tu barra de menús."
+      },
+      {
+        "q": "¿Qué necesito para usar Spectacle 2?",
+        "a": "Un Mac con Apple silicon y macOS 26 o posterior. Spectacle 2 necesita permiso de Accesibilidad para mover y redimensionar las ventanas de otras apps."
+      },
+      {
+        "q": "¿Puedo cambiar los atajos de teclado?",
+        "a": "Sí. Cada acción de ventana está asociada a un atajo que puedes reasignar en Ajustes ▸ Atajos, y la app incluye los valores clásicos de Spectacle (por ejemplo ⌥⌘← para la mitad izquierda y ⌥⌘C para centrar). Tus atajos se guardan y se pueden respaldar y restaurar."
+      },
+      {
+        "q": "¿Es este el Spectacle original?",
+        "a": "Es una reconstrucción independiente y de código abierto de Spectacle —el gestor de ventanas creado originalmente por Eric Czarny— reimplementado desde cero en Swift con APIs modernas y públicas de macOS para funcionar en macOS 26 y 27. Se publica bajo la Licencia MIT."
+      }
+    ]
   }
 }

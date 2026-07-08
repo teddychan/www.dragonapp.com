@@ -84,6 +84,28 @@ body.theme-ice {
   }
 }
 
+/* Spectacle — warm orange accent, echoing the app icon */
+body.theme-spectacle {
+  --accent: #e8663d;
+  --accent-action: #d9532b;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #c2461f;
+  --accent-tint: #fdeee7;
+  --accent-ink: #a63c1a;
+  --shadow: 0 18px 40px rgba(194, 70, 31, 0.14);
+  --shadow-sm: 0 8px 22px rgba(194, 70, 31, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-spectacle {
+    --accent: #f4885f;
+    --accent-action: #f7a380;
+    --accent-action-ink: #1f0d07;
+    --accent-deep: #f7a380;
+    --accent-tint: #33170c;
+    --accent-ink: #f8c7ae;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {

@@ -384,5 +384,43 @@
       {"q": "What do I need to run Yahoo KeyKey 2?", "a": "A Mac with Apple Silicon (arm64) running macOS 12 Monterey or later. Yahoo KeyKey 2 is signed with a Developer ID and notarized by Apple, so it opens cleanly."},
       {"q": "Is this the original Yahoo! KeyKey?", "a": "No. Yahoo KeyKey 2 is an independent, open-source rebuild in Swift, created in tribute to the original Yahoo! KeyKey (Yahoo!奇摩輸入法). It is released under the MIT License."}
     ]
+  },
+  "spectacle-2": {
+    "title": "Spectacle 2 — Keyboard Window Manager for Mac, rebuilt for macOS 26 &amp; 27",
+    "description": "Spectacle 2 is a free, open-source keyboard-driven window manager for Mac — move and resize windows with global shortcuts: halves, corners, thirds, fullscreen, and across displays. Rebuilt for macOS 26 and 27. Download free on GitHub or with Homebrew.",
+    "eyebrow": "The keyboard window manager for macOS",
+    "h1": "Move and resize windows with a keystroke",
+    "sub": "Spectacle 2 snaps the frontmost window to halves, corners, thirds, or fullscreen — sends it across displays, grows or shrinks it, and undoes it all — from the keyboard. A modern, open-source rebuild of Spectacle, now running on macOS 26 and 27.",
+    "demo_caption": "A Mac window snapped to the left half of the screen using the Spectacle 2 keyboard shortcut Option-Command-Left, with a hint that pressing again cycles between one-half, two-thirds and one-third.",
+    "feat1_h": "Halves &amp; fullscreen",
+    "feat1_p": "Snap the window to the left, right, top, or bottom half, or fill the screen — with ⌥⌘ and the arrow keys.",
+    "feat2_h": "Corners &amp; thirds",
+    "feat2_p": "Send it to any quarter, or step through the six thirds of the screen with ⌃⌥← and ⌃⌥→.",
+    "feat3_h": "Across displays",
+    "feat3_p": "Throw the window to the next or previous display and it lands centered — or fills the screen if it won't fit.",
+    "support_body": "Questions, bug reports, and feature requests are welcome — open an issue on GitHub and I'll take a look.",
+    "credit_body": "Spectacle 2 is an independent, open-source rebuild of <strong><a href=\"https://github.com/eczarny/spectacle\">Spectacle</a></strong>, the window manager originally created by <strong>Eric Czarny</strong>. This reimplementation, actively maintained by <strong>Teddy Chan</strong>, rewrites it from scratch in Swift with modern macOS APIs. Released under the <a href=\"https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md\">MIT License</a>.",
+    "faq": [
+      {
+        "q": "What does Spectacle 2 do?",
+        "a": "Spectacle 2 moves and resizes your windows with keyboard shortcuts. Snap the frontmost window to the left, right, top, or bottom half, to a corner or a third of the screen, center it, make it fullscreen, grow or shrink it, or send it to the next display — all without touching the mouse. Press a halves or corner shortcut again to cycle the window between one-half, two-thirds, and one-third."
+      },
+      {
+        "q": "How do I install Spectacle 2?",
+        "a": "Download the app from the latest GitHub release and drag it to Applications, or install it with Homebrew: brew install --cask teddychan/tap/spectacle-2. Launch it, grant Accessibility access in System Settings, and Spectacle 2 lives in your menu bar."
+      },
+      {
+        "q": "What do I need to run Spectacle 2?",
+        "a": "A Mac with Apple silicon running macOS 26 or later. Spectacle 2 needs Accessibility permission so it can move and resize other apps' windows."
+      },
+      {
+        "q": "Can I change the keyboard shortcuts?",
+        "a": "Yes. Every one of the window actions is bound to a shortcut you can rebind in Settings ▸ Shortcuts, and the app ships with Spectacle's classic defaults (for example ⌥⌘← for the left half and ⌥⌘C to center). Your shortcuts are saved and can be backed up and restored."
+      },
+      {
+        "q": "Is this the original Spectacle?",
+        "a": "This is an independent, open-source rebuild of Spectacle — the window manager originally created by Eric Czarny — reimplemented from scratch in Swift with modern, public macOS APIs so it runs on macOS 26 and 27. It is released under the MIT License."
+      }
+    ]
   }
 }
