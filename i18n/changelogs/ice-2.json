@@ -2,7 +2,7 @@
   {
     "version": "2.9.9",
     "date": "2026-07-11",
-    "notes": "test: expand IceTests coverage for hotkey/color/gradient logic · test: cover backup/restore file I/O and layout-profile guards · test: cover appearance configs, settings enums, and utilities · test: cover settings-model load/persist via injectable Defaults",
+    "notes": "Behind-the-scenes reliability release — nothing changes in how Ice works day to day. · Broad new automated test coverage. Added tests across hotkeys, menu-bar color/gradient logic, backup & restore, layout-profile guards, and settings load/persist — making future updates safer and more predictable. · Lower idle CPU and a guard so updating a layout profile can't overwrite it with an empty capture (carried over from 2.9.8). · test: expand IceTests coverage for hotkey/color/gradient logic",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.9"
   },
   {
