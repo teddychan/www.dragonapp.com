@@ -1,20 +1,38 @@
 [
   {
+    "version": "2.1.0",
+    "date": "2026-07-11",
+    "notes": "Drag-to-edge snapping, window gaps & startup deferral · v2.1.0 — drag-to-edge snapping, window gaps, and drag-snap self-heal",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.1.0"
+  },
+  {
+    "version": "2.0.4",
+    "date": "2026-07-09",
+    "notes": "release: v2.0.4 — fix recording a clashing shortcut",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.4"
+  },
+  {
+    "version": "2.0.3",
+    "date": "2026-07-09",
+    "notes": "release: v2.0.3 — reliability fixes + Shortcuts polish",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.3"
+  },
+  {
     "version": "2.0.2",
     "date": "2026-07-07",
-    "notes": "A new menu-bar dropdown with an Uninstall option, plus a version-display fix.",
+    "notes": "feat: canonical menu-bar dropdown via DragonAppMenu (+ Uninstall, version fix) · release: v2.0.2 · New Contributors · @teddychan made their first contribution in",
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.2"
   },
   {
     "version": "2.0.1",
     "date": "2026-07-07",
-    "notes": "Post-launch fixes.",
+    "notes": "",
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.1"
   },
   {
     "version": "2.0.0",
     "date": "2026-07-07",
-    "notes": "First release of Spectacle 2 — a from-scratch Swift rewrite of Spectacle for macOS 26 and 27: move and resize windows with keyboard shortcuts, with the classic defaults and full rebinding.",
+    "notes": "",
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.0"
   }
 ]
