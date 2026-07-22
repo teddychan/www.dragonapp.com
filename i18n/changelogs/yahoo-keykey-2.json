@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.7.0",
+    "date": "2026-07-22",
+    "notes": "test: add App-logic test suite + engine coverage top-up · ci: run engine + App-logic tests on pull requests · docs: add Tests CI status badge · ci: bump actions/checkout to v7",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.7.0"
+  },
+  {
     "version": "2.6.4",
     "date": "2026-07-10",
     "notes": "Starts up even faster and lighter. At launch, Yahoo KeyKey 2 now reads its dictionary in a single pass instead of two, and it builds the 速成 (Simplex) code table and the 反查／拆碼提示 reverse-lookup index only when you actually use them. If you type only 倉頡 or 拼音, that's less work and less memory every time the app starts. Nothing you type changes. · 拼音 stays responsive on unusual input. Typing a long run of letters that can't form valid syllables no longer makes the pinyin composer do more and more work on every keystroke.",
@@ -40,11 +46,5 @@
     "date": "2026-07-06",
     "notes": "Clearer \"already up to date\" message. When you check for updates and you're already on the latest version, the confirmation dialog now reads more naturally. · About now shows the build time. The version line in About now reads like v2.4.1 (24) · 2026-Jul-06 13:34:56 UTC, adding the exact UTC build time alongside the version and build number.",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.4.1"
-  },
-  {
-    "version": "2.4.0",
-    "date": "2026-07-06",
-    "notes": "Two new KeyKey features plus a settings fix. · New: 反查／拆碼提示 (Cangjie code hint) — turn on 反查提示 to show each character's 倉頡 code beside the candidate (e.g. 倉 → 人口竹口); handy in 速成 and 聯想. Off by default. · New: 臨時英數 (quick English) — hold Shift and press a letter to type that English letter directly, like the original Yahoo! KeyKey; case follows Caps Lock, and everything else stays Chinese. · Fixed: the 倉頡版本 (五代／三代) choice in Settings now saves correctly instead of reverting.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.4.0"
   }
 ]
