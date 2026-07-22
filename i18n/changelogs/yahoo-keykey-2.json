@@ -2,7 +2,7 @@
   {
     "version": "2.7.0",
     "date": "2026-07-22",
-    "notes": "test: add App-logic test suite + engine coverage top-up · ci: run engine + App-logic tests on pull requests · docs: add Tests CI status badge · ci: bump actions/checkout to v7",
+    "notes": "Page through 聯想 associated-phrase candidates. Use Page Up / Page Down to move between pages of associated-phrase suggestions. · Choose how you pick associated phrases. A new setting lets you select the associated-phrase key — plain Number keys or Shift+Number. · ⌘ and ⌃ shortcuts pass through. Keyboard shortcuts using ⌘ or ⌃ now reach the app instead of being swallowed by the input method. · test: add App-logic test suite + engine coverage top-up",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.7.0"
   },
   {

@@ -2,7 +2,7 @@
   {
     "version": "2.18.0",
     "date": "2026-07-15",
-    "notes": "test: expand unit coverage 18.8%→39.3% (147→313 tests) · test: SwiftUI panes, drag-reorder & backup/restore coverage (39%→74%) · v2.17.11 — maintenance release (test coverage 39%→74%) · ci: bump actions/upload-artifact to v7.0.1 (Node 24)",
+    "notes": "Maintenance release — nothing changes in how ClipMenu works day to day. · Much broader automated test coverage. Unit tests grew from 147 to 313, lifting coverage from ~19% to ~74% across the SwiftUI settings panes, drag-to-reorder, and backup/restore — so future changes stay safe. · Housekeeping. Removed unused App Store paywall strings across all 7 localizations and bumped CI tooling. · test: expand unit coverage 18.8%→39.3% (147→313 tests)",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.18.0"
   },
   {
