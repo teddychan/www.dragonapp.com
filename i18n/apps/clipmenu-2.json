@@ -4,7 +4,7 @@
   "theme": "",
   "repo": "https://github.com/teddychan/clipmenu-2",
   "homebrew_cask": "teddychan/tap/clipmenu-2",
-  "mas_url": null,
+  "mas_url": "https://apps.apple.com/us/app/clipmenu-2/id6775685878?mt=12",
   "license": "MIT",
   "license_url": "https://github.com/teddychan/clipmenu-2/blob/main/LICENSE",
   "min_macos": "26",

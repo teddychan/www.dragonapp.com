@@ -27,6 +27,8 @@
     "app_channel_brew_badge": "터미널 · 명령어 하나",
     "app_channel_mas": "Mac App Store",
     "app_channel_mas_soon": "곧 출시",
+    "app_channel_mas_badge": "클릭 한 번 · 무료",
+    "app_channel_mas_cta": "App Store에서 다운로드",
     "app_token_h2": "토큰 후원하기",
     "app_token_badge": "개발 지원",
     "app_token_body": "이 앱들은 대부분 AI의 도움으로 운영됩니다. 커피 대신 지속적인 유지보수에 쓰이는 AI 토큰을 후원해 주세요.",
@@ -37,7 +39,7 @@
     "promise_macos": "최신 macOS 2개 버전",
     "promise_langs": "7개 언어",
     "promise_channels": "3가지 설치 경로",
-    "promise_icloud": "iCloud 동기화",
+    "promise_oss": "무료·오픈 소스",
     "promise_link": "내가 이것을 만들고 유지하는 이유"
   },
   "index": {
@@ -222,9 +224,9 @@
   },
   "support": {
     "title": "ClipMenu 2 — 지원 &amp; 도움말",
-    "description": "빠른 Mac용 클립보드 관리 및 기록 앱 ClipMenu 2의 지원 및 도움말. 설정, 손쉬운 사용 권한, 구독, 자주 묻는 질문.",
+    "description": "빠른 Mac용 클립보드 관리 및 기록 앱 ClipMenu 2의 지원 및 도움말. 설정, 손쉬운 사용 권한, 백업, 자주 묻는 질문.",
     "og_title": "ClipMenu 2 — 지원 &amp; 도움말",
-    "og_description": "Mac용 클립보드 관리 앱 ClipMenu 2의 설정, 손쉬운 사용 권한, 구독, 자주 묻는 질문.",
+    "og_description": "Mac용 클립보드 관리 앱 ClipMenu 2의 설정, 손쉬운 사용 권한, 백업, 자주 묻는 질문.",
     "back": "← ClipMenu 2로 돌아가기",
     "logo_alt": "ClipMenu 2 아이콘",
     "h1": "ClipMenu 2 지원",
@@ -238,14 +240,14 @@
     "faq1_a": "전역 단축키(설정에서 지정)를 눌러 커서 위치에 기록을 띄우거나, 메뉴 막대의 ClipMenu 2 아이콘을 클릭하세요.",
     "faq2_q": "ClipMenu 2가 다른 앱에 붙여넣지 못합니다.",
     "faq2_a": "macOS는 사용자를 대신해 붙여넣으려면 손쉬운 사용 권한이 필요합니다. <strong>시스템 설정 → 개인정보 보호 &amp; 보안 → 손쉬운 사용</strong>을 열고 ClipMenu 2를 활성화하세요.",
-    "faq3_q": "구독에는 무엇이 포함되나요?",
-    "faq3_a": "Mac App Store 에디션은 30일 무료 체험 이후 자동 갱신되는 연간 구독이 적용되는 유료 앱입니다. 전체 앱과 모든 Mac 간 클립보드 기록 및 스니펫의 iCloud 동기화를 잠금 해제합니다.",
-    "faq4_q": "새 Mac에서 구독을 어떻게 복원하나요?",
-    "faq4_a": "동일한 Apple ID로 로그인한 상태에서 ClipMenu 2를 열고 시작 화면에서 <strong>구입 항목 복원</strong>을 선택하세요.",
-    "faq5_q": "구독은 어떻게 관리하거나 취소하나요?",
-    "faq5_a": "App Store 앱을 열고 → 이름을 클릭한 뒤 → <strong>구독</strong>으로 이동하거나, <a href=\"https://apps.apple.com/account/subscriptions\">Apple 구독 페이지</a>를 방문하세요.",
+    "faq3_q": "ClipMenu 2는 무료인가요?",
+    "faq3_a": "네. Mac App Store, 직접 다운로드, Homebrew 모두 무료이며 MIT 라이선스의 오픈 소스입니다.",
+    "faq4_q": "여러 Mac 간에 스니펫을 동기화하려면?",
+    "faq4_a": "<strong>Settings ▸ Sync &amp; Backup</strong>을 열고 백업 폴더를 선택하세요. 그 폴더를 iCloud Drive, Dropbox, Google Drive에 두면 스니펫과 설정이 다른 Mac에도 전달됩니다.",
+    "faq5_q": "ClipMenu 2를 삭제하려면?",
+    "faq5_a": "<code>brew uninstall --zap --cask clipmenu-2</code>를 실행하거나, ClipMenu 2를 종료한 뒤 응용 프로그램에서 휴지통으로 드래그하세요.",
     "faq6_q": "내 데이터는 어디에 저장되나요?",
-    "faq6_a": "기록과 스니펫은 당신의 Mac과 본인의 비공개 iCloud 데이터베이스에 머뭅니다. 우리는 결코 그것을 받지 않습니다. <a href=\"/privacy.html\">개인정보 처리방침</a>을 참고하세요.",
+    "faq6_a": "기록과 스니펫은 당신의 Mac에 남습니다. 우리는 결코 받지 않습니다. 백업 폴더를 선택한 경우 해당 폴더에만 저장됩니다. <a href=\"/privacy.html\">개인정보 처리방침</a>을 참고하세요.",
     "links_h2": "링크",
     "link_home": "프로젝트 홈 &amp; 다운로드",
     "link_issues": "버그 신고 / 기능 요청",
@@ -253,7 +255,7 @@
     "link_eula": "이용 약관 (EULA)",
     "footer": "macOS용 ClipMenu 2 · 지원: <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
     "page_title": "Dragon App — 지원 &amp; 도움말",
-    "page_desc": "Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 구독, 자주 묻는 질문을 안내합니다.",
+    "page_desc": "Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 백업, 자주 묻는 질문을 안내합니다.",
     "page_logo_alt": "Dragon App",
     "page_h1": "지원",
     "page_tagline": "ClipMenu 2, Yahoo! KeyKey 2, Ice 2 도움말.",
@@ -325,7 +327,7 @@
     "promise_macos_d": "최신 macOS 2개 버전 이상에서 실행됩니다.",
     "promise_langs_d": "이 사이트처럼 7개 언어로 제공됩니다.",
     "promise_channels_d": "3가지 방법으로 설치할 수 있습니다: GitHub, Homebrew, 그리고 가능한 경우 Mac App Store.",
-    "promise_icloud_d": "iCloud를 통해 내 Mac 전체에 설정이 동기화됩니다."
+    "promise_oss_d": "모든 앱은 무료이며 전체 소스가 GitHub에 공개되어 있습니다."
   },
   "ice-2": {
     "title": "Ice 2 — Mac용 메뉴 막대 관리자, macOS 26 &amp; 27에 맞게 새로 구축",
@@ -366,9 +368,9 @@
     "support_body": "질문, 버그 신고, 기능 요청은 언제나 환영합니다. GitHub에서 이슈를 열어 주시면 답변드리겠습니다 — 또는 support@dragonapp.com으로 연락하세요.",
     "credit_body": "ClipMenu 2는 <strong>Naotaka Morimoto</strong>의 원작 <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a>의 유산 위에 만들어졌습니다. Swift로 만든 독립적인 오픈소스 재구현으로 — 그의 작업에 감사하며 제작되었고 동일한 MIT License로 배포됩니다.",
     "faq": [
-      {"q": "App Store 버전과 GitHub 버전의 차이는 무엇인가요?", "a": "같은 앱입니다. Mac App Store 에디션은 iCloud 동기화를 추가하고 App Store를 통해 자동으로 업데이트되는 유료 구독입니다. GitHub 에디션은 무료 오픈소스로, 내장 자동 업데이트를 제공하며 iCloud 동기화를 제외한 모든 기능을 포함합니다."},
+      {"q": "App Store 버전과 GitHub 버전의 차이는 무엇인가요?", "a": "같은 앱이며 둘 다 무료입니다. Mac App Store 에디션은 샌드박스에서 실행되고 App Store를 통해 업데이트됩니다. GitHub 에디션은 오픈 소스이며 직접 다운로드나 Homebrew로 설치하고 Sparkle로 자동 업데이트됩니다."},
       {"q": "ClipMenu 2는 왜 손쉬운 사용 권한을 요청하나요?", "a": "macOS에서는 앱이 사용자를 대신해 다른 앱에 붙여넣으려면 손쉬운 사용 권한이 필요합니다. ClipMenu 2는 선택한 클립을 맨 앞 앱에 넣을 때만 이 권한을 사용합니다. 시스템 설정 → 개인정보 보호 & 보안 → 손쉬운 사용에서 권한을 부여하세요. (App Store 에디션은 샌드박싱되어 이 권한을 사용하지 않습니다.)"},
-      {"q": "내 클립보드 데이터는 어디에 저장되나요?", "a": "당신의 Mac에 저장됩니다. 기록과 스니펫은 절대 기기를 떠나지 않으며 — ClipMenu 2에는 분석, 광고, 추적이 없고, 우리는 결코 당신의 클립보드 내용을 받지 않습니다. iCloud 동기화를 켜면 스니펫이 본인의 비공개 iCloud 계정을 통해 전송됩니다."},
+      {"q": "내 클립보드 데이터는 어디에 저장되나요?", "a": "당신의 Mac에 저장됩니다. 기록과 스니펫은 기기를 떠나지 않으며 — ClipMenu 2에는 분석, 광고, 추적이 없고, 우리는 클립보드 내용을 결코 받지 않습니다. Settings ▸ Sync &amp; Backup에서 백업 폴더를 선택하면 스니펫과 설정이 그 폴더에도 저장됩니다. 그 폴더를 iCloud Drive, Dropbox, Google Drive에 두면 다른 Mac으로 옮길 수 있습니다."},
       {"q": "ClipMenu 2는 어떻게 설치하나요?", "a": "최신 GitHub 릴리스에서 다운로드해 응용 프로그램 폴더로 드래그하거나, Homebrew로 설치하세요: brew install --cask teddychan/tap/clipmenu-2. Mac App Store 에디션도 제공됩니다."}
     ]
   },

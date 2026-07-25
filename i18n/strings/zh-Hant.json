@@ -27,6 +27,8 @@
     "app_channel_brew_badge": "終端機 · 一個指令",
     "app_channel_mas": "Mac App Store",
     "app_channel_mas_soon": "即將推出",
+    "app_channel_mas_badge": "一鍵安裝 · 免費",
+    "app_channel_mas_cta": "從 App Store 下載",
     "app_token_h2": "請我喝 Token",
     "app_token_badge": "支持開發",
     "app_token_body": "這些應用程式主要靠 AI 維持運作。與其請我喝咖啡，不如為持續維護所需的 AI token 出一分力。",
@@ -37,7 +39,7 @@
     "promise_macos": "最新兩個 macOS 版本",
     "promise_langs": "7 種語言",
     "promise_channels": "3 個渠道",
-    "promise_icloud": "iCloud 同步",
+    "promise_oss": "免費·開源",
     "promise_link": "我為何打造並維護這些應用程式"
   },
   "index": {
@@ -222,9 +224,9 @@
   },
   "support": {
     "title": "ClipMenu 2 — 支援 &amp; 協助",
-    "description": "ClipMenu 2 的支援與協助，這是一款快速的 Mac 剪貼簿管理及記錄應用程式。設定、輔助使用權限、訂閱及常見問題。",
+    "description": "ClipMenu 2 的支援與協助，這是一款快速的 Mac 剪貼簿管理及記錄應用程式。設定、輔助使用權限、備份及常見問題。",
     "og_title": "ClipMenu 2 — 支援 &amp; 協助",
-    "og_description": "ClipMenu 2（Mac 剪貼簿管理工具）的設定、輔助使用權限、訂閱及常見問題。",
+    "og_description": "ClipMenu 2（Mac 剪貼簿管理工具）的設定、輔助使用權限、備份及常見問題。",
     "back": "← 返回 ClipMenu 2",
     "logo_alt": "ClipMenu 2 圖示",
     "h1": "ClipMenu 2 支援",
@@ -238,14 +240,14 @@
     "faq1_a": "按你的全域快速鍵（在設定中指定），即可在游標處彈出記錄，或按選單列上的 ClipMenu 2 圖示。",
     "faq2_q": "ClipMenu 2 無法貼入其他應用程式。",
     "faq2_a": "macOS 規定須有輔助使用權限才能代你貼上。請開啟 <strong>系統設定 → 私隱權與安全性 → 輔助使用</strong>，並啟用 ClipMenu 2。",
-    "faq3_q": "訂閱包含甚麼？",
-    "faq3_a": "Mac App Store 版本是付費應用程式，提供 30 日免費試用，其後為自動續期的年度訂閱。它會解鎖完整應用程式，以及在你所有 Mac 之間同步剪貼簿記錄與片段的 iCloud 同步。",
-    "faq4_q": "如何在新的 Mac 上回復我的訂閱？",
-    "faq4_a": "開啟 ClipMenu 2，在歡迎畫面選擇 <strong>回復購買項目</strong>，並以相同的 Apple ID 登入。",
-    "faq5_q": "如何管理或取消訂閱？",
-    "faq5_a": "開啟 App Store 應用程式 → 按你的名稱 → <strong>訂閱項目</strong>，或前往 <a href=\"https://apps.apple.com/account/subscriptions\">你的 Apple 訂閱項目</a>。",
+    "faq3_q": "ClipMenu 2 免費嗎？",
+    "faq3_a": "免費。無論透過 Mac App Store、直接下載或 Homebrew 都免費，並以 MIT 授權開源。",
+    "faq4_q": "如何在多台 Mac 之間同步片段？",
+    "faq4_a": "開啟 <strong>Settings ▸ Sync &amp; Backup</strong> 並選擇一個備份資料夾。把該資料夾放在 iCloud Drive、Dropbox 或 Google Drive，你的片段與設定便會同步到其他 Mac。",
+    "faq5_q": "如何移除 ClipMenu 2？",
+    "faq5_a": "執行 <code>brew uninstall --zap --cask clipmenu-2</code>，或結束 ClipMenu 2 並將它從「應用程式」拖到垃圾桶。",
     "faq6_q": "我的資料儲存在哪裡？",
-    "faq6_a": "你的記錄與片段會保留在你的 Mac 及你自己的私人 iCloud 資料庫中。我們絕不會接收。請參閱我們的 <a href=\"/privacy.html\">私隱政策</a>。",
+    "faq6_a": "你的記錄與片段保留在你的 Mac 上。我們絕不會接收。如果你選擇了備份資料夾，它們只會寫入該資料夾。請參閱我們的<a href=\"/privacy.html\">私隱政策</a>。",
     "links_h2": "連結",
     "link_home": "專案主頁 &amp; 下載",
     "link_issues": "回報錯誤／要求新功能",
@@ -253,7 +255,7 @@
     "link_eula": "使用條款 (EULA)",
     "footer": "ClipMenu 2 for macOS · 支援：<a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
     "page_title": "Dragon App — 支援及說明",
-    "page_desc": "Dragon App Mac 應用程式的支援及說明 — ClipMenu 2（剪貼簿管理工具）、Yahoo! KeyKey 2（倉頡及速成輸入法）同 Ice 2（選單列管理工具）。設定、權限、訂閱同常見問題。",
+    "page_desc": "Dragon App Mac 應用程式的支援及說明 — ClipMenu 2（剪貼簿管理工具）、Yahoo! KeyKey 2（倉頡及速成輸入法）同 Ice 2（選單列管理工具）。設定、權限、備份同常見問題。",
     "page_logo_alt": "Dragon App",
     "page_h1": "支援",
     "page_tagline": "ClipMenu 2、Yahoo! KeyKey 2 同 Ice 2 嘅使用說明。",
@@ -325,7 +327,7 @@
     "promise_macos_d": "支援至少最新兩個 macOS 版本。",
     "promise_langs_d": "提供 7 種語言版本，如本網站。",
     "promise_channels_d": "3 種安裝方式：GitHub、Homebrew，以及（在可行情況下）Mac App Store。",
-    "promise_icloud_d": "設定可透過 iCloud 在你的 Mac 之間同步。"
+    "promise_oss_d": "每款應用程式都免費，完整原始碼公開在 GitHub。"
   },
   "ice-2": {
     "title": "Ice 2 — Mac 選單列管理工具，為 macOS 26 &amp; 27 重新打造",
@@ -360,9 +362,9 @@
     "support_body": "問題、錯誤回報和功能建議隨時歡迎。在 GitHub 開立 issue，我們會回覆你 — 或寫信至 support@dragonapp.com。",
     "credit_body": "ClipMenu 2 建基於 <strong>Naotaka Morimoto</strong> 原版 <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> 的傳承。它是一款以 Swift 打造的獨立開源重製版 — 懷着對他成果的感激而創作，並以同樣的 MIT 授權發佈。",
     "faq": [
-      {"q": "App Store 版與 GitHub 版有甚麼分別？", "a": "它們是同一個應用程式。Mac App Store 版本是付費訂閱，加入了 iCloud 同步，並透過 App Store 自動更新。GitHub 版本免費而開源，內建自動更新，並具備除 iCloud 同步以外的每項功能。"},
+      {"q": "App Store 版與 GitHub 版有甚麼分別？", "a": "它們是同一個應用程式，而且都免費。Mac App Store 版本在沙盒中執行，透過 App Store 更新。GitHub 版本開源，可透過直接下載或 Homebrew 安裝，並由 Sparkle 自動更新。"},
       {"q": "為甚麼 ClipMenu 2 要求輔助使用權限？", "a": "macOS 規定應用程式須有輔助使用權限，才能代你貼入另一個應用程式。ClipMenu 2 只用它把你選定的片段放進最前的應用程式。請在 系統設定 → 私隱權與安全性 → 輔助使用 中授權。（App Store 版本已沙盒化，不會用到此項。）"},
-      {"q": "我的剪貼簿資料儲存在哪裡？", "a": "儲存在你的 Mac 上。你的記錄與片段絕不會離開你的裝置 — ClipMenu 2 沒有分析、廣告或追蹤，我們亦絕不會接收你的剪貼簿內容。開啟 iCloud 同步後，片段會透過你自己的私人 iCloud 帳戶傳輸。"},
+      {"q": "我的剪貼簿資料儲存在哪裡？", "a": "儲存在你的 Mac 上。你的記錄與片段絕不會離開你的裝置 — ClipMenu 2 沒有分析、廣告或追蹤，我們亦絕不會接收你的剪貼簿內容。如果你在 Settings ▸ Sync &amp; Backup 中選擇備份資料夾，片段與設定也會寫入該資料夾；把它放在 iCloud Drive、Dropbox 或 Google Drive，便可帶到你的其他 Mac。"},
       {"q": "如何安裝 ClipMenu 2？", "a": "從最新的 GitHub 發佈版下載並拖至「應用程式」資料夾，或以 Homebrew 安裝：brew install --cask teddychan/tap/clipmenu-2。Mac App Store 版本亦已推出。"}
     ]
   },

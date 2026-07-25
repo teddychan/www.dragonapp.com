@@ -27,6 +27,8 @@
     "app_channel_brew_badge": "ターミナル · コマンド一つ",
     "app_channel_mas": "Mac App Store",
     "app_channel_mas_soon": "近日公開",
+    "app_channel_mas_badge": "ワンクリック · 無料",
+    "app_channel_mas_cta": "App Store からダウンロード",
     "app_token_h2": "トークンを買ってサポート",
     "app_token_badge": "開発を支援する",
     "app_token_body": "これらのアプリは主にAIによって維持されています。コーヒーの代わりに、継続的なメンテナンスを支えるAIトークンの費用を少しご支援いただけますか。",
@@ -37,7 +39,7 @@
     "promise_macos": "最新2世代のmacOS",
     "promise_langs": "7言語",
     "promise_channels": "3つの配布チャンネル",
-    "promise_icloud": "iCloud同期",
+    "promise_oss": "無料・オープンソース",
     "promise_link": "私がこれらを作り・維持し続ける理由"
   },
   "index": {
@@ -222,9 +224,9 @@
   },
   "support": {
     "title": "ClipMenu 2 — サポート &amp; ヘルプ",
-    "description": "Mac向けの高速なクリップボードマネージャー兼履歴アプリ、ClipMenu 2のサポートとヘルプ。セットアップ、アクセシビリティ権限、サブスクリプション、よくある質問。",
+    "description": "Mac向けの高速なクリップボードマネージャー兼履歴アプリ、ClipMenu 2のサポートとヘルプ。セットアップ、アクセシビリティ権限、バックアップ、よくある質問。",
     "og_title": "ClipMenu 2 — サポート &amp; ヘルプ",
-    "og_description": "Mac向けクリップボードマネージャー、ClipMenu 2のセットアップ、アクセシビリティ権限、サブスクリプション、よくある質問。",
+    "og_description": "Mac向けクリップボードマネージャー、ClipMenu 2のセットアップ、アクセシビリティ権限、バックアップ、よくある質問。",
     "back": "← ClipMenu 2に戻る",
     "logo_alt": "ClipMenu 2のアイコン",
     "h1": "ClipMenu 2 サポート",
@@ -238,14 +240,14 @@
     "faq1_a": "グローバルホットキー（設定で指定）を押すと履歴がカーソル位置にポップアップします。または、メニューバーのClipMenu 2アイコンをクリックします。",
     "faq2_q": "ClipMenu 2が他のアプリに貼り付けられません。",
     "faq2_a": "macOSでは、ユーザーに代わって貼り付けるためにアクセシビリティ権限が必要です。<strong>システム設定 → プライバシーとセキュリティ → アクセシビリティ</strong>を開き、ClipMenu 2を有効にしてください。",
-    "faq3_q": "サブスクリプションには何が含まれますか？",
-    "faq3_a": "Mac App Store版は30日間の無料トライアル付きの有料アプリで、その後は年単位で自動更新されるサブスクリプションになります。アプリのフル機能と、すべてのMac間でのクリップボード履歴・スニペットのiCloud同期が利用できます。",
-    "faq4_q": "新しいMacでサブスクリプションを復元するには？",
-    "faq4_a": "同じApple IDでサインインした状態でClipMenu 2を開き、ウェルカム画面で<strong>購入を復元</strong>を選んでください。",
-    "faq5_q": "サブスクリプションを管理・解約するには？",
-    "faq5_a": "App Storeアプリを開き → 自分の名前をクリック → <strong>サブスクリプション</strong>、または<a href=\"https://apps.apple.com/account/subscriptions\">Appleのサブスクリプション</a>にアクセスしてください。",
+    "faq3_q": "ClipMenu 2は無料ですか？",
+    "faq3_a": "はい。Mac App Store、直接ダウンロード、Homebrewのいずれでも無料で、MITライセンスのオープンソースです。",
+    "faq4_q": "スニペットをMac間で同期するには？",
+    "faq4_a": "<strong>Settings ▸ Sync &amp; Backup</strong> を開いてバックアップフォルダを選びます。そのフォルダをiCloud Drive、Dropbox、Google Driveに置けば、スニペットと設定がほかのMacにも届きます。",
+    "faq5_q": "ClipMenu 2をアンインストールするには？",
+    "faq5_a": "<code>brew uninstall --zap --cask clipmenu-2</code> を実行するか、ClipMenu 2を終了してアプリケーションフォルダからゴミ箱にドラッグしてください。",
     "faq6_q": "データはどこに保存されますか？",
-    "faq6_a": "履歴とスニペットはあなたのMac上と、ご自身のプライベートなiCloudデータベースに留まります。私たちが受け取ることはありません。<a href=\"/privacy.html\">プライバシーポリシー</a>をご覧ください。",
+    "faq6_a": "履歴とスニペットはあなたのMacに留まります。私たちが受け取ることはありません。バックアップフォルダを選んだ場合は、そのフォルダにのみ書き出されます。<a href=\"/privacy.html\">プライバシーポリシー</a>をご覧ください。",
     "links_h2": "リンク",
     "link_home": "プロジェクトホーム &amp; ダウンロード",
     "link_issues": "バグ報告 / 機能リクエスト",
@@ -253,7 +255,7 @@
     "link_eula": "利用規約 (EULA)",
     "footer": "macOS向けClipMenu 2 · サポート：<a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
     "page_title": "Dragon App — サポート &amp; ヘルプ",
-    "page_desc": "Dragon App の Mac アプリ、ClipMenu 2（クリップボードマネージャー）、Yahoo! KeyKey 2（倉頡・速成入力方式）、Ice 2（メニューバーマネージャー）のサポートとヘルプ。セットアップ、権限、サブスクリプション、よくある質問をご案内します。",
+    "page_desc": "Dragon App の Mac アプリ、ClipMenu 2（クリップボードマネージャー）、Yahoo! KeyKey 2（倉頡・速成入力方式）、Ice 2（メニューバーマネージャー）のサポートとヘルプ。セットアップ、権限、バックアップ、よくある質問をご案内します。",
     "page_logo_alt": "Dragon App",
     "page_h1": "サポート",
     "page_tagline": "ClipMenu 2、Yahoo! KeyKey 2、Ice 2 のヘルプ。",
@@ -325,7 +327,7 @@
     "promise_macos_d": "少なくとも最新2世代のmacOSで動作します。",
     "promise_langs_d": "このサイトと同様、7言語に対応しています。",
     "promise_channels_d": "GitHub、Homebrew、（可能な場合は）Mac App Storeの3つの方法でインストールできます。",
-    "promise_icloud_d": "iCloudを通じてMac間で設定が同期されます。"
+    "promise_oss_d": "すべてのアプリは無料で、ソースコードはGitHubで公開されています。"
   },
   "ice-2": {
     "title": "Ice 2 — Mac向けメニューバーマネージャー、macOS 26・27対応に再構築",
@@ -366,9 +368,9 @@
     "support_body": "ご質問、バグ報告、機能のご要望はいつでも歓迎です。GitHubでイシューを開いていただくか、support@dragonapp.com までご連絡ください。",
     "credit_body": "ClipMenu 2は、<strong>Naotaka Morimoto</strong>によるオリジナルの<a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a>の遺産の上に作られています。これはSwiftによる独立したオープンソースの再構築版です — 彼の仕事への感謝とともに制作され、同じMITライセンスのもとで公開されています。",
     "faq": [
-      {"q": "App Store版とGitHub版の違いは何ですか？", "a": "どちらも同じアプリです。Mac App Store版は有料のサブスクリプションで、iCloud同期が追加され、App Storeを通じて自動的にアップデートされます。GitHub版は無料・オープンソースで、自動アップデートを内蔵し、iCloud同期を除くすべての機能を備えています。"},
+      {"q": "App Store版とGitHub版の違いは何ですか？", "a": "どちらも同じアプリで、どちらも無料です。Mac App Store版はサンドボックスで動作し、App Store経由で更新されます。GitHub版はオープンソースで、直接ダウンロードまたはHomebrewからインストールでき、Sparkleで自動更新されます。"},
       {"q": "なぜClipMenu 2はアクセシビリティ権限を求めるのですか？", "a": "macOSでは、アプリがユーザーに代わって別のアプリへ貼り付けるためにアクセシビリティ権限が必要です。ClipMenu 2はこれを、選択したクリップを最前面のアプリへ貼り付けるためだけに使用します。システム設定 → プライバシーとセキュリティ → アクセシビリティ で許可してください。（App Store版はサンドボックス化されており、これを使用しません。）"},
-      {"q": "クリップボードのデータはどこに保存されますか？", "a": "あなたのMac上です。履歴とスニペットがデバイスの外に出ることはありません — ClipMenu 2には分析、広告、トラッキングは一切なく、私たちがクリップボードの内容を受け取ることもありません。iCloud同期をオンにすると、スニペットはご自身のプライベートなiCloudアカウントを通じて移動します。"},
+      {"q": "クリップボードのデータはどこに保存されますか？", "a": "あなたのMac上です。履歴とスニペットがデバイスの外に出ることはありません — ClipMenu 2には分析、広告、トラッキングは一切なく、私たちがクリップボードの内容を受け取ることもありません。Settings ▸ Sync &amp; Backup でバックアップフォルダを選ぶと、スニペットと設定はそのフォルダにも書き出されます。そのフォルダをiCloud Drive、Dropbox、Google Driveに置けば、ほかのMacにも引き継げます。"},
       {"q": "ClipMenu 2はどうやってインストールしますか？", "a": "最新のGitHubリリースからダウンロードしてアプリケーションフォルダにドラッグするか、Homebrewでインストールしてください：brew install --cask teddychan/tap/clipmenu-2。Mac App Store版も利用できます。"}
     ]
   },

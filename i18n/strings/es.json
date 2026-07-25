@@ -27,6 +27,8 @@
     "app_channel_brew_badge": "Terminal · un solo comando",
     "app_channel_mas": "Mac App Store",
     "app_channel_mas_soon": "Próximamente",
+    "app_channel_mas_badge": "Un clic · gratis",
+    "app_channel_mas_cta": "Descárgalo en el App Store",
     "app_token_h2": "Invítame a un Token",
     "app_token_badge": "Apoya el desarrollo",
     "app_token_body": "Estas apps se mantienen principalmente con IA. En lugar de un café, puedes contribuir con los tokens de IA que financian el mantenimiento continuo.",
@@ -37,7 +39,7 @@
     "promise_macos": "Últimos 2 macOS",
     "promise_langs": "7 idiomas",
     "promise_channels": "3 canales",
-    "promise_icloud": "Sincronización con iCloud",
+    "promise_oss": "Gratis y de código abierto",
     "promise_link": "Por qué creo y mantengo estas apps"
   },
   "index": {
@@ -222,9 +224,9 @@
   },
   "support": {
     "title": "ClipMenu 2 — Soporte &amp; ayuda",
-    "description": "Soporte y ayuda para ClipMenu 2, el rápido gestor de portapapeles e historial para Mac. Configuración, permiso de Accesibilidad, suscripciones y preguntas frecuentes.",
+    "description": "Soporte y ayuda para ClipMenu 2, el rápido gestor de portapapeles e historial para Mac. Configuración, permiso de Accesibilidad, copias de seguridad y preguntas frecuentes.",
     "og_title": "ClipMenu 2 — Soporte &amp; ayuda",
-    "og_description": "Configuración, permiso de Accesibilidad, suscripciones y preguntas frecuentes de ClipMenu 2, el gestor de portapapeles para Mac.",
+    "og_description": "Configuración, permiso de Accesibilidad, copias de seguridad y preguntas frecuentes de ClipMenu 2, el gestor de portapapeles para Mac.",
     "back": "← Volver a ClipMenu 2",
     "logo_alt": "Icono de ClipMenu 2",
     "h1": "Soporte de ClipMenu 2",
@@ -238,14 +240,14 @@
     "faq1_a": "Pulsa tu atajo global (configurado en los Ajustes) para que el historial aparezca junto al cursor, o haz clic en el icono de ClipMenu 2 en la barra de menús.",
     "faq2_q": "ClipMenu 2 no puede pegar en otras aplicaciones.",
     "faq2_a": "macOS requiere permiso de Accesibilidad para pegar por ti. Abre <strong>Ajustes del Sistema → Privacidad &amp; Seguridad → Accesibilidad</strong> y activa ClipMenu 2.",
-    "faq3_q": "¿Qué incluye la suscripción?",
-    "faq3_a": "La edición de la Mac App Store es una aplicación de pago con una prueba gratuita de 30 días y luego una suscripción anual de renovación automática. Desbloquea la aplicación completa y la sincronización con iCloud del historial del portapapeles y los fragmentos entre todos tus Mac.",
-    "faq4_q": "¿Cómo restauro mi suscripción en un nuevo Mac?",
-    "faq4_a": "Abre ClipMenu 2 y elige <strong>Restaurar compras</strong> en la pantalla de bienvenida, con la sesión iniciada con el mismo Apple ID.",
-    "faq5_q": "¿Cómo gestiono o cancelo la suscripción?",
-    "faq5_a": "Abre la aplicación App Store → haz clic en tu nombre → <strong>Suscripciones</strong>, o visita <a href=\"https://apps.apple.com/account/subscriptions\">tus suscripciones de Apple</a>.",
+    "faq3_q": "¿ClipMenu 2 es gratis?",
+    "faq3_a": "Sí. Es gratis en la Mac App Store, como descarga directa y con Homebrew, y es de código abierto con licencia MIT.",
+    "faq4_q": "¿Cómo sincronizo mis fragmentos entre Mac?",
+    "faq4_a": "Abre <strong>Settings ▸ Sync &amp; Backup</strong> y elige una carpeta de copias. Pon esa carpeta en iCloud Drive, Dropbox o Google Drive y tus fragmentos y ajustes llegarán a tus otros Mac.",
+    "faq5_q": "¿Cómo desinstalo ClipMenu 2?",
+    "faq5_a": "Ejecuta <code>brew uninstall --zap --cask clipmenu-2</code>, o cierra ClipMenu 2 y arrástralo de Aplicaciones a la Papelera.",
     "faq6_q": "¿Dónde se almacenan mis datos?",
-    "faq6_a": "Tu historial y tus fragmentos permanecen en tu Mac y en tu propia base de datos privada de iCloud. Nunca los recibimos. Consulta nuestra <a href=\"/privacy.html\">Política de privacidad</a>.",
+    "faq6_a": "Tu historial y tus fragmentos permanecen en tu Mac. Nunca los recibimos. Si eliges una carpeta de copias, solo se escriben en esa carpeta. Consulta nuestra <a href=\"/privacy.html\">Política de privacidad</a>.",
     "links_h2": "Enlaces",
     "link_home": "Página del proyecto &amp; descargas",
     "link_issues": "Informar de un error / solicitar una función",
@@ -253,7 +255,7 @@
     "link_eula": "Condiciones de uso (EULA)",
     "footer": "ClipMenu 2 para macOS · Soporte: <a href=\"mailto:support@dragonapp.com\">support@dragonapp.com</a>",
     "page_title": "Dragon App — Soporte y ayuda",
-    "page_desc": "Soporte y ayuda para las apps de Mac de Dragon App: ClipMenu 2 (gestor del portapapeles), Yahoo! KeyKey 2 (método de entrada Cangjie y Simplex) e Ice 2 (gestor de barra de menús). Configuración, permisos, suscripciones y preguntas frecuentes.",
+    "page_desc": "Soporte y ayuda para las apps de Mac de Dragon App: ClipMenu 2 (gestor del portapapeles), Yahoo! KeyKey 2 (método de entrada Cangjie y Simplex) e Ice 2 (gestor de barra de menús). Configuración, permisos, copias de seguridad y preguntas frecuentes.",
     "page_logo_alt": "Dragon App",
     "page_h1": "Soporte",
     "page_tagline": "Ayuda para ClipMenu 2, Yahoo! KeyKey 2 e Ice 2.",
@@ -325,7 +327,7 @@
     "promise_macos_d": "Funciona en al menos las dos últimas versiones de macOS.",
     "promise_langs_d": "Disponible en 7 idiomas, como este sitio.",
     "promise_channels_d": "Instalable de 3 formas: GitHub, Homebrew y (cuando es posible) la Mac App Store.",
-    "promise_icloud_d": "Los ajustes se sincronizan entre tus Mac mediante iCloud."
+    "promise_oss_d": "Todas las apps son gratis y su código completo es público en GitHub."
   },
   "ice-2": {
     "title": "Ice 2 — Gestor de barra de menús para Mac, reconstruido para macOS 26 y 27",
@@ -366,9 +368,9 @@
     "support_body": "Las preguntas, los informes de errores y las sugerencias de funciones son siempre bienvenidos. Abre una incidencia en GitHub y te responderemos, o escribe a support@dragonapp.com.",
     "credit_body": "ClipMenu 2 se construye sobre el legado del <a href=\"https://github.com/naotaka/ClipMenu\">ClipMenu</a> original de <strong>Naotaka Morimoto</strong>. Es una reconstrucción independiente y de código abierto en Swift, creada con gratitud por su trabajo y publicada bajo la misma Licencia MIT.",
     "faq": [
-      {"q": "¿Cuál es la diferencia entre las versiones de la App Store y de GitHub?", "a": "Son la misma app. La edición de la Mac App Store es una suscripción de pago que añade sincronización con iCloud y se actualiza automáticamente a través de la App Store. La edición de GitHub es gratuita y de código abierto, con actualización automática integrada, e incluye todas las funciones excepto la sincronización con iCloud."},
+      {"q": "¿Cuál es la diferencia entre las versiones de la App Store y de GitHub?", "a": "Son la misma aplicación, y las dos son gratis. La edición de la Mac App Store funciona en la sandbox de macOS y se actualiza a través de la App Store. La edición de GitHub es de código abierto, se instala con una descarga directa o con Homebrew, y se actualiza sola mediante Sparkle."},
       {"q": "¿Por qué ClipMenu 2 pide permiso de Accesibilidad?", "a": "macOS requiere permiso de Accesibilidad para que una app pegue en otra en tu nombre. ClipMenu 2 lo usa únicamente para depositar el clip seleccionado en la app en primer plano. Concédelo en Ajustes del Sistema → Privacidad & Seguridad → Accesibilidad. (La edición de la App Store está en zona protegida y no usa esto.)"},
-      {"q": "¿Dónde se almacenan los datos de mi portapapeles?", "a": "En tu Mac. Tu historial y tus fragmentos nunca salen de tus dispositivos: ClipMenu 2 no tiene analíticas, anuncios ni seguimiento, y nunca recibimos el contenido de tu portapapeles. Con la sincronización con iCloud activada, los fragmentos viajan a través de tu propia cuenta privada de iCloud."},
+      {"q": "¿Dónde se almacenan los datos de mi portapapeles?", "a": "En tu Mac. Tu historial y tus fragmentos nunca salen de tus dispositivos: ClipMenu 2 no tiene analíticas, anuncios ni seguimiento, y nunca recibimos el contenido de tu portapapeles. Si eliges una carpeta de copias en Settings ▸ Sync &amp; Backup, los fragmentos y los ajustes también se guardan ahí; pon esa carpeta en iCloud Drive, Dropbox o Google Drive para llevarlos a tus otros Mac."},
       {"q": "¿Cómo instalo ClipMenu 2?", "a": "Descárgalo desde la última versión en GitHub y arrástralo a Aplicaciones, o instálalo con Homebrew: brew install --cask teddychan/tap/clipmenu-2. También está disponible en la Mac App Store."}
     ]
   },

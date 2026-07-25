@@ -20,7 +20,7 @@
   </script>
   <script src="/shared/consent.js" defer></script>
   <title>Dragon App — 지원 &amp; 도움말</title>
-  <meta name="description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 구독, 자주 묻는 질문을 안내합니다.">
+  <meta name="description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 백업, 자주 묻는 질문을 안내합니다.">
   <link rel="canonical" href="https://www.dragonapp.com/ko/support.html">
   <link rel="icon" href="/appicon.png">
   <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/support.html">
@@ -36,11 +36,11 @@
   <meta property="og:locale" content="ko_KR">
   <meta property="og:url" content="https://www.dragonapp.com/ko/support.html">
   <meta property="og:title" content="Dragon App — 지원 &amp; 도움말">
-  <meta property="og:description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 구독, 자주 묻는 질문을 안내합니다.">
+  <meta property="og:description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 백업, 자주 묻는 질문을 안내합니다.">
   <meta property="og:image" content="https://www.dragonapp.com/appicon.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dragon App — 지원 &amp; 도움말">
-  <meta name="twitter:description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 구독, 자주 묻는 질문을 안내합니다.">
+  <meta name="twitter:description" content="Dragon App의 Mac 앱 — ClipMenu 2(클립보드 관리자), Yahoo! KeyKey 2(Cangjie &amp; Simplex 입력기), Ice 2(메뉴 막대 관리자)에 대한 지원 및 도움말. 설정, 권한, 백업, 자주 묻는 질문을 안내합니다.">
   <meta name="twitter:image" content="https://www.dragonapp.com/appicon.png">
   <script src="/shared/i18n.js" defer></script>
   <style>
@@ -189,17 +189,17 @@
       <dt>ClipMenu 2가 다른 앱에 붙여넣지 못합니다.</dt>
       <dd>macOS는 사용자를 대신해 붙여넣으려면 손쉬운 사용 권한이 필요합니다. <strong>시스템 설정 → 개인정보 보호 &amp; 보안 → 손쉬운 사용</strong>을 열고 ClipMenu 2를 활성화하세요.</dd>
 
-      <dt>구독에는 무엇이 포함되나요?</dt>
-      <dd>Mac App Store 에디션은 30일 무료 체험 이후 자동 갱신되는 연간 구독이 적용되는 유료 앱입니다. 전체 앱과 모든 Mac 간 클립보드 기록 및 스니펫의 iCloud 동기화를 잠금 해제합니다.</dd>
+      <dt>ClipMenu 2는 무료인가요?</dt>
+      <dd>네. Mac App Store, 직접 다운로드, Homebrew 모두 무료이며 MIT 라이선스의 오픈 소스입니다.</dd>
 
-      <dt>새 Mac에서 구독을 어떻게 복원하나요?</dt>
-      <dd>동일한 Apple ID로 로그인한 상태에서 ClipMenu 2를 열고 시작 화면에서 <strong>구입 항목 복원</strong>을 선택하세요.</dd>
+      <dt>여러 Mac 간에 스니펫을 동기화하려면?</dt>
+      <dd><strong>Settings ▸ Sync &amp; Backup</strong>을 열고 백업 폴더를 선택하세요. 그 폴더를 iCloud Drive, Dropbox, Google Drive에 두면 스니펫과 설정이 다른 Mac에도 전달됩니다.</dd>
 
-      <dt>구독은 어떻게 관리하거나 취소하나요?</dt>
-      <dd>App Store 앱을 열고 → 이름을 클릭한 뒤 → <strong>구독</strong>으로 이동하거나, <a href="https://apps.apple.com/account/subscriptions">Apple 구독 페이지</a>를 방문하세요.</dd>
+      <dt>ClipMenu 2를 삭제하려면?</dt>
+      <dd><code>brew uninstall --zap --cask clipmenu-2</code>를 실행하거나, ClipMenu 2를 종료한 뒤 응용 프로그램에서 휴지통으로 드래그하세요.</dd>
 
       <dt>내 데이터는 어디에 저장되나요?</dt>
-      <dd>기록과 스니펫은 당신의 Mac과 본인의 비공개 iCloud 데이터베이스에 머뭅니다. 우리는 결코 그것을 받지 않습니다. <a href="/privacy.html">개인정보 처리방침</a>을 참고하세요.</dd>
+      <dd>기록과 스니펫은 당신의 Mac에 남습니다. 우리는 결코 받지 않습니다. 백업 폴더를 선택한 경우 해당 폴더에만 저장됩니다. <a href="/privacy.html">개인정보 처리방침</a>을 참고하세요.</dd>
     </dl>
 
     <h3>링크</h3>

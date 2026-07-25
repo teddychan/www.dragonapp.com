@@ -363,9 +363,11 @@ def render_download(app, common):
                common.get("app_channel_brew", "Homebrew"), app["homebrew_cask"]))
     if app.get("mas_url"):
         cards.append(
-            '<div class="plan"><span class="badge">App Store</span><h3>%s</h3>'
-            '<a class="btn btn-appstore" href="%s">Download on the Mac App Store</a></div>'
-            % (common.get("app_channel_mas", "Mac App Store"), app["mas_url"]))
+            '<div class="plan"><span class="badge">%s</span><h3>%s</h3>'
+            '<a class="btn btn-appstore" href="%s">%s</a></div>'
+            % (common.get("app_channel_mas_badge", "One click · free"),
+               common.get("app_channel_mas", "Mac App Store"), app["mas_url"],
+               common.get("app_channel_mas_cta", "Download on the App Store")))
     else:
         cards.append(
             '<div class="plan"><span class="badge soon status-soon">%s</span><h3>%s</h3>'
@@ -461,6 +463,8 @@ def render_jsonld(app, lang, page_str):
             {"@type": "ListItem", "position": 1, "name": "Dragon App", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": app["name"], "item": app_url(lang, app["slug"])}]},
     ]
+    if app.get("mas_url"):
+        graph[0]["installUrl"] = app["mas_url"]
     if faq:
         graph.append({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": f["q"],
@@ -544,9 +548,12 @@ def write_llms_txt(strings):
              "", "## Apps"]
     for app in load_apps():
         ps = en.get(app["slug"], {})
-        lines.append("- [%s](%s): %s Install: brew install --cask %s"
-                     % (app["name"], app_url("en-US", app["slug"]),
-                        _plain(ps.get("sub", "")), app.get("homebrew_cask") or "n/a"))
+        line = ("- [%s](%s): %s Install: brew install --cask %s"
+                % (app["name"], app_url("en-US", app["slug"]),
+                   _plain(ps.get("sub", "")), app.get("homebrew_cask") or "n/a"))
+        if app.get("mas_url"):
+            line += " — also free on the Mac App Store: %s" % app["mas_url"]
+        lines.append(line)
     lines += ["", "## About", "%s/about/ — why these apps exist and the maintenance promise." % SITE]
     with open(os.path.join(DOCS, "llms.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
