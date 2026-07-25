@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.8.0",
+    "date": "2026-07-25",
+    "notes": "Press Space to confirm the code. In 速成, and in 倉頡 with the * wildcard, candidates appear before the code is finished, so Space flipped to the next page instead of confirming what you typed. A new setting makes the first Space confirm the code and stay on page 1 — press Space again to page, or 1–9 to pick. Off by default, and plain 倉頡 is unaffected. · Fixed: 三代倉頡 offered characters under the wrong code. Typing 人一弓口 (何's code) also offered 含, whose code is 人戈弓口. The bundled 三代 table came from an upstream merge that never removed duplicates, giving 800 characters a second, non-standard code; those extra codes are gone and every character keeps its real one. 五代倉頡 was never affected.",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.8.0"
+  },
+  {
     "version": "2.7.0",
     "date": "2026-07-22",
     "notes": "Page through 聯想 associated-phrase candidates. Use Page Up / Page Down to move between pages of associated-phrase suggestions. · Choose how you pick associated phrases. A new setting lets you select the associated-phrase key — plain Number keys or Shift+Number. · ⌘ and ⌃ shortcuts pass through. Keyboard shortcuts using ⌘ or ⌃ now reach the app instead of being swallowed by the input method. · test: add App-logic test suite + engine coverage top-up",
@@ -40,11 +46,5 @@
     "date": "2026-07-06",
     "notes": "Fixed: the candidate text size slider now updates as you drag. In 設定… ▸ 一般, dragging the 候選字大小 (candidate text size) slider used to leave the shown value and the handle stuck even though the size did change. The slider and its label now track your dragging live.",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.5.0"
-  },
-  {
-    "version": "2.4.1",
-    "date": "2026-07-06",
-    "notes": "Clearer \"already up to date\" message. When you check for updates and you're already on the latest version, the confirmation dialog now reads more naturally. · About now shows the build time. The version line in About now reads like v2.4.1 (24) · 2026-Jul-06 13:34:56 UTC, adding the exact UTC build time alongside the version and build number.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.4.1"
   }
 ]
