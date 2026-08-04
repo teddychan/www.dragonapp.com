@@ -2,7 +2,7 @@
   {
     "version": "2.8.0",
     "date": "2026-07-25",
-    "notes": "Press Space to confirm the code. In 速成, and in 倉頡 with the * wildcard, candidates appear before the code is finished, so Space flipped to the next page instead of confirming what you typed. A new setting makes the first Space confirm the code and stay on page 1 — press Space again to page, or 1–9 to pick. Off by default, and plain 倉頡 is unaffected. · Fixed: 三代倉頡 offered characters under the wrong code. Typing 人一弓口 (何's code) also offered 含, whose code is 人戈弓口. The bundled 三代 table came from an upstream merge that never removed duplicates, giving 800 characters a second, non-standard code; those extra codes are gone and every character keeps its real one. 五代倉頡 was never affected. · feat: option to require Space to confirm the code in 速成 / 倉頡-with-* (#61) · fix: 三代 table matched characters under codes they don't decompose to (#62)",
+    "notes": "Press Space to confirm the code. In 速成, and in 倉頡 with the * wildcard, candidates appear before the code is finished, so Space flipped to the next page instead of confirming what you typed. A new setting makes the first Space confirm the code and stay on page 1 — press Space again to page, or 1–9 to pick. Off by default, and plain 倉頡 is unaffected. · Fixed: 三代倉頡 offered characters under the wrong code. Typing 人一弓口 (何's code) also offered 含, whose code is 人戈弓口. The bundled 三代 table came from an upstream merge that never removed duplicates, giving 800 characters a second, non-standard code; those extra codes are gone and every character keeps its real one. 五代倉頡 was never affected.",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.8.0"
   },
   {
