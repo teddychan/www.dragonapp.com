@@ -4,7 +4,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 APPS = os.path.join(ROOT, "i18n", "apps")
 
 REQUIRED = {"slug", "name", "theme", "repo", "homebrew_cask", "mas_url",
-            "license", "license_url", "min_macos", "appcast_path",
+            "license", "license_url", "min_macos", "appcast_repo",
             "credit_name", "credit_url", "sponsors_url"}
 
 def test_index_lists_apps():
