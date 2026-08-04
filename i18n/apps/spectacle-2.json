@@ -8,7 +8,7 @@
   "license": "MIT",
   "license_url": "https://github.com/teddychan/spectacle-2/blob/main/LICENSE.md",
   "min_macos": "26",
-  "appcast_path": "spectacle-2/appcast.xml",
+  "appcast_repo": "teddychan/spectacle-2",
   "credit_name": "Eric Czarny",
   "credit_url": "https://github.com/eczarny/spectacle",
   "sponsors_url": null,
