@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.19.0",
+    "date": "2026-08-04",
+    "notes": "v2.18.1 — install docs + Mac App Store availability · docs: unify README structure, style, and table of contents · docs: add Tests section with measured coverage · ci: run the test suite on every pull request",
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.19.0"
+  },
+  {
+    "version": "2.18.1",
+    "date": "2026-07-25",
+    "notes": "v2.18.1 — install docs + Mac App Store availability",
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.18.1"
+  },
+  {
     "version": "2.18.0",
     "date": "2026-07-15",
     "notes": "Maintenance release — nothing changes in how ClipMenu works day to day. · Much broader automated test coverage. Unit tests grew from 147 to 313, lifting coverage from ~19% to ~74% across the SwiftUI settings panes, drag-to-reorder, and backup/restore — so future changes stay safe. · Housekeeping. Removed unused App Store paywall strings across all 7 localizations and bumped CI tooling. · test: expand unit coverage 18.8%→39.3% (147→313 tests)",
@@ -34,17 +46,5 @@
     "date": "2026-07-08",
     "notes": "perf+fix: monitor energy, faster history, exclusion race, hot-key feedback (v2.17.7)",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.7"
-  },
-  {
-    "version": "2.17.6",
-    "date": "2026-07-06",
-    "notes": "ci: bump actions/checkout to v5 (Node 24) in release-mas.yml · ci: pin free-release workflow to floating major @v5 · ci: bump actions/checkout to v7 in release-mas.yml · chore: bump DragonKit to 1.3.0, adopt DragonAbout.versionString(), v2.17.6",
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.6"
-  },
-  {
-    "version": "2.17.5",
-    "date": "2026-07-04",
-    "notes": "fix: align Settings sidebar with shared DragonKit pane order · release: 2.17.5 — Settings sidebar order matches the Dragon apps",
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.5"
   }
 ]
