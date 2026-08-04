@@ -23,11 +23,10 @@ def repo_path(repo_url):
     return repo_url.rstrip("/").split("github.com/")[1]
 
 
-def clean_notes(body):
-    if not body:
-        return ""
-    text = body.replace("\r\n", "\n")
-    text = re.sub(r"\*\*Full Changelog\*\*.*", "", text, flags=re.S).strip()
+WHATS_CHANGED_RE = re.compile(r"(?im)^\s*#{1,6}\s*what'?s\s+changed\s*$")
+
+
+def _note_lines(text):
     lines = []
     for raw in text.split("\n"):
         l = raw.strip().strip("# ").strip()              # drop markdown headings
@@ -39,6 +38,21 @@ def clean_notes(body):
         l = l.replace("**", "").replace("__", "")         # drop markdown bold markers
         if l:
             lines.append(l)
+    return lines
+
+
+def clean_notes(body):
+    if not body:
+        return ""
+    text = body.replace("\r\n", "\n")
+    text = re.sub(r"\*\*Full Changelog\*\*.*", "", text, flags=re.S).strip()
+    # Everything under GitHub's "What's Changed" heading is an auto-generated
+    # list of PR titles ("docs: unify README structure…"), which reads badly on
+    # a marketing page. Prefer the hand-written prose above it. Releases that
+    # never got a written summary have nothing above the heading, so fall back
+    # to the list rather than rendering an empty row.
+    prose = _note_lines(WHATS_CHANGED_RE.split(text)[0])
+    lines = prose or _note_lines(text)
     return " · ".join(lines[:4])
 
 

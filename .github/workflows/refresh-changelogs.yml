@@ -41,7 +41,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Fetch release notes, rebuild pages, re-stamp assets
+      - name: Fetch release notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -53,16 +53,33 @@ jobs:
           if grep -q '\[warn\]' /tmp/fetch.log; then
             echo "::warning::at least one app kept its previous changelog; see the log above"
           fi
-          # build_i18n.py writes asset URLs bare, so cache-bust.sh must follow it
-          # or the ?v= fingerprints are lost. The pair is convergent: unchanged
-          # assets re-stamp to the same hash, so reruns are no-ops.
-          python3 i18n/build_i18n.py
-          ./scripts/cache-bust.sh
 
+      # Runs BEFORE the build on purpose: test_build.py shells out to
+      # build_i18n.py against the real docs/ tree, which rewrites the asset URLs
+      # bare and so strips the ?v= fingerprints. Testing after cache-bust.sh
+      # would commit unfingerprinted pages on every run.
       - name: Test
         run: |
           python3 -m pip install --quiet pytest
           python3 -m pytest i18n/tests -q
+
+      - name: Rebuild pages and re-stamp assets
+        run: |
+          set -euo pipefail
+          # Nothing may touch docs/ after this step. build_i18n.py writes asset
+          # URLs bare, so cache-bust.sh has to follow it or the fingerprints are
+          # lost. The pair is convergent: unchanged assets re-stamp to the same
+          # hash, so reruns are no-ops rather than churn.
+          python3 i18n/build_i18n.py
+          ./scripts/cache-bust.sh
+          # Cheap invariant: this silently regressed site-wide once already, so
+          # fail loudly rather than committing bare asset URLs again.
+          stamped=$(grep -rl '?v=' docs/ --include='*.html' | wc -l | tr -d ' ')
+          echo "pages carrying an asset fingerprint: $stamped"
+          if [ "$stamped" -eq 0 ]; then
+            echo "::error::cache-bust.sh stamped nothing — every page would ship bare asset URLs"
+            exit 1
+          fi
 
       - name: Summarise what changed
         id: summary
