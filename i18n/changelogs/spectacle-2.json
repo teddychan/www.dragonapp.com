@@ -1,5 +1,41 @@
 [
   {
+    "version": "2.5.0",
+    "date": "2026-08-08",
+    "notes": "fix: match the sibling apps' AboutConfig idiom, correct 2.4.1's root cause · release: v2.5.0 — DragonKit 3.0.1, About pane canon",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.0"
+  },
+  {
+    "version": "2.4.1",
+    "date": "2026-08-07",
+    "notes": "release: v2.4.1 — About version format",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.4.1"
+  },
+  {
+    "version": "2.4.0",
+    "date": "2026-08-07",
+    "notes": "chore: bump DragonKit 2.3.0 -> 2.4.0 · release: v2.4.0 — DragonKit 2.4.0",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.4.0"
+  },
+  {
+    "version": "2.3.0",
+    "date": "2026-08-07",
+    "notes": "chore: bump DragonKit 2.1.0 → 2.3.0 · release: v2.3.0 — DragonKit 2.3.0",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.3.0"
+  },
+  {
+    "version": "2.2.2",
+    "date": "2026-08-07",
+    "notes": "fix: give the debug build a real identity, and stop it killing the release app · release: v2.2.2 — build tooling only, DragonKit held at 2.1.0",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.2.2"
+  },
+  {
+    "version": "2.2.1",
+    "date": "2026-08-06",
+    "notes": "ci: machine-check DragonKit conformance; kit 2.0.1 · chore: bump DragonKit to 2.1.0 · fix: bound AX IPC, hot-key handler lifetime, and history growth · test: cover the app target; make the snap decision pure",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.2.1"
+  },
+  {
     "version": "2.2.0",
     "date": "2026-08-04",
     "notes": "Menu-bar items gained icons, and Uninstall moved out of the menu into Settings. · Every menu item now leads with an icon. The Spectacle 2 menu-bar dropdown had no icons at all before this release; About, Check for Updates…, Settings… and Quit each carry an SF Symbol now. · Uninstall is gone from the dropdown. An unrecoverable action does not belong one click away from Quit in the menu you open every day. Removing Spectacle 2 now lives only in Settings ▸ Uninstall — the pane the app already shipped — and what gets removed is unchanged. · Cancel is the default when you uninstall. In the Settings ▸ Uninstall confirmation, Cancel is now the default button, so Return lands on the safe choice instead of starting an uninstall.",
@@ -10,35 +46,5 @@
     "date": "2026-07-11",
     "notes": "Drag-to-edge snapping, window gaps & startup deferral · v2.1.0 — drag-to-edge snapping, window gaps, and drag-snap self-heal",
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.1.0"
-  },
-  {
-    "version": "2.0.4",
-    "date": "2026-07-09",
-    "notes": "release: v2.0.4 — fix recording a clashing shortcut",
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.4"
-  },
-  {
-    "version": "2.0.3",
-    "date": "2026-07-09",
-    "notes": "release: v2.0.3 — reliability fixes + Shortcuts polish",
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.3"
-  },
-  {
-    "version": "2.0.2",
-    "date": "2026-07-07",
-    "notes": "feat: canonical menu-bar dropdown via DragonAppMenu (+ Uninstall, version fix) · release: v2.0.2 · New Contributors · @teddychan made their first contribution in",
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.2"
-  },
-  {
-    "version": "2.0.1",
-    "date": "2026-07-07",
-    "notes": "",
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.1"
-  },
-  {
-    "version": "2.0.0",
-    "date": "2026-07-07",
-    "notes": "",
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.0.0"
   }
 ]

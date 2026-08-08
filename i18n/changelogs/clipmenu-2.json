@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.20.0",
+    "date": "2026-08-08",
+    "notes": "ci: run the canonical test script in the Tests job · feat(about): adopt DragonKit 3.0.1's fixed-slot About pane · chore: bump DragonKit to 3.1.0 · release: 2.20.0",
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.0"
+  },
+  {
+    "version": "2.19.1",
+    "date": "2026-08-07",
+    "notes": "ci: assert the release tag matches app/Info.plist · ci: machine-check DragonKit conformance; kit 2.0.1; rename BackupError · chore: bump DragonKit to 2.1.0 · fix: bound the numeric preferences; stop a history wipe and a menu crash",
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.19.1"
+  },
+  {
     "version": "2.19.0",
     "date": "2026-08-04",
     "notes": "Uninstall has moved out of the ClipMenu 2 menu and into Settings. · Uninstall is gone from the dropdown. It sat directly above Quit in the menu you open to paste a clip — two adjacent items where a mis-click costs you the app. Removing ClipMenu 2 now lives only in Settings, as the last pane in the sidebar, and what gets removed is unchanged. · The App menu section now comes from DragonKit. About, Check for Updates…, Settings… and Quit are supplied by the shared Dragon menu instead of being hand-built inside ClipMenu, so every Dragon app stays in step. One visible consequence: the dropdown has a single divider above Quit now, where it used to draw two. · Small wording fix. \"Check for updates…\" is now \"Check for Updates…\", matching Apple's title-case convention.",
@@ -34,17 +46,5 @@
     "date": "2026-07-10",
     "notes": "fix: exclude-list over-fire + missing history indexes on upgrade; v2.17.9",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.9"
-  },
-  {
-    "version": "2.17.8",
-    "date": "2026-07-09",
-    "notes": "fix: history stops saving once full (trim dropped the new clip); v2.17.8",
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.8"
-  },
-  {
-    "version": "2.17.7",
-    "date": "2026-07-08",
-    "notes": "perf+fix: monitor energy, faster history, exclusion race, hot-key feedback (v2.17.7)",
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.17.7"
   }
 ]

@@ -1,5 +1,35 @@
 [
   {
+    "version": "2.13.0",
+    "date": "2026-08-07",
+    "notes": "chore: bump the DragonKit pin to 2.4.0 · release: 2.13.0",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.13.0"
+  },
+  {
+    "version": "2.12.1",
+    "date": "2026-08-07",
+    "notes": "Add permission-free menu bar window probe for issue #53 · fix(menubar): hop to main actor inside the rehide timer callback · fix(a11y): add accessibility labels to menu bar end cap pickers · chore: make concurrency annotations match reality",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.12.1"
+  },
+  {
+    "version": "2.12.0",
+    "date": "2026-08-06",
+    "notes": "Removed · Item groups are gone. The Groups section in Settings ▸ Layout — saving a set of hidden items under a name and revealing them with Show — has been removed, along with the option to point a trigger at a group. It saw very little use for the amount of the app it occupied, and layout profiles already cover arranging your menu bar. Any groups you saved are deleted from your settings when you update. Triggers still work: a trigger now always shows the hidden section when its app comes to the front, so the Target menu is gone and existing hidden-section triggers are untouched. If you had a trigger pointing at a group, only that trigger is dropped — the rest are kept. · Fixed · Restoring a backup, or using either \"Relaunch Ice 2\" button, brings Ice 2 back. Ice 2 asked macOS to reopen it *before* quitting, while it was still running — so macOS brought the running copy to the front, reported success, and the quit that followed left nothing running at all. Ice 2 disappeared and did not come back.",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.12.0"
+  },
+  {
+    "version": "2.11.1",
+    "date": "2026-08-05",
+    "notes": "Uninstall now clears everything Ice 2 created, not just some of it — the leftover `Caches`, `HTTPStorages`, and `Application Support` folders are finally removed along with your settings, saved state, login item, and the app itself. · That means the in-app Uninstall, the manual steps in the README, and `brew uninstall --zap` all clean up the same five locations, so whichever route you take leaves nothing behind. · Your settings backups are deliberately left untouched, so you can uninstall and still restore your setup later. · Behind the scenes: running the test suite no longer leaves throwaway preference files piling up on disk. Nothing else about day-to-day behaviour changes.",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.11.1"
+  },
+  {
+    "version": "2.11.0",
+    "date": "2026-08-04",
+    "notes": "ci: assert the release tag matches the app's marketing version · refactor(settings): stop shadowing DragonKit's backup type names (R3) · refactor: complete ice-2's DragonKit conformance (R4, R6, R7, R0) — recovery of #61/#62/#63 · release: v2.11.0 — restore gentle update reminders and the background-update notification",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.11.0"
+  },
+  {
     "version": "2.10.0",
     "date": "2026-08-04",
     "notes": "Uninstalling Ice 2 has moved out of the menu bar and into Settings. · Where it is now. Removing Ice 2 used to be an Uninstall item in the Ice 2 menu that opened a separate window. It is now the last pane in the Settings sidebar, under Uninstall, and the confirmation appears right there in the pane. · The menu item is gone. An unrecoverable action does not belong one click away from Quit in the everyday menu. Settings ▸ Uninstall is now the way to remove Ice 2 from inside the app. · What gets removed is unchanged. The app and its login item, your settings, layout profiles, and hotkeys, and Ice 2's saved application state.",
@@ -16,35 +46,5 @@
     "date": "2026-07-25",
     "notes": "Two small fixes found by expanding Ice 2's automated test suite. · The menu bar color can no longer be calculated from an empty screen capture. When a capture of the menu bar area came back completely transparent — which can happen while displays are being reconfigured or right after waking from sleep — Ice 2 produced an invalid color and used it as if it were real, which could tint the Ice 2 Bar or the item search panel with a garbage color. Ice 2 now keeps the previous color instead. · Faster lookup of the wallpaper behind the menu bar, about 40× quicker. It runs whenever Ice 2 refreshes the menu bar appearance overlay, the Ice 2 Bar, or the item search panel. · More automated checks: the test suite grew from 162 to 261, now also covering menu bar image processing, appearance-settings upgrades, and menu bar window identification.",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.10"
-  },
-  {
-    "version": "2.9.9",
-    "date": "2026-07-11",
-    "notes": "Behind-the-scenes reliability release — nothing changes in how Ice works day to day. · Broad new automated test coverage. Added tests across hotkeys, menu-bar color/gradient logic, backup & restore, layout-profile guards, and settings load/persist — making future updates safer and more predictable. · Lower idle CPU and a guard so updating a layout profile can't overwrite it with an empty capture (carried over from 2.9.8).",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.9"
-  },
-  {
-    "version": "2.9.8",
-    "date": "2026-07-10",
-    "notes": "release: v2.9.8 — lower idle CPU + guard layout-profile Update against empty capture",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.8"
-  },
-  {
-    "version": "2.9.7",
-    "date": "2026-07-09",
-    "notes": "fix: \"Update\" on a layout profile now saves the current arrangement (v2.9.7)",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.7"
-  },
-  {
-    "version": "2.9.6",
-    "date": "2026-07-08",
-    "notes": "release: v2.9.6 — consolidate reveal toggles, move icon chooser to Appearance",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.6"
-  },
-  {
-    "version": "2.9.5",
-    "date": "2026-07-08",
-    "notes": "release: v2.9.5 — simpler, cleaner Settings",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.5"
   }
 ]
