@@ -149,8 +149,8 @@
     <a href="https://github.com/teddychan/clipmenu-2/blob/main/LICENSE" rel="noopener">MIT
     License</a>.</p>
     <p>The four JavaScript libraries below ship in every build. Sparkle ships only in the
-    Developer ID build downloaded from GitHub or Homebrew; the Mac App Store build links no
-    updater and no third-party framework.</p>
+    Developer ID build downloaded from GitHub or Homebrew; the Mac App Store build ships no
+    updater and embeds no third-party framework.</p>
 
     <div class="toc">
       <ul>
@@ -165,7 +165,7 @@
     </div>
 
     <h2 id="sparkle">Sparkle <span class="lic">MIT</span></h2>
-    <p>The updater framework, embedded in the app bundle as <code>Contents/Frameworks/Sparkle.framework</code>. It reaches ClipMenu 2 through DragonKit's <code>DragonKitUpdates</code> product rather than as a direct dependency. Sparkle's own notice covers the bsdiff, sais-lite, Ed25519 and signature-verification sources bundled inside it. Sparkle ships in the Developer ID build only — the Mac App Store build of ClipMenu 2 contains no updater and links no third-party framework.</p><p class="src">Source: <a href="https://github.com/sparkle-project/Sparkle" rel="noopener">sparkle-project/Sparkle</a></p>
+    <p>The updater framework, embedded in the app bundle as <code>Contents/Frameworks/Sparkle.framework</code>. It reaches ClipMenu 2 through DragonKit's <code>DragonKitUpdates</code> product rather than as a direct dependency. Sparkle's own notice covers the bsdiff, sais-lite, Ed25519 and signature-verification sources bundled inside it. Sparkle ships in the Developer ID build only — the Mac App Store build of ClipMenu 2 contains no updater and embeds no third-party framework. It still links DragonKit, whose notice is below.</p><p class="src">Source: <a href="https://github.com/sparkle-project/Sparkle" rel="noopener">sparkle-project/Sparkle</a></p>
     <pre class="notice">Copyright (c) 2006-2013 Andy Matuschak.
 Copyright (c) 2009-2013 Elgato Systems GmbH.
 Copyright (c) 2011-2014 Kornel Lesiński.
