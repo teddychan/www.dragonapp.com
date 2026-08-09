@@ -22,6 +22,7 @@ SITE = "https://www.dragonapp.com"
 GA_ID = "G-FNQ1T94ESZ"
 
 CONSENT_HEAD = (
+    "  <link rel=\"preconnect\" href=\"https://www.googletagmanager.com\">\n"
     "  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->\n"
     "  <script>\n"
     "    window.dataLayer = window.dataLayer || [];\n"
@@ -40,6 +41,7 @@ CONSENT_HEAD = (
 )
 
 CONSENT_HEAD_EXTERNAL = (
+    "  <link rel=\"preconnect\" href=\"https://www.googletagmanager.com\">\n"
     "  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->\n"
     "  <script>\n"
     "    window.dataLayer = window.dataLayer || [];\n"
