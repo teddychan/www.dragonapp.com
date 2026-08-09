@@ -132,7 +132,13 @@ jobs:
           # here because the shallow checkout has no remote-tracking ref for it.
           git push -q --force origin "HEAD:refs/heads/${BRANCH}"
 
-          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+          # --state open matters. `gh pr view <branch>` matches CLOSED PRs too,
+          # so once a refresh PR had been closed this branch kept "finding" it,
+          # skipped creating a new one, and two real releases (Ice 2 2.11.0 and
+          # KeyKey 2.9.0) sat refreshed-but-unreviewed on the branch while the
+          # site stayed stale — a silent failure, since the run still went green.
+          OPEN="$(gh pr list --head "$BRANCH" --state open --json number --jq 'length')"
+          if [ "${OPEN:-0}" -gt 0 ]; then
             echo "Updated the existing refresh PR."
             exit 0
           fi
