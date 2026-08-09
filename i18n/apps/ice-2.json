@@ -7,6 +7,7 @@
   "mas_url": null,
   "license": "GPLv3",
   "license_url": "https://github.com/teddychan/ice-2/blob/main/LICENSE",
+  "licenses_page": true,
   "min_macos": "26",
   "appcast_repo": "teddychan/www.dragonapp.com",
   "credit_name": "Jordan Baird",
