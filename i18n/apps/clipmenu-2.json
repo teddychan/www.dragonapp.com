@@ -7,6 +7,7 @@
   "mas_url": "https://apps.apple.com/us/app/clipmenu-2/id6775685878?mt=12",
   "license": "MIT",
   "license_url": "https://github.com/teddychan/clipmenu-2/blob/main/LICENSE",
+  "licenses_page": true,
   "min_macos": "26",
   "appcast_repo": "teddychan/www.dragonapp.com",
   "credit_name": "the original ClipMenu",

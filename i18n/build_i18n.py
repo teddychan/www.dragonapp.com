@@ -97,6 +97,9 @@ PRIORITY = {"index": "1.0", "support": "0.5", "privacy": "0.3", "about": "0.6"}
 # legacy app slugs (old URLs) -> current app slug they now redirect to
 LEGACY_REDIRECTS = {"clipmenu": "clipmenu-2", "keykey": "yahoo-keykey-2"}
 LASTMOD = "2026-07-08"
+# The notices pages are newer than LASTMOD and change only when a dependency does, so
+# they carry their own date rather than backdating themselves to before they existed.
+LICENSES_LASTMOD = "2026-08-09"
 
 GLOBE = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
          'stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
@@ -491,6 +494,26 @@ def build_app_switcher(current, slug, common):
     return "\n".join(out)
 
 
+def licenses_url(slug):
+    return "%s/%s/licenses/" % (SITE, slug)
+
+
+def render_licenses_link(app):
+    """Footer link to an app's hand-written third-party notices page, or nothing.
+
+    Only apps with `licenses_page` get the link — spectacle-2 has no such page, and a
+    footer link to a 404 is worse than no link. Always the absolute English path, in
+    every locale, because the notices exist only in English (same reason those pages
+    omit /shared/i18n.js). Generated rather than hand-added to docs/: the first version
+    of this link was edited straight into the 7 generated KeyKey pages and into
+    sitemap.xml, and the next build — or merely running the test suite, which builds
+    first — silently deleted all of it.
+    """
+    if not app.get("licenses_page"):
+        return ""
+    return '\n        <a href="/%s/licenses/">Open-source licenses</a>' % app["slug"]
+
+
 def render_app(template, app, lang, strings, missing):
     en = strings["en-US"]
     cur = strings.get(lang, en)
@@ -509,6 +532,7 @@ def render_app(template, app, lang, strings, missing):
         "CONSENT_HEAD": CONSENT_HEAD_EXTERNAL,
         "CONSENT_BANNER": build_consent(common, en_common),
         "THEME_CLASS": app.get("theme", ""),
+        "LICENSES_LINK": render_licenses_link(app),
         "URL_ABOUT": SITE + "/" + lang_prefix(lang) + "about/",
         "APP_REPO": app["repo"], "APP_ISSUES": app["repo"] + "/issues",
         "CHANGELOG_ROWS": render_changelog_rows(app["slug"], common),
@@ -595,6 +619,16 @@ def write_sitemap():
             lines.append("    <changefreq>monthly</changefreq>")
             lines.append("    <priority>0.9</priority>")
             lines.append("  </url>")
+    # Hand-written third-party notices pages: English-only, so no hreflang alternates.
+    for app in load_apps():
+        if not app.get("licenses_page"):
+            continue
+        lines.append("  <url>")
+        lines.append("    <loc>%s</loc>" % licenses_url(app["slug"]))
+        lines.append("    <lastmod>%s</lastmod>" % LICENSES_LASTMOD)
+        lines.append("    <changefreq>yearly</changefreq>")
+        lines.append("    <priority>0.3</priority>")
+        lines.append("  </url>")
     lines.append("</urlset>")
     with open(os.path.join(DOCS, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")

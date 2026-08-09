@@ -33,3 +33,26 @@ def test_hub_lists_all_apps():
     html = open(os.path.join(ROOT, "docs", "index.html")).read()
     for slug in ["ice-2", "clipmenu-2", "yahoo-keykey-2"]:
         assert "/%s/" % slug in html
+
+# The licences links and sitemap entries started life hand-edited into docs/, where the
+# next build deleted them. These two assert they are generated, so a build reproduces
+# them instead — which is the only reason running this file is safe for them.
+LICENSED = ["ice-2", "clipmenu-2", "yahoo-keykey-2"]
+
+def test_licenses_link_in_every_locale_and_page_exists():
+    build()
+    for slug in LICENSED:
+        assert os.path.exists(os.path.join(ROOT, "docs", slug, "licenses", "index.html")), slug
+        for lang in ["", "zh-Hant/", "zh-Hans/", "ja/", "ko/", "es/", "fr/"]:
+            html = open(os.path.join(ROOT, "docs", lang, slug, "index.html")).read()
+            assert '<a href="/%s/licenses/">' % slug in html, (slug, lang)
+    # spectacle-2 has no notices page, so it must not link one
+    html = open(os.path.join(ROOT, "docs", "spectacle-2", "index.html")).read()
+    assert "/licenses/" not in html
+
+def test_sitemap_includes_licenses_pages():
+    build()
+    sm = open(os.path.join(ROOT, "docs", "sitemap.xml")).read()
+    for slug in LICENSED:
+        assert "https://www.dragonapp.com/%s/licenses/" % slug in sm, slug
+    assert "spectacle-2/licenses/" not in sm
