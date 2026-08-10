@@ -25,6 +25,10 @@ def repo_path(repo_url):
 
 WHATS_CHANGED_RE = re.compile(r"(?im)^\s*#{1,6}\s*what'?s\s+changed\s*$")
 
+# The one public release tag shape. Anchored at both ends so a prefixed family (sample-v*,
+# mas-v*, app-v*) or a prerelease suffix (v2.5.1-beta1) can never be rendered as a version.
+PUBLIC_TAG_RE = re.compile(r"^v[0-9]+\.[0-9]+\.[0-9]+$")
+
 
 def _note_lines(text):
     lines = []
@@ -67,10 +71,24 @@ def fetch(repo):
         releases = json.load(r)
     out = []
     for rel in releases:
-        if rel.get("draft"):
+        # Drafts were already skipped; prereleases were not. Neither filter is fixing something
+        # visible today — _index.json tracks only the four shipping apps, and clipmenu-2's
+        # mas-v* tags carry no GitHub Release. Both are guards that become load-bearing as soon
+        # as Dragon Sample App gets its own repo and page: dragon-kit demotes every sample
+        # release to Pre-release (sample-v1.4.0, sample-v1.3.1 today) so its own tags keep the
+        # "Latest" badge, and that habit follows the app.
+        if rel.get("draft") or rel.get("prerelease"):
+            continue
+        tag = rel.get("tag_name") or ""
+        # Only exact public tags reach the changelog. The old `.lstrip("v")` was not a prefix
+        # strip — it removes leading "v" characters, so "mas-v2.20.1" came through untouched and
+        # would have rendered as the literal version string "mas-v2.20.1". Per
+        # dragon-kit/docs/MAC-APP-RELEASE-LIFECYCLE.md a channel-specific build is not a separate
+        # release: every channel consumes the same exact vX.Y.Z.
+        if not PUBLIC_TAG_RE.match(tag):
             continue
         out.append({
-            "version": (rel.get("tag_name") or "").lstrip("v"),
+            "version": tag[1:],
             "date": (rel.get("published_at") or "")[:10],
             "notes": clean_notes(rel.get("body")),
             "url": rel.get("html_url", ""),
