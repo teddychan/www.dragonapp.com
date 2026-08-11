@@ -35,9 +35,13 @@ def test_hub_lists_all_apps():
         assert "/%s/" % slug in html
 
 # The licences links and sitemap entries started life hand-edited into docs/, where the
-# next build deleted them. These two assert they are generated, so a build reproduces
+# next build deleted them. These assert they are generated, so a build reproduces
 # them instead — which is the only reason running this file is safe for them.
-LICENSED = ["ice-2", "clipmenu-2", "yahoo-keykey-2"]
+LICENSED = ["ice-2", "clipmenu-2", "yahoo-keykey-2", "spectacle-2"]
+# dragon-sample-app has a notices page but no marketing page, so nothing on this site links
+# it — its About pane does. It reaches the sitemap through STANDALONE_LICENSES_SLUGS instead
+# of an i18n/apps/<slug>.json, which is the only path that does not imply a landing page.
+UNMARKETED_LICENSED = ["dragon-sample-app"]
 
 def test_licenses_link_in_every_locale_and_page_exists():
     build()
@@ -46,13 +50,16 @@ def test_licenses_link_in_every_locale_and_page_exists():
         for lang in ["", "zh-Hant/", "zh-Hans/", "ja/", "ko/", "es/", "fr/"]:
             html = open(os.path.join(ROOT, "docs", lang, slug, "index.html")).read()
             assert '<a href="/%s/licenses/">' % slug in html, (slug, lang)
-    # spectacle-2 has no notices page, so it must not link one
-    html = open(os.path.join(ROOT, "docs", "spectacle-2", "index.html")).read()
-    assert "/licenses/" not in html
+
+def test_unmarketed_notices_page_exists_without_an_app_page():
+    build()
+    for slug in UNMARKETED_LICENSED:
+        assert os.path.exists(os.path.join(ROOT, "docs", slug, "licenses", "index.html")), slug
+        # No app page to link it, and the build must not invent one.
+        assert not os.path.exists(os.path.join(ROOT, "docs", slug, "index.html")), slug
 
 def test_sitemap_includes_licenses_pages():
     build()
     sm = open(os.path.join(ROOT, "docs", "sitemap.xml")).read()
-    for slug in LICENSED:
+    for slug in LICENSED + UNMARKETED_LICENSED:
         assert "https://www.dragonapp.com/%s/licenses/" % slug in sm, slug
-    assert "spectacle-2/licenses/" not in sm
