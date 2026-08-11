@@ -14,25 +14,25 @@
   {
     "version": "2.20.2",
     "date": "2026-08-10",
-    "notes": "release: 2.20.2 — keep Debug builds out of the release's data and updater",
+    "notes": "A maintenance release: every fix is in the local development build, and the shipped app is unchanged. · The development build could have reached the production update feed, which would have replaced it with the public app. It can no longer check for updates at all. · The development build wrote its saved actions into the installed app's folder, so testing on a developer's Mac edited the real action set — or wrote the defaults over it on first launch. It now keeps its own.",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.2"
   },
   {
     "version": "2.20.1",
     "date": "2026-08-09",
-    "notes": "chore: bump DragonKit to 3.2.0 · feat(about): point the licenses row at dragonapp.com/clipmenu-2/licenses · fix(build): reset the stale CFBundleVersion placeholder",
+    "notes": "Housekeeping only — no user-facing change. · A checked-in build number was two releases stale. It was inert, because every build path overwrites it before the app is assembled, but it read like a real version and invited someone to trust or \"fix\" it. It is now an obvious placeholder.",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.1"
   },
   {
     "version": "2.20.0",
     "date": "2026-08-08",
-    "notes": "ci: run the canonical test script in the Tests job · feat(about): adopt DragonKit 3.0.1's fixed-slot About pane · chore: bump DragonKit to 3.1.0 · release: 2.20.0",
+    "notes": "The About pane is now fully translated, and its links point where they should. · Several labels in the About pane stayed in English when ClipMenu was set to another language. · The About pane's Website link opened a redirect page instead of ClipMenu's own page. · About now credits the original ClipMenu and shows which version of the shared Dragon toolkit the app was built with.",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.0"
   },
   {
     "version": "2.19.1",
     "date": "2026-08-07",
-    "notes": "ci: assert the release tag matches app/Info.plist · ci: machine-check DragonKit conformance; kit 2.0.1; rename BackupError · chore: bump DragonKit to 2.1.0 · fix: bound the numeric preferences; stop a history wipe and a menu crash",
+    "notes": "Fixes from an engineering-standard audit of the clipboard, menu and snippet paths. Two were reachable from Settings by typing a plausible number. · Data loss: setting the history size to 0 deleted your entire clipboard history. The next copy removed every clip including the one just captured, with no warning and no recovery. The setting now floors at 1. · Crash: a negative tool-tip length killed ClipMenu on every menu click until the preference was reset. Both numeric fields are now bounded rather than free-form text. · Lowering the history cap now applies immediately, after a confirmation, and snippet edits no longer lose work silently. The menu used to hide the surplus clips while they stayed readable on disk until the next copy — so lowering the cap to prune sensitive history gave a false sense of deletion — and a failed snippet save left the editor showing work that was already gone at next launch.",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.19.1"
   },
   {

@@ -20,25 +20,25 @@
   {
     "version": "2.14.1",
     "date": "2026-08-09",
-    "notes": "release: 2.14.1",
+    "notes": "A version bump and nothing else. · Nothing about the app behaves differently. All four Dragon apps were audited together to confirm they depend on the shared Dragon app framework the same way, and are being released in step. Ice 2 needed no change to make that true — its Xcode project already expressed exactly that rule — so this release simply lines its number up with its siblings.",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.1"
   },
   {
     "version": "2.14.0",
     "date": "2026-08-09",
-    "notes": "feat(about)!: migrate to DragonKit 3.1.0 and its fixed-slot About pane · feat(uninstall): declare the ice-2 Homebrew cask on DragonKit 3.2.0, and remove the orphans · feat(about): point the licenses row at dragonapp.com/ice-2/licenses · fix(about): regenerate the third-party notices, and pin them to Package.resolved",
+    "notes": "A newly installed app's menu bar icon now appears where you can see it. · macOS hands every brand-new menu bar item the leftmost slot, which in Ice 2's layout sits inside the always-hidden section. So the first time you installed an app with a menu bar icon, that icon was invisible from the moment it was created, and the app looked like it had never added one at all. Ice 2 now recognises an item it has never seen before and moves it into the visible section. · Items you have already arranged are left alone. Updating to this version does not move anything: Ice 2 takes a note of everything currently in your menu bar first, so only icons that turn up afterwards count as new. This needs screen recording permission, which is what lets Ice 2 tell one item from another; without it, nothing is moved.",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.0"
   },
   {
     "version": "2.13.0",
     "date": "2026-08-07",
-    "notes": "chore: bump the DragonKit pin to 2.4.0 · release: 2.13.0",
+    "notes": "A framework currency update. Nothing about the app behaves differently. · Ice 2 now builds against version 2.4.0 of the shared Dragon app framework. That release adds one thing — an option letting a system-managed input method keep Quit out of its settings menu bar — which Ice 2 is not and does not use. This keeps Ice 2 current with the shared framework rather than drifting behind it.",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.13.0"
   },
   {
     "version": "2.12.1",
     "date": "2026-08-07",
-    "notes": "Add permission-free menu bar window probe for issue #53 · fix(menubar): hop to main actor inside the rehide timer callback · fix(a11y): add accessibility labels to menu bar end cap pickers · chore: make concurrency annotations match reality",
+    "notes": "Five fixes, including one that would have reset every setting you have. · A future update can no longer wipe your settings. Because of a flaw in the shared Dragon framework, the next version that added a setting would have failed to read the record you already had, quietly fallen back to defaults, and then written those defaults over your real preferences. Nothing has been lost — the flaw needed a future version to trigger it, and this update closes it first. · Restoring a damaged backup now refuses the file instead of erasing everything. Handing Settings ▸ Backup a corrupted backup cleared your entire settings store rather than declining to read it. And a failed uninstall now says so, instead of quitting with a success message after it had already torn your settings down. · VoiceOver can tell the menu bar shape buttons apart. In Settings ▸ Appearance, the buttons that choose how each end of the menu bar shape is drawn were pictures with no name attached, so picking a shape without looking at the screen meant guessing. They now read as \"Square cap\" and \"Round cap\".",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.12.1"
   },
   {
