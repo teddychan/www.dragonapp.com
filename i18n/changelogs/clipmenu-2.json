@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.20.6",
+    "date": "2026-08-11",
+    "notes": "fix(about): link the original project, and name one copyright holder · release: 2.20.6 — the About pane links the original project again",
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.6"
+  },
+  {
     "version": "2.20.5",
     "date": "2026-08-11",
     "notes": "A maintenance release: internal updates only, with no changes to how ClipMenu works. · ClipMenu is built on an updated version of the shared Dragon App code. About's Credits row now reads DragonKit v3.4.0. That row is the only observable difference — no behaviour, setting, shortcut or stored file changes.",
@@ -40,11 +46,5 @@
     "date": "2026-08-07",
     "notes": "Fixes from an engineering-standard audit of the clipboard, menu and snippet paths. Two were reachable from Settings by typing a plausible number. · Data loss: setting the history size to 0 deleted your entire clipboard history. The next copy removed every clip including the one just captured, with no warning and no recovery. The setting now floors at 1. · Crash: a negative tool-tip length killed ClipMenu on every menu click until the preference was reset. Both numeric fields are now bounded rather than free-form text. · Lowering the history cap now applies immediately, after a confirmation, and snippet edits no longer lose work silently. The menu used to hide the surplus clips while they stayed readable on disk until the next copy — so lowering the cap to prune sensitive history gave a false sense of deletion — and a failed snippet save left the editor showing work that was already gone at next launch.",
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.19.1"
-  },
-  {
-    "version": "2.19.0",
-    "date": "2026-08-04",
-    "notes": "Uninstall has moved out of the ClipMenu 2 menu and into Settings. · Uninstall is gone from the dropdown. It sat directly above Quit in the menu you open to paste a clip — two adjacent items where a mis-click costs you the app. Removing ClipMenu 2 now lives only in Settings, as the last pane in the sidebar, and what gets removed is unchanged. · The App menu section now comes from DragonKit. About, Check for Updates…, Settings… and Quit are supplied by the shared Dragon menu instead of being hand-built inside ClipMenu, so every Dragon app stays in step. One visible consequence: the dropdown has a single divider above Quit now, where it used to draw two. · Small wording fix. \"Check for updates…\" is now \"Check for Updates…\", matching Apple's title-case convention.",
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.19.0"
   }
 ]

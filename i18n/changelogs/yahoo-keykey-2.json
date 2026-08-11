@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.12.0",
+    "date": "2026-08-11",
+    "notes": "docs(about): cite the right conformance rule for the single-holder copyright · release: 2.12.0 — Yahoo! KeyKey 2 now speaks all seven languages",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.12.0"
+  },
+  {
+    "version": "2.11.6",
+    "date": "2026-08-11",
+    "notes": "docs(release): correct four facts RELEASE.md had drifted on · release: 2.11.6 — adopt DragonKit 4.0.0's fixed About slots",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.6"
+  },
+  {
     "version": "2.11.5",
     "date": "2026-08-11",
     "notes": "The Language menu in Settings offered languages Yahoo! KeyKey 2 does not have. · Fixed: beside English and 繁體中文, the menu listed Español, Français, 日本語, 한국어 and 简体中文 — the languages the shared Dragon App code is translated into, not the ones Yahoo! KeyKey 2 is. Choosing one of them translated the About, What's New, Updates and Uninstall panes and left every other word in English, which is not a language setting anyone wanted. The menu now offers the two languages Yahoo! KeyKey 2 actually has. A choice already made outside those two stays listed and stays selected until you move off it, so nobody is left on a language they can no longer find in the menu. · Under the hood: updated to DragonKit 3.4.0, the shared code behind the About, What's New, Backup & Restore, Updates and Uninstall panes — and the version that added the setting the fix above needed, so the two arrived together.",
@@ -34,17 +46,5 @@
     "date": "2026-08-07",
     "notes": "Accessibility, speed, and fixes for three ways your data could quietly go missing. · New: the selection box can be read by VoiceOver. Each row is announced with its selecting digit, the candidate, and its 反查 code hint when shown, and the page indicator reads 第 2 頁，共 3 頁 instead of a bare \"▼ 1/3\". Nothing about how the window looks or behaves changed. · Faster. Builds were never compiled with optimization turned on — including the notarized download. Measured on the bundled 五代 table: loading the 倉頡 table 73 → 34 ms, deriving the 速成 table 78 → 8 ms, and 2000 速成 compositions 21 → 2 ms. · Fixed: restoring a damaged backup erased your settings, and an unreadable learning file silently reset your adaptive ranking. Both now refuse and leave what you already have alone. 設定 also gets a proper menu bar, with a standard 編輯 menu and 關閉 ⌘W.",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.10.0"
-  },
-  {
-    "version": "2.9.1",
-    "date": "2026-08-05",
-    "notes": "One fix for the candidate window. · Fixed: the selection box could be left stuck on screen. Switching to another app — or to another input source — while the candidate window or the 聯想 window was open left it floating above whatever you switched to, with no way to close it. It now closes as soon as Yahoo! KeyKey 2 loses focus; a half-typed code is committed on the way out.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.1"
-  },
-  {
-    "version": "2.9.0",
-    "date": "2026-08-04",
-    "notes": "A tidier input menu, and Uninstall moves out of it. · The app items at the bottom of the 倉頡／速成 input menu now each lead with an icon and follow standard macOS naming, matching the other Dragon apps. Nothing you type changes, and the 輸出簡體字 / 全形標點 / 聯想字詞 / 反查提示 toggles above them are untouched. · 解除安裝 (Uninstall) now lives in Settings. Removing Yahoo! KeyKey 2 used to sit at the bottom of the input menu, one slip away from the options you use while typing. It is now at 設定… ▸ 解除安裝 — the same checklist, just not in the menu you open mid-sentence.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.0"
   }
 ]

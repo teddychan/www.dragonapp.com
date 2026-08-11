@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.5.4",
+    "date": "2026-08-11",
+    "notes": "docs(changelog): Spectacle 2 does call LanguagePicker, with the default list · docs(package): stop naming sibling apps' kit versions in the pin comment · release: 2.5.4 — About links the open-source licences, on DragonKit 4.0.0",
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.4"
+  },
+  {
     "version": "2.5.3",
     "date": "2026-08-11",
     "notes": "A maintenance release: Spectacle 2 behaves identically to 2.5.2. · Spectacle 2 is built on an updated version of the shared Dragon App code. The one difference you can observe is the version About reports: \"Built with · DragonKit v3.4.0\". Nothing the new version adds is taken up here — its new option is for an app translated into fewer languages than the shared code, and Spectacle 2 ships all seven of them.",
@@ -40,11 +46,5 @@
     "date": "2026-08-07",
     "notes": "The Settings window gets its menu bar back, and two ways to lose your settings are closed. · Restoring a file that was not a Spectacle 2 backup could erase your settings. Any property list passed validation, and the restore then replaced your settings with nothing while reporting success. A backup taken from a different app is now refused. · A failed uninstall reported success. Moving the app to the Trash could fail after the settings teardown had already run, leaving Spectacle 2 installed with its settings gone. · The Settings window has a menu bar again, so ⌘W, ⌘Q and Cut, Copy, Paste and Select All work in it — including in the Shortcuts pane's search field.",
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.3.0"
-  },
-  {
-    "version": "2.2.2",
-    "date": "2026-08-07",
-    "notes": "Nothing in this release changes how Spectacle 2 behaves. · Internal build-tooling fixes only. If you are on 2.2.1 there is no functional reason to update.",
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.2.2"
   }
 ]

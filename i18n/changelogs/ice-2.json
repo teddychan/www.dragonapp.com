@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.14.6",
+    "date": "2026-08-11",
+    "notes": "docs: realign RELEASING.md with the actual release workflow · release: 2.14.6 — the About pane links its original project",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.6"
+  },
+  {
     "version": "2.14.5",
     "date": "2026-08-11",
     "notes": "A maintenance release: nothing you can see behaves differently. · Ice 2 now builds against version 3.4.0 of the shared Dragon app framework, up from 3.3.0. That release adds a way for an app to narrow the framework's language picker to the languages it has actually translated itself into, which Ice 2 has no use for — it ships no translations, so it shows no language picker. The bump keeps Ice 2 current with the shared code rather than drifting behind it.",
@@ -40,11 +46,5 @@
     "date": "2026-08-07",
     "notes": "A framework currency update. Nothing about the app behaves differently. · Ice 2 now builds against version 2.4.0 of the shared Dragon app framework. That release adds one thing — an option letting a system-managed input method keep Quit out of its settings menu bar — which Ice 2 is not and does not use. This keeps Ice 2 current with the shared framework rather than drifting behind it.",
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.13.0"
-  },
-  {
-    "version": "2.12.1",
-    "date": "2026-08-07",
-    "notes": "Five fixes, including one that would have reset every setting you have. · A future update can no longer wipe your settings. Because of a flaw in the shared Dragon framework, the next version that added a setting would have failed to read the record you already had, quietly fallen back to defaults, and then written those defaults over your real preferences. Nothing has been lost — the flaw needed a future version to trigger it, and this update closes it first. · Restoring a damaged backup now refuses the file instead of erasing everything. Handing Settings ▸ Backup a corrupted backup cleared your entire settings store rather than declining to read it. And a failed uninstall now says so, instead of quitting with a success message after it had already torn your settings down. · VoiceOver can tell the menu bar shape buttons apart. In Settings ▸ Appearance, the buttons that choose how each end of the menu bar shape is drawn were pictures with no name attached, so picking a shape without looking at the screen meant guessing. They now read as \"Square cap\" and \"Round cap\".",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.12.1"
   }
 ]
