@@ -18,7 +18,7 @@
     "app_demo_h2": "動作を見る",
     "app_changelog_h2": "新着情報",
     "app_changelog_sub": "わかりやすい更新ノート、最新順。",
-    "app_changelog_auto": "GitHub Releasesから自動生成",
+    "app_changelog_source": "リリースごとにアプリの「新機能」から",
     "app_changelog_view": "GitHubで見る",
     "app_download_h2": "入手方法",
     "app_channel_github": "GitHubリリース",

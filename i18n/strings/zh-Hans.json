@@ -18,7 +18,7 @@
     "app_demo_h2": "功能演示",
     "app_changelog_h2": "最新动态",
     "app_changelog_sub": "通俗易懂的更新说明，最新在前。",
-    "app_changelog_auto": "自动生成自 GitHub Releases",
+    "app_changelog_source": "每个版本均来自应用内的“新功能”",
     "app_changelog_view": "在 GitHub 上查看",
     "app_download_h2": "获取方式",
     "app_channel_github": "GitHub 发布版",

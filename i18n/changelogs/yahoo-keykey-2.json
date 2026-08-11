@@ -2,49 +2,65 @@
   {
     "version": "2.11.5",
     "date": "2026-08-11",
-    "notes": "The Language menu in Settings offered languages Yahoo! KeyKey 2 does not have. · Fixed: beside English and 繁體中文, the menu listed Español, Français, 日本語, 한국어 and 简体中文 — the languages the shared Dragon App code is translated into, not the ones Yahoo! KeyKey 2 is. Choosing one of them translated the About, What's New, Updates and Uninstall panes and left every other word in English, which is not a language setting anyone wanted. The menu now offers the two languages Yahoo! KeyKey 2 actually has. A choice already made outside those two stays listed and stays selected until you move off it, so nobody is left on a language they can no longer find in the menu. · Under the hood: updated to DragonKit 3.4.0, the shared code behind the About, What's New, Backup & Restore, Updates and Uninstall panes — and the version that added the setting the fix above needed, so the two arrived together.",
+    "notes": {
+      "en": "The Language menu in Settings offered languages Yahoo! KeyKey 2 does not have. · Fixed: beside English and 繁體中文, the menu listed Español, Français, 日本語, 한국어 and 简体中文 — the languages the shared Dragon App code is translated into, not the ones Yahoo! KeyKey 2 is. Choosing one of them translated the About, What's New, Updates and Uninstall panes and left every other word in English, which is not a language setting anyone wanted. The menu now offers the two languages Yahoo! KeyKey 2 actually has. A choice already made outside those two stays listed and stays selected until you move off it, so nobody is left on a language they can no longer find in the menu. · Under the hood: updated to DragonKit 3.4.0, the shared code behind the About, What's New, Backup & Restore, Updates and Uninstall panes — and the version that added the setting the fix above needed, so the two arrived together."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.5"
   },
   {
     "version": "2.11.4",
     "date": "2026-08-11",
-    "notes": "A maintenance release. Nothing about typing changes, and nothing you can see behaves differently. · Yahoo! KeyKey 2 now checks for updates at its own home rather than the website, so a problem with the website can no longer hold one up. This finishes the change 2.11.3 began; updates keep arriving exactly as before.",
+    "notes": {
+      "en": "A maintenance release. Nothing about typing changes, and nothing you can see behaves differently. · Yahoo! KeyKey 2 now checks for updates at its own home rather than the website, so a problem with the website can no longer hold one up. This finishes the change 2.11.3 began; updates keep arriving exactly as before."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.4"
   },
   {
     "version": "2.11.3",
     "date": "2026-08-11",
-    "notes": "A maintenance release. Nothing about typing changes, and nothing you can see behaves differently. · Yahoo! KeyKey 2 now publishes the file it checks for updates to its own home as well as the website, so a problem with the website can no longer hold up an update. The copy you have installed keeps reading the website until a later version moves it across.",
+    "notes": {
+      "en": "A maintenance release. Nothing about typing changes, and nothing you can see behaves differently. · Yahoo! KeyKey 2 now publishes the file it checks for updates to its own home as well as the website, so a problem with the website can no longer hold up an update. The copy you have installed keeps reading the website until a later version moves it across."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.3"
   },
   {
     "version": "2.11.2",
     "date": "2026-08-10",
-    "notes": "Two things that reached you in 2.11.1 without ever being described. · The About panel now follows the shared Dragon App layout. Its rows are fixed and identical across the Dragon apps, and each piece of bundled data is listed under its own name with its licence — McBopomofo (MIT), ibus-table-chinese (freely redistributable), OpenCC (Apache-2.0) — instead of a description of what it is for. · Fixed: a local test build no longer reaches into your installed copy. The two shared one file of adaptive candidate ordering, so testing on a developer's Mac changed the real ranking. A test build now keeps its own copy, and it can no longer check for or install updates. Nothing about the version you type with is affected.",
+    "notes": {
+      "en": "Two things that reached you in 2.11.1 without ever being described. · The About panel now follows the shared Dragon App layout. Its rows are fixed and identical across the Dragon apps, and each piece of bundled data is listed under its own name with its licence — McBopomofo (MIT), ibus-table-chinese (freely redistributable), OpenCC (Apache-2.0) — instead of a description of what it is for. · Fixed: a local test build no longer reaches into your installed copy. The two shared one file of adaptive candidate ordering, so testing on a developer's Mac changed the real ranking. A test build now keeps its own copy, and it can no longer check for or install updates. Nothing about the version you type with is affected."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.2"
   },
   {
     "version": "2.11.1",
     "date": "2026-08-09",
-    "notes": "A version-number correction. There is no change to the app itself. · A 2.11.0 was tagged but never released. The build checks that the version being released matches the version recorded in the app; the two did not match, and it stopped. Rather than reuse a version number that already has a failed build attached to it, the next release is 2.11.1.",
+    "notes": {
+      "en": "A version-number correction. There is no change to the app itself. · A 2.11.0 was tagged but never released. The build checks that the version being released matches the version recorded in the app; the two did not match, and it stopped. Rather than reuse a version number that already has a failed build attached to it, the next release is 2.11.1."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.1"
   },
   {
     "version": "2.10.0",
     "date": "2026-08-07",
-    "notes": "Accessibility, speed, and fixes for three ways your data could quietly go missing. · New: the selection box can be read by VoiceOver. Each row is announced with its selecting digit, the candidate, and its 反查 code hint when shown, and the page indicator reads 第 2 頁，共 3 頁 instead of a bare \"▼ 1/3\". Nothing about how the window looks or behaves changed. · Faster. Builds were never compiled with optimization turned on — including the notarized download. Measured on the bundled 五代 table: loading the 倉頡 table 73 → 34 ms, deriving the 速成 table 78 → 8 ms, and 2000 速成 compositions 21 → 2 ms. · Fixed: restoring a damaged backup erased your settings, and an unreadable learning file silently reset your adaptive ranking. Both now refuse and leave what you already have alone. 設定 also gets a proper menu bar, with a standard 編輯 menu and 關閉 ⌘W.",
+    "notes": {
+      "en": "Accessibility, speed, and fixes for three ways your data could quietly go missing. · New: the selection box can be read by VoiceOver. Each row is announced with its selecting digit, the candidate, and its 反查 code hint when shown, and the page indicator reads 第 2 頁，共 3 頁 instead of a bare \"▼ 1/3\". Nothing about how the window looks or behaves changed. · Faster. Builds were never compiled with optimization turned on — including the notarized download. Measured on the bundled 五代 table: loading the 倉頡 table 73 → 34 ms, deriving the 速成 table 78 → 8 ms, and 2000 速成 compositions 21 → 2 ms. · Fixed: restoring a damaged backup erased your settings, and an unreadable learning file silently reset your adaptive ranking. Both now refuse and leave what you already have alone. 設定 also gets a proper menu bar, with a standard 編輯 menu and 關閉 ⌘W."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.10.0"
   },
   {
     "version": "2.9.1",
     "date": "2026-08-05",
-    "notes": "One fix for the candidate window. · Fixed: the selection box could be left stuck on screen. Switching to another app — or to another input source — while the candidate window or the 聯想 window was open left it floating above whatever you switched to, with no way to close it. It now closes as soon as Yahoo! KeyKey 2 loses focus; a half-typed code is committed on the way out.",
+    "notes": {
+      "en": "One fix for the candidate window. · Fixed: the selection box could be left stuck on screen. Switching to another app — or to another input source — while the candidate window or the 聯想 window was open left it floating above whatever you switched to, with no way to close it. It now closes as soon as Yahoo! KeyKey 2 loses focus; a half-typed code is committed on the way out."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.1"
   },
   {
     "version": "2.9.0",
     "date": "2026-08-04",
-    "notes": "A tidier input menu, and Uninstall moves out of it. · The app items at the bottom of the 倉頡／速成 input menu now each lead with an icon and follow standard macOS naming, matching the other Dragon apps. Nothing you type changes, and the 輸出簡體字 / 全形標點 / 聯想字詞 / 反查提示 toggles above them are untouched. · 解除安裝 (Uninstall) now lives in Settings. Removing Yahoo! KeyKey 2 used to sit at the bottom of the input menu, one slip away from the options you use while typing. It is now at 設定… ▸ 解除安裝 — the same checklist, just not in the menu you open mid-sentence.",
+    "notes": {
+      "en": "A tidier input menu, and Uninstall moves out of it. · The app items at the bottom of the 倉頡／速成 input menu now each lead with an icon and follow standard macOS naming, matching the other Dragon apps. Nothing you type changes, and the 輸出簡體字 / 全形標點 / 聯想字詞 / 反查提示 toggles above them are untouched. · 解除安裝 (Uninstall) now lives in Settings. Removing Yahoo! KeyKey 2 used to sit at the bottom of the input menu, one slip away from the options you use while typing. It is now at 設定… ▸ 解除安裝 — the same checklist, just not in the menu you open mid-sentence."
+    },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.0"
   }
 ]

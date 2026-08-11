@@ -353,11 +353,32 @@ def write_redirects():
                 f.write(html)
 
 
-def render_changelog_rows(slug, common):
+# Site locale -> the language code an app's What's New pane uses (DragonKit's
+# .lproj names). Only English differs: the site says en-US, every app ships en.
+NOTES_LANG = {"en-US": "en"}
+NOTES_BASE_LANG = "en"
+
+
+def note_for(entry, lang):
+    """One changelog entry's notes in `lang`, falling back to English.
+
+    An app may ship fewer languages than the site — ice-2 localizes with Apple
+    String Catalogs and publishes English only — so a missing locale renders the
+    base language rather than an empty row. A plain string is a pre-language
+    entry from before `notes` gained its language dimension; it is English by
+    definition, since that is all the GitHub Release bodies ever were.
+    """
+    notes = entry.get("notes") or {}
+    if isinstance(notes, str):
+        return notes
+    return notes.get(NOTES_LANG.get(lang, lang)) or notes.get(NOTES_BASE_LANG) or ""
+
+
+def render_changelog_rows(slug, common, lang):
     rows = []
     view = common.get("app_changelog_view", "View on GitHub")
     for e in load_changelog(slug)[:2]:
-        note = e.get("notes") or "&nbsp;"
+        note = note_for(e, lang) or "&nbsp;"
         rows.append(
             '<div class="logrow"><span class="ver">%s</span>'
             '<div><div class="lognote">%s</div>'
@@ -561,7 +582,7 @@ def render_app(template, app, lang, strings, missing):
         "URL_ABOUT": SITE + "/" + lang_prefix(lang) + "about/",
         "APP_REPO": app["repo"], "APP_ISSUES": app["repo"] + "/issues",
         "APP_LICENSE_URL": app["license_url"],
-        "CHANGELOG_ROWS": render_changelog_rows(app["slug"], common),
+        "CHANGELOG_ROWS": render_changelog_rows(app["slug"], common, lang),
         "APP_PERF_SECTION": render_perf(app, lang),
         "DOWNLOAD_CHANNELS": render_download(app, common),
         "TOKEN_BLOCK": render_token(app, common),

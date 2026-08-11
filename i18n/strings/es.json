@@ -18,7 +18,7 @@
     "app_demo_h2": "Míralo en acción",
     "app_changelog_h2": "Novedades",
     "app_changelog_sub": "Notas en lenguaje sencillo, las más recientes primero.",
-    "app_changelog_auto": "Generado automáticamente desde GitHub Releases",
+    "app_changelog_source": "Del panel Novedades de la app, en cada versión",
     "app_changelog_view": "Ver en GitHub",
     "app_download_h2": "Cómo conseguirlo",
     "app_channel_github": "Versión en GitHub",

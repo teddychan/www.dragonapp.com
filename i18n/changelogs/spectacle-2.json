@@ -2,49 +2,65 @@
   {
     "version": "2.5.3",
     "date": "2026-08-11",
-    "notes": "A maintenance release: Spectacle 2 behaves identically to 2.5.2. · Spectacle 2 is built on an updated version of the shared Dragon App code. The one difference you can observe is the version About reports: \"Built with · DragonKit v3.4.0\". Nothing the new version adds is taken up here — its new option is for an app translated into fewer languages than the shared code, and Spectacle 2 ships all seven of them.",
+    "notes": {
+      "en": "A maintenance release: Spectacle 2 behaves identically to 2.5.2. · Spectacle 2 is built on an updated version of the shared Dragon App code. The one difference you can observe is the version About reports: \"Built with · DragonKit v3.4.0\". Nothing the new version adds is taken up here — its new option is for an app translated into fewer languages than the shared code, and Spectacle 2 ships all seven of them."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.3"
   },
   {
     "version": "2.5.2",
     "date": "2026-08-10",
-    "notes": "A maintenance release: nothing you can see behaves differently. · The local development build is now clearly separated from the installed app. It shows a Debug label beside its version instead of writing that word into the version number, and it can no longer reach the update feed the released app uses.",
+    "notes": {
+      "en": "A maintenance release: nothing you can see behaves differently. · The local development build is now clearly separated from the installed app. It shows a Debug label beside its version instead of writing that word into the version number, and it can no longer reach the update feed the released app uses."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.2"
   },
   {
     "version": "2.5.1",
     "date": "2026-08-09",
-    "notes": "A maintenance release: nothing about Spectacle 2 changes. · An internal dependency pin now matches the other Dragon apps. Spectacle 2 was the only one stating the same version range in a different form. No component version moves in this release.",
+    "notes": {
+      "en": "A maintenance release: nothing about Spectacle 2 changes. · An internal dependency pin now matches the other Dragon apps. Spectacle 2 was the only one stating the same version range in a different form. No component version moves in this release."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.1"
   },
   {
     "version": "2.5.0",
     "date": "2026-08-08",
-    "notes": "The About panel is rebuilt on DragonKit's fixed layout, and two of its links were wrong. · The Website link opened the Dragon App hub instead of Spectacle 2's own page. It now opens dragonapp.com/spectacle-2/, and the two link rows are checked against each other so the bare hub cannot come back. · The Support link opened the repository root and was labelled \"Source\". It is now the issues page, labelled \"Support on GitHub\" — the row every other Dragon app already showed. · About now reports which version of the shared DragonKit it was built against, so it cannot misstate it.",
+    "notes": {
+      "en": "The About panel is rebuilt on DragonKit's fixed layout, and two of its links were wrong. · The Website link opened the Dragon App hub instead of Spectacle 2's own page. It now opens dragonapp.com/spectacle-2/, and the two link rows are checked against each other so the bare hub cannot come back. · The Support link opened the repository root and was labelled \"Source\". It is now the issues page, labelled \"Support on GitHub\" — the row every other Dragon app already showed. · About now reports which version of the shared DragonKit it was built against, so it cannot misstate it."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.0"
   },
   {
     "version": "2.4.1",
     "date": "2026-08-07",
-    "notes": "A fix for the version shown in the About panel. · The About panel showed the version in the wrong format. It read 2.4.0 (754), missing both the v prefix and the build timestamp that every other Dragon app shows. It now reads v2.4.1 with its build number and UTC build time.",
+    "notes": {
+      "en": "A fix for the version shown in the About panel. · The About panel showed the version in the wrong format. It read 2.4.0 (754), missing both the v prefix and the build timestamp that every other Dragon app shows. It now reads v2.4.1 with its build number and UTC build time."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.4.1"
   },
   {
     "version": "2.4.0",
     "date": "2026-08-07",
-    "notes": "A small addition to the Settings window's menu bar. · Hide, Hide Others and Show All are now in the Settings window's menu bar. The previous release gave that window a menu bar whose application menu held only Quit; the three conventional commands above it are now filled in.",
+    "notes": {
+      "en": "A small addition to the Settings window's menu bar. · Hide, Hide Others and Show All are now in the Settings window's menu bar. The previous release gave that window a menu bar whose application menu held only Quit; the three conventional commands above it are now filled in."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.4.0"
   },
   {
     "version": "2.3.0",
     "date": "2026-08-07",
-    "notes": "The Settings window gets its menu bar back, and two ways to lose your settings are closed. · Restoring a file that was not a Spectacle 2 backup could erase your settings. Any property list passed validation, and the restore then replaced your settings with nothing while reporting success. A backup taken from a different app is now refused. · A failed uninstall reported success. Moving the app to the Trash could fail after the settings teardown had already run, leaving Spectacle 2 installed with its settings gone. · The Settings window has a menu bar again, so ⌘W, ⌘Q and Cut, Copy, Paste and Select All work in it — including in the Shortcuts pane's search field.",
+    "notes": {
+      "en": "The Settings window gets its menu bar back, and two ways to lose your settings are closed. · Restoring a file that was not a Spectacle 2 backup could erase your settings. Any property list passed validation, and the restore then replaced your settings with nothing while reporting success. A backup taken from a different app is now refused. · A failed uninstall reported success. Moving the app to the Trash could fail after the settings teardown had already run, leaving Spectacle 2 installed with its settings gone. · The Settings window has a menu bar again, so ⌘W, ⌘Q and Cut, Copy, Paste and Select All work in it — including in the Shortcuts pane's search field."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.3.0"
   },
   {
     "version": "2.2.2",
     "date": "2026-08-07",
-    "notes": "Nothing in this release changes how Spectacle 2 behaves. · Internal build-tooling fixes only. If you are on 2.2.1 there is no functional reason to update.",
+    "notes": {
+      "en": "Nothing in this release changes how Spectacle 2 behaves. · Internal build-tooling fixes only. If you are on 2.2.1 there is no functional reason to update."
+    },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.2.2"
   }
 ]
