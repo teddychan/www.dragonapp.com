@@ -1,50 +1,50 @@
 [
   {
+    "version": "2.11.4",
+    "date": "2026-08-11",
+    "notes": "release: 2.11.4 — the update feed moves to this repository",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.4"
+  },
+  {
+    "version": "2.11.3",
+    "date": "2026-08-11",
+    "notes": "ci: move the release to dragon-release-ci @v6, with whats_new_path · fix(uninstall): clear Homebrew's receipt, and only from the build brew installed · fix(debug): mark the debug IME's input-mode names, not just its bundle name · fix(debug): refresh the input-menu agents so the mode labels actually show",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.3"
+  },
+  {
+    "version": "2.11.2",
+    "date": "2026-08-10",
+    "notes": "release: 2.11.2 — stop the Debug IME reaching the installed one's data and updater",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.2"
+  },
+  {
+    "version": "2.11.1",
+    "date": "2026-08-09",
+    "notes": "feat: adopt DragonKit 3.1.0 and settle attributions on name → licence · chore: pin DragonKit 3.2.0 · fix(build): make vendor/dragon-kit resolution non-destructive, and restore the full Cangjie licence phrase · docs(build): stop naming a DragonKit version in the pin comments",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.1"
+  },
+  {
+    "version": "2.10.0",
+    "date": "2026-08-07",
+    "notes": "fix(engine): report and set aside an unreadable user-frequency store · chore(packages): enable complete concurrency checking as warnings · fix(app): guard the whole Cangjie table set with one lock · feat(a11y): expose the candidate window to assistive technologies",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.10.0"
+  },
+  {
+    "version": "2.9.1",
+    "date": "2026-08-05",
+    "notes": "release: v2.9.1 — dismiss the candidate window when the input session ends (#70)",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.1"
+  },
+  {
+    "version": "2.9.0",
+    "date": "2026-08-04",
+    "notes": "docs: fix license detection, document all install/update channels, highlight 2.8.0 · docs: unify README structure, style, and table of contents · docs: a release ships the .zip only — fix RELEASE.md and package-release.sh header · docs: add Tests section with measured coverage",
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.0"
+  },
+  {
     "version": "2.8.0",
     "date": "2026-07-25",
     "notes": "Press Space to confirm the code. In 速成, and in 倉頡 with the * wildcard, candidates appear before the code is finished, so Space flipped to the next page instead of confirming what you typed. A new setting makes the first Space confirm the code and stay on page 1 — press Space again to page, or 1–9 to pick. Off by default, and plain 倉頡 is unaffected. · Fixed: 三代倉頡 offered characters under the wrong code. Typing 人一弓口 (何's code) also offered 含, whose code is 人戈弓口. The bundled 三代 table came from an upstream merge that never removed duplicates, giving 800 characters a second, non-standard code; those extra codes are gone and every character keeps its real one. 五代倉頡 was never affected.",
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.8.0"
-  },
-  {
-    "version": "2.7.0",
-    "date": "2026-07-22",
-    "notes": "Page through 聯想 associated-phrase candidates. Use Page Up / Page Down to move between pages of associated-phrase suggestions. · Choose how you pick associated phrases. A new setting lets you select the associated-phrase key — plain Number keys or Shift+Number. · ⌘ and ⌃ shortcuts pass through. Keyboard shortcuts using ⌘ or ⌃ now reach the app instead of being swallowed by the input method.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.7.0"
-  },
-  {
-    "version": "2.6.4",
-    "date": "2026-07-10",
-    "notes": "Starts up even faster and lighter. At launch, Yahoo KeyKey 2 now reads its dictionary in a single pass instead of two, and it builds the 速成 (Simplex) code table and the 反查／拆碼提示 reverse-lookup index only when you actually use them. If you type only 倉頡 or 拼音, that's less work and less memory every time the app starts. Nothing you type changes. · 拼音 stays responsive on unusual input. Typing a long run of letters that can't form valid syllables no longer makes the pinyin composer do more and more work on every keystroke.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.6.4"
-  },
-  {
-    "version": "2.6.3",
-    "date": "2026-07-09",
-    "notes": "Faster startup and lower memory use. At launch, Yahoo KeyKey 2 no longer builds a large in-memory copy of its whole dictionary just to work out which characters are most common — it now reads only what it needs. The app starts up quicker and uses less memory, and nothing you type changes. · 拼音 typing is a little more efficient. While you're composing pinyin, the engine skips repeated sorting work it used to do on every keystroke. You'll notice it most with long phrases. The candidates you see, and their order, are exactly the same as before.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.6.3"
-  },
-  {
-    "version": "2.6.2",
-    "date": "2026-07-08",
-    "notes": "Removed 候選字大小 from the input menu. The coarse 小／中／大 shortcuts in the input-method menu-bar item are gone — candidate text size is now set with the fine-grained slider under 設定… ▸ 一般, which lets you pick any size in the supported range instead of just three fixed steps. Your current size is unchanged.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.6.2"
-  },
-  {
-    "version": "2.6.1",
-    "date": "2026-07-08",
-    "notes": "A bug-fix release for the new 拼音 (Pinyin) input method. · 拼音: number keys now pick a candidate directly. Pressing 1–9 selects that candidate — a single syllable commits right away (like 倉頡／速成), and in a phrase it picks that syllable and moves to the next. Space still commits the whole phrase at once. · 拼音: the 反查／拆碼提示 hint now shows pinyin. With the code hint on, candidates in 拼音 show their pinyin reading (e.g. `wo`, `ni hao`) instead of the 倉頡 code — for both the syllables you're typing and the 聯想 suggestions that follow. · Fixed: the in-app What's New now shows the current version. The 設定… ▸ What's New pane was stuck on an older release's notes; it now reflects the version you're running.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.6.1"
-  },
-  {
-    "version": "2.6.0",
-    "date": "2026-07-07",
-    "notes": "New input method: 拼音 (Pinyin). Alongside 倉頡 and 速成, Yahoo KeyKey 2 now offers a 拼音 phrase input method that composes whole phrases (no tone marks needed). Space／Return commit the phrase; 1–9 pick a candidate for the syllable at the cursor; ←／→ move between syllables to correct them; Backspace deletes and Esc clears; use an apostrophe (') to split ambiguous syllables (e.g. xi'an → 西安).",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.6.0"
-  },
-  {
-    "version": "2.5.0",
-    "date": "2026-07-06",
-    "notes": "Fixed: the candidate text size slider now updates as you drag. In 設定… ▸ 一般, dragging the 候選字大小 (candidate text size) slider used to leave the shown value and the handle stuck even though the size did change. The slider and its label now track your dragging live.",
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.5.0"
   }
 ]

@@ -1,50 +1,50 @@
 [
   {
-    "version": "2.10.0",
-    "date": "2026-08-04",
-    "notes": "Uninstalling Ice 2 has moved out of the menu bar and into Settings. · Where it is now. Removing Ice 2 used to be an Uninstall item in the Ice 2 menu that opened a separate window. It is now the last pane in the Settings sidebar, under Uninstall, and the confirmation appears right there in the pane. · The menu item is gone. An unrecoverable action does not belong one click away from Quit in the everyday menu. Settings ▸ Uninstall is now the way to remove Ice 2 from inside the app. · What gets removed is unchanged. The app and its login item, your settings, layout profiles, and hotkeys, and Ice 2's saved application state.",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.10.0"
+    "version": "2.14.4",
+    "date": "2026-08-11",
+    "notes": "docs(changelog): record the missing 2.14.2 entry · release: 2.14.4 — the update feed moves to this repository",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.4"
   },
   {
-    "version": "2.9.11",
-    "date": "2026-08-01",
-    "notes": "Ice 2 now looks at your screen only when it actually has a reason to. · Why it was looking so often. To draw a menu bar shape, remove the menu bar background, or round the screen corners, Ice 2 needs to know what your wallpaper looks like behind the menu bar — and macOS never tells apps when the wallpaper changes, so Ice 2 has to re-check every five seconds. · What's better now. It no longer checks while your display is asleep or your screen is locked, and it no longer checks at all if your menu bar appearance only adds a tint, a border, or a shadow, since those never use the wallpaper. If you use a menu bar shape, it still refreshes exactly as before whenever your screen is on. · About the \"Ice 2 is accessing your screen\" notification. macOS counts every one of those checks under System Settings → Privacy & Security → Screen & System Audio Recording, which is how the total could reach tens of thousands in a month; it should climb far more slowly now. Ice 2 has never recorded audio — macOS bundles screen and audio into a single permission — and only ever captures the menu bar strip and the wallpaper directly behind it.",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.11"
+    "version": "2.14.3",
+    "date": "2026-08-11",
+    "notes": "ci: move the release to dragon-release-ci @v6, with whats_new_path · release: 2.14.3 — publish the appcast here as well as the site",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.3"
   },
   {
-    "version": "2.9.10",
-    "date": "2026-07-25",
-    "notes": "Two small fixes found by expanding Ice 2's automated test suite. · The menu bar color can no longer be calculated from an empty screen capture. When a capture of the menu bar area came back completely transparent — which can happen while displays are being reconfigured or right after waking from sleep — Ice 2 produced an invalid color and used it as if it were real, which could tint the Ice 2 Bar or the item search panel with a garbage color. Ice 2 now keeps the previous color instead. · Faster lookup of the wallpaper behind the menu bar, about 40× quicker. It runs whenever Ice 2 refreshes the menu bar appearance overlay, the Ice 2 Bar, or the item search panel. · More automated checks: the test suite grew from 162 to 261, now also covering menu bar image processing, appearance-settings upgrades, and menu bar window identification.",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.10"
+    "version": "2.14.2",
+    "date": "2026-08-10",
+    "notes": "A maintenance release: nothing you can see behaves differently, and Ice 2's own What's New notes are caught up. · What's New inside the app was four releases behind. The pane still described 2.11.0, so 2.12.0 through 2.14.0 — including item groups being removed, which deleted any groups you had saved — were never announced to anyone who reads the app rather than the changelog. · Nothing changes for the copy you have installed. Every fix here is about letting a development build of Ice 2 run on the same Mac as your installed copy without the two disturbing each other. · Development builds now stay out of the way. Their own version channel, their own helper service, no production update checks, and their own settings-backup folder — so testing a build can no longer prune the installed app's backups or quit it.",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.2"
   },
   {
-    "version": "2.9.9",
-    "date": "2026-07-11",
-    "notes": "Behind-the-scenes reliability release — nothing changes in how Ice works day to day. · Broad new automated test coverage. Added tests across hotkeys, menu-bar color/gradient logic, backup & restore, layout-profile guards, and settings load/persist — making future updates safer and more predictable. · Lower idle CPU and a guard so updating a layout profile can't overwrite it with an empty capture (carried over from 2.9.8).",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.9"
+    "version": "2.14.1",
+    "date": "2026-08-09",
+    "notes": "release: 2.14.1",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.1"
   },
   {
-    "version": "2.9.8",
-    "date": "2026-07-10",
-    "notes": "release: v2.9.8 — lower idle CPU + guard layout-profile Update against empty capture",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.8"
+    "version": "2.14.0",
+    "date": "2026-08-09",
+    "notes": "feat(about)!: migrate to DragonKit 3.1.0 and its fixed-slot About pane · feat(uninstall): declare the ice-2 Homebrew cask on DragonKit 3.2.0, and remove the orphans · feat(about): point the licenses row at dragonapp.com/ice-2/licenses · fix(about): regenerate the third-party notices, and pin them to Package.resolved",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.0"
   },
   {
-    "version": "2.9.7",
-    "date": "2026-07-09",
-    "notes": "fix: \"Update\" on a layout profile now saves the current arrangement (v2.9.7)",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.7"
+    "version": "2.13.0",
+    "date": "2026-08-07",
+    "notes": "chore: bump the DragonKit pin to 2.4.0 · release: 2.13.0",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.13.0"
   },
   {
-    "version": "2.9.6",
-    "date": "2026-07-08",
-    "notes": "release: v2.9.6 — consolidate reveal toggles, move icon chooser to Appearance",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.6"
+    "version": "2.12.1",
+    "date": "2026-08-07",
+    "notes": "Add permission-free menu bar window probe for issue #53 · fix(menubar): hop to main actor inside the rehide timer callback · fix(a11y): add accessibility labels to menu bar end cap pickers · chore: make concurrency annotations match reality",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.12.1"
   },
   {
-    "version": "2.9.5",
-    "date": "2026-07-08",
-    "notes": "release: v2.9.5 — simpler, cleaner Settings",
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.9.5"
+    "version": "2.12.0",
+    "date": "2026-08-06",
+    "notes": "Removed · Item groups are gone. The Groups section in Settings ▸ Layout — saving a set of hidden items under a name and revealing them with Show — has been removed, along with the option to point a trigger at a group. It saw very little use for the amount of the app it occupied, and layout profiles already cover arranging your menu bar. Any groups you saved are deleted from your settings when you update. Triggers still work: a trigger now always shows the hidden section when its app comes to the front, so the Target menu is gone and existing hidden-section triggers are untouched. If you had a trigger pointing at a group, only that trigger is dropped — the rest are kept. · Fixed · Restoring a backup, or using either \"Relaunch Ice 2\" button, brings Ice 2 back. Ice 2 asked macOS to reopen it *before* quitting, while it was still running — so macOS brought the running copy to the front, reported success, and the quit that followed left nothing running at all. Ice 2 disappeared and did not come back.",
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.12.0"
   }
 ]
