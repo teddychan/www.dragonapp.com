@@ -99,9 +99,24 @@ PRIORITY = {"index": "1.0", "support": "0.5", "privacy": "0.3", "about": "0.6"}
 # legacy app slugs (old URLs) -> current app slug they now redirect to
 LEGACY_REDIRECTS = {"clipmenu": "clipmenu-2", "keykey": "yahoo-keykey-2"}
 LASTMOD = "2026-07-08"
-# The notices pages are newer than LASTMOD and change only when a dependency does, so
-# they carry their own date rather than backdating themselves to before they existed.
-LICENSES_LASTMOD = "2026-08-09"
+# The notices pages are newer than LASTMOD and change only when a dependency does, so each
+# carries its own date rather than backdating itself to before it existed. Per slug for the
+# same reason: the pages added on 2026-08-11 must not claim the day the first three shipped,
+# and those three must not claim a day on which nothing about them changed.
+LICENSES_LASTMOD = {
+    "ice-2": "2026-08-09",
+    "clipmenu-2": "2026-08-09",
+    "yahoo-keykey-2": "2026-08-09",
+    "spectacle-2": "2026-08-11",
+    "dragon-sample-app": "2026-08-11",
+}
+# Notices pages for an app with no marketing page, and therefore no i18n/apps/<slug>.json to
+# carry the `licenses_page` flag. dragon-sample-app is a real Dragon app by every other
+# measure — own repository, exact vX.Y.Z tags, an app-owned appcast — but deliberately has no
+# landing page (i18n/tests/test_apps.py records why), while DragonKit 4.0.0 makes the About
+# pane's licenses link mandatory for every app. So the page exists and belongs in the sitemap;
+# only the app card doesn't.
+STANDALONE_LICENSES_SLUGS = ["dragon-sample-app"]
 
 GLOBE = ('<svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
          'stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
@@ -500,11 +515,19 @@ def licenses_url(slug):
     return "%s/%s/licenses/" % (SITE, slug)
 
 
+def licenses_slugs():
+    """Every slug with a notices page under docs/<slug>/licenses/, marketed apps first."""
+    return ([a["slug"] for a in load_apps() if a.get("licenses_page")]
+            + STANDALONE_LICENSES_SLUGS)
+
+
 def render_licenses_link(app):
     """Footer link to an app's hand-written third-party notices page, or nothing.
 
-    Only apps with `licenses_page` get the link — spectacle-2 has no such page, and a
-    footer link to a 404 is worse than no link. Always the absolute English path, in
+    Only apps with `licenses_page` get the link. All four marketed apps have one now that
+    spectacle-2's landed, but the flag stays: each page is written by hand, so an app added
+    before its page exists would otherwise link a 404, which is worse than no link. Always
+    the absolute English path, in
     every locale, because the notices exist only in English (same reason those pages
     omit /shared/i18n.js). Generated rather than hand-added to docs/: the first version
     of this link was edited straight into the 7 generated KeyKey pages and into
@@ -623,12 +646,10 @@ def write_sitemap():
             lines.append("    <priority>0.9</priority>")
             lines.append("  </url>")
     # Hand-written third-party notices pages: English-only, so no hreflang alternates.
-    for app in load_apps():
-        if not app.get("licenses_page"):
-            continue
+    for slug in licenses_slugs():
         lines.append("  <url>")
-        lines.append("    <loc>%s</loc>" % licenses_url(app["slug"]))
-        lines.append("    <lastmod>%s</lastmod>" % LICENSES_LASTMOD)
+        lines.append("    <loc>%s</loc>" % licenses_url(slug))
+        lines.append("    <lastmod>%s</lastmod>" % LICENSES_LASTMOD[slug])
         lines.append("    <changefreq>yearly</changefreq>")
         lines.append("    <priority>0.3</priority>")
         lines.append("  </url>")
