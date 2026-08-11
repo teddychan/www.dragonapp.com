@@ -18,7 +18,7 @@
     "app_demo_h2": "실제로 작동하는 모습",
     "app_changelog_h2": "새로운 기능",
     "app_changelog_sub": "이해하기 쉬운 변경 내역, 최신순.",
-    "app_changelog_auto": "GitHub Releases에서 자동 생성",
+    "app_changelog_source": "릴리스마다 앱의 '새로운 기능'에서",
     "app_changelog_view": "GitHub에서 보기",
     "app_download_h2": "받는 방법",
     "app_channel_github": "GitHub 릴리스",

@@ -9,8 +9,18 @@ i18n/
   templates/*.html      HTML skeletons with {{ key }} placeholders
   strings/en-US.json       English — the source of truth (edit this first)
   strings/<lang>.json   one per language: zh-Hans zh-Hant ja ko es fr
+  changelogs/<app>.json release notes per version, localized (generated)
   build_i18n.py         generator: templates + strings -> docs/
 ```
+
+## Release notes are localized too
+
+`changelogs/<app>.json` is **generated** by `scripts/fetch-changelogs.py` from
+each GitHub Release's `whats-new.json` asset — the app's own What's New pane, in
+every language that app ships. Each entry's `notes` is keyed by language (`en`,
+`ja`, …; the site's `en-US` reads `en`), and a locale the app doesn't ship falls
+back to `en`. Never hand-edit these files: fix the app's What's New strings and
+let its next release carry them.
 
 ## Rebuild
 
