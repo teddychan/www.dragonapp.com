@@ -1,4 +1,4 @@
-import os, subprocess, sys
+import json, os, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 def build():
@@ -49,6 +49,23 @@ def test_licenses_link_in_every_locale_and_page_exists():
     # spectacle-2 has no notices page, so it must not link one
     html = open(os.path.join(ROOT, "docs", "spectacle-2", "index.html")).read()
     assert "/licenses/" not in html
+
+def test_footer_license_link_matches_app_json():
+    """Every locale's footer "License" href is the app's own license_url.
+
+    The href was hardcoded as {{ APP_REPO }}/blob/main/LICENSE, which 404s for spectacle-2 —
+    its file is LICENSE.md — on all seven of its pages. license_url already held the right
+    value for every app, because render_jsonld() has always used it for softwareLicense; the
+    footer just wasn't reading it. Assert against the JSON rather than a literal so the next
+    app whose licence is named anything else fails here instead of shipping a dead link.
+    """
+    build()
+    idx = json.load(open(os.path.join(ROOT, "i18n", "apps", "_index.json")))
+    for slug in idx:
+        app = json.load(open(os.path.join(ROOT, "i18n", "apps", slug + ".json")))
+        for lang in ["", "zh-Hant/", "zh-Hans/", "ja/", "ko/", "es/", "fr/"]:
+            html = open(os.path.join(ROOT, "docs", lang, slug, "index.html")).read()
+            assert '<a href="%s">License</a>' % app["license_url"] in html, (slug, lang)
 
 def test_sitemap_includes_licenses_pages():
     build()

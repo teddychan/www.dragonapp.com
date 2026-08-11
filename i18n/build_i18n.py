@@ -537,6 +537,7 @@ def render_app(template, app, lang, strings, missing):
         "LICENSES_LINK": render_licenses_link(app),
         "URL_ABOUT": SITE + "/" + lang_prefix(lang) + "about/",
         "APP_REPO": app["repo"], "APP_ISSUES": app["repo"] + "/issues",
+        "APP_LICENSE_URL": app["license_url"],
         "CHANGELOG_ROWS": render_changelog_rows(app["slug"], common),
         "APP_PERF_SECTION": render_perf(app, lang),
         "DOWNLOAD_CHANNELS": render_download(app, common),
