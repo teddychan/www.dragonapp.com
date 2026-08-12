@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.5.5",
+    "date": "2026-08-11",
+    "notes": {
+      "en": "A small fix: Spectacle 2 now carries a copyright notice, the same one shown in About. Nothing else behaves differently. · Finder's Get Info panel now shows Spectacle 2's copyright notice. The app carried none at all, so that line was simply blank.",
+      "es": "Una pequeña corrección: Spectacle 2 ya incluye un aviso de copyright, el mismo que muestra Acerca de. Todo lo demás funciona exactamente igual que antes. · El panel «Obtener información» del Finder ahora muestra el aviso de copyright de Spectacle 2. La app no incluía ninguno, así que esa línea aparecía vacía.",
+      "fr": "Une petite correction : Spectacle 2 comporte désormais une mention de copyright, la même que celle affichée dans À propos. Tout le reste fonctionne exactement comme avant. · La fenêtre « Lire les informations » du Finder affiche désormais la mention de copyright de Spectacle 2. L’app n’en comportait aucune, la ligne restait donc vide.",
+      "ja": "小さな修正です。Spectacle 2 に著作権表示が追加され、「このアプリについて」に表示されるものと同じになりました。ほかの動作はこれまでとまったく変わりません。 · Finder の「情報を見る」に Spectacle 2 の著作権表示が表示されるようになりました。これまではアプリが著作権表示を持っておらず、その欄は空のままでした。",
+      "ko": "작은 수정입니다. Spectacle 2에 저작권 표시가 추가되어 정보 패널에 표시되는 것과 같아졌습니다. 그 밖의 동작은 이전과 완전히 같습니다. · Finder의 ‘정보 가져오기’ 창에 Spectacle 2의 저작권 표시가 나옵니다. 앱에 저작권 표시가 전혀 없어 해당 줄이 비어 있었습니다.",
+      "zh-Hans": "一处小修复：Spectacle 2 现在带有版权声明，与“关于”中显示的一致。其余功能与之前完全相同。 · 访达的“显示简介”现在会显示 Spectacle 2 的版权声明。此前应用完全没有版权声明，该行一直是空的。",
+      "zh-Hant": "一處小修正：Spectacle 2 現在帶有版權聲明，與「關於」中顯示的一致。其餘功能與先前完全相同。 · Finder 的「顯示簡介」現在會顯示 Spectacle 2 的版權聲明。先前應用程式完全沒有版權聲明，該行一直是空的。"
+    },
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.5"
+  },
+  {
     "version": "2.5.3",
     "date": "2026-08-11",
     "notes": {
@@ -54,13 +68,5 @@
       "en": "The Settings window gets its menu bar back, and two ways to lose your settings are closed. · Restoring a file that was not a Spectacle 2 backup could erase your settings. Any property list passed validation, and the restore then replaced your settings with nothing while reporting success. A backup taken from a different app is now refused. · A failed uninstall reported success. Moving the app to the Trash could fail after the settings teardown had already run, leaving Spectacle 2 installed with its settings gone. · The Settings window has a menu bar again, so ⌘W, ⌘Q and Cut, Copy, Paste and Select All work in it — including in the Shortcuts pane's search field."
     },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.3.0"
-  },
-  {
-    "version": "2.2.2",
-    "date": "2026-08-07",
-    "notes": {
-      "en": "Nothing in this release changes how Spectacle 2 behaves. · Internal build-tooling fixes only. If you are on 2.2.1 there is no functional reason to update."
-    },
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.2.2"
   }
 ]
