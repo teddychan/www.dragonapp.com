@@ -1,5 +1,33 @@
 [
   {
+    "version": "2.13.0",
+    "date": "2026-08-12",
+    "notes": {
+      "en": "You can now turn off the adaptive candidate order, so the list stops rearranging itself and stays where you remember it. · A new setting in General ▸ Input Method, “Adapt candidate order based on your selections”, on by default. Turn it off and candidates in 倉頡, 速成, 拼音 and associated phrases keep their built-in order and stay there, and Yahoo! KeyKey 2 stops counting what you pick. Anything already learned is kept, so you can turn it back on whenever you like. · Associated phrases that share the same score now always appear in the same order. That order used to be arbitrary and could differ between launches — and it also decided which suggestions made the list at all.",
+      "es": "Ya puedes desactivar el orden adaptativo de los candidatos, de modo que la lista deje de reordenarse y se quede donde la recuerdas. · Un nuevo ajuste en General ▸ Método de entrada, «Adaptar el orden de los candidatos a tus selecciones», activado de forma predeterminada. Si lo desactivas, los candidatos de 倉頡, 速成, 拼音 y las frases asociadas conservan su orden incorporado y ya no se mueven, y Yahoo! KeyKey 2 deja de registrar lo que eliges. Lo aprendido hasta ahora se conserva, así que puedes volver a activarlo cuando quieras. · Las frases asociadas con la misma puntuación aparecen ahora siempre en el mismo orden. Antes ese orden era arbitrario y podía variar entre arranques, y además decidía qué sugerencias llegaban a la lista.",
+      "fr": "Vous pouvez désormais désactiver l’ordre adaptatif des candidats : la liste cesse de se réorganiser et reste là où vous l’avez mémorisée. · Un nouveau réglage dans Général ▸ Méthode de saisie, « Adapter l’ordre des candidats à vos sélections », activé par défaut. Une fois désactivé, les candidats de 倉頡, 速成, 拼音 et les phrases associées conservent leur ordre intégré et n’en bougent plus, et Yahoo! KeyKey 2 cesse de comptabiliser vos choix. Ce qui a déjà été appris est conservé : vous pouvez le réactiver quand vous voulez. · Les phrases associées de score identique apparaissent désormais toujours dans le même ordre. Cet ordre était auparavant arbitraire et pouvait changer d’un lancement à l’autre — il déterminait aussi quelles suggestions figuraient dans la liste.",
+      "ja": "候補の自動並べ替えをオフにできるようになりました。候補が動かなくなり、覚えた位置のままになります。 · 「一般 ▸ 入力方式」に「選んだ字に合わせて候補の順序を調整」を追加しました（初期設定はオン）。オフにすると、倉頡・速成・拼音と聯想語の候補は内蔵の順序のまま動かなくなり、Yahoo! KeyKey 2 は選んだ字の記録も行いません。すでに学習した内容は保持されるので、いつでもオンに戻せます。 · スコアが同じ聯想語が、常に同じ順序で表示されるようになりました。これまでは順序が一定でなく、起動のたびに変わることがあり、どの候補が一覧に載るかにも影響していました。",
+      "ko": "이제 후보 순서 자동 조정을 끌 수 있습니다. 목록이 더 이상 재배열되지 않고 기억하는 자리에 그대로 있습니다. · 일반 ▸ 입력 방식에 ‘선택한 글자에 맞춰 후보 순서 조정’ 설정이 추가되었습니다. 기본값은 켬입니다. 끄면 倉頡, 速成, 拼音과 연상 어구의 후보가 기본 순서를 유지하며 움직이지 않고, Yahoo! KeyKey 2도 무엇을 선택했는지 기록하지 않습니다. 이미 학습한 내용은 유지되므로 언제든 다시 켤 수 있습니다. · 점수가 같은 연상 어구가 이제 항상 같은 순서로 표시됩니다. 이전에는 그 순서가 일정하지 않아 실행할 때마다 달라질 수 있었고, 어떤 제안이 목록에 오르는지에도 영향을 주었습니다.",
+      "zh-Hans": "现在可以关闭自动调整候选字顺序，候选字不再随你的选字而移动，永远停在你记得的位置。 · 「通用 ▸ 输入方式」新增「依选字习惯调整候选字顺序」，默认开启。关闭后，仓颉、速成、拼音与联想词都会维持内建顺序不再变动，Yahoo! KeyKey 2 也会停止记录你选了哪些字；已经学到的记录会保留，随时可以再开启。 · 分数相同的联想词现在每次都会以相同顺序出现。此前这个顺序并不固定，重新启动后可能不同，也会影响哪些联想词能出现在列表中。",
+      "zh-Hant": "現在可以關閉自動調整候選字順序，候選字不再隨你的選字而移動，永遠停在你記得的位置。 · 「一般 ▸ 輸入方式」新增「依選字習慣調整候選字順序」，預設開啟。關閉後，倉頡、速成、拼音與聯想字詞都會維持內建順序不再變動，Yahoo! KeyKey 2 也會停止記錄你選了哪些字；已經學到的紀錄會保留，隨時可以再開啟。 · 分數相同的聯想字詞現在每次都會以相同順序出現。先前這個順序並不固定，重新啟動後可能不同，也會影響哪些聯想詞能出現在清單中。"
+    },
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.0"
+  },
+  {
+    "version": "2.12.1",
+    "date": "2026-08-11",
+    "notes": {
+      "en": "A small fix: Yahoo! KeyKey 2 now carries a copyright notice, the same one shown in About. Nothing about typing changes. · Finder's Get Info panel now shows Yahoo! KeyKey 2's copyright notice. The app carried none at all, so that line was simply blank.",
+      "es": "Una pequeña corrección: Yahoo! KeyKey 2 ya incluye un aviso de copyright, el mismo que muestra Acerca de. Nada cambia al escribir. · El panel «Obtener información» del Finder ahora muestra el aviso de copyright de Yahoo! KeyKey 2. La app no incluía ninguno, así que esa línea aparecía vacía.",
+      "fr": "Une petite correction : Yahoo! KeyKey 2 comporte désormais une mention de copyright, la même que celle affichée dans À propos. Rien ne change à la saisie. · La fenêtre « Lire les informations » du Finder affiche désormais la mention de copyright de Yahoo! KeyKey 2. L’app n’en comportait aucune, la ligne restait donc vide.",
+      "ja": "小さな修正です。Yahoo! KeyKey 2 に著作権表示が追加され、「情報」に表示されるものと同じになりました。入力の動作は何も変わりません。 · Finder の「情報を見る」に Yahoo! KeyKey 2 の著作権表示が表示されるようになりました。これまではアプリが著作権表示を持っておらず、その欄は空のままでした。",
+      "ko": "작은 수정입니다. Yahoo! KeyKey 2에 저작권 표시가 추가되어 정보 화면에 표시되는 것과 같아졌습니다. 입력 동작은 전혀 바뀌지 않습니다. · Finder의 ‘정보 가져오기’ 창에 Yahoo! KeyKey 2의 저작권 표시가 나옵니다. 앱에 저작권 표시가 전혀 없어 해당 줄이 비어 있었습니다.",
+      "zh-Hans": "一处小修复：Yahoo! KeyKey 2 现在带有版权声明，与「关于」中显示的一致。打字的部分完全没有改变。 · 访达的「显示简介」现在会显示 Yahoo! KeyKey 2 的版权声明。此前应用完全没有版权声明，该行一直是空的。",
+      "zh-Hant": "一處小修正：Yahoo! KeyKey 2 現在帶有版權聲明，與「關於」中顯示的一致。打字的部分完全沒有改變。 · Finder 的「顯示簡介」現在會顯示 Yahoo! KeyKey 2 的版權聲明。先前應用程式完全沒有版權聲明，該行一直是空的。"
+    },
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.12.1"
+  },
+  {
     "version": "2.11.5",
     "date": "2026-08-11",
     "notes": {
@@ -46,21 +74,5 @@
       "en": "Accessibility, speed, and fixes for three ways your data could quietly go missing. · New: the selection box can be read by VoiceOver. Each row is announced with its selecting digit, the candidate, and its 反查 code hint when shown, and the page indicator reads 第 2 頁，共 3 頁 instead of a bare \"▼ 1/3\". Nothing about how the window looks or behaves changed. · Faster. Builds were never compiled with optimization turned on — including the notarized download. Measured on the bundled 五代 table: loading the 倉頡 table 73 → 34 ms, deriving the 速成 table 78 → 8 ms, and 2000 速成 compositions 21 → 2 ms. · Fixed: restoring a damaged backup erased your settings, and an unreadable learning file silently reset your adaptive ranking. Both now refuse and leave what you already have alone. 設定 also gets a proper menu bar, with a standard 編輯 menu and 關閉 ⌘W."
     },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.10.0"
-  },
-  {
-    "version": "2.9.1",
-    "date": "2026-08-05",
-    "notes": {
-      "en": "One fix for the candidate window. · Fixed: the selection box could be left stuck on screen. Switching to another app — or to another input source — while the candidate window or the 聯想 window was open left it floating above whatever you switched to, with no way to close it. It now closes as soon as Yahoo! KeyKey 2 loses focus; a half-typed code is committed on the way out."
-    },
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.1"
-  },
-  {
-    "version": "2.9.0",
-    "date": "2026-08-04",
-    "notes": {
-      "en": "A tidier input menu, and Uninstall moves out of it. · The app items at the bottom of the 倉頡／速成 input menu now each lead with an icon and follow standard macOS naming, matching the other Dragon apps. Nothing you type changes, and the 輸出簡體字 / 全形標點 / 聯想字詞 / 反查提示 toggles above them are untouched. · 解除安裝 (Uninstall) now lives in Settings. Removing Yahoo! KeyKey 2 used to sit at the bottom of the input menu, one slip away from the options you use while typing. It is now at 設定… ▸ 解除安裝 — the same checklist, just not in the menu you open mid-sentence."
-    },
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.9.0"
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "version": "2.15.0",
+    "date": "2026-08-12",
+    "notes": {
+      "en": "Ice 2 now speaks seven languages, chosen in Settings ▸ General and applied without a relaunch. · English, Español, Français, 日本語, 한국어, 简体中文 and 繁體中文. Pick one under Settings ▸ General, or leave it on Automatic to follow macOS. Everything switches at once — settings, the menu bar menu, alerts and the permissions window — with no relaunch. · The Settings item in the menu bar's right-click menu now reads “Settings…” with the gear icon every Dragon app shows, instead of “Ice 2 Settings…” with no icon.",
+      "es": "Ice 2 ya habla siete idiomas, que se eligen en Ajustes ▸ General y se aplican sin reiniciar. · English, Español, Français, 日本語, 한국어, 简体中文 y 繁體中文. Elige uno en Ajustes ▸ General o déjalo en Automático para seguir a macOS. Todo cambia a la vez —ajustes, el menú de la barra de menús, las alertas y la ventana de permisos— sin reiniciar. · El ítem Ajustes del menú contextual de la barra de menús ahora dice «Ajustes…» con el icono de engranaje que muestran todas las apps de Dragon, en lugar de «Ajustes de Ice 2…» sin icono.",
+      "fr": "Ice 2 parle désormais sept langues, à choisir dans Réglages ▸ Général et appliquées sans relancer l'app. · English, Español, Français, 日本語, 한국어, 简体中文 et 繁體中文. Choisissez-en une dans Réglages ▸ Général, ou laissez sur Automatique pour suivre macOS. Tout change d'un coup — réglages, menu de la barre des menus, alertes et fenêtre des autorisations — sans relancer l'app. · L'élément Réglages du menu contextuel de la barre des menus affiche désormais « Réglages… » avec l'icône d'engrenage commune aux apps Dragon, au lieu de « Réglages d'Ice 2… » sans icône.",
+      "ja": "Ice 2 が 7 つの言語に対応しました。設定 ▸ 一般 で選ぶと、再起動せずに切り替わります。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。設定 ▸ 一般 で選択するか、「自動」のままにすると macOS に従います。設定、メニューバーのメニュー、アラート、アクセス許可のウインドウまで、再起動せずに一度に切り替わります。 · メニューバーの右クリックメニューの項目が、アイコンのない「Ice 2 の設定…」から、Dragon の各 App 共通の歯車アイコン付き「設定…」になりました。",
+      "ko": "Ice 2가 이제 7개 언어를 지원합니다. 설정 ▸ 일반에서 선택하면 다시 실행하지 않아도 바로 적용됩니다. · English, Español, Français, 日本語, 한국어, 简体中文, 繁體中文. 설정 ▸ 일반에서 선택하거나 '자동'으로 두면 macOS를 따릅니다. 설정, 메뉴 막대 메뉴, 알림, 권한 윈도우까지 다시 실행 없이 한 번에 전환됩니다. · 메뉴 막대의 오른쪽 클릭 메뉴에 있는 설정 항목이, 아이콘 없는 'Ice 2 설정…' 대신 모든 Dragon 앱이 사용하는 톱니바퀴 아이콘과 함께 '설정…'으로 표시됩니다.",
+      "zh-Hans": "Ice 2 现已支持七种语言，可在“设置 ▸ 通用”中选择，无需重新启动即可生效。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。在“设置 ▸ 通用”中选择，或保持“自动”以跟随 macOS。设置、菜单栏菜单、提醒和权限窗口会同时切换，无需重新启动。 · 菜单栏右键菜单中的“设置”项现在显示为带齿轮图标的“设置…”，与所有 Dragon App 一致，不再是没有图标的“Ice 2 设置…”。",
+      "zh-Hant": "Ice 2 現已支援七種語言，可在「設定 ▸ 一般」中選擇，無需重新啟動即可生效。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。在「設定 ▸ 一般」中選擇，或保持「自動」以跟隨 macOS。設定、選單列選單、提醒和權限視窗會同時切換，無需重新啟動。 · 選單列右鍵選單中的「設定」項目現在顯示為帶齒輪圖像的「設定…」，與所有 Dragon App 一致，不再是沒有圖像的「Ice 2 設定…」。"
+    },
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.15.0"
+  },
+  {
+    "version": "2.14.7",
+    "date": "2026-08-11",
+    "notes": {
+      "en": "One fix, finishing what 2.14.6 started: the copyright notice macOS shows for Ice 2 in Finder's Get Info panel now matches the one in Settings ▸ About. Nothing about Ice 2's licensing or its origins changed. · Finder's Get Info panel now shows the same copyright line as Settings ▸ About. It named two holders, Jordan Baird's for 2025 alongside Teddy Chan's for 2026, while About named one — so the app made two different claims about itself depending on where you looked. Both now read © 2026 Teddy Chan. 2.14.6's release notes said this notice still carried both authors, and that is what has changed here. · Nothing about Ice 2's licensing or its origins changed. It is still GPL-3.0, inherited from Ice. Jordan Baird's copyright notice is still in the LICENSE file that ships with the app and still in its bundled Acknowledgements, which is where the licence requires it. He is still credited twice in Settings ▸ About, by the Original project link and the Based on line, and the full licence texts are still published at dragonapp.com/ice-2/licenses/."
+    },
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.7"
+  },
+  {
     "version": "2.14.5",
     "date": "2026-08-11",
     "notes": {
@@ -46,21 +68,5 @@
       "en": "A newly installed app's menu bar icon now appears where you can see it. · macOS hands every brand-new menu bar item the leftmost slot, which in Ice 2's layout sits inside the always-hidden section. So the first time you installed an app with a menu bar icon, that icon was invisible from the moment it was created, and the app looked like it had never added one at all. Ice 2 now recognises an item it has never seen before and moves it into the visible section. · Items you have already arranged are left alone. Updating to this version does not move anything: Ice 2 takes a note of everything currently in your menu bar first, so only icons that turn up afterwards count as new. This needs screen recording permission, which is what lets Ice 2 tell one item from another; without it, nothing is moved."
     },
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.0"
-  },
-  {
-    "version": "2.13.0",
-    "date": "2026-08-07",
-    "notes": {
-      "en": "A framework currency update. Nothing about the app behaves differently. · Ice 2 now builds against version 2.4.0 of the shared Dragon app framework. That release adds one thing — an option letting a system-managed input method keep Quit out of its settings menu bar — which Ice 2 is not and does not use. This keeps Ice 2 current with the shared framework rather than drifting behind it."
-    },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.13.0"
-  },
-  {
-    "version": "2.12.1",
-    "date": "2026-08-07",
-    "notes": {
-      "en": "Five fixes, including one that would have reset every setting you have. · A future update can no longer wipe your settings. Because of a flaw in the shared Dragon framework, the next version that added a setting would have failed to read the record you already had, quietly fallen back to defaults, and then written those defaults over your real preferences. Nothing has been lost — the flaw needed a future version to trigger it, and this update closes it first. · Restoring a damaged backup now refuses the file instead of erasing everything. Handing Settings ▸ Backup a corrupted backup cleared your entire settings store rather than declining to read it. And a failed uninstall now says so, instead of quitting with a success message after it had already torn your settings down. · VoiceOver can tell the menu bar shape buttons apart. In Settings ▸ Appearance, the buttons that choose how each end of the menu bar shape is drawn were pictures with no name attached, so picking a shape without looking at the screen meant guessing. They now read as \"Square cap\" and \"Round cap\"."
-    },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.12.1"
   }
 ]
