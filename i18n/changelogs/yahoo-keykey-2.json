@@ -1,5 +1,33 @@
 [
   {
+    "version": "2.13.2",
+    "date": "2026-08-18",
+    "notes": {
+      "en": "A maintenance release: release automation and documentation only. Nothing about typing has changed. · No part of Yahoo! KeyKey 2's own code changed in this release. What moved sits around it: the automation that builds, signs and publishes each version, and the documentation describing how a release is made. 倉頡, 速成 and 拼音, the candidate list, your settings and your learning data all behave exactly as they did in 2.13.1 — the only difference you can see is the version number this pane and the About pane report.",
+      "es": "Una versión de mantenimiento: solo automatización de las publicaciones y documentación. Nada relacionado con la escritura ha cambiado. · En esta versión no ha cambiado ninguna parte del código de Yahoo! KeyKey 2. Lo que se ha movido está a su alrededor: la automatización que compila, firma y publica cada versión, y la documentación que describe cómo se prepara una publicación. 倉頡, 速成 y 拼音, la lista de candidatos, tus preferencias y tus datos de aprendizaje se comportan exactamente igual que en la 2.13.1; la única diferencia que puedes ver es el número de versión que muestran este panel y el panel «Acerca de».",
+      "fr": "Une version de maintenance : uniquement l’automatisation des publications et la documentation. Rien concernant la saisie n’a changé. · Aucune partie du code de Yahoo! KeyKey 2 n’a changé dans cette version. Ce qui a bougé se situe autour : l’automatisation qui compile, signe et publie chaque version, et la documentation qui décrit la préparation d’une publication. 倉頡, 速成 et 拼音, la liste de candidats, vos réglages et vos données d’apprentissage se comportent exactement comme dans la 2.13.1 — la seule différence visible est le numéro de version affiché par ce volet et par le volet « À propos ».",
+      "ja": "メンテナンスのためのリリースです。変更はリリース作業の自動化とドキュメントだけで、入力の動作は何も変わりません。 · このリリースでは Yahoo! KeyKey 2 自体のコードは一切変更していません。変わったのはその周辺で、各バージョンをビルドし、署名して公開する自動化と、リリースの手順を説明するドキュメントです。倉頡・速成・拼音、候補リスト、環境設定、学習データはいずれも 2.13.1 とまったく同じように動作します。目に見える違いは、このパネルと「このアプリについて」が表示するバージョン番号だけです。",
+      "ko": "유지 관리를 위한 릴리스입니다. 릴리스 자동화와 문서만 바뀌었고, 입력 동작은 전혀 달라지지 않았습니다. · 이번 릴리스에서는 Yahoo! KeyKey 2 자체의 코드가 하나도 바뀌지 않았습니다. 바뀐 것은 그 주변으로, 각 버전을 빌드하고 서명해 배포하는 자동화와 릴리스 절차를 설명하는 문서입니다. 倉頡, 速成, 拼音과 후보 목록, 환경설정, 학습 데이터는 모두 2.13.1과 똑같이 동작합니다. 눈에 보이는 차이는 이 창과 정보 창이 표시하는 버전 번호뿐입니다.",
+      "zh-Hans": "这是一次维护发布，只更新了发布流程的自动化与文档，输入行为没有任何变化。 · 本次发布没有改动 Yahoo! KeyKey 2 自身的任何代码，改动的是它周边的部分：负责构建、签名并发布每个版本的自动化流程，以及说明发布步骤的文档。仓颉、速成、拼音、候选字列表、偏好设置与学习数据的表现都和 2.13.1 完全一样，你唯一能看到的差别，是本面板与「关于」面板显示的版本号。",
+      "zh-Hant": "這是一次維護發布，只更新了發布流程的自動化與文件，輸入行為沒有任何變化。 · 本次發布沒有改動 Yahoo! KeyKey 2 自身的任何程式碼，改動的是它周邊的部分：負責建置、簽章並發布每個版本的自動化流程，以及說明發布步驟的文件。倉頡、速成、拼音、候選字清單、偏好設定與學習資料的表現都和 2.13.1 完全一樣，你唯一能看到的差別，是本面板與「關於」面板顯示的版本號。"
+    },
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.2"
+  },
+  {
+    "version": "2.13.1",
+    "date": "2026-08-17",
+    "notes": {
+      "en": "In 速成, typing on past a two-key code now moves to the next character instead of leaving you stuck. · A 速成 code is two keys — the first and last 倉頡 radical — so once you have typed both, the character is settled. Starting the next character used to add that key to the code you had just finished, making a three-key code that no 速成 table contains: the candidate list emptied and the character could no longer be picked at all. A third key now finishes the character in progress, taking the candidate the space bar would have taken, and begins the next one.",
+      "es": "En 速成, seguir escribiendo después de un código de dos teclas ahora pasa al siguiente carácter en vez de dejarte atascado. · Un código 速成 tiene dos teclas —el primer y el último radical de 倉頡—, así que en cuanto escribes ambas el carácter ya está decidido. Antes, empezar el carácter siguiente añadía esa tecla al código que acababas de terminar y formaba un código de tres teclas que no existe en ninguna tabla 速成: la lista de candidatos se vaciaba y el carácter ya no se podía elegir. Ahora una tercera tecla confirma el carácter en curso —el candidato que habría elegido la barra espaciadora— y empieza el siguiente.",
+      "fr": "En 速成, continuer à taper après un code de deux touches passe désormais au caractère suivant au lieu de vous bloquer. · Un code 速成 comporte deux touches — le premier et le dernier radical 倉頡 — : une fois les deux saisies, le caractère est déterminé. Auparavant, commencer le caractère suivant ajoutait cette touche au code que vous veniez de terminer et formait un code de trois touches qu’aucune table 速成 ne contient : la liste de candidats se vidait et le caractère ne pouvait plus être choisi. Une troisième touche valide désormais le caractère en cours — celui que la barre d’espace aurait choisi — et commence le suivant.",
+      "ja": "速成で 2 打鍵のあとも入力を続けると、次の字に進むようになりました。行き詰まることはもうありません。 · 速成の字コードは 2 打鍵（倉頡の最初と最後の字根）だけで、2 打鍵を入力した時点でその字は決まっています。これまでは次の字の字根を押すと、打ち終わったコードに足されて 3 打鍵のコードになり、速成にそのようなコードは存在しないため候補が空になって、選ぼうとしていた字を選べなくなっていました。3 打鍵目は入力中の字を確定し（スペースキーが選ぶ候補と同じもの）、その字根で次の字を書き始めます。",
+      "ko": "速成에서 두 자리 코드를 다 입력한 뒤 계속 입력해도 이제 다음 글자로 넘어가며, 더 이상 막히지 않습니다. · 速成의 코드는 두 자리(倉頡의 첫 자근과 끝 자근)뿐이라, 두 자리를 입력하면 그 글자는 이미 정해진 상태입니다. 이전에는 다음 글자의 자근을 누르면 방금 끝낸 코드에 덧붙어 세 자리 코드가 되었고, 速成에는 그런 코드가 없으므로 후보 목록이 비어 원하던 글자를 더는 선택할 수 없었습니다. 이제 세 번째 자근은 입력 중인 글자를 확정하고(스페이스바가 선택했을 후보로) 그 자근으로 다음 글자를 시작합니다.",
+      "zh-Hans": "速成打完两码后再继续打，现在会直接接到下一个字，不会再卡住。 · 速成的字码只有两码（仓颉的首码与尾码），两码打完，这个字就已经定了。此前接着打下一个字的字根时，那一码会被接到刚打完的字码后面变成三码，而速成没有三码的字码，候选字列表因此清空，原本要选的字再也选不到，只能按退格键。现在第三码会先送出正在打的字（取空格键会取的那一个），再用这一码开始下一个字。",
+      "zh-Hant": "速成打完兩碼後再繼續打，現在會直接接到下一個字，不會再卡住。 · 速成的字碼只有兩碼（倉頡的首碼與尾碼），兩碼打完，這個字就已經定了。先前接著打下一個字的字根時，那一碼會被接到剛打完的字碼後面變成三碼，而速成沒有三碼的字碼，候選字清單因此清空，原本要選的字再也選不到，只能按倒退鍵。現在第三碼會先送出正在打的字（取空白鍵會取的那一個），再用這一碼開始下一個字。"
+    },
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.1"
+  },
+  {
     "version": "2.13.0",
     "date": "2026-08-12",
     "notes": {
@@ -58,21 +86,5 @@
       "en": "Two things that reached you in 2.11.1 without ever being described. · The About panel now follows the shared Dragon App layout. Its rows are fixed and identical across the Dragon apps, and each piece of bundled data is listed under its own name with its licence — McBopomofo (MIT), ibus-table-chinese (freely redistributable), OpenCC (Apache-2.0) — instead of a description of what it is for. · Fixed: a local test build no longer reaches into your installed copy. The two shared one file of adaptive candidate ordering, so testing on a developer's Mac changed the real ranking. A test build now keeps its own copy, and it can no longer check for or install updates. Nothing about the version you type with is affected."
     },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.2"
-  },
-  {
-    "version": "2.11.1",
-    "date": "2026-08-09",
-    "notes": {
-      "en": "A version-number correction. There is no change to the app itself. · A 2.11.0 was tagged but never released. The build checks that the version being released matches the version recorded in the app; the two did not match, and it stopped. Rather than reuse a version number that already has a failed build attached to it, the next release is 2.11.1."
-    },
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.1"
-  },
-  {
-    "version": "2.10.0",
-    "date": "2026-08-07",
-    "notes": {
-      "en": "Accessibility, speed, and fixes for three ways your data could quietly go missing. · New: the selection box can be read by VoiceOver. Each row is announced with its selecting digit, the candidate, and its 反查 code hint when shown, and the page indicator reads 第 2 頁，共 3 頁 instead of a bare \"▼ 1/3\". Nothing about how the window looks or behaves changed. · Faster. Builds were never compiled with optimization turned on — including the notarized download. Measured on the bundled 五代 table: loading the 倉頡 table 73 → 34 ms, deriving the 速成 table 78 → 8 ms, and 2000 速成 compositions 21 → 2 ms. · Fixed: restoring a damaged backup erased your settings, and an unreadable learning file silently reset your adaptive ranking. Both now refuse and leave what you already have alone. 設定 also gets a proper menu bar, with a standard 編輯 menu and 關閉 ⌘W."
-    },
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.10.0"
   }
 ]

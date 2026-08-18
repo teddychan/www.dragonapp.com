@@ -249,8 +249,8 @@
         <h2>新着情報</h2>
         <p>わかりやすい更新ノート、最新順。</p>
       </div>
-      <div class="changelog"><div class="logrow"><span class="ver">2.13.0</span><div><div class="lognote">候補の自動並べ替えをオフにできるようになりました。候補が動かなくなり、覚えた位置のままになります。 · 「一般 ▸ 入力方式」に「選んだ字に合わせて候補の順序を調整」を追加しました（初期設定はオン）。オフにすると、倉頡・速成・拼音と聯想語の候補は内蔵の順序のまま動かなくなり、Yahoo! KeyKey 2 は選んだ字の記録も行いません。すでに学習した内容は保持されるので、いつでもオンに戻せます。 · スコアが同じ聯想語が、常に同じ順序で表示されるようになりました。これまでは順序が一定でなく、起動のたびに変わることがあり、どの候補が一覧に載るかにも影響していました。</div><div class="logmeta">2026-08-12 · <a href="https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.0">GitHubで見る →</a></div></div></div>
-<div class="logrow"><span class="ver">2.12.1</span><div><div class="lognote">小さな修正です。Yahoo! KeyKey 2 に著作権表示が追加され、「情報」に表示されるものと同じになりました。入力の動作は何も変わりません。 · Finder の「情報を見る」に Yahoo! KeyKey 2 の著作権表示が表示されるようになりました。これまではアプリが著作権表示を持っておらず、その欄は空のままでした。</div><div class="logmeta">2026-08-11 · <a href="https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.12.1">GitHubで見る →</a></div></div></div></div>
+      <div class="changelog"><div class="logrow"><span class="ver">2.13.2</span><div><div class="lognote">メンテナンスのためのリリースです。変更はリリース作業の自動化とドキュメントだけで、入力の動作は何も変わりません。 · このリリースでは Yahoo! KeyKey 2 自体のコードは一切変更していません。変わったのはその周辺で、各バージョンをビルドし、署名して公開する自動化と、リリースの手順を説明するドキュメントです。倉頡・速成・拼音、候補リスト、環境設定、学習データはいずれも 2.13.1 とまったく同じように動作します。目に見える違いは、このパネルと「このアプリについて」が表示するバージョン番号だけです。</div><div class="logmeta">2026-08-18 · <a href="https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.2">GitHubで見る →</a></div></div></div>
+<div class="logrow"><span class="ver">2.13.1</span><div><div class="lognote">速成で 2 打鍵のあとも入力を続けると、次の字に進むようになりました。行き詰まることはもうありません。 · 速成の字コードは 2 打鍵（倉頡の最初と最後の字根）だけで、2 打鍵を入力した時点でその字は決まっています。これまでは次の字の字根を押すと、打ち終わったコードに足されて 3 打鍵のコードになり、速成にそのようなコードは存在しないため候補が空になって、選ぼうとしていた字を選べなくなっていました。3 打鍵目は入力中の字を確定し（スペースキーが選ぶ候補と同じもの）、その字根で次の字を書き始めます。</div><div class="logmeta">2026-08-17 · <a href="https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.1">GitHubで見る →</a></div></div></div></div>
       <p class="changelog-auto">リリースごとにアプリの「新機能」から</p>
     </div>
   </section>
