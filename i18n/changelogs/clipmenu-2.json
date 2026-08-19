@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.21.0",
+    "date": "2026-08-18",
+    "notes": {
+      "en": "A maintenance release: internal updates only, with no changes to how ClipMenu works.",
+      "es": "Una versión de mantenimiento: solo cambios internos, sin modificaciones en el funcionamiento de ClipMenu.",
+      "fr": "Une version de maintenance : uniquement des changements internes, sans modification du fonctionnement de ClipMenu.",
+      "ja": "メンテナンス版です。内部の更新のみで、ClipMenu の使い方は変わりません。",
+      "ko": "유지 관리 릴리스입니다. 내부 업데이트만 있으며 ClipMenu 사용 방식은 달라지지 않습니다.",
+      "zh-Hans": "这是一个维护版本：仅有内部更新，ClipMenu 的使用方式没有变化。",
+      "zh-Hant": "這是一個維護版本：僅有內部更新，ClipMenu 的使用方式沒有變化。"
+    },
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.0"
+  },
+  {
     "version": "2.20.10",
     "date": "2026-08-18",
     "notes": {
@@ -78,13 +92,5 @@
       "en": "A small fix for anyone who installed ClipMenu with Homebrew. · Uninstalling from Settings now clears Homebrew's record of ClipMenu too, so installing it again with Homebrew works instead of being refused as already installed."
     },
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.3"
-  },
-  {
-    "version": "2.20.2",
-    "date": "2026-08-10",
-    "notes": {
-      "en": "A maintenance release: every fix is in the local development build, and the shipped app is unchanged. · The development build could have reached the production update feed, which would have replaced it with the public app. It can no longer check for updates at all. · The development build wrote its saved actions into the installed app's folder, so testing on a developer's Mac edited the real action set — or wrote the defaults over it on first launch. It now keeps its own."
-    },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.2"
   }
 ]
