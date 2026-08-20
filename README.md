@@ -5,11 +5,14 @@ site for **Dragon App**, a small studio reviving beloved, discontinued macOS
 apps as fast, native, open-source rebuilds.
 
 This repo does **not** contain any app source. Each app is built in its own
-repository; this repo only hosts:
+repository; this repo only hosts the marketing pages — one landing page per app,
+in seven languages.
 
-1. **A marketing page per app** — one landing page each.
-2. **The Sparkle appcast feeds** — the auto-update XML each app polls. These
-   are written by each app's release CI, not by hand.
+**Production Sparkle appcasts are not hosted here.** Every app self-hosts its own
+feed in its own repository, which the app reads over `raw.githubusercontent.com`.
+Three retired mirrors survive under `docs/` as frozen files: they are kept
+deliberately as a one-hop bridge for installs older than the release that pointed
+`SUFeedURL` at the app-owned URL, and they are never republished.
 
 The site is served by **GitHub Pages from the [`docs/`](docs/) folder**.
 
@@ -20,6 +23,7 @@ The site is served by **GitHub Pages from the [`docs/`](docs/) folder**.
 | ClipMenu 2 | [/clipmenu-2/](https://www.dragonapp.com/clipmenu-2/) | [teddychan/clipmenu-2](https://github.com/teddychan/clipmenu-2) |
 | Yahoo KeyKey 2 | [/yahoo-keykey-2/](https://www.dragonapp.com/yahoo-keykey-2/) | [teddychan/yahoo-keykey-2](https://github.com/teddychan/yahoo-keykey-2) |
 | Ice 2 | [/ice-2/](https://www.dragonapp.com/ice-2/) | [teddychan/ice-2](https://github.com/teddychan/ice-2) |
+| Spectacle 2 | [/spectacle-2/](https://www.dragonapp.com/spectacle-2/) | [teddychan/spectacle-2](https://github.com/teddychan/spectacle-2) |
 
 [`docs/index.html`](docs/index.html) is the studio hub that links to all of
 them. `/clipmenu/` and `/keykey/` are redirect stubs kept for old links.
@@ -28,28 +32,65 @@ them. `/clipmenu/` and `/keykey/` are redirect stubs kept for old links.
 
 ```
 docs/                  ← published by GitHub Pages
-  index.html           studio hub (app cards)
-  <app>/index.html     one landing page per app
-  <app>/appcast.xml    Sparkle update feed (written by each app's release CI)
-  shared/dragon.css    shared design system (per-app accent via a <body> theme class)
-  shared/*.js          consent banner + i18n runtime
-  <locale>/            localized pages (es, fr, ja, ko, zh-Hans, zh-Hant)
-  sitemap.xml, robots.txt, CNAME, favicons, app icons
-i18n/                  localization build (build_i18n.py + templates/ + strings/*.json)
+  index.html           GENERATED  studio hub (app cards)
+  <app>/index.html     GENERATED  one landing page per app
+  <locale>/            GENERATED  localized pages (es, fr, ja, ko, zh-Hans, zh-Hant)
+  sitemap.xml          GENERATED  with hreflang alternates
+  <app>/appcast.xml    frozen, retired Sparkle mirror (3 apps only) — see above
+  shared/dragon.css    source: design system (per-app accent via a <body> theme class)
+  shared/*.js          source: consent banner + i18n runtime
+  robots.txt, CNAME, favicons, app icons
+i18n/                  page sources — templates/, apps/, strings/, changelogs/
 scripts/cache-bust.sh  fingerprints CSS/JS/images before publishing
+scripts/fetch-changelogs.py  pulls each release's What's New into i18n/changelogs/
 ```
 
 ## Editing
 
-Edit files under `docs/` directly, commit, and push `main` (or open a PR and
-merge) — GitHub Pages rebuilds automatically.
+Every page under `docs/` is generated output. **Never hand-edit a generated
+page** — the next build overwrites it. Edit the sources under
+[`i18n/`](i18n/) instead:
 
-**Do not hand-edit** the `appcast.xml` files (managed by each app's release
-CI), `docs/CNAME`, or the localized pages under `docs/<locale>/` (regenerated
-by `i18n/build_i18n.py` from the templates and string tables).
+| Source | What it holds |
+| --- | --- |
+| `i18n/templates/*.html` | page structure, with `{{ key }}` placeholders |
+| `i18n/apps/<slug>.json` | per-app facts; `i18n/apps/_index.json` lists the apps |
+| `i18n/strings/en-US.json` | English copy — the source of truth, edit this first |
+| `i18n/strings/<lang>.json` | the other six locales |
+| `i18n/changelogs/<slug>.json` | "What's new" data — generated, see below |
 
-Adding a new app = a new `docs/<app>/` folder, a card on the hub, plus updates
-to `docs/sitemap.xml` and `docs/robots.txt` for the new URL.
+`docs/shared/dragon.css`, `docs/shared/*.js`, `docs/robots.txt`, `docs/CNAME`
+and the icons are hand-maintained sources that happen to live under `docs/`;
+those you do edit in place.
+
+Then rebuild and publish:
+
+```sh
+python3 i18n/build_i18n.py && ./scripts/cache-bust.sh
+```
+
+Run them in that order and don't touch `docs/` afterwards: `build_i18n.py`
+writes asset URLs bare, so `cache-bust.sh` has to follow it or the `?v=`
+fingerprints are lost. Commit on a branch and open a PR — never push straight
+to `main`.
+
+### The "What's new" lists are generated
+
+`i18n/changelogs/*.json` is data, not copy. Each app's release CI sends a
+`repository_dispatch` after it publishes, and
+[`refresh-changelogs.yml`](.github/workflows/refresh-changelogs.yml) refetches
+every release's `whats-new.json` asset — the app's own What's New pane, in each
+language it ships — reruns the build, and opens a pull request. **Merging that
+pull request is what publishes the changelog.** A weekly scheduled run is a
+backstop for a dispatch that never arrived.
+
+To fix wording, fix the **app's** What's New strings and ship them in its next
+release. A hand-edit here is overwritten by the next fetch.
+
+Adding a new app = a new `i18n/apps/<slug>.json`, an entry in
+`i18n/apps/_index.json`, and its copy in `i18n/strings/`. Neither
+`docs/sitemap.xml` nor `docs/robots.txt` needs touching: the sitemap is
+regenerated by the build, and `robots.txt` already allows the whole site.
 
 ## License
 
