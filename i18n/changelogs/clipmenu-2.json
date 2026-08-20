@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.21.1",
+    "date": "2026-08-20",
+    "notes": {
+      "en": "A safety fix in Uninstall, inherited from the shared framework ClipMenu 2 is built on. Your clipboard history and snippets are unchanged. · Uninstall now stops if it finds more than one copy of ClipMenu 2 on your Mac. Moving the copy you are running to the Trash was always safe, but your settings, login item and support files are stored under the app's identity rather than its location — so two copies share all of them, and there is no way to tell whose is whose. Uninstalling a spare copy could remove the settings belonging to the copy you actually use. It now stops before removing anything and lists where the copies are, so you can trash the ones you do not want and try again. If you have one copy, which is nearly everyone, nothing changes. · Updated to DragonKit 4.1.1, the shared framework behind Settings, About, What's New and software updates. The fix above comes from it; none of those panes look or behave differently.",
+      "es": "Una corrección de seguridad en Desinstalar, heredada del framework compartido con el que se compila ClipMenu 2. Tu historial de portapapeles y tus fragmentos no cambian. · Desinstalar ahora se detiene si encuentra más de una copia de ClipMenu 2 en tu Mac. Mover a la Papelera la copia que estás ejecutando siempre fue seguro, pero tus ajustes, el elemento de inicio de sesión y los archivos de soporte se guardan según la identidad de la app y no según su ubicación, así que dos copias comparten todo eso y no hay forma de saber cuál es cuál. Desinstalar una copia de más podría borrar los ajustes de la copia que sí usas. Ahora se detiene antes de borrar nada y muestra dónde están las copias, para que puedas mover a la Papelera las que no quieres y volver a intentarlo. Si tienes una sola copia, que es casi todo el mundo, nada cambia. · Actualizado a DragonKit 4.1.1, el framework compartido detrás de Ajustes, Acerca de, Novedades y las actualizaciones de software. La corrección anterior viene de ahí; ninguno de esos paneles se ve ni se comporta de forma distinta.",
+      "fr": "Une correction de sécurité dans Désinstaller, héritée du framework partagé avec lequel ClipMenu 2 est compilé. Votre historique du presse-papiers et vos extraits ne changent pas. · La désinstallation s'arrête désormais si elle trouve plus d'une copie de ClipMenu 2 sur votre Mac. Déplacer vers la Corbeille la copie que vous utilisez a toujours été sans risque, mais vos réglages, l'élément de connexion et les fichiers d'assistance sont enregistrés selon l'identité de l'app plutôt que son emplacement — deux copies partagent donc tout cela, sans moyen de savoir laquelle est laquelle. Désinstaller une copie superflue pourrait supprimer les réglages de la copie que vous utilisez réellement. Elle s'arrête désormais avant de rien supprimer et indique où se trouvent les copies, afin que vous puissiez mettre à la Corbeille celles dont vous ne voulez pas, puis réessayer. Si vous n'avez qu'une seule copie, ce qui est le cas de presque tout le monde, rien ne change. · Mise à jour vers DragonKit 4.1.1, le framework partagé derrière les Réglages, À propos, Nouveautés et les mises à jour logicielles. La correction ci-dessus en provient ; aucun de ces panneaux ne change d'apparence ni de comportement.",
+      "ja": "アンインストールの安全性に関する修正です。ClipMenu 2 のビルドに使われている共有フレームワークに由来します。クリップボード履歴とスニペットの使い方は変わりません。 · Mac 上に ClipMenu 2 のコピーが 2 つ以上見つかった場合、アンインストールは実行前に停止するようになりました。実行中のコピーをゴミ箱に移動すること自体は常に安全でしたが、設定・ログイン項目・サポートファイルはアプリの場所ではなく識別情報に紐づけて保存されているため、2 つのコピーはこれらすべてを共有してしまい、どちらのものか区別できません。予備のコピーをアンインストールすると、実際に使っているコピーの設定が削除されてしまう可能性がありました。そこで、何かを削除する前に停止し、コピーがどこにあるかを一覧表示するようになりました。不要なコピーをゴミ箱に移動してから、もう一度お試しください。コピーが 1 つしかない場合（ほとんどの方がそうです）は、何も変わりません。 · DragonKit 4.1.1 に更新しました。これは「設定」「情報」「新機能」やソフトウェアアップデートを支える共有フレームワークです。上記の修正はここから来ていますが、これらのパネルの見た目や動作は変わりません。",
+      "ko": "제거 기능의 안전 관련 수정으로, ClipMenu 2 빌드에 사용하는 공유 프레임워크에서 이어받은 것입니다. 클립보드 기록과 스니펫 사용 방식은 달라지지 않습니다. · Mac에 ClipMenu 2 사본이 두 개 이상 있으면 제거가 이제 실행을 멈춥니다. 실행 중인 사본을 휴지통으로 옮기는 것은 항상 안전했지만, 설정·로그인 항목·지원 파일은 앱의 위치가 아니라 신원을 기준으로 저장되기 때문에 두 사본이 이 모든 것을 공유하게 되어 어느 쪽 것인지 구분할 방법이 없습니다. 여분의 사본을 제거하면 실제로 사용 중인 사본의 설정이 삭제될 수 있었습니다. 이제는 무언가를 삭제하기 전에 멈추고 사본이 있는 위치를 알려주므로, 원하지 않는 사본을 휴지통으로 옮긴 뒤 다시 시도할 수 있습니다. 사본이 하나뿐이라면(거의 모든 분이 해당) 아무것도 달라지지 않습니다. · DragonKit 4.1.1로 업데이트했습니다. 설정, 정보, 새로운 기능, 소프트웨어 업데이트를 지원하는 공유 프레임워크입니다. 위의 수정 사항은 여기서 비롯되었으며, 이 패널들의 모습이나 동작은 달라지지 않습니다.",
+      "zh-Hans": "卸载功能的一项安全修复，来自 ClipMenu 2 所基于的共享框架。你的剪贴板历史和片段功能没有变化。 · 如果在你的 Mac 上发现不止一份 ClipMenu 2 副本，卸载现在会停止执行。把正在运行的这份副本移入废纸篓一直是安全的，但你的设置、登录项和支持文件都是按应用的身份而不是位置存储的——因此两份副本会共享全部这些内容，也无法分辨哪份是哪份。卸载多余的副本可能会删除你实际使用的那份副本的设置。现在它会在删除任何内容之前停止，并列出各份副本所在的位置，方便你先清理掉不需要的副本，再重新尝试。如果你只有一份副本——这是绝大多数人的情况——则不会有任何变化。 · 更新到 DragonKit 4.1.1，这是支撑设置、关于、新功能和软件更新的共享框架。上面的修复正是来自它；这些面板的外观和行为都没有变化。",
+      "zh-Hant": "解除安裝功能的一項安全修正，來自 ClipMenu 2 所依據的共享框架。你的剪貼簿歷史記錄與片段功能沒有變化。 · 如果在你的 Mac 上發現不止一份 ClipMenu 2 副本，解除安裝現在會停止執行。把正在執行的這份副本移到垃圾桶一直是安全的，但你的設定、登入項目和支援檔案都是依應用程式的身分而非位置儲存的——因此兩份副本會共用全部這些內容，也無法分辨哪份是哪份。解除安裝多餘的副本可能會刪除你實際使用的那份副本的設定。現在它會在刪除任何內容之前停止，並列出各份副本所在的位置，方便你先清除不需要的副本，再重新嘗試。如果你只有一份副本——這是絕大多數人的情況——則不會有任何變化。 · 更新至 DragonKit 4.1.1，這是支撐設定、關於、新功能與軟體更新的共享框架。上面的修正正是來自它；這些面板的外觀與行為都沒有變化。"
+    },
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.1"
+  },
+  {
     "version": "2.21.0",
     "date": "2026-08-18",
     "notes": {
@@ -84,13 +98,5 @@
       "en": "A maintenance release: internal updates only, with no changes to how ClipMenu works. · ClipMenu now checks for updates from its own repository rather than the website, so a problem with the website can no longer hold up an update."
     },
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.4"
-  },
-  {
-    "version": "2.20.3",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A small fix for anyone who installed ClipMenu with Homebrew. · Uninstalling from Settings now clears Homebrew's record of ClipMenu too, so installing it again with Homebrew works instead of being refused as already installed."
-    },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.3"
   }
 ]

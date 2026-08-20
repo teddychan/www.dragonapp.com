@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.5.7",
+    "date": "2026-08-20",
+    "notes": {
+      "en": "A safety fix in Uninstall, inherited from the shared framework Spectacle 2 is built on. Window management is unchanged. · Uninstall now stops if it finds more than one copy of Spectacle 2 on your Mac. Moving the copy you are running to the Trash was always safe, but your settings, login item and support files are stored under the app's identity rather than its location — so two copies share all of them, and there is no way to tell whose is whose. Uninstalling a spare copy could remove the settings belonging to the copy you actually use. It now stops before removing anything and lists where the copies are, so you can trash the ones you do not want and try again. If you have one copy, which is nearly everyone, nothing changes. · Updated to DragonKit 4.1.1, the shared framework behind Settings, About, What's New and software updates. The fix above comes from it; none of those panes look or behave differently.",
+      "es": "Una corrección de seguridad en Desinstalar, heredada del framework compartido en el que se basa Spectacle 2. La gestión de ventanas no cambia. · Desinstalar ahora se detiene si encuentra más de una copia de Spectacle 2 en tu Mac. Mover a la papelera la copia que estás usando siempre fue seguro, pero tus ajustes, el elemento de inicio y los archivos de soporte se guardan según la identidad de la app y no según su ubicación, así que dos copias comparten todo eso y no hay forma de saber qué pertenece a cuál. Desinstalar una copia sobrante podía borrar los ajustes de la copia que realmente usas. Ahora se detiene antes de borrar nada y muestra dónde están las copias, para que puedas enviar a la papelera las que no quieras e intentarlo de nuevo. Si solo tienes una copia, como casi todo el mundo, nada cambia. · Actualizado a DragonKit 4.1.1, el framework compartido detrás de Ajustes, Acerca de, Novedades y las actualizaciones de software. La corrección anterior viene de ahí: ninguno de esos paneles se ve ni se comporta de forma distinta.",
+      "fr": "Une correction de sécurité dans Désinstaller, héritée du framework partagé sur lequel repose Spectacle 2. La gestion des fenêtres ne change pas. · Désinstaller s’arrête maintenant s’il trouve plus d’une copie de Spectacle 2 sur votre Mac. Mettre à la corbeille la copie en cours d’exécution a toujours été sans risque, mais vos réglages, l’élément d’ouverture et les fichiers de support sont enregistrés selon l’identité de l’app et non selon son emplacement : deux copies partagent donc tout cela, et rien ne permet de savoir ce qui appartient à laquelle. Désinstaller une copie superflue pouvait supprimer les réglages de celle que vous utilisez réellement. L’opération s’arrête désormais avant de supprimer quoi que ce soit et indique où se trouvent les copies, pour que vous puissiez mettre à la corbeille celles dont vous ne voulez pas et réessayer. Si vous n’avez qu’une seule copie, comme presque tout le monde, rien ne change. · Mise à jour vers DragonKit 4.1.1, le framework partagé derrière Réglages, À propos, Nouveautés et les mises à jour logicielles. La correction ci-dessus en provient ; aucun de ces volets n’a changé d’apparence ni de comportement.",
+      "ja": "「アンインストール」の安全性に関する修正です。Spectacle 2 が土台としている共有フレームワークから受け継いだものです。ウインドウ操作は変わりません。 · Mac 上に Spectacle 2 のコピーが 2 つ以上ある場合、「アンインストール」は処理を中止するようになりました。実行中のコピーをゴミ箱に入れる操作は以前から安全でしたが、設定・ログイン項目・サポートファイルはアプリの場所ではなく識別子に基づいて保存されるため、2 つのコピーがそれらをすべて共有し、どちらのものか区別できません。余分なコピーをアンインストールすると、実際に使っているコピーの設定が削除される可能性がありました。今後は何も削除する前に中止し、各コピーの場所を示します。不要なものをゴミ箱に入れてから、もう一度お試しください。コピーが 1 つだけの場合、つまりほとんどの方には、何も変わりません。 · 共有フレームワーク DragonKit を 4.1.1 に更新しました。「設定」「このアプリについて」「新機能」およびソフトウェア・アップデートを担う部分です。上記の修正はこの更新によるもので、これらのパネルの見た目も動作も変わりません。",
+      "ko": "‘제거’ 기능의 안전성 관련 수정입니다. Spectacle 2가 기반으로 삼는 공용 프레임워크에서 받아온 변경입니다. 창 관리 동작은 그대로입니다. · Mac에 Spectacle 2 사본이 두 개 이상 있으면 ‘제거’가 중단됩니다. 실행 중인 사본을 휴지통으로 옮기는 것은 예전에도 안전했지만, 설정과 로그인 항목, 지원 파일은 앱의 위치가 아니라 앱의 식별자를 기준으로 저장되기 때문에 두 사본이 이 모든 것을 공유하며 어느 쪽 것인지 구분할 수 없습니다. 여분의 사본을 제거하면 실제로 사용하는 사본의 설정이 지워질 수 있었습니다. 이제는 아무것도 지우기 전에 중단하고 사본들의 위치를 알려 줍니다. 원하지 않는 사본을 휴지통으로 옮긴 뒤 다시 시도하십시오. 사본이 하나뿐이라면, 즉 거의 모든 경우에는 달라지는 점이 없습니다. · 공용 프레임워크 DragonKit을 4.1.1로 업데이트했습니다. 설정, 정보, 새로운 기능, 소프트웨어 업데이트를 담당하는 부분입니다. 위의 수정은 이 업데이트에서 온 것이며, 해당 패널의 모습과 동작은 그대로입니다.",
+      "zh-Hans": "这是“卸载”的一处安全修复，来自 Spectacle 2 所依赖的共享框架。窗口管理没有任何变化。 · 如果 Mac 上存在两个或更多 Spectacle 2 副本，“卸载”现在会中止。把正在运行的副本移到废纸篓一直是安全的，但设置、登录项和支持文件是按应用的标识而非所在位置保存的，因此两个副本会共享这些内容，无法区分归属。卸载多余的副本可能会删除你实际使用的那个副本的设置。现在它会在删除任何内容之前中止，并列出各个副本的位置，你可以先把不需要的移到废纸篓，然后重试。如果你只有一个副本（几乎所有人都是），则没有任何变化。 · 共享框架 DragonKit 升级到 4.1.1，它负责“设置”、“关于”、“新增功能”以及软件更新。上面这处修复来自该升级；这些面板的外观和行为都没有改变。",
+      "zh-Hant": "這是「卸載」的一處安全修正，來自 Spectacle 2 所依賴的共享框架。視窗管理沒有任何變化。 · 如果 Mac 上有兩個或更多 Spectacle 2 副本，「卸載」現在會中止。把正在執行的副本移到垃圾桶一直是安全的，但設定、登入項目與支援檔案是依應用程式的識別碼而非所在位置儲存的，因此兩個副本會共用這些內容，無法分辨歸屬。卸載多餘的副本可能會刪除你實際使用的那個副本的設定。現在它會在刪除任何內容之前中止，並列出各個副本的位置，你可以先把不需要的移到垃圾桶，再重試一次。如果你只有一個副本（幾乎所有人都是），則沒有任何變化。 · 共享框架 DragonKit 升級到 4.1.1，它負責「設定」、「關於」、「新增功能」以及軟體更新。上面這處修正來自該升級；這些面板的外觀和行為都沒有改變。"
+    },
+    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.7"
+  },
+  {
     "version": "2.5.6",
     "date": "2026-08-18",
     "notes": {
@@ -66,13 +80,5 @@
       "en": "A fix for the version shown in the About panel. · The About panel showed the version in the wrong format. It read 2.4.0 (754), missing both the v prefix and the build timestamp that every other Dragon app shows. It now reads v2.4.1 with its build number and UTC build time."
     },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.4.1"
-  },
-  {
-    "version": "2.4.0",
-    "date": "2026-08-07",
-    "notes": {
-      "en": "A small addition to the Settings window's menu bar. · Hide, Hide Others and Show All are now in the Settings window's menu bar. The previous release gave that window a menu bar whose application menu held only Quit; the three conventional commands above it are now filled in."
-    },
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.4.0"
   }
 ]
