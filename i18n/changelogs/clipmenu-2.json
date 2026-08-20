@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.21.2",
+    "date": "2026-08-20",
+    "notes": {
+      "en": "ClipMenu 2 now calls itself by the same name everywhere in its own interface. Your clipboard history, snippets and settings are unchanged. · The app is called \"ClipMenu 2\" throughout. Twelve places in its own interface still said \"ClipMenu\" — Quit, Open, the onboarding screens, the launch-at-login prompt and the paste-permission hint among them — while the menu bar and About showed \"ClipMenu 2\". The app disagreed with itself about its own name. Every one of those now matches. References to the original ClipMenu by Naotaka Morimoto, which this app is a rebuild of, deliberately keep the original name.",
+      "es": "ClipMenu 2 ahora usa el mismo nombre en toda su interfaz. Tu historial del portapapeles, tus fragmentos y tus ajustes no cambian. · La app se llama \"ClipMenu 2\" en todas partes. Doce lugares de su propia interfaz seguían diciendo \"ClipMenu\" — entre ellos Salir, Abrir, las pantallas de bienvenida, el aviso de inicio al iniciar sesión y la indicación sobre el permiso de pegado — mientras la barra de menús y Acerca de mostraban \"ClipMenu 2\". La app no coincidía consigo misma en su propio nombre. Ahora todos coinciden. Las referencias al ClipMenu original de Naotaka Morimoto, del que esta app es una reconstrucción, conservan a propósito el nombre original.",
+      "fr": "ClipMenu 2 porte désormais le même nom partout dans son interface. Votre historique de presse-papiers, vos extraits et vos réglages sont inchangés. · L’app s’appelle \"ClipMenu 2\" partout. Douze endroits de sa propre interface indiquaient encore \"ClipMenu\" — dont Quitter, Ouvrir, les écrans de bienvenue, l’invite de lancement à l’ouverture de session et l’indication sur l’autorisation de collage — alors que la barre des menus et À propos affichaient \"ClipMenu 2\". L’app se contredisait sur son propre nom. Tous concordent désormais. Les références au ClipMenu d’origine de Naotaka Morimoto, dont cette app est une réécriture, conservent volontairement le nom d’origine.",
+      "ja": "ClipMenu 2 のアプリ内表記が、すべて同じ名称に揃いました。クリップボード履歴、スニペット、設定は変わりません。 · アプリの名称がすべて「ClipMenu 2」になりました。メニューバーと「このアプリについて」は「ClipMenu 2」と表示していたのに、終了・開く・初回設定画面・ログイン時に起動するかの確認・貼り付け権限の説明など 12 か所は「ClipMenu」のままで、アプリが自分の名前について食い違っていました。これらすべてを揃えました。このアプリが作り直しの元とした Naotaka Morimoto 氏によるオリジナルの ClipMenu への言及は、意図的に元の名称のままにしています。",
+      "ko": "ClipMenu 2가 앱 내 모든 곳에서 같은 이름을 사용합니다. 클립보드 기록과 스니펫, 설정은 그대로입니다. · 앱 이름이 어디에서나 ‘ClipMenu 2’로 표기됩니다. 메뉴 바와 정보 창은 ‘ClipMenu 2’를 보여 주는데도 종료, 열기, 초기 설정 화면, 로그인 시 실행 여부 확인, 붙여넣기 권한 안내 등 12곳은 ‘ClipMenu’로 남아 있어 앱이 자기 이름을 두고 서로 어긋났습니다. 이제 모두 일치합니다. 이 앱이 다시 만든 원본인 Naotaka Morimoto의 ClipMenu를 가리키는 표현은 의도적으로 원래 이름을 유지합니다.",
+      "zh-Hans": "ClipMenu 2 现在在应用界面各处都使用同一个名称。你的剪贴板历史、片段与设置都没有变化。 · 应用在各处都称自己为“ClipMenu 2”。菜单栏与“关于”显示的是“ClipMenu 2”，但退出、打开、初次设置界面、开机启动询问、粘贴权限说明等 12 处仍写着“ClipMenu”，应用对自己的名称前后不一致。现在这些都已统一。对 Naotaka Morimoto 所写、本应用据以重写的原版 ClipMenu 的指称，仍有意保留原名。",
+      "zh-Hant": "ClipMenu 2 現在在應用程式介面各處都使用同一個名稱。你的剪貼簿歷史記錄、片段與設定都沒有變化。 · 應用程式在各處都稱自己為「ClipMenu 2」。選單列與「關於」顯示的是「ClipMenu 2」，但結束、開啟、初次設定畫面、登入時啟動詢問、貼上權限說明等 12 處仍寫著「ClipMenu」，應用程式對自己的名稱前後不一致。現在這些都已統一。對 Naotaka Morimoto 所寫、本應用程式據以重寫的原版 ClipMenu 的指稱，仍刻意保留原名。"
+    },
+    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.2"
+  },
+  {
     "version": "2.21.1",
     "date": "2026-08-20",
     "notes": {
@@ -90,13 +104,5 @@
       "en": "A maintenance release: internal updates only, with no changes to how ClipMenu works. · ClipMenu is built on an updated version of the shared Dragon App code. About's Credits row now reads DragonKit v3.4.0. That row is the only observable difference — no behaviour, setting, shortcut or stored file changes."
     },
     "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.5"
-  },
-  {
-    "version": "2.20.4",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A maintenance release: internal updates only, with no changes to how ClipMenu works. · ClipMenu now checks for updates from its own repository rather than the website, so a problem with the website can no longer hold up an update."
-    },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.4"
   }
 ]
