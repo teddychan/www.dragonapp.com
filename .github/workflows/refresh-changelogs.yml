@@ -42,6 +42,7 @@ jobs:
           python-version: '3.x'
 
       - name: Fetch release notes
+        id: fetch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -51,8 +52,15 @@ jobs:
           # whats-new.json will not download, so a partial refresh is possible —
           # surface that instead of letting a half-refresh look like a clean run.
           python3 scripts/fetch-changelogs.py | tee /tmp/fetch.log
+          # Recorded as an output, not just an annotation: the auto-merge gate below
+          # has to be able to refuse. A ::warning:: nobody reads was the whole of the
+          # response to a partial refresh before, which is fine while a human reads
+          # the diff and useless the moment one does not.
           if grep -q '\[warn\]' /tmp/fetch.log; then
             echo "::warning::at least one app or release kept what the site already had; see the log above"
+            echo "warned=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "warned=false" >> "$GITHUB_OUTPUT"
           fi
 
       # Runs BEFORE the build on purpose: test_build.py shells out to
@@ -115,6 +123,72 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
+      # Is this diff purely a changelog refresh, or does it carry something a person
+      # should read? Everything the steps above write lands in exactly two places —
+      # i18n/changelogs/*.json (fetch) and docs/** (build + cache-bust) — so anything
+      # outside those means the branch picked up a change this workflow did not make.
+      #
+      # ALL FOUR conditions are required. Each one is a way an unread diff could reach
+      # main, and the fourth is the one that is easy to miss:
+      #
+      #   1. Only those two paths changed.
+      #   2. The fetch logged no [warn]. A warn means at least one app silently kept
+      #      what the site already had, so "the notes are current" is unproven.
+      #   3. The trigger was a release dispatch. A scheduled catch-up means a dispatch
+      #      was dropped — abnormal by definition, so it gets a human.
+      #   4. At least one changelog file actually moved. A docs/**-only diff is a
+      #      REGENERATION: main's pages had drifted from its own i18n/ sources, which
+      #      happens when someone merges a template or strings change without running
+      #      the build. Auto-merging that would publish an unrelated visual change
+      #      nobody reviewed, under a title about release notes.
+      - name: Classify the diff
+        id: gate
+        env:
+          WARNED: ${{ steps.fetch.outputs.warned }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          verdict=true
+          reason=""
+
+          # Untracked files count too: a brand-new app's first changelog file arrives
+          # untracked, and --porcelain lists it where `git diff --name-only` would not.
+          #
+          # A while-read loop and plain strings, not `mapfile` and arrays: those are
+          # bash-4 features, so the logic could not be exercised on a bash-3.2 Mac
+          # before shipping. This form runs anywhere, which is the only reason the
+          # scenario table in the PR body could be produced at all.
+          stray=""
+          changelogs=0
+          while IFS= read -r p; do
+            [ -n "$p" ] || continue
+            case "$p" in
+              docs/*) ;;
+              i18n/changelogs/*.json) changelogs=$((changelogs + 1)) ;;
+              *) stray="${stray}${p} " ;;
+            esac
+          done <<EOF
+          $(git status --porcelain | sed 's/^...//')
+          EOF
+
+          if [ -n "$stray" ]; then
+            verdict=false; reason="paths outside i18n/changelogs and docs/: ${stray% }"
+          elif [ "$changelogs" -eq 0 ]; then
+            verdict=false; reason="no changelog file moved — this is a page regeneration, not a refresh"
+          elif [ "$WARNED" = "true" ]; then
+            verdict=false; reason="the fetch logged [warn]; at least one app kept its previous notes"
+          elif [ "$EVENT" != "repository_dispatch" ]; then
+            verdict=false; reason="trigger was ${EVENT}, not a release dispatch"
+          fi
+
+          if [ "$verdict" = "true" ]; then
+            echo "Mechanical: ${changelogs} changelog file(s) plus generated pages. Will auto-merge."
+          else
+            echo "::notice title=Needs review::${reason}"
+          fi
+          echo "mechanical=${verdict}" >> "$GITHUB_OUTPUT"
+          echo "reason=${reason}" >> "$GITHUB_OUTPUT"
+
       - name: Open or update the refresh PR
         if: steps.summary.outputs.changed == 'true'
         env:
@@ -140,7 +214,13 @@ jobs:
           # site stayed stale — a silent failure, since the run still went green.
           OPEN="$(gh pr list --head "$BRANCH" --state open --json number --jq 'length')"
           if [ "${OPEN:-0}" -gt 0 ]; then
-            echo "Updated the existing refresh PR."
+            # Retitle, don't just re-push. The title is written once at creation, so a PR
+            # updated by later dispatches used to keep announcing whichever app happened
+            # to release first: #78 said "Spectacle 2 2.5.7" while carrying four apps'
+            # notes. Harmless while a human opens the diff, actively misleading once the
+            # gate below reads this same PR — and it is the field a reviewer skims.
+            gh pr edit "$BRANCH" --title "site: refresh changelogs — ${SUMMARY}"
+            echo "Updated the existing refresh PR and retitled it: ${SUMMARY}"
             exit 0
           fi
 
@@ -166,3 +246,35 @@ jobs:
           gh pr create --base main --head "$BRANCH" \
             --title "site: refresh changelogs — ${SUMMARY}" \
             --body-file /tmp/body.md
+
+      # The point of the gate: a purely mechanical refresh publishes itself.
+      #
+      # Still through a PR rather than a push to main — the audit trail and the repo's
+      # own branch-and-PR rule both survive. main requires a pull request with zero
+      # approvals and no status checks, so GITHUB_TOKEN can merge its own; no PAT and
+      # no branch-protection change are needed.
+      #
+      # Not `--auto`: this repo runs no workflow on pull_request, so there is nothing
+      # to wait for. The tests that matter already ran in THIS job, before the build.
+      #
+      # `|| true` on the notice: a merge that races the concurrency group is not worth
+      # failing an already-correct refresh over. The next run reopens the PR.
+      - name: Auto-merge a mechanical refresh
+        if: steps.summary.outputs.changed == 'true' && steps.gate.outputs.mechanical == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUMMARY: ${{ steps.summary.outputs.text }}
+        run: |
+          set -euo pipefail
+          if gh pr merge "$BRANCH" --squash --delete-branch; then
+            echo "Published: ${SUMMARY}"
+          else
+            echo "::warning::mechanical refresh could not be merged; it is open for review"
+          fi
+
+      - name: Say why a refresh is waiting
+        if: steps.summary.outputs.changed == 'true' && steps.gate.outputs.mechanical != 'true'
+        env:
+          REASON: ${{ steps.gate.outputs.reason }}
+        run: |
+          echo "::notice title=Refresh PR needs a human::${REASON}"
