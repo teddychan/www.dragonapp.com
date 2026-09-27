@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.14.1",
+    "date": "2026-09-27",
+    "notes": {
+      "en": "Shift + Space can now type a full-width space (　) in 倉頡, 速成 and 拼音 — turn it on in Settings. · A new setting in General ▸ Input, “Shift + Space types a full-width space”, off by default. Turn it on and Shift + Space types a full-width space (　), the width of one Chinese character, in 倉頡, 速成 and 拼音 — no need to switch input source. Anything you are composing is committed first. With it off, Shift + Space works exactly like Space, as before. · In 倉頡 and 速成, Shift + a letter (臨時英數) pressed while the candidate list is on page 2 or later now commits the first character of the page you are looking at — the same one Return commits. It used to commit the first character of page 1, which was no longer on screen.",
+      "es": "Ahora Mayús + Espacio puede escribir un espacio de ancho completo (　) en 倉頡, 速成 y 拼音; actívalo en Ajustes. · Un nuevo ajuste en General ▸ Entrada, «Mayús + Espacio escribe un espacio de ancho completo», desactivado de forma predeterminada. Si lo activas, Mayús + Espacio escribe un espacio de ancho completo (　), del ancho de un carácter chino, en 倉頡, 速成 y 拼音, sin tener que cambiar de fuente de entrada. Lo que estés componiendo se confirma primero. Desactivado, Mayús + Espacio funciona exactamente igual que Espacio, como hasta ahora. · En 倉頡 y 速成, al pulsar Mayús + una letra (臨時英數) con la lista de candidatos en la página 2 o posterior, ahora se confirma el primer carácter de la página que estás viendo, el mismo que confirma Retorno. Antes se confirmaba el primero de la página 1, que ya no estaba en pantalla.",
+      "fr": "Maj + Espace peut désormais saisir une espace pleine largeur (　) en 倉頡, 速成 et 拼音 — activez-le dans les Réglages. · Un nouveau réglage dans Général ▸ Saisie, « Maj + Espace saisit une espace pleine largeur », désactivé par défaut. Une fois activé, Maj + Espace saisit une espace pleine largeur (　), de la largeur d’un caractère chinois, en 倉頡, 速成 et 拼音, sans changer de source de saisie. Ce que vous êtes en train de composer est d’abord validé. Désactivé, Maj + Espace fonctionne exactement comme Espace, comme avant. · En 倉頡 et 速成, appuyer sur Maj + une lettre (臨時英數) quand la liste des candidats est à la page 2 ou au-delà valide désormais le premier caractère de la page affichée, celui que valide Retour. Auparavant, c’était le premier de la page 1, qui n’était plus à l’écran.",
+      "ja": "倉頡・速成・拼音で、Shift + スペースキーで全角スペース（　）を入力できるようになりました。設定でオンにしてください。 · 「一般 ▸ 入力」に「Shift + スペースで全角スペースを入力」を追加しました（初期設定はオフ）。オンにすると、倉頡・速成・拼音で Shift + スペースキーを押すと、漢字 1 文字分の幅の全角スペース（　）が入力され、入力ソースを切り替える必要はありません。入力中の文字は先に確定されます。オフのときは、これまでどおり Shift + スペースキーはスペースキーと同じ動作です。 · 倉頡と速成で、候補リストが 2 ページ目以降のときに Shift + 英字（臨時英數）を押すと、return キーと同じく、いま表示しているページの最初の文字が確定されるようになりました。以前は 1 ページ目の最初の文字が確定され、その文字はもう画面に表示されていませんでした。",
+      "ko": "이제 倉頡, 速成, 拼音에서 Shift + 스페이스로 전각 공백(　)을 입력할 수 있습니다. 설정에서 켜세요. · 일반 ▸ 입력에 ‘Shift + 스페이스로 전각 공백 입력’ 설정이 추가되었습니다. 기본값은 끔입니다. 켜면 倉頡, 速成, 拼音에서 Shift + 스페이스를 눌러 한자 한 글자 너비의 전각 공백(　)을 입력할 수 있으므로 입력 소스를 바꿀 필요가 없습니다. 조합 중인 글자는 먼저 확정됩니다. 끄면 Shift + 스페이스는 예전처럼 스페이스와 똑같이 동작합니다. · 倉頡과 速成에서 후보 목록이 2페이지 이상일 때 Shift + 영문자(臨時英數)를 누르면, 이제 Return 키와 마찬가지로 지금 보고 있는 페이지의 첫 글자가 확정됩니다. 이전에는 이미 화면에 없는 1페이지의 첫 글자가 확정되었습니다.",
+      "zh-Hans": "现在可以在仓颉、速成与拼音中，用 Shift + 空格键输入全角空格（　），请到设置中开启。 · 「通用 ▸ 输入」新增「Shift + 空格键输入全角空格」，默认关闭。开启后，在仓颉、速成与拼音中按 Shift + 空格键，就会输入一个全角空格（　），宽度与一个汉字相同，不必切换输入法。正在组字时，会先确认当前的字。关闭时，Shift + 空格键和以往一样，与空格键完全相同。 · 在仓颉与速成中，候选字列表翻到第 2 页或之后时按 Shift + 英文字母（临时英数），现在会先确认你眼前这一页的第一个字，与按 Return 键相同。过去确认的是第 1 页的第一个字，而那个字已经不在画面上。",
+      "zh-Hant": "現在可以在倉頡、速成與拼音中，用 Shift + 空白鍵輸入全形空白（　），請到設定中開啟。 · 「一般 ▸ 輸入」新增「Shift + 空白鍵輸入全形空白」，預設關閉。開啟後，在倉頡、速成與拼音中按 Shift + 空白鍵，就會輸入一個全形空白（　），寬度與一個中文字相同，不必切換輸入法。正在組字時，會先確認目前的字。關閉時，Shift + 空白鍵和以往一樣，與空白鍵完全相同。 · 在倉頡與速成中，候選字清單翻到第 2 頁或之後時按 Shift + 英文字母（臨時英數），現在會先確認你眼前這一頁的第一個字，與按 Return 鍵相同。過去確認的是第 1 頁的第一個字，而那個字已經不在畫面上。"
+    },
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.14.1"
+  },
+  {
     "version": "2.13.4",
     "date": "2026-09-04",
     "notes": {
@@ -90,13 +104,5 @@
       "en": "The Language menu in Settings offered languages Yahoo! KeyKey 2 does not have. · Fixed: beside English and 繁體中文, the menu listed Español, Français, 日本語, 한국어 and 简体中文 — the languages the shared Dragon App code is translated into, not the ones Yahoo! KeyKey 2 is. Choosing one of them translated the About, What's New, Updates and Uninstall panes and left every other word in English, which is not a language setting anyone wanted. The menu now offers the two languages Yahoo! KeyKey 2 actually has. A choice already made outside those two stays listed and stays selected until you move off it, so nobody is left on a language they can no longer find in the menu. · Under the hood: updated to DragonKit 3.4.0, the shared code behind the About, What's New, Backup & Restore, Updates and Uninstall panes — and the version that added the setting the fix above needed, so the two arrived together."
     },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.5"
-  },
-  {
-    "version": "2.11.4",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A maintenance release. Nothing about typing changes, and nothing you can see behaves differently. · Yahoo! KeyKey 2 now checks for updates at its own home rather than the website, so a problem with the website can no longer hold one up. This finishes the change 2.11.3 began; updates keep arriving exactly as before."
-    },
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.11.4"
   }
 ]
