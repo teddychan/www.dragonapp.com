@@ -224,7 +224,7 @@
     <h3>Frequently asked questions</h3>
     <dl class="faq">
       <dt>How do I install KeyKey?</dt>
-      <dd>Download <code>YahooKeyKey2.pkg</code> from the <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">latest release</a> and double-click it, or run <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>. Then log out and back in.</dd>
+      <dd>Run <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>, which installs it for all users. Or download the <code>.zip</code> from the <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">latest release</a> and follow the <a href="https://github.com/teddychan/yahoo-keykey-2#install">install steps in the README</a>. Either way, log out and back in afterwards. If you downloaded it, we recommend one more step: open <strong>設定… → 一般</strong> from the input menu and choose <strong>為所有使用者安裝…</strong> (Install for All Users…). It keeps KeyKey working when another app, such as 1Password, leaves macOS secure input on.</dd>
 
       <dt>It doesn't show up in Input Sources.</dt>
       <dd>macOS only registers an input method at login. Log out and back in, then add it under <strong>System Settings → Keyboard → Input Sources → + → Traditional Chinese</strong> and choose 倉頡 (Cangjie) and/or 速成 (Simplex).</dd>
@@ -239,7 +239,7 @@
       <dd>A Mac with Apple Silicon running macOS 12 or later. KeyKey is signed with a Developer ID and notarized by Apple, so it opens cleanly.</dd>
 
       <dt>How do I uninstall KeyKey?</dt>
-      <dd>Run <code>brew uninstall --cask yahoo-keykey-2</code>, or delete <code>~/Library/Input Methods/YahooKeyKey2.app</code>. Then remove it from Input Sources and log out and back in.</dd>
+      <dd>First remove it from <strong>System Settings → Keyboard → Input Sources</strong>. Then remove the app. Installed with Homebrew: run <code>brew uninstall --cask teddychan/tap/yahoo-keykey-2</code>. A copy in <code>~/Library/Input Methods</code>: choose <strong>設定… → 解除安裝</strong> (Uninstall), or drag <code>~/Library/Input Methods/YahooKeyKey2.app</code> to the Trash. Installed for all users: drag <code>/Library/Input Methods/YahooKeyKey2.app</code> to the Trash in Finder, which asks for an administrator password — the in-app 解除安裝 pane cannot remove that copy. Then log out and back in.</dd>
     </dl>
 
     <h3>Links</h3>

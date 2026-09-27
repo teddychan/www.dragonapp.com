@@ -224,7 +224,7 @@
     <h3>常見問題</h3>
     <dl class="faq">
       <dt>點樣安裝 KeyKey？</dt>
-      <dd>由<a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">最新版本</a>下載 <code>YahooKeyKey2.pkg</code> 並雙擊安裝，或者執行 <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>。之後登出再重新登入即可。</dd>
+      <dd>執行 <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>，會為所有使用者安裝。或者由<a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">最新版本</a>下載 <code>.zip</code>，再跟住 <a href="https://github.com/teddychan/yahoo-keykey-2#install">README 嘅安裝步驟</a>做。無論用邊個方法，裝完都要登出再重新登入。如果係自己下載嘅，建議再做多一步：喺輸入選單打開 <strong>設定… → 一般</strong>，揀 <strong>為所有使用者安裝…</strong>。咁樣就算有其他應用程式（例如 1Password）令 macOS 嘅安全輸入一直開住，KeyKey 都照樣用得。</dd>
 
       <dt>輸入來源裡面冇顯示出嚟。</dt>
       <dd>macOS 只會喺登入時註冊輸入法。請先登出再重新登入，然後喺 <strong>系統設定 → 鍵盤 → 輸入來源 → + → 繁體中文</strong> 加入，並選擇 倉頡 (Cangjie) 同／或 速成 (Simplex)。</dd>
@@ -239,7 +239,7 @@
       <dd>一部 Apple Silicon、執行 macOS 12 或以上版本嘅 Mac。KeyKey 已用 Developer ID 簽署並經 Apple 公證，所以可以順利開啟。</dd>
 
       <dt>點樣解除安裝 KeyKey？</dt>
-      <dd>執行 <code>brew uninstall --cask yahoo-keykey-2</code>，或者刪除 <code>~/Library/Input Methods/YahooKeyKey2.app</code>。之後喺輸入來源裡面移除佢，再登出並重新登入。</dd>
+      <dd>首先喺 <strong>系統設定 → 鍵盤 → 輸入來源</strong> 移除佢。之後再移除應用程式：用 Homebrew 安裝嘅，執行 <code>brew uninstall --cask teddychan/tap/yahoo-keykey-2</code>；裝喺 <code>~/Library/Input Methods</code> 嘅，用 <strong>設定… → 解除安裝</strong>，或者將 <code>~/Library/Input Methods/YahooKeyKey2.app</code> 拖去垃圾桶；為所有使用者安裝嘅，就喺 Finder 將 <code>/Library/Input Methods/YahooKeyKey2.app</code> 拖去垃圾桶，系統會要求你輸入管理員密碼——程式內嘅 解除安裝 面板刪除唔到呢個副本。最後登出再重新登入。</dd>
     </dl>
 
     <h3>連結</h3>

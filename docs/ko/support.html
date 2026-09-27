@@ -224,7 +224,7 @@
     <h3>자주 묻는 질문</h3>
     <dl class="faq">
       <dt>KeyKey는 어떻게 설치하나요?</dt>
-      <dd><a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">최신 릴리스</a>에서 <code>YahooKeyKey2.pkg</code>를 다운로드해 더블클릭하거나, <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>를 실행하세요. 그런 다음 로그아웃했다가 다시 로그인하세요.</dd>
+      <dd><code>brew install --cask teddychan/tap/yahoo-keykey-2</code>를 실행하면 모든 사용자용으로 설치됩니다. 또는 <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">최신 릴리스</a>에서 <code>.zip</code>을 다운로드하고 <a href="https://github.com/teddychan/yahoo-keykey-2#install">README의 설치 단계</a>를 따르세요. 어느 방법이든 설치한 뒤 로그아웃했다가 다시 로그인하세요. 직접 다운로드했다면 입력 메뉴에서 <strong>設定… → 一般</strong>을 열고 <strong>為所有使用者安裝…</strong>(모든 사용자용으로 설치…)를 선택하는 것을 권장합니다. 1Password 같은 다른 앱이 macOS의 보안 입력을 계속 켜 두어도 KeyKey를 계속 사용할 수 있습니다.</dd>
 
       <dt>입력 소스에 나타나지 않습니다.</dt>
       <dd>macOS는 로그인할 때만 입력기를 등록합니다. 로그아웃했다가 다시 로그인한 뒤 <strong>시스템 설정 → 키보드 → 입력 소스 → + → 번체 중국어</strong>에서 추가하고 倉頡(Cangjie) 및/또는 速成(Simplex)을 선택하세요.</dd>
@@ -239,7 +239,7 @@
       <dd>macOS 12 이상을 실행하는 Apple Silicon 탑재 Mac이 필요합니다. KeyKey는 Developer ID로 서명되고 Apple의 공증을 받았으므로 문제없이 열립니다.</dd>
 
       <dt>KeyKey는 어떻게 제거하나요?</dt>
-      <dd><code>brew uninstall --cask yahoo-keykey-2</code>를 실행하거나 <code>~/Library/Input Methods/YahooKeyKey2.app</code>를 삭제하세요. 그런 다음 입력 소스에서 제거하고 로그아웃했다가 다시 로그인하세요.</dd>
+      <dd>먼저 <strong>시스템 설정 → 키보드 → 입력 소스</strong>에서 제거하세요. 그런 다음 앱을 제거하세요. Homebrew로 설치했다면 <code>brew uninstall --cask teddychan/tap/yahoo-keykey-2</code>를 실행하세요. <code>~/Library/Input Methods</code>에 있다면 <strong>設定… → 解除安裝</strong>(제거)를 사용하거나 <code>~/Library/Input Methods/YahooKeyKey2.app</code>를 휴지통으로 드래그하세요. 모든 사용자용으로 설치했다면 Finder에서 <code>/Library/Input Methods/YahooKeyKey2.app</code>를 휴지통으로 드래그하세요. 이때 관리자 암호를 묻습니다. 앱 안의 解除安裝 패널로는 이 사본을 제거할 수 없습니다. 마지막으로 로그아웃했다가 다시 로그인하세요.</dd>
     </dl>
 
     <h3>링크</h3>
