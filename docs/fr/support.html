@@ -224,7 +224,7 @@
     <h3>Questions fréquentes</h3>
     <dl class="faq">
       <dt>Comment installer KeyKey ?</dt>
-      <dd>Téléchargez <code>YahooKeyKey2.pkg</code> depuis la <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">dernière version</a> et double-cliquez dessus, ou exécutez <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>. Déconnectez-vous ensuite, puis reconnectez-vous.</dd>
+      <dd>Exécutez <code>brew install --cask teddychan/tap/yahoo-keykey-2</code>, qui l'installe pour tous les utilisateurs. Ou téléchargez le <code>.zip</code> depuis la <a href="https://github.com/teddychan/yahoo-keykey-2/releases/latest">dernière version</a> et suivez les <a href="https://github.com/teddychan/yahoo-keykey-2#install">étapes d'installation du README</a>. Dans les deux cas, déconnectez-vous ensuite, puis reconnectez-vous. Si vous avez téléchargé le .zip, nous recommandons une étape de plus : ouvrez <strong>設定… → 一般</strong> dans le menu de saisie et choisissez <strong>為所有使用者安裝…</strong> (Installer pour tous les utilisateurs…). KeyKey continue ainsi de fonctionner lorsqu'une autre application, comme 1Password, laisse la saisie sécurisée de macOS activée.</dd>
 
       <dt>KeyKey n'apparaît pas dans les sources de saisie.</dt>
       <dd>macOS n'enregistre une méthode de saisie qu'à l'ouverture de session. Déconnectez-vous puis reconnectez-vous, ensuite ajoutez-la dans <strong>Réglages Système → Clavier → Sources de saisie → + → Chinois traditionnel</strong> et choisissez 倉頡 (Cangjie) et/ou 速成 (Simplex).</dd>
@@ -239,7 +239,7 @@
       <dd>Un Mac doté d'une puce Apple Silicon sous macOS 12 ou version ultérieure. KeyKey est signée avec un Developer ID et notarisée par Apple, elle s'ouvre donc sans encombre.</dd>
 
       <dt>Comment désinstaller KeyKey ?</dt>
-      <dd>Exécutez <code>brew uninstall --cask yahoo-keykey-2</code>, ou supprimez <code>~/Library/Input Methods/YahooKeyKey2.app</code>. Retirez-la ensuite des sources de saisie, puis déconnectez-vous et reconnectez-vous.</dd>
+      <dd>Retirez-la d'abord de <strong>Réglages Système → Clavier → Sources de saisie</strong>. Supprimez ensuite l'application. Si vous l'avez installée avec Homebrew, exécutez <code>brew uninstall --cask teddychan/tap/yahoo-keykey-2</code>. Si elle se trouve dans <code>~/Library/Input Methods</code>, utilisez <strong>設定… → 解除安裝</strong> (Désinstaller) ou faites glisser <code>~/Library/Input Methods/YahooKeyKey2.app</code> vers la Corbeille. Si elle est installée pour tous les utilisateurs, faites glisser <code>/Library/Input Methods/YahooKeyKey2.app</code> vers la Corbeille dans le Finder, qui demande un mot de passe administrateur ; le panneau 解除安裝 de l'application ne peut pas supprimer cette copie. Déconnectez-vous enfin, puis reconnectez-vous.</dd>
     </dl>
 
     <h3>Liens</h3>
