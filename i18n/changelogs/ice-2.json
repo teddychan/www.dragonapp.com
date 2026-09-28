@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.16.1",
+    "date": "2026-09-28",
+    "notes": {
+      "en": "A maintenance update for macOS 27. Hidden sections no longer leave a gap in the menu bar, the Layout editor is now translated, and the sliders in Settings use the standard macOS style. · On macOS 27, the Hidden and Always-Hidden sections no longer leave an empty gap in the menu bar while their items are hidden, so the spacing stays the same each time you show and hide them. · The Layout editor on macOS 27 is now translated. It appeared in English in every other language Ice 2 supports. · The sliders in Settings are now standard macOS sliders, with a tick mark for each step and the value shown next to them.",
+      "es": "Una actualización de mantenimiento para macOS 27. Las secciones ocultas ya no dejan un hueco en la barra de menús, el editor de Disposición ya está traducido y los reguladores de los ajustes usan el estilo estándar de macOS. · En macOS 27, las secciones Oculta y Siempre oculta ya no dejan un hueco vacío en la barra de menús mientras sus elementos están ocultos, así que la separación no cambia cada vez que los muestras y los ocultas. · El editor de Disposición de macOS 27 ya está traducido. Antes aparecía en inglés en todos los demás idiomas de Ice 2. · Los reguladores de los ajustes son ahora reguladores estándar de macOS, con una marca por cada paso y el valor al lado.",
+      "fr": "Une mise à jour de maintenance pour macOS 27. Les sections masquées ne laissent plus d'espace vide dans la barre des menus, l'éditeur de Disposition est désormais traduit et les curseurs des réglages adoptent le style standard de macOS. · Sur macOS 27, les sections Masquée et Toujours masquée ne laissent plus d'espace vide dans la barre des menus lorsque leurs éléments sont masqués ; l'espacement ne change donc plus chaque fois que vous les affichez ou les masquez. · L'éditeur de Disposition de macOS 27 est désormais traduit. Il s'affichait en anglais dans toutes les autres langues d'Ice 2. · Les curseurs des réglages sont désormais des curseurs macOS standard, avec une graduation pour chaque cran et la valeur affichée à côté.",
+      "ja": "macOS 27 向けのメンテナンスアップデートです。非表示のセクションがメニューバーに空白を残さなくなり、レイアウトエディタが翻訳され、設定のスライダが macOS 標準のスタイルになりました。 · macOS 27 で、「非表示」と「常に非表示」のセクションが、項目を隠しているあいだメニューバーに空白を残さなくなりました。表示と非表示を切り替えるたびに間隔が変わることもありません。 · macOS 27 のレイアウトエディタが翻訳されました。これまでは Ice 2 のほかのすべての言語で英語のまま表示されていました。 · 設定のスライダが macOS 標準のスライダになり、ステップごとの目盛りと、横に現在の値が表示されるようになりました。",
+      "ko": "macOS 27을 위한 유지 보수 업데이트입니다. 숨김 섹션이 더 이상 메뉴 막대에 빈 공간을 남기지 않고, 레이아웃 편집기가 번역되었으며, 설정의 슬라이더가 macOS 기본 스타일로 바뀌었습니다. · macOS 27에서 숨김 및 항상 숨김 섹션의 항목이 숨겨져 있는 동안 메뉴 막대에 빈 공간이 남지 않습니다. 따라서 보이고 숨길 때마다 간격이 달라지지 않습니다. · macOS 27의 레이아웃 편집기가 번역되었습니다. 이전에는 Ice 2가 지원하는 다른 모든 언어에서 영어로 표시되었습니다. · 설정의 슬라이더가 macOS 기본 슬라이더로 바뀌어, 단계마다 눈금이 표시되고 현재 값이 옆에 나타납니다.",
+      "zh-Hans": "这是针对 macOS 27 的维护更新。隐藏的区段不会再在菜单栏中留下空隙，布局编辑器已完成翻译，“设置”中的滑块也改用 macOS 标准样式。 · 在 macOS 27 上，“隐藏”和“始终隐藏”区段在其项目被隐藏时，不会再在菜单栏中留下空隙，因此每次显示和隐藏时间距都保持不变。 · macOS 27 的布局编辑器现已翻译。此前它在 Ice 2 支持的其他所有语言中都显示为英文。 · “设置”中的滑块现在是 macOS 标准滑块，每一档都有刻度，并在旁边显示当前数值。",
+      "zh-Hant": "這是針對 macOS 27 的維護更新。隱藏的區段不會再在選單列中留下空隙，版面編輯器已完成翻譯，「設定」中的滑桿也改用 macOS 標準樣式。 · 在 macOS 27 上，「隱藏」和「總是隱藏」區段在其項目隱藏時，不會再在選單列中留下空隙，因此每次顯示和隱藏時間距都保持不變。 · macOS 27 的版面編輯器現已翻譯。先前它在 Ice 2 支援的其他所有語言中都顯示為英文。 · 「設定」中的滑桿現在是 macOS 標準滑桿，每一段都有刻度，並在旁邊顯示目前的數值。"
+    },
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.16.1"
+  },
+  {
     "version": "2.16.0",
     "date": "2026-09-18",
     "notes": {
@@ -78,13 +92,5 @@
       "en": "A maintenance release: nothing you can see behaves differently. · Ice 2 now checks for updates at its own home rather than the website, so a problem with the website can no longer hold one up. This finishes the change 2.14.3 began; updates keep arriving exactly as before."
     },
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.4"
-  },
-  {
-    "version": "2.14.3",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A maintenance release: nothing you can see behaves differently. · Ice 2 now publishes the file it checks for updates to its own home as well as the website, so a problem with the website cannot hold up an update. The copy you have installed keeps reading the website until a later version moves it across, so nothing changes for you yet."
-    },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.3"
   }
 ]
