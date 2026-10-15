@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.16.2",
+    "date": "2026-10-15",
+    "notes": {
+      "en": "注音 now keeps up when you type without stopping. A number key that has no candidate on its row types 注音 again instead of disappearing, and a reading with only one character goes straight into your text without opening the candidate window — both the way the original Yahoo! KeyKey worked. Nothing changes in 倉頡, 速成 or 拼音. · In 注音, a reading with only one character is typed as soon as you finish its tone, without opening the candidate window, since there is nothing to choose. 聯想字詞 still follow it. · In 注音, a number key no longer disappears when the candidate window has no candidate on its row. On the 標準（大千）keyboard 1 2 5 8 9 type ㄅ ㄉ ㄓ ㄚ ㄞ, so after a short list they now start your next character — 不, 的, 這 — and 3 4 6 7 correct the tone. A number with a candidate on its row still picks it.",
+      "es": "注音 ya sigue tu ritmo cuando escribes sin parar. Una tecla numérica sin candidato en su fila vuelve a escribir 注音 en lugar de perderse, y una lectura con un solo carácter pasa directamente al texto sin abrir la ventana de candidatos, como en el Yahoo! KeyKey original. Nada cambia en 倉頡, 速成 ni 拼音. · En 注音, una lectura con un solo carácter se escribe en cuanto terminas su tono, sin abrir la ventana de candidatos, porque no hay nada que elegir. Los 聯想字詞 siguen apareciendo después. · En 注音, una tecla numérica ya no desaparece cuando la ventana de candidatos no tiene candidato en esa fila. En el teclado 標準 (大千), 1 2 5 8 9 escriben ㄅ ㄉ ㄓ ㄚ ㄞ, así que tras una lista corta ahora empiezan el carácter siguiente (不, 的, 這) y 3 4 6 7 corrigen el tono. Un número con candidato en su fila sigue eligiéndolo.",
+      "fr": "Le 注音 suit désormais votre rythme quand vous tapez sans vous arrêter. Une touche chiffre sans candidat sur sa ligne saisit de nouveau du 注音 au lieu de se perdre, et une lecture qui n’a qu’un seul caractère va directement dans votre texte sans ouvrir la fenêtre des candidats, comme dans le Yahoo! KeyKey d’origine. Rien ne change pour 倉頡, 速成 ni 拼音. · En 注音, une lecture qui n’a qu’un seul caractère est saisie dès que vous terminez son ton, sans ouvrir la fenêtre des candidats, puisqu’il n’y a rien à choisir. Les 聯想字詞 suivent toujours. · En 注音, une touche chiffre ne disparaît plus quand la fenêtre des candidats n’a aucun candidat sur sa ligne. Sur le clavier 標準 (大千), 1 2 5 8 9 saisissent ㄅ ㄉ ㄓ ㄚ ㄞ : après une courte liste, ils commencent maintenant le caractère suivant (不, 的, 這), et 3 4 6 7 corrigent le ton. Un chiffre dont la ligne a un candidat le choisit toujours.",
+      "ja": "注音で手を止めずに打ち続けられるようになりました。候補のない行の数字キーは消えずに注音記号を入力し、文字が1つしかない読みは候補ウインドウを開かずにそのまま入力されます。どちらもオリジナルの Yahoo! KeyKey と同じ動作です。倉頡・速成・拼音は変わりません。 · 注音では、文字が1つしかない読みは選ぶ必要がないため、声調を打った時点で候補ウインドウを開かずに入力されます。聯想字詞はこれまでどおり続けて表示されます。 · 注音で、候補ウインドウのその行に候補がないとき、数字キーが消えてしまう問題を修正しました。標準（大千）配列では 1 2 5 8 9 が ㄅ ㄉ ㄓ ㄚ ㄞ なので、短い候補リストのあとでも次の文字（不、的、這）を打ち始められ、3 4 6 7 は声調を直します。その行に候補がある数字は、これまでどおり候補を選びます。",
+      "ko": "이제 주음에서 멈추지 않고 계속 입력할 수 있습니다. 후보가 없는 줄의 숫자 키는 사라지지 않고 주음 기호를 입력하며, 글자가 하나뿐인 읽기는 후보 창을 열지 않고 바로 입력됩니다. 둘 다 원래 Yahoo! KeyKey와 같은 동작입니다. 倉頡, 速成, 拼音은 바뀌지 않습니다. · 주음에서 글자가 하나뿐인 읽기는 고를 것이 없으므로 성조를 입력하는 즉시 후보 창을 열지 않고 입력됩니다. 聯想字詞는 이전처럼 이어서 나타납니다. · 주음에서 후보 창의 해당 줄에 후보가 없을 때 숫자 키가 사라지던 문제를 고쳤습니다. 標準(大千) 자판에서는 1 2 5 8 9가 ㄅ ㄉ ㄓ ㄚ ㄞ이므로, 짧은 후보 목록 뒤에도 이제 다음 글자(不, 的, 這)를 시작하고 3 4 6 7은 성조를 고칩니다. 해당 줄에 후보가 있는 숫자는 이전처럼 그 후보를 고릅니다.",
+      "zh-Hans": "注音现在可以一路连续打下去了。数字键所在的那一行没有候选字时，会照常打出注音符号，不会再被吃掉；只有一个字的读音则直接送出，不再打开候选字窗口——两者都与原版 Yahoo! KeyKey 相同。仓颉、速成与拼音没有任何变化。 · 在注音中，只有一个字的读音没有可选的，所以打完声调就直接送出，不再打开候选字窗口。联想字词仍会接着出现。 · 修正在注音中，候选字窗口那一行没有候选字时，数字键会被吃掉的问题。在「标准（大千）」键盘上，1 2 5 8 9 是 ㄅ ㄉ ㄓ ㄚ ㄞ，所以在较短的候选字列表之后，它们现在会开始打下一个字（不、的、这），3 4 6 7 则会修正声调。那一行有候选字的数字键，仍然会选取该字。",
+      "zh-Hant": "注音現在可以一路連續打下去了。數字鍵所在的那一列沒有候選字時，會照常打出注音符號，不會再被吃掉；只有一個字的讀音則直接送出，不再開啟選字視窗——兩者都與原版 Yahoo! KeyKey 相同。倉頡、速成與拼音沒有任何變化。 · 在注音中，只有一個字的讀音沒有可選的，所以打完聲調就直接送出，不再開啟選字視窗。聯想字詞仍會接著出現。 · 修正在注音中，選字視窗那一列沒有候選字時，數字鍵會被吃掉的問題。在「標準（大千）」鍵盤上，1 2 5 8 9 是 ㄅ ㄉ ㄓ ㄚ ㄞ，所以在較短的候選字清單之後，它們現在會開始打下一個字（不、的、這），3 4 6 7 則會修正聲調。那一列有候選字的數字鍵，仍然會選取該字。"
+    },
+    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.16.2"
+  },
+  {
     "version": "2.16.1",
     "date": "2026-09-28",
     "notes": {
@@ -96,19 +110,5 @@
       "zh-Hant": "這是一次維護發布，只更新了發布流程的自動化與文件，輸入行為沒有任何變化。 · 本次發布沒有改動 Yahoo! KeyKey 2 自身的任何程式碼，改動的是它周邊的部分：負責建置、簽章並發布每個版本的自動化流程，以及說明發布步驟的文件。倉頡、速成、拼音、候選字清單、偏好設定與學習資料的表現都和 2.13.1 完全一樣，你唯一能看到的差別，是本面板與「關於」面板顯示的版本號。"
     },
     "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.2"
-  },
-  {
-    "version": "2.13.1",
-    "date": "2026-08-17",
-    "notes": {
-      "en": "In 速成, typing on past a two-key code now moves to the next character instead of leaving you stuck. · A 速成 code is two keys — the first and last 倉頡 radical — so once you have typed both, the character is settled. Starting the next character used to add that key to the code you had just finished, making a three-key code that no 速成 table contains: the candidate list emptied and the character could no longer be picked at all. A third key now finishes the character in progress, taking the candidate the space bar would have taken, and begins the next one.",
-      "es": "En 速成, seguir escribiendo después de un código de dos teclas ahora pasa al siguiente carácter en vez de dejarte atascado. · Un código 速成 tiene dos teclas —el primer y el último radical de 倉頡—, así que en cuanto escribes ambas el carácter ya está decidido. Antes, empezar el carácter siguiente añadía esa tecla al código que acababas de terminar y formaba un código de tres teclas que no existe en ninguna tabla 速成: la lista de candidatos se vaciaba y el carácter ya no se podía elegir. Ahora una tercera tecla confirma el carácter en curso —el candidato que habría elegido la barra espaciadora— y empieza el siguiente.",
-      "fr": "En 速成, continuer à taper après un code de deux touches passe désormais au caractère suivant au lieu de vous bloquer. · Un code 速成 comporte deux touches — le premier et le dernier radical 倉頡 — : une fois les deux saisies, le caractère est déterminé. Auparavant, commencer le caractère suivant ajoutait cette touche au code que vous veniez de terminer et formait un code de trois touches qu’aucune table 速成 ne contient : la liste de candidats se vidait et le caractère ne pouvait plus être choisi. Une troisième touche valide désormais le caractère en cours — celui que la barre d’espace aurait choisi — et commence le suivant.",
-      "ja": "速成で 2 打鍵のあとも入力を続けると、次の字に進むようになりました。行き詰まることはもうありません。 · 速成の字コードは 2 打鍵（倉頡の最初と最後の字根）だけで、2 打鍵を入力した時点でその字は決まっています。これまでは次の字の字根を押すと、打ち終わったコードに足されて 3 打鍵のコードになり、速成にそのようなコードは存在しないため候補が空になって、選ぼうとしていた字を選べなくなっていました。3 打鍵目は入力中の字を確定し（スペースキーが選ぶ候補と同じもの）、その字根で次の字を書き始めます。",
-      "ko": "速成에서 두 자리 코드를 다 입력한 뒤 계속 입력해도 이제 다음 글자로 넘어가며, 더 이상 막히지 않습니다. · 速成의 코드는 두 자리(倉頡의 첫 자근과 끝 자근)뿐이라, 두 자리를 입력하면 그 글자는 이미 정해진 상태입니다. 이전에는 다음 글자의 자근을 누르면 방금 끝낸 코드에 덧붙어 세 자리 코드가 되었고, 速成에는 그런 코드가 없으므로 후보 목록이 비어 원하던 글자를 더는 선택할 수 없었습니다. 이제 세 번째 자근은 입력 중인 글자를 확정하고(스페이스바가 선택했을 후보로) 그 자근으로 다음 글자를 시작합니다.",
-      "zh-Hans": "速成打完两码后再继续打，现在会直接接到下一个字，不会再卡住。 · 速成的字码只有两码（仓颉的首码与尾码），两码打完，这个字就已经定了。此前接着打下一个字的字根时，那一码会被接到刚打完的字码后面变成三码，而速成没有三码的字码，候选字列表因此清空，原本要选的字再也选不到，只能按退格键。现在第三码会先送出正在打的字（取空格键会取的那一个），再用这一码开始下一个字。",
-      "zh-Hant": "速成打完兩碼後再繼續打，現在會直接接到下一個字，不會再卡住。 · 速成的字碼只有兩碼（倉頡的首碼與尾碼），兩碼打完，這個字就已經定了。先前接著打下一個字的字根時，那一碼會被接到剛打完的字碼後面變成三碼，而速成沒有三碼的字碼，候選字清單因此清空，原本要選的字再也選不到，只能按倒退鍵。現在第三碼會先送出正在打的字（取空白鍵會取的那一個），再用這一碼開始下一個字。"
-    },
-    "url": "https://github.com/teddychan/yahoo-keykey-2/releases/tag/v2.13.1"
   }
 ]
