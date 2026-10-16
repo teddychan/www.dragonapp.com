@@ -7,6 +7,26 @@
     <language>en</language>
     <!-- Items are added per release, newest first, each signed with the shared Dragon EdDSA key (sign_update). -->
     <item>
+      <title>HandFree 3.0.13-custom-119</title>
+      <pubDate>Fri, 16 Oct 2026 14:31:09 +0000</pubDate>
+      <link>https://github.com/teddychan/www.dragonapp.com/releases/tag/handfree-macos-v3.0.13-custom-119</link>
+      <sparkle:version>119</sparkle:version>
+      <sparkle:shortVersionString>3.0.13-custom-119</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+      <enclosure url="https://github.com/teddychan/www.dragonapp.com/releases/download/handfree-macos-v3.0.13-custom-119/HandFree-3.0.13-custom-119.zip" type="application/octet-stream" sparkle:edSignature="/HMuyXYM+nGahYNfFZ32vJNa5CpJyh1/WyDfFGn36Z5nRwNlEV6PXzjp31+dc6gxi8ykcbAj4IEzwTYc34ibBw==" length="2750633"/>
+    </item>
+    <item>
+      <title>HandFree 3.0.13-custom-116</title>
+      <pubDate>Fri, 16 Oct 2026 13:49:16 +0000</pubDate>
+      <link>https://github.com/teddychan/www.dragonapp.com/releases/tag/handfree-macos-v3.0.13-custom-116</link>
+      <sparkle:version>116</sparkle:version>
+      <sparkle:shortVersionString>3.0.13-custom-116</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+      <enclosure url="https://github.com/teddychan/www.dragonapp.com/releases/download/handfree-macos-v3.0.13-custom-116/HandFree-3.0.13-custom-116.zip" type="application/octet-stream" sparkle:edSignature="4/0ojNrsDaYgI3PaI2UQPjOAoYR7ynzlY8ZSVFe9VvZiRXrHNOzWRYC790i7ccS/HV851AQzMqlfBhIrb6plAQ==" length="2750643"/>
+    </item>
+    <item>
       <title>HandFree 3.0.13-custom-115</title>
       <pubDate>Fri, 16 Oct 2026 13:35:37 +0000</pubDate>
       <link>https://github.com/teddychan/www.dragonapp.com/releases/tag/handfree-macos-v3.0.13-custom-115</link>
