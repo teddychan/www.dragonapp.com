@@ -7,6 +7,16 @@
     <language>en</language>
     <!-- Items are added per release, newest first, each signed with the shared Dragon EdDSA key (sign_update). -->
     <item>
+      <title>HandFree 3.0.14-custom-126</title>
+      <pubDate>Sat, 17 Oct 2026 10:35:01 +0000</pubDate>
+      <link>https://github.com/teddychan/www.dragonapp.com/releases/tag/handfree-macos-v3.0.14-custom-126</link>
+      <sparkle:version>126</sparkle:version>
+      <sparkle:shortVersionString>3.0.14-custom-126</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+      <enclosure url="https://github.com/teddychan/www.dragonapp.com/releases/download/handfree-macos-v3.0.14-custom-126/HandFree-3.0.14-custom-126.zip" type="application/octet-stream" sparkle:edSignature="JEfG7OiY1Qg1bjKZMf0IvfREbCPhuhJTdpOcxdwU6tC5kyy7DZXHuD6u4wRsqHYtca+UPVP8/nLHTnAruvrRAg==" length="2763062"/>
+    </item>
+    <item>
       <title>HandFree 3.0.13-custom-119</title>
       <pubDate>Fri, 16 Oct 2026 14:31:09 +0000</pubDate>
       <link>https://github.com/teddychan/www.dragonapp.com/releases/tag/handfree-macos-v3.0.13-custom-119</link>
