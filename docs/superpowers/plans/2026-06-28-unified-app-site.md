@@ -58,7 +58,7 @@ def test_known_pages_exist():
 
 - [ ] **Step 2: Run test to verify current state**
 
-Run: `cd /Users/teddychan/git/www.dragonapp.com/.claude/worktrees/vibrant-hellman-25579b && python3 -m pytest i18n/tests/test_build.py -v`
+Run: `cd ~/git/www.dragonapp.com && python3 -m pytest i18n/tests/test_build.py -v`
 Expected: PASS (the generator already builds today). If it fails, stop and fix the environment before continuing.
 
 - [ ] **Step 3: Commit**
