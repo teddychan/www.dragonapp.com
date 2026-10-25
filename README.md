@@ -20,10 +20,10 @@ The site is served by **GitHub Pages from the [`docs/`](docs/) folder**.
 
 | App | Page | Source repo |
 | --- | --- | --- |
-| ClipMenu 2 | [/clipmenu-2/](https://www.dragonapp.com/clipmenu-2/) | [teddychan/clipmenu-2](https://github.com/teddychan/clipmenu-2) |
-| Yahoo KeyKey 2 | [/yahoo-keykey-2/](https://www.dragonapp.com/yahoo-keykey-2/) | [teddychan/yahoo-keykey-2](https://github.com/teddychan/yahoo-keykey-2) |
-| Ice 2 | [/ice-2/](https://www.dragonapp.com/ice-2/) | [teddychan/ice-2](https://github.com/teddychan/ice-2) |
-| Spectacle 2 | [/spectacle-2/](https://www.dragonapp.com/spectacle-2/) | [teddychan/spectacle-2](https://github.com/teddychan/spectacle-2) |
+| ClipMenu 2 | [/clipmenu-2/](https://www.dragonapp.com/clipmenu-2/) | [teddychan/clipmenu-2-macos](https://github.com/teddychan/clipmenu-2-macos) |
+| Yahoo KeyKey 2 | [/yahoo-keykey-2/](https://www.dragonapp.com/yahoo-keykey-2/) | [teddychan/yahoo-keykey-2-macos](https://github.com/teddychan/yahoo-keykey-2-macos) |
+| Ice 2 | [/ice-2/](https://www.dragonapp.com/ice-2/) | [teddychan/ice-2-macos](https://github.com/teddychan/ice-2-macos) |
+| Spectacle 2 | [/spectacle-2/](https://www.dragonapp.com/spectacle-2/) | [teddychan/spectacle-2-macos](https://github.com/teddychan/spectacle-2-macos) |
 
 [`docs/index.html`](docs/index.html) is the studio hub that links to all of
 them. `/clipmenu/` and `/keykey/` are redirect stubs kept for old links.
