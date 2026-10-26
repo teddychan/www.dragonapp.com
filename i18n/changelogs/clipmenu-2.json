@@ -11,7 +11,7 @@
       "zh-Hans": "ClipMenu 2 现在在应用界面各处都使用同一个名称。你的剪贴板历史、片段与设置都没有变化。 · 应用在各处都称自己为“ClipMenu 2”。菜单栏与“关于”显示的是“ClipMenu 2”，但退出、打开、初次设置界面、开机启动询问、粘贴权限说明等 12 处仍写着“ClipMenu”，应用对自己的名称前后不一致。现在这些都已统一。对 Naotaka Morimoto 所写、本应用据以重写的原版 ClipMenu 的指称，仍有意保留原名。",
       "zh-Hant": "ClipMenu 2 現在在應用程式介面各處都使用同一個名稱。你的剪貼簿歷史記錄、片段與設定都沒有變化。 · 應用程式在各處都稱自己為「ClipMenu 2」。選單列與「關於」顯示的是「ClipMenu 2」，但結束、開啟、初次設定畫面、登入時啟動詢問、貼上權限說明等 12 處仍寫著「ClipMenu」，應用程式對自己的名稱前後不一致。現在這些都已統一。對 Naotaka Morimoto 所寫、本應用程式據以重寫的原版 ClipMenu 的指稱，仍刻意保留原名。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.2"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.21.2"
   },
   {
     "version": "2.21.1",
@@ -25,7 +25,7 @@
       "zh-Hans": "卸载功能的一项安全修复，来自 ClipMenu 2 所基于的共享框架。你的剪贴板历史和片段功能没有变化。 · 如果在你的 Mac 上发现不止一份 ClipMenu 2 副本，卸载现在会停止执行。把正在运行的这份副本移入废纸篓一直是安全的，但你的设置、登录项和支持文件都是按应用的身份而不是位置存储的——因此两份副本会共享全部这些内容，也无法分辨哪份是哪份。卸载多余的副本可能会删除你实际使用的那份副本的设置。现在它会在删除任何内容之前停止，并列出各份副本所在的位置，方便你先清理掉不需要的副本，再重新尝试。如果你只有一份副本——这是绝大多数人的情况——则不会有任何变化。 · 更新到 DragonKit 4.1.1，这是支撑设置、关于、新功能和软件更新的共享框架。上面的修复正是来自它；这些面板的外观和行为都没有变化。",
       "zh-Hant": "解除安裝功能的一項安全修正，來自 ClipMenu 2 所依據的共享框架。你的剪貼簿歷史記錄與片段功能沒有變化。 · 如果在你的 Mac 上發現不止一份 ClipMenu 2 副本，解除安裝現在會停止執行。把正在執行的這份副本移到垃圾桶一直是安全的，但你的設定、登入項目和支援檔案都是依應用程式的身分而非位置儲存的——因此兩份副本會共用全部這些內容，也無法分辨哪份是哪份。解除安裝多餘的副本可能會刪除你實際使用的那份副本的設定。現在它會在刪除任何內容之前停止，並列出各份副本所在的位置，方便你先清除不需要的副本，再重新嘗試。如果你只有一份副本——這是絕大多數人的情況——則不會有任何變化。 · 更新至 DragonKit 4.1.1，這是支撐設定、關於、新功能與軟體更新的共享框架。上面的修正正是來自它；這些面板的外觀與行為都沒有變化。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.1"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.21.1"
   },
   {
     "version": "2.21.0",
@@ -39,7 +39,7 @@
       "zh-Hans": "这是一个维护版本：仅有内部更新，ClipMenu 的使用方式没有变化。",
       "zh-Hant": "這是一個維護版本：僅有內部更新，ClipMenu 的使用方式沒有變化。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.0"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.21.0"
   },
   {
     "version": "2.20.10",
@@ -53,7 +53,7 @@
       "zh-Hans": "这是一个维护版本：仅有内部更新，ClipMenu 的使用方式没有变化。 · 更新了构建 ClipMenu 所用的共享 Dragon 套件。",
       "zh-Hant": "這是一個維護版本：僅有內部更新，ClipMenu 的使用方式沒有變化。 · 更新了建置 ClipMenu 所用的共享 Dragon 套件。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.10"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.10"
   },
   {
     "version": "2.20.9",
@@ -67,7 +67,7 @@
       "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权声明，与关于面板中的一行相同。",
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權聲明，與關於面板中的一行相同。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.9"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.9"
   },
   {
     "version": "2.20.8",
@@ -81,7 +81,7 @@
       "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权声明，而不再是一句应用描述。",
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權聲明，而不再是一句應用程式描述。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.8"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.8"
   },
   {
     "version": "2.20.7",
@@ -95,7 +95,7 @@
       "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权所有者，而不再是一句应用描述。",
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權所有者，而不再是一句應用程式描述。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.7"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.7"
   },
   {
     "version": "2.20.5",
