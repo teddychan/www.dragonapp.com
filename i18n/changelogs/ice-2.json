@@ -11,7 +11,7 @@
       "zh-Hans": "这是针对 macOS 27 的维护更新。隐藏的区段不会再在菜单栏中留下空隙，布局编辑器已完成翻译，“设置”中的滑块也改用 macOS 标准样式。 · 在 macOS 27 上，“隐藏”和“始终隐藏”区段在其项目被隐藏时，不会再在菜单栏中留下空隙，因此每次显示和隐藏时间距都保持不变。 · macOS 27 的布局编辑器现已翻译。此前它在 Ice 2 支持的其他所有语言中都显示为英文。 · “设置”中的滑块现在是 macOS 标准滑块，每一档都有刻度，并在旁边显示当前数值。",
       "zh-Hant": "這是針對 macOS 27 的維護更新。隱藏的區段不會再在選單列中留下空隙，版面編輯器已完成翻譯，「設定」中的滑桿也改用 macOS 標準樣式。 · 在 macOS 27 上，「隱藏」和「總是隱藏」區段在其項目隱藏時，不會再在選單列中留下空隙，因此每次顯示和隱藏時間距都保持不變。 · macOS 27 的版面編輯器現已翻譯。先前它在 Ice 2 支援的其他所有語言中都顯示為英文。 · 「設定」中的滑桿現在是 macOS 標準滑桿，每一段都有刻度，並在旁邊顯示目前的數值。"
     },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.16.1"
+    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.16.1"
   },
   {
     "version": "2.16.0",
@@ -25,7 +25,7 @@
       "zh-Hans": "在 macOS 27 上，Ice 2 又能隐藏菜单栏项目了。macOS 27 重新构建了菜单栏，原来的做法已经跟不上，因此此版本加入了为它打造的新后端，以及可拖放的全新布局编辑器。在 macOS 26 及更早版本上，一切照旧。 · 在 macOS 27 上，隐藏功能恢复正常。macOS 27 改变了菜单栏的构建方式，Ice 2 原来的做法再也看不到单个图标，于是什么都隐藏不了，布局也一直是空的。现在 Ice 2 通过辅助功能找到菜单栏 App，并交由 macOS 自己来隐藏它们。Ice 图标、隐藏与始终隐藏分区、快捷键以及自动重新隐藏都和以前一样。若尚未授权，请为 Ice 2 开启辅助功能权限。 · 为 macOS 27 打造的布局编辑器。把 App 拖到可见、隐藏或始终隐藏，或在卡片菜单中选择分区；更改会随手保存。在 macOS 27 上，同一个 App 的菜单栏图标会一起显示和隐藏，因此一张卡片代表该 App 的全部图标。你保存的布局描述文件仍然可用：应用后会把其中的项目分入各分区，并告诉你哪些没能匹配。指定分区不会改变图标顺序——要调整顺序，仍请在菜单栏中按住 Command 拖移。 · 当没有可加载的内容时，Ice 栏不会再一直停留在正在加载菜单栏项目…。它现在会提示未找到任何项目，并提供重新检查按钮。 · macOS 27 上有三项功能不可用：独立的 Ice 栏、搜索单个菜单栏图标，以及临时显示某个图标。隐藏的项目现在直接显示在菜单栏里，而不是另一条栏中。这些控件和快捷键在 macOS 27 上会关闭，你保存的相关设置会原样保留，回到 macOS 26 即可恢复。此外，隐藏时可能会连专注模式等少数系统项目一起隐藏，而分区的显示状态会同时作用于所有显示器。",
       "zh-Hant": "在 macOS 27 上，Ice 2 又能隱藏選單列項目了。macOS 27 重新建構了選單列，原本的做法已經跟不上，因此此版本加入了為它打造的新後端，以及可拖放的全新版面編輯器。在 macOS 26 及更早版本上，一切照舊。 · 在 macOS 27 上，隱藏功能恢復正常。macOS 27 改變了選單列的建構方式，Ice 2 原本的做法再也看不到個別圖示，於是什麼都隱藏不了，版面也一直是空的。現在 Ice 2 透過輔助使用找到選單列 App，並交由 macOS 自己來隱藏它們。Ice 圖示、隱藏與總是隱藏分區、快速鍵以及自動重新隱藏都和以前一樣。若尚未授權，請為 Ice 2 開啟輔助使用權限。 · 為 macOS 27 打造的版面編輯器。把 App 拖到可見、隱藏或總是隱藏，或在卡片選單中選擇分區；變更會隨手儲存。在 macOS 27 上，同一個 App 的選單列圖示會一起顯示和隱藏，因此一張卡片代表該 App 的全部圖示。你儲存的版面設定檔仍然可用：套用後會把其中的項目分入各分區，並告訴你哪些未能對應。指定分區不會改變圖示順序——要調整順序，仍請在選單列中按住 Command 拖移。 · 當沒有可載入的內容時，Ice 列不會再一直停在正在載入選單列項目…。它現在會提示找不到任何項目，並提供重新檢查按鈕。 · macOS 27 上有三項功能無法使用：獨立的 Ice 列、搜尋單一選單列圖示，以及暫時顯示某個圖示。隱藏的項目現在會直接顯示在選單列中，而不是另一條列上。這些控制項目與快速鍵在 macOS 27 上會關閉，你儲存的相關設定會原樣保留，回到 macOS 26 即可恢復。此外，隱藏時可能會連專注模式等少數系統項目一起隱藏，而分區的顯示狀態會同時套用到所有顯示器。"
     },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.16.0"
+    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.16.0"
   },
   {
     "version": "2.15.2",
@@ -39,7 +39,7 @@
       "zh-Hans": "卸载功能中的一项安全修复，继承自 Ice 2 所基于的共用框架。菜单栏管理方式未变。 · 如果在 Mac 上发现同一 App 有多个副本，卸载现在会先停止操作。将正在运行的副本移到废纸篓一直是安全的，但你的设置、登录项和支持文件都是根据 App 的身份而不是位置来存储的，因此两个副本会共享这些内容，也就无法分辨哪个是哪个。卸载多余的副本，可能会删除你实际在用的那个副本的设置。现在它会在删除任何内容之前先停止，并列出各副本所在的位置，方便你把不需要的副本移到废纸篓后再重试。如果你只有一个副本——这是绝大多数人的情况——则不会有任何变化。 · 已更新到 DragonKit 4.1.1，这是支撑“设置”“关于”“新功能”和软件更新检查的共用框架。上述修复正来自其中；这些面板的外观和行为均未改变。",
       "zh-Hant": "解除安裝功能中的一項安全性修正，繼承自 Ice 2 所基於的共用框架。選單列管理方式未變。 · 如果在 Mac 上發現同一 App 有多個副本，解除安裝現在會先停止操作。將正在執行的副本移到垃圾桶一直都是安全的，但你的設定、登入項目和支援檔案都是依 App 的身分而非位置來儲存，因此兩個副本會共用這些內容，也就無法分辨哪個是哪個。解除安裝多餘的副本，可能會刪除你實際在用的那個副本的設定。現在它會在刪除任何內容之前先停止，並列出各副本所在的位置，方便你把不需要的副本移到垃圾桶後再試一次。如果你只有一個副本——這是絕大多數人的情況——則不會有任何變化。 · 已更新到 DragonKit 4.1.1，這是支援「設定」「關於」「新功能」和軟體更新檢查的共用框架。上述修正正來自其中；這些面板的外觀與行為均未改變。"
     },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.15.2"
+    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.15.2"
   },
   {
     "version": "2.15.1",
@@ -53,7 +53,7 @@
       "zh-Hans": "这是一个维护版本：你能看到的行为都没有变化。Ice 2 迁移到 Dragon App 共用框架的 4.1.0 版本，其余都是内部整理。 · Ice 2 现在基于共用框架 DragonKit 4.1.0 构建，此前为 4.0.0。设置窗口、“关于”和“新功能”面板以及更新检查都由该框架提供，因此保持引用为最新版本，可让这四处与其他 Dragon App 保持一致。它在 App 内唯一的痕迹，就是“关于”面板“构建于”一行列出的框架版本。 · 内部整理：描述 Ice 2 App 包及其内置菜单栏助手的文件现已集中到项目中的同一位置，与所有 Dragon App 的结构一致。App 的构建方式和使用体验均未改变。",
       "zh-Hant": "這是一個維護版本：你能看到的行為都沒有變化。Ice 2 遷移到 Dragon App 共用框架的 4.1.0 版本，其餘都是內部整理。 · Ice 2 現在基於共用框架 DragonKit 4.1.0 建構，先前為 4.0.0。設定視窗、「關於」和「新功能」面板以及更新檢查都由該框架提供，因此讓參照保持最新，可讓這四處與其他 Dragon App 保持一致。它在 App 內唯一的痕跡，就是「關於」面板「建構於」一行列出的框架版本。 · 內部整理：描述 Ice 2 App 套件及其內建選單列輔助程式的檔案現已集中到專案中的同一位置，與所有 Dragon App 的結構一致。App 的建構方式和使用體驗均未改變。"
     },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.15.1"
+    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.15.1"
   },
   {
     "version": "2.15.0",
@@ -67,7 +67,7 @@
       "zh-Hans": "Ice 2 现已支持七种语言，可在“设置 ▸ 通用”中选择，无需重新启动即可生效。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。在“设置 ▸ 通用”中选择，或保持“自动”以跟随 macOS。设置、菜单栏菜单、提醒和权限窗口会同时切换，无需重新启动。 · 菜单栏右键菜单中的“设置”项现在显示为带齿轮图标的“设置…”，与所有 Dragon App 一致，不再是没有图标的“Ice 2 设置…”。",
       "zh-Hant": "Ice 2 現已支援七種語言，可在「設定 ▸ 一般」中選擇，無需重新啟動即可生效。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。在「設定 ▸ 一般」中選擇，或保持「自動」以跟隨 macOS。設定、選單列選單、提醒和權限視窗會同時切換，無需重新啟動。 · 選單列右鍵選單中的「設定」項目現在顯示為帶齒輪圖像的「設定…」，與所有 Dragon App 一致，不再是沒有圖像的「Ice 2 設定…」。"
     },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.15.0"
+    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.15.0"
   },
   {
     "version": "2.14.7",
@@ -75,7 +75,7 @@
     "notes": {
       "en": "One fix, finishing what 2.14.6 started: the copyright notice macOS shows for Ice 2 in Finder's Get Info panel now matches the one in Settings ▸ About. Nothing about Ice 2's licensing or its origins changed. · Finder's Get Info panel now shows the same copyright line as Settings ▸ About. It named two holders, Jordan Baird's for 2025 alongside Teddy Chan's for 2026, while About named one — so the app made two different claims about itself depending on where you looked. Both now read © 2026 Teddy Chan. 2.14.6's release notes said this notice still carried both authors, and that is what has changed here. · Nothing about Ice 2's licensing or its origins changed. It is still GPL-3.0, inherited from Ice. Jordan Baird's copyright notice is still in the LICENSE file that ships with the app and still in its bundled Acknowledgements, which is where the licence requires it. He is still credited twice in Settings ▸ About, by the Original project link and the Based on line, and the full licence texts are still published at dragonapp.com/ice-2/licenses/."
     },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.7"
+    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.14.7"
   },
   {
     "version": "2.14.5",
