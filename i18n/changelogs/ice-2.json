@@ -1,5 +1,19 @@
 [
   {
+    "version": "2.16.2",
+    "date": "2026-11-02",
+    "notes": {
+      "en": "A bug fix update, mostly for macOS 27. Notification Center opens again while items are hidden, hidden items stay hidden when you switch Spaces, and two freezes and a crash are gone. · On macOS 27, clicking the date and time opens Notification Center again while menu bar items are hidden. · On macOS 27, hidden items no longer flash back into the menu bar when you switch Spaces. · Show on click no longer shows or hides items when you click the clock, Control Center or another menu bar item. · Ice 2 no longer freezes for several seconds when you switch apps with a menu bar appearance option turned on, or when another app stops responding. · On macOS 27, turning on Remove menu bar background no longer makes Ice 2 crash. · On macOS 27, you can now hide the VPN item and the Input Menu, and the Layout editor shows each system item by name. · Ice 2 now updates itself with Sparkle 2.10.1, which includes fixes for two security issues.",
+      "es": "Una actualización con correcciones, sobre todo para macOS 27. El Centro de notificaciones vuelve a abrirse con elementos ocultos, los elementos ocultos siguen ocultos al cambiar de espacio y se han corregido dos bloqueos y un cierre inesperado. · En macOS 27, al hacer clic en la fecha y la hora vuelve a abrirse el Centro de notificaciones aunque haya elementos de la barra de menús ocultos. · En macOS 27, los elementos ocultos ya no reaparecen un instante en la barra de menús al cambiar de espacio. · Mostrar al hacer clic ya no muestra ni oculta elementos al hacer clic en el reloj, el Centro de control u otro elemento de la barra de menús. · Ice 2 ya no se queda bloqueado varios segundos al cambiar de app con una opción de apariencia de la barra de menús activada, ni cuando otra app deja de responder. · En macOS 27, activar Quitar el fondo de la barra de menús ya no hace que Ice 2 se cierre inesperadamente. · En macOS 27 ahora puedes ocultar el elemento de VPN y el Menú de entrada, y el editor de Disposición muestra cada elemento del sistema por su nombre. · Ice 2 ahora se actualiza con Sparkle 2.10.1, que incluye correcciones para dos problemas de seguridad.",
+      "fr": "Une mise à jour corrective, surtout pour macOS 27. Le Centre de notifications s'ouvre à nouveau quand des éléments sont masqués, les éléments masqués le restent quand vous changez d'espace, et deux blocages et un plantage sont corrigés. · Sur macOS 27, un clic sur la date et l'heure ouvre à nouveau le Centre de notifications quand des éléments de la barre des menus sont masqués. · Sur macOS 27, les éléments masqués ne réapparaissent plus brièvement dans la barre des menus quand vous changez d'espace. · Afficher au clic n'affiche ni ne masque plus les éléments quand vous cliquez sur l'horloge, le Centre de contrôle ou un autre élément de la barre des menus. · Ice 2 ne se bloque plus pendant plusieurs secondes quand vous changez d'app avec une option d'apparence de la barre des menus activée, ni quand une autre app ne répond plus. · Sur macOS 27, activer Supprimer l'arrière-plan de la barre des menus ne fait plus planter Ice 2. · Sur macOS 27, vous pouvez désormais masquer l'élément VPN et le Menu de saisie, et l'éditeur de Disposition affiche chaque élément système par son nom. · Ice 2 se met désormais à jour avec Sparkle 2.10.1, qui corrige deux problèmes de sécurité.",
+      "ja": "主に macOS 27 向けの不具合修正アップデートです。項目を隠していても通知センターが開くようになり、操作スペースを切り替えても隠した項目が表示されなくなりました。2 つのフリーズと 1 つのクラッシュも修正しました。 · macOS 27 で、メニューバーの項目を隠しているときでも、日付と時刻をクリックすると通知センターが開くようになりました。 · macOS 27 で、操作スペースを切り替えたときに、隠した項目が一瞬メニューバーに表示されることがなくなりました。 · 「クリックで表示」が、時計やコントロールセンターなど、ほかのメニューバー項目をクリックしたときに項目を表示したり隠したりしなくなりました。 · メニューバーの外観オプションをオンにした状態で App を切り替えたときや、ほかの App が応答しなくなったときに、Ice 2 が数秒間フリーズすることがなくなりました。 · macOS 27 で、「メニューバーの背景を削除」をオンにしても Ice 2 がクラッシュしなくなりました。 · macOS 27 で、VPN 項目と入力メニューを隠せるようになりました。レイアウトエディタには各システム項目が名前で表示されます。 · Ice 2 のアップデートに Sparkle 2.10.1 を使うようになりました。2 件のセキュリティ問題の修正が含まれています。",
+      "ko": "주로 macOS 27을 위한 버그 수정 업데이트입니다. 항목을 숨긴 상태에서도 알림 센터가 다시 열리고, 데스크탑 공간을 전환해도 숨긴 항목이 숨겨진 채로 유지되며, 두 가지 멈춤 현상과 한 가지 충돌이 수정되었습니다. · macOS 27에서 메뉴 막대 항목을 숨긴 상태에서도 날짜와 시간을 클릭하면 알림 센터가 다시 열립니다. · macOS 27에서 데스크탑 공간을 전환할 때 숨긴 항목이 메뉴 막대에 잠깐 나타나지 않습니다. · 클릭 시 표시가 시계, 제어 센터 또는 다른 메뉴 막대 항목을 클릭할 때 더 이상 항목을 보이거나 숨기지 않습니다. · 메뉴 막대 모양 옵션을 켠 상태에서 앱을 전환하거나 다른 앱이 응답하지 않을 때 Ice 2가 몇 초 동안 멈추지 않습니다. · macOS 27에서 메뉴 막대 배경 제거를 켜도 Ice 2가 충돌하지 않습니다. · macOS 27에서 이제 VPN 항목과 입력 메뉴를 숨길 수 있으며, 레이아웃 편집기에 각 시스템 항목이 이름으로 표시됩니다. · Ice 2가 이제 Sparkle 2.10.1로 업데이트되며, 여기에는 두 가지 보안 문제에 대한 수정이 포함되어 있습니다.",
+      "zh-Hans": "这是主要针对 macOS 27 的错误修复更新。隐藏项目时通知中心可以再次打开，切换空间时隐藏的项目保持隐藏，另外修复了两处卡顿和一次崩溃。 · 在 macOS 27 上，即使菜单栏项目处于隐藏状态，点按日期和时间也能再次打开通知中心。 · 在 macOS 27 上，切换空间时，隐藏的项目不会再短暂出现在菜单栏中。 · “点按时显示”在你点按时钟、控制中心或其他菜单栏项目时，不会再显示或隐藏项目。 · 在开启菜单栏外观选项的情况下切换 App，或其他 App 停止响应时，Ice 2 不会再卡住数秒。 · 在 macOS 27 上，开启“移除菜单栏背景”不会再导致 Ice 2 崩溃。 · 在 macOS 27 上，现在可以隐藏 VPN 项目和输入法菜单，布局编辑器也会按名称显示每个系统项目。 · Ice 2 现在使用 Sparkle 2.10.1 进行更新，其中包含两个安全问题的修复。",
+      "zh-Hant": "這是主要針對 macOS 27 的錯誤修正更新。隱藏項目時通知中心可以再次打開，切換空間時隱藏的項目保持隱藏，另外修正了兩處卡頓和一次當機。 · 在 macOS 27 上，即使選單列項目處於隱藏狀態，點按日期和時間也能再次打開通知中心。 · 在 macOS 27 上，切換空間時，隱藏的項目不會再短暫出現在選單列中。 · 「點按時顯示」在你點按時鐘、控制中心或其他選單列項目時，不會再顯示或隱藏項目。 · 在開啟選單列外觀選項的情況下切換 App，或其他 App 停止回應時，Ice 2 不會再卡住數秒。 · 在 macOS 27 上，開啟「移除選單列背景」不會再導致 Ice 2 當機。 · 在 macOS 27 上，現在可以隱藏 VPN 項目和輸入法選單，版面編輯器也會依名稱顯示每個系統項目。 · Ice 2 現在使用 Sparkle 2.10.1 進行更新，其中包含兩個安全問題的修正。"
+    },
+    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.16.2"
+  },
+  {
     "version": "2.16.1",
     "date": "2026-09-28",
     "notes": {
@@ -84,13 +98,5 @@
       "en": "A maintenance release: nothing you can see behaves differently. · Ice 2 now builds against version 3.4.0 of the shared Dragon app framework, up from 3.3.0. That release adds a way for an app to narrow the framework's language picker to the languages it has actually translated itself into, which Ice 2 has no use for — it ships no translations, so it shows no language picker. The bump keeps Ice 2 current with the shared code rather than drifting behind it."
     },
     "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.5"
-  },
-  {
-    "version": "2.14.4",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A maintenance release: nothing you can see behaves differently. · Ice 2 now checks for updates at its own home rather than the website, so a problem with the website can no longer hold one up. This finishes the change 2.14.3 began; updates keep arriving exactly as before."
-    },
-    "url": "https://github.com/teddychan/ice-2/releases/tag/v2.14.4"
   }
 ]
