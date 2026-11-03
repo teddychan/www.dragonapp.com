@@ -232,11 +232,11 @@
     ]
   },
   "spectacle-2": {
-    "title": "Spectacle 2 — Gestionnaire de fenêtres au clavier pour Mac, reconstruit pour macOS 26 &amp; 27",
-    "description": "Spectacle 2 est un gestionnaire de fenêtres au clavier pour Mac, gratuit et open source : déplacez et redimensionnez les fenêtres avec des raccourcis globaux — moitiés, coins, tiers, plein écran et d’un écran à l’autre. Reconstruit pour macOS 26 et 27. Téléchargement gratuit sur GitHub ou avec Homebrew.",
-    "eyebrow": "Le gestionnaire de fenêtres au clavier pour macOS",
-    "h1": "Déplacez et redimensionnez les fenêtres d’une touche",
-    "sub": "Spectacle 2 place la fenêtre active en moitiés, coins, tiers ou plein écran, l’envoie d’un écran à l’autre, l’agrandit ou la réduit, et annule le tout — au clavier. Une reconstruction moderne et open source de Spectacle, désormais sur macOS 26 et 27.",
+    "title": "Spectacle 2 : Gestionnaire de fenêtres pour Mac, au clavier ou à la souris",
+    "description": "Spectacle 2 est un gestionnaire de fenêtres pour Mac, gratuit et open source. Déplacez et redimensionnez les fenêtres avec des raccourcis clavier, la souris ou le trackpad. Reconstruit pour macOS 26 et 27.",
+    "eyebrow": "Le gestionnaire de fenêtres pour macOS",
+    "h1": "Déplacez et redimensionnez les fenêtres d’une touche, d’un clic ou d’un glissement",
+    "sub": "Spectacle 2 place la fenêtre active en moitiés, coins, tiers ou plein écran et l’envoie d’un écran à l’autre. Appuyez sur un raccourci clavier, choisissez l’action dans le menu de la barre des menus ou faites glisser la fenêtre vers un bord de l’écran. Une reconstruction open source de Spectacle pour macOS 26 et 27.",
     "demo_caption": "Une fenêtre Mac placée sur la moitié gauche de l’écran avec le raccourci Spectacle 2 Option-Commande-Gauche, avec une note indiquant qu’un nouvel appui fait défiler entre un demi, deux tiers et un tiers.",
     "feat1_h": "Moitiés et plein écran",
     "feat1_p": "Placez la fenêtre sur la moitié gauche, droite, haute ou basse, ou remplissez l’écran — avec ⌥⌘ et les flèches.",

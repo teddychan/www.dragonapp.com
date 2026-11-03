@@ -241,11 +241,11 @@
     ]
   },
   "spectacle-2": {
-    "title": "Spectacle 2 — Gestor de ventanas por teclado para Mac, reconstruido para macOS 26 &amp; 27",
-    "description": "Spectacle 2 es un gestor de ventanas por teclado para Mac, gratuito y de código abierto: mueve y redimensiona ventanas con atajos globales —mitades, esquinas, tercios, pantalla completa y entre pantallas—. Reconstruido para macOS 26 y 27. Descárgalo gratis en GitHub o con Homebrew.",
-    "eyebrow": "El gestor de ventanas por teclado para macOS",
-    "h1": "Mueve y redimensiona ventanas con una tecla",
-    "sub": "Spectacle 2 ajusta la ventana activa a mitades, esquinas, tercios o pantalla completa, la envía entre pantallas, la agranda o reduce y lo deshace todo, desde el teclado. Una reconstrucción moderna y de código abierto de Spectacle, ahora en macOS 26 y 27.",
+    "title": "Spectacle 2: Gestor de ventanas para Mac, con teclado o ratón",
+    "description": "Spectacle 2 es un gestor de ventanas para Mac, gratuito y de código abierto. Mueve y redimensiona ventanas con atajos de teclado, el ratón o el trackpad. Reconstruido para macOS 26 y 27.",
+    "eyebrow": "El gestor de ventanas para macOS",
+    "h1": "Mueve y redimensiona ventanas con una tecla, un clic o arrastrando",
+    "sub": "Spectacle 2 ajusta la ventana activa a mitades, esquinas, tercios o pantalla completa y la envía entre pantallas. Pulsa un atajo de teclado, elige la acción en el menú de la barra de menús o arrastra la ventana a un borde de la pantalla. Una reconstrucción de código abierto de Spectacle para macOS 26 y 27.",
     "demo_caption": "Una ventana de Mac ajustada a la mitad izquierda de la pantalla con el atajo de Spectacle 2 Opción-Comando-Izquierda, con una nota de que al pulsar de nuevo alterna entre un medio, dos tercios y un tercio.",
     "feat1_h": "Mitades y pantalla completa",
     "feat1_p": "Ajusta la ventana a la mitad izquierda, derecha, superior o inferior, o llena la pantalla, con ⌥⌘ y las flechas.",
