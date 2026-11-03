@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.22.1",
+    "date": "2026-11-03",
+    "notes": {
+      "en": "On macOS 27, the icons in ClipMenu 2's menus show again. · On macOS 27, ClipMenu 2's menus had lost their icons. Snippets, snippet folders, History folders and actions showed none, and neither did About, Check for Updates, Settings and Quit. All of them show their icons again. Earlier versions of macOS look the same as before. · Updated to DragonKit 4.3.0, the shared framework behind Settings, About, What's New and software updates. The icons on About, Check for Updates, Settings and Quit come back through it.",
+      "es": "En macOS 27, los iconos de los menús de ClipMenu 2 vuelven a verse. · En macOS 27, los menús de ClipMenu 2 habían perdido sus iconos. Los fragmentos, las carpetas de fragmentos, las carpetas del Historial y las acciones no los mostraban, y tampoco Acerca de, Buscar actualizaciones, Ajustes y Salir. Todos vuelven a mostrar su icono. Las versiones anteriores de macOS se ven igual que antes. · Actualizado a DragonKit 4.3.0, el framework compartido detrás de Ajustes, Acerca de, Novedades y las actualizaciones de software. Los iconos de Acerca de, Buscar actualizaciones, Ajustes y Salir vuelven gracias a él.",
+      "fr": "Sur macOS 27, les icônes des menus de ClipMenu 2 s’affichent de nouveau. · Sur macOS 27, les menus de ClipMenu 2 avaient perdu leurs icônes. Les fragments, les dossiers de fragments, les dossiers de l’Historique et les actions n’en avaient plus, pas plus que À propos, Rechercher les mises à jour, Réglages et Quitter. Toutes leurs icônes s’affichent de nouveau. Les versions antérieures de macOS ne changent pas. · Mise à jour vers DragonKit 4.3.0, le framework partagé derrière les Réglages, À propos, Nouveautés et les mises à jour logicielles. Les icônes d’À propos, Rechercher les mises à jour, Réglages et Quitter reviennent grâce à lui.",
+      "ja": "macOS 27 で、ClipMenu 2 のメニューのアイコンが再び表示されるようになりました。 · macOS 27 では、ClipMenu 2 のメニューからアイコンが消えていました。スニペット、スニペットのフォルダ、履歴のフォルダ、アクションのほか、「ClipMenu 2 について」「アップデートを確認」「設定」「ClipMenu 2 を終了」にもアイコンが表示されていませんでした。これらすべてのアイコンが再び表示されます。それより前の macOS では、見た目は変わりません。 · DragonKit 4.3.0 に更新しました。これは「設定」「情報」「新機能」やソフトウェアアップデートを支える共有フレームワークです。「ClipMenu 2 について」「アップデートを確認」「設定」「ClipMenu 2 を終了」のアイコンは、この更新によって戻りました。",
+      "ko": "macOS 27에서 ClipMenu 2 메뉴의 아이콘이 다시 표시됩니다. · macOS 27에서 ClipMenu 2 메뉴의 아이콘이 사라졌습니다. 스니펫, 스니펫 폴더, 기록 폴더, 동작뿐 아니라 ClipMenu 2 정보, 업데이트 확인, 설정, ClipMenu 2 종료에도 아이콘이 표시되지 않았습니다. 이제 모두 다시 아이콘이 표시됩니다. 이전 버전의 macOS에서는 달라진 것이 없습니다. · DragonKit 4.3.0으로 업데이트했습니다. 설정, 정보, 새로운 기능, 소프트웨어 업데이트를 지원하는 공유 프레임워크입니다. ClipMenu 2 정보, 업데이트 확인, 설정, ClipMenu 2 종료의 아이콘은 이 업데이트로 다시 표시됩니다.",
+      "ru": "В macOS 27 значки в меню ClipMenu 2 снова видны. · В macOS 27 меню ClipMenu 2 потеряли значки. Их не было у фрагментов, папок фрагментов, папок в «Истории» и действий, а также у пунктов «О программе ClipMenu 2», «Проверить обновления», «Настройки» и «Завершить ClipMenu 2». Теперь все значки снова на месте. В более ранних версиях macOS ничего не изменилось. · Обновлено до DragonKit 4.3.0, общего фреймворка, на котором построены «Настройки», «О программе», «Что нового» и обновления программы. Значки пунктов «О программе ClipMenu 2», «Проверить обновления», «Настройки» и «Завершить ClipMenu 2» вернулись благодаря ему.",
+      "zh-Hans": "在 macOS 27 上，ClipMenu 2 菜单中的图标重新显示了。 · 在 macOS 27 上，ClipMenu 2 的菜单失去了图标。片段、片段文件夹、“历史”中的文件夹和动作都不显示图标，“关于 ClipMenu 2”“检查更新”“设置”和“退出 ClipMenu 2”也一样。现在这些图标都重新显示。更早版本的 macOS 上外观不变。 · 更新到 DragonKit 4.3.0，这是支撑设置、关于、新功能和软件更新的共享框架。“关于 ClipMenu 2”“检查更新”“设置”和“退出 ClipMenu 2”的图标正是因它而恢复。",
+      "zh-Hant": "在 macOS 27 上，ClipMenu 2 選單中的圖示重新顯示了。 · 在 macOS 27 上，ClipMenu 2 的選單失去了圖示。片段、片段資料夾、「歷史」中的資料夾和動作都不顯示圖示，「關於 ClipMenu 2」「檢查更新」「設定」和「結束 ClipMenu 2」也一樣。現在這些圖示都重新顯示。較早版本的 macOS 上外觀不變。 · 更新至 DragonKit 4.3.0，這是支撐設定、關於、新功能與軟體更新的共享框架。「關於 ClipMenu 2」「檢查更新」「設定」和「結束 ClipMenu 2」的圖示正是因它而恢復。"
+    },
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.22.1"
+  },
+  {
     "version": "2.22.0",
     "date": "2026-11-03",
     "notes": {
@@ -97,19 +112,5 @@
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權聲明，而不再是一句應用程式描述。"
     },
     "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.8"
-  },
-  {
-    "version": "2.20.7",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A fix for the copyright notice: the one macOS shows in Finder's Get Info panel described the app instead of naming a copyright holder. · Finder's Get Info panel now shows ClipMenu's copyright holders instead of a one-line description of the app.",
-      "es": "Una corrección del aviso de copyright: el que macOS muestra en el panel Obtener información del Finder describía la app en lugar de nombrar a un titular del copyright. · El panel Obtener información del Finder ahora muestra los titulares del copyright de ClipMenu en lugar de una descripción de la app en una línea.",
-      "fr": "Une correction de la mention de copyright : celle que macOS affiche dans la fenêtre Lire les informations du Finder décrivait l'app au lieu de nommer un détenteur du copyright. · La fenêtre Lire les informations du Finder affiche désormais les détenteurs du copyright de ClipMenu au lieu d'une description de l'app en une ligne.",
-      "ja": "著作権表示の修正です。macOS が Finder の「情報を見る」に表示する著作権表示が、著作権者ではなくアプリの説明文になっていました。 · Finder の「情報を見る」に、アプリの説明文ではなく ClipMenu の著作権者が表示されるようになりました。",
-      "ko": "저작권 표시 수정입니다. macOS가 Finder의 정보 가져오기 창에 표시하는 저작권 표시가 저작권자가 아니라 앱 설명이었습니다. · Finder의 정보 가져오기 창에 앱 설명 대신 ClipMenu의 저작권자가 표시됩니다.",
-      "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权所有者，而不再是一句应用描述。",
-      "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權所有者，而不再是一句應用程式描述。"
-    },
-    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.7"
   }
 ]
