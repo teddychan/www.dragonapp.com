@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.22.0",
+    "date": "2026-11-03",
+    "notes": {
+      "en": "Russian is now one of ClipMenu 2's languages, and parts of Settings that stayed in English are translated. · Russian. Pick it under Language in Settings and the app switches right away without a restart. · Most of the Sync & Backup pane, the Snippet column in the snippet editor, the maximum thumbnail size setting and the shortcut recorder's messages showed in English whatever language you picked. They are now translated. · Restore from Backup lists counts as \"Folders: 3 · Snippets: 12\", so they read correctly in every language. A backup folder holding one file that isn't a ClipMenu 2 backup no longer says \"1 items\".",
+      "es": "El ruso ya es uno de los idiomas de ClipMenu 2, y partes de los Ajustes que seguían en inglés ahora están traducidas. · Ruso. Elígelo en Idioma, dentro de los Ajustes, y la app cambia al instante sin reiniciar. · Casi todo el panel Sincronización y copias de seguridad, la columna Fragmento del editor de fragmentos, el ajuste Tamaño máximo de miniatura y los mensajes del grabador de atajos aparecían en inglés fuera cual fuera tu idioma. Ahora están traducidos. · Restaurar desde una copia muestra los recuentos como \"Carpetas: 3 · Fragmentos: 12\", así que se leen bien en todos los idiomas. El aviso sobre los archivos de la carpeta de copias que no son copias de ClipMenu 2 también muestra bien su número.",
+      "fr": "Le russe fait désormais partie des langues de ClipMenu 2, et des parties des Réglages restées en anglais sont traduites. · Russe. Choisissez-le dans Langue, dans les Réglages, et l’app change aussitôt, sans redémarrer. · La plupart du panneau Synchronisation et sauvegarde, la colonne Fragment de l’éditeur de fragments, le réglage Taille maximale des vignettes et les messages de l’enregistreur de raccourcis s’affichaient en anglais quelle que soit votre langue. Ils sont maintenant traduits. · Restaurer une sauvegarde affiche les nombres sous la forme \"Dossiers : 3 · Fragments : 12\", lisible dans toutes les langues. La note sur les fichiers du dossier de sauvegarde qui ne sont pas des sauvegardes ClipMenu 2 affiche aussi correctement leur nombre.",
+      "ja": "ClipMenu 2 がロシア語に対応しました。英語のまま表示されていた設定の一部も翻訳されました。 · ロシア語。設定の「言語」で選ぶと、再起動せずにすぐ切り替わります。 · 「同期とバックアップ」パネルの大部分、スニペットエディタの「スニペット」列、「サムネイルの最大サイズ」の設定、ショートカット記録時のメッセージは、どの言語を選んでも英語で表示されていました。これらが翻訳されました。 · 「バックアップから復元」の一覧で、件数が「3 個のフォルダ · 12 個のスニペット」のように表示され、どの言語でも自然に読めるようになりました。バックアップフォルダ内の ClipMenu 2 のバックアップではないファイルについての注記も、件数を正しく表示します。",
+      "ko": "ClipMenu 2가 이제 러시아어를 지원하며, 영어로 남아 있던 설정 일부가 번역되었습니다. · 러시아어. 설정의 언어에서 선택하면 재시작 없이 바로 바뀝니다. · 동기화 및 백업 패널 대부분, 스니펫 편집기의 스니펫 열, 최대 썸네일 크기 설정, 단축키 기록기의 메시지가 어떤 언어를 선택해도 영어로 표시되었습니다. 이제 모두 번역됩니다. · 백업에서 복원 목록이 개수를 ‘폴더 3개 · 스니펫 12개’처럼 표시하므로 모든 언어에서 자연스럽게 읽힙니다. 백업 폴더에 있는 ClipMenu 2 백업이 아닌 파일에 대한 안내도 개수를 올바르게 표시합니다.",
+      "ru": "ClipMenu 2 теперь доступен на русском языке, а части настроек, которые оставались на английском, переведены. · Русский язык. Выберите его в разделе «Язык» в настройках, и приложение переключится сразу, без перезапуска. · Большая часть панели «Синхронизация и резервное копирование», столбец «Фрагмент» в редакторе фрагментов, настройка «Макс. размер миниатюры» и сообщения при записи сочетания клавиш отображались на английском, какой бы язык вы ни выбрали. Теперь они переведены. · В окне «Восстановление из резервной копии» количество показывается как «Папок: 3 · Фрагментов: 12», поэтому оно читается правильно на любом языке. Примечание о файлах в папке резервных копий, которые не являются резервными копиями ClipMenu 2, тоже правильно показывает их количество.",
+      "zh-Hans": "ClipMenu 2 现已支持俄语，此前仍显示为英文的部分设置也已翻译。 · 俄语。在设置的“语言”中选择后，应用会立即切换，无需重启。 · “同步与备份”面板的大部分内容、片段编辑器中的“片段”栏、“最大缩略图尺寸”设置以及快捷键录制时的提示，无论选择哪种语言都显示为英文。现在都已翻译。 · “从备份恢复”列表现在以“3 个文件夹 · 12 个片段”的形式显示数量，在各种语言中都能正确阅读。关于备份文件夹中非 ClipMenu 2 备份文件的提示，也会正确显示数量。",
+      "zh-Hant": "ClipMenu 2 現已支援俄文，先前仍顯示為英文的部分設定也已翻譯。 · 俄文。在設定的「語言」中選擇後，應用程式會立即切換，無需重新啟動。 · 「同步與備份」面板的大部分內容、片段編輯器中的「片段」欄、「最大縮圖尺寸」設定，以及快速鍵錄製時的提示，無論選擇哪種語言都顯示為英文。現在都已翻譯。 · 「從備份還原」列表現在以「3 個資料夾 · 12 個片段」的形式顯示數量，在各種語言中都能正確閱讀。關於備份資料夾中非 ClipMenu 2 備份檔案的提示，也會正確顯示數量。"
+    },
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.22.0"
+  },
+  {
     "version": "2.21.2",
     "date": "2026-08-20",
     "notes": {
@@ -11,7 +26,7 @@
       "zh-Hans": "ClipMenu 2 现在在应用界面各处都使用同一个名称。你的剪贴板历史、片段与设置都没有变化。 · 应用在各处都称自己为“ClipMenu 2”。菜单栏与“关于”显示的是“ClipMenu 2”，但退出、打开、初次设置界面、开机启动询问、粘贴权限说明等 12 处仍写着“ClipMenu”，应用对自己的名称前后不一致。现在这些都已统一。对 Naotaka Morimoto 所写、本应用据以重写的原版 ClipMenu 的指称，仍有意保留原名。",
       "zh-Hant": "ClipMenu 2 現在在應用程式介面各處都使用同一個名稱。你的剪貼簿歷史記錄、片段與設定都沒有變化。 · 應用程式在各處都稱自己為「ClipMenu 2」。選單列與「關於」顯示的是「ClipMenu 2」，但結束、開啟、初次設定畫面、登入時啟動詢問、貼上權限說明等 12 處仍寫著「ClipMenu」，應用程式對自己的名稱前後不一致。現在這些都已統一。對 Naotaka Morimoto 所寫、本應用程式據以重寫的原版 ClipMenu 的指稱，仍刻意保留原名。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.2"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.21.2"
   },
   {
     "version": "2.21.1",
@@ -25,7 +40,7 @@
       "zh-Hans": "卸载功能的一项安全修复，来自 ClipMenu 2 所基于的共享框架。你的剪贴板历史和片段功能没有变化。 · 如果在你的 Mac 上发现不止一份 ClipMenu 2 副本，卸载现在会停止执行。把正在运行的这份副本移入废纸篓一直是安全的，但你的设置、登录项和支持文件都是按应用的身份而不是位置存储的——因此两份副本会共享全部这些内容，也无法分辨哪份是哪份。卸载多余的副本可能会删除你实际使用的那份副本的设置。现在它会在删除任何内容之前停止，并列出各份副本所在的位置，方便你先清理掉不需要的副本，再重新尝试。如果你只有一份副本——这是绝大多数人的情况——则不会有任何变化。 · 更新到 DragonKit 4.1.1，这是支撑设置、关于、新功能和软件更新的共享框架。上面的修复正是来自它；这些面板的外观和行为都没有变化。",
       "zh-Hant": "解除安裝功能的一項安全修正，來自 ClipMenu 2 所依據的共享框架。你的剪貼簿歷史記錄與片段功能沒有變化。 · 如果在你的 Mac 上發現不止一份 ClipMenu 2 副本，解除安裝現在會停止執行。把正在執行的這份副本移到垃圾桶一直是安全的，但你的設定、登入項目和支援檔案都是依應用程式的身分而非位置儲存的——因此兩份副本會共用全部這些內容，也無法分辨哪份是哪份。解除安裝多餘的副本可能會刪除你實際使用的那份副本的設定。現在它會在刪除任何內容之前停止，並列出各份副本所在的位置，方便你先清除不需要的副本，再重新嘗試。如果你只有一份副本——這是絕大多數人的情況——則不會有任何變化。 · 更新至 DragonKit 4.1.1，這是支撐設定、關於、新功能與軟體更新的共享框架。上面的修正正是來自它；這些面板的外觀與行為都沒有變化。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.1"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.21.1"
   },
   {
     "version": "2.21.0",
@@ -39,7 +54,7 @@
       "zh-Hans": "这是一个维护版本：仅有内部更新，ClipMenu 的使用方式没有变化。",
       "zh-Hant": "這是一個維護版本：僅有內部更新，ClipMenu 的使用方式沒有變化。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.21.0"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.21.0"
   },
   {
     "version": "2.20.10",
@@ -53,7 +68,7 @@
       "zh-Hans": "这是一个维护版本：仅有内部更新，ClipMenu 的使用方式没有变化。 · 更新了构建 ClipMenu 所用的共享 Dragon 套件。",
       "zh-Hant": "這是一個維護版本：僅有內部更新，ClipMenu 的使用方式沒有變化。 · 更新了建置 ClipMenu 所用的共享 Dragon 套件。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.10"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.10"
   },
   {
     "version": "2.20.9",
@@ -67,7 +82,7 @@
       "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权声明，与关于面板中的一行相同。",
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權聲明，與關於面板中的一行相同。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.9"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.9"
   },
   {
     "version": "2.20.8",
@@ -81,7 +96,7 @@
       "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权声明，而不再是一句应用描述。",
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權聲明，而不再是一句應用程式描述。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.8"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.8"
   },
   {
     "version": "2.20.7",
@@ -95,14 +110,6 @@
       "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权所有者，而不再是一句应用描述。",
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權所有者，而不再是一句應用程式描述。"
     },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.7"
-  },
-  {
-    "version": "2.20.5",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A maintenance release: internal updates only, with no changes to how ClipMenu works. · ClipMenu is built on an updated version of the shared Dragon App code. About's Credits row now reads DragonKit v3.4.0. That row is the only observable difference — no behaviour, setting, shortcut or stored file changes."
-    },
-    "url": "https://github.com/teddychan/clipmenu-2/releases/tag/v2.20.5"
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.7"
   }
 ]

@@ -19,7 +19,7 @@
       wait_for_update: 500
     });
   </script>
-  <script src="/shared/consent.js" defer></script>
+  <script src="/shared/consent.js?v=0058cbb5" defer></script>
   <title>Spectacle 2 — Mac 键盘窗口管理器，为 macOS 26 与 27 重制</title>
   <meta name="description" content="Spectacle 2 是一款面向 Mac 的免费开源键盘窗口管理器——用全局快捷键移动和调整窗口：半屏、边角、三分之一、全屏，还能跨显示器。为 macOS 26 与 27 重制。可在 GitHub 或用 Homebrew 免费下载。">
   <link rel="canonical" href="https://www.dragonapp.com/zh-Hans/spectacle-2/">
@@ -46,8 +46,8 @@
   <meta name="twitter:description" content="Spectacle 2 是一款面向 Mac 的免费开源键盘窗口管理器——用全局快捷键移动和调整窗口：半屏、边角、三分之一、全屏，还能跨显示器。为 macOS 26 与 27 重制。可在 GitHub 或用 Homebrew 免费下载。">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
-  <link rel="stylesheet" href="/shared/dragon.css">
-  <script src="/shared/i18n.js" defer></script>
+  <link rel="stylesheet" href="/shared/dragon.css?v=56a7d4ef">
+  <script src="/shared/i18n.js?v=bf03b684" defer></script>
 
   <script type="application/ld+json">
 {
@@ -257,8 +257,8 @@
         <h2>最新动态</h2>
         <p>通俗易懂的更新说明，最新在前。</p>
       </div>
-      <div class="changelog"><div class="logrow"><span class="ver">2.5.7</span><div><div class="lognote">这是“卸载”的一处安全修复，来自 Spectacle 2 所依赖的共享框架。窗口管理没有任何变化。 · 如果 Mac 上存在两个或更多 Spectacle 2 副本，“卸载”现在会中止。把正在运行的副本移到废纸篓一直是安全的，但设置、登录项和支持文件是按应用的标识而非所在位置保存的，因此两个副本会共享这些内容，无法区分归属。卸载多余的副本可能会删除你实际使用的那个副本的设置。现在它会在删除任何内容之前中止，并列出各个副本的位置，你可以先把不需要的移到废纸篓，然后重试。如果你只有一个副本（几乎所有人都是），则没有任何变化。 · 共享框架 DragonKit 升级到 4.1.1，它负责“设置”、“关于”、“新增功能”以及软件更新。上面这处修复来自该升级；这些面板的外观和行为都没有改变。</div><div class="logmeta">2026-08-20 · <a href="https://github.com/teddychan/spectacle-2/releases/tag/v2.5.7">在 GitHub 上查看 →</a></div></div></div>
-<div class="logrow"><span class="ver">2.5.6</span><div><div class="lognote">这是一次维护更新。Spectacle 2 升级了所依赖的共享框架，并做了一些内部整理。日常使用的一切都与之前完全相同。 · 共享框架 DragonKit 升级到 4.1.0，它负责“设置”、“关于”、“新增功能”以及软件更新。此次只是版本变化，这些面板的外观和行为都没有改变。 · 源码整理：构成应用程序包的文件现在集中在同一个文件夹中，许可证文件同时署名原版 Spectacle 的 Eric Czarny 与本次重写的 Teddy Chan。这两项在应用内都看不到。</div><div class="logmeta">2026-08-18 · <a href="https://github.com/teddychan/spectacle-2/releases/tag/v2.5.6">在 GitHub 上查看 →</a></div></div></div></div>
+      <div class="changelog"><div class="logrow"><span class="ver">2.6.0</span><div><div class="lognote">修复了设置可能被重置、快捷键可能失效，以及窗口可能部分移出屏幕的问题。Spectacle 2 现在也支持俄语。 · 支持俄语。在“设置 › 通用 › 语言”中选择 Русский。 · 更改通用设置后再打开快捷键，可能会重置你的通用设置，录制快捷键还可能再次重置。现在两者分开保存，旧版本留下的设置会在首次启动 2.6.0 时整理好。 · 用 Delete 键清除的快捷键在重新启动后会恢复。现在它会保持清除状态。 · 录制快捷键时从菜单中选择“关于 Spectacle 2”或“检查更新”，会让所有快捷键失效，直到重新打开快捷键面板。录制时点击“恢复默认设置”会过早重新启用快捷键，导致按下的键移动了窗口而没有被录制。这两个问题都已修复。 · 执行“放大窗口”后、对比屏幕还大的窗口执行“居中”后，或者某个 App 拒绝了 Spectacle 请求的尺寸时，窗口可能部分移出屏幕。现在 Spectacle 会检查窗口的实际位置并把它移回屏幕内，键盘快捷键和拖移吸附都是如此。 · “终端”等按固定步长调整窗口大小的 App 不再与旁边的窗口重叠。Spectacle 会像原版 Spectacle 一样，缩小超出所分配空间的窗口。 · 同时打开“窗口间距”和“顶部边缘不留间距”时，再次按半屏或角落快捷键会正确地在 ½、⅔、⅓ 之间切换，上下堆叠的窗口之间也会保留完整的间距。平铺窗口四周的边距现在各边都相同。 · 拖到屏幕边缘的窗口现在会吸附到与键盘快捷键完全相同的位置。在某些屏幕尺寸上，少数位置会移动 1 到 2 个点；无法调整大小的窗口会放在所分配空间的中央，而不是停在角落。 · 更新到 DragonKit 4.2.0，这是支撑设置、关于、新功能和软件更新的共享框架，俄语支持正是由它带来。</div><div class="logmeta">2026-11-03 · <a href="https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.6.0">在 GitHub 上查看 →</a></div></div></div>
+<div class="logrow"><span class="ver">2.5.7</span><div><div class="lognote">这是“卸载”的一处安全修复，来自 Spectacle 2 所依赖的共享框架。窗口管理没有任何变化。 · 如果 Mac 上存在两个或更多 Spectacle 2 副本，“卸载”现在会中止。把正在运行的副本移到废纸篓一直是安全的，但设置、登录项和支持文件是按应用的标识而非所在位置保存的，因此两个副本会共享这些内容，无法区分归属。卸载多余的副本可能会删除你实际使用的那个副本的设置。现在它会在删除任何内容之前中止，并列出各个副本的位置，你可以先把不需要的移到废纸篓，然后重试。如果你只有一个副本（几乎所有人都是），则没有任何变化。 · 共享框架 DragonKit 升级到 4.1.1，它负责“设置”、“关于”、“新增功能”以及软件更新。上面这处修复来自该升级；这些面板的外观和行为都没有改变。</div><div class="logmeta">2026-08-20 · <a href="https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.5.7">在 GitHub 上查看 →</a></div></div></div></div>
       <p class="changelog-auto">每个版本均来自应用内的“新功能”</p>
     </div>
   </section>
