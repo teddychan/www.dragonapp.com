@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.7.0",
+    "date": "2026-11-03",
+    "notes": {
+      "en": "Every window action is now in the menu bar menu, so you can arrange windows with a mouse or trackpad. · Click the Spectacle 2 icon in the menu bar to move the front window to a half, a corner or a third, center it, make it fill the screen, resize it, send it to another display, or undo a move. Each item shows its shortcut, and items that can't be used right now are greyed out.",
+      "es": "Todas las acciones de ventana están ahora en el menú de la barra de menús, así que puedes colocar las ventanas con el ratón o el trackpad. · Haz clic en el icono de Spectacle 2 en la barra de menús para mover la ventana activa a una mitad, una esquina o un tercio, centrarla, hacer que ocupe toda la pantalla, cambiar su tamaño, enviarla a otra pantalla o deshacer un movimiento. Cada opción muestra su atajo, y las que no se pueden usar en ese momento aparecen atenuadas.",
+      "fr": "Toutes les actions sur les fenêtres sont désormais dans le menu de la barre des menus, pour disposer vos fenêtres à la souris ou au trackpad. · Cliquez sur l'icône de Spectacle 2 dans la barre des menus pour placer la fenêtre active sur une moitié, un coin ou un tiers de l'écran, la centrer, l'agrandir à tout l'écran, la redimensionner, l'envoyer sur un autre écran ou annuler un déplacement. Chaque élément affiche son raccourci, et ceux qui ne peuvent pas servir pour l'instant sont grisés.",
+      "ja": "すべてのウインドウ操作をメニューバーのメニューから選べるようになり、マウスやトラックパッドでウインドウを配置できます。 · メニューバーの Spectacle 2 アイコンをクリックすると、最前面のウインドウを画面の半分、隅、3分の1に移動したり、中央に置いたり、画面いっぱいに広げたり、サイズを変えたり、別のディスプレイに送ったり、移動を取り消したりできます。各項目にはショートカットが表示され、今は使えない項目はグレーで表示されます。",
+      "ko": "이제 모든 창 동작을 메뉴 막대 메뉴에서 선택할 수 있어 마우스나 트랙패드로 창을 배치할 수 있습니다. · 메뉴 막대의 Spectacle 2 아이콘을 클릭하면 맨 앞 창을 화면의 절반, 모서리, 3분의 1로 옮기거나, 가운데에 두거나, 화면을 가득 채우거나, 크기를 바꾸거나, 다른 디스플레이로 보내거나, 이동을 취소할 수 있습니다. 각 항목에는 단축키가 표시되며, 지금 사용할 수 없는 항목은 흐리게 표시됩니다.",
+      "ru": "Все действия с окнами теперь есть в меню в строке меню, поэтому окна можно расставлять мышью или трекпадом. · Нажмите значок Spectacle 2 в строке меню, чтобы переместить активное окно в половину, угол или треть экрана, поставить его по центру, развернуть на весь экран, изменить его размер, перенести на другой дисплей или отменить перемещение. У каждого пункта показано его сочетание клавиш, а пункты, которые сейчас недоступны, затенены.",
+      "zh-Hans": "所有窗口操作现在都可以在菜单栏菜单中选择，用鼠标或触控板就能排列窗口。 · 点按菜单栏中的 Spectacle 2 图标，即可将最前面的窗口移到屏幕的一半、一角或三分之一，将其居中、铺满屏幕、调整大小、移到另一台显示器，或撤销一次移动。每个项目都会显示其快捷键，当前无法使用的项目会显示为灰色。",
+      "zh-Hant": "所有視窗動作現在都能在選單列選單中選擇，用滑鼠或觸控式軌跡板就能排列視窗。 · 按一下選單列中的 Spectacle 2 圖像，即可將最前方的視窗移到螢幕的一半、一角或三分之一，將其置中、填滿螢幕、調整大小、移到另一台顯示器，或還原一次移動。每個項目都會顯示其快速鍵，目前無法使用的項目會顯示為灰色。"
+    },
+    "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.7.0"
+  },
+  {
     "version": "2.6.0",
     "date": "2026-11-03",
     "notes": {
@@ -79,13 +94,5 @@
       "en": "A maintenance release: nothing about Spectacle 2 changes. · An internal dependency pin now matches the other Dragon apps. Spectacle 2 was the only one stating the same version range in a different form. No component version moves in this release."
     },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.1"
-  },
-  {
-    "version": "2.5.0",
-    "date": "2026-08-08",
-    "notes": {
-      "en": "The About panel is rebuilt on DragonKit's fixed layout, and two of its links were wrong. · The Website link opened the Dragon App hub instead of Spectacle 2's own page. It now opens dragonapp.com/spectacle-2/, and the two link rows are checked against each other so the bare hub cannot come back. · The Support link opened the repository root and was labelled \"Source\". It is now the issues page, labelled \"Support on GitHub\" — the row every other Dragon app already showed. · About now reports which version of the shared DragonKit it was built against, so it cannot misstate it."
-    },
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.0"
   }
 ]
