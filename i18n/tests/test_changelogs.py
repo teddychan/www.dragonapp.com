@@ -19,7 +19,6 @@ import pytest
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CL = os.path.join(ROOT, "i18n", "changelogs")
 STRINGS = os.path.join(ROOT, "i18n", "strings")
-LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"]
 
 
 def _module(relpath, name):
@@ -32,6 +31,7 @@ def _module(relpath, name):
 
 FETCH = _module(os.path.join("scripts", "fetch-changelogs.py"), "fetch_changelogs")
 BUILD = _module(os.path.join("i18n", "build_i18n.py"), "build_i18n")
+LANGS = BUILD.LANGS
 
 
 def _slugs():
@@ -183,7 +183,7 @@ def test_a_page_renders_its_own_locale(monkeypatch):
 
 
 def test_a_locale_the_app_skips_falls_back_to_english(monkeypatch):
-    for lang in ["ko", "es", "fr", "zh-Hans", "zh-Hant"]:
+    for lang in ["ko", "es", "fr", "ru", "zh-Hans", "zh-Hant"]:
         assert "Window snapping is steadier." in _rows(monkeypatch, ENTRY, lang), lang
 
 
@@ -224,7 +224,7 @@ def test_every_locale_names_the_notes_source_truthfully():
     """`app_changelog_auto` said "Auto-generated from GitHub Releases".
 
     That became false the moment the notes came from the app's What's New pane,
-    so the key was renamed and retranslated in all seven tables. Asserting the
+    so the key was renamed and retranslated in every table. Asserting the
     old key is gone matters as much as the new one being present: a table that
     kept it would keep rendering the claim.
     """

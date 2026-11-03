@@ -6,14 +6,14 @@
 (function () {
   "use strict";
 
-  var LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"];
+  var LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr", "ru"];
 
   function lsGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
   function ssGet(k) { try { return window.sessionStorage.getItem(k); } catch (e) { return null; } }
   function ssSet(k, v) { try { window.sessionStorage.setItem(k, v); } catch (e) {} }
 
-  // Map any BCP-47 browser tag to one of our seven supported codes, or null.
+  // Map any BCP-47 browser tag to one of the codes in LANGS, or null.
   function matchLang(tag) {
     var t = String(tag).toLowerCase();
     if (t === "zh-hant" || t.indexOf("zh-hant") === 0 ||
@@ -23,7 +23,7 @@
     var base = t.split("-")[0];
     if (base === "zh") return "zh-Hans";
     if (base === "en") return "en-US";
-    if (LANGS.indexOf(base) >= 0) return base; // ja, ko, es, fr
+    if (LANGS.indexOf(base) >= 0) return base; // ja, ko, es, fr, ru
     return null;
   }
 

@@ -3,7 +3,7 @@
 **Date:** 2026-06-28
 **Status:** Approved (design), pending implementation plan
 **Scope:** Restructure www.dragonapp.com so every app has the same page
-structure, generated from a single source, in 7 languages, optimized for SEO,
+structure, generated from a single source, in 8 languages, optimized for SEO,
 GEO (ChatGPT/Gemini), human readability, and a PageSpeed score of 100.
 
 ---
@@ -14,7 +14,8 @@ GEO (ChatGPT/Gemini), human readability, and a PageSpeed score of 100.
    order, so the studio feels like one product family.
 2. **Single source of truth** — adding or editing an app is data-only; no
    hand-maintained per-language HTML. Zero drift.
-3. **7 languages always** — en-US, zh-Hant, zh-Hans, ja, ko, es, fr.
+3. **8 languages always** — en-US, zh-Hant, zh-Hans, ja, ko, es, fr, ru.
+   Russian (`ru`) was added on 2026-11-03; the site launched with the first seven.
 4. **3 distribution channels per app** — GitHub binary, Homebrew, Mac App Store
    (the last is an optional, per-app placeholder until provided).
 5. **SEO + GEO + PageSpeed 100** on every page.
@@ -81,7 +82,7 @@ Per the owner's chosen order:
    welcome" → button to the repo's Issues.
 7. **⑤ Credit** — tribute to the original author / upstream project.
 
-Then a slim **"Our promise" strip** (Latest 2 macOS · 7 languages · 3 channels ·
+Then a slim **"Our promise" strip** (Latest 2 macOS · 8 languages · 3 channels ·
 iCloud sync) linking to `/about/`, followed by the footer (All apps, Support,
 Privacy on-site, GitHub, License).
 
@@ -89,7 +90,7 @@ Privacy on-site, GitHub, License).
 
 The owner's story — *apps they love and rely on, whose original maintainers
 moved on, now kept alive largely with AI* — followed by the full **promise**
-(the 4 commitments) as the studio-wide trust anchor. Localized to all 7
+(the 4 commitments) as the studio-wide trust anchor. Localized to all 8
 languages. Linked from the hub and every app page. Same template system, its
 own `about.html` template + `about` strings block per language.
 
@@ -125,7 +126,7 @@ the site follows the OS setting.
 ## 8. SEO + GEO + PageSpeed
 
 **Keep & extend the existing strong base**, now generated for every app:
-- Canonical, `hreflang` for all 7 langs + `x-default`, OG + Twitter cards.
+- Canonical, `hreflang` for all 8 langs + `x-default`, OG + Twitter cards.
 - JSON-LD `@graph`: `SoftwareApplication`, `BreadcrumbList`, `FAQPage`.
 - `sitemap.xml` (auto, includes every app + `/about/`) and `robots.txt`.
 
@@ -164,8 +165,8 @@ the site follows the OS setting.
 
 ## 11. Success criteria
 
-- One `app.html` template + per-app JSON drives all 3 apps × 7 languages.
-- Every app page renders the 7 sections in the specified order, in all 7
+- One `app.html` template + per-app JSON drives all 3 apps × 8 languages.
+- Every app page renders the 7 sections in the specified order, in all 8
   languages, in light and dark.
 - `/about/`, localized privacy, and a `/llms.txt` exist; sitemap lists every
   app + about page.

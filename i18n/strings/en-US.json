@@ -37,7 +37,7 @@
     "app_support_cta": "Open an issue on GitHub",
     "app_credit_kicker": "In tribute",
     "promise_macos": "Latest 2 macOS",
-    "promise_langs": "7 languages",
+    "promise_langs": "8 languages",
     "promise_channels": "3 channels",
     "promise_oss": "Free and open source",
     "promise_link": "Why I build &amp; maintain these"
@@ -167,7 +167,8 @@
     "story": "Every app here is one I rely on every day — and that its original maintainer could no longer keep going. Rather than watch them break on each new macOS, I adopted them. Today they're maintained largely with the help of AI, which is also why support runs on 'Buy me Token' instead of coffee.",
     "promise_h2": "What every Dragon App promises",
     "promise_macos_d": "Runs on at least the latest two macOS releases.",
-    "promise_langs_d": "Available in 7 languages, like this site.",
+    "promise_langs": "At least 7 languages",
+    "promise_langs_d": "Every app ships in at least 7 languages, and most in the same 8 as this site.",
     "promise_channels_d": "Installable 3 ways: GitHub, Homebrew, and (where possible) the Mac App Store.",
     "promise_oss_d": "Every app is free, and its full source is public on GitHub."
   },
@@ -222,6 +223,7 @@
     "feat3_h": "Associated phrases (聯想字詞)", "feat3_p": "After you commit a character, Yahoo KeyKey 2 suggests the words that usually follow — so common phrases come together in a single keystroke.",
     "support_body": "Questions, bug reports, and feature requests are welcome — open an issue on GitHub and I'll take a look.",
     "credit_body": "Yahoo KeyKey 2 is an independent, open-source rebuild in Swift, created in tribute to the original <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong> — the Traditional-Chinese input method many Mac users loved. It carries that experience forward for modern macOS, released under the MIT License.",
+    "promise_langs": "7 languages",
     "faq": [
       {"q": "Which input methods does Yahoo KeyKey 2 support?", "a": "Yahoo KeyKey 2 is a Traditional-Chinese input method with two modes: Cangjie (倉頡) and Simplex (速成, also called 簡易). It supports wildcard input with *, frequency-ranked candidates, associated phrases (聯想字詞), full-width punctuation, and an optional Traditional-to-Simplified output toggle."},
       {"q": "How do I install Yahoo KeyKey 2?", "a": "Download the signed, notarized installer (YahooKeyKey2.pkg) from GitHub and double-click it, or install with Homebrew: brew install --cask teddychan/tap/yahoo-keykey-2. Then log out and back in, and add 倉頡 and/or 速成 under System Settings ▸ Keyboard ▸ Input Sources ▸ + ▸ Traditional Chinese."},

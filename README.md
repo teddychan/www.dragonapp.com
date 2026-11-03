@@ -6,7 +6,7 @@ apps as fast, native, open-source rebuilds.
 
 This repo does **not** contain any app source. Each app is built in its own
 repository; this repo only hosts the marketing pages — one landing page per app,
-in seven languages.
+in eight languages.
 
 **Production Sparkle appcasts are not hosted here.** Every app self-hosts its own
 feed in its own repository, which the app reads over `raw.githubusercontent.com`.
@@ -34,7 +34,7 @@ them. `/clipmenu/` and `/keykey/` are redirect stubs kept for old links.
 docs/                  ← published by GitHub Pages
   index.html           GENERATED  studio hub (app cards)
   <app>/index.html     GENERATED  one landing page per app
-  <locale>/            GENERATED  localized pages (es, fr, ja, ko, zh-Hans, zh-Hant)
+  <locale>/            GENERATED  localized pages (es, fr, ja, ko, ru, zh-Hans, zh-Hant)
   sitemap.xml          GENERATED  with hreflang alternates
   <app>/appcast.xml    frozen, retired Sparkle mirror (3 apps only) — see above
   shared/dragon.css    source: design system (per-app accent via a <body> theme class)
@@ -56,7 +56,7 @@ page** — the next build overwrites it. Edit the sources under
 | `i18n/templates/*.html` | page structure, with `{{ key }}` placeholders |
 | `i18n/apps/<slug>.json` | per-app facts; `i18n/apps/_index.json` lists the apps |
 | `i18n/strings/en-US.json` | English copy — the source of truth, edit this first |
-| `i18n/strings/<lang>.json` | the other six locales |
+| `i18n/strings/<lang>.json` | the other seven locales |
 | `i18n/changelogs/<slug>.json` | "What's new" data — generated, see below |
 
 `docs/shared/dragon.css`, `docs/shared/*.js`, `docs/robots.txt`, `docs/CNAME`

@@ -61,7 +61,7 @@ CONSENT_HEAD_EXTERNAL = (
 )
 
 # Order matters: this is the order shown in the switcher and sitemap.
-LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr"]
+LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr", "ru"]
 
 NATIVE = {
     "en-US": "English",
@@ -71,6 +71,7 @@ NATIVE = {
     "ko": "한국어",
     "es": "Español",
     "fr": "Français",
+    "ru": "Русский",
 }
 OG_LOCALE = {
     "en-US": "en_US",
@@ -80,6 +81,7 @@ OG_LOCALE = {
     "ko": "ko_KR",
     "es": "es_ES",
     "fr": "fr_FR",
+    "ru": "ru_RU",
 }
 
 # page key -> (template filename, page path within a language tree, output relpath)

@@ -37,7 +37,7 @@
     "app_support_cta": "在 GitHub 上提交问题",
     "app_credit_kicker": "致敬之作",
     "promise_macos": "支持最新两代 macOS",
-    "promise_langs": "7 种语言",
+    "promise_langs": "8 种语言",
     "promise_channels": "3 种渠道",
     "promise_oss": "免费·开源",
     "promise_link": "我为何构建并维护这些应用"
@@ -167,7 +167,8 @@
     "story": "这里的每款应用都是我每天都在用、而原维护者已无力继续的那种——与其眼看它们在每次新版 macOS 上接连崩溃，我选择接手。如今它们主要借助 AI 的力量维护，这也是为什么支持渠道是「请我喝杯 Token」而非咖啡。",
     "promise_h2": "每款 Dragon App 的承诺",
     "promise_macos_d": "至少在最新两代 macOS 上正常运行。",
-    "promise_langs_d": "提供 7 种语言，就像这个网站一样。",
+    "promise_langs": "至少 7 种语言",
+    "promise_langs_d": "每款应用都至少提供 7 种语言，大多数与本网站一样提供 8 种。",
     "promise_channels_d": "三种安装方式：GitHub、Homebrew，以及（在条件允许时）Mac App Store。",
     "promise_oss_d": "每款应用都免费，完整源代码公开在 GitHub。"
   },
@@ -231,6 +232,7 @@
     "feat3_p": "在你确认一个字之后，Yahoo KeyKey 2 会推荐通常紧随其后的词——让常用短语一次按键即可成词。",
     "support_body": "欢迎提问、报告缺陷和功能建议——在 GitHub 上提交问题，我会认真查看。",
     "credit_body": "Yahoo KeyKey 2 是一款用 Swift 打造的独立开源重塑作品，向经典的 <strong>Yahoo! KeyKey（Yahoo!奇摩輸入法）</strong> 致敬——这款繁体中文输入法曾深受众多 Mac 用户喜爱。它将那份体验延续到现代 macOS，并以 MIT 许可协议发布。",
+    "promise_langs": "7 种语言",
     "faq": [
       {"q": "Yahoo KeyKey 2 支持哪些输入法？", "a": "Yahoo KeyKey 2 是一款繁体中文输入法，提供两种模式：倉頡（Cangjie）与速成（Simplex，又称 簡易）。它支持以 * 进行通配符输入、按词频排序的候选字、联想字词（聯想字詞）、全角标点，以及可选的繁转简输出切换。"},
       {"q": "如何安装 Yahoo KeyKey 2？", "a": "从 GitHub 下载已签名并公证的安装包（YahooKeyKey2.pkg）双击运行，或通过 Homebrew 安装：brew install --cask teddychan/tap/yahoo-keykey-2。然后注销并重新登录，在 系统设置 ▸ 键盘 ▸ 输入法 ▸ + ▸ 繁体中文 下添加 倉頡 和／或 速成。"},
