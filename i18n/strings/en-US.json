@@ -232,11 +232,11 @@
     ]
   },
   "spectacle-2": {
-    "title": "Spectacle 2 — Keyboard Window Manager for Mac, rebuilt for macOS 26 &amp; 27",
-    "description": "Spectacle 2 is a free, open-source keyboard-driven window manager for Mac — move and resize windows with global shortcuts: halves, corners, thirds, fullscreen, and across displays. Rebuilt for macOS 26 and 27. Download free on GitHub or with Homebrew.",
-    "eyebrow": "The keyboard window manager for macOS",
-    "h1": "Move and resize windows with a keystroke",
-    "sub": "Spectacle 2 snaps the frontmost window to halves, corners, thirds, or fullscreen — sends it across displays, grows or shrinks it, and undoes it all — from the keyboard. A modern, open-source rebuild of Spectacle, now running on macOS 26 and 27.",
+    "title": "Spectacle 2: Window Manager for Mac, Keyboard or Mouse",
+    "description": "Spectacle 2 is a free, open-source window manager for Mac. Move and resize windows with keyboard shortcuts, a mouse, or a trackpad. Rebuilt for macOS 26 and 27.",
+    "eyebrow": "The window manager for macOS",
+    "h1": "Move and resize windows with a keystroke, a click, or a drag",
+    "sub": "Spectacle 2 snaps the frontmost window to halves, corners, thirds, or fullscreen and sends it across displays. Press a keyboard shortcut, pick an action from the menu bar, or drag the window to a screen edge. An open-source rebuild of Spectacle for macOS 26 and 27.",
     "demo_caption": "A Mac window snapped to the left half of the screen using the Spectacle 2 keyboard shortcut Option-Command-Left, with a hint that pressing again cycles between one-half, two-thirds and one-third.",
     "feat1_h": "Halves &amp; fullscreen",
     "feat1_p": "Snap the window to the left, right, top, or bottom half, or fill the screen — with ⌥⌘ and the arrow keys.",
