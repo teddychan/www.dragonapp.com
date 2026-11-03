@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.8.0",
+    "date": "2026-11-03",
+    "notes": {
+      "en": "Six new layouts put the front window in a fixed third or two thirds of the screen. · Left Third, Center Third, Right Third, Left Two Thirds, Center Two Thirds and Right Two Thirds, in the menu bar menu. To use one from the keyboard, give it a shortcut in Settings › Shortcuts. · Next Third and Previous Third are no longer in the menu bar menu. Their shortcuts still work.",
+      "es": "Seis posiciones nuevas colocan la ventana activa en un tercio o en dos tercios fijos de la pantalla. · Tercio izquierdo, Tercio central, Tercio derecho, Dos tercios izquierdos, Dos tercios centrales y Dos tercios derechos, en el menú de la barra de menús. Para usarlos con el teclado, asígnales un atajo en Ajustes › Atajos. · Siguiente tercio y Tercio anterior ya no están en el menú de la barra de menús. Sus atajos siguen funcionando.",
+      "fr": "Six nouvelles dispositions placent la fenêtre active sur un tiers ou deux tiers fixes de l'écran. · Tiers gauche, Tiers central, Tiers droit, Deux tiers à gauche, Deux tiers au centre et Deux tiers à droite, dans le menu de la barre des menus. Pour les utiliser au clavier, attribuez-leur un raccourci dans Réglages › Raccourcis. · Tiers suivant et Tiers précédent ne figurent plus dans le menu de la barre des menus. Leurs raccourcis fonctionnent toujours.",
+      "ja": "最前面のウインドウを画面の決まった3分の1または3分の2に置く、6つの配置を追加しました。 · 左3分の1、中央3分の1、右3分の1、左3分の2、中央3分の2、右3分の2 をメニューバーのメニューから選べます。キーボードで使うには、設定 › ショートカット でショートカットを割り当ててください。 · 次の3分割位置と前の3分割位置はメニューバーのメニューから外れました。ショートカットは引き続き使えます。",
+      "ko": "맨 앞 창을 화면의 정해진 3분의 1 또는 3분의 2에 놓는 새 배치 6개가 추가되었습니다. · 왼쪽 3분의 1, 가운데 3분의 1, 오른쪽 3분의 1, 왼쪽 3분의 2, 가운데 3분의 2, 오른쪽 3분의 2를 메뉴 막대 메뉴에서 선택할 수 있습니다. 키보드로 사용하려면 설정 › 단축키에서 단축키를 지정하세요. · 다음 3분할 영역과 이전 3분할 영역은 이제 메뉴 막대 메뉴에 없습니다. 단축키는 계속 작동합니다.",
+      "ru": "Шесть новых раскладок ставят активное окно в фиксированную треть или две трети экрана. · «Левая треть», «Средняя треть», «Правая треть», «Левые две трети», «Средние две трети» и «Правые две трети» есть в меню в строке меню. Чтобы пользоваться ими с клавиатуры, назначьте сочетание клавиш в разделе «Настройки › Сочетания клавиш». · «Следующая треть» и «Предыдущая треть» больше не показываются в меню в строке меню. Их сочетания клавиш по-прежнему работают.",
+      "zh-Hans": "新增六种布局，可将最前面的窗口放到屏幕固定的三分之一或三分之二。 · 左三分之一、中间三分之一、右三分之一、左三分之二、中间三分之二和右三分之二，可在菜单栏菜单中选择。若要用键盘操作，请在“设置 › 快捷键”中为它们指定快捷键。 · “下一三分区”和“上一三分区”已不在菜单栏菜单中，它们的快捷键仍可使用。",
+      "zh-Hant": "新增六種排列方式，可將最前方的視窗放到螢幕固定的三分之一或三分之二。 · 左三分之一、中間三分之一、右三分之一、左三分之二、中間三分之二和右三分之二，可在選單列選單中選擇。若要用鍵盤操作，請在「設定 › 快速鍵」中為它們指定快速鍵。 · 「下一個三分區」和「上一個三分區」已不在選單列選單中，它們的快速鍵仍可使用。"
+    },
+    "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.8.0"
+  },
+  {
     "version": "2.7.0",
     "date": "2026-11-03",
     "notes": {
@@ -86,13 +101,5 @@
       "en": "A maintenance release: nothing you can see behaves differently. · The local development build is now clearly separated from the installed app. It shows a Debug label beside its version instead of writing that word into the version number, and it can no longer reach the update feed the released app uses."
     },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.2"
-  },
-  {
-    "version": "2.5.1",
-    "date": "2026-08-09",
-    "notes": {
-      "en": "A maintenance release: nothing about Spectacle 2 changes. · An internal dependency pin now matches the other Dragon apps. Spectacle 2 was the only one stating the same version range in a different form. No component version moves in this release."
-    },
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.1"
   }
 ]
