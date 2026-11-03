@@ -258,7 +258,7 @@
     "faq": [
       {
         "q": "¿Qué hace Spectacle 2?",
-        "a": "Spectacle 2 mueve y redimensiona tus ventanas con atajos de teclado. Ajusta la ventana activa a la mitad izquierda, derecha, superior o inferior, a una esquina o a un tercio de la pantalla, céntrala, ponla a pantalla completa, agrándala o redúcela, o envíala a la siguiente pantalla, todo sin tocar el ratón. Pulsa de nuevo un atajo de mitad o esquina para alternar la ventana entre un medio, dos tercios y un tercio."
+        "a": "Spectacle 2 mueve y redimensiona tus ventanas. Ajusta la ventana activa a la mitad izquierda, derecha, superior o inferior, a una esquina, a un tercio o a dos tercios de la pantalla, céntrala, ponla a pantalla completa, agrándala o redúcela, o envíala a la siguiente pantalla. Usa un atajo de teclado, elige la acción en el menú de la barra de menús con el ratón o el trackpad, o arrastra la ventana a un borde o una esquina de la pantalla. Pulsa de nuevo un atajo de mitad o esquina para alternar la ventana entre un medio, dos tercios y un tercio."
       },
       {
         "q": "¿Cómo instalo Spectacle 2?",
@@ -270,7 +270,7 @@
       },
       {
         "q": "¿Puedo cambiar los atajos de teclado?",
-        "a": "Sí. Cada acción de ventana está asociada a un atajo que puedes reasignar en Ajustes ▸ Atajos, y la app incluye los valores clásicos de Spectacle (por ejemplo ⌥⌘← para la mitad izquierda y ⌥⌘C para centrar). Tus atajos se guardan y se pueden respaldar y restaurar."
+        "a": "Sí. Puedes asignar o cambiar el atajo de cualquier acción de ventana en Ajustes ▸ Atajos, y la app incluye los valores clásicos de Spectacle (por ejemplo ⌥⌘← para la mitad izquierda y ⌥⌘C para centrar). Tus atajos se guardan y se pueden respaldar y restaurar."
       },
       {
         "q": "¿Es este el Spectacle original?",

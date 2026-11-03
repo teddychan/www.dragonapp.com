@@ -249,7 +249,7 @@
     "faq": [
       {
         "q": "Que fait Spectacle 2 ?",
-        "a": "Spectacle 2 déplace et redimensionne vos fenêtres avec des raccourcis clavier. Placez la fenêtre active sur la moitié gauche, droite, haute ou basse, dans un coin ou un tiers de l’écran, centrez-la, mettez-la en plein écran, agrandissez-la ou réduisez-la, ou envoyez-la sur l’écran suivant — le tout sans la souris. Appuyez de nouveau sur un raccourci de moitié ou de coin pour faire défiler la fenêtre entre un demi, deux tiers et un tiers."
+        "a": "Spectacle 2 déplace et redimensionne vos fenêtres. Placez la fenêtre active sur la moitié gauche, droite, haute ou basse, dans un coin, sur un tiers ou deux tiers de l’écran, centrez-la, mettez-la en plein écran, agrandissez-la ou réduisez-la, ou envoyez-la sur l’écran suivant. Utilisez un raccourci clavier, choisissez l’action dans le menu de la barre des menus avec la souris ou le trackpad, ou faites glisser la fenêtre vers un bord ou un coin de l’écran. Appuyez de nouveau sur un raccourci de moitié ou de coin pour faire défiler la fenêtre entre un demi, deux tiers et un tiers."
       },
       {
         "q": "Comment installer Spectacle 2 ?",
@@ -261,7 +261,7 @@
       },
       {
         "q": "Puis-je modifier les raccourcis clavier ?",
-        "a": "Oui. Chaque action de fenêtre est associée à un raccourci que vous pouvez réattribuer dans Réglages ▸ Raccourcis, et l’app inclut les valeurs classiques de Spectacle (par exemple ⌥⌘← pour la moitié gauche et ⌥⌘C pour centrer). Vos raccourcis sont enregistrés et peuvent être sauvegardés et restaurés."
+        "a": "Oui. Vous pouvez définir ou modifier le raccourci de chaque action de fenêtre dans Réglages ▸ Raccourcis, et l’app inclut les valeurs classiques de Spectacle (par exemple ⌥⌘← pour la moitié gauche et ⌥⌘C pour centrer). Vos raccourcis sont enregistrés et peuvent être sauvegardés et restaurés."
       },
       {
         "q": "Est-ce le Spectacle original ?",
