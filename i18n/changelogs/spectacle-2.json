@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.8.1",
+    "date": "2026-11-03",
+    "notes": {
+      "en": "A maintenance release that moves Spectacle 2 to the latest version of the shared framework it is built on. Window management works as before. · Updated to DragonKit 4.3.0, the shared framework behind Settings, About, What's New and updates. Only the version changed: none of those panes look or behave differently.",
+      "es": "Una versión de mantenimiento que actualiza Spectacle 2 a la última versión del framework compartido en el que se basa. La gestión de ventanas funciona igual que antes. · Actualizado a DragonKit 4.3.0, el framework compartido de Ajustes, Acerca de, Novedades y las actualizaciones. Solo cambió la versión: ninguno de esos paneles se ve ni se comporta de forma distinta.",
+      "fr": "Une version de maintenance qui fait passer Spectacle 2 à la dernière version du framework partagé sur lequel il repose. La gestion des fenêtres fonctionne comme avant. · Mise à jour vers DragonKit 4.3.0, le framework partagé derrière Réglages, À propos, Nouveautés et les mises à jour. Seule la version a changé : aucun de ces volets n'a changé d'apparence ni de comportement.",
+      "ja": "メンテナンスリリースです。Spectacle 2 が土台としている共通フレームワークを最新版に更新しました。ウインドウの操作はこれまでと変わりません。 · DragonKit 4.3.0 にアップデートしました。設定、情報、新機能、アップデートを支える共通フレームワークです。変わったのはバージョンだけで、これらのパネルの見た目も動作も同じです。",
+      "ko": "유지 관리 릴리스입니다. Spectacle 2가 기반으로 삼는 공용 프레임워크를 최신 버전으로 올렸습니다. 창 관리는 이전과 같습니다. · 설정, 정보, 새로운 기능, 업데이트를 담당하는 공용 프레임워크인 DragonKit 4.3.0으로 업데이트했습니다. 바뀐 것은 버전뿐이며 해당 패널의 모습과 동작은 그대로입니다.",
+      "ru": "Обслуживающий выпуск: Spectacle 2 переходит на новую версию общей платформы, на которой он построен. Управление окнами работает как прежде. · Обновлено до DragonKit 4.3.0: это общая платформа, на которой работают настройки, «О программе», «Что нового» и обновления. Изменилась только версия, а эти разделы выглядят и работают как прежде.",
+      "zh-Hans": "这是一次维护更新。Spectacle 2 升级了所依赖的共享框架，窗口管理与之前完全相同。 · 更新到 DragonKit 4.3.0，这是支撑设置、关于、新功能和软件更新的共享框架。此次只是版本变化，这些面板的外观和行为都没有改变。",
+      "zh-Hant": "這是一次維護更新。Spectacle 2 升級了所依賴的共用框架，視窗管理與先前完全相同。 · 更新到 DragonKit 4.3.0，這是支援設定、關於、新功能和軟體更新的共用框架。這次只是版本變化，這些面板的外觀和行為都沒有改變。"
+    },
+    "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.8.1"
+  },
+  {
     "version": "2.8.0",
     "date": "2026-11-03",
     "notes": {
@@ -93,13 +108,5 @@
       "en": "A maintenance release: Spectacle 2 behaves identically to 2.5.2. · Spectacle 2 is built on an updated version of the shared Dragon App code. The one difference you can observe is the version About reports: \"Built with · DragonKit v3.4.0\". Nothing the new version adds is taken up here — its new option is for an app translated into fewer languages than the shared code, and Spectacle 2 ships all seven of them."
     },
     "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.3"
-  },
-  {
-    "version": "2.5.2",
-    "date": "2026-08-10",
-    "notes": {
-      "en": "A maintenance release: nothing you can see behaves differently. · The local development build is now clearly separated from the installed app. It shows a Debug label beside its version instead of writing that word into the version number, and it can no longer reach the update feed the released app uses."
-    },
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.2"
   }
 ]
