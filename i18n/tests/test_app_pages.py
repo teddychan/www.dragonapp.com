@@ -1,5 +1,10 @@
-import json, os, subprocess, sys
+import importlib.util, json, os, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+_spec = importlib.util.spec_from_file_location("build_i18n", os.path.join(ROOT, "i18n", "build_i18n.py"))
+BUILD = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(BUILD)
+LANG_DIRS = [BUILD.lang_prefix(l) for l in BUILD.LANGS]
 
 def build():
     r = subprocess.run([sys.executable, "i18n/build_i18n.py"], cwd=ROOT,
@@ -9,9 +14,8 @@ def build():
 
 def test_app_pages_generated_all_langs():
     build()
-    langs = ["", "zh-Hant/", "zh-Hans/", "ja/", "ko/", "es/", "fr/"]
-    for slug in ["ice-2", "clipmenu-2", "yahoo-keykey-2"]:
-        for lang in langs:
+    for slug in ["ice-2", "clipmenu-2", "yahoo-keykey-2", "spectacle-2"]:
+        for lang in LANG_DIRS:
             p = os.path.join(ROOT, "docs", lang, slug, "index.html")
             assert os.path.exists(p), p
 
@@ -47,7 +51,7 @@ def test_licenses_link_in_every_locale_and_page_exists():
     build()
     for slug in LICENSED:
         assert os.path.exists(os.path.join(ROOT, "docs", slug, "licenses", "index.html")), slug
-        for lang in ["", "zh-Hant/", "zh-Hans/", "ja/", "ko/", "es/", "fr/"]:
+        for lang in LANG_DIRS:
             html = open(os.path.join(ROOT, "docs", lang, slug, "index.html")).read()
             assert '<a href="/%s/licenses/">' % slug in html, (slug, lang)
 
@@ -62,7 +66,7 @@ def test_footer_license_link_matches_app_json():
     """Every locale's footer "License" href is the app's own license_url.
 
     The href was hardcoded as {{ APP_REPO }}/blob/main/LICENSE, which 404s for spectacle-2 —
-    its file is LICENSE.md — on all seven of its pages. license_url already held the right
+    its file is LICENSE.md — on every one of its pages. license_url already held the right
     value for every app, because render_jsonld() has always used it for softwareLicense; the
     footer just wasn't reading it. Assert against the JSON rather than a literal so the next
     app whose licence is named anything else fails here instead of shipping a dead link.
@@ -71,7 +75,7 @@ def test_footer_license_link_matches_app_json():
     idx = json.load(open(os.path.join(ROOT, "i18n", "apps", "_index.json")))
     for slug in idx:
         app = json.load(open(os.path.join(ROOT, "i18n", "apps", slug + ".json")))
-        for lang in ["", "zh-Hant/", "zh-Hans/", "ja/", "ko/", "es/", "fr/"]:
+        for lang in LANG_DIRS:
             html = open(os.path.join(ROOT, "docs", lang, slug, "index.html")).read()
             assert '<a href="%s">License</a>' % app["license_url"] in html, (slug, lang)
 
@@ -80,3 +84,18 @@ def test_sitemap_includes_licenses_pages():
     sm = open(os.path.join(ROOT, "docs", "sitemap.xml")).read()
     for slug in LICENSED + UNMARKETED_LICENSED:
         assert "https://www.dragonapp.com/%s/licenses/" % slug in sm, slug
+
+def test_an_apps_own_language_count_overrides_the_shared_one():
+    """promise_langs is shared, but not every app ships every site language.
+
+    Yahoo! KeyKey 2 ships no Russian, so its pages keep the 7-language claim while
+    the apps that do ship it say 8.
+    """
+    build()
+    def chips(slug):
+        html = open(os.path.join(ROOT, "docs", slug, "index.html")).read()
+        return [c.split("<", 1)[0] for c in html.split('<span class="promise-chip">')[1:]]
+    assert "7 languages" in chips("yahoo-keykey-2")
+    assert "8 languages" not in chips("yahoo-keykey-2")
+    for slug in ["clipmenu-2", "ice-2", "spectacle-2"]:
+        assert "8 languages" in chips(slug), slug

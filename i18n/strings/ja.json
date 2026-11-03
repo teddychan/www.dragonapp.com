@@ -37,7 +37,7 @@
     "app_support_cta": "GitHubでイシューを開く",
     "app_credit_kicker": "オマージュとして",
     "promise_macos": "最新2世代のmacOS",
-    "promise_langs": "7言語",
+    "promise_langs": "8言語",
     "promise_channels": "3つの配布チャンネル",
     "promise_oss": "無料・オープンソース",
     "promise_link": "私がこれらを作り・維持し続ける理由"
@@ -167,7 +167,8 @@
     "story": "ここにあるアプリはどれも、私が毎日頼りにしているもので、オリジナルのメンテナーがメンテナンスを続けられなくなったものです。新しいmacOSのたびに壊れていくのを見ているだけでなく、引き継ぐことにしました。現在はAIの力を借りて維持しています。サポートが「コーヒーを買って」ではなく「トークンを買って」なのも、そのためです。",
     "promise_h2": "Dragon Appのすべてのアプリが約束すること",
     "promise_macos_d": "少なくとも最新2世代のmacOSで動作します。",
-    "promise_langs_d": "このサイトと同様、7言語に対応しています。",
+    "promise_langs": "7言語以上",
+    "promise_langs_d": "すべてのアプリが7言語以上に対応し、ほとんどはこのサイトと同じ8言語に対応しています。",
     "promise_channels_d": "GitHub、Homebrew、（可能な場合は）Mac App Storeの3つの方法でインストールできます。",
     "promise_oss_d": "すべてのアプリは無料で、ソースコードはGitHubで公開されています。"
   },
@@ -231,6 +232,7 @@
     "feat3_p": "文字を確定すると、Yahoo KeyKey 2が続きやすい言葉を提案します — よく使うフレーズが一打鍵でまとまります。",
     "support_body": "ご質問、バグ報告、機能のご要望は歓迎です — GitHubでイシューを開いていただければ確認します。",
     "credit_body": "Yahoo KeyKey 2はSwiftで作られた独立したオープンソースの再構築版で、多くのMacユーザーに愛された繁体字入力メソッド、オリジナルの<strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong>へのオマージュとして制作されました。その体験をモダンなmacOSへと受け継ぎ、MITライセンスのもとで公開されています。",
+    "promise_langs": "7言語",
     "faq": [
       {"q": "Yahoo KeyKey 2はどの入力メソッドに対応していますか？", "a": "Yahoo KeyKey 2は二つのモードを持つ繁体字入力メソッドです：Cangjie (倉頡) とSimplex (速成、簡易とも呼ばれます)。* によるワイルドカード入力、頻度順の候補、聯想字詞（連想語）、全角句読点、そして任意の繁体字から簡体字への出力切り替えに対応しています。"},
       {"q": "Yahoo KeyKey 2はどうやってインストールしますか？", "a": "署名・公証済みのインストーラー (YahooKeyKey2.pkg) をGitHubからダウンロードしてダブルクリックするか、Homebrewでインストールしてください：brew install --cask teddychan/tap/yahoo-keykey-2。その後ログアウトして再ログインし、システム設定 ▸ キーボード ▸ 入力ソース ▸ + ▸ 繁体字中国語 から 倉頡 や 速成 を追加します。"},

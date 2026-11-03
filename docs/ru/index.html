@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <!-- Google Consent Mode v2 (default denied); Google tag loads after consent. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dragonGoogleAnalyticsId = 'G-FNQ1T94ESZ';
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  </script>
+
+  <script>
+/* Dragon App — custom consent banner for Google Consent Mode v2.
+   The default (denied) state and the Google tag are set in <head> before this
+   runs. This file shows the banner when no choice is stored yet and calls
+   gtag('consent','update', ...) when the visitor accepts or rejects. */
+(function () {
+  "use strict";
+  var KEY = "dragonConsent";
+  var tagLoaded = false;
+
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function loadGoogleTag() {
+    var id = window.dragonGoogleAnalyticsId;
+    if (tagLoaded || !id || typeof window.gtag !== "function") return;
+    tagLoaded = true;
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    document.head.appendChild(script);
+
+    window.gtag("js", new Date());
+    window.gtag("config", id);
+  }
+
+  function update(granted) {
+    if (typeof window.gtag !== "function") return;
+    var v = granted ? "granted" : "denied";
+    window.gtag("consent", "update", {
+      ad_storage: v,
+      ad_user_data: v,
+      ad_personalization: v,
+      analytics_storage: v
+    });
+    if (granted) loadGoogleTag();
+  }
+
+  function init() {
+    var banner = document.getElementById("consent-banner");
+    if (!banner) return;
+    var choice = get();
+    if (choice === "granted") { update(true); return; }
+    if (choice === "denied") return;
+
+    banner.removeAttribute("hidden");
+    var accept = banner.querySelector(".consent-accept");
+    var reject = banner.querySelector(".consent-reject");
+    if (accept) accept.addEventListener("click", function () {
+      set("granted"); update(true); banner.setAttribute("hidden", "");
+    });
+    if (reject) reject.addEventListener("click", function () {
+      set("denied"); update(false); banner.setAttribute("hidden", "");
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+
+  </script>
+  <title>Dragon App — классические приложения для Mac, созданные заново</title>
+  <meta name="description" content="Dragon App — небольшая студия, которая возрождает любимые, но заброшенные приложения для macOS в виде быстрых, нативных версий с открытым кодом: ClipMenu 2, Yahoo! KeyKey 2 и Ice 2.">
+  <link rel="canonical" href="https://www.dragonapp.com/ru/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/dragon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#2b7cf0">
+  <link rel="alternate" hreflang="en-US" href="https://www.dragonapp.com/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.dragonapp.com/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.dragonapp.com/zh-Hant/">
+  <link rel="alternate" hreflang="ja" href="https://www.dragonapp.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://www.dragonapp.com/ko/">
+  <link rel="alternate" hreflang="es" href="https://www.dragonapp.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://www.dragonapp.com/fr/">
+  <link rel="alternate" hreflang="ru" href="https://www.dragonapp.com/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dragonapp.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dragon App">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://www.dragonapp.com/ru/">
+  <meta property="og:title" content="Dragon App — классические приложения для Mac, созданные заново">
+  <meta property="og:description" content="Dragon App — небольшая студия, которая возрождает любимые, но заброшенные приложения для macOS в виде быстрых, нативных версий с открытым кодом: ClipMenu 2, Yahoo! KeyKey 2 и Ice 2.">
+  <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dragon App — классические приложения для Mac, созданные заново">
+  <meta name="twitter:description" content="Dragon App — небольшая студия, которая возрождает любимые, но заброшенные приложения для macOS в виде быстрых, нативных версий с открытым кодом: ClipMenu 2, Yahoo! KeyKey 2 и Ice 2.">
+  <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
+
+  <style>
+/* Dragon App — shared design system
+   One stylesheet for the studio hub and every app page.
+   Per-app accent: add a theme class to <body> (e.g. class="theme-keykey").
+   Default theme (no class) is the ClipMenu / studio blue. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f8fd;
+  --surface-2: #eef3fb;
+  --fg: #0f1f33;
+  --muted: #5a6b7d;
+  --border: #e4ebf4;
+  --accent: #1f6fd6;
+  --accent-action: #1f6fd6;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #1857c8;
+  --accent-tint: #e8f1fe;
+  --accent-ink: #16489e;
+  --shadow: 0 18px 40px rgba(24, 87, 200, 0.12);
+  --shadow-sm: 0 8px 22px rgba(24, 87, 200, 0.10);
+  --nav-bg: rgba(255, 255, 255, 0.78);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1419;
+    --surface: #161c24;
+    --surface-2: #1b2330;
+    --fg: #f0f4f8;
+    --muted: #9aa7b5;
+    --border: #283341;
+    --accent: #5aa6f4;
+    --accent-action: #8cc2f8;
+    --accent-action-ink: #07121f;
+    --accent-deep: #8cc2f8;
+    --accent-tint: #11233f;
+    --accent-ink: #bbd9fb;
+    --shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.45);
+    --nav-bg: rgba(15, 20, 25, 0.72);
+  }
+}
+
+/* KeyKey — royal-blue accent, matching the 倉 app icon */
+body.theme-keykey {
+  --accent: #3a5fe0;
+  --accent-action: #2440ad;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #2440ad;
+  --accent-tint: #e9edfc;
+  --accent-ink: #1f3a9e;
+  --shadow: 0 18px 40px rgba(36, 64, 173, 0.14);
+  --shadow-sm: 0 8px 22px rgba(36, 64, 173, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-keykey {
+    --accent: #7e9bf3;
+    --accent-action: #aec3f9;
+    --accent-action-ink: #07121f;
+    --accent-deep: #aec3f9;
+    --accent-tint: #131d3f;
+    --accent-ink: #c4d2fb;
+  }
+}
+
+/* Ice — icy cyan/teal accent, matching the frosty menu-bar icon */
+body.theme-ice {
+  --accent: #0d9bb8;
+  --accent-action: #0e7490;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #0e7490;
+  --accent-tint: #e0f4fa;
+  --accent-ink: #0b5e74;
+  --shadow: 0 18px 40px rgba(14, 116, 144, 0.14);
+  --shadow-sm: 0 8px 22px rgba(14, 116, 144, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-ice {
+    --accent: #56cfe1;
+    --accent-action: #80dfee;
+    --accent-action-ink: #07121f;
+    --accent-deep: #80dfee;
+    --accent-tint: #0c2a33;
+    --accent-ink: #b3e9f4;
+  }
+}
+
+/* Spectacle — warm orange accent, echoing the app icon */
+body.theme-spectacle {
+  --accent: #e8663d;
+  --accent-action: #d9532b;
+  --accent-action-ink: #ffffff;
+  --accent-deep: #c2461f;
+  --accent-tint: #fdeee7;
+  --accent-ink: #a63c1a;
+  --shadow: 0 18px 40px rgba(194, 70, 31, 0.14);
+  --shadow-sm: 0 8px 22px rgba(194, 70, 31, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-spectacle {
+    --accent: #f4885f;
+    --accent-action: #f7a380;
+    --accent-action-ink: #1f0d07;
+    --accent-deep: #f7a380;
+    --accent-tint: #33170c;
+    --accent-ink: #f8c7ae;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-deep); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+section { padding: 80px 0; }
+
+/* nav */
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--nav-bg);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner { position: relative; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.05rem; color: var(--fg); white-space: nowrap; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+.brand .glyph { width: 28px; height: 28px; border-radius: 7px; display: flex; align-items: center; justify-content: center; background: var(--accent-tint); color: var(--accent-deep); font-size: 1rem; font-weight: 700; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: var(--muted); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--fg); text-decoration: none; }
+.nav-cta {
+  background: var(--accent-action); color: var(--accent-action-ink) !important; padding: 8px 16px;
+  border-radius: 999px; font-size: 0.9rem; font-weight: 600;
+}
+.nav-cta:hover { opacity: 0.92; text-decoration: none; }
+
+/* hamburger menu — the <details class="nav-menu"> is a plain inline flex wrapper
+   on desktop (links sit inline as before) and becomes a toggle panel on mobile */
+.nav-menu { display: flex; align-items: center; }
+.nav-toggle {
+  display: none; list-style: none; cursor: pointer;
+  width: 40px; height: 40px; align-items: center; justify-content: center;
+  border: 1px solid var(--border); border-radius: 10px;
+  color: var(--fg); background: var(--bg);
+}
+.nav-toggle::-webkit-details-marker { display: none; }
+.nav-toggle::marker { content: ""; }
+/* the global FAQ summary "+"/"–" pseudo-marker must not leak onto the toggle;
+   the [open] selector needs enough specificity to beat details[open] summary::after */
+.nav-toggle::after,
+.nav-menu[open] > .nav-toggle::after { content: none; }
+.nav-toggle svg { width: 22px; height: 22px; flex: none; }
+/* keep the hamburger icon in both states; tapping a link auto-closes the menu */
+.nav-menu .icon-close { display: none; }
+.nav-menu[open] > .nav-toggle { border-color: var(--accent); color: var(--accent-deep); }
+
+@media (min-width: 721px) {
+  /* keep links inline regardless of the <details> open/closed state — a closed
+     <details> otherwise collapses its content box (content-visibility: hidden) */
+  .nav-menu .nav-links { display: flex !important; }
+  .nav-menu::details-content { content-visibility: visible; }
+}
+
+@media (max-width: 720px) {
+  .nav-menu { display: block; }
+  .nav-toggle { display: inline-flex; }
+  .nav-links {
+    position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 4px;
+    padding: 8px; margin: 0;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 14px; box-shadow: var(--shadow); z-index: 60;
+  }
+  .nav-links a { padding: 11px 12px; border-radius: 9px; font-size: 1rem; }
+  .nav-links a:hover { background: var(--surface); }
+  .nav-cta { text-align: center; margin-top: 4px; }
+  .lang-switch { margin-top: 4px; }
+  .lang-switch > summary { width: 100%; justify-content: center; }
+  .lang-menu { left: 0; right: 0; min-width: 0; }
+}
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; gap: 9px; font-size: 1rem; font-weight: 600; padding: 13px 22px; border-radius: 12px; cursor: pointer; transition: transform .12s ease, opacity .12s ease; }
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn svg { width: 20px; height: 20px; }
+.btn-appstore { background: #111; color: #fff; }
+.btn-github { background: var(--bg); color: var(--accent-deep); border: 1.5px solid var(--accent); }
+.btn-github svg { fill: currentColor; }
+.btn-primary { background: var(--accent-action); color: var(--accent-action-ink); }
+.btn-disabled { background: var(--surface-2); color: var(--muted); cursor: default; pointer-events: none; }
+.btn-disabled svg { fill: currentColor; opacity: 0.7; }
+@media (prefers-color-scheme: dark) { .btn-appstore { background: #f0f5f3; color: #111; } }
+
+/* hero */
+.hero { text-align: center; padding: 76px 0 56px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 7px; font-size: 0.85rem; font-weight: 600; color: var(--accent-ink); background: var(--accent-tint); padding: 6px 14px; border-radius: 999px; }
+.hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.7rem); line-height: 1.08; letter-spacing: -0.02em; margin: 22px auto 16px; max-width: 16ch; font-weight: 700; }
+.hero .sub { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--muted); max-width: 40ch; margin: 0 auto 30px; }
+.cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.req { margin-top: 16px; font-size: 0.88rem; color: var(--muted); }
+
+/* app identity glyph (used in heroes / cards without a real icon yet) */
+.appicon { display: inline-flex; align-items: center; justify-content: center; border-radius: 18px; background: var(--accent-tint); color: var(--accent-deep); font-weight: 700; }
+.appicon-lg { width: 84px; height: 84px; font-size: 2.6rem; }
+
+/* product mockup window */
+.shot-wrap { display: flex; justify-content: center; padding: 8px 0 8px; }
+.window { width: 100%; max-width: 560px; background: var(--bg); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+.titlebar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.dot { width: 11px; height: 11px; border-radius: 50%; }
+.titlebar .label { margin-left: 8px; font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.menu-head { padding: 9px 16px; font-size: 0.8rem; color: var(--muted); border-bottom: 1px solid var(--border); }
+.clip { display: flex; align-items: center; gap: 12px; padding: 11px 16px; font-size: 0.95rem; }
+.clip + .clip { border-top: 1px solid var(--border); }
+.clip .n { color: var(--muted); width: 14px; text-align: right; font-variant-numeric: tabular-nums; }
+.clip.active { background: var(--accent-tint); }
+.clip.active .n { color: var(--accent-deep); font-weight: 700; }
+.clip .txt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clip .thumb { width: 26px; height: 20px; border-radius: 4px; background: linear-gradient(160deg, #5aa6f4, #1d5fe0); flex: none; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86rem; color: var(--muted); }
+
+/* section headings */
+.head { text-align: center; max-width: 40ch; margin: 0 auto 48px; }
+.head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -0.02em; margin: 0 0 12px; font-weight: 700; }
+.head p { color: var(--muted); font-size: 1.1rem; margin: 0; }
+
+/* feature grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.feature { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 26px; box-shadow: var(--shadow-sm); }
+.feature .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--accent-tint); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.feature .ic svg { width: 24px; height: 24px; }
+.feature h3 { margin: 0 0 8px; font-size: 1.18rem; font-weight: 600; }
+.feature p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+
+/* how it works */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+.step { text-align: center; }
+.step .num { width: 44px; height: 44px; border-radius: 50%; background: var(--accent-action); color: var(--accent-action-ink); font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.1rem; }
+.step h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.step p { margin: 0; color: var(--muted); }
+
+/* localization */
+.locale { background: var(--surface); }
+.langs { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 720px; margin: 0 auto; }
+.lang { background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 10px 20px; font-size: 1rem; font-weight: 500; }
+
+/* download comparison plans */
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; align-items: stretch; }
+.plan { background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 30px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
+.plan.featured { border: 2px solid var(--accent); }
+.plan .badge { align-self: flex-start; font-size: 0.78rem; font-weight: 700; color: var(--accent-ink); background: var(--accent-tint); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
+.plan h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-size: 1.4rem; }
+.plan h3 svg { width: 24px; height: 24px; fill: currentColor; }
+.plan .price { font-size: 1.05rem; color: var(--muted); margin: 0 0 18px; }
+.plan .price strong { color: var(--fg); }
+.plan ul { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
+.plan li { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; color: var(--fg); font-size: 0.98rem; }
+.plan li svg { width: 18px; height: 18px; flex: none; margin-top: 4px; color: var(--accent); }
+.plan li code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: var(--surface-2); padding: 1px 5px; border-radius: 5px; }
+.plan .btn { justify-content: center; width: 100%; }
+
+/* copy-paste command block (Homebrew install) */
+.cmd { display: flex; align-items: center; gap: 10px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin: 0 0 24px; }
+.cmd code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86rem; color: var(--fg); flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; }
+.cmd .cmd-copy { flex: none; font-family: inherit; font-size: 0.8rem; font-weight: 600; color: var(--accent-deep); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; cursor: pointer; transition: opacity .12s ease; }
+.cmd .cmd-copy:hover { opacity: 0.8; }
+.cmd .cmd-copy.copied { color: #1a7a45; border-color: #1a7a45; }
+@media (prefers-color-scheme: dark) { .cmd .cmd-copy.copied { color: #8fe0ac; border-color: #8fe0ac; } }
+
+/* app cards (studio hub) */
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.app-card { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border); border-radius: 18px; padding: 28px; box-shadow: var(--shadow-sm); color: var(--fg); transition: transform .14s ease, box-shadow .14s ease; }
+a.app-card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: var(--shadow); }
+.app-card .app-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.app-card .app-icon { width: 56px; height: 56px; border-radius: 14px; flex: none; display: flex; align-items: center; justify-content: center; background: var(--accent-tint); color: var(--accent-deep); }
+.app-card .app-icon svg { width: 30px; height: 30px; }
+.app-card .app-icon img { width: 56px; height: 56px; border-radius: 14px; }
+.app-card .app-icon .glyph { font-size: 1.9rem; font-weight: 700; }
+.app-card h3 { margin: 0 0 6px; font-size: 1.3rem; font-weight: 600; }
+.app-card .desc { margin: 0 0 18px; color: var(--muted); font-size: 1rem; flex: 1; }
+.app-card .app-foot { display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; color: var(--muted); }
+.app-card .app-foot .arrow { color: var(--accent-deep); display: inline-flex; }
+.app-card .app-foot .arrow svg { width: 20px; height: 20px; }
+.status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.02em; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; }
+.status-available { color: #1a7a45; background: #e3f6ea; }
+.status-soon { color: var(--muted); background: var(--surface-2); }
+@media (prefers-color-scheme: dark) { .status-available { color: #8fe0ac; background: #123322; } }
+.app-card.placeholder { border-style: dashed; align-items: center; justify-content: center; text-align: center; color: var(--muted); min-height: 180px; box-shadow: none; }
+
+/* faq */
+.faq { max-width: 760px; margin: 0 auto; }
+details { border-bottom: 1px solid var(--border); padding: 6px 0; }
+summary { cursor: pointer; list-style: none; padding: 16px 4px; font-size: 1.1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--accent); font-weight: 400; font-size: 1.5rem; line-height: 1; flex: none; }
+details[open] summary::after { content: "\2013"; }
+details p { margin: 0 4px 18px; color: var(--muted); }
+
+/* final cta */
+.final { background: var(--accent-deep); color: #fff; text-align: center; border-radius: 24px; padding: 64px 24px; margin: 0 24px; }
+.final h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 12px; letter-spacing: -0.02em; }
+.final p { color: rgba(255,255,255,0.85); font-size: 1.15rem; margin: 0 0 28px; }
+.final .btn-github { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+.final .btn-appstore { background: #fff; color: #111; }
+
+/* footer */
+footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 80px; color: var(--muted); font-size: 0.92rem; }
+.foot-inner { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 22px; }
+.foot-links a { color: var(--muted); }
+.foot-links a:hover { color: var(--fg); }
+.foot-brand { display: flex; align-items: center; gap: 10px; }
+.foot-brand img { width: 26px; height: 26px; border-radius: 6px; }
+.foot-brand .glyph { width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; background: var(--accent-tint); color: var(--accent-deep); font-size: 0.9rem; font-weight: 700; }
+
+/* credit / acknowledgement */
+.credit { background: var(--surface); border-top: 1px solid var(--border); }
+.credit .container { padding: 44px 0; text-align: center; }
+.credit .kicker { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 10px; font-weight: 600; }
+.credit p.body { margin: 0 auto; max-width: 660px; font-size: 1.05rem; color: var(--fg); line-height: 1.7; }
+.credit p.body a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.credit p.body a:hover { text-decoration: underline; }
+
+
+/* language switcher */
+.lang-switch { position: relative; font-size: 0.9rem; }
+.lang-switch > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); background: var(--bg); }
+.lang-switch > summary:hover { color: var(--fg); }
+.lang-switch > summary::-webkit-details-marker { display: none; }
+.lang-switch > summary::marker { content: ""; }
+.lang-switch > summary::after,
+.lang-switch[open] > summary::after { content: none; }
+.lang-switch[open] > summary { color: var(--fg); border-color: var(--accent); }
+.lang-switch .globe { width: 16px; height: 16px; flex: none; }
+.lang-menu { position: absolute; right: 0; margin-top: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 6px; min-width: 168px; box-shadow: var(--shadow); z-index: 60; }
+.apps-switch .lang-menu { left: 0; right: auto; }
+.lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; color: var(--fg); font-size: 0.95rem; }
+.lang-menu a:hover { background: var(--surface); text-decoration: none; }
+.lang-menu a.active { color: var(--accent-deep); font-weight: 600; }
+
+/* cookie consent banner */
+.consent-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--nav-bg); backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); border-top: 1px solid var(--border); box-shadow: 0 -10px 30px rgba(0,0,0,0.10); }
+.consent-banner[hidden] { display: none; }
+.consent-inner { max-width: 1080px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.consent-text { margin: 0; font-size: 0.92rem; color: var(--muted); flex: 1; min-width: 240px; line-height: 1.5; }
+.consent-text a { color: var(--accent-deep); text-decoration: underline; }
+.consent-actions { display: flex; gap: 10px; flex: none; }
+.consent-btn { font-family: inherit; font-size: 0.92rem; font-weight: 600; padding: 9px 18px; border-radius: 10px; cursor: pointer; border: 1px solid var(--border); transition: opacity .12s ease, background .12s ease; }
+.consent-reject { background: var(--bg); color: var(--fg); }
+.consent-reject:hover { background: var(--surface); }
+.consent-accept { background: var(--accent-action); color: var(--accent-action-ink); border-color: var(--accent-action); }
+.consent-accept:hover { opacity: 0.92; }
+@media (max-width: 560px) { .consent-actions { width: 100%; } .consent-btn { flex: 1; } }
+
+/* changelog */
+.changelog { max-width: 760px; margin: 0 auto; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.logrow { display: flex; gap: 14px; padding: 16px; border-bottom: 1px solid var(--border); }
+.logrow:last-child { border-bottom: none; }
+.logrow .ver { font-family: ui-monospace, Menlo, monospace; font-weight: 700; color: var(--accent-deep); min-width: 56px; }
+.lognote { font-weight: 600; }
+.logmeta { font-size: 0.85rem; color: var(--muted); }
+.changelog-auto { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 12px; }
+/* buy me token */
+.token-block { max-width: 640px; margin: 0 auto; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 36px 28px; }
+.token-block h2 { margin: 10px 0 8px; }
+.token-block p { color: var(--muted); max-width: 46ch; margin: 0 auto 22px; }
+.badge.soon { display: inline-block; }
+/* support block */
+.support-block { max-width: 640px; margin: 0 auto; text-align: center; background: var(--surface); border-radius: 18px; padding: 36px 28px; }
+.support-block p { color: var(--muted); max-width: 50ch; margin: 0 auto 22px; }
+/* promise strip */
+.promise { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: var(--accent-tint); border-radius: 16px; padding: 18px; margin: 12px 0; }
+.promise-chip { background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; color: var(--accent-ink); }
+.promise-link { display: block; text-align: center; font-weight: 600; margin: 4px 0 8px; }
+
+  </style>
+  <script type="module">
+/* Dragon App — client-side language auto-detection + preference memory.
+   Static GitHub Pages can't read the visitor IP server-side, so we use the
+   browser's own language list (navigator.languages), which reflects the OS /
+   browser locale the visitor configured. One automatic redirect per session,
+   and an explicit switcher choice is remembered across visits. */
+(function () {
+  "use strict";
+
+  var LANGS = ["en-US", "zh-Hans", "zh-Hant", "ja", "ko", "es", "fr", "ru"];
+
+  function lsGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} }
+  function ssGet(k) { try { return window.sessionStorage.getItem(k); } catch (e) { return null; } }
+  function ssSet(k, v) { try { window.sessionStorage.setItem(k, v); } catch (e) {} }
+
+  // Map any BCP-47 browser tag to one of the codes in LANGS, or null.
+  function matchLang(tag) {
+    var t = String(tag).toLowerCase();
+    if (t === "zh-hant" || t.indexOf("zh-hant") === 0 ||
+        t === "zh-tw" || t === "zh-hk" || t === "zh-mo") return "zh-Hant";
+    if (t === "zh-hans" || t.indexOf("zh-hans") === 0 ||
+        t === "zh-cn" || t === "zh-sg" || t === "zh-my" || t === "zh") return "zh-Hans";
+    var base = t.split("-")[0];
+    if (base === "zh") return "zh-Hans";
+    if (base === "en") return "en-US";
+    if (LANGS.indexOf(base) >= 0) return base; // ja, ko, es, fr, ru
+    return null;
+  }
+
+  function bestFromBrowser() {
+    var tags = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || navigator.userLanguage || "en"];
+    for (var i = 0; i < tags.length; i++) {
+      var m = matchLang(tags[i]);
+      if (m) return m;
+    }
+    return null;
+  }
+
+  function currentLang() {
+    var l = (document.documentElement.getAttribute("lang") || "en-US");
+    return LANGS.indexOf(l) >= 0 ? l : "en-US";
+  }
+
+  // Strip a leading "/<lang>/" segment, returning the page path within a language tree.
+  function pagePath() {
+    var parts = window.location.pathname.split("/"); // e.g. ["","ja","keykey",""]
+    var head = parts[1];
+    if (head && LANGS.indexOf(head) >= 0 && head !== "en-US") {
+      return parts.slice(2).join("/");
+    }
+    return parts.slice(1).join("/");
+  }
+
+  function urlFor(lang) {
+    var prefix = (lang === "en-US") ? "/" : "/" + lang + "/";
+    return prefix + pagePath();
+  }
+
+  // Remember the visitor's explicit choice when they use the switcher.
+  function wireSwitcher() {
+    var links = document.querySelectorAll("[data-setlang]");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        lsSet("dragonLang", this.getAttribute("data-setlang"));
+      });
+    }
+  }
+
+  function maybeRedirect() {
+    var cur = currentLang();
+    var stored = lsGet("dragonLang");
+    var target = (stored && LANGS.indexOf(stored) >= 0) ? stored : bestFromBrowser();
+    if (!target || target === cur) return;
+    if (ssGet("dragonRedirected")) return; // at most one auto-redirect per session
+    var dest = urlFor(target);
+    if (dest === window.location.pathname) return;
+    ssSet("dragonRedirected", "1");
+    window.location.replace(dest);
+  }
+
+  // Mobile hamburger: tapping any link inside the panel collapses the menu,
+  // so there's no separate close button to reach for.
+  function wireNavMenu() {
+    var menu = document.querySelector(".nav-menu");
+    if (!menu) return;
+    var links = menu.querySelectorAll(".nav-links a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        menu.removeAttribute("open");
+      });
+    }
+  }
+
+  wireSwitcher();
+  wireNavMenu();
+  maybeRedirect();
+})();
+
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.dragonapp.com/#org",
+        "name": "Dragon App",
+        "url": "https://www.dragonapp.com/",
+        "logo": "https://www.dragonapp.com/icon-512.png",
+        "sameAs": [ "https://github.com/teddychan" ]
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://www.dragonapp.com/ru/",
+        "name": "Dragon App",
+        "inLanguage": "ru",
+        "publisher": { "@id": "https://www.dragonapp.com/#org" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ice 2",
+      "url": "https://www.dragonapp.com/ru/ice-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ClipMenu 2",
+      "url": "https://www.dragonapp.com/ru/clipmenu-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Yahoo! KeyKey 2",
+      "url": "https://www.dragonapp.com/ru/yahoo-keykey-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Spectacle 2",
+      "url": "https://www.dragonapp.com/ru/spectacle-2/"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><span class="glyph">D</span>Dragon App</a>
+      <details class="nav-menu">
+        <summary class="nav-toggle" aria-label="Menu" aria-haspopup="true">
+          <svg class="icon-ham" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </summary>
+        <div class="nav-links">
+        <details class="lang-switch apps-switch">
+          <summary aria-label="Приложения" aria-haspopup="true"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span>Приложения</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/ru/">Все приложения</a>
+            <a href="https://www.dragonapp.com/ru/ice-2/">Ice 2</a>
+            <a href="https://www.dragonapp.com/ru/clipmenu-2/">ClipMenu 2</a>
+            <a href="https://www.dragonapp.com/ru/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
+            <a href="https://www.dragonapp.com/ru/spectacle-2/">Spectacle 2</a>
+          </div>
+        </details>
+        <a href="https://github.com/teddychan">GitHub</a>
+        <a href="support.html">Поддержка</a>
+        <a class="nav-cta" href="#apps">К приложениям</a>
+        <details class="lang-switch">
+          <summary aria-label="Язык: Русский"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span>Русский</span></summary>
+          <div class="lang-menu">
+            <a href="https://www.dragonapp.com/" hreflang="en-US" data-setlang="en-US">English</a>
+            <a href="https://www.dragonapp.com/zh-Hans/" hreflang="zh-Hans" data-setlang="zh-Hans">简体中文</a>
+            <a href="https://www.dragonapp.com/zh-Hant/" hreflang="zh-Hant" data-setlang="zh-Hant">繁體中文</a>
+            <a href="https://www.dragonapp.com/ja/" hreflang="ja" data-setlang="ja">日本語</a>
+            <a href="https://www.dragonapp.com/ko/" hreflang="ko" data-setlang="ko">한국어</a>
+            <a href="https://www.dragonapp.com/es/" hreflang="es" data-setlang="es">Español</a>
+            <a href="https://www.dragonapp.com/fr/" hreflang="fr" data-setlang="fr">Français</a>
+            <a href="https://www.dragonapp.com/ru/" hreflang="ru" data-setlang="ru" class="active" aria-current="true">Русский</a>
+          </div>
+        </details>
+      </div>
+      </details>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Небольшая студия, которая возрождает классические приложения для Mac</span>
+      <h1>Любимые приложения для Mac, созданные заново</h1>
+      <p class="sub">Нативные, быстрые и с открытым кодом. Dragon App возвращает к жизни заброшенную классику macOS, по одному приложению за раз.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#apps">Посмотреть приложения</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- APPS -->
+  <section id="apps">
+    <div class="container">
+      <div class="head">
+        <h2>Приложения</h2>
+        <p>Каждое из них — бережно воссозданная современная версия, бесплатная и с открытым кодом.</p>
+      </div>
+      <div class="apps"><a class="app-card theme-ice" href="https://www.dragonapp.com/ru/ice-2/"><div class="app-head"><span class="app-icon"><span class="glyph">I</span></span><h3>Ice 2</h3></div><p class="desc">Ice 2 скрывает ненужные значки в строке меню, возвращает их, когда они нужны, и позволяет расположить строку по-своему. Бережно воссозданная версия с открытым кодом, которая теперь работает на macOS 26 и 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
+<a class="app-card " href="https://www.dragonapp.com/ru/clipmenu-2/"><div class="app-head"><span class="app-icon"><span class="glyph">C</span></span><h3>ClipMenu 2</h3></div><p class="desc">Быстрый нативный менеджер буфера обмена для Mac. Он запоминает всё, что вы копируете, упорядочивает ваши фрагменты и вставляет их куда угодно одним сочетанием клавиш.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
+<a class="app-card theme-keykey" href="https://www.dragonapp.com/ru/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo! KeyKey 2</h3></div><p class="desc">Классический метод ввода Yahoo!奇摩輸入法 <strong>Цанцзе (倉頡)</strong> и <strong>Simplex (速成)</strong> снова с нами: нативный, быстрый и с открытым кодом.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
+<a class="app-card theme-spectacle" href="https://www.dragonapp.com/ru/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">Spectacle 2 прикрепляет активное окно к половине, углу или трети экрана или разворачивает его на весь экран. Он переносит окно на другой дисплей, увеличивает и уменьшает его и отменяет всё это, и всё с клавиатуры. Современная версия Spectacle с открытым кодом, которая теперь работает на macOS 26 и 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="foot-brand">
+        <span class="glyph">D</span><span>Dragon App</span>
+      </div>
+      <div class="foot-links">
+        <a href="https://github.com/teddychan">GitHub</a>
+        <a href="support.html">Поддержка</a>
+        <a href="/privacy.html">Конфиденциальность</a>
+      </div>
+    </div>
+    <div class="container" style="margin-top:22px; font-size:0.85rem;">© 2026 Dragon App · Нативные приложения для Mac, созданные заново, с открытым кодом.</div>
+  </footer>
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie consent preferences" aria-describedby="consent-text" hidden>
+    <div class="consent-inner">
+      <p class="consent-text" id="consent-text">Мы используем файлы cookie, чтобы измерять посещаемость и улучшать Dragon App. Вы можете принять или отклонить аналитические и рекламные файлы cookie. Подробнее в нашей <a href="/privacy.html">Политике конфиденциальности</a>.</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-btn consent-reject">Отклонить все</button>
+        <button type="button" class="consent-btn consent-accept">Принять все</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

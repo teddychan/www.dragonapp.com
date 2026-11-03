@@ -37,7 +37,7 @@
     "app_support_cta": "Ouvrir un ticket sur GitHub",
     "app_credit_kicker": "En hommage",
     "promise_macos": "2 derniers macOS",
-    "promise_langs": "7 langues",
+    "promise_langs": "8 langues",
     "promise_channels": "3 canaux",
     "promise_oss": "Gratuit et open source",
     "promise_link": "Pourquoi je crée &amp; maintiens ces applications"
@@ -167,7 +167,8 @@
     "story": "Chaque application ici est une que j'utilise au quotidien — et dont le mainteneur d'origine ne pouvait plus assurer le suivi. Plutôt que de les voir se casser à chaque nouvelle version de macOS, je les ai adoptées. Aujourd'hui, elles sont maintenues en grande partie grâce à l'IA, ce qui explique aussi pourquoi le soutien passe par « Offrez-moi un Token » plutôt qu'un café.",
     "promise_h2": "Ce que chaque application Dragon App promet",
     "promise_macos_d": "Fonctionne sur au moins les deux dernières versions de macOS.",
-    "promise_langs_d": "Disponible en 7 langues, comme ce site.",
+    "promise_langs": "Au moins 7 langues",
+    "promise_langs_d": "Chaque app est disponible en au moins 7 langues, et la plupart dans les 8 de ce site.",
     "promise_channels_d": "Installable de 3 façons : GitHub, Homebrew et (si possible) le Mac App Store.",
     "promise_oss_d": "Chaque app est gratuite et tout son code est public sur GitHub."
   },
@@ -222,6 +223,7 @@
     "feat3_h": "Mots associés (聯想字詞)", "feat3_p": "Après avoir validé un caractère, Yahoo KeyKey 2 suggère les mots qui suivent habituellement — les expressions courantes se forment alors en une seule frappe.",
     "support_body": "Questions, rapports de bugs et demandes de fonctionnalités sont les bienvenus — ouvrez un ticket sur GitHub et j'y jetterai un œil.",
     "credit_body": "Yahoo KeyKey 2 est une reconstruction indépendante et open source en Swift, créée en hommage à la méthode de saisie originale <strong>Yahoo! KeyKey (Yahoo!奇摩輸入法)</strong> — la méthode de saisie en chinois traditionnel que tant d'utilisateurs de Mac ont adorée. Elle perpétue cette expérience pour macOS moderne, publiée sous la licence MIT.",
+    "promise_langs": "7 langues",
     "faq": [
       {"q": "Quelles méthodes de saisie Yahoo KeyKey 2 prend-elle en charge ?", "a": "Yahoo KeyKey 2 est une méthode de saisie en chinois traditionnel avec deux modes : Cangjie (倉頡) et Simplex (速成, également appelé 簡易). Elle prend en charge la saisie par caractère générique avec *, les candidats classés par fréquence, les mots associés (聯想字詞), la ponctuation pleine largeur et une bascule facultative de sortie du traditionnel vers le simplifié."},
       {"q": "Comment installer Yahoo KeyKey 2 ?", "a": "Téléchargez le programme d'installation signé et notarisé (YahooKeyKey2.pkg) depuis GitHub et double-cliquez dessus, ou installez-le avec Homebrew : brew install --cask teddychan/tap/yahoo-keykey-2. Ensuite déconnectez-vous, reconnectez-vous, puis ajoutez 倉頡 et/ou 速成 dans Réglages Système ▸ Clavier ▸ Sources de saisie ▸ + ▸ Chinois traditionnel."},

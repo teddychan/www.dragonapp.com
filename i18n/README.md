@@ -1,6 +1,6 @@
 # Dragon App website i18n
 
-The marketing site is generated in seven languages from a single set of
+The marketing site is generated in eight languages from a single set of
 templates + per-language string files. **Edit the source here, never the
 generated HTML in `docs/`** (the generator overwrites it).
 
@@ -8,7 +8,7 @@ generated HTML in `docs/`** (the generator overwrites it).
 i18n/
   templates/*.html      HTML skeletons with {{ key }} placeholders
   strings/en-US.json       English — the source of truth (edit this first)
-  strings/<lang>.json   one per language: zh-Hans zh-Hant ja ko es fr
+  strings/<lang>.json   one per language: zh-Hans zh-Hant ja ko es fr ru
   changelogs/<app>.json release notes per version, localized (generated)
   build_i18n.py         generator: templates + strings -> docs/
 ```
@@ -42,5 +42,17 @@ alternates. Language auto-detection + the switcher live in `docs/shared/i18n.js`
 
 ## Add a language
 
-Add its code to `LANGS`, `NATIVE`, and `OG_LOCALE` in `build_i18n.py`, drop a
-`strings/<code>.json`, and rebuild.
+1. Add its code to `LANGS`, `NATIVE`, and `OG_LOCALE` in `build_i18n.py`.
+2. Add the same code to `LANGS` in `docs/shared/i18n.js`, which picks a
+   visitor's language in the browser. `i18n/tests/test_build.py` fails if the
+   two lists differ.
+3. Add `strings/<code>.json` with every key `strings/en-US.json` has. The tests
+   fail on a missing key, because a missing key renders English without failing
+   the build.
+4. If the code differs from the app's own `.lproj` name, map it in `NOTES_LANG`
+   in `build_i18n.py`. A locale whose app ships no notes in that language shows
+   the English notes.
+5. Check the `promise_langs` count in each app's strings. An app that does not
+   ship the new language overrides it in its own table, as `yahoo-keykey-2`
+   does for Russian.
+6. Rebuild.
