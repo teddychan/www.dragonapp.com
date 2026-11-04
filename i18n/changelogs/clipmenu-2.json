@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.22.2",
+    "date": "2026-11-04",
+    "notes": {
+      "en": "Update checks now use ClipMenu 2's current web address. · Update checks now use the app's current web address. Nothing else changes in the app.",
+      "es": "La búsqueda de actualizaciones ahora usa la dirección web actual de ClipMenu 2. · La búsqueda de actualizaciones ahora usa la dirección web actual de la app. Nada más cambia en la app.",
+      "fr": "La recherche de mises à jour utilise désormais l’adresse web actuelle de ClipMenu 2. · La recherche de mises à jour utilise désormais l’adresse web actuelle de l’app. Rien d’autre ne change dans l’app.",
+      "ja": "アップデートの確認で、ClipMenu 2 の現在のウェブアドレスを使うようになりました。 · アップデートの確認で、アプリの現在のウェブアドレスを使うようになりました。アプリのほかの部分は変わりません。",
+      "ko": "업데이트 확인이 이제 ClipMenu 2의 현재 웹 주소를 사용합니다. · 업데이트 확인이 이제 앱의 현재 웹 주소를 사용합니다. 앱의 다른 부분은 달라진 것이 없습니다.",
+      "ru": "Проверка обновлений теперь использует текущий веб-адрес ClipMenu 2. · Проверка обновлений теперь использует текущий веб-адрес приложения. Больше в приложении ничего не изменилось.",
+      "zh-Hans": "检查更新现在使用 ClipMenu 2 当前的网址。 · 检查更新现在使用应用当前的网址。应用的其他部分没有变化。",
+      "zh-Hant": "檢查更新現在使用 ClipMenu 2 目前的網址。 · 檢查更新現在使用 App 目前的網址。App 的其他部分沒有變化。"
+    },
+    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.22.2"
+  },
+  {
     "version": "2.22.1",
     "date": "2026-11-03",
     "notes": {
@@ -98,19 +113,5 @@
       "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權聲明，與關於面板中的一行相同。"
     },
     "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.9"
-  },
-  {
-    "version": "2.20.8",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A fix for the copyright notice: the one macOS shows in Finder's Get Info panel described the app instead of naming a copyright holder. · Finder's Get Info panel now shows ClipMenu's copyright instead of a one-line description of the app.",
-      "es": "Una corrección del aviso de copyright: el que macOS muestra en el panel Obtener información del Finder describía la app en lugar de nombrar a un titular del copyright. · El panel Obtener información del Finder ahora muestra el copyright de ClipMenu en lugar de una descripción de la app en una línea.",
-      "fr": "Une correction de la mention de copyright : celle que macOS affiche dans la fenêtre Lire les informations du Finder décrivait l'app au lieu de nommer un détenteur du copyright. · La fenêtre Lire les informations du Finder affiche désormais le copyright de ClipMenu au lieu d'une description de l'app en une ligne.",
-      "ja": "著作権表示の修正です。macOS が Finder の「情報を見る」に表示する著作権表示が、著作権者ではなくアプリの説明文になっていました。 · Finder の「情報を見る」に、アプリの説明文ではなく ClipMenu の著作権表示が表示されるようになりました。",
-      "ko": "저작권 표시 수정입니다. macOS가 Finder의 정보 가져오기 창에 표시하는 저작권 표시가 저작권자가 아니라 앱 설명이었습니다. · Finder의 정보 가져오기 창에 앱 설명 대신 ClipMenu의 저작권 표시가 표시됩니다.",
-      "zh-Hans": "修复了版权声明：macOS 在访达“显示简介”中显示的版权声明是应用的一句描述，而不是版权所有者。 · 访达的“显示简介”现在会显示 ClipMenu 的版权声明，而不再是一句应用描述。",
-      "zh-Hant": "修正了版權聲明：macOS 在 Finder「顯示簡介」中顯示的版權聲明是應用程式的一句描述，而不是版權所有者。 · Finder 的「顯示簡介」現在會顯示 ClipMenu 的版權聲明，而不再是一句應用程式描述。"
-    },
-    "url": "https://github.com/teddychan/clipmenu-2-macos/releases/tag/v2.20.8"
   }
 ]
