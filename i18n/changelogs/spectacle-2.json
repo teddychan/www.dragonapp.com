@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.8.2",
+    "date": "2026-11-04",
+    "notes": {
+      "en": "A maintenance release. Update checks now use the app's current web address. Nothing else changes in the app. · Update checks now use Spectacle 2's current web address. Nothing else in the app changed.",
+      "es": "Una versión de mantenimiento. Las búsquedas de actualizaciones ahora usan la dirección web actual de la app. Nada más cambia en la app. · Las búsquedas de actualizaciones ahora usan la dirección web actual de Spectacle 2. Nada más cambió en la app.",
+      "fr": "Une version de maintenance. La recherche de mises à jour utilise désormais l'adresse web actuelle de l'app. Rien d'autre ne change dans l'app. · La recherche de mises à jour utilise désormais l'adresse web actuelle de Spectacle 2. Rien d'autre n'a changé dans l'app.",
+      "ja": "メンテナンスリリースです。アップデートの確認で、アプリの現在のウェブアドレスを使うようになりました。アプリのそのほかの部分は変わりません。 · アップデートの確認で、Spectacle 2 の現在のウェブアドレスを使うようになりました。アプリのそのほかの部分は変わりません。",
+      "ko": "유지 관리 릴리스입니다. 업데이트 확인이 이제 앱의 현재 웹 주소를 사용합니다. 앱의 다른 부분은 바뀌지 않습니다. · 업데이트 확인이 이제 Spectacle 2의 현재 웹 주소를 사용합니다. 앱의 다른 부분은 바뀌지 않았습니다.",
+      "ru": "Обслуживающий выпуск. Проверка обновлений теперь использует текущий веб-адрес приложения. Больше в приложении ничего не изменилось. · Проверка обновлений теперь использует текущий веб-адрес Spectacle 2. Больше в приложении ничего не изменилось.",
+      "zh-Hans": "这是一次维护更新。检查更新现在使用应用当前的网址。应用的其他部分没有变化。 · 检查更新现在使用 Spectacle 2 当前的网址。应用的其他部分没有变化。",
+      "zh-Hant": "這是一次維護更新。檢查更新現在使用 App 目前的網址。App 的其他部分沒有變化。 · 檢查更新現在使用 Spectacle 2 目前的網址。App 的其他部分沒有變化。"
+    },
+    "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.8.2"
+  },
+  {
     "version": "2.8.1",
     "date": "2026-11-03",
     "notes": {
@@ -100,13 +115,5 @@
       "zh-Hant": "一處小修正：Spectacle 2 現在帶有版權聲明，與「關於」中顯示的一致。其餘功能與先前完全相同。 · Finder 的「顯示簡介」現在會顯示 Spectacle 2 的版權聲明。先前應用程式完全沒有版權聲明，該行一直是空的。"
     },
     "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.5.5"
-  },
-  {
-    "version": "2.5.3",
-    "date": "2026-08-11",
-    "notes": {
-      "en": "A maintenance release: Spectacle 2 behaves identically to 2.5.2. · Spectacle 2 is built on an updated version of the shared Dragon App code. The one difference you can observe is the version About reports: \"Built with · DragonKit v3.4.0\". Nothing the new version adds is taken up here — its new option is for an app translated into fewer languages than the shared code, and Spectacle 2 ships all seven of them."
-    },
-    "url": "https://github.com/teddychan/spectacle-2/releases/tag/v2.5.3"
   }
 ]
