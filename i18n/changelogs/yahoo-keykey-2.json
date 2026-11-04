@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.18.1",
+    "date": "2026-11-04",
+    "notes": {
+      "en": "Update checks now use the app's current web address. Nothing else in Yahoo! KeyKey 2 has changed. · Yahoo! KeyKey 2 now checks for updates at the app's current web address. Nothing else changed. Typing, the candidate list, your settings and your learning data behave exactly as they did in 2.18.0.",
+      "es": "Las comprobaciones de actualizaciones ahora usan la dirección web actual de la app. Nada más ha cambiado en Yahoo! KeyKey 2. · Yahoo! KeyKey 2 ahora busca actualizaciones en la dirección web actual de la app. Nada más ha cambiado. La escritura, la lista de candidatos, tus ajustes y lo que ha aprendido funcionan exactamente igual que en la 2.18.0.",
+      "fr": "La recherche de mises à jour utilise désormais l'adresse web actuelle de l'app. Rien d'autre n'a changé dans Yahoo! KeyKey 2. · Yahoo! KeyKey 2 recherche désormais les mises à jour à l'adresse web actuelle de l'app. Rien d'autre n'a changé. La saisie, la liste de candidats, vos réglages et ce que l'app a appris fonctionnent exactement comme dans la version 2.18.0.",
+      "ja": "アップデートの確認が、アプリの現在のWebアドレスを使うようになりました。Yahoo! KeyKey 2 のそれ以外の部分は変わっていません。 · Yahoo! KeyKey 2 は、アプリの現在のWebアドレスでアップデートを確認するようになりました。それ以外は変わっていません。入力、候補リスト、設定、学習データは 2.18.0 とまったく同じように動作します。",
+      "ko": "업데이트 확인이 이제 앱의 현재 웹 주소를 사용합니다. Yahoo! KeyKey 2의 다른 부분은 바뀌지 않았습니다. · Yahoo! KeyKey 2가 이제 앱의 현재 웹 주소에서 업데이트를 확인합니다. 그 외에는 바뀐 것이 없습니다. 입력, 후보 목록, 설정, 학습 데이터는 2.18.0과 똑같이 동작합니다.",
+      "ru": "Проверка обновлений теперь использует текущий веб-адрес приложения. Больше в Yahoo! KeyKey 2 ничего не изменилось. · Yahoo! KeyKey 2 теперь проверяет обновления по текущему веб-адресу приложения. Больше ничего не изменилось. Ввод, список кандидатов, настройки и данные обучения работают так же, как в версии 2.18.0.",
+      "zh-Hans": "检查更新现在使用应用当前的网址。Yahoo! KeyKey 2 的其他部分没有变化。 · Yahoo! KeyKey 2 现在通过应用当前的网址检查更新。其他方面没有变化。输入、候选字列表、设置和学习数据的表现与 2.18.0 完全相同。",
+      "zh-Hant": "檢查更新現在使用 App 目前的網址。Yahoo! KeyKey 2 的其他部分沒有變動。 · Yahoo! KeyKey 2 現在透過 App 目前的網址檢查更新。其他方面沒有變動。輸入、候選字清單、設定和學習資料的表現與 2.18.0 完全相同。"
+    },
+    "url": "https://github.com/teddychan/yahoo-keykey-2-macos/releases/tag/v2.18.1"
+  },
+  {
     "version": "2.18.0",
     "date": "2026-11-03",
     "notes": {
@@ -97,19 +112,5 @@
       "zh-Hant": "注音（ㄅ半）回來了，而且就是你熟悉的那一套：一個音一個字。打注音符號，用聲調結束一個字（空白鍵是一聲），候選字就會出現，按 1–9 選字。接著直接打下一個字的第一個符號，畫面上的字就會自動送出，不用按 Enter。鍵盤可選「標準（大千）」或「倚天」。倉頡、速成與拼音完全不受影響。 · 新增注音（ㄅ半）輸入法。打注音符號，再用聲調結束一個字——空白鍵就是一聲，和任何注音鍵盤一樣——候選字隨即出現：按 1–9 選字，空白鍵或方向鍵翻頁。直接打下一個字的第一個符號時，畫面上的字會自動送出，所以一句話可以一直打下去，中間不用按 Enter。每送出一個字，一樣會跟著出現聯想字詞，與倉頡、速成相同。候選字取自原版 Yahoo! KeyKey 的 ㄅ半 字表，並保持該字表原本的順序（ㄍㄨㄛˊ → 國、ㄉㄜ˙ → 的），之後再依你的選字習慣，針對每個讀音各自學習。請到「系統設定 ▸ 鍵盤」，按「輸入來源」旁的「編輯…」（「+」在這個視窗裡，不在設定頁上），再按「+ ▸ 繁體中文 ▸ 注音」加入（和新增任何輸入法一樣，加完請登出再登入）。 · 注音鍵盤可選「標準（大千）」或「倚天」。預設是大千，也就是台灣鍵盤上印的那一套，以及原版 Yahoo! KeyKey 的預設。可以在「設定… ▸ 輸入方式」切換，或在使用注音時直接從輸入選單切換，下一個按鍵就生效。 · 在注音中，有兩個按鍵和其他輸入法不一樣，因為注音需要它們。大千鍵盤上的 ㄝ ㄡ ㄤ ㄥ ㄦ 就位在 , . ; / - 這幾個鍵上，所以在注音中這些鍵打的是注音符號，而不是標點；「，」和「。」改用 Shift + , 和 Shift + . ——這也是原版 Yahoo! KeyKey 原本的做法。另外，因為數字鍵也要用來打注音，在注音中聯想字詞固定以 Shift + 數字選取，不論「聯想選字鍵」設定為何，這樣一來，直接按數字才能打出 ㄅ ㄉ ㄓ ㄚ ㄞ ㄢ 和聲調。倉頡、速成與拼音都沒有改變。"
     },
     "url": "https://github.com/teddychan/yahoo-keykey-2-macos/releases/tag/v2.15.0"
-  },
-  {
-    "version": "2.14.1",
-    "date": "2026-09-27",
-    "notes": {
-      "en": "Shift + Space can now type a full-width space (　) in 倉頡, 速成 and 拼音 — turn it on in Settings. · A new setting in General ▸ Input, “Shift + Space types a full-width space”, off by default. Turn it on and Shift + Space types a full-width space (　), the width of one Chinese character, in 倉頡, 速成 and 拼音 — no need to switch input source. Anything you are composing is committed first. With it off, Shift + Space works exactly like Space, as before. · In 倉頡 and 速成, Shift + a letter (臨時英數) pressed while the candidate list is on page 2 or later now commits the first character of the page you are looking at — the same one Return commits. It used to commit the first character of page 1, which was no longer on screen.",
-      "es": "Ahora Mayús + Espacio puede escribir un espacio de ancho completo (　) en 倉頡, 速成 y 拼音; actívalo en Ajustes. · Un nuevo ajuste en General ▸ Entrada, «Mayús + Espacio escribe un espacio de ancho completo», desactivado de forma predeterminada. Si lo activas, Mayús + Espacio escribe un espacio de ancho completo (　), del ancho de un carácter chino, en 倉頡, 速成 y 拼音, sin tener que cambiar de fuente de entrada. Lo que estés componiendo se confirma primero. Desactivado, Mayús + Espacio funciona exactamente igual que Espacio, como hasta ahora. · En 倉頡 y 速成, al pulsar Mayús + una letra (臨時英數) con la lista de candidatos en la página 2 o posterior, ahora se confirma el primer carácter de la página que estás viendo, el mismo que confirma Retorno. Antes se confirmaba el primero de la página 1, que ya no estaba en pantalla.",
-      "fr": "Maj + Espace peut désormais saisir une espace pleine largeur (　) en 倉頡, 速成 et 拼音 — activez-le dans les Réglages. · Un nouveau réglage dans Général ▸ Saisie, « Maj + Espace saisit une espace pleine largeur », désactivé par défaut. Une fois activé, Maj + Espace saisit une espace pleine largeur (　), de la largeur d’un caractère chinois, en 倉頡, 速成 et 拼音, sans changer de source de saisie. Ce que vous êtes en train de composer est d’abord validé. Désactivé, Maj + Espace fonctionne exactement comme Espace, comme avant. · En 倉頡 et 速成, appuyer sur Maj + une lettre (臨時英數) quand la liste des candidats est à la page 2 ou au-delà valide désormais le premier caractère de la page affichée, celui que valide Retour. Auparavant, c’était le premier de la page 1, qui n’était plus à l’écran.",
-      "ja": "倉頡・速成・拼音で、Shift + スペースキーで全角スペース（　）を入力できるようになりました。設定でオンにしてください。 · 「一般 ▸ 入力」に「Shift + スペースで全角スペースを入力」を追加しました（初期設定はオフ）。オンにすると、倉頡・速成・拼音で Shift + スペースキーを押すと、漢字 1 文字分の幅の全角スペース（　）が入力され、入力ソースを切り替える必要はありません。入力中の文字は先に確定されます。オフのときは、これまでどおり Shift + スペースキーはスペースキーと同じ動作です。 · 倉頡と速成で、候補リストが 2 ページ目以降のときに Shift + 英字（臨時英數）を押すと、return キーと同じく、いま表示しているページの最初の文字が確定されるようになりました。以前は 1 ページ目の最初の文字が確定され、その文字はもう画面に表示されていませんでした。",
-      "ko": "이제 倉頡, 速成, 拼音에서 Shift + 스페이스로 전각 공백(　)을 입력할 수 있습니다. 설정에서 켜세요. · 일반 ▸ 입력에 ‘Shift + 스페이스로 전각 공백 입력’ 설정이 추가되었습니다. 기본값은 끔입니다. 켜면 倉頡, 速成, 拼音에서 Shift + 스페이스를 눌러 한자 한 글자 너비의 전각 공백(　)을 입력할 수 있으므로 입력 소스를 바꿀 필요가 없습니다. 조합 중인 글자는 먼저 확정됩니다. 끄면 Shift + 스페이스는 예전처럼 스페이스와 똑같이 동작합니다. · 倉頡과 速成에서 후보 목록이 2페이지 이상일 때 Shift + 영문자(臨時英數)를 누르면, 이제 Return 키와 마찬가지로 지금 보고 있는 페이지의 첫 글자가 확정됩니다. 이전에는 이미 화면에 없는 1페이지의 첫 글자가 확정되었습니다.",
-      "zh-Hans": "现在可以在仓颉、速成与拼音中，用 Shift + 空格键输入全角空格（　），请到设置中开启。 · 「通用 ▸ 输入」新增「Shift + 空格键输入全角空格」，默认关闭。开启后，在仓颉、速成与拼音中按 Shift + 空格键，就会输入一个全角空格（　），宽度与一个汉字相同，不必切换输入法。正在组字时，会先确认当前的字。关闭时，Shift + 空格键和以往一样，与空格键完全相同。 · 在仓颉与速成中，候选字列表翻到第 2 页或之后时按 Shift + 英文字母（临时英数），现在会先确认你眼前这一页的第一个字，与按 Return 键相同。过去确认的是第 1 页的第一个字，而那个字已经不在画面上。",
-      "zh-Hant": "現在可以在倉頡、速成與拼音中，用 Shift + 空白鍵輸入全形空白（　），請到設定中開啟。 · 「一般 ▸ 輸入」新增「Shift + 空白鍵輸入全形空白」，預設關閉。開啟後，在倉頡、速成與拼音中按 Shift + 空白鍵，就會輸入一個全形空白（　），寬度與一個中文字相同，不必切換輸入法。正在組字時，會先確認目前的字。關閉時，Shift + 空白鍵和以往一樣，與空白鍵完全相同。 · 在倉頡與速成中，候選字清單翻到第 2 頁或之後時按 Shift + 英文字母（臨時英數），現在會先確認你眼前這一頁的第一個字，與按 Return 鍵相同。過去確認的是第 1 頁的第一個字，而那個字已經不在畫面上。"
-    },
-    "url": "https://github.com/teddychan/yahoo-keykey-2-macos/releases/tag/v2.14.1"
   }
 ]
