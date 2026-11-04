@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.17.1",
+    "date": "2026-11-04",
+    "notes": {
+      "en": "A maintenance update. Update checks now use the app's current web address. Nothing else changes in Ice 2.",
+      "es": "Una actualización de mantenimiento. Las búsquedas de actualizaciones ahora usan la dirección web actual de la app. Nada más cambia en Ice 2.",
+      "fr": "Une mise à jour de maintenance. La recherche de mises à jour utilise désormais l'adresse web actuelle de l'app. Rien d'autre ne change dans Ice 2.",
+      "ja": "メンテナンスアップデートです。アップデートの確認が、アプリの現在のウェブアドレスを使うようになりました。Ice 2 のそれ以外の動作は変わりません。",
+      "ko": "유지보수 업데이트입니다. 업데이트 확인이 이제 앱의 현재 웹 주소를 사용합니다. Ice 2의 다른 부분은 바뀌지 않습니다.",
+      "ru": "Плановое обновление. Проверка обновлений теперь использует текущий веб-адрес приложения. Больше в Ice 2 ничего не меняется.",
+      "zh-Hans": "这是一次维护更新。检查更新现在使用应用当前的网址。Ice 2 的其他部分没有变化。",
+      "zh-Hant": "這是一次維護更新。檢查更新現在使用 App 目前的網址。Ice 2 的其他部分沒有變化。"
+    },
+    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.17.1"
+  },
+  {
     "version": "2.17.0",
     "date": "2026-11-03",
     "notes": {
@@ -98,19 +113,5 @@
       "zh-Hant": "這是一個維護版本：你能看到的行為都沒有變化。Ice 2 遷移到 Dragon App 共用框架的 4.1.0 版本，其餘都是內部整理。 · Ice 2 現在基於共用框架 DragonKit 4.1.0 建構，先前為 4.0.0。設定視窗、「關於」和「新功能」面板以及更新檢查都由該框架提供，因此讓參照保持最新，可讓這四處與其他 Dragon App 保持一致。它在 App 內唯一的痕跡，就是「關於」面板「建構於」一行列出的框架版本。 · 內部整理：描述 Ice 2 App 套件及其內建選單列輔助程式的檔案現已集中到專案中的同一位置，與所有 Dragon App 的結構一致。App 的建構方式和使用體驗均未改變。"
     },
     "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.15.1"
-  },
-  {
-    "version": "2.15.0",
-    "date": "2026-08-12",
-    "notes": {
-      "en": "Ice 2 now speaks seven languages, chosen in Settings ▸ General and applied without a relaunch. · English, Español, Français, 日本語, 한국어, 简体中文 and 繁體中文. Pick one under Settings ▸ General, or leave it on Automatic to follow macOS. Everything switches at once — settings, the menu bar menu, alerts and the permissions window — with no relaunch. · The Settings item in the menu bar's right-click menu now reads “Settings…” with the gear icon every Dragon app shows, instead of “Ice 2 Settings…” with no icon.",
-      "es": "Ice 2 ya habla siete idiomas, que se eligen en Ajustes ▸ General y se aplican sin reiniciar. · English, Español, Français, 日本語, 한국어, 简体中文 y 繁體中文. Elige uno en Ajustes ▸ General o déjalo en Automático para seguir a macOS. Todo cambia a la vez —ajustes, el menú de la barra de menús, las alertas y la ventana de permisos— sin reiniciar. · El ítem Ajustes del menú contextual de la barra de menús ahora dice «Ajustes…» con el icono de engranaje que muestran todas las apps de Dragon, en lugar de «Ajustes de Ice 2…» sin icono.",
-      "fr": "Ice 2 parle désormais sept langues, à choisir dans Réglages ▸ Général et appliquées sans relancer l'app. · English, Español, Français, 日本語, 한국어, 简体中文 et 繁體中文. Choisissez-en une dans Réglages ▸ Général, ou laissez sur Automatique pour suivre macOS. Tout change d'un coup — réglages, menu de la barre des menus, alertes et fenêtre des autorisations — sans relancer l'app. · L'élément Réglages du menu contextuel de la barre des menus affiche désormais « Réglages… » avec l'icône d'engrenage commune aux apps Dragon, au lieu de « Réglages d'Ice 2… » sans icône.",
-      "ja": "Ice 2 が 7 つの言語に対応しました。設定 ▸ 一般 で選ぶと、再起動せずに切り替わります。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。設定 ▸ 一般 で選択するか、「自動」のままにすると macOS に従います。設定、メニューバーのメニュー、アラート、アクセス許可のウインドウまで、再起動せずに一度に切り替わります。 · メニューバーの右クリックメニューの項目が、アイコンのない「Ice 2 の設定…」から、Dragon の各 App 共通の歯車アイコン付き「設定…」になりました。",
-      "ko": "Ice 2가 이제 7개 언어를 지원합니다. 설정 ▸ 일반에서 선택하면 다시 실행하지 않아도 바로 적용됩니다. · English, Español, Français, 日本語, 한국어, 简体中文, 繁體中文. 설정 ▸ 일반에서 선택하거나 '자동'으로 두면 macOS를 따릅니다. 설정, 메뉴 막대 메뉴, 알림, 권한 윈도우까지 다시 실행 없이 한 번에 전환됩니다. · 메뉴 막대의 오른쪽 클릭 메뉴에 있는 설정 항목이, 아이콘 없는 'Ice 2 설정…' 대신 모든 Dragon 앱이 사용하는 톱니바퀴 아이콘과 함께 '설정…'으로 표시됩니다.",
-      "zh-Hans": "Ice 2 现已支持七种语言，可在“设置 ▸ 通用”中选择，无需重新启动即可生效。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。在“设置 ▸ 通用”中选择，或保持“自动”以跟随 macOS。设置、菜单栏菜单、提醒和权限窗口会同时切换，无需重新启动。 · 菜单栏右键菜单中的“设置”项现在显示为带齿轮图标的“设置…”，与所有 Dragon App 一致，不再是没有图标的“Ice 2 设置…”。",
-      "zh-Hant": "Ice 2 現已支援七種語言，可在「設定 ▸ 一般」中選擇，無需重新啟動即可生效。 · English、Español、Français、日本語、한국어、简体中文、繁體中文。在「設定 ▸ 一般」中選擇，或保持「自動」以跟隨 macOS。設定、選單列選單、提醒和權限視窗會同時切換，無需重新啟動。 · 選單列右鍵選單中的「設定」項目現在顯示為帶齒輪圖像的「設定…」，與所有 Dragon App 一致，不再是沒有圖像的「Ice 2 設定…」。"
-    },
-    "url": "https://github.com/teddychan/ice-2-macos/releases/tag/v2.15.0"
   }
 ]
