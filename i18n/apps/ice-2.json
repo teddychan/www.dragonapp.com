@@ -8,7 +8,7 @@
   "license": "GPLv3",
   "license_url": "https://github.com/teddychan/ice-2-macos/blob/main/LICENSE",
   "licenses_page": true,
-  "min_macos": "26",
+  "min_macos": "27",
   "appcast_repo": "teddychan/www.dragonapp.com",
   "credit_name": "Jordan Baird",
   "credit_url": "https://github.com/jordanbaird/Ice",
