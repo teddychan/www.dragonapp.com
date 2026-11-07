@@ -20,8 +20,8 @@
     });
   </script>
   <script src="/shared/consent.js?v=0058cbb5" defer></script>
-  <title>Ice 2 — Mac向けメニューバーマネージャー、macOS 26・27対応に再構築</title>
-  <meta name="description" content="Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです — メニューバーのアイコンを非表示にして整理し、必要なときに表示できます。macOS 26・27をサポートするために再構築されました。">
+  <title>Ice 2 — Mac向けメニューバーマネージャー、macOS 27向けに再構築</title>
+  <meta name="description" content="Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです。不要なメニューバーのアイコンを隠し、Ice Barからワンクリックで開けます。macOS 27向けに再構築されました。">
   <link rel="canonical" href="https://www.dragonapp.com/ja/ice-2/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/dragon.svg">
@@ -38,13 +38,13 @@
   <meta property="og:site_name" content="Dragon App">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:url" content="https://www.dragonapp.com/ja/ice-2/">
-  <meta property="og:title" content="Ice 2 — Mac向けメニューバーマネージャー、macOS 26・27対応に再構築">
-  <meta property="og:description" content="Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです — メニューバーのアイコンを非表示にして整理し、必要なときに表示できます。macOS 26・27をサポートするために再構築されました。">
+  <meta property="og:title" content="Ice 2 — Mac向けメニューバーマネージャー、macOS 27向けに再構築">
+  <meta property="og:description" content="Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです。不要なメニューバーのアイコンを隠し、Ice Barからワンクリックで開けます。macOS 27向けに再構築されました。">
   <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ice 2 — Mac向けメニューバーマネージャー、macOS 26・27対応に再構築">
-  <meta name="twitter:description" content="Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです — メニューバーのアイコンを非表示にして整理し、必要なときに表示できます。macOS 26・27をサポートするために再構築されました。">
+  <meta name="twitter:title" content="Ice 2 — Mac向けメニューバーマネージャー、macOS 27向けに再構築">
+  <meta name="twitter:description" content="Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです。不要なメニューバーのアイコンを隠し、Ice Barからワンクリックで開けます。macOS 27向けに再構築されました。">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
   <link rel="stylesheet" href="/shared/dragon.css?v=56a7d4ef">
@@ -57,11 +57,11 @@
     {
       "@type": "SoftwareApplication",
       "name": "Ice 2",
-      "description": "Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです — メニューバーのアイコンを非表示にして整理し、必要なときに表示できます。macOS 26・27をサポートするために再構築されました。",
+      "description": "Ice 2は、Mac向けの無料・オープンソースのメニューバーマネージャーです。不要なメニューバーのアイコンを隠し、Ice Barからワンクリックで開けます。macOS 27向けに再構築されました。",
       "url": "https://www.dragonapp.com/ja/ice-2/",
       "image": "https://www.dragonapp.com/icon-512.png",
       "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "macOS 26",
+      "operatingSystem": "macOS 27",
       "inLanguage": "ja",
       "downloadUrl": "https://github.com/teddychan/ice-2-macos/releases/latest",
       "softwareLicense": "https://github.com/teddychan/ice-2-macos/blob/main/LICENSE",
@@ -102,7 +102,7 @@
           "name": "Ice 2は何をするアプリですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ice 2は不要なメニューバーのアイコンを隠してメニューバーをすっきりさせ、クリック、ホットキー、またはホバーによって必要なときにアイコンを呼び戻します。"
+            "text": "Ice 2は不要なメニューバーのアイコンを隠してメニューバーをすっきりさせます。非表示のアイコンはIce Barで待機します。Iceアイコンをクリックし、アイコンをクリックするとそのメニューが開きます。"
           }
         },
         {
@@ -118,7 +118,7 @@
           "name": "Ice 2の動作に必要なものは？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "macOS 26以降が動作するMacです。"
+            "text": "Ice 2 3.0には、macOS 27以降が動作するAppleシリコン搭載のMacが必要です。macOS 26では、GitHubのリリースページからIce 2 2.17.1を引き続き入手できます。"
           }
         },
         {
@@ -134,7 +134,7 @@
           "name": "Ice 2の設定をバックアップまたは同期できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。Settings ▸ Backup & Restore でバックアップフォルダを選ぶと、Ice 2 がすべての設定（レイアウトプロファイル、項目グループ、スペーサー、トリガー、ホットキー、外観）のスナップショットを保存し、最新の 10 件のバックアップを保持します。Ice 2 は終了時にも自動でバックアップし、どのバックアップもワンクリックで復元できます。バックアップフォルダを Dropbox、iCloud Drive、Google Drive に指定すれば、複数の Mac 間で設定を同期したり、新しい Mac をセットアップしたりできます。"
+            "text": "はい。Settings ▸ Backup & Restore でバックアップフォルダを選び、Back Up Now をクリックします。Ice 2 はすべての設定（ログイン時に起動、言語、メニューバーにIceアイコンを表示するかどうか、どのアイコンを表示・非表示にするか、その並び順）を保存します。どのバックアップもワンクリックで復元できます。バックアップフォルダを Dropbox、iCloud Drive、Google Drive に指定すれば、複数の Mac 間で設定を同期したり、新しい Mac をセットアップしたりできます。"
           }
         }
       ]
@@ -198,7 +198,7 @@
       </div>
       <p><span class="eyebrow">macOS向けメニューバーマネージャー</span></p>
       <h1>メニューバーを整理 — モダンなmacOSで復活</h1>
-      <p class="sub">Ice 2は不要なメニューバーのアイコンを隠し、必要なときに呼び戻し、バーのレイアウトを自由にカスタマイズできます。忠実なオープンソースの再構築版 — macOS 26・27で動作します。</p>
+      <p class="sub">Ice 2は不要なメニューバーのアイコンを隠します。各アイコンは表示か非表示のどちらかで、非表示のものはIceアイコンの下のIce Barで待機します。忠実なオープンソースの再構築版、macOS 27向けに作られました。</p>
       <div class="cta-row">
         <a class="btn btn-github" href="https://github.com/teddychan/ice-2-macos/releases/latest">
           <svg viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.5 4.3 19.5 4.6 19.5 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
@@ -206,7 +206,7 @@
         </a>
         <a class="btn btn-primary" href="#download">入手方法</a>
       </div>
-      <p class="req">最新2世代のmacOS · 8言語 · 3つの配布チャンネル</p>
+      <p class="req">macOS 27（macOS 26は2.17.1） · 8言語 · 3つの配布チャンネル</p>
     </div>
   </header>
 
@@ -216,7 +216,7 @@
       <div class="head">
         <h2>動作を見る</h2>
       </div>
-      <div class="window" role="img" aria-label="Ice 2で管理されたMacのメニューバー：使用頻度の低いアイコンは仕切りの後ろに収められ、時計、バッテリー、Wi-Fi、コントロールセンターは表示されています。">
+      <div class="window" role="img" aria-label="Ice 2で管理されたMacのメニューバー：使用頻度の低いアイコンは非表示になり、時計、バッテリー、Wi-Fi、コントロールセンターは表示されています。">
         <div class="titlebar">
           <span class="dot" style="background:#e06a60"></span>
           <span class="dot" style="background:#e6b341"></span>
@@ -235,18 +235,18 @@
       <div class="grid">
         <div class="feature">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <h3>メニューバーのアイコンを非表示</h3>
-          <p>使用頻度の低いアイコンを仕切りの後ろに収めて、バーをすっきりさせます。</p>
+          <h3>アイコンごとに表示・非表示</h3>
+          <p>設定でメニューバーのアイコンごとに「表示」か「非表示」を選びます。macOS 27では、この選択がそのアプリのすべてのアイコンに適用されます。</p>
         </div>
         <div class="feature">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="6" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/></svg></div>
           <h3>Ice Bar</h3>
-          <p>非表示にしたアイコンを、必要なときに表示される独立したバーに移動できます。</p>
+          <p>Iceアイコンをクリックすると、その下のパネルに非表示のアイコンが表示されます。クリックするとそのメニューが開きます。</p>
         </div>
         <div class="feature">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <h3>必要なときに表示</h3>
-          <p>クリック、ホットキー、またはエッジにホバーすることでアイコンを表示します。</p>
+          <h3>ひとつの並び順</h3>
+          <p>Ice Barでも設定でも、アイコンをドラッグして並べ替えられます。どちらも同じ順序を保ちます。</p>
         </div>
       </div>
     </div>
@@ -307,7 +307,7 @@
   <!-- PROMISE -->
   <div class="container">
     <div class="promise">
-      <span class="promise-chip">最新2世代のmacOS</span>
+      <span class="promise-chip">macOS 27（macOS 26は2.17.1）</span>
       <span class="promise-chip">8言語</span>
       <span class="promise-chip">3つの配布チャンネル</span>
       <span class="promise-chip">無料・オープンソース</span>
