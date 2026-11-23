@@ -1,5 +1,20 @@
 [
   {
+    "version": "2.9.1",
+    "date": "2026-11-08",
+    "notes": {
+      "en": "Safer settings backups. · Backups in a shared folder no longer affect another app's history. Saving twice in one second keeps both copies, and deletion errors are shown.",
+      "es": "Copias de seguridad de ajustes más seguras. · Las copias de seguridad de una carpeta compartida ya no afectan al historial de otras apps. Guardar dos veces en un segundo conserva ambas copias y se muestran los errores al eliminarlas.",
+      "fr": "Des sauvegardes de réglages plus sûres. · Les sauvegardes d'un dossier partagé n'affectent plus l'historique des autres apps. Deux sauvegardes dans la même seconde sont conservées et les erreurs de suppression sont affichées.",
+      "ja": "設定のバックアップをより安全に。 · 共有フォルダ内のバックアップが、ほかのアプリの履歴に影響しなくなりました。同じ秒に2回保存しても両方が残り、削除に失敗した場合はエラーが表示されます。",
+      "ko": "설정 백업이 더 안전해졌습니다. · 공유 폴더의 백업이 다른 앱의 백업 기록에 영향을 주지 않습니다. 같은 초에 두 번 저장해도 두 백업을 모두 유지하며, 삭제 오류를 표시합니다.",
+      "ru": "Более безопасные резервные копии настроек. · Резервные копии в общей папке больше не влияют на историю других приложений. Обе копии, созданные в одну секунду, сохраняются, а ошибки удаления отображаются.",
+      "zh-Hans": "设置备份更安全。 · 共享文件夹中的备份不再影响其他 App 的备份历史。同一秒内保存两次会保留两个副本，删除失败时也会显示错误。",
+      "zh-Hant": "設定備份更安全。 · 共用資料夾中的備份不再影響其他 App 的備份記錄。同一秒內儲存兩次會保留兩個副本，刪除失敗時也會顯示錯誤。"
+    },
+    "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.9.1"
+  },
+  {
     "version": "2.9.0",
     "date": "2026-11-07",
     "notes": {
@@ -102,19 +117,5 @@
       "zh-Hant": "這是「卸載」的一處安全修正，來自 Spectacle 2 所依賴的共享框架。視窗管理沒有任何變化。 · 如果 Mac 上有兩個或更多 Spectacle 2 副本，「卸載」現在會中止。把正在執行的副本移到垃圾桶一直是安全的，但設定、登入項目與支援檔案是依應用程式的識別碼而非所在位置儲存的，因此兩個副本會共用這些內容，無法分辨歸屬。卸載多餘的副本可能會刪除你實際使用的那個副本的設定。現在它會在刪除任何內容之前中止，並列出各個副本的位置，你可以先把不需要的移到垃圾桶，再重試一次。如果你只有一個副本（幾乎所有人都是），則沒有任何變化。 · 共享框架 DragonKit 升級到 4.1.1，它負責「設定」、「關於」、「新增功能」以及軟體更新。上面這處修正來自該升級；這些面板的外觀和行為都沒有改變。"
     },
     "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.5.7"
-  },
-  {
-    "version": "2.5.6",
-    "date": "2026-08-18",
-    "notes": {
-      "en": "A maintenance release. Spectacle 2 picks up the latest version of the shared framework it is built on, plus some tidying behind the scenes. Nothing you use day to day works differently. · Updated to DragonKit 4.1.0, the shared framework behind Settings, About, What's New and software updates. Only the version changed — none of those panes look or behave differently. · Housekeeping in the source code: the files that make up the app bundle now sit together in one folder, and the licence file names both Eric Czarny, for the original Spectacle, and Teddy Chan, for this reimplementation. Neither is visible from inside the app.",
-      "es": "Una versión de mantenimiento. Spectacle 2 incorpora la última versión del framework compartido en el que se basa, además de algo de orden interno. Nada de lo que usas a diario funciona de otra manera. · Actualizado a DragonKit 4.1.0, el framework compartido detrás de Ajustes, Acerca de, Novedades y las actualizaciones de software. Solo cambió la versión: ninguno de esos paneles se ve ni se comporta de forma distinta. · Orden interno en el código: los archivos que forman el paquete de la app ahora están juntos en una sola carpeta, y el archivo de licencia nombra tanto a Eric Czarny, por el Spectacle original, como a Teddy Chan, por esta reimplementación. Nada de esto se ve desde dentro de la app.",
-      "fr": "Une version de maintenance. Spectacle 2 intègre la dernière version du framework partagé sur lequel il repose, ainsi qu’un peu de rangement en interne. Rien de ce que vous utilisez au quotidien ne fonctionne différemment. · Mise à jour vers DragonKit 4.1.0, le framework partagé derrière Réglages, À propos, Nouveautés et les mises à jour logicielles. Seule la version a changé : aucun de ces volets n’a changé d’apparence ni de comportement. · Rangement dans le code source : les fichiers qui composent l’app sont désormais regroupés dans un seul dossier, et le fichier de licence mentionne à la fois Eric Czarny, pour le Spectacle d’origine, et Teddy Chan, pour cette réimplémentation. Ni l’un ni l’autre n’est visible depuis l’app.",
-      "ja": "メンテナンスリリースです。Spectacle 2 が土台としている共有フレームワークを最新版に更新し、内部を少し整理しました。日常の使い方はこれまでとまったく変わりません。 · 共有フレームワーク DragonKit を 4.1.0 に更新しました。「設定」「このアプリについて」「新機能」およびソフトウェア・アップデートを担う部分です。変わったのはバージョンだけで、これらのパネルの見た目も動作も同じです。 · ソースコードの整理です。アプリのバンドルを構成するファイルを 1 つのフォルダにまとめ、ライセンスファイルにオリジナルの Spectacle の Eric Czarny と、この再実装の Teddy Chan の両方を記載しました。どちらもアプリの中からは見えません。",
-      "ko": "유지 관리 릴리스입니다. Spectacle 2가 기반으로 삼는 공용 프레임워크를 최신 버전으로 올리고 내부를 조금 정리했습니다. 매일 사용하는 동작은 이전과 완전히 같습니다. · 공용 프레임워크 DragonKit을 4.1.0으로 업데이트했습니다. 설정, 정보, 새로운 기능, 소프트웨어 업데이트를 담당하는 부분입니다. 바뀐 것은 버전뿐이며 해당 패널의 모습과 동작은 그대로입니다. · 소스 코드 정리입니다. 앱 번들을 구성하는 파일을 한 폴더에 모았고, 라이선스 파일에 원본 Spectacle의 Eric Czarny와 이 재구현의 Teddy Chan을 함께 명시했습니다. 둘 다 앱 안에서는 보이지 않습니다.",
-      "zh-Hans": "这是一次维护更新。Spectacle 2 升级了所依赖的共享框架，并做了一些内部整理。日常使用的一切都与之前完全相同。 · 共享框架 DragonKit 升级到 4.1.0，它负责“设置”、“关于”、“新增功能”以及软件更新。此次只是版本变化，这些面板的外观和行为都没有改变。 · 源码整理：构成应用程序包的文件现在集中在同一个文件夹中，许可证文件同时署名原版 Spectacle 的 Eric Czarny 与本次重写的 Teddy Chan。这两项在应用内都看不到。",
-      "zh-Hant": "這是一次維護更新。Spectacle 2 升級了所依賴的共享框架，並做了一些內部整理。日常使用的一切都與先前完全相同。 · 共享框架 DragonKit 升級到 4.1.0，它負責「設定」、「關於」、「新增功能」以及軟體更新。這次只是版本變化，這些面板的外觀和行為都沒有改變。 · 原始碼整理：構成應用程式套件的檔案現在集中在同一個檔案夾中，授權檔案同時署名原版 Spectacle 的 Eric Czarny 與本次重寫的 Teddy Chan。這兩項在應用程式內都看不到。"
-    },
-    "url": "https://github.com/teddychan/spectacle-2-macos/releases/tag/v2.5.6"
   }
 ]
