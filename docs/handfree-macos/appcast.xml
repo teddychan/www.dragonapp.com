@@ -7,6 +7,16 @@
     <language>en</language>
     <!-- Items are added per release, newest first, each signed with the shared Dragon EdDSA key (sign_update). -->
     <item>
+      <title>HandFree 3.2.0</title>
+      <pubDate>Mon, 23 Nov 2026 01:57:02 +0000</pubDate>
+      <link>https://github.com/teddychan/www.dragonapp.com/releases/tag/handfree-macos-v3.2.0</link>
+      <sparkle:version>226</sparkle:version>
+      <sparkle:shortVersionString>3.2.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+      <enclosure url="https://github.com/teddychan/www.dragonapp.com/releases/download/handfree-macos-v3.2.0/HandFree-3.2.0.zip" type="application/octet-stream" sparkle:edSignature="Qhjnk2vzGMRakHbn1wZYNn/lB6ZdZP8IO1kHzkfLEQmeCwvx8HSFEYrp/2ZSv+7IMXMmTeYRi+LhM5CIqP4RBA==" length="2534262"/>
+    </item>
+    <item>
       <title>HandFree 3.1.0</title>
       <pubDate>Fri, 06 Nov 2026 02:16:16 +0000</pubDate>
       <link>https://github.com/teddychan/www.dragonapp.com/releases/tag/handfree-macos-v3.1.0</link>
