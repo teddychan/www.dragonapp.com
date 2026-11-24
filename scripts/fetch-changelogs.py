@@ -208,6 +208,8 @@ def main():
     idx = json.load(open(os.path.join(APPS, "_index.json")))
     for slug in idx:
         data = json.load(open(os.path.join(APPS, slug + ".json")))
+        if not data.get("show_changelog", True):
+            continue
         repo = repo_path(data["repo"])
         path = os.path.join(OUT, slug + ".json")
         existing = load_existing(path)

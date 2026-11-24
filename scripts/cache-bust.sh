@@ -8,6 +8,7 @@ cd "$(dirname "$0")/.."
 
 # URL paths to fingerprint (file lives at docs<path>).
 ASSETS="/shared/dragon.css /shared/consent.js /shared/i18n.js /appicon-56.png /appicon-112.png /appicon.png /yahoo-keykey-2/appicon-56.png /yahoo-keykey-2/appicon-112.png /yahoo-keykey-2/appicon.png"
+ASSETS="$ASSETS /handfree-macos/appicon-168.png /handfree-macos/screenshot.webp /handfree-ios/appicon-168.png /handfree-ios/screenshot.webp"
 
 HTML=()
 while IFS= read -r f; do HTML+=("$f"); done < <(find docs -name '*.html')

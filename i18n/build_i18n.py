@@ -219,7 +219,7 @@ def build_app_menu(lang, strings):
     out.append('          <div class="lang-menu">')
     out.append('            <a href="%s">%s</a>' % (SITE + "/" + lang_prefix(lang), all_label))
     for app in load_apps():
-        out.append('            <a href="%s">%s</a>' % (app_url(lang, app["slug"]), app["name"]))
+        out.append('            <a href="%s">%s</a>' % (app_page_url(lang, app), app["name"]))
     out.append('          </div>')
     out.append('        </details>')
     return "\n".join(out)
@@ -262,7 +262,7 @@ def render(template, lang, page, strings, missing):
         "URL_ICE2": app_url(lang, "ice-2"),
         "URL_CLIPMENU2": app_url(lang, "clipmenu-2"),
         "URL_KEYKEY2": app_url(lang, "yahoo-keykey-2"),
-        "ITEMLIST_JSONLD": render_itemlist(lang, strings),
+        "ITEMLIST_JSONLD": render_itemlist(lang),
         "CONSENT_HEAD": CONSENT_HEAD_EXTERNAL,
         "INDEX_CONSENT_HEAD": CONSENT_HEAD + "\n" + inline_script(os.path.join("shared", "consent.js")),
         "INLINE_DRAGON_CSS": inline_style(os.path.join("shared", "dragon.css")),
@@ -309,29 +309,45 @@ def app_url(lang, slug):
     return SITE + "/" + lang_prefix(lang) + slug + "/"
 
 
+def app_languages(app):
+    return ["en-US"] if app.get("english_only") else LANGS
+
+
+def app_page_url(lang, app):
+    return app_url(lang if lang in app_languages(app) else "en-US", app["slug"])
+
+
+def release_url(app):
+    return app.get("release_url") or (
+        app["repo"] + "/releases/latest" if app.get("repo") else None)
+
+
 def render_app_cards(lang, strings):
     cur = strings.get(lang, strings["en-US"])
     cards = []
     for app in load_apps():
         ps = cur.get(app["slug"], strings["en-US"].get(app["slug"], {}))
+        icon = '<span class="glyph">%s</span>' % app["name"][:1]
+        if app.get("icon"):
+            icon = ('<img src="/%s/appicon-168.png" alt="" width="56" height="56" '
+                    'decoding="async" loading="lazy">') % app["slug"]
         cards.append(
             '<a class="app-card %s" href="%s"><div class="app-head">'
-            '<span class="app-icon"><span class="glyph">%s</span></span>'
+            '<span class="app-icon">%s</span>'
             '<h3>%s</h3></div><p class="desc">%s</p>'
-            '<div class="app-foot"><span>macOS · Free · Open source</span>'
+            '<div class="app-foot"><span>%s</span>'
             '<span class="arrow">→</span></div></a>'
-            % (app.get("theme", ""), app_url(lang, app["slug"]),
-               app["name"][:1], app["name"], ps.get("sub", "")))
+            % (app.get("theme", ""), app_page_url(lang, app),
+               icon, app["name"], ps.get("card_description", ps.get("sub", "")),
+               ps.get("card_status", "macOS · Free · Open source")))
     return '<div class="apps">' + "\n".join(cards) + "</div>"
 
 
-def render_itemlist(lang, strings):
-    cur = strings.get(lang, strings["en-US"])
+def render_itemlist(lang):
     items = []
     for i, app in enumerate(load_apps(), start=1):
-        ps = cur.get(app["slug"], strings["en-US"].get(app["slug"], {}))
         items.append({"@type": "ListItem", "position": i, "name": app["name"],
-                      "url": app_url(lang, app["slug"])})
+                      "url": app_page_url(lang, app)})
     return json.dumps({"@context": "https://schema.org", "@type": "ItemList",
                        "itemListElement": items}, ensure_ascii=False, indent=2)
 
@@ -390,13 +406,16 @@ def render_changelog_rows(slug, common, lang):
     return "\n".join(rows) if rows else '<p class="logmeta">Release notes coming soon.</p>'
 
 
-def render_download(app, common):
+def render_download(app, common, page_str):
     cards = []
-    cards.append(
-        '<div class="plan featured"><span class="badge">%s</span>'
-        '<h3>%s</h3><a class="btn btn-github" href="%s/releases/latest">Get the latest release</a></div>'
-        % (common.get("app_channel_github_badge", "Easiest · free"),
-           common.get("app_channel_github", "GitHub release"), app["repo"]))
+    download = release_url(app)
+    if download:
+        cards.append(
+            '<div class="plan featured"><span class="badge">%s</span>'
+            '<h3>%s</h3><a class="btn btn-github" href="%s">%s</a></div>'
+            % (common.get("app_channel_github_badge", "Easiest · free"),
+               common.get("app_channel_github", "GitHub release"), download,
+               page_str.get("release_cta", "Get the latest release")))
     if app.get("homebrew_cask"):
         cards.append(
             '<div class="plan"><span class="badge">%s</span><h3>%s</h3>'
@@ -411,13 +430,20 @@ def render_download(app, common):
             % (common.get("app_channel_mas_badge", "One click · free"),
                common.get("app_channel_mas", "Mac App Store"), app["mas_url"],
                common.get("app_channel_mas_cta", "Download on the App Store")))
-    else:
+    elif app.get("show_mas_placeholder", True):
         cards.append(
             '<div class="plan"><span class="badge soon status-soon">%s</span><h3>%s</h3>'
             '<a class="btn btn-disabled" aria-disabled="true">%s</a></div>'
             % (common.get("app_channel_mas_soon", "Coming soon"),
                common.get("app_channel_mas", "Mac App Store"),
                common.get("app_channel_mas_soon", "Coming soon")))
+    if app.get("appcast_url"):
+        cards.append(
+            '<div class="plan"><h3>Automatic updates</h3>'
+            '<p>The app checks for new releases through Sparkle.</p>'
+            '<a href="%s">View the Sparkle update feed</a></div>' % app["appcast_url"])
+    if not cards:
+        return '<p class="release-status">%s</p>' % page_str["release_status"]
     return '<div class="plans">' + "\n".join(cards) + '</div>'
 
 
@@ -489,18 +515,19 @@ def render_token(app, common):
 
 def render_jsonld(app, lang, page_str):
     faq = page_str.get("faq", [])
+    download = release_url(app)
     graph = [
         {"@type": "SoftwareApplication", "name": app["name"],
          "description": page_str.get("description", ""),
          "url": app_url(lang, app["slug"]),
-         "image": SITE + "/icon-512.png",
+         "image": app_image_url(app),
          "applicationCategory": "UtilitiesApplication",
-         "operatingSystem": "macOS " + app["min_macos"],
+         "operatingSystem": app.get("operating_system") or "macOS " + app["min_macos"],
          "inLanguage": lang,
-         "downloadUrl": app["repo"] + "/releases/latest",
+         **({"downloadUrl": download} if download else {}),
          "softwareLicense": app["license_url"],
-         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD",
-                    "url": app["repo"] + "/releases/latest"},
+         **({"offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD",
+                       "url": download}} if download else {}),
          "publisher": {"@type": "Organization", "name": "Dragon App", "url": SITE + "/"}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Dragon App", "item": SITE + "/"},
@@ -514,6 +541,10 @@ def render_jsonld(app, lang, page_str):
              "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]})
     return json.dumps({"@context": "https://schema.org", "@graph": graph},
                       ensure_ascii=False, indent=2)
+
+
+def app_image_url(app):
+    return SITE + ("/%s/appicon.png" % app["slug"] if app.get("icon") else "/icon-512.png")
 
 
 def _faq_safe(v):
@@ -568,26 +599,44 @@ def render_app(template, app, lang, strings, missing):
     page_str = cur.get(app["slug"], en.get(app["slug"], {}))
     common = {**en.get("common", {}), **(cur.get("common") or {})}
     en_common = en.get("common", {})
+    slug = app["slug"]
+    app_langs = app_languages(app)
+    show_changelog = app.get("show_changelog", True)
+    download = release_url(app)
+    source = app.get("source_url") or app.get("repo")
+    support_url = app.get("support_url") or app["repo"] + "/issues"
+    email_support = support_url.startswith("mailto:")
+    token_section = (
+        '  <!-- TOKEN -->\n  <section id="token">\n    <div class="container">%s</div>\n  </section>'
+        % render_token(app, common) if app.get("tip_url") or app.get("sponsors_url") else "")
 
     specials = {
         "LANG": lang, "OG_LOCALE": OG_LOCALE[lang],
         "CANONICAL": app_url(lang, app["slug"]),
         "ALTERNATES": "\n".join(
-            ['  <link rel="alternate" hreflang="%s" href="%s">' % (l, app_url(l, app["slug"])) for l in LANGS]
+            ['  <link rel="alternate" hreflang="%s" href="%s">' % (l, app_url(l, slug)) for l in app_langs]
             + ['  <link rel="alternate" hreflang="x-default" href="%s">' % app_url("en-US", app["slug"])]),
-        "SWITCHER": build_app_switcher(lang, app["slug"], common),
+        "SWITCHER": build_app_switcher(lang, slug, common) if len(app_langs) > 1 else "",
+        "I18N_SCRIPT": '  <script src="/shared/i18n.js" defer></script>' if len(app_langs) > 1 else "",
         "APP_MENU": build_app_menu(lang, strings),
         "CONSENT_HEAD": CONSENT_HEAD_EXTERNAL,
         "CONSENT_BANNER": build_consent(common, en_common),
         "THEME_CLASS": app.get("theme", ""),
         "LICENSES_LINK": render_licenses_link(app),
         "URL_ABOUT": SITE + "/" + lang_prefix(lang) + "about/",
-        "APP_REPO": app["repo"], "APP_ISSUES": app["repo"] + "/issues",
+        "SOCIAL_IMAGE": app_image_url(app),
+        "SOURCE_LINK": ('        <a href="%s">%s</a>' %
+                        (source, page_str.get("source_label", "GitHub"))) if source else "",
+        "SUPPORT_URL": support_url,
+        "SUPPORT_BUTTON_STYLE": "btn-primary" if email_support else "btn-github",
         "APP_LICENSE_URL": app["license_url"],
-        "CHANGELOG_ROWS": render_changelog_rows(app["slug"], common, lang),
+        "DOWNLOAD_NAV": page_str.get("nav_download", "Download"),
+        "CHANGELOG_LINK": '        <a href="#changelog">What\'s new</a>' if show_changelog else "",
+        "CHANGELOG_ROWS": render_changelog_rows(slug, common, lang) if show_changelog else "",
+        "RELEASE_URL": download,
         "APP_PERF_SECTION": render_perf(app, lang),
-        "DOWNLOAD_CHANNELS": render_download(app, common),
-        "TOKEN_BLOCK": render_token(app, common),
+        "DOWNLOAD_CHANNELS": render_download(app, common, page_str),
+        "TOKEN_SECTION": token_section,
         "JSONLD": render_jsonld(app, lang, page_str if page_str else en.get(app["slug"], {})),
     }
 
@@ -595,6 +644,8 @@ def render_app(template, app, lang, strings, missing):
         name = m.group(1)
         if name in specials:
             return specials[name]
+        if name == "platform_requirement":
+            return page_str.get("platform_requirement") or page_str.get("promise_macos") or common["promise_macos"]
         if name in page_str:
             return _faq_safe(page_str[name])
         if name in common:
@@ -606,6 +657,24 @@ def render_app(template, app, lang, strings, missing):
             missing.append((lang, app["slug"], name))
             return en_common[name]
         raise KeyError("Unknown token {{ %s }} in app '%s'" % (name, app["slug"]))
+
+    def partial(name):
+        with open(os.path.join(TEMPLATES_DIR, "app-" + name + ".html"), encoding="utf-8") as f:
+            return TOKEN_RE.sub(repl, f.read().rstrip("\n"))
+
+    specials["GITHUB_ICON"] = partial("github-icon")
+    specials["SUPPORT_ICON"] = "" if email_support else specials["GITHUB_ICON"]
+    specials["CHANGELOG_SECTION"] = partial("changelog") if show_changelog else ""
+    specials["RELEASE_BUTTON"] = partial("release-button") if download else ""
+    specials["HERO_ICON"] = (
+        '        <img class="appicon-lg" src="/%s/appicon-168.png" alt="" width="84" height="84" decoding="async">'
+        % slug if app.get("icon") else partial("icon"))
+    screenshot = app.get("screenshot")
+    specials["DEMO_ART"] = (
+        '      <div class="shot-wrap"><img class="app-screenshot" src="/%s/screenshot.webp" '
+        'alt="%s" width="%d" height="%d" loading="lazy" decoding="async"></div>'
+        % (slug, page_str["demo_caption"], screenshot["width"], screenshot["height"])
+        if screenshot else partial("demo"))
 
     return TOKEN_RE.sub(repl, template)
 
@@ -621,9 +690,12 @@ def write_llms_txt(strings):
              "", "## Apps"]
     for app in load_apps():
         ps = en.get(app["slug"], {})
-        line = ("- [%s](%s): %s Install: brew install --cask %s"
-                % (app["name"], app_url("en-US", app["slug"]),
-                   _plain(ps.get("sub", "")), app.get("homebrew_cask") or "n/a"))
+        line = "- [%s](%s): %s" % (app["name"], app_url("en-US", app["slug"]),
+                                   _plain(ps.get("sub", "")))
+        if app.get("homebrew_cask"):
+            line += " Install: brew install --cask %s" % app["homebrew_cask"]
+        if ps.get("release_status"):
+            line += " " + ps["release_status"]
         if app.get("mas_url"):
             line += " — also free on the Mac App Store: %s" % app["mas_url"]
         lines.append(line)
@@ -658,13 +730,14 @@ def write_sitemap():
         lines.append("    <priority>%s</priority>" % PRIORITY[page])
         lines.append("  </url>")
     for app in load_apps():
-        for lang in LANGS:
+        app_langs = app_languages(app)
+        for lang in app_langs:
             lines.append("  <url>")
             lines.append("    <loc>%s</loc>" % app_url(lang, app["slug"]))
-            for alt in LANGS:
+            for alt in app_langs:
                 lines.append('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (alt, app_url(alt, app["slug"])))
             lines.append('    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>' % app_url("en-US", app["slug"]))
-            lines.append("    <lastmod>%s</lastmod>" % LASTMOD)
+            lines.append("    <lastmod>%s</lastmod>" % app.get("lastmod", LASTMOD))
             lines.append("    <changefreq>monthly</changefreq>")
             lines.append("    <priority>0.9</priority>")
             lines.append("  </url>")
@@ -712,7 +785,7 @@ def main():
 
     app_tpl = open(os.path.join(TEMPLATES_DIR, "app.html"), encoding="utf-8").read()
     for app in load_apps():
-        for lang in available:
+        for lang in (l for l in available if l in app_languages(app)):
             html = render_app(app_tpl, app, lang, strings, missing)
             dest = os.path.join(DOCS, lang_prefix(lang), app["slug"], "index.html")
             os.makedirs(os.path.dirname(dest), exist_ok=True)

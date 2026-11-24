@@ -3,12 +3,10 @@ import json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 APPS = os.path.join(ROOT, "i18n", "apps")
 
-REQUIRED = {"slug", "name", "theme", "repo", "homebrew_cask", "mas_url",
-            "license", "license_url", "min_macos", "appcast_repo",
-            "credit_name", "credit_url", "sponsors_url"}
+REQUIRED = {"slug", "name", "license_url"}
 
 def test_index_lists_apps():
-    """The four shipping products, in hub order.
+    """The marketed products, in hub order.
 
     dragon-sample-app is deliberately absent, and this assertion is the only thing that says so.
     It is a real Dragon app by every other measure — its own repository, exact vX.Y.Z tags, an
@@ -24,7 +22,8 @@ def test_index_lists_apps():
     SEO is: docs/sitemap.xml, docs/robots.txt, and the /seo pass.
     """
     idx = json.load(open(os.path.join(APPS, "_index.json")))
-    assert idx == ["ice-2", "clipmenu-2", "yahoo-keykey-2", "spectacle-2"]
+    assert idx == ["ice-2", "clipmenu-2", "yahoo-keykey-2", "spectacle-2",
+                   "handfree-macos", "handfree-ios"]
 
 def test_each_app_has_required_fields():
     idx = json.load(open(os.path.join(APPS, "_index.json")))
@@ -32,3 +31,5 @@ def test_each_app_has_required_fields():
         data = json.load(open(os.path.join(APPS, slug + ".json")))
         assert REQUIRED <= set(data), "%s missing %s" % (slug, REQUIRED - set(data))
         assert data["slug"] == slug
+        assert data.get("operating_system") or data["min_macos"]
+        assert data.get("support_url") or data["repo"]
