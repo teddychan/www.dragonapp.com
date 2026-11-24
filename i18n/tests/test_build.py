@@ -44,7 +44,8 @@ def test_every_language_has_every_english_key():
     common key does not even reach the build's [fallback] report.
     """
     strings = BUILD.load_strings()
-    english = _keys(strings["en-US"]) - {"_lang"}
+    english_only = {"_lang"} | {app["slug"] for app in BUILD.load_apps() if app.get("english_only")}
+    english = _keys({key: value for key, value in strings["en-US"].items() if key not in english_only})
     for lang in BUILD.LANGS:
         assert lang in strings, lang
         assert english <= _keys(strings[lang]), (lang, sorted(english - _keys(strings[lang])))
@@ -59,10 +60,10 @@ def test_the_build_reports_no_fallback():
 def test_every_page_and_sitemap_entry_exists_in_every_language():
     run_build()
     sitemap = open(os.path.join(ROOT, "docs", "sitemap.xml")).read()
-    slugs = json.load(open(os.path.join(ROOT, "i18n", "apps", "_index.json")))
+    apps = BUILD.load_apps()
     for lang in BUILD.LANGS:
         urls = [BUILD.url_for(lang, p) for p in BUILD.I18N_PAGES]
-        urls += [BUILD.app_url(lang, s) for s in slugs]
+        urls += [BUILD.app_url(lang, app["slug"]) for app in apps if lang in BUILD.app_languages(app)]
         for url in urls:
             rel = url[len(BUILD.SITE) + 1:]
             path = os.path.join(ROOT, "docs", rel, "index.html") if rel.endswith("/") or rel == "" \

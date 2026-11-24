@@ -1,0 +1,13 @@
+{
+  "slug": "handfree-ios",
+  "name": "HandFree for iPhone",
+  "english_only": true,
+  "lastmod": "2026-11-24",
+  "icon": true,
+  "screenshot": {"width": 440, "height": 373},
+  "operating_system": "iOS 26 or later",
+  "license_url": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "support_url": "mailto:support@dragonapp.com",
+  "show_changelog": false,
+  "show_mas_placeholder": false
+}

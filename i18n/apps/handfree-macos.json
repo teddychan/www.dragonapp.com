@@ -1,0 +1,17 @@
+{
+  "slug": "handfree-macos",
+  "name": "HandFree for Mac",
+  "english_only": true,
+  "lastmod": "2026-11-24",
+  "icon": true,
+  "screenshot": {"width": 440, "height": 500},
+  "operating_system": "macOS 14 or later (Apple silicon)",
+  "release_url": "https://github.com/teddychan/www.dragonapp.com/releases?q=handfree-macos",
+  "source_url": "https://github.com/teddychan/www.dragonapp.com/releases?q=handfree-macos",
+  "homebrew_cask": "teddychan/tap/handfree",
+  "appcast_url": "https://www.dragonapp.com/handfree-macos/appcast.xml",
+  "license_url": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "support_url": "mailto:support@dragonapp.com",
+  "show_changelog": false,
+  "show_mas_placeholder": false
+}

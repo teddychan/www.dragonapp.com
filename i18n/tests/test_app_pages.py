@@ -1,4 +1,4 @@
-import importlib.util, json, os, subprocess, sys
+import importlib.util, os, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 _spec = importlib.util.spec_from_file_location("build_i18n", os.path.join(ROOT, "i18n", "build_i18n.py"))
@@ -72,12 +72,35 @@ def test_footer_license_link_matches_app_json():
     app whose licence is named anything else fails here instead of shipping a dead link.
     """
     build()
-    idx = json.load(open(os.path.join(ROOT, "i18n", "apps", "_index.json")))
-    for slug in idx:
-        app = json.load(open(os.path.join(ROOT, "i18n", "apps", slug + ".json")))
+    for app in BUILD.load_apps():
+        for lang in BUILD.app_languages(app):
+            html = open(os.path.join(ROOT, "docs", BUILD.lang_prefix(lang), app["slug"], "index.html")).read()
+            assert '<a href="%s">License</a>' % app["license_url"] in html, (app["slug"], lang)
+
+def test_handfree_pages_and_distribution():
+    build()
+    for slug in ["handfree-macos", "handfree-ios"]:
+        url = BUILD.app_url("en-US", slug)
         for lang in LANG_DIRS:
-            html = open(os.path.join(ROOT, "docs", lang, slug, "index.html")).read()
-            assert '<a href="%s">License</a>' % app["license_url"] in html, (slug, lang)
+            hub = open(os.path.join(ROOT, "docs", lang, "index.html")).read()
+            assert 'href="%s"' % url in hub
+            if lang:
+                assert not os.path.exists(os.path.join(ROOT, "docs", lang, slug, "index.html"))
+        html = open(os.path.join(ROOT, "docs", slug, "index.html")).read()
+        assert "/shared/i18n.js" not in html
+        assert 'data-setlang' not in html
+        assert 'src="/%s/screenshot.webp"' % slug in html
+        assert 'href="%s"' % url in html
+        assert "github.com/teddychan/" + slug not in html
+        if slug == "handfree-macos":
+            assert "brew install --cask teddychan/tap/handfree" in html
+            assert "releases?q=handfree-macos" in html
+            assert "/handfree-macos/appcast.xml" in html
+        else:
+            assert "internal TestFlight testing" in html
+            assert "testflight.apple.com" not in html
+            assert "apps.apple.com" not in html
+            assert "downloadUrl" not in html
 
 def test_sitemap_includes_licenses_pages():
     build()

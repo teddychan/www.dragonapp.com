@@ -35,7 +35,7 @@ LANGS = BUILD.LANGS
 
 
 def _slugs():
-    return json.load(open(os.path.join(ROOT, "i18n", "apps", "_index.json")))
+    return [app["slug"] for app in BUILD.load_apps() if app.get("show_changelog", True)]
 
 
 def _asset(name="whats-new.json"):

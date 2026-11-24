@@ -86,7 +86,7 @@
 
   </script>
   <title>Dragon App — Classic Mac apps, rebuilt</title>
-  <meta name="description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — ClipMenu 2, Yahoo! KeyKey 2, and Ice 2.">
+  <meta name="description" content="Dragon App makes open-source tools for Mac and iPhone, including ClipMenu 2, Yahoo KeyKey 2, Ice 2, Spectacle 2, and HandFree.">
   <link rel="canonical" href="https://www.dragonapp.com/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/dragon.svg">
@@ -107,12 +107,12 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://www.dragonapp.com/">
   <meta property="og:title" content="Dragon App — Classic Mac apps, rebuilt">
-  <meta property="og:description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — ClipMenu 2, Yahoo! KeyKey 2, and Ice 2.">
+  <meta property="og:description" content="Dragon App makes open-source tools for Mac and iPhone, including ClipMenu 2, Yahoo KeyKey 2, Ice 2, Spectacle 2, and HandFree.">
   <meta property="og:image" content="https://www.dragonapp.com/icon-512.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dragon App — Classic Mac apps, rebuilt">
-  <meta name="twitter:description" content="Dragon App is a small studio reviving beloved, discontinued macOS apps as fast, native, open-source rebuilds — ClipMenu 2, Yahoo! KeyKey 2, and Ice 2.">
+  <meta name="twitter:description" content="Dragon App makes open-source tools for Mac and iPhone, including ClipMenu 2, Yahoo KeyKey 2, Ice 2, Spectacle 2, and HandFree.">
   <meta name="twitter:image" content="https://www.dragonapp.com/icon-512.png">
 
   <style>
@@ -328,9 +328,12 @@ nav {
 /* app identity glyph (used in heroes / cards without a real icon yet) */
 .appicon { display: inline-flex; align-items: center; justify-content: center; border-radius: 18px; background: var(--accent-tint); color: var(--accent-deep); font-weight: 700; }
 .appicon-lg { width: 84px; height: 84px; font-size: 2.6rem; }
+img.appicon-lg { border-radius: 19px; }
 
 /* product mockup window */
 .shot-wrap { display: flex; justify-content: center; padding: 8px 0 8px; }
+.app-screenshot { display: block; max-width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow); }
+.release-status { text-align: center; color: var(--muted); }
 .window { width: 100%; max-width: 560px; background: var(--bg); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
 .titlebar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--surface); border-bottom: 1px solid var(--border); }
 .dot { width: 11px; height: 11px; border-radius: 50%; }
@@ -653,6 +656,18 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
       "position": 4,
       "name": "Spectacle 2",
       "url": "https://www.dragonapp.com/spectacle-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "HandFree for Mac",
+      "url": "https://www.dragonapp.com/handfree-macos/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "HandFree for iPhone",
+      "url": "https://www.dragonapp.com/handfree-ios/"
     }
   ]
 }
@@ -677,6 +692,8 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
             <a href="https://www.dragonapp.com/clipmenu-2/">ClipMenu 2</a>
             <a href="https://www.dragonapp.com/yahoo-keykey-2/">Yahoo! KeyKey 2</a>
             <a href="https://www.dragonapp.com/spectacle-2/">Spectacle 2</a>
+            <a href="https://www.dragonapp.com/handfree-macos/">HandFree for Mac</a>
+            <a href="https://www.dragonapp.com/handfree-ios/">HandFree for iPhone</a>
           </div>
         </details>
         <a href="https://github.com/teddychan">GitHub</a>
@@ -719,12 +736,14 @@ footer { padding: 56px 0 48px; border-top: 1px solid var(--border); margin-top: 
     <div class="container">
       <div class="head">
         <h2>The apps</h2>
-        <p>Each one is a faithful, modern rebuild — free and open source.</p>
+        <p>Open-source tools for the Mac and iPhone.</p>
       </div>
       <div class="apps"><a class="app-card theme-ice" href="https://www.dragonapp.com/ice-2/"><div class="app-head"><span class="app-icon"><span class="glyph">I</span></span><h3>Ice 2</h3></div><p class="desc">Ice 2 hides the menu bar items you don't need. Each item is shown or hidden, and the hidden ones wait in the Ice Bar under the Ice icon. A faithful, open-source rebuild, now made for macOS 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card " href="https://www.dragonapp.com/clipmenu-2/"><div class="app-head"><span class="app-icon"><span class="glyph">C</span></span><h3>ClipMenu 2</h3></div><p class="desc">A fast, native clipboard manager for Mac that remembers everything you copy, organizes your snippets, and pastes anywhere — with a single hotkey.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
 <a class="app-card theme-keykey" href="https://www.dragonapp.com/yahoo-keykey-2/"><div class="app-head"><span class="app-icon"><span class="glyph">Y</span></span><h3>Yahoo! KeyKey 2</h3></div><p class="desc">The classic Yahoo!奇摩輸入法 <strong>Cangjie (倉頡)</strong> and <strong>Simplex (速成)</strong> input method, reborn — native, fast, and open source.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
-<a class="app-card theme-spectacle" href="https://www.dragonapp.com/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">Spectacle 2 snaps the frontmost window to halves, corners, thirds, or fullscreen and sends it across displays. Press a keyboard shortcut, pick an action from the menu bar, or drag the window to a screen edge. An open-source rebuild of Spectacle for macOS 26 and 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a></div>
+<a class="app-card theme-spectacle" href="https://www.dragonapp.com/spectacle-2/"><div class="app-head"><span class="app-icon"><span class="glyph">S</span></span><h3>Spectacle 2</h3></div><p class="desc">Spectacle 2 snaps the frontmost window to halves, corners, thirds, or fullscreen and sends it across displays. Press a keyboard shortcut, pick an action from the menu bar, or drag the window to a screen edge. An open-source rebuild of Spectacle for macOS 26 and 27.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
+<a class="app-card " href="https://www.dragonapp.com/handfree-macos/"><div class="app-head"><span class="app-icon"><img src="/handfree-macos/appicon-168.png?v=2d8f4c9d" alt="" width="56" height="56" decoding="async" loading="lazy"></span><h3>HandFree for Mac</h3></div><p class="desc">Hold a shortcut, speak, and let go. HandFree cleans up what you said and inserts the text at your cursor.</p><div class="app-foot"><span>macOS · Free · Open source</span><span class="arrow">→</span></div></a>
+<a class="app-card " href="https://www.dragonapp.com/handfree-ios/"><div class="app-head"><span class="app-icon"><img src="/handfree-ios/appicon-168.png?v=721a960e" alt="" width="56" height="56" decoding="async" loading="lazy"></span><h3>HandFree for iPhone</h3></div><p class="desc">Switch to the HandFree keyboard, hold the mic, and speak. Lift your finger to put the transcript where you're typing.</p><div class="app-foot"><span>iOS · Internal beta</span><span class="arrow">→</span></div></a></div>
     </div>
   </section>
 
